@@ -311,13 +311,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8320604898093163998, guid: 60515a14d2c431a4c8f6a23e24fca692, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 411323485}
+    - target: {fileID: 8320604898093163998, guid: 60515a14d2c431a4c8f6a23e24fca692, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1636472945}
+    - target: {fileID: 8320604898093163998, guid: 60515a14d2c431a4c8f6a23e24fca692, type: 3}
+      propertyPath: radius
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 8355004805921832648, guid: 60515a14d2c431a4c8f6a23e24fca692, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8355004805921832648, guid: 60515a14d2c431a4c8f6a23e24fca692, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -35.1
+      value: -32.2
       objectReference: {fileID: 0}
     - target: {fileID: 8355004805921832648, guid: 60515a14d2c431a4c8f6a23e24fca692, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1092,7 +1104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf91a11787db234dbf09105ef6df8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 8530641737110148139, guid: 63cfda986fd6a684abb5659b502200a7, type: 3}
 --- !u!64 &2106550869
 MeshCollider:
   m_ObjectHideFlags: 0
