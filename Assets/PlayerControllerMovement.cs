@@ -6,7 +6,7 @@ using UnityEngine;
 /// <summary>
 /// Logic for basic game movement and dash mechanic.
 /// </summary>
-public class PlayerMovement : MonoBehaviour
+public class PlayerControllerMovement : MonoBehaviour
 
 {
     // Start is called before the first frame update
@@ -17,54 +17,41 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 _movementDirection;
     
     
-    private float speedChangeFactor = 50f;
-    public float dashCdTimer = 0;
+    public float dashCdTimer = 0f;
     private float lastDesiredMoveSpeed;
     private float desiredMoveSpeed;
-    private float moveSpeed;
+    private Vector3 velocity;
+    private float _gravity = -9.81f;
+    public MovementState state;
 
     private Rigidbody _rb;
-    private Transform _t;
-    
+    private CharacterController _controller;
     
     //Speed of different movement abilities
     private float WALKSPEED = 10f;
     private float DASHSPEED = 50f;
     private float DASHTIME = 0.15f;
     private float DASHCD = 0.5f;
-
-    public MovementState state;
-
+    private float GRAVITY_MULTIPLIER = 1f;
+    
     public enum MovementState
     {
         walking,
         dashing
     }
-
-    private bool dashing;
-    
     
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
-        _t = GetComponent<Transform>();
-        moveSpeed = WALKSPEED;
+        _controller = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
     void Update()
     {
         //Calculate Inputs for player movement
-        _playerInputVertical = Input.GetAxisRaw("Vertical");
-        _playerInputHorizontal = Input.GetAxisRaw("Horizontal");
-        _movementDirection = new Vector3(_playerInputHorizontal, 0, _playerInputVertical);
-        _movementDirection.Normalize();
-
-        if (_movementDirection != Vector3.zero && state != MovementState.dashing)
-        {
-            transform.forward = _movementDirection;
-        } ;
-
+        ComputeInputs();
+        
         if (Input.GetButton("Jump") && dashCdTimer <= 0)
         {
             StartCoroutine(Dash());
@@ -73,16 +60,42 @@ public class PlayerMovement : MonoBehaviour
         //Process the cooldown timer for dashing
         if (dashCdTimer > 0)
             dashCdTimer -= Time.deltaTime;
+        
+        ApplyGravity();
+    }
+    
+
+    private void ComputeInputs()
+    {
+        _playerInputVertical = Input.GetAxisRaw("Vertical");
+        _playerInputHorizontal = Input.GetAxisRaw("Horizontal");
+        _movementDirection = new Vector3(_playerInputHorizontal, 0, _playerInputVertical);
+        _movementDirection.Normalize();
+        if (_movementDirection != Vector3.zero && state != MovementState.dashing)
+        {
+            transform.forward = _movementDirection;
+        } 
     }
 
     private void FixedUpdate()
     {
-        if (state == MovementState.walking) 
-            _rb.MovePosition(transform.position + _movementDirection * WALKSPEED * Time.deltaTime);
-        if (state == MovementState.dashing)
-            _rb.MovePosition(transform.position + transform.forward * DASHSPEED * Time.deltaTime);
+        ApplyMovement();
     }
 
+    private void ApplyMovement()
+    {
+        if (state == MovementState.walking) 
+            _controller.Move(_movementDirection * WALKSPEED * Time.deltaTime);
+        if (state == MovementState.dashing)
+            _controller.Move(transform.forward * DASHSPEED * Time.deltaTime);
+    }
+
+    private void ApplyGravity()
+    {
+        velocity = Vector3.zero;
+        velocity.y += _gravity * GRAVITY_MULTIPLIER;
+        _controller.Move(velocity * Time.deltaTime);
+    }
     IEnumerator Dash()
     {
         dashCdTimer = DASHCD;
