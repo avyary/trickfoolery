@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4912419981975707200}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7850741649793437441}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -247,6 +247,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   basicAttack: {fileID: 0}
-  radius: 15
-  player: {fileID: 0}
-  enemy: {fileID: 0}
+  agent: {fileID: 0}
+  range: 10
+  centrePoint: {fileID: 0}
