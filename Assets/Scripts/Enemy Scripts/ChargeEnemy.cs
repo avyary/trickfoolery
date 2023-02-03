@@ -79,4 +79,8 @@ public class ChargeEnemy : Enemy
                 break;
         }
     }
+
+    public override void move(int direction) {
+        direction = 0;
+    }
 }

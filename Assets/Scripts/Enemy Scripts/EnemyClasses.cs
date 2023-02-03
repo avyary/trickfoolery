@@ -70,6 +70,8 @@ public abstract class Enemy: MonoBehaviour
         anger = anger + tauntValue;
     }
 
+    public abstract void move(int direction);
+
     protected virtual void Start()
     {
         health = maxHealth;
