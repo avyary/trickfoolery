@@ -9,9 +9,11 @@ public class BasicEnemy : Enemy
     public NavMeshAgent enemy;
     public Transform player;
     public float range; //radius of sphere
-    protected float radius = 10.0f;   // radius for player detection
+    protected float radius = 15.0f;   // radius for player detection
 
     public Transform centrePoint; //centre of the area the agent wants to move around in
+
+    private bool _isWaiting = false;
 
     protected override void Start()
     {   
@@ -21,18 +23,33 @@ public class BasicEnemy : Enemy
 
     void Update()
     {   
-        if (state == EnemyState.Passive) 
+        if (state == EnemyState.Passive && !_isWaiting) 
         {
             // move randomly
+            Debug.Log("enemy is passive");
             move();
-        }
-        
-        if (Mathf.Abs(player.position.z - transform.position.z) <= radius) 
-        {   
-            state = EnemyState.Tracking;
-            enemy.SetDestination(player.position);
+
+            if (Mathf.Abs(player.position.z - transform.position.z) <= radius) 
+            {
+                state = EnemyState.Tracking;
+                Debug.Log("enemy changed from passive to tracking");
+                _pause();
+            }
         }
 
+        if (state == EnemyState.Tracking) 
+        {   
+            Debug.Log("enemy is tracking");
+            enemy.SetDestination(player.position);
+        }    
+
+    }
+
+    private IEnumerator _pause() 
+    {   
+        _isWaiting = true;
+        yield return new WaitForSeconds(10);
+        _isWaiting = false;
     }
 
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
@@ -72,63 +89,5 @@ public class BasicEnemy : Enemy
             takeHit(100, 2);
         }
     }
-
-
-
-    // public float radius = 10.0f;
-
-    // public Transform player;
-    // public NavMeshAgent enemy;
-
-    // private int _rotate = 0;
-    // private float _angles = 0;
-    // private float _distance;
-
-    // // Update is called once per frame
-    // // in here we should choose an action depending on the enemy's state
-    // // ex. if passive -> enemy should move randomly around the map
-    // void Update()
-    // {  
-    //     // distance per second
-    //     float randMoveSpeed = Random.Range(3, 10);
-    //     _distance = randMoveSpeed * Time.deltaTime;
-
-    //     //Move to the player
-    //     if (Mathf.Abs(player.position.z - transform.position.z) <= radius)
-    //     {
-    //         state = EnemyState.Tracking;
-    //         enemy.SetDestination(player.position);
-    //     }
-    //     else
-    //     {   
-    //         _moveTowardsPlayer();
-    //     }
-    //     transform.Translate(0, 0, _distance, Space.Self);
-    // }
-
-    // private IEnumerator _moveTowardsPlayer() 
-    // {
-    //     yield return new WaitForSeconds(10);
-    //     move();
-    // }
-
-    // public override void move() 
-    // {
-    //     // Precondition: Enemy state is PASSIVE
-
-    //     if (_rotate < 180)
-    //     {
-    //         _rotate ++;
-    //         transform.Rotate(0, _angles, 0, Space.Self);
-    //     }
-    //     else
-    //     {
-    //         // angle per second
-    //         float randRotateSpeed = Random.Range(-90, 90);
-    //         _angles = randRotateSpeed * Time.deltaTime;
-    //         _rotate = 0;
-    //     }
-    // }
-
     
 }
