@@ -27,8 +27,8 @@ public class RandMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        platform = GameObject.FindGameObjectWithTag("Platform");
-        platformTransform = platform.GetComponent<Transform>();
+        // platform = GameObject.FindGameObjectWithTag("Platform");
+        // platformTransform = platform.GetComponent<Transform>();
         // xEdge = platformTransform.position.x;
         // zEdge = platformTransform.position.z;
     }   
