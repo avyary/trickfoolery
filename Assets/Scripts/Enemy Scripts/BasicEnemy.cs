@@ -16,13 +16,6 @@ public class BasicEnemy : Enemy
     public Transform player;
     public NavMeshAgent enemy;
 
-    // Start is called before the first frame update
-    // nothing to override
-    // void Start()
-    // {
-        
-    // }
-
     // Update is called once per frame
     // in here we should choose an action depending on the enemy's state
     // ex. if passive -> enemy should move randomly around the map
@@ -41,13 +34,19 @@ public class BasicEnemy : Enemy
             } 
 
             if (Mathf.Abs(player.position.z - transform.position.z) <= radius) 
-            {
+            {   
+                state = EnemyState.Tracking;
                 enemy.SetDestination(player.position);
             }
             else 
             {
                 move(direction);
             }
+        }
+
+        if (state == EnemyState.Tracking) 
+        {
+            enemy.SetDestination(player.position);  // just keep it following the player for now
         }
        
         
@@ -83,4 +82,11 @@ public class BasicEnemy : Enemy
             transform.Translate(Vector3.forward * Time.deltaTime * speed);
         }
     }
+
+    // private void OnCollisionEnter(Collision collision) {
+    //     if (collision.collider.tag == "Enemy")
+    //     {
+           
+    //     }
+    // }
 }
