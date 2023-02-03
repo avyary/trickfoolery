@@ -8,8 +8,9 @@ public class ChargeAttack : Attack
         startupTime = 1;
         activeTime = 0.5f;
         recoveryTime = 0.5f;
-        damage = 10;
+        damage = 100;
         range = 3f;
+        stunTime = 1;
         base.Start();
     }
 }

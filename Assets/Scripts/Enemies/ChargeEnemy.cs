@@ -40,6 +40,11 @@ public class ChargeEnemy : Enemy
         {
             case EnemyState.Passive:
                 TestBehaviors.Rotate(gameObject, 0.5f);  // replace with better movement
+                if (!fow.active)
+                {
+                    fow.active = true;
+                    StartCoroutine(fow.FindPlayer(0.2f, PlayerFound));
+                }
                 break;
             case EnemyState.Tracking:
                 TestBehaviors.MoveToPlayer(gameObject, player, 0.01f);  // replace with pathing to player

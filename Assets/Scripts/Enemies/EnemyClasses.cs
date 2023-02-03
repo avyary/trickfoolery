@@ -29,9 +29,7 @@ public abstract class Enemy: MonoBehaviour
 
     protected GameObject player;
 
-    // for vision cone
-    protected virtual int viewRadius { get; set; }
-    protected virtual int viewAngle { get; set; }
+    protected FieldOfView fow;
 
     // for debugging
     protected void GetEnemyStatus(string name = "Enemy")
@@ -42,6 +40,10 @@ public abstract class Enemy: MonoBehaviour
     // take hitDamage amount of damage and stun for stunTime seconds
     public virtual void TakeHit(int damage, float stunTime)
     {
+        if (state == EnemyState.Dead)
+        {
+            return;
+        }
         health -= damage;
         if (health <= 0)
         {
@@ -67,9 +69,18 @@ public abstract class Enemy: MonoBehaviour
 
     public virtual IEnumerator Die()
     {
+        fow.active = false;
+        basicAttack.Deactivate();  // deactivate attack collider
+
+        // the following is just for fun
         GetComponent<MeshRenderer>().material.color = Color.black;
+        Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>();
+        rigidBody.isKinematic = false;
+        rigidBody.constraints = RigidbodyConstraints.None;
+
         state = EnemyState.Dead;
-        yield return new WaitForSeconds(5);  // waits for 1 second before destroying object
+        yield return new WaitForSeconds(3);  // waits for 3 seconds before destroying object
+
         Destroy(gameObject);
     }
 
@@ -82,18 +93,36 @@ public abstract class Enemy: MonoBehaviour
         state = EnemyState.Startup;
         // do startup animation
         yield return new WaitForSeconds(attackObj.startupTime);
+        
+        if (state == EnemyState.Dead || state == EnemyState.Stunned) {
+            yield break;
+        }
 
         state = EnemyState.Active;
         // do active attacking animation
         attackObj.Activate();  // activate attack collider
         yield return new WaitForSeconds(attackObj.activeTime);
 
+        if (state == EnemyState.Dead || state == EnemyState.Stunned) {
+            yield break;
+        }
+
         state = EnemyState.Recovery;
         // do cooldown animation
         attackObj.Deactivate();  // deactivate attack collider
         yield return new WaitForSeconds(attackObj.recoveryTime);
+
+        if (state == EnemyState.Dead || state == EnemyState.Stunned) {
+            yield break;
+        }
         
         state = EnemyState.Passive;
+    }
+
+    protected virtual void PlayerFound()
+    {
+        // animation for finding player?
+        state = EnemyState.Tracking;
     }
 
     protected virtual void Start()
@@ -104,5 +133,6 @@ public abstract class Enemy: MonoBehaviour
         state = EnemyState.Passive;
         basicAttack = _basicAttack;
         player = GameObject.FindWithTag("Player");
+        fow = gameObject.GetComponent<FieldOfView>();
     }
 }

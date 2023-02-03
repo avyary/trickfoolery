@@ -8,8 +8,9 @@ public class PunchAttack : Attack
         startupTime = 0.5f;
         activeTime = 0.5f;
         recoveryTime = 1;
-        damage = 10;
-        range = 2.5f;
+        damage = 100;
+        range = 1.5f;
+        stunTime = 1;
         base.Start();
     }
 }
