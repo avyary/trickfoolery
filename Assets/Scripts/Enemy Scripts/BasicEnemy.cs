@@ -83,10 +83,11 @@ public class BasicEnemy : Enemy
         }
     }
 
-    // private void OnCollisionEnter(Collision collision) {
-    //     if (collision.collider.tag == "Enemy")
-    //     {
-           
-    //     }
-    // }
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.collider.tag == "Enemy")
+        {
+           takeHit(100, 2);
+           Debug.Log("haha get rekt");
+        }
+    }
 }
