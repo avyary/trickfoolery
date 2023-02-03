@@ -80,7 +80,7 @@ public class ChargeEnemy : Enemy
         }
     }
 
-    public override void move(int direction) {
-        direction = 0;
+    public override void move() {
+        ;
     }
 }
