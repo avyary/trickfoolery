@@ -75,7 +75,6 @@ public abstract class Enemy: MonoBehaviour
         // the following is just for fun
         GetComponent<MeshRenderer>().material.color = Color.black;
         Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>();
-        rigidBody.isKinematic = false;
         rigidBody.constraints = RigidbodyConstraints.None;
 
         state = EnemyState.Dead;
@@ -123,6 +122,11 @@ public abstract class Enemy: MonoBehaviour
     {
         // animation for finding player?
         state = EnemyState.Tracking;
+    }
+
+    protected virtual void Move()
+    {
+        return;
     }
 
     protected virtual void Start()

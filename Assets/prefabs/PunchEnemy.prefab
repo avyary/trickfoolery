@@ -274,7 +274,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1d52ceec8e1df4f6da0ad2c16dd471b8, type: 2}
+  - {fileID: 2100000, guid: 75ea15d0280b545daab44aebf6e2f738, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -310,7 +310,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _basicAttack: {fileID: 204469350574051446}
-  _toSpawn: {fileID: 204469351715301410}
 --- !u!136 &204469351715301413
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -337,9 +336,9 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &204469351715301435
 MonoBehaviour:
@@ -353,10 +352,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2bb73e9f3e64cca84c97ae658ed220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 8.42
+  viewRadius: 18.1
   viewAngle: 62
   player: {fileID: 0}
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   active: 0

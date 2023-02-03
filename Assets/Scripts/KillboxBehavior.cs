@@ -7,9 +7,12 @@ using UnityEngine.SceneManagement;
 public class KillboxBehavior : MonoBehaviour
 {
     public GameObject[] enemies;
+    [SerializeField]
+    private int minEnemyNumber;
 
     void spawnRandomEnemy()
     {
+        print("uwah");
         Vector3 newPosition = new Vector3(Random.Range(-8.0f, 8.0f), 1.5f, Random.Range(-8.0f, 8.0f));
         Quaternion newRotation = Random.rotation;
         newRotation.w = 0;
@@ -20,7 +23,7 @@ public class KillboxBehavior : MonoBehaviour
 
     void Update()
     {
-        if (GameObject.FindGameObjectsWithTag("Enemy").Length < 3)
+        if (GameObject.FindGameObjectsWithTag("Enemy").Length < minEnemyNumber)
         {
             spawnRandomEnemy();
         }

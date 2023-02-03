@@ -7,7 +7,6 @@ using UnityEngine.AI;
 public class BasicEnemy : Enemy
 {   
     public NavMeshAgent enemy;
-    public Transform player;
     public float range; //radius of sphere
     protected float radius = 15.0f;   // radius for player detection
 
@@ -27,9 +26,9 @@ public class BasicEnemy : Enemy
         {
             // move randomly
             Debug.Log("enemy is passive");
-            move();
+            Move();
 
-            if (Mathf.Abs(player.position.z - transform.position.z) <= radius) 
+            if (Mathf.Abs(player.transform.position.z - transform.position.z) <= radius) 
             {
                 state = EnemyState.Tracking;
                 Debug.Log("enemy changed from passive to tracking");
@@ -40,7 +39,7 @@ public class BasicEnemy : Enemy
         if (state == EnemyState.Tracking) 
         {   
             Debug.Log("enemy is tracking");
-            enemy.SetDestination(player.position);
+            enemy.SetDestination(player.transform.position);
         }    
 
     }
@@ -69,7 +68,7 @@ public class BasicEnemy : Enemy
         return false;
     }
 
-    public override void move() 
+    protected override void Move() 
     {
         if(enemy.remainingDistance <= enemy.stoppingDistance) //done with path
         {
@@ -86,7 +85,7 @@ public class BasicEnemy : Enemy
         if (collision.collider.tag == "Enemy")
         {   
             Debug.Log("haha get rekt");
-            takeHit(100, 2);
+            TakeHit(100, 2);
         }
     }
     

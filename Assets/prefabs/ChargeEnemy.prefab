@@ -103,7 +103,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _basicAttack: {fileID: 8530116322961737117}
-  _toSpawn: {fileID: 8530116321950674698, guid: 5e69034f126a245cfb724cfe2c2c795a, type: 3}
 --- !u!114 &8530116321950674707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,12 +115,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2bb73e9f3e64cca84c97ae658ed220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 13.26
+  viewRadius: 21.76
   viewAngle: 61
   player: {fileID: 0}
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 72
   active: 0
 --- !u!136 &8530116321950674706
 CapsuleCollider:
@@ -149,9 +148,9 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!1 &8530116322484276858
 GameObject:
