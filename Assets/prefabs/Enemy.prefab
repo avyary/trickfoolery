@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 5070335220121147785}
   - component: {fileID: 3705149522725154247}
   - component: {fileID: 1753374867777903349}
-  - component: {fileID: 8320604898093163998}
-  - component: {fileID: 5200412787633911068}
   - component: {fileID: 9157447563988647676}
   - component: {fileID: 4912419981975707200}
+  - component: {fileID: 3597525765768195017}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -102,39 +101,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8320604898093163998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7850741649793437441}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a0a1dd12d4e89f49a52bbb4c44d8f0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  detected: 0
-  radius: 15
-  player: {fileID: 0}
-  enemy: {fileID: 0}
---- !u!114 &5200412787633911068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7850741649793437441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ee378335e26b481e932d3e683a13081, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chargeTime: 3
-  attackTime: 1
-  lineRend: {fileID: 0}
-  player: {fileID: 0}
-  attackSpeed: 2
 --- !u!120 &9157447563988647676
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -247,6 +213,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   basicAttack: {fileID: 0}
-  agent: {fileID: 0}
+  enemy: {fileID: 0}
+  player: {fileID: 0}
   range: 10
   centrePoint: {fileID: 0}
+--- !u!114 &3597525765768195017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850741649793437441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee378335e26b481e932d3e683a13081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chargeTime: 3
+  attackTime: 1
+  lineRend: {fileID: 0}
+  player: {fileID: 0}
+  attackSpeed: 2

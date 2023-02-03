@@ -6,26 +6,31 @@ using UnityEngine.AI;
 
 public class BasicEnemy : Enemy
 {   
-    public NavMeshAgent agent;
+    public NavMeshAgent enemy;
+    public Transform player;
     public float range; //radius of sphere
+    protected float radius = 10.0f;   // radius for player detection
 
     public Transform centrePoint; //centre of the area the agent wants to move around in
 
-    void Start()
-    {
-        agent = GetComponent<NavMeshAgent>();
+    protected override void Start()
+    {   
+        base.Start();
+        enemy = GetComponent<NavMeshAgent>();
     }
 
     void Update()
-    {
-        if(agent.remainingDistance <= agent.stoppingDistance) //done with path
+    {   
+        if (state == EnemyState.Passive) 
         {
-            Vector3 point;
-            if (RandomPoint(centrePoint.position, range, out point)) //pass in our centre point and radius of area
-            {
-                Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f); //so you can see with gizmos
-                agent.SetDestination(point);
-            }
+            // move randomly
+            move();
+        }
+        
+        if (Mathf.Abs(player.position.z - transform.position.z) <= radius) 
+        {   
+            state = EnemyState.Tracking;
+            enemy.SetDestination(player.position);
         }
 
     }
@@ -35,10 +40,10 @@ public class BasicEnemy : Enemy
 
         Vector3 randomPoint = center + Random.insideUnitSphere * range; //random point in a sphere 
         NavMeshHit hit;
-        if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas)) //documentation: https://docs.unity3d.com/ScriptReference/AI.NavMesh.SamplePosition.html
+        if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas))
         { 
             //the 1.0f is the max distance from the random point to a point on the navmesh, might want to increase if range is big
-            //or add a for loop like in the documentation
+            // or add a for loop
             result = hit.position;
             return true;
         }
@@ -49,7 +54,23 @@ public class BasicEnemy : Enemy
 
     public override void move() 
     {
-        ;
+        if(enemy.remainingDistance <= enemy.stoppingDistance) //done with path
+        {
+            Vector3 point;
+            if (RandomPoint(centrePoint.position, range, out point)) //pass in our centre point and radius of area
+            {
+                Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f); //so you can see with gizmos
+                enemy.SetDestination(point);
+            }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.collider.tag == "Enemy")
+        {   
+            Debug.Log("haha get rekt");
+            takeHit(100, 2);
+        }
     }
 
 
@@ -109,11 +130,5 @@ public class BasicEnemy : Enemy
     //     }
     // }
 
-    // private void OnCollisionEnter(Collision collision) {
-    //     if (collision.collider.tag == "Enemy")
-    //     {   
-    //         Debug.Log("haha get rekt");
-    //         takeHit(100, 2);
-    //     }
-    // }
+    
 }
