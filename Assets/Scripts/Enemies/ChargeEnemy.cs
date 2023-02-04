@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ChargeEnemy : Enemy
 {
+    [SerializeField]
+    private float chargeSpeed;
+
     protected override void Start() {
         base.Start();
         GetEnemyStatus("ChargeEnemy");
@@ -28,7 +31,7 @@ public class ChargeEnemy : Enemy
                 }
                 break;
             case EnemyState.Active:
-                TestBehaviors.MoveForward(gameObject, 10f);
+                TestBehaviors.MoveForward(gameObject, chargeSpeed);
                 break;
         }
     }

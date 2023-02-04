@@ -50,6 +50,9 @@ public class TauntEnemy : Enemy
                     StartCoroutine(Attack(basicAttack));
                 }
                 break;
+            case EnemyState.Active:
+                TestBehaviors.MoveForward(gameObject, 5f);
+                break;
         }
     }
 }

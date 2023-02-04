@@ -310,6 +310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _basicAttack: {fileID: 204469350574051446}
+  _moveSpeed: 0.02
 --- !u!136 &204469351715301413
 CapsuleCollider:
   m_ObjectHideFlags: 0

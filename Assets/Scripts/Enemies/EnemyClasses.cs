@@ -16,9 +16,11 @@ public enum EnemyState
 public abstract class Enemy: MonoBehaviour
 {
     [SerializeField]
-    int _maxHealth = 100;
+    int _maxHealth;
     [SerializeField]
     Attack _basicAttack;
+    [SerializeField]
+    float _moveSpeed;
 
     protected int maxHealth { get; set; }
     protected int health { get; set; }

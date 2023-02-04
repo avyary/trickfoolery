@@ -103,6 +103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _basicAttack: {fileID: 8530116322961737117}
+  _moveSpeed: 0.01
+  chargeSpeed: 15
 --- !u!114 &8530116321950674707
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChargeAttack : Attack
 {
     protected override void Start() {
-        startupTime = 1;
+        startupTime = 0.5f;
         activeTime = 0.5f;
         recoveryTime = 0.5f;
         damage = 100;

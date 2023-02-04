@@ -12,7 +12,6 @@ public class KillboxBehavior : MonoBehaviour
 
     void spawnRandomEnemy()
     {
-        print("uwah");
         Vector3 newPosition = new Vector3(Random.Range(-8.0f, 8.0f), 1.5f, Random.Range(-8.0f, 8.0f));
         Quaternion newRotation = Random.rotation;
         newRotation.w = 0;
