@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.AI;
 
 public class RandMove : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class RandMove : MonoBehaviour
     private int direction = 3;
     private int rotateTime = 0;
     public bool detected;
+    public float radius = 10.0f;
+
+    public Transform player;
+    public NavMeshAgent enemy;
+
     private GameObject platform;
 
 
@@ -21,8 +27,8 @@ public class RandMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        platform = GameObject.FindGameObjectWithTag("Platform");
-        platformTransform = platform.GetComponent<Transform>();
+        // platform = GameObject.FindGameObjectWithTag("Platform");
+        // platformTransform = platform.GetComponent<Transform>();
         // xEdge = platformTransform.position.x;
         // zEdge = platformTransform.position.z;
     }   
@@ -42,8 +48,14 @@ public class RandMove : MonoBehaviour
                 rotateTime = 0;
             } 
 
-
-            move(direction);
+            if (Mathf.Abs(player.position.z - transform.position.z) <= radius) 
+            {
+                enemy.SetDestination(player.position);
+            }
+            else 
+            {
+                move(direction);
+            }
         
         }
     }

@@ -6,23 +6,25 @@ using UnityEngine.SceneManagement;
 
 public class KillboxBehavior : MonoBehaviour
 {
-    public GameObject enemy;
+    public GameObject[] enemies;
+    [SerializeField]
+    private int minEnemyNumber;
 
-    void spawnEnemy()
+    void spawnRandomEnemy()
     {
-        Vector3 newPosition = new Vector3(Random.Range(-8.0f, 8.0f), 5.066f, Random.Range(-8.0f, 8.0f));
+        Vector3 newPosition = new Vector3(Random.Range(-8.0f, 8.0f), 1.5f, Random.Range(-8.0f, 8.0f));
         Quaternion newRotation = Random.rotation;
         newRotation.w = 0;
         newRotation.x = 0;
         newRotation.z = 0;
-        GameObject.Instantiate(enemy, newPosition, newRotation);
+        GameObject.Instantiate(enemies[Random.Range(0, enemies.Length)], newPosition, newRotation);
     }
 
     void Update()
     {
-        if (GameObject.FindGameObjectsWithTag("Enemy").Length < 3)
+        if (GameObject.FindGameObjectsWithTag("Enemy").Length < minEnemyNumber)
         {
-            spawnEnemy();
+            spawnRandomEnemy();
         }
 
         if (GameObject.FindGameObjectsWithTag("Player").Length < 1)
