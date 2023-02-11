@@ -5,11 +5,24 @@ using System.Linq;
 
 public abstract class Attack : MonoBehaviour
 {
+    [SerializeField]
+    float _startupTime;
+    [SerializeField]
+    float _activeTime;
+    [SerializeField]
+    float _recoveryTime;
+    [SerializeField]
+    int _damage;
+    [SerializeField]
+    float _stunTime;
+    [SerializeField]
+    float _range;
+
     public float startupTime { get; set; }
     public float activeTime { get; set; }
     public float recoveryTime { get; set; }
     public int damage { get; set; }
-    public int stunTime { get; set; }
+    public float stunTime { get; set; }
     public float range { get; set; }
 
     private Collider _collider;
@@ -23,6 +36,13 @@ public abstract class Attack : MonoBehaviour
         _collider = GetComponent<Collider>();
         _renderer.enabled = false;
         _collider.enabled = false;
+
+        startupTime = _startupTime;
+        activeTime = _activeTime;
+        recoveryTime = _recoveryTime;
+        damage = _damage;
+        stunTime = _stunTime;
+        range = _range;
     }
 
     public void Activate()

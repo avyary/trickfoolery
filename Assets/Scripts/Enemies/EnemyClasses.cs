@@ -18,36 +18,41 @@ public abstract class Enemy: MonoBehaviour
     [SerializeField]
     int _maxHealth;
     [SerializeField]
-    Attack _basicAttack;
-    [SerializeField]
     float _moveSpeed;
     [SerializeField]
     int _maxAnger;
+    [SerializeField]
+    Attack _basicAttack;
+    [SerializeField]
+    Attack _angyAttack;
 
     protected int maxHealth { get; set; }
     protected Attack basicAttack { get; set; }
+    protected Attack angyAttack { get; set; }
     protected float moveSpeed { get; set; }
     protected int maxAnger { get; set; }
 
     protected int health { get; set; }
     protected int anger { get; set; }
     protected EnemyState state;
+
     protected GameObject player;
     protected FieldOfView fow;
 
     // for debugging
     protected void GetEnemyStatus(string name = "Enemy")
     {
-        Debug.Log(System.String.Format("{0}(health: {1}/{2}, anger: {3}, state: {4})", name, health.ToString(), maxHealth.ToString(), anger.ToString(), state));
+        Debug.Log(System.String.Format("{0}(health: {1}/{2}, anger: {3}/{4}, state: {5})", name, health.ToString(), maxHealth.ToString(), anger.ToString(), maxAnger.ToString(), state));
     }
 
-    // take hitDamage amount of damage and stun for stunTime seconds
+    // invoked when colliding with attack hitbox
     public virtual void TakeHit(int damage, float stunTime)
     {
         if (state == EnemyState.Dead)
         {
             return;
         }
+
         health -= damage;
         if (health <= 0)
         {
@@ -59,18 +64,23 @@ public abstract class Enemy: MonoBehaviour
         }
     }
 
+    // puts enemy in Stunned state for stunTime seconds
     public virtual IEnumerator GetStunned(float stunTime)
     {
-        // add animation change for entering hitstun here - turns red for now
+        // replace with animation change for entering hitstun here - turns red for now
         Color originalColor = GetComponent<MeshRenderer>().material.color;
         GetComponent<MeshRenderer>().material.color = Color.red;
+
         state = EnemyState.Stunned;
         yield return new WaitForSeconds(stunTime);  // waits for stunTime seconds before continuing
+
         // add animation change for entering patrol/passive state here - returns to original color for now
         GetComponent<MeshRenderer>().material.color = originalColor;
+
         state = EnemyState.Passive;
     }
 
+    // invoked when health falls to/below 0
     public virtual IEnumerator Die()
     {
         fow.active = false;
@@ -87,7 +97,8 @@ public abstract class Enemy: MonoBehaviour
         Destroy(gameObject);
     }
 
-    public virtual void GetTaunted(int tauntValue)
+    // invoked when player taunts and enemy is in taunt radius
+    public virtual void GetTaunted(int tauntValue = 1)
     {
         anger = anger + tauntValue;
     }
@@ -142,6 +153,7 @@ public abstract class Enemy: MonoBehaviour
         state = EnemyState.Passive;
         moveSpeed = _moveSpeed;
         basicAttack = _basicAttack;
+        angyAttack = _angyAttack;
         player = GameObject.FindWithTag("Player");
         fow = gameObject.GetComponent<FieldOfView>();
     }
