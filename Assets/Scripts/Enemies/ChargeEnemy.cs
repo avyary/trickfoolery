@@ -16,15 +16,15 @@ public class ChargeEnemy : Enemy
         switch(state)
         {
             case EnemyState.Passive:
-                TestBehaviors.Rotate(gameObject, 0.5f);  // replace with better movement
+                TestBehaviors.Rotate(gameObject, moveSpeed);  // replace with better movement
                 if (!fow.active)
                 {
                     fow.active = true;
-                    StartCoroutine(fow.FindPlayer(0.2f, PlayerFound));
+                    StartCoroutine(fow.FindPlayer(moveSpeed, PlayerFound));
                 }
                 break;
             case EnemyState.Tracking:
-                TestBehaviors.MoveToPlayer(gameObject, player, 0.01f);
+                TestBehaviors.MoveToPlayer(gameObject, player, moveSpeed);
                 if (Vector3.Distance(gameObject.transform.position, player.transform.position) <= basicAttack.range)
                 {
                     StartCoroutine(Attack(basicAttack));

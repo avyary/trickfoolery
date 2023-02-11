@@ -21,16 +21,18 @@ public abstract class Enemy: MonoBehaviour
     Attack _basicAttack;
     [SerializeField]
     float _moveSpeed;
+    [SerializeField]
+    int _maxAnger;
 
     protected int maxHealth { get; set; }
+    protected Attack basicAttack { get; set; }
+    protected float moveSpeed { get; set; }
+    protected int maxAnger { get; set; }
+
     protected int health { get; set; }
     protected int anger { get; set; }
-    protected int[] angerLevels { get; set; }
     protected EnemyState state;
-    protected Attack basicAttack { get; set; }
-
     protected GameObject player;
-
     protected FieldOfView fow;
 
     // for debugging
@@ -135,8 +137,10 @@ public abstract class Enemy: MonoBehaviour
     {
         maxHealth = _maxHealth;
         health = _maxHealth;
+        maxAnger = _maxAnger;
         anger = 0;
         state = EnemyState.Passive;
+        moveSpeed = _moveSpeed;
         basicAttack = _basicAttack;
         player = GameObject.FindWithTag("Player");
         fow = gameObject.GetComponent<FieldOfView>();
