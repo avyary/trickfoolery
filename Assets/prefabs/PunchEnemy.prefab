@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 204469350574051442}
   - component: {fileID: 204469350574051446}
   m_Layer: 0
-  m_Name: PunchHitbox
+  m_Name: PunchAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,6 +110,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28066c6fabddb4b27bc7b75480ca307c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startupTime: 0.5
+  _activeTime: 0.25
+  _recoveryTime: 1
+  _damage: 100
+  _stunTime: 1
+  _range: 2
 --- !u!1 &204469351581699607
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,8 +315,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
-  _basicAttack: {fileID: 204469350574051446}
   _moveSpeed: 0.02
+  _maxAnger: 0
+  _basicAttack: {fileID: 204469350574051446}
+  _angyAttack: {fileID: 0}
 --- !u!136 &204469351715301413
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -102,8 +102,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
-  _basicAttack: {fileID: 8530116322961737117}
   _moveSpeed: 0.01
+  _maxAnger: 0
+  _basicAttack: {fileID: 8530116322961737117}
+  _angyAttack: {fileID: 0}
   chargeSpeed: 15
 --- !u!114 &8530116321950674707
 MonoBehaviour:
@@ -362,3 +364,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2211ac183a1924cdb965ba0e27f7b418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startupTime: 0.5
+  _activeTime: 0.5
+  _recoveryTime: 0.5
+  _damage: 100
+  _stunTime: 1
+  _range: 3

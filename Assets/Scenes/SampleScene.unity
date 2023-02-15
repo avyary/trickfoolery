@@ -284,6 +284,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8530116321950674696, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8530116321950674698, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_Name
       value: ChargeEnemy
@@ -335,6 +339,14 @@ PrefabInstance:
     - target: {fileID: 8530116321950674707, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: viewRadius
       value: 31.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530116322961737114, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_Name
+      value: ChargeAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530116322961737119, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
