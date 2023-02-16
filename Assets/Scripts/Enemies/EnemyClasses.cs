@@ -26,6 +26,9 @@ public abstract class Enemy: MonoBehaviour
     [SerializeField]
     Attack _angyAttack;
 
+    public bool isAngy;
+    protected Attack currentAttack;
+
     protected int maxHealth { get; set; }
     protected Attack basicAttack { get; set; }
     protected Attack angyAttack { get; set; }
@@ -101,19 +104,23 @@ public abstract class Enemy: MonoBehaviour
     public virtual void GetTaunted(int tauntValue = 1)
     {
         anger = anger + tauntValue;
+        if (anger >= maxAnger) {
+            isAngy = true;
+            currentAttack = angyAttack;
+        }
     }
 
     protected IEnumerator Attack(Attack attackObj) {
+        // trigger attack animation here
         state = EnemyState.Startup;
-        // do startup animation
         yield return new WaitForSeconds(attackObj.startupTime);
         
+        // there's probably a better way to handle the below (& its repetitions)
         if (state == EnemyState.Dead || state == EnemyState.Stunned) {
             yield break;
         }
 
         state = EnemyState.Active;
-        // do active attacking animation
         attackObj.Activate();  // activate attack collider
         yield return new WaitForSeconds(attackObj.activeTime);
 
@@ -122,7 +129,6 @@ public abstract class Enemy: MonoBehaviour
         }
 
         state = EnemyState.Recovery;
-        // do cooldown animation
         attackObj.Deactivate();  // deactivate attack collider
         yield return new WaitForSeconds(attackObj.recoveryTime);
 
@@ -154,6 +160,7 @@ public abstract class Enemy: MonoBehaviour
         moveSpeed = _moveSpeed;
         basicAttack = _basicAttack;
         angyAttack = _angyAttack;
+        currentAttack = _basicAttack;
         player = GameObject.FindWithTag("Player");
         fow = gameObject.GetComponent<FieldOfView>();
     }

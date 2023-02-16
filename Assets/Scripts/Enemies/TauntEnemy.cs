@@ -24,9 +24,9 @@ public class TauntEnemy : Enemy
                 break;
             case EnemyState.Tracking:
                 TestBehaviors.MoveToPlayer(gameObject, player, moveSpeed);  // replace with pathing to player
-                if (Vector3.Distance(gameObject.transform.position, player.transform.position) <= basicAttack.range)
+                if (Vector3.Distance(gameObject.transform.position, player.transform.position) <= currentAttack.range)
                 {
-                    StartCoroutine(Attack(basicAttack));
+                    StartCoroutine(Attack(currentAttack));
                 }
                 break;
             case EnemyState.Active:
