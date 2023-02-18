@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1130750722537023393}
   - component: {fileID: 9164532368191195186}
   - component: {fileID: 1473256248873818880}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AngyCharge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 8530116322961737119}
   - component: {fileID: 8530116322961737112}
   - component: {fileID: 8530116322961737117}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ChargeHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}

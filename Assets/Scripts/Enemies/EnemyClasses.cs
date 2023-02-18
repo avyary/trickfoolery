@@ -40,6 +40,7 @@ public abstract class Enemy: MonoBehaviour
     protected EnemyState state;
 
     protected GameObject player;
+    protected HypeManager hypeManager;
     protected FieldOfView fow;
 
     // for debugging
@@ -63,6 +64,7 @@ public abstract class Enemy: MonoBehaviour
         }
         else
         {
+            hypeManager.ChangeHype(hypeManager.HIT_HYPE);
             StartCoroutine(GetStunned(stunTime));
         }
     }
@@ -86,6 +88,8 @@ public abstract class Enemy: MonoBehaviour
     // invoked when health falls to/below 0
     public virtual IEnumerator Die()
     {
+        hypeManager.ChangeHype(hypeManager.DEATH_HYPE);
+
         fow.active = false;
         basicAttack.Deactivate();  // deactivate attack collider
 
@@ -162,6 +166,7 @@ public abstract class Enemy: MonoBehaviour
         angyAttack = _angyAttack;
         currentAttack = _basicAttack;
         player = GameObject.FindWithTag("Player");
+        hypeManager = GameObject.FindWithTag("GameManager").GetComponent<HypeManager>();
         fow = gameObject.GetComponent<FieldOfView>();
     }
 }
