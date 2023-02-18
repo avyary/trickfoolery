@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Platform
+  - GameManager
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - Obstacle
   - Water
   - UI
-  - 
+  - Attack
   - 
   - 
   - 

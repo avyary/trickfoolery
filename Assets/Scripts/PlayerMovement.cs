@@ -9,7 +9,10 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    public float dodgeRadius;
+    [SerializeField]
+    private LayerMask attackMask;
     
     //Player inputs
     private float _playerInputVertical;
@@ -25,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody _rb;
     private Transform _t;
+
+    private HypeManager hypeManager;
     
     
     //Speed of different movement abilities
@@ -43,12 +48,13 @@ public class PlayerMovement : MonoBehaviour
 
     private bool dashing;
     
-    
+    // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
         _t = GetComponent<Transform>();
         moveSpeed = WALKSPEED;
+        hypeManager = GameObject.FindWithTag("GameManager").GetComponent<HypeManager>();
     }
 
     // Update is called once per frame
@@ -86,7 +92,11 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator Dash()
     {
         dashCdTimer = DASHCD;
-    
+        if (IsCloseDash())
+        {
+            hypeManager.ChangeHype(hypeManager.DODGE_HYPE);
+        }
+
         float startTime = Time.time;
 
         while (Time.time < startTime + DASHTIME)
@@ -98,7 +108,14 @@ public class PlayerMovement : MonoBehaviour
         
         state = MovementState.walking;
     }
-    
+
+
+    bool IsCloseDash()
+    {
+        Collider[] attacksInRange = Physics.OverlapSphere(transform.position, dodgeRadius, attackMask);
+        print(attacksInRange.Length);
+        return (attacksInRange.Length > 0);
+    }
 
     /// <summary>
     /// Method <c>Dash</c> applies dash when spacebar is pressed.
