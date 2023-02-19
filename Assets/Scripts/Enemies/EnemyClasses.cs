@@ -43,6 +43,8 @@ public abstract class Enemy: MonoBehaviour
     protected HypeManager hypeManager;
     protected FieldOfView fow;
 
+    protected GameManager gameManager;
+
     // for debugging
     protected void GetEnemyStatus(string name = "Enemy")
     {
@@ -168,5 +170,6 @@ public abstract class Enemy: MonoBehaviour
         player = GameObject.FindWithTag("Player");
         hypeManager = GameObject.FindWithTag("GameManager").GetComponent<HypeManager>();
         fow = gameObject.GetComponent<FieldOfView>();
+        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
     }
 }

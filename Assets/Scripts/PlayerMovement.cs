@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     private Transform _t;
 
     private HypeManager hypeManager;
-    
+    private GameManager gameManager;
     
     //Speed of different movement abilities
     private float WALKSPEED = 10f;
@@ -55,30 +55,33 @@ public class PlayerMovement : MonoBehaviour
         _t = GetComponent<Transform>();
         moveSpeed = WALKSPEED;
         hypeManager = GameObject.FindWithTag("GameManager").GetComponent<HypeManager>();
+        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Calculate Inputs for player movement
-        _playerInputVertical = Input.GetAxisRaw("Vertical");
-        _playerInputHorizontal = Input.GetAxisRaw("Horizontal");
-        _movementDirection = new Vector3(_playerInputHorizontal, 0, _playerInputVertical);
-        _movementDirection.Normalize();
+        if (!gameManager.isPaused) {
+            //Calculate Inputs for player movement
+            _playerInputVertical = Input.GetAxisRaw("Vertical");
+            _playerInputHorizontal = Input.GetAxisRaw("Horizontal");
+            _movementDirection = new Vector3(_playerInputHorizontal, 0, _playerInputVertical);
+            _movementDirection.Normalize();
 
-        if (_movementDirection != Vector3.zero && state != MovementState.dashing)
-        {
-            transform.forward = _movementDirection;
-        } ;
+            if (_movementDirection != Vector3.zero && state != MovementState.dashing)
+            {
+                transform.forward = _movementDirection;
+            } ;
 
-        if (Input.GetButton("Jump") && dashCdTimer <= 0)
-        {
-            StartCoroutine(Dash());
+            if (Input.GetButton("Jump") && dashCdTimer <= 0)
+            {
+                StartCoroutine(Dash());
+            }
+
+            //Process the cooldown timer for dashing
+            if (dashCdTimer > 0)
+                dashCdTimer -= Time.deltaTime;
         }
-
-        //Process the cooldown timer for dashing
-        if (dashCdTimer > 0)
-            dashCdTimer -= Time.deltaTime;
     }
 
     private void FixedUpdate()
