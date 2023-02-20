@@ -9,6 +9,7 @@ public class ChargeEnemy : Enemy
 
     protected override void Start() {
         base.Start();
+        agent.stoppingDistance = currentAttack.range;
         GetEnemyStatus("ChargeEnemy");
     }
 
@@ -16,8 +17,9 @@ public class ChargeEnemy : Enemy
         switch(state)
         {
             case EnemyState.Passive:
-                // TestBehaviors.Rotate(gameObject, moveSpeed);  // replace with better movement. random movement function should occur here
-                MoveRandom();
+                TestBehaviors.Rotate(gameObject, moveSpeed);  // replace with better movement. random movement function should occur here
+                Debug.Log("Enemy is passive.");
+                // MoveRandom();
                 if (!fow.active)
                 {
                     fow.active = true;
@@ -25,13 +27,16 @@ public class ChargeEnemy : Enemy
                 }
                 break;
             case EnemyState.Tracking:
+                Debug.Log("Enemy is tracking.");
                 TestBehaviors.MoveToPlayer(gameObject, player, moveSpeed);
                 if (Vector3.Distance(gameObject.transform.position, player.transform.position) <= currentAttack.range)
-                {
+                {   
+                    Debug.Log("starting coroutine for attack.");
                     StartCoroutine(Attack(currentAttack));
                 }
                 break;
             case EnemyState.Active:
+                Debug.Log("Enemy is active.");
                 TestBehaviors.MoveForward(gameObject, chargeSpeed);
                 break;
         }

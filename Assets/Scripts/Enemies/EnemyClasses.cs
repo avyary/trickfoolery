@@ -153,9 +153,11 @@ public abstract class Enemy: MonoBehaviour
     }
 
     protected virtual void MoveRandom() 
-    {
+    {   
+        Debug.Log(System.String.Format("Remaining Distance: {0}, Stopping Distance: {1}", agent.remainingDistance.ToString(), agent.stoppingDistance.ToString()));
         if(agent.remainingDistance <= agent.stoppingDistance) //done with path
-        {
+        {   
+            Debug.Log("Enemy is patrolling.");  // for debugging
             Vector3 point;
             if (RandomPoint(centrePoint.position, range, out point)) //pass in our centre point and radius of area
             {

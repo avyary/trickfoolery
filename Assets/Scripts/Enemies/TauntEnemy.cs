@@ -15,8 +15,8 @@ public class TauntEnemy : Enemy
         switch(state)
         {
             case EnemyState.Passive:
-                // TestBehaviors.Rotate(gameObject, moveSpeed);  // replace with better movement
-                MoveRandom();
+                TestBehaviors.Rotate(gameObject, moveSpeed);  // replace with better movement
+                // MoveRandom();
                 if (!fow.active)
                 {
                     fow.active = true;

@@ -17,10 +17,12 @@ public class FieldOfView : MonoBehaviour
     public IEnumerator FindPlayer(float delay, System.Action callback)
     {
         while (active)
-        {
+        {   
+            // Debug.Log("Entering Find Player");
             yield return new WaitForSeconds(delay);
             if (PlayerIsVisible())
-            {
+            {   
+                Debug.Log("Player is visible.");
                 callback();
                 active = false;
                 yield break;
@@ -31,14 +33,16 @@ public class FieldOfView : MonoBehaviour
     bool PlayerIsVisible() {
         float dstToPlayer = Vector3.Distance(transform.position, player.transform.position);
         if (dstToPlayer > viewRadius)
-        {
+        {   
+            Debug.Log("Player not visible");
             return false;
         }
         Vector3 dirToPlayer = (player.transform.position - transform.position).normalized;
         if (Vector3.Angle(transform.forward, dirToPlayer) < viewAngle / 2)
         {
             if (!Physics.Raycast(transform.position, dirToPlayer, dstToPlayer, obstacleMask))
-            {
+            {   
+                Debug.Log("Player visible");
                 return true;
             }
         }
