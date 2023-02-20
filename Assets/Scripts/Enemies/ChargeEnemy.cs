@@ -16,7 +16,8 @@ public class ChargeEnemy : Enemy
         switch(state)
         {
             case EnemyState.Passive:
-                TestBehaviors.Rotate(gameObject, moveSpeed);  // replace with better movement
+                // TestBehaviors.Rotate(gameObject, moveSpeed);  // replace with better movement. random movement function should occur here
+                MoveRandom();
                 if (!fow.active)
                 {
                     fow.active = true;
