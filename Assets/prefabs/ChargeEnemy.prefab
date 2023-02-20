@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1130750722537023393}
   - component: {fileID: 9164532368191195186}
   - component: {fileID: 1473256248873818880}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: AngyCharge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 8530116321950674707}
   - component: {fileID: 8530116321950674706}
   - component: {fileID: 7110659447616012854}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ChargeEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _moveSpeed: 0.01
-  _maxAnger: 0
+  _maxAnger: 1
   _basicAttack: {fileID: 8530116322961737117}
   _angyAttack: {fileID: 0}
   isAngy: 0
@@ -244,6 +244,9 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 72
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 0
   active: 0
 --- !u!136 &8530116321950674706
 CapsuleCollider:
@@ -385,7 +388,7 @@ GameObject:
   - component: {fileID: 8530116322961737119}
   - component: {fileID: 8530116322961737112}
   - component: {fileID: 8530116322961737117}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ChargeHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
