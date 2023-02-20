@@ -1,0 +1,40 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TauntEnemy : Enemy
+{
+    protected override void Start() {
+        base.Start();
+        GetEnemyStatus("TauntEnemy");
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (!gameManager.isPaused)
+        {
+            switch(state)
+            {
+                case EnemyState.Passive:
+                    TestBehaviors.Rotate(gameObject, moveSpeed);  // replace with better movement
+                    if (!fow.active)
+                    {
+                        fow.active = true;
+                        StartCoroutine(fow.FindPlayer(moveSpeed, PlayerFound));
+                    }
+                    break;
+                case EnemyState.Tracking:
+                    TestBehaviors.MoveToPlayer(gameObject, player, moveSpeed);  // replace with pathing to player
+                    if (Vector3.Distance(gameObject.transform.position, player.transform.position) <= currentAttack.range)
+                    {
+                        StartCoroutine(Attack(currentAttack));
+                    }
+                    break;
+                case EnemyState.Active:
+                    TestBehaviors.MoveForward(gameObject, 5f);
+                    break;
+            }
+        }
+    }
+}
