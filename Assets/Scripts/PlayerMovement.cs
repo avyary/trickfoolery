@@ -24,10 +24,12 @@ public class PlayerMovement : MonoBehaviour
     public float dashCdTimer = 0;
     private float lastDesiredMoveSpeed;
     private float desiredMoveSpeed;
-    private float moveSpeed;
+    private float walkspeed;
+    private Vector3 gravityVelocity;
+    private float _gravity = -9.81f;
 
     private Rigidbody _rb;
-    private Transform _t;
+    private CharacterController _movementController;
 
     private HypeManager hypeManager;
     private GameManager gameManager;
@@ -37,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     private float DASHSPEED = 50f;
     private float DASHTIME = 0.15f;
     private float DASHCD = 0.5f;
+    private float GRAVITY_MULTIPLIER = 1f;
 
     public MovementState state;
 
@@ -52,8 +55,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
-        _t = GetComponent<Transform>();
-        moveSpeed = WALKSPEED;
+        _movementController = GetComponent<CharacterController>();
         hypeManager = GameObject.FindWithTag("GameManager").GetComponent<HypeManager>();
         gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
     }
@@ -82,14 +84,16 @@ public class PlayerMovement : MonoBehaviour
             if (dashCdTimer > 0)
                 dashCdTimer -= Time.deltaTime;
         }
+        
+        ApplyGravity();
     }
 
     private void FixedUpdate()
     {
         if (state == MovementState.walking) 
-            _rb.MovePosition(transform.position + _movementDirection * WALKSPEED * Time.deltaTime);
+            _movementController.Move(_movementDirection * WALKSPEED * Time.deltaTime);
         if (state == MovementState.dashing)
-            _rb.MovePosition(transform.position + transform.forward * DASHSPEED * Time.deltaTime);
+            _movementController.Move(transform.forward * DASHSPEED * Time.deltaTime);
     }
 
     IEnumerator Dash()
@@ -119,6 +123,14 @@ public class PlayerMovement : MonoBehaviour
         print(attacksInRange.Length);
         return (attacksInRange.Length > 0);
     }
+    
+    private void ApplyGravity()
+    {
+        gravityVelocity = Vector3.zero;
+        gravityVelocity.y += _gravity * GRAVITY_MULTIPLIER;
+        _movementController.Move(gravityVelocity * Time.deltaTime);
+    }
+
 
     /// <summary>
     /// Method <c>Dash</c> applies dash when spacebar is pressed.
