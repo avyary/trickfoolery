@@ -145,7 +145,8 @@ public class PlayerMovement : MonoBehaviour
         float startTime = Time.time;
 
         List<Collider> inRange = fov.FindVisibleTargets();
-
+        Debug.Log("HELLO");
+        Debug.Log(inRange.Count);
         foreach (var enemy in inRange)
         {
             Debug.Log("test");
@@ -160,7 +161,6 @@ public class PlayerMovement : MonoBehaviour
         }
         
         
-        Debug.Log("Not Taunting");
         state = AbilityState.walking;
         tauntCdTimer = TAUNTCD;
     }

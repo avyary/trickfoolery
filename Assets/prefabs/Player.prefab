@@ -110,7 +110,9 @@ GameObject:
   - component: {fileID: 1787334691090485618}
   - component: {fileID: 6537804239994144838}
   - component: {fileID: -6082227248687665773}
+  - component: {fileID: 5630559685492049326}
   - component: {fileID: -1010735790590283643}
+  - component: {fileID: 320070894880346089}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -210,8 +212,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ad7cb085d980249b5041251c2d82c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dodgeRadius: 0
+  attackMask:
+    serializedVersion: 2
+    m_Bits: 0
   dashCdTimer: 0
+  tauntCdTimer: 0
+  WALKSPEED: 10
+  DASHSPEED: 50
+  DASHTIME: 0.15
+  DASHCD: 0.5
+  TAUNTTIME: 1
+  TAUNTCD: 1
+  GRAVITY_MULTIPLIER: 1
   state: 0
+  fov: {fileID: 0}
+--- !u!143 &5630559685492049326
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7796244350440389784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &-1010735790590283643
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -228,3 +261,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &320070894880346089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7796244350440389784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d2bb73e9f3e64cca84c97ae658ed220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 10
+  viewAngle: 75
+  player: {fileID: 0}
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 8
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 128
+  active: 0
