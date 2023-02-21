@@ -8,6 +8,7 @@ TagManager:
   - Platform
   - GameManager
   - Center
+  - PlayerManager
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - Water
   - UI
   - Attack
-  - 
+  - Enemy
   - 
   - 
   - 

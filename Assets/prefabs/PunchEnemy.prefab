@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 204469350574051443}
   - component: {fileID: 204469350574051442}
   - component: {fileID: 204469350574051446}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PunchAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 204469351715301434}
   - component: {fileID: 204469351715301435}
   - component: {fileID: 2388219915273229839}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PunchEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -369,6 +369,9 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 8
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 0
   active: 0
 --- !u!195 &2388219915273229839
 NavMeshAgent:
