@@ -13,10 +13,12 @@ public class ChargeEnemy : Enemy
     }
 
     void Update() {
+        Debug.Log(System.String.Format("State: {0}", state));
         switch(state)
         {
             case EnemyState.Passive:
-                TestBehaviors.Rotate(gameObject, moveSpeed);  // replace with better movement
+                // TestBehaviors.Rotate(gameObject, moveSpeed);  // replace with better movement
+                Patrol();
                 if (!fow.active)
                 {
                     fow.active = true;
@@ -24,9 +26,11 @@ public class ChargeEnemy : Enemy
                 }
                 break;
             case EnemyState.Tracking:
-                TestBehaviors.MoveToPlayer(gameObject, player, moveSpeed);
+                // TestBehaviors.MoveToPlayer(gameObject, player, moveSpeed);
+                agent.SetDestination(player.transform.position);
                 if (Vector3.Distance(gameObject.transform.position, player.transform.position) <= basicAttack.range)
-                {
+                {   
+                    Debug.Log("wahh");
                     StartCoroutine(Attack(basicAttack));
                 }
                 break;
