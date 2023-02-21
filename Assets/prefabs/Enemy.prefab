@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9157447563988647676}
   - component: {fileID: 4912419981975707200}
   - component: {fileID: 3597525765768195017}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -213,7 +213,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
+  _moveSpeed: 0
+  _maxAnger: 0
   _basicAttack: {fileID: 0}
+  _angyAttack: {fileID: 0}
+  isAngy: 0
   enemy: {fileID: 0}
   range: 10
   centrePoint: {fileID: 0}

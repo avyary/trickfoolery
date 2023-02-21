@@ -81,7 +81,7 @@ public abstract class Enemy: MonoBehaviour
     }
 
     // for debugging
-    protected void GetEnemyStatus(string name = "Enemy")
+    public void GetEnemyStatus(string name = "Enemy")
     {
         Debug.Log(System.String.Format("{0}(health: {1}/{2}, anger: {3}/{4}, state: {5})", name, health.ToString(), maxHealth.ToString(), anger.ToString(), maxAnger.ToString(), state));
     }

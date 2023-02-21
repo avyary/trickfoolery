@@ -385,6 +385,28 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &228077798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228077790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d2bb73e9f3e64cca84c97ae658ed220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 18
+  viewAngle: 57
+  player: {fileID: 0}
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 8
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 128
+  active: 0
 --- !u!1 &294246019
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,8 +662,8 @@ GameObject:
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
-  m_StaticEditorFlags: 8
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &829263762
 BoxCollider:
@@ -718,8 +740,8 @@ Transform:
   m_LocalScale: {x: 1, y: 2, z: 14.868}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1018715917}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 50.929, z: 0}
 --- !u!114 &838113726 stripped
 MonoBehaviour:
@@ -789,37 +811,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
---- !u!1 &907352715
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 907352716}
-  m_Layer: 0
-  m_Name: Centre Point
-  m_TagString: Center
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &907352716
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 907352715}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1018715917}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,9 +1189,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 197254493}
-  - {fileID: 2059206183}
-  - {fileID: 829263765}
-  - {fileID: 907352716}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1481,6 +1469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1580607769}
   - component: {fileID: 1580607770}
+  - component: {fileID: 1580607771}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: GameManager
@@ -1520,6 +1509,19 @@ MonoBehaviour:
   DEATH_HYPE: 10
   HIT_HYPE: 0
   DODGE_HYPE: 10
+--- !u!114 &1580607771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580607768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db7ec9b358c3e44da9cbaf90c7d4dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
 --- !u!1 &1601926048
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,8 +1752,8 @@ GameObject:
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
-  m_StaticEditorFlags: 8
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!65 &2059206180
 BoxCollider:
@@ -1825,11 +1827,11 @@ Transform:
   m_GameObject: {fileID: 2059206179}
   m_LocalRotation: {x: -0, y: 0.08905173, z: -0, w: 0.996027}
   m_LocalPosition: {x: -4.204397, y: 1.7, z: 3.2}
-  m_LocalScale: {x: 1, y: 2, z: 14.868001}
+  m_LocalScale: {x: 1, y: 2, z: 14.868}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1018715917}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 10.218, z: 0}
 --- !u!1 &2063325416
 GameObject:
