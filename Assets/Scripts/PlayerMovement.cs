@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _movementController = GetComponent<CharacterController>();
         hypeManager = GameObject.FindWithTag("GameManager").GetComponent<HypeManager>();
-        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        gameManager = GameObject.FindObjectOfType<GameManager>();
         fov = gameObject.GetComponent<FieldOfView>();
     }
 
