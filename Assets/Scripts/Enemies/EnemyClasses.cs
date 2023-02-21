@@ -178,6 +178,7 @@ public abstract class Enemy: MonoBehaviour
         }
         
         state = EnemyState.Passive;
+        Debug.Log("I am friendly!");
     }
 
     protected virtual void PlayerFound()
