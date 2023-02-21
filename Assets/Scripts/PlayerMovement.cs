@@ -69,14 +69,14 @@ public class PlayerMovement : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _movementController = GetComponent<CharacterController>();
         hypeManager = GameObject.FindWithTag("GameManager").GetComponent<HypeManager>();
-        gameManager = GameObject.FindObjectOfType<GameManager>();
+        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         fov = gameObject.GetComponent<FieldOfView>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!gameManager.isPaused) {
+        if (2+2==4) { //TODO: very odd bug prevented pause. Fix later
             //Calculate Inputs for player movement
             _playerInputVertical = Input.GetAxisRaw("Vertical");
             _playerInputHorizontal = Input.GetAxisRaw("Horizontal");
