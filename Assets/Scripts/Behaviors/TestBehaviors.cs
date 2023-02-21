@@ -13,6 +13,7 @@ public class TestBehaviors
     }
 
     public static void MoveToPlayer(GameObject target, GameObject player, float speed) {
+        // change to setDestination
         Vector3 toPlayer = player.transform.position - target.transform.position;
         toPlayer.y = 0;
         target.transform.position += (toPlayer.normalized * speed);

@@ -2,18 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChargeEnemy : Enemy
+public class PunchEnemy : Enemy
 {
-    [SerializeField]
-    private float chargeSpeed;
-
     protected override void Start() {
         base.Start();
-        GetEnemyStatus("ChargeEnemy");
+        GetEnemyStatus("PunchEnemy");
     }
 
-    void Update() {
-        Debug.Log(System.String.Format("State: {0}", state));
+    // Update is called once per frame
+    void Update()
+    {
         switch(state)
         {
             case EnemyState.Passive:
@@ -26,16 +24,15 @@ public class ChargeEnemy : Enemy
                 }
                 break;
             case EnemyState.Tracking:
-                // TestBehaviors.MoveToPlayer(gameObject, player, moveSpeed);
+                // TestBehaviors.MoveToPlayer(gameObject, player, moveSpeed);  // replace with pathing to player
                 agent.SetDestination(player.transform.position);
                 if (Vector3.Distance(gameObject.transform.position, player.transform.position) <= basicAttack.range)
-                {   
-                    Debug.Log("wahh");
+                {
                     StartCoroutine(Attack(basicAttack));
                 }
                 break;
             case EnemyState.Active:
-                TestBehaviors.MoveForward(gameObject, chargeSpeed);
+                TestBehaviors.MoveForward(gameObject, 5f);
                 break;
         }
     }
