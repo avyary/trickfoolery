@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 204469350574051443}
   - component: {fileID: 204469350574051442}
   - component: {fileID: 204469350574051446}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PunchAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 204469351715301413}
   - component: {fileID: 204469351715301434}
   - component: {fileID: 204469351715301435}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PunchEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _moveSpeed: 0.02
-  _maxAnger: 0
+  _maxAnger: 1
   _basicAttack: {fileID: 204469350574051446}
   _angyAttack: {fileID: 0}
   isAngy: 0
@@ -368,4 +368,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 8
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 0
   active: 0

@@ -1469,6 +1469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1580607769}
   - component: {fileID: 1580607770}
+  - component: {fileID: 1580607771}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: GameManager
@@ -1508,6 +1509,19 @@ MonoBehaviour:
   DEATH_HYPE: 10
   HIT_HYPE: 0
   DODGE_HYPE: 10
+--- !u!114 &1580607771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580607768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db7ec9b358c3e44da9cbaf90c7d4dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
 --- !u!1 &1601926048
 GameObject:
   m_ObjectHideFlags: 0
