@@ -70,7 +70,7 @@ public class TauntEnemy : Enemy
                 // }
 
                 TeleportAndAttack();
-                state = EnemyState.Passive();
+                state = EnemyState.Passive;
                 break;
 
             case EnemyState.Active:
