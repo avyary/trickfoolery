@@ -43,8 +43,10 @@ public class FieldOfView : MonoBehaviour
                 float dstToTarget = Vector3.Distance(transform.position, target.transform.position);
 
                 if (!Physics.Raycast (transform.position, dirToTarget, dstToTarget, obstacleMask)) {
+                    Debug.Log("ENEMY FOUND");
                     visibleTargets.Add(target);
-                }
+                } else
+                    Debug.Log("ENEMY NOT FOUND");
             }
         }
 

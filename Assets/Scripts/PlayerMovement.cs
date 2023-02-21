@@ -145,11 +145,10 @@ public class PlayerMovement : MonoBehaviour
         float startTime = Time.time;
 
         List<Collider> inRange = fov.FindVisibleTargets();
-        Debug.Log("HELLO");
+        Debug.Log("Enemies in range");
         Debug.Log(inRange.Count);
         foreach (var enemy in inRange)
         {
-            Debug.Log("test");
             Debug.Log(enemy);
             enemy.gameObject.GetComponent<Enemy>().GetTaunted();
         }
