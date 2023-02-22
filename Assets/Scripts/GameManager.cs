@@ -10,6 +10,11 @@ public class GameManager : MonoBehaviour
     
     public GameObject _gameOverObj;
     public TMP_Text _gameOverText;
+
+    public GameObject[] enemies;
+    [SerializeField]
+    private int minEnemyNumber;
+
     void Start()
     {
         _gameOverObj = GameObject.Find("GameOverText");
@@ -19,6 +24,10 @@ public class GameManager : MonoBehaviour
     void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             TogglePause();
+        }
+        if (GameObject.FindGameObjectsWithTag("Enemy").Length < minEnemyNumber)
+        {
+            SpawnRandomEnemy();
         }
     }
 
@@ -48,10 +57,23 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         _gameOverText.text = "Hype Meter Filled!";
     }
+
     public void GameOverLose()
     {
         isPaused = true;
         Time.timeScale = 0;
         _gameOverText.text = "You Died!";
     }
+
+    void SpawnRandomEnemy()
+    {
+        Vector3 newPosition = new Vector3(Random.Range(-30.0f, -40f), 7.2845661f, Random.Range(-33.0f, -10.0f));
+        Quaternion newRotation = Random.rotation;
+        newRotation.w = 0;
+        newRotation.x = 0;
+        newRotation.z = 0;
+        GameObject.Instantiate(enemies[Random.Range(0, enemies.Length)], newPosition, newRotation);
+    }
+
+
 }
