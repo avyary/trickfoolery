@@ -21,21 +21,22 @@ public class PlayerMovement : MonoBehaviour
     
     
     private float speedChangeFactor = 50f;
-    public float dashCdTimer = 0;
-    public float tauntCdTimer = 0;
+    public float dashCdTimer = 0; //for debugging
+    public float tauntCdTimer = 0; //for debugging
     private float lastDesiredMoveSpeed;
     private float desiredMoveSpeed;
     private float walkspeed;
     private Vector3 gravityVelocity;
     private float _gravity = -9.81f;
-
-    private Rigidbody _rb;
+    public float health; //for debugging
+    public bool isInvincible = false;
+    
     private CharacterController _movementController;
 
     private HypeManager hypeManager;
     private GameManager gameManager;
 
-    //Speed of different movement abilities
+    //Speed of different player abilities
     [SerializeField]
     private float WALKSPEED = 10f;
     [SerializeField]
@@ -50,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
     private float TAUNTCD = 1f;
     [SerializeField]
     private float GRAVITY_MULTIPLIER = 1f;
+    public float MAX_HEALTH = 100;
 
     public AbilityState state;
     public FieldOfView fov;
@@ -58,25 +60,27 @@ public class PlayerMovement : MonoBehaviour
     {
         walking,
         dashing,
-        taunting
+        taunting,
+        damage,
+        dead
     }
-
-    private bool dashing;
     
     // Start is called before the first frame update
     void Start()
     {
-        _rb = GetComponent<Rigidbody>();
         _movementController = GetComponent<CharacterController>();
         hypeManager = GameObject.FindWithTag("GameManager").GetComponent<HypeManager>();
         gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         fov = gameObject.GetComponent<FieldOfView>();
+        health = MAX_HEALTH;
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (2+2==4) { //TODO: very odd bug prevented pause. Fix later
+        if (!gameManager.isPaused) { 
             //Calculate Inputs for player movement
             _playerInputVertical = Input.GetAxisRaw("Vertical");
             _playerInputHorizontal = Input.GetAxisRaw("Horizontal");
@@ -164,8 +168,7 @@ public class PlayerMovement : MonoBehaviour
         tauntCdTimer = TAUNTCD;
     }
     
-
-
+    
     bool IsCloseDash()
     {
         Collider[] attacksInRange = Physics.OverlapSphere(transform.position, dodgeRadius, attackMask);
@@ -179,30 +182,45 @@ public class PlayerMovement : MonoBehaviour
         gravityVelocity.y += _gravity * GRAVITY_MULTIPLIER;
         _movementController.Move(gravityVelocity * Time.deltaTime);
     }
-    
 
 
-    /// <summary>
-    /// Method <c>Dash</c> applies dash when spacebar is pressed.
-    /// </summary>
-    // IEnumerator Dash()
-    //
-    // {
-    //     float time;
-    //     float boostFactor = speedChangeFactor;
-    //     float startTime = Time.time;
-    //     
-    //     
-    //     time = 0;
-    //     float difference = Mathf.Abs(dashSpeed - walkSpeed);
-    //     while (time < difference)
-    //     {
-    //         moveSpeed = Mathf.Lerp(dashSpeed, walkSpeed, time / difference);
-    //         time += Time.deltaTime * boostFactor;
-    //         yield return null;
-    //     }
-    //
-    //     moveSpeed = walkSpeed;
-    //     speedChangeFactor = 1f;
-    // }
+    public void TakeHit(int damage)
+    {
+        if (state == AbilityState.dead || isInvincible)
+        {
+            return;
+        }
+        
+        health -= 25; //TODO: change once attack damages have been tweaked
+        Debug.Log("health: " + health);
+        if (health <= 0)
+        {
+            StartCoroutine(Die());
+        }
+        else
+        { 
+            GetComponent<MeshRenderer>().material.color = Color.red;
+            StartCoroutine(InvincibilityFrames());
+        }
+    }
+
+    IEnumerator Die()
+    {
+        GetComponent<MeshRenderer>().material.color = Color.black;
+        gameManager.GameOver();
+        yield return null;
+    }
+
+    IEnumerator InvincibilityFrames()
+    {
+        float starttime = Time.time;
+        
+        while (Time.time <  starttime + 2)
+        {
+            isInvincible = true;
+            yield return null;
+        }
+        GetComponent<MeshRenderer>().material.color = Color.green;
+        isInvincible = false;
+    }
 }

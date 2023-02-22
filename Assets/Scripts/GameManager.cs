@@ -31,4 +31,10 @@ public class GameManager : MonoBehaviour
         isPaused = false;
         Time.timeScale = 1;
     }
+
+    public void GameOver()
+    {
+        isPaused = true;
+        Time.timeScale = 0;
+    }
 }
