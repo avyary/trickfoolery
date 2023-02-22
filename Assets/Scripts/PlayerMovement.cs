@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController _movementController;
 
     private HypeManager hypeManager;
-    private GameManager gameManager;
+    public GameManager gameManager;
 
     //Speed of different player abilities
     [SerializeField]
@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
     {
         _movementController = GetComponent<CharacterController>();
         hypeManager = GameObject.FindWithTag("GameManager").GetComponent<HypeManager>();
-        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         fov = gameObject.GetComponent<FieldOfView>();
         health = MAX_HEALTH;
         
@@ -80,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (2+2 ==4) {//not sure why this isn't working 
+        if (!gameManager.isPaused) {//not sure why this isn't working 
             //Calculate Inputs for player movement
             _playerInputVertical = Input.GetAxisRaw("Vertical");
             _playerInputHorizontal = Input.GetAxisRaw("Horizontal");
@@ -207,7 +207,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator Die()
     {
         GetComponent<MeshRenderer>().material.color = Color.black;
-        gameManager.GameOver();
+        gameManager.GameOverLose();
         yield return null;
     }
 

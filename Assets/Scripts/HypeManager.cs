@@ -20,10 +20,13 @@ public class HypeManager : MonoBehaviour
     [SerializeField]
     public float DODGE_HYPE;
 
+    private GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
         UpdateHype(0f);
+        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
     }
 
     public void ChangeHype(float hypeDiff)
@@ -38,7 +41,7 @@ public class HypeManager : MonoBehaviour
 
         if (currentHype >= hypeGoal)
         {
-            print("waow"); // replace with end of level
+            gameManager.GameOverWin(); // replace with end of level
         }
     }
 }
