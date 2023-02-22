@@ -27,11 +27,16 @@ public class ChargeEnemy : Enemy
                 break;
             case EnemyState.Tracking:
                 // TestBehaviors.MoveToPlayer(gameObject, player, moveSpeed);
-                agent.SetDestination(player.transform.position);
-                if (Vector3.Distance(gameObject.transform.position, player.transform.position) <= basicAttack.range)
-                {   
-                    Debug.Log("wahh");
+                float dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
+
+                if (dist <= basicAttack.range) 
+                {
+                    StopEnemy();
                     StartCoroutine(Attack(basicAttack));
+                }
+                else 
+                {
+                    GoToTarget();
                 }
                 break;
             case EnemyState.Active:

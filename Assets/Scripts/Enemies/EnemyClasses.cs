@@ -178,12 +178,25 @@ public abstract class Enemy: MonoBehaviour
         }
         
         state = EnemyState.Passive;
+        Debug.Log("I am friendly!");
     }
 
     protected virtual void PlayerFound()
     {
         // animation for finding player?
         state = EnemyState.Tracking;
+    }
+
+    protected virtual void StopEnemy() 
+    {
+        agent.isStopped = true;
+
+    }
+
+    protected virtual void GoToTarget()
+    {
+        agent.isStopped = false;
+        agent.SetDestination(player.transform.position);
     }
 
     protected virtual void Move()
