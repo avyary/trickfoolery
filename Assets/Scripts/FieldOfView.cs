@@ -53,7 +53,7 @@ public class FieldOfView : MonoBehaviour
         return visibleTargets;
     } 
 
-    bool PlayerIsVisible() {
+    public bool PlayerIsVisible() {
         float dstToPlayer = Vector3.Distance(transform.position, player.transform.position);
         if (dstToPlayer > viewRadius)
         {
