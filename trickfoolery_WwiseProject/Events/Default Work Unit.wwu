@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" SchemaVersion="110">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_sfx_player_dash" ID="{D6F8BF24-B6D5-4FEA-AC6B-3CEC97B0DDC4}">
+					<ChildrenList>
+						<Action Name="" ID="{F1F2411A-FCE4-49C9-9394-96BCC7F768CF}" ShortID="387076822">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_player_dash" ID="{9D523CE2-EABD-4764-845B-21914B795FE8}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

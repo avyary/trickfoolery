@@ -9,6 +9,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 
 {
+    /// <summary>
+    /// Audio implementation stuff starts with AK.Wwise 
+    /// </summary>
+
+    public AK.Wwise.Event dashSFX;
+
     [SerializeField]
     public float dodgeRadius;
     [SerializeField]
@@ -73,6 +79,8 @@ public class PlayerMovement : MonoBehaviour
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         fov = gameObject.GetComponent<FieldOfView>();
         health = MAX_HEALTH;
+
+
         
         
     }
@@ -136,11 +144,14 @@ public class PlayerMovement : MonoBehaviour
             //TODO: Add momentum to make dashing a little more fluid. 
             yield return null;
         }
-        
+
         state = AbilityState.walking;
+
+        dashSFX.Post(gameObject);
+
     }
-    
-    
+
+
     IEnumerator Taunt()
     {
         state = AbilityState.taunting;
@@ -162,8 +173,8 @@ public class PlayerMovement : MonoBehaviour
             state = AbilityState.taunting;
             yield return null;
         }
-        
-        
+
+
         state = AbilityState.walking;
         tauntCdTimer = TAUNTCD;
     }

@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4077681152	Play_sfx_player_dash			\Default Work Unit\Play_sfx_player_dash	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	429033431	sfx_player_dash	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_player_dash_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_dash		88296
+
