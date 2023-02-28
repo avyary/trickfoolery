@@ -1,24 +1,36 @@
 using UnityEngine;
 using UnityEngine.AI;
-public class Animtrigger : MonoBehaviour
-{
-    public Transform playerTransform;
+
+
+public class Animtrigger : MonoBehaviour {
+    public NavMeshAgent navMeshAgent;
+
     public Animator animator;
-    NavMeshAgent agent;
-    private new Rigidbody rigidbody;
+    public bool isWalking;
 
-    void Start()
-    {
-        rigidbody = GetComponent<Rigidbody>();
-        agent = GetComponent<NavMeshAgent>();
-        animator = GetComponentInChildren<Animator>();
-      
+    private Vector3 previousPosition;
+
+    void Start() {
+        navMeshAgent = GetComponent<NavMeshAgent>();
+
+        previousPosition = transform.position;
     }
 
-    void Update()
+void Update()
+{
+    if (navMeshAgent.velocity.magnitude > 0.1f)
     {
-        agent.destination = playerTransform.position;
-        animator.SetFloat("speed", agent.velocity.magnitude);
-     
+        animator.SetBool("isWalking", true);
+        Debug.Log("isWalking = true");
     }
+    else
+    {
+        animator.SetBool("isWalking", false);
+        Debug.Log("isWalking = false");
+    }
+}
+
+
+
+
 }
