@@ -29,10 +29,17 @@ public class ChargeEnemy : Enemy
                 // TestBehaviors.MoveToPlayer(gameObject, player, moveSpeed);
                 float dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
 
-                if (dist <= basicAttack.range) 
+                if (dist <= basicAttack.range)
                 {
                     StopEnemy();
-                    StartCoroutine(Attack(basicAttack));
+                    if (isAngy)
+                    {
+                        StartCoroutine(Attack(angyAttack));
+                    }
+                    else
+                    {
+                        StartCoroutine(Attack(basicAttack));   
+                    }
                 }
                 else 
                 {
