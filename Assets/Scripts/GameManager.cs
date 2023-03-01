@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
 
     void SpawnRandomEnemy()
     {
-        Vector3 newPosition = new Vector3(Random.Range(-30.0f, -40f), 7.2845661f, Random.Range(-33.0f, -10.0f));
+        Vector3 newPosition = new Vector3(Random.Range(150.0f, 100f), 7.2845661f, Random.Range(-23.0f, -10.0f));
         Quaternion newRotation = Random.rotation;
         newRotation.w = 0;
         newRotation.x = 0;
