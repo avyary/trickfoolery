@@ -14,6 +14,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private LayerMask attackMask;
     
+   [SerializeField]
+    private AudioClip DashSound;
+
+
+       [SerializeField]
+    private AudioClip HurtSound;
+
+    private AudioSource audioSource;
     //Player inputs
     private float _playerInputVertical;
     private float _playerInputHorizontal;
@@ -73,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         fov = gameObject.GetComponent<FieldOfView>();
         health = MAX_HEALTH;
-        
+          audioSource = GetComponent<AudioSource>();
         
     }
 
@@ -93,8 +101,9 @@ public class PlayerMovement : MonoBehaviour
             } ;
 
             if (Input.GetButton("Jump") && dashCdTimer <= 0)
-            {
+            {  audioSource.PlayOneShot(DashSound);
                 StartCoroutine(Dash());
+                 
             }
 
             if (Input.GetKey("e") && tauntCdTimer <= 0)
@@ -198,7 +207,7 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(Die());
         }
         else
-        { 
+        {  audioSource.PlayOneShot(HurtSound);
             GetComponent<MeshRenderer>().material.color = Color.red;
             StartCoroutine(InvincibilityFrames());
         }
