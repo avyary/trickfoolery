@@ -2099,7 +2099,7 @@ MonoBehaviour:
   _startupTime: 0.25
   _activeTime: 1
   _recoveryTime: 1.5
-  _damage: 150
+  _damage: 50
   _stunTime: 2
   _range: 4
 --- !u!1 &3667051750986093563
@@ -4336,7 +4336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewRadius: 7
-  viewAngle: 61
+  viewAngle: 105
   player: {fileID: 0}
   obstacleMask:
     serializedVersion: 2
@@ -4719,7 +4719,7 @@ MonoBehaviour:
   _startupTime: 0.5
   _activeTime: 0.5
   _recoveryTime: 0.5
-  _damage: 100
+  _damage: 25
   _stunTime: 1
   _range: 3
 --- !u!1 &8546283900034295386

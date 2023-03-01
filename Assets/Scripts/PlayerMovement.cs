@@ -202,7 +202,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
         
-        health -= 25; //TODO: change once attack damages have been tweaked
+        health -= damage; //TODO: change once attack damages have been tweaked
         Debug.Log("health: " + health);
         if (health <= 0)
         {audioSource.PlayOneShot(DeathSound);
