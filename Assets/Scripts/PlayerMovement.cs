@@ -14,14 +14,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private LayerMask attackMask;
     
-   [SerializeField]
-    private AudioClip DashSound;
-
-
-       [SerializeField]
-    private AudioClip HurtSound;
-
-    private AudioSource audioSource;
     //Player inputs
     private float _playerInputVertical;
     private float _playerInputHorizontal;
@@ -43,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
     private HypeManager hypeManager;
     public GameManager gameManager;
+    private Material damageMat;
 
     //Speed of different player abilities
     [SerializeField]
@@ -60,6 +53,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float GRAVITY_MULTIPLIER = 1f;
     public float MAX_HEALTH = 100;
+
+    [SerializeField]
+    private float damageFlashTime;
 
     public AbilityState state;
     public FieldOfView fov;
@@ -81,8 +77,7 @@ public class PlayerMovement : MonoBehaviour
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         fov = gameObject.GetComponent<FieldOfView>();
         health = MAX_HEALTH;
-          audioSource = GetComponent<AudioSource>();
-        
+        damageMat = Resources.Load("DamageColor", typeof(Material)) as Material;
     }
 
     // Update is called once per frame
@@ -101,9 +96,8 @@ public class PlayerMovement : MonoBehaviour
             } ;
 
             if (Input.GetButton("Jump") && dashCdTimer <= 0)
-            {  audioSource.PlayOneShot(DashSound);
+            {
                 StartCoroutine(Dash());
-                 
             }
 
             if (Input.GetKey("e") && tauntCdTimer <= 0)
@@ -158,11 +152,8 @@ public class PlayerMovement : MonoBehaviour
         float startTime = Time.time;
 
         List<Collider> inRange = fov.FindVisibleTargets();
-        Debug.Log("Enemies in range");
-        Debug.Log(inRange.Count);
         foreach (var enemy in inRange)
         {
-            Debug.Log(enemy);
             enemy.gameObject.GetComponent<Enemy>().GetTaunted();
         }
         
@@ -180,6 +171,7 @@ public class PlayerMovement : MonoBehaviour
     
     bool IsCloseDash()
     {
+        print("nice");
         Collider[] attacksInRange = Physics.OverlapSphere(transform.position, dodgeRadius, attackMask);
         print(attacksInRange.Length);
         return (attacksInRange.Length > 0);
@@ -193,7 +185,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    public void TakeHit(int damage)
+    public void TakeHit(Enemy attacker, int damage)
     {
         if (state == AbilityState.dead || isInvincible)
         {
@@ -207,8 +199,9 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(Die());
         }
         else
-        {  audioSource.PlayOneShot(HurtSound);
-            GetComponent<MeshRenderer>().material.color = Color.red;
+        { 
+            StartCoroutine(attacker.GetHitPaused(0.5f));
+            StartCoroutine(ChangeMaterial(damageMat, damageFlashTime));
             StartCoroutine(InvincibilityFrames());
         }
     }
@@ -231,5 +224,19 @@ public class PlayerMovement : MonoBehaviour
         }
         GetComponent<MeshRenderer>().material.color = Color.green;
         isInvincible = false;
+    }
+
+    IEnumerator ChangeMaterial(Material newMat, float time = 0)
+    {
+        if (time == 0) {
+            GetComponent<MeshRenderer>().material = newMat;
+            yield return new WaitForSeconds(0);
+        }
+        else {
+            Material originalMat = GetComponent<MeshRenderer>().material;
+            GetComponent<MeshRenderer>().material = damageMat;
+            yield return new WaitForSeconds(time);
+            GetComponent<MeshRenderer>().material = originalMat;
+        }
     }
 }
