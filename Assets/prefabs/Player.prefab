@@ -218,20 +218,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   DashSound: {fileID: 0}
+  DeathSound: {fileID: 0}
   HurtSound: {fileID: 0}
   dashCdTimer: 0
   tauntCdTimer: 0
   health: 0
   isInvincible: 0
   gameManager: {fileID: 0}
-  WALKSPEED: 10
+  WALKSPEED: 5
   DASHSPEED: 50
   DASHTIME: 0.15
-  DASHCD: 0.5
+  DASHCD: 1
   TAUNTTIME: 1
   TAUNTCD: 1
   GRAVITY_MULTIPLIER: 1
   MAX_HEALTH: 100
+  damageFlashTime: 0
   state: 0
   fov: {fileID: 0}
 --- !u!143 &812461445361068324

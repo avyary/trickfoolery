@@ -161,7 +161,9 @@ public abstract class Enemy: MonoBehaviour
         anger = anger + tauntValue;
         if (anger >= maxAnger) {
             isAngy = true;
+            gameObject.transform.Find("Angy Indicator").GetComponent<MeshRenderer>().material.color = Color.red;
             currentAttack = angyAttack;
+            Debug.Log("Damage " + currentAttack.damage);
         }
     }
 

@@ -110,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
                 StartCoroutine(Dash());
             }
 
-            if (Input.GetKey("e") && tauntCdTimer <= 0)
+            if (Input.GetKey("f") && tauntCdTimer <= 0)
             {
                 StartCoroutine(Taunt());
             }

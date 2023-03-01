@@ -32,16 +32,18 @@ public class ChargeEnemy : Enemy
                 // TestBehaviors.MoveToPlayer(gameObject, player, moveSpeed);
                 float dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
 
-                if (dist <= basicAttack.range) 
+                if (dist <= currentAttack.range) 
                 {
                     StopEnemy();
                     audioSource.PlayOneShot(attackSound);
-                    StartCoroutine(Attack(basicAttack));
+                    StartCoroutine(Attack(currentAttack));
                 }
                 else 
                 {
                     GoToTarget();
                 }
+
+                state = EnemyState.Passive;
                 break;
             case EnemyState.Active:
                 TestBehaviors.MoveForward(gameObject, chargeSpeed);
