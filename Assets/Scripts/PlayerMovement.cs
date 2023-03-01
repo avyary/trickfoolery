@@ -13,7 +13,16 @@ public class PlayerMovement : MonoBehaviour
     public float dodgeRadius;
     [SerializeField]
     private LayerMask attackMask;
-    
+      [SerializeField]
+    private AudioClip DashSound;
+
+    [SerializeField]
+    private AudioClip DeathSound;
+
+       [SerializeField]
+    private AudioClip HurtSound;
+
+    private AudioSource audioSource;
     //Player inputs
     private float _playerInputVertical;
     private float _playerInputHorizontal;
@@ -78,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
         fov = gameObject.GetComponent<FieldOfView>();
         health = MAX_HEALTH;
         damageMat = Resources.Load("DamageColor", typeof(Material)) as Material;
+         audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -96,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
             } ;
 
             if (Input.GetButton("Jump") && dashCdTimer <= 0)
-            {
+            { audioSource.PlayOneShot(DashSound);
                 StartCoroutine(Dash());
             }
 
@@ -195,11 +205,11 @@ public class PlayerMovement : MonoBehaviour
         health -= 25; //TODO: change once attack damages have been tweaked
         Debug.Log("health: " + health);
         if (health <= 0)
-        {
+        {audioSource.PlayOneShot(DeathSound);
             StartCoroutine(Die());
         }
         else
-        { 
+        { audioSource.PlayOneShot(HurtSound);
             StartCoroutine(attacker.GetHitPaused(0.5f));
             StartCoroutine(ChangeMaterial(damageMat, damageFlashTime));
             StartCoroutine(InvincibilityFrames());
