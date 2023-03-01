@@ -26,6 +26,10 @@ public abstract class Enemy: MonoBehaviour
     Attack _basicAttack;
     [SerializeField]
     Attack _angyAttack;
+    [SerializeField]
+    Transform[] navPoint;
+
+    public int destPoint = 0;
 
     public bool isAngy;
     protected Attack currentAttack;
@@ -66,6 +70,15 @@ public abstract class Enemy: MonoBehaviour
         return false;
     }
 
+    void GotoNextPoint()
+	{
+        if (navPoint.Length == 0)
+            return;   
+        // agent.SetDestination(navPoint[destPoint].position);    
+        agent.destination = navPoint[destPoint].position;
+        destPoint = (destPoint + 1) % navPoint.Length;
+    }
+
     protected virtual void Patrol()
     {   
         if (!agent.isOnNavMesh)
@@ -73,13 +86,14 @@ public abstract class Enemy: MonoBehaviour
 
         if(agent.remainingDistance <= agent.stoppingDistance) //done with path
         {   
-            // randomly generate a new point to move to
-            Vector3 point;
-            if (RandomPoint(centrePoint.position, range, out point)) //pass in our centre point and radius of area
-            {
-                Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f); //so you can see with gizmos
-                agent.SetDestination(point);
-            }
+            GotoNextPoint();
+            // // randomly generate a new point to move to
+            // Vector3 point;
+            // if (RandomPoint(centrePoint.position, range, out point)) //pass in our centre point and radius of area
+            // {
+            //     Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f); //so you can see with gizmos
+            //     agent.SetDestination(point);
+            // }
         }
     }
 
