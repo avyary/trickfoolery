@@ -26,6 +26,7 @@ public abstract class Enemy: MonoBehaviour
     Attack _basicAttack;
     [SerializeField]
     Attack _angyAttack;
+    [SerializeField]
 
     public bool isAngy;
     protected Attack currentAttack;
@@ -43,6 +44,8 @@ public abstract class Enemy: MonoBehaviour
     protected GameObject player;
     protected HypeManager hypeManager;
     protected FieldOfView fow;
+
+    protected bool inHitPause;
 
     protected NavMeshAgent agent;   // this is the enemy
     protected float range = 21.76f;  // radius of sphere for generating a random point
@@ -87,7 +90,7 @@ public abstract class Enemy: MonoBehaviour
     }
 
     // invoked when colliding with attack hitbox
-    public virtual void TakeHit(int damage, float stunTime)
+    public virtual void TakeHit(Enemy attacker, int damage, float stunTime)
     {
         if (state == EnemyState.Dead)
         {
@@ -95,6 +98,7 @@ public abstract class Enemy: MonoBehaviour
         }
 
         health -= damage;
+        StartCoroutine(attacker.GetHitPaused(0.5f));
         if (health <= 0)
         {
             StartCoroutine(Die());
@@ -102,8 +106,17 @@ public abstract class Enemy: MonoBehaviour
         else
         {
             hypeManager.ChangeHype(hypeManager.HIT_HYPE);
+            StartCoroutine(GetHitPaused(0.5f));
             StartCoroutine(GetStunned(stunTime));
         }
+    }
+
+    // 
+    public virtual IEnumerator GetHitPaused(float pauseTime)
+    {
+        inHitPause = true;
+        yield return new WaitForSeconds(pauseTime);
+        inHitPause = false;
     }
 
     // puts enemy in Stunned state for stunTime seconds
@@ -136,7 +149,7 @@ public abstract class Enemy: MonoBehaviour
         rigidBody.constraints = RigidbodyConstraints.None;
 
         state = EnemyState.Dead;
-        yield return new WaitForSeconds(3);  // waits for 3 seconds before destroying object
+        yield return new WaitForSeconds(0.5f);  // waits for 3 seconds before destroying object
 
         Destroy(gameObject);
     }

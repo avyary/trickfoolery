@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,15 +11,21 @@ public class GameManager : MonoBehaviour
     
     public GameObject _gameOverObj;
     public TMP_Text _gameOverText;
+    public GameObject _gameOverPanel;
 
     public GameObject[] enemies;
     [SerializeField]
     private int minEnemyNumber;
 
+    private bool isGameOver = false;
+
     void Start()
     {
         _gameOverObj = GameObject.Find("GameOverText");
+        _gameOverPanel = GameObject.Find("GameOverPanel");
         _gameOverText = _gameOverObj.GetComponent<TMP_Text>();
+        _gameOverPanel.SetActive(false);
+        UnpauseGame();
     }
 
     void Update() {
@@ -28,6 +35,9 @@ public class GameManager : MonoBehaviour
         if (GameObject.FindGameObjectsWithTag("Enemy").Length < minEnemyNumber)
         {
             SpawnRandomEnemy();
+        }
+        if (isGameOver && Input.GetKeyDown(KeyCode.Return)) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
@@ -53,16 +63,20 @@ public class GameManager : MonoBehaviour
 
     public void GameOverWin()
     {
+        isGameOver = true;
         isPaused = true;
         Time.timeScale = 0;
         _gameOverText.text = "Hype Meter Filled!";
+        _gameOverPanel.SetActive(true);
     }
 
     public void GameOverLose()
     {
+        isGameOver = true;
         isPaused = true;
         Time.timeScale = 0;
         _gameOverText.text = "You Died!";
+        _gameOverPanel.SetActive(true);
     }
 
     void SpawnRandomEnemy()

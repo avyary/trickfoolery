@@ -8,11 +8,19 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8715763031606522183, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8715763031606522183, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_AutoRepath
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8715763031606522183, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_AutoTraverseOffMeshLink
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1561662918673205224, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 160932783874091542, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
@@ -107,6 +115,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1eb9db2138ec35948945fa2da41dcb7f, type: 2}
+    - target: {fileID: 3656036162338109447, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3811715443400507304, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -166,6 +178,10 @@ PrefabInstance:
     - target: {fileID: 7089335782141603444, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110659447616012854, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7250673673251194673, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_AABB.m_Center.x
@@ -278,6 +294,10 @@ PrefabInstance:
     - target: {fileID: 8530116321950674707, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: viewRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530116322961737114, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8795710747530761131, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_Mesh
