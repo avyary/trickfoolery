@@ -227,7 +227,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float starttime = Time.time;
         
-        while (Time.time <  starttime + 2)
+        while (Time.time <  starttime + 1)
         {
             isInvincible = true;
             yield return null;
