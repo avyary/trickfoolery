@@ -4322,7 +4322,7 @@ MonoBehaviour:
   _angyAttack: {fileID: 1473256248873818880}
   isAngy: 0
   chargeSpeed: 15
-  attackSound: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: e7c0dcbb28fad4f43b2994521775c49c, type: 3}
 --- !u!114 &8530116321950674707
 MonoBehaviour:
   m_ObjectHideFlags: 0

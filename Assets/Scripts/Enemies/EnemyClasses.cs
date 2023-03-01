@@ -45,6 +45,7 @@ public abstract class Enemy: MonoBehaviour
     protected HypeManager hypeManager;
     protected FieldOfView fow;
 
+    protected AudioSource audioSource;
     protected bool inHitPause;
 
     protected NavMeshAgent agent;   // this is the enemy
@@ -229,10 +230,11 @@ public abstract class Enemy: MonoBehaviour
         angyAttack = _angyAttack;
         currentAttack = _basicAttack;
         player = GameObject.FindWithTag("Player");
-        hypeManager = GameObject.FindWithTag("GameManager").GetComponent<HypeManager>();
+        hypeManager = GameObject.Find("Game Manager").GetComponent<HypeManager>();
         fow = gameObject.GetComponent<FieldOfView>();
         agent = GetComponent<NavMeshAgent>();
         centrePoint = agent.transform;
+        audioSource = GetComponent<AudioSource>();
     }
 
 }

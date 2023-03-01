@@ -82,12 +82,12 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _movementController = GetComponent<CharacterController>();
-        hypeManager = GameObject.FindWithTag("GameManager").GetComponent<HypeManager>();
+        hypeManager = GameObject.Find("Game Manager").GetComponent<HypeManager>();
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         fov = gameObject.GetComponent<FieldOfView>();
         health = MAX_HEALTH;
         damageMat = Resources.Load("DamageColor", typeof(Material)) as Material;
-         audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
