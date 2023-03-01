@@ -7,10 +7,10 @@ using UnityEngine.AI;
 public class BasicEnemy : Enemy
 {   
     public NavMeshAgent enemy;
-    public float range; //radius of sphere
+    new float range; //radius of sphere
     protected float radius = 15.0f;   // radius for player detection
 
-    public Transform centrePoint; //centre of the area the agent wants to move around in
+    new Transform centrePoint; //centre of the area the agent wants to move around in
 
     private bool _isWaiting = false;
 

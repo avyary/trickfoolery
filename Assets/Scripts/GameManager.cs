@@ -60,8 +60,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOverLose()
     {
-        isPaused = true;
-        Time.timeScale = 0;
+        PauseGame();
         _gameOverText.text = "You Died!";
     }
 
@@ -74,6 +73,4 @@ public class GameManager : MonoBehaviour
         newRotation.z = 0;
         GameObject.Instantiate(enemies[Random.Range(0, enemies.Length)], newPosition, newRotation);
     }
-
-
 }
