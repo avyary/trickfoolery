@@ -67,7 +67,10 @@ public abstract class Enemy: MonoBehaviour
     }
 
     protected virtual void Patrol()
-    {
+    {   
+        if (!agent.isOnNavMesh)
+            return;
+
         if(agent.remainingDistance <= agent.stoppingDistance) //done with path
         {   
             // randomly generate a new point to move to
