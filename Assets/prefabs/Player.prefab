@@ -211,13 +211,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ad7cb085d980249b5041251c2d82c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dashSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3d7dbd92690474bdbae4416306c738b9, type: 2}
+  playerDeathSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 801c367681a5d8147aab54fb42fb69cb, type: 2}
+  playerHurtSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 08c43f316ee698b4187ec32ac0bf9138, type: 2}
+  chargerDeathSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a8174d00cad6dbc489a8cb6884fd5b85, type: 2}
   dodgeRadius: 0
   attackMask:
     serializedVersion: 2
     m_Bits: 0
-  DashSound: {fileID: 0}
-  DeathSound: {fileID: 0}
-  HurtSound: {fileID: 0}
   dashCdTimer: 0
   tauntCdTimer: 0
   health: 0

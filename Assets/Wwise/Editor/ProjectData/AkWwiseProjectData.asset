@@ -94,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a7205d29a3697241bf5ebf00e33887a1
     GuidInternal: 
-    m_lastTime: -8585236513589042100
+    m_lastTime: -8585236492069714059
     List:
+    - name: Play_sfx_charger_death
+      guid: 43483863a4a4c344aed29cda3a9431a5
+      id: 843029991
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a7205d29a3697241bf5ebf00e33887a1
+      - ElementName: Play_sfx_charger_death
+        ObjectType: 3
+        guid: 43483863a4a4c344aed29cda3a9431a5
+      Path: Events\Default Work Unit\Play_sfx_charger_death
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_sfx_player_dash
       guid: 24bff8d6d5b6ea4fac6b3cec97b0ddc4
       id: 4077681152
@@ -110,6 +127,40 @@ MonoBehaviour:
         ObjectType: 3
         guid: 24bff8d6d5b6ea4fac6b3cec97b0ddc4
       Path: Events\Default Work Unit\Play_sfx_player_dash
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_sfx_player_death
+      guid: 6004c8caac810b42ad88e8fa18ac9974
+      id: 1591758634
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a7205d29a3697241bf5ebf00e33887a1
+      - ElementName: Play_sfx_player_death
+        ObjectType: 3
+        guid: 6004c8caac810b42ad88e8fa18ac9974
+      Path: Events\Default Work Unit\Play_sfx_player_death
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_sfx_player_hurt
+      guid: 7de8d8f26c01a64d8e624cd589790a37
+      id: 1067524079
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a7205d29a3697241bf5ebf00e33887a1
+      - ElementName: Play_sfx_player_hurt
+        ObjectType: 3
+        guid: 7de8d8f26c01a64d8e624cd589790a37
+      Path: Events\Default Work Unit\Play_sfx_player_hurt
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -170,7 +221,7 @@ MonoBehaviour:
     m_lastTime: -8585236513588902067
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 05000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

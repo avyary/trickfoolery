@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
 
     public AK.Wwise.Event dashSFX;
+    public AK.Wwise.Event playerDeathSFX;
+    public AK.Wwise.Event playerHurtSFX;
+    public AK.Wwise.Event chargerDeathSFX;
 
     [SerializeField]
     public float dodgeRadius;

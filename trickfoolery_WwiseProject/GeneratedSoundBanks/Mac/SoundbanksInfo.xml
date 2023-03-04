@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="145">
 	<RootPaths>
-		<ProjectRoot>../../</ProjectRoot>
-		<SourceFilesRoot>../../.cache/Mac/</SourceFilesRoot>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Mac</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
 		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
@@ -22,23 +22,10 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{45271A56-E642-B099-782F-61ADB0127D0B}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8AEC33FC-6739-438E-5300-619C2A1F839D}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
-			<Media>
-				<File Id="429033431" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_player_dash.wav</ShortName>
-					<CachePath>SFX/sfx_player_dash_10C4C929.wem</CachePath>
-				</File>
-			</Media>
-			<Events>
-				<Event Id="4077681152" Name="Play_sfx_player_dash" DurationType="OneShot" DurationMin="0.37457678" DurationMax="0.6674199">
-					<MediaRefs>
-						<MediaRef Id="429033431"/>
-					</MediaRefs>
-				</Event>
-			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0711C252-0553-41A9-AE1C-D2334E4C3778}</FileHash>
+	<FileHash>{102F7A1F-1B42-C3C3-546D-064C883A2DB3}</FileHash>
 </SoundBanksInfo>
