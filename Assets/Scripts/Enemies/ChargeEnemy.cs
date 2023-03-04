@@ -7,10 +7,6 @@ public class ChargeEnemy : Enemy
     [SerializeField]
     private float chargeSpeed;
 
-    [SerializeField]
-    private AudioClip attackSound;
-
-
     protected override void Start() {
         base.Start();
         GetEnemyStatus("ChargeEnemy");
@@ -35,7 +31,6 @@ public class ChargeEnemy : Enemy
                 if (dist <= currentAttack.range) 
                 {
                     StopEnemy();
-                    audioSource.PlayOneShot(attackSound);
                     StartCoroutine(Attack(currentAttack));
                 }
                 else 
