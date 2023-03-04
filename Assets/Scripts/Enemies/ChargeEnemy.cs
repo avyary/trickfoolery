@@ -17,6 +17,10 @@ public class ChargeEnemy : Enemy
         {
             case EnemyState.Passive:
                 // TestBehaviors.Rotate(gameObject, moveSpeed);  // replace with better movement
+                if (agent.isStopped) 
+                {
+                    agent.isStopped = false;
+                }
                 Patrol();
                 if (!fow.active)
                 {

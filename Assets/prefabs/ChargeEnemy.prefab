@@ -4322,7 +4322,6 @@ MonoBehaviour:
   _angyAttack: {fileID: 1473256248873818880}
   isAngy: 0
   chargeSpeed: 15
-  attackSound: {fileID: 8300000, guid: e7c0dcbb28fad4f43b2994521775c49c, type: 3}
 --- !u!114 &8530116321950674707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4335,8 +4334,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2bb73e9f3e64cca84c97ae658ed220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 7
-  viewAngle: 122
+  viewRadius: 80
+  viewAngle: 91
   player: {fileID: 0}
   obstacleMask:
     serializedVersion: 2
