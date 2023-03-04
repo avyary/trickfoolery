@@ -45,10 +45,8 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         health = Convert.ToInt32(player.health);
-        Debug.Log("UI health: " + player.health);
         if (health < heartChunks[3])
         {
-            Debug.Log("heart lost");
             Destroy(hearts[3].gameObject);
         }
         if (health < heartChunks[2])

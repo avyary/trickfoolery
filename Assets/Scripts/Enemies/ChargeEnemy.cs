@@ -13,7 +13,6 @@ public class ChargeEnemy : Enemy
     }
 
     void Update() {
-        Debug.Log(System.String.Format("State: {0}", state));
         switch(state)
         {
             case EnemyState.Passive:
@@ -29,15 +28,17 @@ public class ChargeEnemy : Enemy
                 // TestBehaviors.MoveToPlayer(gameObject, player, moveSpeed);
                 float dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
 
-                if (dist <= basicAttack.range) 
+                if (dist <= currentAttack.range) 
                 {
                     StopEnemy();
-                    StartCoroutine(Attack(basicAttack));
+                    StartCoroutine(Attack(currentAttack));
                 }
                 else 
                 {
                     GoToTarget();
                 }
+
+                state = EnemyState.Passive;
                 break;
             case EnemyState.Active:
                 TestBehaviors.MoveForward(gameObject, chargeSpeed);

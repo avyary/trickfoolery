@@ -60,11 +60,11 @@ public abstract class Attack : MonoBehaviour
     public void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "Enemy")
         {
-            other.gameObject.GetComponent<Enemy>().TakeHit(damage, stunTime);
+            other.gameObject.GetComponent<Enemy>().TakeHit(transform.parent.GetComponent<Enemy>(), damage, stunTime);
         }
         else if (other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<PlayerMovement>().TakeHit(damage);
+            other.gameObject.GetComponent<PlayerMovement>().TakeHit(transform.parent.GetComponent<Enemy>(), damage);
         }
         // if (collisionTags.Any(other.gameObject.tag.Contains))
         // {
