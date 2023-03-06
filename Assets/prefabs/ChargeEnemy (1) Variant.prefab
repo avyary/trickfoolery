@@ -161,11 +161,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8530116321950674707, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: viewAngle
-      value: 91
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8530116321950674707, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: viewRadius
-      value: 80
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8895946796425803006, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_Materials.Array.data[0]
