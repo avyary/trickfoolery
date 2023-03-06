@@ -17,6 +17,10 @@ public class ChargeEnemy : Enemy
         {
             case EnemyState.Passive:
                 // TestBehaviors.Rotate(gameObject, moveSpeed);  // replace with better movement
+                if (agent.isStopped) 
+                {
+                    agent.isStopped = false;
+                }
                 Patrol();
                 if (!fow.active)
                 {
@@ -27,6 +31,7 @@ public class ChargeEnemy : Enemy
             case EnemyState.Tracking:
                 // TestBehaviors.MoveToPlayer(gameObject, player, moveSpeed);
                 float dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
+                Debug.Log(System.String.Format("You are {0} away and I am still following you.", dist));
 
                 if (dist <= currentAttack.range) 
                 {

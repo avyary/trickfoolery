@@ -71,7 +71,9 @@ public abstract class Enemy: MonoBehaviour
     }
 
     protected virtual void Patrol()
-    {
+    {   
+        Debug.Log("WE ARE STILL PATROLLING!");
+        Debug.Log(System.String.Format("Remaining distance: {0}", agent.remainingDistance));
         if(agent.remainingDistance <= agent.stoppingDistance) //done with path
         {   
             // randomly generate a new point to move to
