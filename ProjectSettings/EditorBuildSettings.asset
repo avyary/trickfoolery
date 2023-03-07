@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AlphaEnvironmentMar1.unity
     guid: 37187729ed855dd4784ea2a109b81ea7
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: a655d7f8277dc4a4a8eecc9eda816bff
   m_configObjects: {}
