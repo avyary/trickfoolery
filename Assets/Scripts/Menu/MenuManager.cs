@@ -26,7 +26,6 @@ public class MenuManager : MonoBehaviour
         if (!isChanging) {
             if (Input.GetAxisRaw("Vertical") > 0)  // up
             {
-                print("up");
                 if (currentIdx > 0) {
                     currentIdx -= 1;
                 }
@@ -34,7 +33,6 @@ public class MenuManager : MonoBehaviour
             }
             else if (Input.GetAxisRaw("Vertical") < 0)  // down
             {
-                print("down");
                 if (currentIdx < numButtons - 1) {
                     currentIdx += 1;
                 }

@@ -50,8 +50,8 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-
         if (showPauseMenu && Input.GetButtonDown("Confirm")) {
+            HidePauseMenu();
             SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
         }
     }
@@ -90,7 +90,9 @@ public class GameManager : MonoBehaviour
 
     void HidePauseMenu() {
         showPauseMenu = false;
-        UnpauseGame();
+        if (!isGameOver) {
+            UnpauseGame();
+        }
         _pauseMenu.SetActive(false);
     }
 
@@ -117,6 +119,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOverLose()
     {
+        isGameOver = true;
         PauseGame();
         _gameOverText.text = "You Died!";
         _gameOverPanel.SetActive(true);
