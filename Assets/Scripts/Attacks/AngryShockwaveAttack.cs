@@ -12,7 +12,7 @@ namespace Attacks
         public const float AggroWidth = 4.0f;
         public const float AggroLength = 6.0f;
     }
-    public class AngyShockwaveAttack : Attack
+    public class AngryShockwaveAttack : Attack
     {
         protected override void Start()
         {
