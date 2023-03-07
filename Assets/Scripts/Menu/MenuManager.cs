@@ -49,10 +49,8 @@ public class MenuManager : MonoBehaviour
         Transform newSelect = transform.GetChild((int) idx);
         newSelect.gameObject.GetComponent<Button>().Select();
         isChanging = true;
-        print("hi");
         yield return new WaitForSeconds(changeCooldown);
         isChanging = false;
-        print("bye");
     }
 
     public void OnButtonHover(GameObject button){
