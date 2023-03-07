@@ -42,7 +42,6 @@ public class MenuManager : MonoBehaviour
             }
         }
         else {
-            print("uhoh");
         }
     }
 
