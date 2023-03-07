@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public AK.Wwise.Event dashSFX;
     public AK.Wwise.Event playerDeathSFX;
     public AK.Wwise.Event playerHurtSFX;
-    public AK.Wwise.Event chargerDeathSFX;
+    
 
     [SerializeField]
     public float dodgeRadius;
@@ -211,7 +211,8 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(Die());
         }
         else
-        { 
+        {
+            playerHurtSFX.Post(gameObject);
             StartCoroutine(attacker.GetHitPaused(0.5f));
             StartCoroutine(ChangeMaterial(damageMat, damageFlashTime));
             StartCoroutine(InvincibilityFrames());
@@ -221,6 +222,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator Die()
     {
         GetComponent<MeshRenderer>().material.color = Color.black;
+        playerDeathSFX.Post(gameObject);
         gameManager.GameOverLose();
         yield return null;
     }

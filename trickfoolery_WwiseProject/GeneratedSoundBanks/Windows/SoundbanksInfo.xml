@@ -22,10 +22,70 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8AEC33FC-6739-438E-5300-619C2A1F839D}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{6DCFC9A5-5851-0912-B92C-5ED3F284C382}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="275378158" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_charger_death_1.wav</ShortName>
+					<CachePath>SFX/sfx_charger_death_1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="403074574" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_hurt_3.wav</ShortName>
+					<CachePath>SFX/sfx_player_hurt_3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="405788637" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_hurt_4.wav</ShortName>
+					<CachePath>SFX/sfx_player_hurt_4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="429033431" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_dash.wav</ShortName>
+					<CachePath>SFX/sfx_player_dash_10C4C929.wem</CachePath>
+				</File>
+				<File Id="507762272" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_charger_death_2.wav</ShortName>
+					<CachePath>SFX/sfx_charger_death_2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="611627305" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_hurt_6.wav</ShortName>
+					<CachePath>SFX/sfx_player_hurt_6_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1007579897" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_death.wav</ShortName>
+					<CachePath>SFX/sfx_player_death_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1070951602" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_hurt_1.wav</ShortName>
+					<CachePath>SFX/sfx_player_hurt_1_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="843029991" Name="Play_sfx_charger_death" DurationType="OneShot" DurationMin="1.5" DurationMax="2">
+					<MediaRefs>
+						<MediaRef Id="275378158"/>
+						<MediaRef Id="507762272"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4077681152" Name="Play_sfx_player_dash" DurationType="OneShot" DurationMin="0.37457678" DurationMax="0.6674199">
+					<MediaRefs>
+						<MediaRef Id="429033431"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1591758634" Name="Play_sfx_player_death" DurationType="OneShot" DurationMin="1.5" DurationMax="1.5">
+					<MediaRefs>
+						<MediaRef Id="1007579897"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1067524079" Name="Play_sfx_player_hurt" DurationType="OneShot" DurationMin="1" DurationMax="1">
+					<MediaRefs>
+						<MediaRef Id="403074574"/>
+						<MediaRef Id="405788637"/>
+						<MediaRef Id="611627305"/>
+						<MediaRef Id="1070951602"/>
+					</MediaRefs>
+				</Event>
+			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D79FF59B-EF74-0890-D547-0470C2DCE695}</FileHash>
+	<FileHash>{51CA30C2-47BB-A348-1D41-7D252CDB3CE6}</FileHash>
 </SoundBanksInfo>

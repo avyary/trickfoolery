@@ -6,6 +6,7 @@ public class ChargeEnemy : Enemy
 {
     [SerializeField]
     private float chargeSpeed;
+    public AK.Wwise.Event chargerDeathSFX;
 
     protected override void Start() {
         base.Start();
