@@ -6,27 +6,27 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
-    private int currentIdx = 0;
+    private int currentIdx;
     private int numButtons;
-    private bool isChanging = false;
+    private bool isChanging;
 
     [SerializeField]
     public float changeCooldown;
 
     void Start()
     {
+        currentIdx = 0;
+        isChanging = false;
         numButtons = transform.childCount;
         StartCoroutine(HandleButtonChange());
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P)) {
-            SceneManager.LoadScene("AlphaEnvironmentMar1", LoadSceneMode.Single);
-        }
         if (!isChanging) {
             if (Input.GetAxisRaw("Vertical") > 0)  // up
             {
+                print("up");
                 if (currentIdx > 0) {
                     currentIdx -= 1;
                 }
@@ -34,11 +34,15 @@ public class MenuManager : MonoBehaviour
             }
             else if (Input.GetAxisRaw("Vertical") < 0)  // down
             {
+                print("down");
                 if (currentIdx < numButtons - 1) {
                     currentIdx += 1;
                 }
                 StartCoroutine(HandleButtonChange());
             }
+        }
+        else {
+            print("uhoh");
         }
     }
 

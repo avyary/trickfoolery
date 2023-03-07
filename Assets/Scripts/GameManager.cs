@@ -8,10 +8,14 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public bool isPaused = false;
+    public bool showPauseMenu = false;
 
     public GameObject _gameOverObj;
     public TMP_Text _gameOverText;
     public GameObject _gameOverPanel;
+    public GameObject _pauseMenu;
+
+
 
     public GameObject[] enemies;
     [SerializeField]
@@ -24,26 +28,45 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _gameOverObj = GameObject.Find("GameOverText");
+        _pauseMenu = GameObject.Find("PauseMenu");
         _gameOverPanel = GameObject.Find("GameOverPanel");
         _gameOverText = _gameOverObj.GetComponent<TMP_Text>();
         _gameOverPanel.SetActive(false);
+        _pauseMenu.SetActive(false);
         UnpauseGame();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Escape"))
         {
-            TogglePause();
+            TogglePauseMenu();
         }
         if (GameObject.FindGameObjectsWithTag("Enemy").Length < minEnemyNumber)
         {
             SpawnRandomEnemy();
         }
-        if (isGameOver && Input.GetKeyDown(KeyCode.Return))
+        if (isGameOver && Input.GetButtonDown("Confirm"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
+        if (showPauseMenu && Input.GetButtonDown("Confirm")) {
+            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        }
+    }
+
+    bool TogglePauseMenu()
+    {
+        if (!showPauseMenu)
+        {
+            ShowPauseMenu();
+        }
+        else
+        {
+            HidePauseMenu();
+        }
+        return showPauseMenu;
     }
 
     bool TogglePause()
@@ -57,6 +80,18 @@ public class GameManager : MonoBehaviour
             UnpauseGame();
         }
         return isPaused;
+    }
+
+    void ShowPauseMenu() {
+        showPauseMenu = true;
+        PauseGame();
+        _pauseMenu.SetActive(true);
+    }
+
+    void HidePauseMenu() {
+        showPauseMenu = false;
+        UnpauseGame();
+        _pauseMenu.SetActive(false);
     }
 
     void PauseGame()

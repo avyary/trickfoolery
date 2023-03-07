@@ -95,14 +95,14 @@ public class PlayerMovement : MonoBehaviour
                 transform.forward = _movementDirection;
             } ;
 
-            if (Input.GetButton("Jump") && dashCdTimer <= 0)
+            if (Input.GetButtonDown("Dash") && dashCdTimer <= 0)
             {
                 StartCoroutine(Dash());
                  DashParticle.Play();
                    StartCoroutine(WaitForSecondsAndStopParticles(0.1f, DashParticle));
             }
 
-            if (Input.GetKey("f") && tauntCdTimer <= 0)
+            if (Input.GetButton("Taunt") && tauntCdTimer <= 0)
             {
                 StartCoroutine(Taunt());
             }
@@ -173,9 +173,7 @@ public class PlayerMovement : MonoBehaviour
     
     bool IsCloseDash()
     {
-        print("nice");
         Collider[] attacksInRange = Physics.OverlapSphere(transform.position, dodgeRadius, attackMask);
-        print(attacksInRange.Length);
         return (attacksInRange.Length > 0);
     }
     
