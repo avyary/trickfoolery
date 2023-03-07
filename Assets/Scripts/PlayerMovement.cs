@@ -36,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
     private HypeManager hypeManager;
     public GameManager gameManager;
     private Material damageMat;
+    private Material tauntMat;
+    private Material originalMat;
 
     //Speed of different player abilities
     [SerializeField]
@@ -78,6 +80,8 @@ public class PlayerMovement : MonoBehaviour
         fov = gameObject.GetComponent<FieldOfView>();
         health = MAX_HEALTH;
         damageMat = Resources.Load("DamageColor", typeof(Material)) as Material;
+        tauntMat = Resources.Load("TauntColor", typeof(Material)) as Material;
+        originalMat = GetComponent<MeshRenderer>().material;
     }
 
     // Update is called once per frame
@@ -95,12 +99,12 @@ public class PlayerMovement : MonoBehaviour
                 transform.forward = _movementDirection;
             } ;
 
-            if (Input.GetButton("Jump") && dashCdTimer <= 0)
+            if (Input.GetAxis("Dash") != 0 && dashCdTimer <= 0)
             {
                 StartCoroutine(Dash());
             }
 
-            if (Input.GetKey("f") && tauntCdTimer <= 0)
+            if (Input.GetButton("Taunt") && tauntCdTimer <= 0)
             {
                 StartCoroutine(Taunt());
             }
@@ -146,8 +150,8 @@ public class PlayerMovement : MonoBehaviour
     
     IEnumerator Taunt()
     {
+        StartCoroutine(ChangeMaterial(tauntMat, TAUNTTIME));
         state = AbilityState.taunting;
-        
         
         float startTime = Time.time;
 
@@ -162,7 +166,6 @@ public class PlayerMovement : MonoBehaviour
             state = AbilityState.taunting;
             yield return null;
         }
-        
         
         state = AbilityState.walking;
         tauntCdTimer = TAUNTCD;
@@ -233,8 +236,7 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForSeconds(0);
         }
         else {
-            Material originalMat = GetComponent<MeshRenderer>().material;
-            GetComponent<MeshRenderer>().material = damageMat;
+            GetComponent<MeshRenderer>().material = newMat;
             yield return new WaitForSeconds(time);
             GetComponent<MeshRenderer>().material = originalMat;
         }
