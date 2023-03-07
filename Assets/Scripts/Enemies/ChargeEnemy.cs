@@ -45,7 +45,7 @@ public class ChargeEnemy : Enemy
                     particleSystem.Stop();
                 
 
-                    StartCoroutine(WaitForSecondsAndStopParticles(0.2f, BackParticleSystem));
+                    StartCoroutine(WaitForSecondsAndStopParticles(1.0f, BackParticleSystem));
 
                 }
                 else 
