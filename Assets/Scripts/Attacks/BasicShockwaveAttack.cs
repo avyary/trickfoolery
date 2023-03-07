@@ -19,13 +19,13 @@ namespace Attacks
             activeTime = 4f;
             recoveryTime = 1f;
             damage = 100;
+            stunTime = 2;
             for (int i = 0; i < ShockwaveRange.NormalLength; i++)
             {
                 range = ShockwaveRange.NormalWidth * i;
+                Thread.Sleep(1000);
             }
 
-            stunTime = 2;
-            
         }
     }
 }
