@@ -21,14 +21,14 @@ namespace Attacks
             activeTime = 7f;
             recoveryTime = 3f;
             damage = 150;
+            stunTime = 2;
             // Progressive attack range
             for (int i = 0; i < ShockwaveRange.AggroLength; i++)
             {
                 range = ShockwaveRange.AggroWidth * i;
+                Thread.Sleep(1000);
             }
 
-            stunTime = 2;
-            
         }
     }
 }
