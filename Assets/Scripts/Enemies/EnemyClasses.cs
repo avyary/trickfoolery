@@ -196,12 +196,14 @@ public abstract class Enemy: MonoBehaviour
         }
         
         state = EnemyState.Passive;
+        gameObject.GetComponent<Patrol>().enabled = true;
     }
 
     protected virtual void PlayerFound()
     {
         // animation for finding player?
         state = EnemyState.Tracking;
+        gameObject.GetComponent<Patrol>().enabled = false;
     }
 
     protected virtual void StopEnemy() 
@@ -231,8 +233,7 @@ public abstract class Enemy: MonoBehaviour
         player = GameObject.FindWithTag("Player");
         hypeManager = GameObject.Find("Game Manager").GetComponent<HypeManager>();
         fow = gameObject.GetComponent<FieldOfView>();
-        // agent = GetComponent<NavMeshAgent>();
-        // centrePoint = agent.transform;
+        agent = GetComponent<NavMeshAgent>();
         audioSource = GetComponent<AudioSource>();
     }
 
