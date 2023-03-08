@@ -196,7 +196,6 @@ public abstract class Enemy: MonoBehaviour
         }
         
         state = EnemyState.Passive;
-        Debug.Log("I am friendly!");
     }
 
     protected virtual void PlayerFound()
@@ -232,8 +231,8 @@ public abstract class Enemy: MonoBehaviour
         player = GameObject.FindWithTag("Player");
         hypeManager = GameObject.Find("Game Manager").GetComponent<HypeManager>();
         fow = gameObject.GetComponent<FieldOfView>();
-        agent = GetComponent<NavMeshAgent>();
-        centrePoint = agent.transform;
+        // agent = GetComponent<NavMeshAgent>();
+        // centrePoint = agent.transform;
         audioSource = GetComponent<AudioSource>();
     }
 

@@ -20,7 +20,7 @@ public class ChargeEnemy : Enemy
         switch(state)
         {
             case EnemyState.Passive:
-                TestBehaviors.Rotate(gameObject, moveSpeed);  // replace with better movement
+                // TestBehaviors.Rotate(gameObject, moveSpeed);  // replace with better movement
                 if (!fow.active)
                 {
                     fow.active = true;

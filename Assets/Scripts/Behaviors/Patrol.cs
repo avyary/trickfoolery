@@ -4,17 +4,20 @@ using UnityEngine;
 using UnityEngine.AI; //important
 
 //if you use this code you are contractually obligated to like the YT video
-public class AIController : MonoBehaviour //don't forget to change the script name if you haven't
+public class Patrol : MonoBehaviour //don't forget to change the script name if you haven't
 {
-    public NavMeshAgent agent;
-    public float range; //radius of sphere
+    protected NavMeshAgent agent;
 
-    public Transform centrePoint; //centre of the area the agent wants to move around in
+    [SerializeField]
+    protected float range; //radius of sphere
+
+    protected Transform centrePoint; //centre of the area the agent wants to move around in
     //instead of centrePoint you can set it as the transform of the agent if you don't care about a specific area
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        centrePoint = agent.transform;
     }
 
     
