@@ -13968,7 +13968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewRadius: 20
-  viewAngle: 180
+  viewAngle: 100
   player: {fileID: 0}
   obstacleMask:
     serializedVersion: 2
