@@ -13944,7 +13944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 1
-  _moveSpeed: 0.01
+  _moveSpeed: 0.3
   _maxAnger: 1
   _basicAttack: {fileID: 8530116322961737117}
   _angyAttack: {fileID: 1473256248873818880}
