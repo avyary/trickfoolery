@@ -14,12 +14,15 @@ public class CutsceneManager : MonoBehaviour
     [SerializeField]
     private GameObject _captionObj;
     [SerializeField]
+    private GameObject _sizeCalcObj;
+    [SerializeField]
     private GameObject continueArrow;
     [SerializeField]
     private string nextSceneName;
 
     private RawImage image;
     private TextMeshProUGUI caption;
+    private TextMeshProUGUI sizeCalc;
 
     private int pageIdx;
     private Cutscene cutscene;
@@ -33,6 +36,7 @@ public class CutsceneManager : MonoBehaviour
     {
         image = _imageObj.GetComponent<RawImage>();
         caption = _captionObj.GetComponent<TextMeshProUGUI>();
+        sizeCalc = _sizeCalcObj.GetComponent<TextMeshProUGUI>();
         continueArrow.SetActive(false);
 
         TextAsset jsonObj = Resources.Load<TextAsset>(System.String.Format("Cutscenes/{0}", jsonName));
@@ -54,6 +58,9 @@ public class CutsceneManager : MonoBehaviour
         currentPage = cutscene.pages[pageIdx];
 
         image.texture = Resources.Load<Texture2D>("Cutscenes/Images/" + currentPage.image); 
+        sizeCalc.text = currentPage.caption;
+        Canvas.ForceUpdateCanvases();
+        _captionObj.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, sizeCalc.textBounds.size.x);
         typingText = StartCoroutine(PlayText());
     }
     
