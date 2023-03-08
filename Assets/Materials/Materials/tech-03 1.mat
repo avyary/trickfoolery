@@ -101,7 +101,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 0.15, y: 0.15}
+        m_Scale: {x: 1.96, y: 1.96}
         m_Offset: {x: 0, y: 0}
     - _EmissiveColorMap:
         m_Texture: {fileID: 0}
@@ -129,7 +129,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 15a294223d3966040a226d2b487d4ff2, type: 3}
-        m_Scale: {x: 0.15, y: 0.15}
+        m_Scale: {x: 1.96, y: 1.96}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
         m_Texture: {fileID: 0}
@@ -385,7 +385,7 @@ Material:
     - _Offset: 0
     - _Offset_X_Axis_BLD: -0.05
     - _Offset_Y_Axis_BLD: 0.09
-    - _Offset_Z: -0.92
+    - _Offset_Z: -0.35
     - _OtlWidth: 4.98
     - _OutlineOverridden: 0
     - _OutlineVisible: 1
