@@ -30,7 +30,7 @@ public class ChargeEnemy : Enemy
                 break;
             case EnemyState.Tracking:
                 float dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
-                Debug.Log(System.String.Format("You are {0} away and I am still following you.", dist));
+                // Debug.Log(System.String.Format("You are {0} away and I am still following you.", dist));
 
                 if (dist <= currentAttack.range) 
                 {
