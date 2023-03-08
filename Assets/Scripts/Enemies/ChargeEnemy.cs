@@ -11,16 +11,22 @@ public class ChargeEnemy : Enemy
     [SerializeField] 
     private float chargeSpeed;
 
+    public LineRenderer circleRenderer;
+
     protected override void Start() {
         base.Start();
         GetEnemyStatus("ChargeEnemy");
+        Debug.Log(System.String.Format("View Radius: {0}", fow.viewRadius));
+        Debug.Log(System.String.Format("View Angle: {0}", fow.viewAngle));
     }
 
     void Update() {
+        Debug.Log(System.String.Format("Current state is: {0}", state));
         switch(state)
         {
             case EnemyState.Passive:
                 // TestBehaviors.Rotate(gameObject, moveSpeed);  // replace with better movement
+                gameObject.GetComponent<Patrol>().enabled = true;
                 if (!fow.active)
                 {
                     fow.active = true;
@@ -28,6 +34,7 @@ public class ChargeEnemy : Enemy
                 }
                 break;
             case EnemyState.Tracking:
+                gameObject.GetComponent<Patrol>().enabled = false;
                 TestBehaviors.MoveToPlayer(gameObject, player, moveSpeed);
                 if (Vector3.Distance(gameObject.transform.position, player.transform.position) <= basicAttack.range)
                 {
@@ -37,6 +44,27 @@ public class ChargeEnemy : Enemy
             case EnemyState.Active:
                 TestBehaviors.MoveForward(gameObject, chargeSpeed);
                 break;
+        }
+    }
+
+    void DrawCircle(int steps, float radius) 
+    {
+        circleRenderer.positionCount = steps;
+
+        for (int currentStep = 0; currentStep < steps; currentStep++)
+        {
+            float circumferenceProgress = (float) currentStep / steps;
+            float currentRadian = circumferenceProgress * 2 * Mathf.PI;
+            
+            float xScaled = Mathf.Cos(currentRadian);
+            float yScaled = Mathf.Sin(currentRadian);
+
+            float x = xScaled * radius;
+            float y = yScaled * radius;
+
+            Vector3 currentPosition = new Vector3(x, y, 0);
+
+            circleRenderer.SetPosition(currentStep, currentPosition);
         }
     }
 

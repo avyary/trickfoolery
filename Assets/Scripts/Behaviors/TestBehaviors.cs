@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TestBehaviors
 {
+
     public static void Rotate(GameObject target, float speed) {
         target.transform.Rotate(0.0f, speed, 0.0f);
     }
