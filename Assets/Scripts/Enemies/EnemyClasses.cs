@@ -217,10 +217,6 @@ public abstract class Enemy: MonoBehaviour
         agent.SetDestination(player.transform.position);
     }
 
-    protected virtual void Move()
-    {
-        return;
-    }
 
     protected virtual void Start()
     {
