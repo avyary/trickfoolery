@@ -15,11 +15,14 @@ public class GameManager : MonoBehaviour
     public GameObject _gameOverPanel;
     public GameObject _pauseMenu;
 
+    private bool isGameWon = false;
 
 
     public GameObject[] enemies;
     [SerializeField]
     private int minEnemyNumber;
+    [SerializeField]
+    private string nextScene;
 
     private bool isGameOver = false;
 
@@ -48,7 +51,12 @@ public class GameManager : MonoBehaviour
         }
         if (isGameOver && Input.GetButtonDown("Confirm"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            if (isGameWon) {
+                SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
+            }
+            else {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
         }
         if (showPauseMenu && Input.GetButtonDown("Confirm")) {
             HidePauseMenu();
@@ -111,10 +119,10 @@ public class GameManager : MonoBehaviour
     public void GameOverWin()
     {
         isGameOver = true;
-        isPaused = true;
-        Time.timeScale = 0;
+        PauseGame();
         _gameOverText.text = "Hype Meter Filled!";
         _gameOverPanel.SetActive(true);
+        isGameWon = true;
     }
 
     public void GameOverLose()
