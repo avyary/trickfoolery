@@ -8,7 +8,7 @@ using UnityEngine;
 /// </summary>
 public class PlayerMovement : MonoBehaviour
 
-{
+{    [SerializeField] private ParticleSystem DashParticle;
     [SerializeField]
     public float dodgeRadius;
     [SerializeField]
@@ -98,6 +98,8 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetButton("Jump") && dashCdTimer <= 0)
             {
                 StartCoroutine(Dash());
+                 DashParticle.Play();
+                   StartCoroutine(WaitForSecondsAndStopParticles(0.1f, DashParticle));
             }
 
             if (Input.GetKey("f") && tauntCdTimer <= 0)
@@ -238,5 +240,10 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForSeconds(time);
             GetComponent<MeshRenderer>().material = originalMat;
         }
-    }
-}
+    }private IEnumerator WaitForSecondsAndStopParticles(float seconds, ParticleSystem particles) {
+        yield return new WaitForSeconds(seconds);
+        particles.Stop();
+    } 
+     }   
+
+
