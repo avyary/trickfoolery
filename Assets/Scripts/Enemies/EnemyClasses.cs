@@ -172,7 +172,10 @@ public abstract class Enemy: MonoBehaviour
     protected IEnumerator Attack(Attack attackObj) {
         // trigger attack animation here
         state = EnemyState.Startup;
+        gameObject.GetComponent<Animtrigger>().animator.SetBool("isWalking", false);
         yield return new WaitForSeconds(attackObj.startupTime);
+
+         gameObject.GetComponent<Animtrigger>().animator.SetBool("isWalking", true);
         
         // there's probably a better way to handle the below (& its repetitions)
         if (state == EnemyState.Dead || state == EnemyState.Stunned) {
