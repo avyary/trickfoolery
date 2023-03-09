@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3510645419529744274}
   - component: {fileID: 5279627203820214540}
   - component: {fileID: 4342328844819957203}
+  - component: {fileID: 7580161123351558266}
+  - component: {fileID: 52469479545108559}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -83,6 +85,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!208 &7580161123351558266
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634775601503166840}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.596, y: 2.135, z: 0.62200004}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.034, y: 1.71, z: -0.029000001}
+  m_TimeToStationary: 0.5
+--- !u!65 &52469479545108559
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634775601503166840}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1927906, y: 4.269774, z: 1.2432266}
+  m_Center: {x: -0.033640027, y: 1.7100997, z: -0.029441953}
 --- !u!1 &1117498908904353357
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,6 +160,7 @@ GameObject:
   - component: {fileID: 1443502004832739238}
   - component: {fileID: 3535984043138018070}
   - component: {fileID: 8371247204680569178}
+  - component: {fileID: 3376472148175822147}
   m_Layer: 0
   m_Name: Cube_1
   m_TagString: Untagged
@@ -202,6 +234,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3376472148175822147
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2310666335681007160}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8270928, y: 8.146648, z: 1.608899}
+  m_Center: {x: -0.05152911, y: 3.2628381, z: -0.038101733}
 --- !u!1 &3601302034380709148
 GameObject:
   m_ObjectHideFlags: 0
