@@ -1,0 +1,29 @@
+{
+  "scenes": [
+    {
+      "sceneName": "testScene",
+      "lines": [
+        {
+          "name": "snake",
+          "text": "WOAH!!!",
+          "portrait": "snake"
+        },
+        {
+          "name": "snake",
+          "text": "A DIALOGUE SYSTEM!!!!!!!!",
+          "portrait": "snake"
+        },
+        {
+          "name": "snake",
+          "text": "thats so crazy lol",
+          "portrait": "snake"
+        },
+        {
+          "name": "snake",
+          "text": "check out test.json to see how this works (or just ask me)",
+          "portrait": "snake"
+        }
+      ]
+    }
+  ]
+}

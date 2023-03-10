@@ -8,7 +8,7 @@ using UnityEngine;
 /// </summary>
 public class PlayerMovement : MonoBehaviour
 
-{
+{    [SerializeField] private ParticleSystem DashParticle;
     [SerializeField]
     public float dodgeRadius;
     [SerializeField]
@@ -99,9 +99,11 @@ public class PlayerMovement : MonoBehaviour
                 transform.forward = _movementDirection;
             } ;
 
-            if (Input.GetAxis("Dash") != 0 && dashCdTimer <= 0)
+            if (Input.GetButtonDown("Dash") && dashCdTimer <= 0)
             {
                 StartCoroutine(Dash());
+                 DashParticle.Play();
+                   StartCoroutine(WaitForSecondsAndStopParticles(0.1f, DashParticle));
             }
 
             if (Input.GetButton("Taunt") && tauntCdTimer <= 0)
@@ -174,9 +176,7 @@ public class PlayerMovement : MonoBehaviour
     
     bool IsCloseDash()
     {
-        print("nice");
         Collider[] attacksInRange = Physics.OverlapSphere(transform.position, dodgeRadius, attackMask);
-        print(attacksInRange.Length);
         return (attacksInRange.Length > 0);
     }
     
@@ -240,5 +240,10 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForSeconds(time);
             GetComponent<MeshRenderer>().material = originalMat;
         }
-    }
-}
+    }private IEnumerator WaitForSecondsAndStopParticles(float seconds, ParticleSystem particles) {
+        yield return new WaitForSeconds(seconds);
+        particles.Stop();
+    } 
+     }   
+
+

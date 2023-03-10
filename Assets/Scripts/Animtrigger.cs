@@ -21,12 +21,10 @@ void Update()
     if (navMeshAgent.velocity.magnitude > 0.1f)
     {
         animator.SetBool("isWalking", true);
-        Debug.Log("isWalking = true");
     }
     else
     {
         animator.SetBool("isWalking", false);
-        Debug.Log("isWalking = false");
     }
 }
 
