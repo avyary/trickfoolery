@@ -134,6 +134,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator Dash()
     {
         StartCoroutine(CheckHypeDash());
+        StartCoroutine(InvincibilityFrames(DASHTIME));
         dashCdTimer = DASHCD;
         float startTime = Time.time;
 
@@ -217,7 +218,7 @@ public class PlayerMovement : MonoBehaviour
         { 
             StartCoroutine(attacker.GetHitPaused(0.5f));
             StartCoroutine(ChangeMaterial(damageMat, damageFlashTime));
-            StartCoroutine(InvincibilityFrames());
+            StartCoroutine(InvincibilityFrames(1f));
         }
     }
 
@@ -228,16 +229,11 @@ public class PlayerMovement : MonoBehaviour
         yield return null;
     }
 
-    IEnumerator InvincibilityFrames()
+    IEnumerator InvincibilityFrames(float time)
     {
-        float starttime = Time.time;
-        
-        while (Time.time <  starttime + 1)
-        {
-            isInvincible = true;
-            yield return null;
-        }
+        isInvincible = true;
         GetComponent<MeshRenderer>().material.color = Color.green;
+        yield return new WaitForSeconds(time);
         isInvincible = false;
     }
 
