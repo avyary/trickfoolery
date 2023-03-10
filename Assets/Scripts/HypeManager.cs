@@ -10,7 +10,7 @@ public class HypeManager : MonoBehaviour
     [SerializeField]
     private GameObject hypeUI;
 
-    private float currentHype;
+    private float currentHype = 0;
 
     // how much hype is added for each event
     [SerializeField]
@@ -22,6 +22,15 @@ public class HypeManager : MonoBehaviour
 
     private GameManager gameManager;
 
+    [SerializeField]
+    public GameObject[] hypePopups;
+
+    private bool isShowingHype = false;
+    public int hypePopupLevel = 0;
+
+    [SerializeField]
+    private float hypeStackTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +38,14 @@ public class HypeManager : MonoBehaviour
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
-    public void ChangeHype(float hypeDiff)
+    public void IncreaseHype(float hypeDiff)
     {
+        // if has higher popup level, show higher popup
+        if (hypePopupLevel < hypePopups.Length) {
+            hypePopups[hypePopupLevel++].GetComponent<Animator>().SetTrigger("ShowPopup");
+            StartCoroutine(StackHype());
+        }
+        print(hypePopupLevel);
         UpdateHype(currentHype + hypeDiff);
     }
 
@@ -39,11 +54,14 @@ public class HypeManager : MonoBehaviour
         currentHype = Mathf.Min(newHypeVal, hypeGoal);
         hypeUI.GetComponent<TextMeshProUGUI>().text = System.String.Format("Hype: {0}/{1}", currentHype.ToString(), hypeGoal.ToString());
 
-        print(currentHype);
-
         if (currentHype >= hypeGoal)
         {
             gameManager.GameOverWin(); // replace with end of level
         }
+    }
+
+    IEnumerator StackHype() {
+        yield return new WaitForSeconds(hypeStackTime);
+        hypePopupLevel--;
     }
 }

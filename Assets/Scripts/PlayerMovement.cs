@@ -134,7 +134,7 @@ public class PlayerMovement : MonoBehaviour
         dashCdTimer = DASHCD;
         if (IsCloseDash())
         {
-            hypeManager.ChangeHype(hypeManager.DODGE_HYPE);
+            hypeManager.IncreaseHype(hypeManager.DODGE_HYPE);
         }
 
         float startTime = Time.time;
