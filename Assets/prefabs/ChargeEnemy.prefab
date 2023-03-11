@@ -13949,6 +13949,7 @@ MonoBehaviour:
   _basicAttack: {fileID: 8530116322961737117}
   _angyAttack: {fileID: 1473256248873818880}
   isAngy: 0
+  state: 0
   particleSystem: {fileID: 4388753419564305300}
   BackParticleSystem: {fileID: 4494070817600710567}
   chargeSpeed: 15

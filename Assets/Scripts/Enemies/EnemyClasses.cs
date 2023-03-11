@@ -39,7 +39,7 @@ public abstract class Enemy: MonoBehaviour
 
     protected int health { get; set; }
     protected int anger { get; set; }
-    protected EnemyState state;
+    [SerializeField] protected EnemyState state;
 
     protected GameObject player;
     protected HypeManager hypeManager;
