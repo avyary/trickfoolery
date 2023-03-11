@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
 {
     public bool isPaused = false;
     public bool showPauseMenu = false;
+    
+    public AK.Wwise.Event pauseSFX;
+    public AK.Wwise.Event unpSFX;
 
     public GameObject _gameOverObj;
     public TMP_Text _gameOverText;
@@ -68,6 +71,7 @@ public class GameManager : MonoBehaviour
     {
         if (!showPauseMenu)
         {
+            pauseSFX.Post(gameObject);
             ShowPauseMenu();
         }
         else
@@ -98,6 +102,7 @@ public class GameManager : MonoBehaviour
 
     void HidePauseMenu() {
         showPauseMenu = false;
+        unpSFX.Post(gameObject);
         if (!isGameOver) {
             UnpauseGame();
         }
