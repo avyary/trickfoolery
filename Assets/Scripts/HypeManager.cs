@@ -26,7 +26,7 @@ public class HypeManager : MonoBehaviour
     void Start()
     {
         UpdateHype(0f);
-        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     public void ChangeHype(float hypeDiff)
@@ -38,6 +38,8 @@ public class HypeManager : MonoBehaviour
     {
         currentHype = Mathf.Min(newHypeVal, hypeGoal);
         hypeUI.GetComponent<TextMeshProUGUI>().text = System.String.Format("Hype: {0}/{1}", currentHype.ToString(), hypeGoal.ToString());
+
+        print(currentHype);
 
         if (currentHype >= hypeGoal)
         {
