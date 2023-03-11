@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PlatformInfo>
-	<Platform Name="Mac" BasePlatform="Mac" Generator="2022.1.1.8100"/>
+	<Platform Name="Mac" BasePlatform="Mac" Generator="2022.1.2.8150"/>
 	<RootPaths>
 		<ProjectRoot>../..</ProjectRoot>
 		<SourceFilesRoot>../../.cache/Mac</SourceFilesRoot>
@@ -23,10 +23,10 @@
 		<GeneratePerBankMetadata>false</GeneratePerBankMetadata>
 		<UseSoundBankNames>true</UseSoundBankNames>
 		<AllowExceedingMaxSize>false</AllowExceedingMaxSize>
-		<MaxAttenuationInfo>true</MaxAttenuationInfo>
-		<EstimatedDurationInfo>true</EstimatedDurationInfo>
+		<MaxAttenuationInfo>false</MaxAttenuationInfo>
+		<EstimatedDurationInfo>false</EstimatedDurationInfo>
 		<PrintObjectGuid>false</PrintObjectGuid>
 		<PrintObjectPath>false</PrintObjectPath>
 	</Settings>
-	<FileHash>{F4648EA6-7498-DCD3-4E3F-48F299AE88F8}</FileHash>
+	<FileHash>{D76648E4-8045-F2A1-BF85-0A134E860A54}</FileHash>
 </PlatformInfo>

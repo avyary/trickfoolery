@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class MenuManager : MonoBehaviour
 {
+    public AK.Wwise.Event selectSFX;
     private int currentIdx;
     private int numButtons;
     private bool isChanging;
@@ -48,6 +50,7 @@ public class MenuManager : MonoBehaviour
             idx = currentIdx;
         }
         Transform newSelect = transform.GetChild((int) idx);
+        selectSFX.Post(gameObject); 
         newSelect.gameObject.GetComponent<Button>().Select();
         isChanging = true;
         yield return new WaitForSeconds(changeCooldown);

@@ -6,7 +6,11 @@
 				<SoundBank Name="Main" ID="{72F8FC9C-C162-4569-9BDA-11AB8821D171}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_sfx_player_death" ID="{CAC80460-81AC-420B-AD88-E8FA18AC9974}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_sfx_select" ID="{D9480393-0FF0-4478-941E-C2F83A21C8BD}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_charger_death" ID="{63384843-A4A4-44C3-AED2-9CDA3A9431A5}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_sfx_confirm" ID="{69F3C602-D088-4702-A2C0-78D74E58ADF3}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_sfx_unpause" ID="{EF55EFFC-D9BF-4914-B45F-C34160708C30}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_sfx_pause" ID="{1228DA1E-31A1-49A3-8418-61751A909CFE}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_player_hurt" ID="{F2D8E87D-016C-4DA6-8E62-4CD589790A37}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_player_dash" ID="{D6F8BF24-B6D5-4FEA-AC6B-3CEC97B0DDC4}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>

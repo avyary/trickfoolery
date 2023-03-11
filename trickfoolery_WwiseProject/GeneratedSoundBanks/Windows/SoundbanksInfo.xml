@@ -22,13 +22,17 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{6DCFC9A5-5851-0912-B92C-5ED3F284C382}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{39CB104E-A376-F079-9B8F-96AD04A36019}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
 				<File Id="275378158" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_charger_death_1.wav</ShortName>
 					<CachePath>SFX/sfx_charger_death_1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="395767410" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_unpause_larose (1).wav</ShortName>
+					<CachePath>SFX/sfx_unpause_larose (1)_10C4C929.wem</CachePath>
 				</File>
 				<File Id="403074574" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_hurt_3.wav</ShortName>
@@ -50,9 +54,21 @@
 					<ShortName>sfx_player_hurt_6.wav</ShortName>
 					<CachePath>SFX/sfx_player_hurt_6_10C4C929.wem</CachePath>
 				</File>
+				<File Id="621091837" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_confirming_option_larose.wav</ShortName>
+					<CachePath>SFX/sfx_confirming_option_larose_10C4C929.wem</CachePath>
+				</File>
+				<File Id="673051370" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_mouse_select_larose.wav</ShortName>
+					<CachePath>SFX/sfx_mouse_select_larose_10C4C929.wem</CachePath>
+				</File>
 				<File Id="1007579897" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_death.wav</ShortName>
 					<CachePath>SFX/sfx_player_death_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1066273250" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_pause_larose.wav</ShortName>
+					<CachePath>SFX/sfx_pause_larose_10C4C929.wem</CachePath>
 				</File>
 				<File Id="1070951602" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_hurt_1.wav</ShortName>
@@ -60,23 +76,33 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="843029991" Name="Play_sfx_charger_death" DurationType="OneShot" DurationMin="1.5" DurationMax="2">
+				<Event Id="843029991" Name="Play_sfx_charger_death">
 					<MediaRefs>
 						<MediaRef Id="275378158"/>
 						<MediaRef Id="507762272"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4077681152" Name="Play_sfx_player_dash" DurationType="OneShot" DurationMin="0.37457678" DurationMax="0.6674199">
+				<Event Id="2343006462" Name="Play_sfx_confirm">
+					<MediaRefs>
+						<MediaRef Id="621091837"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3683043420" Name="Play_sfx_pause">
+					<MediaRefs>
+						<MediaRef Id="1066273250"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4077681152" Name="Play_sfx_player_dash">
 					<MediaRefs>
 						<MediaRef Id="429033431"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1591758634" Name="Play_sfx_player_death" DurationType="OneShot" DurationMin="1.5" DurationMax="1.5">
+				<Event Id="1591758634" Name="Play_sfx_player_death">
 					<MediaRefs>
 						<MediaRef Id="1007579897"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1067524079" Name="Play_sfx_player_hurt" DurationType="OneShot" DurationMin="1" DurationMax="1">
+				<Event Id="1067524079" Name="Play_sfx_player_hurt">
 					<MediaRefs>
 						<MediaRef Id="403074574"/>
 						<MediaRef Id="405788637"/>
@@ -84,8 +110,18 @@
 						<MediaRef Id="1070951602"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="325086926" Name="Play_sfx_select">
+					<MediaRefs>
+						<MediaRef Id="673051370"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3476672187" Name="Play_sfx_unpause">
+					<MediaRefs>
+						<MediaRef Id="395767410"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{51CA30C2-47BB-A348-1D41-7D252CDB3CE6}</FileHash>
+	<FileHash>{69087E7E-70A2-9AF8-8C2D-AE1D223B28F4}</FileHash>
 </SoundBanksInfo>
