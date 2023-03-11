@@ -34,8 +34,6 @@ public class ChargeEnemy : Enemy
                 }
                 break;
             case EnemyState.Tracking:
-                // TestBehaviors.MoveToPlayer(gameObject, player, moveSpeed);
-                // agent.SetDestination(player.transform.position);
                 MoveTowardsPlayer(gameObject, player);
                 
                 if (Vector3.Distance(gameObject.transform.position, player.transform.position) <= basicAttack.range)
@@ -53,7 +51,7 @@ public class ChargeEnemy : Enemy
     void MoveTowardsPlayer(GameObject target, GameObject player) 
     {   
         Vector3 toPlayer = player.transform.position - target.transform.position;
-        target.transform.rotation = Quaternion.LookRotation(toPlayer, Vector3.up);
+        target.transform.rotation = Quaternion.LookRotation(toPlayer, Vector3.up);  // for some reason it still doesn't rotate to look at player?
 
         agent.SetDestination(player.transform.position);
 
