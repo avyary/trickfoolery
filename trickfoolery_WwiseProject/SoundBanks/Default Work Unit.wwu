@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{323C7EEF-A09D-453F-BC42-F96CF0BE92C3}" SchemaVersion="110">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{323C7EEF-A09D-453F-BC42-F96CF0BE92C3}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{72F8FC9C-C162-4569-9BDA-11AB8821D171}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_sfx_player_death" ID="{CAC80460-81AC-420B-AD88-E8FA18AC9974}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_sfx_charger_death" ID="{63384843-A4A4-44C3-AED2-9CDA3A9431A5}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_sfx_player_hurt" ID="{F2D8E87D-016C-4DA6-8E62-4CD589790A37}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_sfx_player_dash" ID="{D6F8BF24-B6D5-4FEA-AC6B-3CEC97B0DDC4}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

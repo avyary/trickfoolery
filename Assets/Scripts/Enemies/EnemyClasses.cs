@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
 public enum EnemyState
 {
     Passive,     // 0 - patrolling, "looking" for player

@@ -8,7 +8,17 @@ using UnityEngine;
 /// </summary>
 public class PlayerMovement : MonoBehaviour
 
-{    [SerializeField] private ParticleSystem DashParticle;
+{
+    /// <summary>
+    /// Audio implementation stuff starts with AK.Wwise 
+    /// </summary>
+
+    public AK.Wwise.Event dashSFX;
+    public AK.Wwise.Event playerDeathSFX;
+    public AK.Wwise.Event playerHurtSFX;
+    
+
+    [SerializeField] private ParticleSystem DashParticle;
     [SerializeField]
     public float dodgeRadius;
     [SerializeField]
@@ -54,6 +64,8 @@ public class PlayerMovement : MonoBehaviour
     private float TAUNTCD = 1f;
     [SerializeField]
     private float GRAVITY_MULTIPLIER = 1f;
+    [SerializeField]
+    private float POSTDASH;
     public float MAX_HEALTH = 100;
 
     [SerializeField]
@@ -117,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
             if (tauntCdTimer > 0)
                 tauntCdTimer -= Time.deltaTime;
         }
-        
+
         ApplyGravity();
     }
 
@@ -131,12 +143,9 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator Dash()
     {
+        StartCoroutine(CheckHypeDash());
+        StartCoroutine(InvincibilityFrames(DASHTIME));
         dashCdTimer = DASHCD;
-        if (IsCloseDash())
-        {
-            hypeManager.IncreaseHype(hypeManager.DODGE_HYPE);
-        }
-
         float startTime = Time.time;
 
         while (Time.time < startTime + DASHTIME)
@@ -145,8 +154,26 @@ public class PlayerMovement : MonoBehaviour
             //TODO: Add momentum to make dashing a little more fluid. 
             yield return null;
         }
-        
+
         state = AbilityState.walking;
+
+        dashSFX.Post(gameObject);
+
+    }
+
+
+    IEnumerator CheckHypeDash() {
+        float startTime = Time.time;
+        bool gotHype = false;
+        while (Time.time < startTime + (DASHTIME + POSTDASH))
+        {
+            if (!gotHype && IsCloseDash())
+            {
+                gotHype = true;
+                hypeManager.IncreaseHype(hypeManager.DODGE_HYPE);
+            }
+            yield return null;
+        }
     }
     
     
@@ -202,30 +229,27 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(Die());
         }
         else
-        { 
+        {
+            playerHurtSFX.Post(gameObject);
             StartCoroutine(attacker.GetHitPaused(0.5f));
             StartCoroutine(ChangeMaterial(damageMat, damageFlashTime));
-            StartCoroutine(InvincibilityFrames());
+            StartCoroutine(InvincibilityFrames(1f));
         }
     }
 
     IEnumerator Die()
     {
         GetComponent<MeshRenderer>().material.color = Color.black;
+        playerDeathSFX.Post(gameObject);
         gameManager.GameOverLose();
         yield return null;
     }
 
-    IEnumerator InvincibilityFrames()
+    IEnumerator InvincibilityFrames(float time)
     {
-        float starttime = Time.time;
-        
-        while (Time.time <  starttime + 1)
-        {
-            isInvincible = true;
-            yield return null;
-        }
+        isInvincible = true;
         GetComponent<MeshRenderer>().material.color = Color.green;
+        yield return new WaitForSeconds(time);
         isInvincible = false;
     }
 
