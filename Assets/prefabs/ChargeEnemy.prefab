@@ -13953,6 +13953,7 @@ MonoBehaviour:
   chargeSpeed: 15
   animator: {fileID: 5352288119225652708}
   isCharging: 0
+  isWalking: 0
 --- !u!114 &8530116321950674707
 MonoBehaviour:
   m_ObjectHideFlags: 0
