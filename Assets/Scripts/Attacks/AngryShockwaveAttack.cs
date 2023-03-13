@@ -6,30 +6,63 @@ using UnityEngine;
 
 namespace Attacks
 {
-    
-    public partial struct ShockwaveRange
-    {
-        public const float AggroWidth = 4.0f;
-        public const float AggroLength = 6.0f;
-    }
+
     public class AngryShockwaveAttack : Attack
     {
+        protected const float AngryZ = 70f;
+
+        [SerializeField] public Rigidbody shockwave;
+        [SerializeField] public Transform shockwaveOrigin;
+        
+        Vector3 initialCenter;
+        Vector3 initialSize;
+        
         protected override void Start()
         {
             base.Start();
-            
-            startupTime = 1.5f;
+            startupTime = 0.5f;
             activeTime = 7f;
             recoveryTime = 3f;
             damage = 150;
             stunTime = 2;
+            range = 20f;
+            
+            Debug.Log("Shockwave angry attack set up: \n" +
+                      "range:" + range);
+        }
+        public void SetAngryShockwaveAttack()
+        {
             // Progressive attack range
-            for (int i = 0; i < ShockwaveRange.AggroLength; i++)
-            {
-                range = ShockwaveRange.AggroWidth * i;
-                Thread.Sleep(1000);
-            }
+            BoxCollider boxCollider = GetComponent<BoxCollider>();
+            initialCenter = boxCollider.center;
+            initialSize = boxCollider.size;
+            
+            float timer = 0f;
 
+            while (timer <= activeTime)
+            {
+                float t = timer / activeTime;
+                float targetZCenter = Mathf.Lerp(initialCenter.z, AngryZ, t);
+                float targetZValue = Mathf.Lerp(initialSize.z, 2*AngryZ, t);
+
+                Vector3 targetCenter = new Vector3(initialCenter.x, initialCenter.y, targetZCenter);
+                Vector3 targetSize = new Vector3(initialSize.x, initialSize.y, targetZValue);
+                
+                boxCollider.center = targetCenter;
+                boxCollider.size = targetSize;
+                
+                timer += Time.deltaTime;
+            }
+            Debug.Log("Shockwave angry attack update");
+            
+            // wait for ShockwaveLastTime = 4 seconds
+            // System.Threading.Thread.Sleep(4000);
+            
+            // reset the hit box to original states
+            boxCollider.center = initialCenter;
+            boxCollider.size = initialSize;
+            
+            Debug.Log("Shockwave angry attack reset");
         }
     }
 }
