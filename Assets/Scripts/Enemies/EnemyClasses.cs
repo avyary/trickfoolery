@@ -38,7 +38,7 @@ public abstract class Enemy: MonoBehaviour
 
     protected int health { get; set; }
     protected int anger { get; set; }
-    protected EnemyState state;
+    [SerializeField] protected EnemyState state;
 
     protected GameObject player;
     protected HypeManager hypeManager;
@@ -170,6 +170,7 @@ public abstract class Enemy: MonoBehaviour
     protected IEnumerator Attack(Attack attackObj) {
         // trigger attack animation here
         state = EnemyState.Startup;
+        Debug.Log("Attacking Time");
         yield return new WaitForSeconds(attackObj.startupTime);
         
         // there's probably a better way to handle the below (& its repetitions)
@@ -178,6 +179,7 @@ public abstract class Enemy: MonoBehaviour
         }
 
         state = EnemyState.Active;
+        Debug.Log("Active Attack!");
         attackObj.Activate();  // activate attack collider
         yield return new WaitForSeconds(attackObj.activeTime);
 
@@ -186,15 +188,15 @@ public abstract class Enemy: MonoBehaviour
         }
 
         state = EnemyState.Recovery;
+        Debug.Log("Attack All done");
         attackObj.Deactivate();  // deactivate attack collider
         yield return new WaitForSeconds(attackObj.recoveryTime);
 
         if (state == EnemyState.Dead || state == EnemyState.Stunned) {
             yield break;
         }
-        
+
         state = EnemyState.Passive;
-        //Debug.Log("I am friendly!");
     }
 
     protected virtual void PlayerFound()
