@@ -83,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (2+2 == 4) {//!gameManager.isPaused) {//not sure why this isn't working 
+        if (!gameManager.isPaused) {
             //Calculate Inputs for player movement
             _playerInputVertical = Input.GetAxisRaw("Vertical");
             _playerInputHorizontal = Input.GetAxisRaw("Horizontal");
