@@ -419,13 +419,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7252997647544356965}
-  moveForwardAnimation: {fileID: 7400000, guid: fda160986c2f05941aa3d8519145ec88, type: 2}
-  moveLeftAnimation: {fileID: 7400000, guid: fda160986c2f05941aa3d8519145ec88, type: 2}
-  moveBackwardAnimation: {fileID: 7400000, guid: fda160986c2f05941aa3d8519145ec88, type: 2}
-  moveRightAnimation: {fileID: 7400000, guid: fda160986c2f05941aa3d8519145ec88, type: 2}
-  dashAnimation: {fileID: 7400000, guid: f812afb52fc90224dad2c4b2ede598ea, type: 2}
-  tauntAnimation: {fileID: 7400000, guid: e27b81bde5a159f41a36b6f0e4a7ba1c, type: 2}
-  idleAnimation: {fileID: 7400000, guid: e27b81bde5a159f41a36b6f0e4a7ba1c, type: 2}
+  tomRunning: {fileID: 7400000, guid: fda160986c2f05941aa3d8519145ec88, type: 2}
+  tomRolling: {fileID: 7400000, guid: f812afb52fc90224dad2c4b2ede598ea, type: 2}
+  tomTaunt: {fileID: 7400000, guid: e27b81bde5a159f41a36b6f0e4a7ba1c, type: 2}
+  tomIdle: {fileID: 7400000, guid: e27b81bde5a159f41a36b6f0e4a7ba1c, type: 2}
 --- !u!95 &1390706272316000255
 Animator:
   serializedVersion: 5
