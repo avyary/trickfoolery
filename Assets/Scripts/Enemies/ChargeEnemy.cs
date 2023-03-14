@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class ChargeEnemy : Enemy
 {
+    [SerializeField]
+    private float chargeSpeed;
+    public AK.Wwise.Event chargerDeathSFX;
     [SerializeField] private ParticleSystem particleSystem;
-        [SerializeField] private ParticleSystem BackParticleSystem;
-    [SerializeField] private float chargeSpeed;
-      public Animator animator;
+    [SerializeField] private ParticleSystem BackParticleSystem;
+    public Animator animator;
     public bool isCharging;
     public bool isWalking;
 

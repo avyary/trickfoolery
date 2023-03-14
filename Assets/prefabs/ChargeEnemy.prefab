@@ -3894,7 +3894,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &5352288119225652708
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3911,7 +3911,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7559080903888852032
 GameObject:
   m_ObjectHideFlags: 0
@@ -13951,6 +13951,10 @@ MonoBehaviour:
   particleSystem: {fileID: 4388753419564305300}
   BackParticleSystem: {fileID: 4494070817600710567}
   chargeSpeed: 15
+  chargerDeathSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a8174d00cad6dbc489a8cb6884fd5b85, type: 2}
   animator: {fileID: 5352288119225652708}
   isCharging: 0
   isWalking: 0
