@@ -1,0 +1,28 @@
+{
+    "originalSdkFolder": "/Applications/Audiokinetic/Wwise 2022.1.1.8100/SDK",
+    "currentVersion": {
+        "build": 2644,
+        "major": 1,
+        "minor": 1,
+        "nickname": "",
+        "year": 2022
+    },
+    "installedBundleGroups": [
+        {
+            "id": "Packages",
+            "valueId": "Unity"
+        },
+        {
+            "id": "Packages",
+            "valueId": "Extensions"
+        },
+        {
+            "id": "DeploymentPlatforms",
+            "valueId": "Mac"
+        },
+        {
+            "id": "DeploymentPlatforms",
+            "valueId": "Windows"
+        }
+    ]
+}

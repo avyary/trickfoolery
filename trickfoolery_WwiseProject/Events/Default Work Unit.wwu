@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" SchemaVersion="110">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_sfx_player_dash" ID="{D6F8BF24-B6D5-4FEA-AC6B-3CEC97B0DDC4}">
+					<ChildrenList>
+						<Action Name="" ID="{F1F2411A-FCE4-49C9-9394-96BCC7F768CF}" ShortID="387076822">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_player_dash" ID="{9D523CE2-EABD-4764-845B-21914B795FE8}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_player_death" ID="{CAC80460-81AC-420B-AD88-E8FA18AC9974}">
+					<ChildrenList>
+						<Action Name="" ID="{9F99C555-61C9-43B5-BB9C-B111AA826A11}" ShortID="39046243">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_player_death" ID="{D3BAA8FC-AF2B-477C-979E-65BAB2F7658C}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_player_hurt" ID="{F2D8E87D-016C-4DA6-8E62-4CD589790A37}">
+					<ChildrenList>
+						<Action Name="" ID="{278A9C8B-64E0-4F9E-AE81-9FA261117BBD}" ShortID="33857014">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_player_hurt" ID="{48FF277D-9B36-4838-A00C-76AF1EE31B6A}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_charger_death" ID="{63384843-A4A4-44C3-AED2-9CDA3A9431A5}">
+					<ChildrenList>
+						<Action Name="" ID="{3F7EF837-AF57-44FE-9E70-66E3D8FD0663}" ShortID="221122887">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_charger_death" ID="{F6E8B5E4-2060-478F-A9DC-6D9EC9ABE079}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

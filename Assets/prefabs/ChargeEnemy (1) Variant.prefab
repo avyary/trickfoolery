@@ -119,6 +119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChargeEnemy (1) Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8530116321950674701, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: chargerDeathSFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: a8174d00cad6dbc489a8cb6884fd5b85, type: 2}
     - target: {fileID: 8530116321950674702, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_RootOrder
       value: 0

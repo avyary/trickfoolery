@@ -4925,6 +4925,8 @@ GameObject:
   - component: {fileID: -6082227248687665773}
   - component: {fileID: 812461445361068324}
   - component: {fileID: 3915730205257403483}
+  - component: {fileID: 3642241825702175845}
+  - component: {fileID: 5943973647914740701}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5025,6 +5027,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ad7cb085d980249b5041251c2d82c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dashSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3d7dbd92690474bdbae4416306c738b9, type: 2}
+  playerDeathSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 801c367681a5d8147aab54fb42fb69cb, type: 2}
+  playerHurtSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 08c43f316ee698b4187ec32ac0bf9138, type: 2}
   DashParticle: {fileID: 5340692112965935907}
   dodgeRadius: 0
   attackMask:
@@ -5086,3 +5100,49 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   active: 0
+--- !u!114 &3642241825702175845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7796244350440389784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dc207cd212c4aef86b969b3ed284f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &5943973647914740701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7796244350440389784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a024f4daab4fd48b9aec34fb7e7acfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 07fd65fa8e7b4074bb5d32c4ec66923d, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 

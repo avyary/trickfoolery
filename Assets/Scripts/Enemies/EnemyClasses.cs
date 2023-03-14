@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
 public enum EnemyState
 {
     Passive,     // 0 - patrolling, "looking" for player
@@ -72,7 +71,7 @@ public abstract class Enemy: MonoBehaviour
 
     protected virtual void Patrol()
     {   
-        Debug.Log(System.String.Format("Remaining distance: {0}", agent.remainingDistance));
+        // Debug.Log(System.String.Format("Remaining distance: {0}", agent.remainingDistance));
         if(agent.remainingDistance <= agent.stoppingDistance) //done with path
         {   
             // randomly generate a new point to move to
@@ -107,7 +106,7 @@ public abstract class Enemy: MonoBehaviour
         }
         else
         {
-            hypeManager.ChangeHype(hypeManager.HIT_HYPE);
+            hypeManager.IncreaseHype(hypeManager.HIT_HYPE);
             StartCoroutine(GetHitPaused(0.5f));
             StartCoroutine(GetStunned(stunTime));
         }
@@ -140,7 +139,7 @@ public abstract class Enemy: MonoBehaviour
     // invoked when health falls to/below 0
     public virtual IEnumerator Die()
     {
-        hypeManager.ChangeHype(hypeManager.DEATH_HYPE);
+        hypeManager.IncreaseHype(hypeManager.DEATH_HYPE);
 
         fow.active = false;
         basicAttack.Deactivate();  // deactivate attack collider
@@ -198,7 +197,6 @@ public abstract class Enemy: MonoBehaviour
         }
 
         state = EnemyState.Passive;
-
     }
 
     protected virtual void PlayerFound()

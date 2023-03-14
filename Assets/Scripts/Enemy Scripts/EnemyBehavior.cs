@@ -15,14 +15,24 @@ public class EnemyBehavior : MonoBehaviour
     public GameObject player;
     Vector3 direction;
     public float attackSpeed = 2f;
+public GameObject obj1;
+public GameObject obj2;
+public GameObject obj3;
+public GameObject obj4;
+private GameObject[] objs;
 
     // Start is called before the first frame update
     void Start()
     {
+    obj1.SetActive(false);
+    obj2.SetActive(false);
+    obj3.SetActive(false);
+    obj4.SetActive(false);
         originalColor = GetComponent<MeshRenderer>().material.color;
         flashInterval = chargeTime / 6f;
         lineRend.positionCount = 2;
         player = GameObject.Find("Player");
+            objs = new GameObject[] { obj1, obj2, obj3, obj4 };
     }
 
     // Update is called once per frame
@@ -87,13 +97,20 @@ public class EnemyBehavior : MonoBehaviour
         if (!isAggro )
         {
             StartCoroutine(aggro());
+            
         }
     }
 
     void OnCollisionEnter(Collision collision) {
         if (isAttacking && collision.collider.GetType() == typeof(CapsuleCollider))
-        {
+        {   Vector3 position = collision.transform.position; 
+        
             Destroy(collision.gameObject);
+              int randomIndex = Random.Range(0, objs.Length);
+        GameObject selectedObj = objs[randomIndex];
+        selectedObj.SetActive(true);
+        selectedObj.transform.position = position; 
+  
         }
     }
 }

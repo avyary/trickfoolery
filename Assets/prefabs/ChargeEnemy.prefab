@@ -3894,7 +3894,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &5352288119225652708
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3911,7 +3911,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7559080903888852032
 GameObject:
   m_ObjectHideFlags: 0
@@ -13849,7 +13849,6 @@ GameObject:
   - component: {fileID: 8530116321950674707}
   - component: {fileID: 8530116321950674706}
   - component: {fileID: 7110659447616012854}
-  - component: {fileID: -1561662918673205224}
   - component: {fileID: -8715763031606522183}
   m_Layer: 7
   m_Name: ChargeEnemy
@@ -13953,6 +13952,13 @@ MonoBehaviour:
   particleSystem: {fileID: 4388753419564305300}
   BackParticleSystem: {fileID: 4494070817600710567}
   chargeSpeed: 15
+  chargerDeathSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a8174d00cad6dbc489a8cb6884fd5b85, type: 2}
+  animator: {fileID: 5352288119225652708}
+  isCharging: 0
+  isWalking: 0
 --- !u!114 &8530116321950674707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14005,21 +14011,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &-1561662918673205224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8530116321950674698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5aad92ff7ca5314abdc3518442e5579, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  navMeshAgent: {fileID: -8715763031606522183}
-  animator: {fileID: 5352288119225652708}
-  isWalking: 0
 --- !u!195 &-8715763031606522183
 NavMeshAgent:
   m_ObjectHideFlags: 0

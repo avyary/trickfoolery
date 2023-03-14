@@ -1,0 +1,16 @@
+Event	ID	Name			Wwise Object Path	Notes
+	843029991	Play_sfx_charger_death			\Default Work Unit\Play_sfx_charger_death	
+	1067524079	Play_sfx_player_hurt			\Default Work Unit\Play_sfx_player_hurt	
+	1591758634	Play_sfx_player_death			\Default Work Unit\Play_sfx_player_death	
+	4077681152	Play_sfx_player_dash			\Default Work Unit\Play_sfx_player_dash	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	275378158	sfx_charger_death_1	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_charger_death_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_charger_death\sfx_charger_death_1		352896
+	403074574	sfx_player_hurt_3	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_player_hurt_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_hurt\sfx_player_hurt_3		176496
+	405788637	sfx_player_hurt_4	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_player_hurt_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_hurt\sfx_player_hurt_4		176496
+	429033431	sfx_player_dash	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_player_dash_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_dash		88296
+	507762272	sfx_charger_death_2	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_charger_death_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_charger_death\sfx_charger_death_2		264696
+	611627305	sfx_player_hurt_6	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_player_hurt_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_hurt\sfx_player_hurt_6		176496
+	1007579897	sfx_player_death	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_player_death_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_death		264696
+	1070951602	sfx_player_hurt_1	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_player_hurt_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_hurt\sfx_player_hurt_1		176496
+
