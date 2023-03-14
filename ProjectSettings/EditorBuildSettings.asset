@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/OpeningCutscene.unity
     guid: 3972bf33240e94b76993f17b37280f07
   - enabled: 1
-    path: Assets/Scenes/AlphaEnvironmentMar1 1.unity
-    guid: 5f500f37947f4ee48ad843e82640da74
+    path: Assets/Scenes/LVL1.unity
+    guid: 4b28ae65d11f5ac4c8fcd186bec11659
   - enabled: 1
-    path: Assets/Scenes/Level2.unity
+    path: Assets/Scenes/LVL2.unity
     guid: 04cbcf5319be6644e86ad30835ad617b
   m_configObjects: {}

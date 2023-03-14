@@ -15,6 +15,7 @@ public enum EnemyState
 
 public abstract class Enemy: MonoBehaviour
 {
+     [SerializeField] GameObject _AngyInd;
     [SerializeField]
     int _maxHealth;
     [SerializeField]
@@ -161,10 +162,10 @@ public abstract class Enemy: MonoBehaviour
         anger = anger + tauntValue;
         if (anger >= maxAnger) {
             isAngy = true;
-            gameObject.transform.Find("Angy Indicator").GetComponent<MeshRenderer>().material.color = Color.red;
-            currentAttack = angyAttack;
+           _AngyInd.SetActive(true); 
+           currentAttack = angyAttack;
             Debug.Log("Damage " + currentAttack.damage);
-        }
+        }else{_AngyInd.SetActive(false);}
     }
 
     protected IEnumerator Attack(Attack attackObj) {
