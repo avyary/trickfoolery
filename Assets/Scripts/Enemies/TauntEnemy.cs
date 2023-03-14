@@ -25,15 +25,18 @@ public class TauntEnemy : Enemy
     [SerializeField] private float attack_cooldown;
 
 
-    private Vector3 teleport_direction;
+    public Vector3 teleport_direction;
     private float current_teleport_strength;
-    private float attackcd;
+    public float attackcd;
+    private int timesTeleportCalled = 0;
+    private int timesAttackCalled = 0;
+    private int timesTeleportAttackCalled = 0;
+    private bool attacking = false;
 
     protected override void Start() {
         base.Start();
         GetEnemyStatus("TauntEnemy");
         teleporting = false;
-        boundary_fov = GameObject.Find("TauntEnemyBoundary").GetComponent<FieldOfView>();
     }
 
     protected void cooldown() 
@@ -57,13 +60,12 @@ public class TauntEnemy : Enemy
             teleporting = true;
             yield return null;
         }
-
         teleporting = false;
     }
 
     IEnumerator AttackDelay()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(3f);
     }
 
     protected void Defensive() 
@@ -113,42 +115,39 @@ public class TauntEnemy : Enemy
                 if (dist > tracking_distance + tracking_range)
                 {
                     teleport_direction = -1 * (transform.position - player.transform.position);
-                    Debug.Log("Teleporting Towards Player");
                     StartCoroutine(Teleport(tracking_teleport_strength));
                 } else if (dist < tracking_distance)
                 {
                     teleport_direction = (transform.position - player.transform.position);
-                    Debug.Log("Teleporting Away from Player");
                     StartCoroutine(Teleport(tracking_teleport_strength));
                 }
 
                 //StartCoroutine(AttackDelay());
-                int chanceToAttack = Random.Range(1, 100);
+                int chanceToAttack = Random.Range(1, 1000);
 
-                if (Input.GetButtonDown("Taunt") && (attack_cooldown <= 0))
+                if ((Input.GetButton("Taunt")) && (attackcd <= 0))
                 {
                     state = EnemyState.Startup;
-                }
-
-                if (boundary_fov.FindVisibleTargets().Count == 0)
-                {
-                    
+                    StartCoroutine(TeleportAttack());
                 }
                 break;
-    
             
-            case EnemyState.Startup:
-                teleport_direction = -1 * (transform.position - player.transform.position);
-                StartCoroutine(Teleport(attacking_teleport_strength));
-                state = EnemyState.Active;
-                break;
             case EnemyState.Active:
-                
-                
                 break;
         }
     }
 
+    IEnumerator TeleportAttack()
+    {
+        teleport_direction = -1 * (transform.position - player.transform.position);
+        yield return StartCoroutine(Teleport(attacking_teleport_strength));
+        timesTeleportCalled++;
+        yield return StartCoroutine(Attack(currentAttack));
+
+        yield return new WaitForSeconds(0.2f);
+        state = EnemyState.Tracking;
+        yield return null;
+    }
     public void FixedUpdate()
     {
         if (teleporting)
