@@ -140,6 +140,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8530116321950674702, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530116321950674702, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530116321950674702, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530116321950674702, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.13
       objectReference: {fileID: 0}
@@ -189,7 +201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8530116322961737113, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_LocalScale.x
-      value: 6.1674447
+      value: 6.9731984
       objectReference: {fileID: 0}
     - target: {fileID: 8530116322961737113, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_LocalScale.y
@@ -197,7 +209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8530116322961737113, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_LocalScale.z
-      value: 6.0618324
+      value: 6.8568263
       objectReference: {fileID: 0}
     - target: {fileID: 8530116322961737114, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_Name
@@ -258,13 +270,13 @@ MonoBehaviour:
   _moveSpeed: 0
   _maxAnger: 0
   _basicAttack: {fileID: 7965258084496849679}
-  _angyAttack: {fileID: 0}
+  _angyAttack: {fileID: 7965258084496849679}
   isAngy: 0
   state: 0
-  tracking_distance: 15
-  tracking_range: 10
+  tracking_distance: 12
+  tracking_range: 12
   tracking_teleport_strength: 1
-  attacking_teleport_strength: 30
+  attacking_teleport_strength: 1.75
   dist: 0
   teleport_time: 0.2
   teleporting: 0
@@ -289,9 +301,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5259a1c1f91ab924d8775b7a0a8a4c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startupTime: 1
-  _activeTime: 1
-  _recoveryTime: 0.1
+  _startupTime: 0.35
+  _activeTime: 0.75
+  _recoveryTime: 0.01
   _damage: 25
   _stunTime: 0
   _range: 0

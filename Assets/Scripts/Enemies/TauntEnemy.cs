@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -37,6 +38,7 @@ public class TauntEnemy : Enemy
         base.Start();
         GetEnemyStatus("TauntEnemy");
         teleporting = false;
+        attackcd = attack_cooldown;
     }
 
     protected void cooldown() 
@@ -90,10 +92,6 @@ public class TauntEnemy : Enemy
     // Update is called once per frame
     void Update()
     {
-        if (attackcd > 0)
-            attackcd -= Time.deltaTime;
-        
-        
         switch(state)
         {
             case EnemyState.Passive:
@@ -110,8 +108,15 @@ public class TauntEnemy : Enemy
                 }
                 break;
             case EnemyState.Tracking:
+                if (attackcd > 0)
+                    attackcd -= Time.deltaTime;
                 dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
 
+                var lookPos = player.transform.position- transform.position;
+                lookPos.y = 0;
+                var rotation = Quaternion.LookRotation(lookPos);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 10);
+                
                 if (dist > tracking_distance + tracking_range)
                 {
                     teleport_direction = -1 * (transform.position - player.transform.position);
@@ -121,11 +126,9 @@ public class TauntEnemy : Enemy
                     teleport_direction = (transform.position - player.transform.position);
                     StartCoroutine(Teleport(tracking_teleport_strength));
                 }
+                
 
-                //StartCoroutine(AttackDelay());
-                int chanceToAttack = Random.Range(1, 1000);
-
-                if ((Input.GetButton("Taunt")) && (attackcd <= 0))
+                if ((attackcd <= 0)) //For now, attacks are set. TODO: Chance this to random attacks.
                 {
                     state = EnemyState.Startup;
                     StartCoroutine(TeleportAttack());
@@ -141,9 +144,8 @@ public class TauntEnemy : Enemy
     {
         teleport_direction = -1 * (transform.position - player.transform.position);
         yield return StartCoroutine(Teleport(attacking_teleport_strength));
-        timesTeleportCalled++;
         yield return StartCoroutine(Attack(currentAttack));
-
+        attackcd = attack_cooldown;
         yield return new WaitForSeconds(0.2f);
         state = EnemyState.Tracking;
         yield return null;
@@ -152,7 +154,7 @@ public class TauntEnemy : Enemy
     {
         if (teleporting)
         {
-            transform.Translate(teleport_direction.normalized * current_teleport_strength);
+            transform.Translate(teleport_direction.normalized * current_teleport_strength, Space.World);
         }
     }
 }
