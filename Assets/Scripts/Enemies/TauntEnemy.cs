@@ -14,16 +14,16 @@ public enum TauntState
 
 public class TauntEnemy : Enemy
 {   
-    private float _teleportCooldown = 5.0f;
-    [SerializeField] private float tracking_distance = 10.0f;
-    [SerializeField] private float tracking_range = 3.0f;
-    [SerializeField] private float tracking_teleport_strength = 30.0f;//The distance the taunting enemy will keep between the player. 
-    [SerializeField] private float attacking_teleport_strength = 30.0f;//The distance the taunting enemy will cover to get close to the player.
+    private float _teleportCooldown;
+    [SerializeField] private float tracking_distance;
+    [SerializeField] private float tracking_range;
+    [SerializeField] private float tracking_teleport_strength;//The distance the taunting enemy will keep between the player. 
+    [SerializeField] private float attacking_teleport_strength;//The distance the taunting enemy will cover to get close to the player.
     [SerializeField] private float dist;
-    [SerializeField] private float teleport_time = 0.10f;
+    [SerializeField] private float teleport_time;
     [SerializeField] private bool teleporting;
-    [SerializeField] private FieldOfView boundary_fov;
     [SerializeField] private float attack_cooldown;
+    [SerializeField] private ParticleSystem DashParticle;
 
 
     public Vector3 teleport_direction;
@@ -63,7 +63,14 @@ public class TauntEnemy : Enemy
             yield return null;
         }
         teleporting = false;
+        DashParticle.Play();
+        StartCoroutine(WaitForSecondsAndStopParticles(0.2f, DashParticle));
     }
+    
+    private IEnumerator WaitForSecondsAndStopParticles(float seconds, ParticleSystem particles) {
+        yield return new WaitForSeconds(seconds);
+        particles.Stop();
+    } 
 
     IEnumerator AttackDelay()
     {
@@ -155,6 +162,6 @@ public class TauntEnemy : Enemy
         if (teleporting)
         {
             transform.Translate(teleport_direction.normalized * current_teleport_strength, Space.World);
-        }
+        } 
     }
 }

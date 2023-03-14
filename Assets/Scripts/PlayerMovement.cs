@@ -8,7 +8,7 @@ using UnityEngine;
 /// </summary>
 public class PlayerMovement : MonoBehaviour
 
-{    [SerializeField] private ParticleSystem DashParticle;
+{   [SerializeField] private ParticleSystem DashParticle;
     [SerializeField]
     public float dodgeRadius;
     [SerializeField]
@@ -99,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 StartCoroutine(Dash());
                  DashParticle.Play();
-                   StartCoroutine(WaitForSecondsAndStopParticles(0.1f, DashParticle));
+                 StartCoroutine(WaitForSecondsAndStopParticles(0.1f, DashParticle));
             }
 
             if (Input.GetButton("Taunt") && tauntCdTimer <= 0)

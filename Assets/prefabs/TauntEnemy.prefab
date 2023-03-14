@@ -107,6 +107,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fe142cabe1d5ef6498c826523caa79a8, type: 2}
+    - target: {fileID: 7110659447616012854, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7250673673251194673, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -141,15 +145,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8530116321950674702, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 8530116321950674702, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 8530116321950674702, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 8530116321950674702, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_LocalPosition.x
@@ -193,11 +197,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8530116321950674707, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: viewAngle
-      value: 20
+      value: 86
       objectReference: {fileID: 0}
     - target: {fileID: 8530116321950674707, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: viewRadius
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8530116322961737113, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_LocalScale.x
@@ -205,7 +209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8530116322961737113, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_LocalScale.y
-      value: -0.06707587
+      value: -0.97830725
       objectReference: {fileID: 0}
     - target: {fileID: 8530116322961737113, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_LocalScale.z
@@ -273,15 +277,15 @@ MonoBehaviour:
   _angyAttack: {fileID: 7965258084496849679}
   isAngy: 0
   state: 0
-  tracking_distance: 12
-  tracking_range: 12
-  tracking_teleport_strength: 1
-  attacking_teleport_strength: 1.75
+  tracking_distance: 6
+  tracking_range: 6
+  tracking_teleport_strength: 0.5
+  attacking_teleport_strength: 0.8
   dist: 0
   teleport_time: 0.2
   teleporting: 0
-  boundary_fov: {fileID: 0}
-  attack_cooldown: 0
+  attack_cooldown: 8
+  DashParticle: {fileID: 6653319639385915944}
   teleport_direction: {x: 0, y: 0, z: 0}
   attackcd: 0
 --- !u!1 &1471125628300632085 stripped
@@ -301,9 +305,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5259a1c1f91ab924d8775b7a0a8a4c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startupTime: 0.35
+  _startupTime: 0.4
   _activeTime: 0.75
   _recoveryTime: 0.01
   _damage: 25
   _stunTime: 0
   _range: 0
+--- !u!198 &6653319639385915944 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4494070817600710567, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+  m_PrefabInstance: {fileID: 7064867361109599631}
+  m_PrefabAsset: {fileID: 0}

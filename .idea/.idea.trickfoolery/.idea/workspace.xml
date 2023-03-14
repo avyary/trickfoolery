@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="625e54dd-d997-43d2-a428-3cc53cec4e4b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.trickfoolery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.trickfoolery/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/TauntEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/TauntEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/TauntEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/TauntEnemy.prefab" afterDir="false" />
-    </list>
+    <list default="true" id="625e54dd-d997-43d2-a428-3cc53cec4e4b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Attacks/TauntAttack.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -88,6 +81,7 @@
       <workItem from="1676851575155" duration="10128000" />
       <workItem from="1676923363981" duration="4594000" />
       <workItem from="1677691129328" duration="4971000" />
+      <workItem from="1678768923548" duration="2118000" />
     </task>
     <servers />
   </component>

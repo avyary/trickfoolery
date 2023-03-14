@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         _gameOverPanel = GameObject.Find("GameOverPanel");
         _gameOverText = _gameOverObj.GetComponent<TMP_Text>();
         _gameOverPanel.SetActive(false);
-        _pauseMenu.SetActive(false);
+        //_pauseMenu.SetActive(false);
         UnpauseGame();
     }
 
