@@ -86,7 +86,7 @@ Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
 #    then don't ignore Assets/Wwise/Editor/ProjectData.meta. If AkWwiseProjectData.asset is the only item in there,
 #    then, it's OK to ignore this file.
 # 
-# Assets/Wwise/Editor/ProjectData.meta
+Assets/Wwise/Editor/ProjectData.meta
 
 ## --------------- ##
 ## End WWise Stuff ##
