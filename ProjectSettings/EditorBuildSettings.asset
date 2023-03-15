@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/LVL1.unity
     guid: 4b28ae65d11f5ac4c8fcd186bec11659
   - enabled: 1
-    path: Assets/Scenes/LVL2.unity
+    path: Assets/Scenes/LVL4.unity
     guid: 04cbcf5319be6644e86ad30835ad617b
   m_configObjects: {}
