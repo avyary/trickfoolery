@@ -7,6 +7,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1591758634	Play_sfx_player_death			\Default Work Unit\Play_sfx_player_death	
 	1635721613	Play_sfx_bodacious			\Default Work Unit\Play_sfx_bodacious	
 	2343006462	Play_sfx_confirm			\Default Work Unit\Play_sfx_confirm	
+	3263497147	Play_mus_Trickfoolery_222bpm			\Default Work Unit\Play_mus_Trickfoolery_222bpm	
 	3476672187	Play_sfx_unpause			\Default Work Unit\Play_sfx_unpause	
 	3683043420	Play_sfx_pause			\Default Work Unit\Play_sfx_pause	
 	4077681152	Play_sfx_player_dash			\Default Work Unit\Play_sfx_player_dash	
@@ -25,6 +26,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	673051370	sfx_select	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_mouse_select_larose_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_select		352896
 	990288280	sfx_bodacious	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_bodacious_larose_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_bodacious		388268
 	1007579897	sfx_player_death	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_player_death_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_death		264696
+	1033023117	mus_trickfoolery_222bpm	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\mus_trickfoolery_fullloop_222bpm_1E4B5F4E.wem		\Actor-Mixer Hierarchy\Default Work Unit\mus_trickfoolery_222bpm		37380492
 	1066273250	sfx_pause	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_pause_larose_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_pause		352896
 	1070951602	sfx_player_hurt_1	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_player_hurt_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_hurt\sfx_player_hurt_1		176496
 

@@ -69,7 +69,7 @@ trickfoolery_WWiseProject/.cache/
 trickfoolery_WWiseProject/*.prof
 trickfoolery_WwiseProject/*_WwiseProject.*.validationcache
 trickfoolery_WwiseProject/*_WwiseProject.*.wsettings
-WwiseProject/**/*.akd
+trickfoolery_WwiseProject/**/*.akd
 
 # build stuff (unsure?)
 # Assets/Wwise/Deployment/Plugins/Windows/**/*.meta

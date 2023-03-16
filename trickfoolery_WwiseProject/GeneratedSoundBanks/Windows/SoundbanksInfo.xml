@@ -22,7 +22,7 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{DE84A4DC-8C51-1A3A-61D8-2CA38DE960C6}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{DD84B397-4479-8512-BE6B-DD9AC95E5264}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -78,6 +78,10 @@
 					<ShortName>sfx_player_death.wav</ShortName>
 					<CachePath>SFX/sfx_player_death_10C4C929.wem</CachePath>
 				</File>
+				<File Id="1033023117" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_trickfoolery_fullloop_222bpm.wav</ShortName>
+					<CachePath>SFX/mus_trickfoolery_fullloop_222bpm_1E4B5F4E.wem</CachePath>
+				</File>
 				<File Id="1066273250" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_pause_larose.wav</ShortName>
 					<CachePath>SFX/sfx_pause_larose_10C4C929.wem</CachePath>
@@ -88,6 +92,11 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="3263497147" Name="Play_mus_Trickfoolery_222bpm" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="1033023117"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1635721613" Name="Play_sfx_bodacious" DurationType="OneShot" DurationMin="2.2005215" DurationMax="2.2005215">
 					<MediaRefs>
 						<MediaRef Id="990288280"/>
@@ -150,5 +159,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{767C5314-DA3F-00C9-9FA1-A470EB059CEC}</FileHash>
+	<FileHash>{10046671-67FD-3D9A-78CF-DAF9AC81A14A}</FileHash>
 </SoundBanksInfo>

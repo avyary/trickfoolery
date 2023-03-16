@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_MUS_TRICKFOOLERY_222BPM = 3263497147U;
         static const AkUniqueID PLAY_SFX_BODACIOUS = 1635721613U;
         static const AkUniqueID PLAY_SFX_CHARGER_DEATH = 843029991U;
         static const AkUniqueID PLAY_SFX_CONFIRM = 2343006462U;
