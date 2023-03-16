@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public bool isPaused = false;
+    public bool isPaused = true;
     public bool showPauseMenu = false;
     
     public AK.Wwise.Event pauseSFX;
@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public TMP_Text _gameOverText;
     public GameObject _gameOverPanel;
     public GameObject _pauseMenu;
+    public GameObject battleStart;
 
     private bool isGameWon = false;
 
@@ -31,14 +32,23 @@ public class GameManager : MonoBehaviour
 
     public Collider spawnRange;
 
+    [SerializeField]
+    private int startDelay;
+
     void Start()
     {
         _gameOverObj = GameObject.Find("GameOverText");
         _pauseMenu = GameObject.Find("PauseMenu");
         _gameOverPanel = GameObject.Find("GameOverPanel");
+        battleStart = GameObject.Find("BattleStart");
         _gameOverText = _gameOverObj.GetComponent<TMP_Text>();
         _gameOverPanel.SetActive(false);
         _pauseMenu.SetActive(false);
+        StartGame();
+    }
+
+    void StartGame() {
+        battleStart.GetComponent<Animator>().SetTrigger("StartGame");
         UnpauseGame();
     }
 

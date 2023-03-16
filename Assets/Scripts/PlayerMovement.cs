@@ -99,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!gameManager.isPaused) {//not sure why this isn't working 
+        if (!gameManager.isPaused) {
             //Calculate Inputs for player movement
             _playerInputVertical = Input.GetAxisRaw("Vertical");
             _playerInputHorizontal = Input.GetAxisRaw("Horizontal");
@@ -115,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 StartCoroutine(Dash());
                  DashParticle.Play();
-                   StartCoroutine(WaitForSecondsAndStopParticles(0.1f, DashParticle));
+                 StartCoroutine(WaitForSecondsAndStopParticles(0.1f, DashParticle));
             }
 
             if (Input.GetButton("Taunt") && tauntCdTimer <= 0)
@@ -170,7 +170,7 @@ public class PlayerMovement : MonoBehaviour
             if (!gotHype && IsCloseDash())
             {
                 gotHype = true;
-                hypeManager.ChangeHype(hypeManager.DODGE_HYPE);
+                hypeManager.IncreaseHype(hypeManager.DODGE_HYPE);
             }
             yield return null;
         }
