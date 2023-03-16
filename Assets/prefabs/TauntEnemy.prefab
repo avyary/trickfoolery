@@ -75,6 +75,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fe142cabe1d5ef6498c826523caa79a8, type: 2}
+    - target: {fileID: 4494070817600710567, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: ColorModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4494070817600710567, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: TrailModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4494070817600710567, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.57
+      objectReference: {fileID: 0}
     - target: {fileID: 5084276796850980644, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -127,6 +139,26 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a861b9256b7385445aa9439d48c6d8a5, type: 2}
+    - target: {fileID: 7910497458645921712, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_Flip.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910497458645921712, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_Flip.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910497458645921712, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910497458645921712, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910497458645921712, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bd31b96c2f5a2e641af69bdaf1bcedf4, type: 2}
     - target: {fileID: 8038347840415633065, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -270,6 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9345db0c4a516f54896da797fc4a2b93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _AngyInd: {fileID: 0}
   _maxHealth: 0
   _moveSpeed: 0
   _maxAnger: 0
