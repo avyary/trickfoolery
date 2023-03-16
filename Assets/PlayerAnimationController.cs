@@ -32,10 +32,7 @@ public class PlayerAnimationController : MonoBehaviour
         {
             animator.Play(tomRunning.name);
         }
-        else if (Input.GetKeyDown(KeyCode.Space))
-        {
-            animator.Play(tomRolling.name);
-        }
+     
         else if (Input.GetKeyDown(KeyCode.F))
         {
             animator.Play(tomTaunt.name);
@@ -43,6 +40,14 @@ public class PlayerAnimationController : MonoBehaviour
         else if (!Input.anyKey)
         {
             animator.Play(tomIdle.name);
+        }   else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.Play(tomRolling.name);
         }
+        
+       
+        
+        
+     
     }
 }
