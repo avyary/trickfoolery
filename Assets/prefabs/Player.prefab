@@ -6325,17 +6325,17 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 08c43f316ee698b4187ec32ac0bf9138, type: 2}
   DashParticle: {fileID: 5340692112965935907}
-  dodgeRadius: 0
+  dodgeRadius: 1.18
   attackMask:
     serializedVersion: 2
-    m_Bits: 0
-  dashCdTimer: 0
+    m_Bits: 64
+  dashCdTimer: 0.5
   tauntCdTimer: 0
   health: 0
   isInvincible: 0
   gameManager: {fileID: 0}
   WALKSPEED: 5
-  DASHSPEED: 50
+  DASHSPEED: 30
   DASHTIME: 0.15
   DASHCD: 1
   TAUNTTIME: 1
