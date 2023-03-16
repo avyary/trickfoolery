@@ -29,7 +29,7 @@ public class MainMenuButtons : MonoBehaviour
         yield return new WaitForSeconds(Mathf.Max(0, loadDelay - 1.5f));
         GameObject.Find("FadeInOut").GetComponent<Animator>().SetTrigger("FadeOut");
         yield return new WaitForSeconds(1.5f);
-        AkSoundEngine.StopAll();
+        //AkSoundEngine.StopAll();
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 

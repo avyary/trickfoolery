@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject _gameOverObj;
     public TMP_Text _gameOverText;
+    public GameObject _gameOverPrompt;
+    public TMP_Text _gameOverPromptText;
     public GameObject _gameOverPanel;
     public GameObject _pauseMenu;
     public GameObject battleStart;
@@ -37,16 +39,19 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _gameOverObj = GameObject.Find("GameOverText");
+        _gameOverPrompt = GameObject.Find("GameOverPrompt");
         _pauseMenu = GameObject.Find("PauseMenu");
         _gameOverPanel = GameObject.Find("GameOverPanel");
         battleStart = GameObject.Find("BattleStart");
         _gameOverText = _gameOverObj.GetComponent<TMP_Text>();
+        _gameOverPromptText = _gameOverPrompt.GetComponent<TMP_Text>();
         _gameOverPanel.SetActive(false);
         _pauseMenu.SetActive(false);
         StartCoroutine(StartCombat());
     }
 
     IEnumerator StartCombat() {
+        Time.timeScale = 1;
         yield return new WaitForSeconds(1f);
         StartGame();
     }
@@ -140,6 +145,7 @@ public class GameManager : MonoBehaviour
         isGameOver = true;
         PauseGame();
         _gameOverText.text = "Hype Meter Filled!";
+        _gameOverPromptText.text = "Press [Return] to continue";
         _gameOverPanel.SetActive(true);
         isGameWon = true;
     }
@@ -149,6 +155,7 @@ public class GameManager : MonoBehaviour
         isGameOver = true;
         PauseGame();
         _gameOverText.text = "You Died!";
+        _gameOverPromptText.text = "Press [Return] to try again";
         _gameOverPanel.SetActive(true);
     }
 

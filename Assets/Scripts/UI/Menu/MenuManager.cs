@@ -23,6 +23,7 @@ public class MenuManager : MonoBehaviour
         isChanging = false;
         numButtons = transform.childCount;
         pauseMUS.Post(gameObject);
+        Time.timeScale = 1;
         StartCoroutine(HandleButtonChange(true));
     }
 
