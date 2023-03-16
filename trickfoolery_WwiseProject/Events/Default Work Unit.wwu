@@ -93,17 +93,10 @@
 				</Event>
 				<Event Name="Play_mus_Trickfoolery_222bpm" ID="{957ED87C-54CD-4A6B-878A-25F81372D716}">
 					<ChildrenList>
-						<Action Name="" ID="{E1813350-BFDE-4B76-B2D9-55409432C04B}" ShortID="327216332">
+						<Action Name="" ID="{4AE96F1E-6019-4AF0-BA34-5D9B37AA9E09}" ShortID="255334294">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="mus_Trickfoolery_nonloop_222bpm" ID="{01676925-AE0C-4A62-8403-5694ABFC14DD}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{5F2A5B68-72B2-4604-8C51-C31FE24A9C8F}" ShortID="974393321">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="mus_Trickfoolery_loop_222bpm" ID="{A2184CCC-267B-4A65-AE02-4D6F87941C15}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+									<ObjectRef Name="mus_trickfoolery_222bpm" ID="{B37367AF-76B6-4A5F-9DCF-A99818A4C5D4}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

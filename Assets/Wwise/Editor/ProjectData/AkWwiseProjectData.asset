@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 143fe34c57c18247b1481371fe791e53
     GuidInternal: 
-    m_lastTime: -8585230533812299481
+    m_lastTime: -8585236513588902067
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: e6e299758791d448b473552cd8168460
     GuidInternal: 
-    m_lastTime: -8585230487552096547
+    m_lastTime: -8585226696253841600
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: ef7e3c329da03f45bc42f96cf0be92c3
     GuidInternal: 
-    m_lastTime: -8585230485708990315
+    m_lastTime: -8585226645984176435
     List:
     - name: Main
       guid: 9cfcf87262c169459bda11ab8821d171
@@ -94,8 +94,42 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a7205d29a3697241bf5ebf00e33887a1
     GuidInternal: 
-    m_lastTime: -8585230486494626208
+    m_lastTime: -8585226645733365053
     List:
+    - name: Play_mus_Trickfoolery_222bpm
+      guid: 7cd87e95cd546b4a878a25f81372d716
+      id: 3263497147
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a7205d29a3697241bf5ebf00e33887a1
+      - ElementName: Play_mus_Trickfoolery_222bpm
+        ObjectType: 3
+        guid: 7cd87e95cd546b4a878a25f81372d716
+      Path: Events\Default Work Unit\Play_mus_Trickfoolery_222bpm
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_sfx_bodacious
+      guid: 8e9a21e05fa4cc4fa81ec861e1ff431b
+      id: 1635721613
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a7205d29a3697241bf5ebf00e33887a1
+      - ElementName: Play_sfx_bodacious
+        ObjectType: 3
+        guid: 8e9a21e05fa4cc4fa81ec861e1ff431b
+      Path: Events\Default Work Unit\Play_sfx_bodacious
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_sfx_charger_death
       guid: 43483863a4a4c344aed29cda3a9431a5
       id: 843029991
@@ -127,6 +161,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 02c6f36988d00247a2c078d74e58adf3
       Path: Events\Default Work Unit\Play_sfx_confirm
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_sfx_groovy
+      guid: 3c86b87f7c98964fa52314ba0486137b
+      id: 526466336
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a7205d29a3697241bf5ebf00e33887a1
+      - ElementName: Play_sfx_groovy
+        ObjectType: 3
+        guid: 3c86b87f7c98964fa52314ba0486137b
+      Path: Events\Default Work Unit\Play_sfx_groovy
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -198,6 +249,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_sfx_radical
+      guid: eaa51919d583f24a985fa98aa5cea51d
+      id: 598351696
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a7205d29a3697241bf5ebf00e33887a1
+      - ElementName: Play_sfx_radical
+        ObjectType: 3
+        guid: eaa51919d583f24a985fa98aa5cea51d
+      Path: Events\Default Work Unit\Play_sfx_radical
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_sfx_select
       guid: 930348d9f00f7844941ec2f83a21c8bd
       id: 325086926
@@ -244,7 +312,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 892490710cf8ef4db7ac12c89f1cdd54
     GuidInternal: 
-    m_lastTime: -8585230533813069474
+    m_lastTime: -8585236513589042100
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -258,7 +326,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 2342ccbf0aa9c04f9192554bce3163ed
     GuidInternal: 
-    m_lastTime: -8585230533812309487
+    m_lastTime: -8585236513588912069
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -272,7 +340,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 703b9a431f11b54492eb565cd920d6e2
     GuidInternal: 
-    m_lastTime: -8585230533812309487
+    m_lastTime: -8585236513588912069
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -286,10 +354,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 33c9e3b26a54984c8c894d99c93645b1
     GuidInternal: 
-    m_lastTime: -8585230533812299481
+    m_lastTime: -8585236513588902067
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 01000000020000000300000005000000060000001100000012000000
+  ExpandedWaapiItemIds: 010000000500000006000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

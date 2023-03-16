@@ -8,10 +8,18 @@ public class MainMenuButtons : MonoBehaviour
     public AK.Wwise.Event confirmSFX;
     [SerializeField]
     private string sceneName;
+    public AK.Wwise.Event pauseMus;
 
-    public void LoadLevel() {
+    void Start()
+    {
+        pauseMus.Post(gameObject);
+    } 
+
+        public void LoadLevel() {
         confirmSFX.Post(gameObject);
         StartCoroutine(DelayLoad());
+        pauseMus.Stop(gameObject);
+        pauseMus.Stop(gameObject);
     }
 
     private IEnumerator DelayLoad()

@@ -1967,6 +1967,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
+  pauseMUS:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   changeCooldown: 0
 --- !u!1 &735361540
 GameObject:
@@ -2725,6 +2729,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 97dd7c7403420934cbb20b802724a9ad, type: 2}
+  pauseMUS:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bae2a58fb2d3ce04b83af8520f2c3155, type: 2}
   changeCooldown: 0.3
 --- !u!114 &1035075211
 MonoBehaviour:
@@ -3088,6 +3096,10 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 63ffcfb2060543a46bc2fec91df54e64, type: 2}
   sceneName: 
+  pauseMus:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &1397446659
 GameObject:
   m_ObjectHideFlags: 0
@@ -3244,6 +3256,10 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 63ffcfb2060543a46bc2fec91df54e64, type: 2}
   sceneName: AlphaEnvironmentMar1 1
+  pauseMus:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bae2a58fb2d3ce04b83af8520f2c3155, type: 2}
 --- !u!114 &1397446666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3328,11 +3344,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1397446659}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4649440e13bc49ae8c2a0f5df98fd3f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d35d17f1ea614202b165015a99ee324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0
+  triggerList: 
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bae2a58fb2d3ce04b83af8520f2c3155, type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
 --- !u!1 &1476145283
 GameObject:
   m_ObjectHideFlags: 0
@@ -4511,6 +4542,10 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 63ffcfb2060543a46bc2fec91df54e64, type: 2}
   sceneName: Level2
+  pauseMus:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bae2a58fb2d3ce04b83af8520f2c3155, type: 2}
 --- !u!114 &1985115488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4523,7 +4558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a024f4daab4fd48b9aec34fb7e7acfaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
+  triggerList: 
   useOtherObject: 0
   data:
     idInternal: 0
@@ -4595,11 +4630,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1985115481}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4649440e13bc49ae8c2a0f5df98fd3f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d35d17f1ea614202b165015a99ee324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0
+  triggerList: 
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 1
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bae2a58fb2d3ce04b83af8520f2c3155, type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
 --- !u!1 &2013131074
 GameObject:
   m_ObjectHideFlags: 0
