@@ -16,9 +16,9 @@ public class ShockwaveCreator : MonoBehaviour
     {
         if (BasicShockwaveAttack.instantiateShockwave)
         {
-            Debug.Log("Shockwave create 1");
+            // Debug.Log("Shockwave create 1");
             createShockwave();
-            Debug.Log("Shockwave create 2");
+            // Debug.Log("Shockwave create 2");
             BasicShockwaveAttack.instantiateShockwave = false;
         }
     }

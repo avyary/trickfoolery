@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour
 
     private bool isGameWon = false;
 
-
     public GameObject[] enemies;
     [SerializeField]
     private int minEnemyNumber;
@@ -44,6 +43,11 @@ public class GameManager : MonoBehaviour
         _gameOverText = _gameOverObj.GetComponent<TMP_Text>();
         _gameOverPanel.SetActive(false);
         _pauseMenu.SetActive(false);
+        StartCoroutine(StartCombat());
+    }
+
+    IEnumerator StartCombat() {
+        yield return new WaitForSeconds(1f);
         StartGame();
     }
 
