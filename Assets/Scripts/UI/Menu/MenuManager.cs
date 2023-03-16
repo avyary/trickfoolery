@@ -12,6 +12,7 @@ public class MenuManager : MonoBehaviour
     private int currentIdx;
     private int numButtons;
     private bool isChanging;
+    public bool buttonSelected = false;
 
     [SerializeField]
     public float changeCooldown;
@@ -21,24 +22,27 @@ public class MenuManager : MonoBehaviour
         currentIdx = 0;
         isChanging = false;
         numButtons = transform.childCount;
-        StartCoroutine(HandleButtonChange());
+        pauseMUS.Post(gameObject);
+        StartCoroutine(HandleButtonChange(true));
     }
 
     void Update()
     {
-        if (!isChanging) {
+        if (!buttonSelected && !isChanging) {
             if (Input.GetAxisRaw("Vertical") > 0)  // up
             {
-                if (currentIdx > 0) {
-                    currentIdx -= 1;
+                if (currentIdx == 0) {
+                    return;
                 }
+                currentIdx -= 1;
                 StartCoroutine(HandleButtonChange());
             }
             else if (Input.GetAxisRaw("Vertical") < 0)  // down
             {
-                if (currentIdx < numButtons - 1) {
-                    currentIdx += 1;
+                if (currentIdx == numButtons - 1) {
+                    return;
                 }
+                currentIdx += 1;
                 StartCoroutine(HandleButtonChange());
             }
         }
@@ -46,12 +50,11 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    IEnumerator HandleButtonChange(int? idx = null){
-        if (idx == null) {
-            idx = currentIdx;
+    IEnumerator HandleButtonChange(bool silent = false){
+        Transform newSelect = transform.GetChild(currentIdx);
+        if (!silent) {
+            selectSFX.Post(gameObject); 
         }
-        Transform newSelect = transform.GetChild((int) idx);
-        selectSFX.Post(gameObject); 
         newSelect.gameObject.GetComponent<Button>().Select();
         isChanging = true;
         yield return new WaitForSeconds(changeCooldown);

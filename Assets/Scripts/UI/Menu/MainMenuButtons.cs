@@ -8,23 +8,28 @@ public class MainMenuButtons : MonoBehaviour
     public AK.Wwise.Event confirmSFX;
     [SerializeField]
     private string sceneName;
-    public AK.Wwise.Event pauseMus;
+    [SerializeField]
+    private float loadDelay;
+
+    private MenuManager menuManager;
 
     void Start()
     {
-        pauseMus.Post(gameObject);
-    } 
+        menuManager = GameObject.Find("Buttons").GetComponent<MenuManager>();
+    }
 
-        public void LoadLevel() {
+    public void LoadLevel() {
+        menuManager.buttonSelected = true;
         confirmSFX.Post(gameObject);
         StartCoroutine(DelayLoad());
-        pauseMus.Stop(gameObject);
-        pauseMus.Stop(gameObject);
     }
 
     private IEnumerator DelayLoad()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(Mathf.Max(0, loadDelay - 1.5f));
+        GameObject.Find("FadeInOut").GetComponent<Animator>().SetTrigger("FadeOut");
+        yield return new WaitForSeconds(1.5f);
+        AkSoundEngine.StopAll();
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 
