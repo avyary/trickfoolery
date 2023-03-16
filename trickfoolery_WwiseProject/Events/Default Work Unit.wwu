@@ -91,6 +91,57 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_mus_Trickfoolery_222bpm" ID="{957ED87C-54CD-4A6B-878A-25F81372D716}">
+					<ChildrenList>
+						<Action Name="" ID="{E1813350-BFDE-4B76-B2D9-55409432C04B}" ShortID="327216332">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mus_Trickfoolery_nonloop_222bpm" ID="{01676925-AE0C-4A62-8403-5694ABFC14DD}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5F2A5B68-72B2-4604-8C51-C31FE24A9C8F}" ShortID="974393321">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mus_Trickfoolery_loop_222bpm" ID="{A2184CCC-267B-4A65-AE02-4D6F87941C15}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_groovy" ID="{7FB8863C-987C-4F96-A523-14BA0486137B}">
+					<ChildrenList>
+						<Action Name="" ID="{366030EB-C315-4F4C-B962-358D913860A6}" ShortID="979910823">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_groovy" ID="{E31E9341-A727-40D7-804B-47D9AFA325C0}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_bodacious" ID="{E0219A8E-A45F-4FCC-A81E-C861E1FF431B}">
+					<ChildrenList>
+						<Action Name="" ID="{01AAE687-F170-4FDE-B72A-38BD82A344BE}" ShortID="411300101">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_bodacious" ID="{5E753582-48CA-4076-B866-92F48C3DE078}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_radical" ID="{1919A5EA-83D5-4AF2-985F-A98AA5CEA51D}">
+					<ChildrenList>
+						<Action Name="" ID="{5D477147-7531-4BFA-8D50-A0A1DA44A633}" ShortID="401759640">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_radical" ID="{5BDBA9EE-EA72-4061-BCB3-E1640C72C496}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

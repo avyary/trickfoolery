@@ -22,13 +22,17 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{39CB104E-A376-F079-9B8F-96AD04A36019}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{DE84A4DC-8C51-1A3A-61D8-2CA38DE960C6}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
 				<File Id="275378158" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_charger_death_1.wav</ShortName>
 					<CachePath>SFX/sfx_charger_death_1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="375178555" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_groovy_2_larose.wav</ShortName>
+					<CachePath>SFX/sfx_groovy_2_larose_10C4C929.wem</CachePath>
 				</File>
 				<File Id="395767410" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_unpause_larose (1).wav</ShortName>
@@ -58,9 +62,17 @@
 					<ShortName>sfx_confirming_option_larose.wav</ShortName>
 					<CachePath>SFX/sfx_confirming_option_larose_10C4C929.wem</CachePath>
 				</File>
+				<File Id="648094548" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_radical_larose.wav</ShortName>
+					<CachePath>SFX/sfx_radical_larose_10C4C929.wem</CachePath>
+				</File>
 				<File Id="673051370" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_mouse_select_larose.wav</ShortName>
 					<CachePath>SFX/sfx_mouse_select_larose_10C4C929.wem</CachePath>
+				</File>
+				<File Id="990288280" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_bodacious_larose.wav</ShortName>
+					<CachePath>SFX/sfx_bodacious_larose_10C4C929.wem</CachePath>
 				</File>
 				<File Id="1007579897" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_death.wav</ShortName>
@@ -76,33 +88,43 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="843029991" Name="Play_sfx_charger_death">
+				<Event Id="1635721613" Name="Play_sfx_bodacious" DurationType="OneShot" DurationMin="2.2005215" DurationMax="2.2005215">
+					<MediaRefs>
+						<MediaRef Id="990288280"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="843029991" Name="Play_sfx_charger_death" DurationType="OneShot" DurationMin="1.5" DurationMax="2">
 					<MediaRefs>
 						<MediaRef Id="275378158"/>
 						<MediaRef Id="507762272"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2343006462" Name="Play_sfx_confirm">
+				<Event Id="2343006462" Name="Play_sfx_confirm" DurationType="OneShot" DurationMin="4.5" DurationMax="4.5">
 					<MediaRefs>
 						<MediaRef Id="621091837"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3683043420" Name="Play_sfx_pause">
+				<Event Id="526466336" Name="Play_sfx_groovy" DurationType="OneShot" DurationMin="2" DurationMax="2">
+					<MediaRefs>
+						<MediaRef Id="375178555"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3683043420" Name="Play_sfx_pause" DurationType="OneShot" DurationMin="2" DurationMax="2">
 					<MediaRefs>
 						<MediaRef Id="1066273250"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4077681152" Name="Play_sfx_player_dash">
+				<Event Id="4077681152" Name="Play_sfx_player_dash" DurationType="OneShot" DurationMin="0.37457678" DurationMax="0.6674199">
 					<MediaRefs>
 						<MediaRef Id="429033431"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1591758634" Name="Play_sfx_player_death">
+				<Event Id="1591758634" Name="Play_sfx_player_death" DurationType="OneShot" DurationMin="1.5" DurationMax="1.5">
 					<MediaRefs>
 						<MediaRef Id="1007579897"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1067524079" Name="Play_sfx_player_hurt">
+				<Event Id="1067524079" Name="Play_sfx_player_hurt" DurationType="OneShot" DurationMin="1" DurationMax="1">
 					<MediaRefs>
 						<MediaRef Id="403074574"/>
 						<MediaRef Id="405788637"/>
@@ -110,12 +132,17 @@
 						<MediaRef Id="1070951602"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="325086926" Name="Play_sfx_select">
+				<Event Id="598351696" Name="Play_sfx_radical" DurationType="OneShot" DurationMin="2.5" DurationMax="2.5">
+					<MediaRefs>
+						<MediaRef Id="648094548"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="325086926" Name="Play_sfx_select" DurationType="OneShot" DurationMin="1.8866584" DurationMax="2.1497467">
 					<MediaRefs>
 						<MediaRef Id="673051370"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3476672187" Name="Play_sfx_unpause">
+				<Event Id="3476672187" Name="Play_sfx_unpause" DurationType="OneShot" DurationMin="2" DurationMax="2">
 					<MediaRefs>
 						<MediaRef Id="395767410"/>
 					</MediaRefs>
@@ -123,5 +150,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D87DF54C-5356-122A-B903-429BD10DBAC2}</FileHash>
+	<FileHash>{6BED5F36-4C14-DB89-83C4-D56875A52D19}</FileHash>
 </SoundBanksInfo>

@@ -383,6 +383,128 @@
 						<ActiveSource Name="sfx_confirming_option_larose" ID="{061A0763-BA94-4347-8A62-CB2355CC5780}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Folder Name="Music" ID="{2266C578-7E72-46E7-AD53-F110478EACF7}" ShortID="509464636">
+					<ChildrenList>
+						<Sound Name="mus_Trickfoolery_nonloop_222bpm" ID="{01676925-AE0C-4A62-8403-5694ABFC14DD}" ShortID="38989946">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="mus_Trickfoolery_nonloop_222bpm" ID="{4A6D740E-3B59-4DBC-9913-8A2A76C3C2DC}">
+									<Language>SFX</Language>
+									<AudioFile>mus_Trickfoolery_nonloop_222bpm.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="992300998"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="mus_Trickfoolery_nonloop_222bpm" ID="{4A6D740E-3B59-4DBC-9913-8A2A76C3C2DC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="mus_Trickfoolery_loop_222bpm" ID="{A2184CCC-267B-4A65-AE02-4D6F87941C15}" ShortID="80533322">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="mus_Trickfoolery_loop_222bpm" ID="{6CB59149-719F-486E-A713-9F21C748AC59}">
+									<Language>SFX</Language>
+									<AudioFile>mus_Trickfoolery_loop_222bpm.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="202688360"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="mus_Trickfoolery_loop_222bpm" ID="{6CB59149-719F-486E-A713-9F21C748AC59}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Sound Name="sfx_groovy" ID="{E31E9341-A727-40D7-804B-47D9AFA325C0}" ShortID="534221158">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="sfx_groovy_2_larose" ID="{96D6406E-D752-46B2-AE41-275F4A601772}">
+							<Language>SFX</Language>
+							<AudioFile>sfx_groovy_2_larose.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="375178555"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="sfx_groovy_2_larose" ID="{96D6406E-D752-46B2-AE41-275F4A601772}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="sfx_radical" ID="{5BDBA9EE-EA72-4061-BCB3-E1640C72C496}" ShortID="967868695">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="sfx_radical_larose" ID="{B8D07EC3-62BB-40AA-9264-4FC69573DF0F}">
+							<Language>SFX</Language>
+							<AudioFile>sfx_radical_larose.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="648094548"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="sfx_radical_larose" ID="{B8D07EC3-62BB-40AA-9264-4FC69573DF0F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="sfx_bodacious" ID="{5E753582-48CA-4076-B866-92F48C3DE078}" ShortID="737907938">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="sfx_bodacious_larose" ID="{2B9E8679-41E1-407D-958B-E70FBF5AF737}">
+							<Language>SFX</Language>
+							<AudioFile>sfx_bodacious_larose.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="990288280"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="sfx_bodacious_larose" ID="{2B9E8679-41E1-407D-958B-E70FBF5AF737}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
