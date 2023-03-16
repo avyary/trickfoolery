@@ -5823,7 +5823,7 @@ MonoBehaviour:
   animator: {fileID: 8894779949507656145}
   tomRunning: {fileID: 7400000, guid: fda160986c2f05941aa3d8519145ec88, type: 2}
   tomRolling: {fileID: 7400000, guid: f812afb52fc90224dad2c4b2ede598ea, type: 2}
-  tomTaunt: {fileID: 7400000, guid: e27b81bde5a159f41a36b6f0e4a7ba1c, type: 2}
+  tomTaunt: {fileID: 7400000, guid: 9ec426cadff27af42972b220f9db3863, type: 2}
   tomIdle: {fileID: 7400000, guid: e27b81bde5a159f41a36b6f0e4a7ba1c, type: 2}
 --- !u!1 &6404197257975361587
 GameObject:
