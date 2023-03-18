@@ -4,9 +4,17 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+
+public enum GameState {
+    PreCombat,
+    Combat,
+    PostCombat
+}
 
 public class GameManager : MonoBehaviour
 {
+    public GameState state = GameState.PreCombat;
     public bool isPaused = true;
     public bool showPauseMenu = false;
     
@@ -18,8 +26,7 @@ public class GameManager : MonoBehaviour
     public GameObject _gameOverPrompt;
     public TMP_Text _gameOverPromptText;
     public GameObject _gameOverPanel;
-    public GameObject _pauseMenu;
-    public GameObject battleStart;
+    public UIManager uiManager;
 
     private bool isGameWon = false;
 
@@ -34,31 +41,38 @@ public class GameManager : MonoBehaviour
     public Collider spawnRange;
 
     [SerializeField]
+    UnityEvent preCombat;
+
+    [SerializeField]
     private int startDelay;
 
     void Start()
     {
+        Time.timeScale = 0;
+        if (preCombat == null)
+            preCombat = new UnityEvent();
+
+        uiManager = gameObject.GetComponent<UIManager>();
+
         _gameOverObj = GameObject.Find("GameOverText");
         _gameOverPrompt = GameObject.Find("GameOverPrompt");
-        _pauseMenu = GameObject.Find("PauseMenu");
         _gameOverPanel = GameObject.Find("GameOverPanel");
-        battleStart = GameObject.Find("BattleStart");
         _gameOverText = _gameOverObj.GetComponent<TMP_Text>();
         _gameOverPromptText = _gameOverPrompt.GetComponent<TMP_Text>();
         _gameOverPanel.SetActive(false);
-        _pauseMenu.SetActive(false);
-        StartCoroutine(StartCombat());
+
+        StartCoroutine(StartLevel());
     }
 
-    IEnumerator StartCombat() {
+    IEnumerator StartLevel() {
+        yield return new WaitForSecondsRealtime(1f);
+        preCombat.Invoke();
+        StartCoroutine(uiManager.StartCombat());
+    }
+
+    public void StartCombat() {
         Time.timeScale = 1;
-        yield return new WaitForSeconds(1f);
-        StartGame();
-    }
-
-    void StartGame() {
-        battleStart.GetComponent<Animator>().SetTrigger("StartGame");
-        UnpauseGame();
+        state = GameState.Combat;
     }
 
     void Update()
@@ -115,17 +129,17 @@ public class GameManager : MonoBehaviour
 
     void ShowPauseMenu() {
         showPauseMenu = true;
+        uiManager.ShowPauseMenu();
         PauseGame();
-        _pauseMenu.SetActive(true);
     }
 
     void HidePauseMenu() {
         showPauseMenu = false;
+        uiManager.HidePauseMenu();
         unpSFX.Post(gameObject);
         if (!isGameOver) {
             UnpauseGame();
         }
-        _pauseMenu.SetActive(false);
     }
 
     void PauseGame()

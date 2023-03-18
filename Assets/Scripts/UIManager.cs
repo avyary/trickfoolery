@@ -15,11 +15,17 @@ public class UIManager : MonoBehaviour
     public int[] heartChunks;
 
     public int health;
+
+    public GameObject jumbotron;
+    public GameObject jumbotronImg;
+    public GameObject battleStart;
     
-    
-    // Start is called before the first frame update
     void Start()
     {
+        jumbotron = GameObject.Find("Jumbotron");
+        jumbotronImg = GameObject.Find("Image");
+        battleStart = GameObject.Find("BattleStart");
+
         player = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
         numberOfHearts = hearts.Length;
         health =  Convert.ToInt32(player.MAX_HEALTH);
@@ -36,12 +42,24 @@ public class UIManager : MonoBehaviour
                 heartChunks[i]++;
             }
         }
-        
-        
-        
     }
 
-    // Update is called once per frame
+    public IEnumerator StartCombat() {
+        battleStart.GetComponent<Animator>().SetTrigger("StartGame");
+        yield return new WaitForSecondsRealtime(0.4f);
+        jumbotron.GetComponent<Animator>().SetTrigger("StartCombat");
+    }
+
+    public void ShowPauseMenu() {
+        jumbotron.GetComponent<Animator>().SetTrigger("OpenPause");
+        jumbotronImg.GetComponent<Animator>().SetTrigger("ToCenter");
+    }
+
+    public void HidePauseMenu() {
+        jumbotron.GetComponent<Animator>().SetTrigger("ClosePause");
+        jumbotronImg.GetComponent<Animator>().SetTrigger("ToBottom");
+    }
+
     void Update()
     {
         health = Convert.ToInt32(player.health);

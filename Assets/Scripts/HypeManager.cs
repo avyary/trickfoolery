@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class HypeManager : MonoBehaviour
 {
     [SerializeField]
     private float hypeGoal;
     [SerializeField]
-    private GameObject hypeUI;
+    private GameObject _hypeBar;
+
+    private Slider hypeBar;
 
     private float currentHype = 0;
 
@@ -34,8 +37,11 @@ public class HypeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UpdateHype(0f);
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        hypeBar = _hypeBar.GetComponent<Slider>();
+        hypeBar.maxValue = hypeGoal;
+        hypeBar.value = 0;
+        UpdateHype(0f);
     }
 
     public void IncreaseHype(float hypeDiff)
@@ -45,14 +51,13 @@ public class HypeManager : MonoBehaviour
             hypePopups[hypePopupLevel++].GetComponent<Animator>().SetTrigger("ShowPopup");
             StartCoroutine(StackHype());
         }
-        print(hypePopupLevel);
         UpdateHype(currentHype + hypeDiff);
     }
 
     public void UpdateHype(float newHypeVal)
     {
         currentHype = Mathf.Min(newHypeVal, hypeGoal);
-        hypeUI.GetComponent<TextMeshProUGUI>().text = System.String.Format("Hype: {0}/{1}", currentHype.ToString(), hypeGoal.ToString());
+        hypeBar.value = currentHype;
 
         if (currentHype >= hypeGoal)
         {
@@ -63,5 +68,9 @@ public class HypeManager : MonoBehaviour
     IEnumerator StackHype() {
         yield return new WaitForSeconds(hypeStackTime);
         hypePopupLevel--;
+    }
+    
+    public void testttt() {
+        print("wuh");
     }
 }

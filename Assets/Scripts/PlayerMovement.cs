@@ -99,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!gameManager.isPaused) {
+        if (gameManager.state == GameState.Combat) {
             //Calculate Inputs for player movement
             _playerInputVertical = Input.GetAxisRaw("Vertical");
             _playerInputHorizontal = Input.GetAxisRaw("Horizontal");
@@ -135,10 +135,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (state == AbilityState.walking) 
-            _movementController.Move(_movementDirection * WALKSPEED * Time.deltaTime);
-        if (state == AbilityState.dashing)
-            _movementController.Move(transform.forward * DASHSPEED * Time.deltaTime);
+        if (gameManager.state == GameState.Combat) {
+            if (state == AbilityState.walking) 
+                _movementController.Move(_movementDirection * WALKSPEED * Time.deltaTime);
+            if (state == AbilityState.dashing)
+                _movementController.Move(transform.forward * DASHSPEED * Time.deltaTime);
+        }
     }
 
     IEnumerator Dash()
@@ -158,7 +160,6 @@ public class PlayerMovement : MonoBehaviour
         state = AbilityState.walking;
 
         dashSFX.Post(gameObject);
-
     }
 
 
@@ -231,10 +232,15 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             playerHurtSFX.Post(gameObject);
-            StartCoroutine(attacker.GetHitPaused(0.5f));
-            StartCoroutine(ChangeMaterial(damageMat, damageFlashTime));
+            StartCoroutine(GetStunned());
             StartCoroutine(InvincibilityFrames(1f));
         }
+    }
+
+    IEnumerator GetStunned() {
+        state = AbilityState.damage;
+        yield return new WaitForSeconds(0.3f);
+        state = AbilityState.walking;
     }
 
     IEnumerator Die()
