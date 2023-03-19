@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
     public AK.Wwise.Event dashSFX;
     public AK.Wwise.Event playerDeathSFX;
     public AK.Wwise.Event playerHurtSFX;
-    
 
     [SerializeField] private ParticleSystem DashParticle;
     [SerializeField]
@@ -28,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
     private float _playerInputVertical;
     private float _playerInputHorizontal;
     private Vector3 _movementDirection;
-    
     
     private float speedChangeFactor = 50f;
     public float dashCdTimer = 0; //for debugging
@@ -49,6 +47,11 @@ public class PlayerMovement : MonoBehaviour
     private Material damageMat;
     private Material tauntMat;
     private Material originalMat;
+
+    // movement direction calculation
+    private GameObject camera;
+    private Vector3 camForward;
+    private Vector3 camRight;
 
     //Speed of different player abilities
     [SerializeField]
@@ -96,6 +99,14 @@ public class PlayerMovement : MonoBehaviour
         damageMat = Resources.Load("DamageColor", typeof(Material)) as Material;
         tauntMat = Resources.Load("TauntColor", typeof(Material)) as Material;
         originalMat = GetComponent<MeshRenderer>().material;
+
+        camera = GameObject.FindWithTag("MainCamera");
+        camForward = camera.transform.forward;
+        camForward.y = 0f;
+        camForward.Normalize();
+        camRight = camera.transform.right;
+        camRight.y = 0f;
+        camRight.Normalize();
     }
 
     // Update is called once per frame
@@ -105,7 +116,7 @@ public class PlayerMovement : MonoBehaviour
             //Calculate Inputs for player movement
             _playerInputVertical = Input.GetAxisRaw("Vertical");
             _playerInputHorizontal = Input.GetAxisRaw("Horizontal");
-            _movementDirection = new Vector3(_playerInputHorizontal, 0, _playerInputVertical);
+            _movementDirection = camForward * _playerInputVertical + camRight * _playerInputHorizontal;
             _movementDirection.Normalize();
 
             if (_movementDirection != Vector3.zero && state == AbilityState.walking)
