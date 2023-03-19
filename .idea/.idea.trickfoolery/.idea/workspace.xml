@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="625e54dd-d997-43d2-a428-3cc53cec4e4b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/Shockwave.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/ShockwaveCreator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/prefabs/Shockwave.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.trickfoolery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.trickfoolery/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attacks/AngryShockwaveAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AngryShockwaveAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attacks/BasicShockwaveAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/BasicShockwaveAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/ShockwaveEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/ShockwaveEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" afterDir="false" />
-    </list>
+    <list default="true" id="625e54dd-d997-43d2-a428-3cc53cec4e4b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

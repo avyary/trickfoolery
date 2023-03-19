@@ -59,13 +59,12 @@ namespace Attacks
             Debug.Log("Shockwave basic attack update");
             
             // Initialize the shockwave object. 
-            instantiateShockwave = true;
+            // instantiateShockwave = true;
             // Rigidbody shockwaveInstance;
             // Vector3 shockwaveO = transform.position + transform.forward * 2.0f;
             // shockwaveInstance = Instantiate(shockwave, shockwaveO, Quaternion.identity) as Rigidbody;
             // shockwaveInstance.AddForce(shockwaveOrigin.forward * 10f);
             
-
             // wait for ShockwaveLastTime = 3 seconds
             // System.Threading.Thread.Sleep(3000);
             
