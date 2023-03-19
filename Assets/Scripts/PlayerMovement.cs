@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     private HypeManager hypeManager;
     public GameManager gameManager;
+    private UIManager uiManager;
     private Material damageMat;
     private Material tauntMat;
     private Material originalMat;
@@ -89,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
         _movementController = GetComponent<CharacterController>();
         hypeManager = GameObject.Find("Game Manager").GetComponent<HypeManager>();
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        uiManager = GameObject.Find("Game Manager").GetComponent<UIManager>();
         fov = gameObject.GetComponent<FieldOfView>();
         health = MAX_HEALTH;
         damageMat = Resources.Load("DamageColor", typeof(Material)) as Material;
@@ -224,13 +226,14 @@ public class PlayerMovement : MonoBehaviour
         }
         
         health -= damage; //TODO: change once attack damages have been tweaked
-        Debug.Log("health: " + health);
         if (health <= 0)
         {
+            uiManager.UpdateHealth(0f);
             StartCoroutine(Die());
         }
         else
         {
+            uiManager.UpdateHealth((float) health / MAX_HEALTH);
             playerHurtSFX.Post(gameObject);
             StartCoroutine(GetStunned());
             StartCoroutine(InvincibilityFrames(1f));
