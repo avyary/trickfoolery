@@ -17,7 +17,8 @@ public class ChargeEnemy : Enemy
         base.Start();
         GetEnemyStatus("ChargeEnemy");
 
-        basicAttack.startupTime = basicAttack.startupTime * 2;
+        animator.SetBool("isWalking", true); 
+        isWalking = true;
     }
 
     void Update() 
@@ -33,58 +34,46 @@ public class ChargeEnemy : Enemy
                 //     agent.isStopped = false;
                 // }
 
-                // Patrol();
 
-                if (!fow.active)
-                { //if moving enable  isWalking to switch to idle
+                // if (!fow.active)
+                // { //if moving enable  isWalking to switch to idle
                  
-                    animator.SetBool("isWalking", true); 
-                    isWalking = true;
-                    fow.active = true;
-                    StartCoroutine(fow.FindPlayer(moveSpeed, PlayerFound));
-                }
+                    
+                //     fow.active = true;
+                //     StartCoroutine(fow.FindPlayer(moveSpeed, PlayerFound));
+                // }
 
                 break;
             case EnemyState.Tracking:
-
-                MoveTowardsPlayer(gameObject, player);
                 
-                float dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
-                // Debug.Log(System.String.Format("You are {0} away and I am still following you.", dist));
+                // float dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
 
-                if (dist <= currentAttack.range) 
-                {   
-                    agent.ResetPath();
+                // if (dist <= currentAttack.range) 
+                // {   
+                //     // Play the particle system
+                //     particleSystem.Play();
 
-                    // Play the particle system
-                    particleSystem.Play();
-
-                    // StopEnemy();
-                    animator.SetBool("isWalking", false); 
-                    isWalking = false;
-                    animator.SetBool("isCharging", true);
-                    isCharging = true;
-                    StartCoroutine(Attack(currentAttack));
+                //     // StopEnemy();
+                //     animator.SetBool("isWalking", false); 
+                //     isWalking = false;
+                //     animator.SetBool("isCharging", true);
+                //     isCharging = true;
+                //     // StartCoroutine(Attack(currentAttack));
                      
                     
-                    isCharging = true;
-                    StartCoroutine(WaitForSecondsAndPlayParticles(0.5f, BackParticleSystem));
+                //     isCharging = true;
+                //     StartCoroutine(WaitForSecondsAndPlayParticles(0.5f, BackParticleSystem));
                     
-                    // Stop the particle system
-                    particleSystem.Stop();
-                    StartCoroutine(WaitForSecondsAndStopParticles(1.0f, BackParticleSystem));
-                    StartCoroutine(WaitForSecondsAndStopRunningAnim(1.0f));
-                }
-                else 
-                {  
-                    GoToTarget();
-                }
-
-                state = EnemyState.Passive;
+                //     // Stop the particle system
+                //     particleSystem.Stop();
+                //     StartCoroutine(WaitForSecondsAndStopParticles(1.0f, BackParticleSystem));
+                //     StartCoroutine(WaitForSecondsAndStopRunningAnim(1.0f));
+                // }
+    
                 break;
             case EnemyState.Active:
 
-            //play charging anim
+                //play charging anim
                 if (isCharging) 
                 { 
                     animator.SetBool("isWalking", false);
@@ -97,17 +86,10 @@ public class ChargeEnemy : Enemy
                 }
 
                 TestBehaviors.MoveForward(gameObject, chargeSpeed);
+
+                
                 break;
         }
-    }
-
-    void MoveTowardsPlayer(GameObject target, GameObject player) 
-    {   
-        Vector3 toPlayer = player.transform.position - target.transform.position;
-        target.transform.rotation = Quaternion.LookRotation(toPlayer, Vector3.up);  // for some reason it still doesn't rotate to look at player?
-
-        agent.SetDestination(player.transform.position);
-
     }
 
     private IEnumerator WaitForSecondsAndStopParticles(float seconds, ParticleSystem particles) 
