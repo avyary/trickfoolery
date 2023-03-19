@@ -5761,7 +5761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3249093301703893981}
   - component: {fileID: 8894779949507656145}
-  - component: {fileID: 3058068913242321603}
+  - component: {fileID: 6931807868130090859}
   m_Layer: 0
   m_Name: Tom_Idle
   m_TagString: Untagged
@@ -5808,7 +5808,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &3058068913242321603
+--- !u!114 &6931807868130090859
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
