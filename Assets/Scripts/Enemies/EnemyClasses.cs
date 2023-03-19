@@ -198,12 +198,14 @@ public abstract class Enemy: MonoBehaviour
         }
 
         state = EnemyState.Passive;
+        gameObject.GetComponent<Patrol>().enabled = true;
     }
 
     protected virtual void PlayerFound()
     {
         // animation for finding player?
         state = EnemyState.Tracking;
+        gameObject.GetComponent<Patrol>().enabled = false;
     }
 
     protected virtual void StopEnemy() 
