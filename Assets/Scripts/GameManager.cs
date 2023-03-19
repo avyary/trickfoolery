@@ -14,13 +14,19 @@ public enum GameState {
 
 public class GameManager : MonoBehaviour
 {
+    // state variables
     public GameState state = GameState.PreCombat;
     public bool isPaused = true;
     public bool showPauseMenu = false;
+    private bool isGameWon = false;
+    private bool isGameOver = false;
+    private bool isTogglingPause = false;
     
+    // wwise
     public AK.Wwise.Event pauseSFX;
     public AK.Wwise.Event unpSFX;
 
+    // object references
     public GameObject _gameOverObj;
     public TMP_Text _gameOverText;
     public GameObject _gameOverPrompt;
@@ -28,32 +34,23 @@ public class GameManager : MonoBehaviour
     public GameObject _gameOverPanel;
     public UIManager uiManager;
 
-    private bool isGameWon = false;
-
+    // for respawn
     public GameObject[] enemies;
+    public Collider spawnRange;
+
+    // parameters
     [SerializeField]
     private int minEnemyNumber;
     [SerializeField]
     private string nextScene;
-
-    private bool isGameOver = false;
-
-    public Collider spawnRange;
-
     [SerializeField]
     UnityEvent preCombat;
-
-    [SerializeField]
-    private int startDelay;
 
     void Start()
     {
         Time.timeScale = 0;
-        if (preCombat == null)
-            preCombat = new UnityEvent();
 
         uiManager = gameObject.GetComponent<UIManager>();
-
         _gameOverObj = GameObject.Find("GameOverText");
         _gameOverPrompt = GameObject.Find("GameOverPrompt");
         _gameOverPanel = GameObject.Find("GameOverPanel");
@@ -64,13 +61,27 @@ public class GameManager : MonoBehaviour
         StartCoroutine(StartLevel());
     }
 
+
     IEnumerator StartLevel() {
-        yield return new WaitForSecondsRealtime(1f);
-        preCombat.Invoke();
-        StartCoroutine(uiManager.StartCombat());
+        yield return new WaitForSecondsRealtime(1f); // wait for fade-in animation
+        bool hasPersistentTarget = false;
+        for (int i = 0; i < preCombat.GetPersistentEventCount(); i++) {
+            if (preCombat.GetPersistentTarget(i) != null)
+                hasPersistentTarget = true;
+                break;
+        }
+
+        if (hasPersistentTarget) {
+            preCombat.Invoke(); // execute pre-combat code
+        }
+        else {
+            StartCoroutine(uiManager.StartCombat()); // starts combat
+        }
     }
 
+    // invoked as an animation event after the BattleStart popup
     public void StartCombat() {
+        print("starting combat");
         Time.timeScale = 1;
         state = GameState.Combat;
     }
@@ -87,12 +98,7 @@ public class GameManager : MonoBehaviour
         }
         if (isGameOver && Input.GetButtonDown("Confirm"))
         {
-            if (isGameWon) {
-                SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
-            }
-            else {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
+            StartCoroutine(LoadNextScene());
         }
         if (showPauseMenu && Input.GetButtonDown("Confirm")) {
             HidePauseMenu();
@@ -100,11 +106,22 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    IEnumerator LoadNextScene() {
+        GameObject.Find("FadeInOut").GetComponent<Animator>().SetTrigger("FadeOut");
+        yield return new WaitForSecondsRealtime(1.5f);
+        if (isGameWon) {
+            SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
+        }
+        else {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+    }
+
     bool TogglePauseMenu()
     {
         if (!showPauseMenu)
         {
-            pauseSFX.Post(gameObject);
             ShowPauseMenu();
         }
         else
@@ -128,15 +145,16 @@ public class GameManager : MonoBehaviour
     }
 
     void ShowPauseMenu() {
+        pauseSFX.Post(gameObject);
         showPauseMenu = true;
         uiManager.ShowPauseMenu();
         PauseGame();
     }
 
     void HidePauseMenu() {
+        unpSFX.Post(gameObject);
         showPauseMenu = false;
         uiManager.HidePauseMenu();
-        unpSFX.Post(gameObject);
         if (!isGameOver) {
             UnpauseGame();
         }

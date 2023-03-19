@@ -8,7 +8,6 @@ public class HypeManager : MonoBehaviour
 {
     [SerializeField]
     private float hypeGoal;
-    [SerializeField]
     private GameObject _hypeBar;
 
     private Slider hypeBar;
@@ -38,7 +37,7 @@ public class HypeManager : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-        hypeBar = _hypeBar.GetComponent<Slider>();
+        hypeBar = GameObject.Find("HypeMeter").GetComponent<Slider>();
         hypeBar.maxValue = hypeGoal;
         hypeBar.value = 0;
         UpdateHype(0f);
