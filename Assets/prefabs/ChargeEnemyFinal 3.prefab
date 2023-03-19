@@ -6286,6 +6286,7 @@ GameObject:
   - component: {fileID: 8157556152595408449}
   - component: {fileID: 7348285350714559333}
   - component: {fileID: 26768930793932778}
+  - component: {fileID: 7184088683778149832}
   m_Layer: 7
   m_Name: ChargeEnemyFinal 3
   m_TagString: Enemy
@@ -6470,6 +6471,19 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &7184088683778149832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8157556152595408473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9038282c6c4ca864b8af4df90c45a5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 10
 --- !u!1 &8157556153120589609
 GameObject:
   m_ObjectHideFlags: 0
