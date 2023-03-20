@@ -19,10 +19,14 @@ public class ChargeEnemy : Enemy
 
         animator.SetBool("isWalking", true); 
         isWalking = true;
+
+        // basicAttack.startupTime = basicAttack.startupTime * 2;
+        // angyAttack.startupTime = angyAttack.startupTime * 2;
     }
 
     void Update() 
-    {
+    {   
+        Debug.Log(System.String.Format("State: {0}", state));
         switch(state)
         {
             case EnemyState.Passive:
@@ -35,18 +39,25 @@ public class ChargeEnemy : Enemy
                 // }
 
 
-                // if (!fow.active)
-                // { //if moving enable  isWalking to switch to idle
+                if (!fow.active)
+                { //if moving enable  isWalking to switch to idle
                  
                     
-                //     fow.active = true;
-                //     StartCoroutine(fow.FindPlayer(moveSpeed, PlayerFound));
-                // }
+                    fow.active = true;
+                    StartCoroutine(fow.FindPlayer(moveSpeed, PlayerFound));
+                }
 
                 break;
             case EnemyState.Tracking:
-                
-                // float dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
+
+                agent.SetDestination(player.transform.position);
+                float dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
+
+                if (dist <= currentAttack.range) 
+                {   
+                    agent.ResetPath();
+                    StartCoroutine(Attack(currentAttack));
+                }
 
                 // if (dist <= currentAttack.range) 
                 // {   
@@ -73,17 +84,17 @@ public class ChargeEnemy : Enemy
                 break;
             case EnemyState.Active:
 
-                //play charging anim
-                if (isCharging) 
-                { 
-                    animator.SetBool("isWalking", false);
-                    animator.SetBool("isCharging", true);
-                }
-                else
-                {
-                    animator.SetBool("isWalking", true);
-                    animator.SetBool("isCharging", false);
-                }
+                // //play charging anim
+                // if (isCharging) 
+                // { 
+                //     animator.SetBool("isWalking", false);
+                //     animator.SetBool("isCharging", true);
+                // }
+                // else
+                // {
+                //     animator.SetBool("isWalking", true);
+                //     animator.SetBool("isCharging", false);
+                // }
 
                 TestBehaviors.MoveForward(gameObject, chargeSpeed);
 
