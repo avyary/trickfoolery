@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Threading;
 using UnityEngine;
 
 namespace Attacks
 {
-
+    // Initial Status:
+    // Center: -0.001 0 0.03
+    // Size: 0.083 0.07 0.05
+    
     public class BasicShockwaveAttack: Attack
     {
-        protected const float NormalZ = 20f;
+        protected const float NormalZ = 0.1f;
         
         // [SerializeField] public Rigidbody shockwave;
         // [SerializeField] public Transform shockwaveOrigin;
@@ -27,7 +31,7 @@ namespace Attacks
             recoveryTime = 1f;
             damage = 100;
             stunTime = 2;
-            range = 20f;
+            range = 5f;
             
             Debug.Log("Shockwave basic attack set up: \n" +
                       "range:" + range);
@@ -60,6 +64,7 @@ namespace Attacks
             
             // Initialize the shockwave object. 
             // instantiateShockwave = true;
+
             // Rigidbody shockwaveInstance;
             // Vector3 shockwaveO = transform.position + transform.forward * 2.0f;
             // shockwaveInstance = Instantiate(shockwave, shockwaveO, Quaternion.identity) as Rigidbody;

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
 public enum EnemyState
 {
     Passive,     // 0 - patrolling, "looking" for player
@@ -16,6 +15,7 @@ public enum EnemyState
 
 public abstract class Enemy: MonoBehaviour
 {
+     [SerializeField] GameObject _AngyInd;
     [SerializeField]
     int _maxHealth;
     [SerializeField]
@@ -39,7 +39,7 @@ public abstract class Enemy: MonoBehaviour
 
     protected int health { get; set; }
     protected int anger { get; set; }
-    protected EnemyState state;
+    [SerializeField] protected EnemyState state;
 
     protected GameObject player;
     protected HypeManager hypeManager;
@@ -72,8 +72,7 @@ public abstract class Enemy: MonoBehaviour
 
     protected virtual void Patrol()
     {   
-        Debug.Log("WE ARE STILL PATROLLING!");
-        Debug.Log(System.String.Format("Remaining distance: {0}", agent.remainingDistance));
+        // Debug.Log(System.String.Format("Remaining distance: {0}", agent.remainingDistance));
         if(agent.remainingDistance <= agent.stoppingDistance) //done with path
         {   
             // randomly generate a new point to move to
@@ -108,7 +107,7 @@ public abstract class Enemy: MonoBehaviour
         }
         else
         {
-            hypeManager.ChangeHype(hypeManager.HIT_HYPE);
+            hypeManager.IncreaseHype(hypeManager.HIT_HYPE);
             StartCoroutine(GetHitPaused(0.5f));
             StartCoroutine(GetStunned(stunTime));
         }
@@ -141,7 +140,7 @@ public abstract class Enemy: MonoBehaviour
     // invoked when health falls to/below 0
     public virtual IEnumerator Die()
     {
-        hypeManager.ChangeHype(hypeManager.DEATH_HYPE);
+        hypeManager.IncreaseHype(hypeManager.DEATH_HYPE);
 
         fow.active = false;
         basicAttack.Deactivate();  // deactivate attack collider
@@ -163,15 +162,16 @@ public abstract class Enemy: MonoBehaviour
         anger = anger + tauntValue;
         if (anger >= maxAnger) {
             isAngy = true;
-            gameObject.transform.Find("Angy Indicator").GetComponent<MeshRenderer>().material.color = Color.red;
-            currentAttack = angyAttack;
+           _AngyInd.SetActive(true); 
+           currentAttack = angyAttack;
             Debug.Log("Damage " + currentAttack.damage);
-        }
+        }else{_AngyInd.SetActive(false);}
     }
 
     protected IEnumerator Attack(Attack attackObj) {
         // trigger attack animation here
         state = EnemyState.Startup;
+        // Debug.Log("Attacking Time");
         yield return new WaitForSeconds(attackObj.startupTime);
         
         // there's probably a better way to handle the below (& its repetitions)
@@ -180,6 +180,7 @@ public abstract class Enemy: MonoBehaviour
         }
 
         state = EnemyState.Active;
+        // Debug.Log("Active Attack!");
         attackObj.Activate();  // activate attack collider
         yield return new WaitForSeconds(attackObj.activeTime);
 
@@ -188,21 +189,23 @@ public abstract class Enemy: MonoBehaviour
         }
 
         state = EnemyState.Recovery;
+        // Debug.Log("Attack All done");
         attackObj.Deactivate();  // deactivate attack collider
         yield return new WaitForSeconds(attackObj.recoveryTime);
 
         if (state == EnemyState.Dead || state == EnemyState.Stunned) {
             yield break;
         }
-        
+
         state = EnemyState.Passive;
-        Debug.Log("I am friendly!");
+        gameObject.GetComponent<Patrol>().enabled = true;
     }
 
     protected virtual void PlayerFound()
     {
         // animation for finding player?
         state = EnemyState.Tracking;
+        gameObject.GetComponent<Patrol>().enabled = false;
     }
 
     protected virtual void StopEnemy() 

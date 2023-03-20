@@ -16,6 +16,10 @@ public class ShockwaveEnemy : Enemy
 {
     [SerializeField]
     private AudioClip attackSound;
+    // public Animator animator;
+    public bool isCharging;
+    public bool isWalking;
+    private float chargeSpeed;
 
     // private Dictionary<string, float> _normalShockwaveZone = new Dictionary<string, float>();
     // private Dictionary<string, float> _aggroShockwaveZone = new Dictionary<string, float>();
@@ -53,25 +57,47 @@ public class ShockwaveEnemy : Enemy
         switch (state)
         {
             case EnemyState.Passive:
+                Debug.Log("Shockwave is Passive");
+                // state = EnemyState.Tracking;
                 if (agent.isStopped) 
                 {
                     agent.isStopped = false;
                 }
                 Patrol();
-                if (!fow.active)    
-                {
+                if (!fow.active)
+                { //if moving enable  isWalking to switch to idle
+                    // animator.SetBool("isWalking", true); 
+                    Debug.Log("fow is active");
+
+                    isWalking = true;
                     fow.active = true;
                     StartCoroutine(fow.FindPlayer(moveSpeed, PlayerFound));
                 }
                 break;
             
             case EnemyState.Tracking:
+                MoveTowardsPlayer(gameObject, player);
+                
                 float dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
-                if ( dist <= basicAttack.range)
+                Debug.Log("Shockwave distance to player: " + dist);
+                
+                if ( dist <= currentAttack.range)
                 {
                     Debug.Log("Shockwave detected the player");
-                    StopEnemy();
+
+                    agent.ResetPath();
+                    
+                    // StopEnemy();
+                    // animator.SetBool("isWalking", false); 
+                    // isWalking = false;
+                    // animator.SetBool("isCharging", true);
+                    // isCharging = true;
+                    
+                    StartCoroutine(WaitForSecondsAndStopRunningAnim(1.0f));
+                    
+                    
                     ShockWaveAttack();
+
                 } else 
                 {
                     GoToTarget();
@@ -79,8 +105,21 @@ public class ShockwaveEnemy : Enemy
                 state = EnemyState.Passive;
                 break;
             
+            
             case EnemyState.Active:
                 // StartCoroutine(Freeze(5));
+                // if (isCharging) 
+                // { 
+                //     animator.SetBool("isWalking", false);
+                //     animator.SetBool("isCharging", true);
+                // }
+                // else
+                // {
+                //     animator.SetBool("isWalking", true);
+                //     animator.SetBool("isCharging", false);
+                // }
+
+                TestBehaviors.MoveForward(gameObject, chargeSpeed);
                 break;
         }
     }
@@ -160,5 +199,23 @@ public class ShockwaveEnemy : Enemy
         // Wait for 3 seconds
         yield return new WaitForSeconds(sec);
     }
+    
+    void MoveTowardsPlayer(GameObject target, GameObject player) 
+    {   
+        Vector3 toPlayer = player.transform.position - target.transform.position;
+        target.transform.rotation = Quaternion.LookRotation(toPlayer, Vector3.up);  // for some reason it still doesn't rotate to look at player?
+
+        agent.SetDestination(player.transform.position);
+
+    }
+    
+    private IEnumerator WaitForSecondsAndStopRunningAnim(float seconds) 
+    {
+        yield return new WaitForSeconds(seconds);
+        // animator.SetBool("isWalking", true);
+        // animator.SetBool("isCharging", false);
+        isWalking = true;
+        isCharging = false;
+    }   
     
 }

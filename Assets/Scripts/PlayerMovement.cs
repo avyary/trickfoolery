@@ -8,7 +8,17 @@ using UnityEngine;
 /// </summary>
 public class PlayerMovement : MonoBehaviour
 
-{    [SerializeField] private ParticleSystem DashParticle;
+{
+    /// <summary>
+    /// Audio implementation stuff starts with AK.Wwise 
+    /// </summary>
+
+    public AK.Wwise.Event dashSFX;
+    public AK.Wwise.Event playerDeathSFX;
+    public AK.Wwise.Event playerHurtSFX;
+    
+
+    [SerializeField] private ParticleSystem DashParticle;
     [SerializeField]
     public float dodgeRadius;
     [SerializeField]
@@ -36,6 +46,8 @@ public class PlayerMovement : MonoBehaviour
     private HypeManager hypeManager;
     public GameManager gameManager;
     private Material damageMat;
+    private Material tauntMat;
+    private Material originalMat;
 
     //Speed of different player abilities
     [SerializeField]
@@ -52,6 +64,8 @@ public class PlayerMovement : MonoBehaviour
     private float TAUNTCD = 1f;
     [SerializeField]
     private float GRAVITY_MULTIPLIER = 1f;
+    [SerializeField]
+    private float POSTDASH;
     public float MAX_HEALTH = 100;
 
     [SerializeField]
@@ -78,12 +92,18 @@ public class PlayerMovement : MonoBehaviour
         fov = gameObject.GetComponent<FieldOfView>();
         health = MAX_HEALTH;
         damageMat = Resources.Load("DamageColor", typeof(Material)) as Material;
+        tauntMat = Resources.Load("TauntColor", typeof(Material)) as Material;
+        originalMat = GetComponent<MeshRenderer>().material;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         // if (!gameManager.isPaused) {//not sure why this isn't working 
+
+        // if (!gameManager.isPaused) {
+
             //Calculate Inputs for player movement
             _playerInputVertical = Input.GetAxisRaw("Vertical");
             _playerInputHorizontal = Input.GetAxisRaw("Horizontal");
@@ -95,14 +115,14 @@ public class PlayerMovement : MonoBehaviour
                 transform.forward = _movementDirection;
             } ;
 
-            if (Input.GetButton("Jump") && dashCdTimer <= 0)
+            if (Input.GetButtonDown("Dash") && dashCdTimer <= 0)
             {
                 StartCoroutine(Dash());
                  DashParticle.Play();
-                   StartCoroutine(WaitForSecondsAndStopParticles(0.1f, DashParticle));
+                 StartCoroutine(WaitForSecondsAndStopParticles(0.1f, DashParticle));
             }
 
-            if (Input.GetKey("f") && tauntCdTimer <= 0)
+            if (Input.GetButton("Taunt") && tauntCdTimer <= 0)
             {
                 StartCoroutine(Taunt());
             }
@@ -112,8 +132,10 @@ public class PlayerMovement : MonoBehaviour
                 dashCdTimer -= Time.deltaTime;
             if (tauntCdTimer > 0)
                 tauntCdTimer -= Time.deltaTime;
+            // }
+        //
         // }
-        
+
         ApplyGravity();
     }
 
@@ -127,12 +149,9 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator Dash()
     {
+        StartCoroutine(CheckHypeDash());
+        StartCoroutine(InvincibilityFrames(DASHTIME));
         dashCdTimer = DASHCD;
-        if (IsCloseDash())
-        {
-            hypeManager.ChangeHype(hypeManager.DODGE_HYPE);
-        }
-
         float startTime = Time.time;
 
         while (Time.time < startTime + DASHTIME)
@@ -141,15 +160,33 @@ public class PlayerMovement : MonoBehaviour
             //TODO: Add momentum to make dashing a little more fluid. 
             yield return null;
         }
-        
+
         state = AbilityState.walking;
+
+        dashSFX.Post(gameObject);
+
+    }
+
+
+    IEnumerator CheckHypeDash() {
+        float startTime = Time.time;
+        bool gotHype = false;
+        while (Time.time < startTime + (DASHTIME + POSTDASH))
+        {
+            if (!gotHype && IsCloseDash())
+            {
+                gotHype = true;
+                hypeManager.IncreaseHype(hypeManager.DODGE_HYPE);
+            }
+            yield return null;
+        }
     }
     
     
     IEnumerator Taunt()
     {
+        StartCoroutine(ChangeMaterial(tauntMat, TAUNTTIME));
         state = AbilityState.taunting;
-        
         
         float startTime = Time.time;
 
@@ -165,7 +202,6 @@ public class PlayerMovement : MonoBehaviour
             yield return null;
         }
         
-        
         state = AbilityState.walking;
         tauntCdTimer = TAUNTCD;
     }
@@ -173,9 +209,7 @@ public class PlayerMovement : MonoBehaviour
     
     bool IsCloseDash()
     {
-        print("nice");
         Collider[] attacksInRange = Physics.OverlapSphere(transform.position, dodgeRadius, attackMask);
-        print(attacksInRange.Length);
         return (attacksInRange.Length > 0);
     }
     
@@ -201,30 +235,27 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(Die());
         }
         else
-        { 
+        {
+            playerHurtSFX.Post(gameObject);
             StartCoroutine(attacker.GetHitPaused(0.5f));
             StartCoroutine(ChangeMaterial(damageMat, damageFlashTime));
-            StartCoroutine(InvincibilityFrames());
+            StartCoroutine(InvincibilityFrames(1f));
         }
     }
 
     IEnumerator Die()
     {
         GetComponent<MeshRenderer>().material.color = Color.black;
+        playerDeathSFX.Post(gameObject);
         gameManager.GameOverLose();
         yield return null;
     }
 
-    IEnumerator InvincibilityFrames()
+    IEnumerator InvincibilityFrames(float time)
     {
-        float starttime = Time.time;
-        
-        while (Time.time <  starttime + 1)
-        {
-            isInvincible = true;
-            yield return null;
-        }
+        isInvincible = true;
         GetComponent<MeshRenderer>().material.color = Color.green;
+        yield return new WaitForSeconds(time);
         isInvincible = false;
     }
 
@@ -235,8 +266,7 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForSeconds(0);
         }
         else {
-            Material originalMat = GetComponent<MeshRenderer>().material;
-            GetComponent<MeshRenderer>().material = damageMat;
+            GetComponent<MeshRenderer>().material = newMat;
             yield return new WaitForSeconds(time);
             GetComponent<MeshRenderer>().material = originalMat;
         }

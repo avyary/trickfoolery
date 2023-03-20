@@ -9,10 +9,10 @@ namespace Attacks
 
     public class AngryShockwaveAttack : Attack
     {
-        protected const float AngryZ = 70f;
+        protected const float AngryZ = 0.15f;
 
-        [SerializeField] public Rigidbody shockwave;
-        [SerializeField] public Transform shockwaveOrigin;
+        // [SerializeField] public Rigidbody shockwave;
+        // [SerializeField] public Transform shockwaveOrigin;
         
         Vector3 initialCenter;
         Vector3 initialSize;
@@ -25,7 +25,7 @@ namespace Attacks
             recoveryTime = 3f;
             damage = 150;
             stunTime = 2;
-            range = 20f;
+            range = 8f;
             
             Debug.Log("Shockwave angry attack set up: \n" +
                       "range:" + range);
