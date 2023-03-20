@@ -127,8 +127,8 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetButtonDown("Dash") && dashCdTimer <= 0)
             {
                 StartCoroutine(Dash());
-                 DashParticle.Play();
-                 StartCoroutine(WaitForSecondsAndStopParticles(0.1f, DashParticle));
+                DashParticle.Play();
+                StartCoroutine(WaitForSecondsAndStopParticles(0.1f, DashParticle));
             }
 
             if (Input.GetButton("Taunt") && tauntCdTimer <= 0)
