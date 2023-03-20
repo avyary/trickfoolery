@@ -61,7 +61,12 @@ public class ChargeEnemy : Enemy
                 if (dist <= currentAttack.range) 
                 {   
                     agent.ResetPath();
+
+                    particleSystem.Play();
                     StartCoroutine(Attack(currentAttack));
+
+                    // Stop the particle system
+                    particleSystem.Stop();
                 }
 
                 // if (dist <= currentAttack.range) 
