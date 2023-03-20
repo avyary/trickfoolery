@@ -6286,6 +6286,7 @@ GameObject:
   - component: {fileID: 8157556152595408449}
   - component: {fileID: 7348285350714559333}
   - component: {fileID: 26768930793932778}
+  - component: {fileID: 6843868864431591233}
   m_Layer: 7
   m_Name: ChargeEnemyFinal 1
   m_TagString: Enemy
@@ -6408,8 +6409,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2bb73e9f3e64cca84c97ae658ed220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 13.6
-  viewAngle: 360
+  viewRadius: 10
+  viewAngle: 190
   player: {fileID: 0}
   obstacleMask:
     serializedVersion: 2
@@ -6470,6 +6471,19 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &6843868864431591233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8157556152595408473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9038282c6c4ca864b8af4df90c45a5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 15
 --- !u!1 &8157556153120589609
 GameObject:
   m_ObjectHideFlags: 0

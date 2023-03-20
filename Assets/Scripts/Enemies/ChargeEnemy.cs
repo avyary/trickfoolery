@@ -24,6 +24,11 @@ public class ChargeEnemy : Enemy
         // angyAttack.startupTime = angyAttack.startupTime * 2;
     }
 
+    private void OnDrawGizmos() 
+    {
+       DrawSphere();
+    }
+
     void Update() 
     {   
         Debug.Log(System.String.Format("State: {0}", state));

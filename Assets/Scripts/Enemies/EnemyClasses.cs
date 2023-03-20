@@ -194,6 +194,12 @@ public abstract class Enemy: MonoBehaviour
         gameObject.GetComponent<Patrol>().enabled = false;
     }
 
+    protected virtual void DrawSphere()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, fow.viewRadius);
+    }
+
     // protected virtual void StopEnemy() 
     // {
     //     agent.isStopped = true;
