@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     public GameObject jumbotronImg;
     public GameObject battleStart;
     public GameObject health;
+    private GameObject pauseMenu;
 
     private int heartsActive;
 
@@ -24,6 +25,7 @@ public class UIManager : MonoBehaviour
         battleStart = GameObject.Find("BattleStart");
         health = GameObject.Find("Health");
         heartsActive = health.transform.childCount;
+        pauseMenu = GameObject.Find("PauseMenu");
     }
 
     public IEnumerator StartCombat() {
@@ -35,9 +37,11 @@ public class UIManager : MonoBehaviour
     public void ShowPauseMenu() {
         jumbotron.GetComponent<Animator>().SetTrigger("OpenPause");
         jumbotronImg.GetComponent<Animator>().SetTrigger("ToCenter");
+        pauseMenu.GetComponent<PauseMenuManager>().InitMenu();
     }
 
     public void HidePauseMenu() {
+        pauseMenu.GetComponent<PauseMenuManager>().CloseMenu();
         jumbotron.GetComponent<Animator>().SetTrigger("ClosePause");
         jumbotronImg.GetComponent<Animator>().SetTrigger("ToBottom");
     }
