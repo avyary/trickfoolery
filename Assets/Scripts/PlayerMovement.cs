@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
     public AK.Wwise.Event dashSFX;
     public AK.Wwise.Event playerDeathSFX;
     public AK.Wwise.Event playerHurtSFX;
-    
 
     [SerializeField] private ParticleSystem DashParticle;
     [SerializeField]
@@ -28,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
     private float _playerInputVertical;
     private float _playerInputHorizontal;
     private Vector3 _movementDirection;
-    
     
     private float speedChangeFactor = 50f;
     public float dashCdTimer = 0; //for debugging
@@ -45,9 +43,15 @@ public class PlayerMovement : MonoBehaviour
 
     private HypeManager hypeManager;
     public GameManager gameManager;
+    private UIManager uiManager;
     private Material damageMat;
     private Material tauntMat;
     private Material originalMat;
+
+    // movement direction calculation
+    private GameObject camera;
+    private Vector3 camForward;
+    private Vector3 camRight;
 
     //Speed of different player abilities
     [SerializeField]
@@ -89,11 +93,20 @@ public class PlayerMovement : MonoBehaviour
         _movementController = GetComponent<CharacterController>();
         hypeManager = GameObject.Find("Game Manager").GetComponent<HypeManager>();
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        uiManager = GameObject.Find("Game Manager").GetComponent<UIManager>();
         fov = gameObject.GetComponent<FieldOfView>();
         health = MAX_HEALTH;
         damageMat = Resources.Load("DamageColor", typeof(Material)) as Material;
         tauntMat = Resources.Load("TauntColor", typeof(Material)) as Material;
         originalMat = GetComponent<MeshRenderer>().material;
+
+        camera = GameObject.FindWithTag("MainCamera");
+        camForward = camera.transform.forward;
+        camForward.y = 0f;
+        camForward.Normalize();
+        camRight = camera.transform.right;
+        camRight.y = 0f;
+        camRight.Normalize();
     }
 
     // Update is called once per frame
@@ -103,7 +116,7 @@ public class PlayerMovement : MonoBehaviour
             //Calculate Inputs for player movement
             _playerInputVertical = Input.GetAxisRaw("Vertical");
             _playerInputHorizontal = Input.GetAxisRaw("Horizontal");
-            _movementDirection = new Vector3(_playerInputHorizontal, 0, _playerInputVertical);
+            _movementDirection = camForward * _playerInputVertical + camRight * _playerInputHorizontal;
             _movementDirection.Normalize();
 
             if (_movementDirection != Vector3.zero && state == AbilityState.walking)
@@ -114,8 +127,8 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetButtonDown("Dash") && dashCdTimer <= 0)
             {
                 StartCoroutine(Dash());
-                 DashParticle.Play();
-                 StartCoroutine(WaitForSecondsAndStopParticles(0.1f, DashParticle));
+                DashParticle.Play();
+                StartCoroutine(WaitForSecondsAndStopParticles(0.1f, DashParticle));
             }
 
             if (Input.GetButton("Taunt") && tauntCdTimer <= 0)
@@ -224,13 +237,14 @@ public class PlayerMovement : MonoBehaviour
         }
         
         health -= damage; //TODO: change once attack damages have been tweaked
-        Debug.Log("health: " + health);
         if (health <= 0)
         {
+            uiManager.UpdateHealth(0f);
             StartCoroutine(Die());
         }
         else
         {
+            uiManager.UpdateHealth((float) health / MAX_HEALTH);
             playerHurtSFX.Post(gameObject);
             StartCoroutine(GetStunned());
             StartCoroutine(InvincibilityFrames(1f));
