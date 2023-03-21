@@ -39,6 +39,8 @@ public class TauntEnemy : Enemy
         GetEnemyStatus("TauntEnemy");
         teleporting = false;
         attackcd = attack_cooldown;
+
+        gameObject.GetComponent<Patrol>().enabled = false;
     }
 
     protected void cooldown() 
@@ -98,7 +100,8 @@ public class TauntEnemy : Enemy
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        gameObject.GetComponent<Patrol>().enabled = false; // ensure this is always false
         switch(state)
         {
             case EnemyState.Passive:

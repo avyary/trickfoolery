@@ -7,53 +7,51 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    private PlayerMovement player;
-
     public GameObject[] hearts;
 
-    public int numberOfHearts;
-    public int[] heartChunks;
+    public GameObject jumbotron;
+    public GameObject jumbotronImg;
+    public GameObject battleStart;
+    public GameObject health;
+    private GameObject pauseMenu;
 
-    public int health;
+    private int heartsActive;
+
     
-    
-    // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
-        numberOfHearts = hearts.Length;
-        health =  Convert.ToInt32(player.MAX_HEALTH);
-
-        heartChunks = new int[numberOfHearts];
-        int chunkSize = health / numberOfHearts;
-        for (int i = 0; i < numberOfHearts; i++)
-        {
-            heartChunks[i] = chunkSize * (i + 1); // Assign each part with the same size
-
-            if (i < health % numberOfHearts)
-            {
-                // Add one to the current part if the remainder is not zero
-                heartChunks[i]++;
-            }
-        }
-        
-        
-        
+        jumbotron = GameObject.Find("Jumbotron");
+        jumbotronImg = GameObject.Find("Image");
+        battleStart = GameObject.Find("BattleStart");
+        health = GameObject.Find("Health");
+        heartsActive = health.transform.childCount;
+        pauseMenu = GameObject.Find("PauseMenu");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        health = Convert.ToInt32(player.health);
-        if (health < heartChunks[3])
-        {
-            Destroy(hearts[3].gameObject);
+    public IEnumerator StartCombat() {
+        battleStart.GetComponent<Animator>().SetTrigger("StartGame");
+        yield return new WaitForSecondsRealtime(0.4f);
+        jumbotron.GetComponent<Animator>().SetTrigger("StartCombat");
+    }
+
+    public void ShowPauseMenu() {
+        jumbotron.GetComponent<Animator>().SetTrigger("OpenPause");
+        jumbotronImg.GetComponent<Animator>().SetTrigger("ToCenter");
+        pauseMenu.GetComponent<PauseMenuManager>().InitMenu();
+    }
+
+    public void HidePauseMenu() {
+        pauseMenu.GetComponent<PauseMenuManager>().CloseMenu();
+        jumbotron.GetComponent<Animator>().SetTrigger("ClosePause");
+        jumbotronImg.GetComponent<Animator>().SetTrigger("ToBottom");
+    }
+
+    public void UpdateHealth(float healthPercent) {
+        int newHearts = (int) Mathf.Floor(healthPercent * health.transform.childCount);
+        if (newHearts < heartsActive) {
+            for (int heartIdx = newHearts; heartIdx < health.transform.childCount; heartIdx++) {
+                health.transform.GetChild(heartIdx).gameObject.SetActive(false);
+            }
         }
-        if (health < heartChunks[2])
-            Destroy(hearts[2].gameObject);
-        if (health < heartChunks[1])
-            Destroy(hearts[1].gameObject);
-        if (health < heartChunks[0])
-            Destroy(hearts[0].gameObject);
     }
 }

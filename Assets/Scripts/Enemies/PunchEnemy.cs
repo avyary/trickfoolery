@@ -16,7 +16,7 @@ public class PunchEnemy : Enemy
         {
             case EnemyState.Passive:
                 // TestBehaviors.Rotate(gameObject, moveSpeed);  // replace with better movement
-                Patrol();
+                // Patrol();
                 if (!fow.active)
                 {
                     fow.active = true;

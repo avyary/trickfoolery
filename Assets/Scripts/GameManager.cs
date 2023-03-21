@@ -4,68 +4,86 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+
+public enum GameState {
+    PreCombat,
+    Combat,
+    PostCombat
+}
 
 public class GameManager : MonoBehaviour
 {
+    // state variables
+    public GameState state = GameState.PreCombat;
     public bool isPaused = true;
     public bool showPauseMenu = false;
+    private bool isGameWon = false;
+    private bool isGameOver = false;
+    private bool isTogglingPause = false;
     
+    // wwise
     public AK.Wwise.Event pauseSFX;
     public AK.Wwise.Event unpSFX;
 
-    public AK.Wwise.Event playpauseMUS; //plays the music constantly
-    public AK.Wwise.Event mutepauseMUS; //mutes the pause music
-    public AK.Wwise.Event unmpauseMUS; //when the pause menu is brought up it unmutes the pause music
-    public AK.Wwise.Event FirstTimeMutepauseMUS; //when the game starts it is muted with no fade
-
+    // object references
     public GameObject _gameOverObj;
     public TMP_Text _gameOverText;
     public GameObject _gameOverPrompt;
     public TMP_Text _gameOverPromptText;
     public GameObject _gameOverPanel;
-    public GameObject _pauseMenu;
-    public GameObject battleStart;
+    public UIManager uiManager;
 
-    private bool isGameWon = false;
-
+    // for respawn
     public GameObject[] enemies;
+    public Collider spawnRange;
+
+    // parameters
     [SerializeField]
     private int minEnemyNumber;
     [SerializeField]
     private string nextScene;
-
-    private bool isGameOver = false;
-
-    public Collider spawnRange;
-
     [SerializeField]
-    private int startDelay;
+    UnityEvent preCombat;
 
     void Start()
     {
+        Time.timeScale = 0;
+
+        uiManager = gameObject.GetComponent<UIManager>();
         _gameOverObj = GameObject.Find("GameOverText");
         _gameOverPrompt = GameObject.Find("GameOverPrompt");
-        _pauseMenu = GameObject.Find("PauseMenu");
         _gameOverPanel = GameObject.Find("GameOverPanel");
-        battleStart = GameObject.Find("BattleStart");
         _gameOverText = _gameOverObj.GetComponent<TMP_Text>();
         _gameOverPromptText = _gameOverPrompt.GetComponent<TMP_Text>();
         _gameOverPanel.SetActive(false);
-        _pauseMenu.SetActive(false);
-        playpauseMUS.Post(gameObject);
-        FirstTimeMutepauseMUS.Post(gameObject);
-        StartCoroutine(StartCombat());
+
+        StartCoroutine(StartLevel());
     }
 
-    IEnumerator StartCombat() {
+
+    IEnumerator StartLevel() {
+        yield return new WaitForSecondsRealtime(1f); // wait for fade-in animation
+        bool hasPersistentTarget = false;
+        for (int i = 0; i < preCombat.GetPersistentEventCount(); i++) {
+            if (preCombat.GetPersistentTarget(i) != null)
+                hasPersistentTarget = true;
+                break;
+        }
+
+        if (hasPersistentTarget) {
+            preCombat.Invoke(); // execute pre-combat code
+        }
+        else {
+            StartCoroutine(uiManager.StartCombat()); // starts combat
+        }
+    }
+
+    // invoked as an animation event after the BattleStart popup
+    public void StartCombat() {
+        print("starting combat");
         Time.timeScale = 1;
-        yield return new WaitForSeconds(1f);
-        StartGame();
-    }
-
-    void StartGame() {
-        battleStart.GetComponent<Animator>().SetTrigger("StartGame");
-        UnpauseGame();
+        state = GameState.Combat;
     }
 
     void Update()
@@ -80,16 +98,18 @@ public class GameManager : MonoBehaviour
         }
         if (isGameOver && Input.GetButtonDown("Confirm"))
         {
-            if (isGameWon) {
-                SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
-            }
-            else {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
+            StartCoroutine(LoadNextScene());
         }
-        if (showPauseMenu && Input.GetButtonDown("Confirm")) {
-            HidePauseMenu();
-            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+    }
+
+    IEnumerator LoadNextScene() {
+        GameObject.Find("FadeInOut").GetComponent<Animator>().SetTrigger("FadeOut");
+        yield return new WaitForSecondsRealtime(1.5f);
+        if (isGameWon) {
+            SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
+        }
+        else {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
@@ -97,8 +117,6 @@ public class GameManager : MonoBehaviour
     {
         if (!showPauseMenu)
         {
-            pauseSFX.Post(gameObject);
-            unmpauseMUS.Post(gameObject);
             ShowPauseMenu();
         }
         else
@@ -117,25 +135,24 @@ public class GameManager : MonoBehaviour
         else
         {
             UnpauseGame();
-            mutepauseMUS.Post(gameObject);
         }
         return isPaused;
     }
 
     void ShowPauseMenu() {
+        pauseSFX.Post(gameObject);
         showPauseMenu = true;
+        uiManager.ShowPauseMenu();
         PauseGame();
-        _pauseMenu.SetActive(true);
     }
 
-    void HidePauseMenu() {
-        showPauseMenu = false;
+    public void HidePauseMenu() {
         unpSFX.Post(gameObject);
+        showPauseMenu = false;
+        uiManager.HidePauseMenu();
         if (!isGameOver) {
             UnpauseGame();
-            mutepauseMUS.Post(gameObject);
         }
-        _pauseMenu.SetActive(false);
     }
 
     void PauseGame()
@@ -147,7 +164,6 @@ public class GameManager : MonoBehaviour
     void UnpauseGame()
     {
         isPaused = false;
-        mutepauseMUS.Post(gameObject);
         Time.timeScale = 1;
     }
 

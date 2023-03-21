@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
     public AK.Wwise.Event dashSFX;
     public AK.Wwise.Event playerDeathSFX;
     public AK.Wwise.Event playerHurtSFX;
-    
 
     [SerializeField] private ParticleSystem DashParticle;
     [SerializeField]
@@ -28,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
     private float _playerInputVertical;
     private float _playerInputHorizontal;
     private Vector3 _movementDirection;
-    
     
     private float speedChangeFactor = 50f;
     public float dashCdTimer = 0; //for debugging
@@ -45,9 +43,14 @@ public class PlayerMovement : MonoBehaviour
 
     private HypeManager hypeManager;
     public GameManager gameManager;
-    private Material damageMat;
+    private UIManager uiManager;
     private Material tauntMat;
     private Material originalMat;
+
+    // movement direction calculation
+    private GameObject camera;
+    private Vector3 camForward;
+    private Vector3 camRight;
 
     //Speed of different player abilities
     [SerializeField]
@@ -70,6 +73,16 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private float damageFlashTime;
+    [SerializeField]
+    private float hitInvincibility;
+
+    [SerializeField]
+    private GameObject tomRenderObj;
+    private SkinnedMeshRenderer tomRender;
+    [SerializeField]
+    private Material damageMat;
+    [SerializeField]
+    private Material invincibilityMat;
 
     public AbilityState state;
     public FieldOfView fov;
@@ -89,21 +102,30 @@ public class PlayerMovement : MonoBehaviour
         _movementController = GetComponent<CharacterController>();
         hypeManager = GameObject.Find("Game Manager").GetComponent<HypeManager>();
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        uiManager = GameObject.Find("Game Manager").GetComponent<UIManager>();
         fov = gameObject.GetComponent<FieldOfView>();
         health = MAX_HEALTH;
-        damageMat = Resources.Load("DamageColor", typeof(Material)) as Material;
         tauntMat = Resources.Load("TauntColor", typeof(Material)) as Material;
-        originalMat = GetComponent<MeshRenderer>().material;
+        tomRender = tomRenderObj.GetComponent<SkinnedMeshRenderer>();
+        originalMat = tomRender.material;
+
+        camera = GameObject.FindWithTag("MainCamera");
+        camForward = camera.transform.forward;
+        camForward.y = 0f;
+        camForward.Normalize();
+        camRight = camera.transform.right;
+        camRight.y = 0f;
+        camRight.Normalize();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!gameManager.isPaused) {
+        if (gameManager.state == GameState.Combat) {
             //Calculate Inputs for player movement
             _playerInputVertical = Input.GetAxisRaw("Vertical");
             _playerInputHorizontal = Input.GetAxisRaw("Horizontal");
-            _movementDirection = new Vector3(_playerInputHorizontal, 0, _playerInputVertical);
+            _movementDirection = camForward * _playerInputVertical + camRight * _playerInputHorizontal;
             _movementDirection.Normalize();
 
             if (_movementDirection != Vector3.zero && state == AbilityState.walking)
@@ -114,8 +136,8 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetButtonDown("Dash") && dashCdTimer <= 0)
             {
                 StartCoroutine(Dash());
-                 DashParticle.Play();
-                 StartCoroutine(WaitForSecondsAndStopParticles(0.1f, DashParticle));
+                DashParticle.Play();
+                StartCoroutine(WaitForSecondsAndStopParticles(0.1f, DashParticle));
             }
 
             if (Input.GetButton("Taunt") && tauntCdTimer <= 0)
@@ -135,10 +157,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (state == AbilityState.walking) 
-            _movementController.Move(_movementDirection * WALKSPEED * Time.deltaTime);
-        if (state == AbilityState.dashing)
-            _movementController.Move(transform.forward * DASHSPEED * Time.deltaTime);
+        if (gameManager.state == GameState.Combat) {
+            if (state == AbilityState.walking) 
+                _movementController.Move(_movementDirection * WALKSPEED * Time.deltaTime);
+            if (state == AbilityState.dashing)
+                _movementController.Move(transform.forward * DASHSPEED * Time.deltaTime);
+        }
     }
 
     IEnumerator Dash()
@@ -158,7 +182,6 @@ public class PlayerMovement : MonoBehaviour
         state = AbilityState.walking;
 
         dashSFX.Post(gameObject);
-
     }
 
 
@@ -179,7 +202,6 @@ public class PlayerMovement : MonoBehaviour
     
     IEnumerator Taunt()
     {
-        StartCoroutine(ChangeMaterial(tauntMat, TAUNTTIME));
         state = AbilityState.taunting;
         
         float startTime = Time.time;
@@ -223,18 +245,34 @@ public class PlayerMovement : MonoBehaviour
         }
         
         health -= damage; //TODO: change once attack damages have been tweaked
-        Debug.Log("health: " + health);
         if (health <= 0)
         {
+            uiManager.UpdateHealth(0f);
             StartCoroutine(Die());
         }
         else
         {
+            uiManager.UpdateHealth((float) health / MAX_HEALTH);
             playerHurtSFX.Post(gameObject);
-            StartCoroutine(attacker.GetHitPaused(0.5f));
-            StartCoroutine(ChangeMaterial(damageMat, damageFlashTime));
-            StartCoroutine(InvincibilityFrames(1f));
+            StartCoroutine(GetStunned());
+            StartCoroutine(InvincibilityFrames(hitInvincibility));
+            StartCoroutine(FlashOnHit());
         }
+    }
+
+    // placeholder
+    IEnumerator FlashOnHit() {
+        tomRender.material = damageMat;
+        yield return new WaitForSeconds(damageFlashTime);
+        tomRender.material = invincibilityMat;
+        yield return new WaitForSeconds(hitInvincibility - damageFlashTime);
+        tomRender.material = originalMat;
+    }
+
+    IEnumerator GetStunned() {
+        state = AbilityState.damage;
+        yield return new WaitForSeconds(0.3f);
+        state = AbilityState.walking;
     }
 
     IEnumerator Die()
@@ -248,21 +286,24 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator InvincibilityFrames(float time)
     {
         isInvincible = true;
-        GetComponent<MeshRenderer>().material.color = Color.green;
+        tomRender.material = invincibilityMat;
         yield return new WaitForSeconds(time);
+        tomRender.material = originalMat;
         isInvincible = false;
     }
 
     IEnumerator ChangeMaterial(Material newMat, float time = 0)
     {
         if (time == 0) {
-            GetComponent<MeshRenderer>().material = newMat;
+            tomRender.material = newMat;
+            // GetComponent<MeshRenderer>().material = newMat;
             yield return new WaitForSeconds(0);
         }
         else {
-            GetComponent<MeshRenderer>().material = newMat;
+            tomRender.material = newMat;
+            // GetComponent<MeshRenderer>().material = newMat;
             yield return new WaitForSeconds(time);
-            GetComponent<MeshRenderer>().material = originalMat;
+            tomRender.material = originalMat;
         }
     }private IEnumerator WaitForSecondsAndStopParticles(float seconds, ParticleSystem particles) {
         yield return new WaitForSeconds(seconds);

@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-
 public class MenuManager : MonoBehaviour
 {
     public AK.Wwise.Event selectSFX;
