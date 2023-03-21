@@ -53,11 +53,11 @@ public class ShockwaveEnemy : Enemy
         switch (state)
         {
             case EnemyState.Passive:
-                if (agent.isStopped) 
-                {
-                    agent.isStopped = false;
-                }
-                Patrol();
+                // if (agent.isStopped) 
+                // {
+                //     agent.isStopped = false;
+                // }
+                // Patrol();
                 if (!fow.active)    
                 {
                     fow.active = true;
@@ -70,12 +70,13 @@ public class ShockwaveEnemy : Enemy
                 if ( dist <= basicAttack.range)
                 {
                     Debug.Log("Shockwave detected the player");
-                    StopEnemy();
+                    // StopEnemy();
                     ShockWaveAttack();
-                } else 
-                {
-                    GoToTarget();
                 }
+                // } else 
+                // {
+                //     GoToTarget();
+                // }
                 state = EnemyState.Passive;
                 break;
             
