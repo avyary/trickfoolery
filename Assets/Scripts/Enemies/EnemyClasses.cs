@@ -190,7 +190,7 @@ public abstract class Enemy: MonoBehaviour
     {
         // animation for finding player?
         state = EnemyState.Tracking;
-        Debug.Log("Player found!");
+        // Debug.Log("Player found!");
         gameObject.GetComponent<Patrol>().enabled = false;
     }
 

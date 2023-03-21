@@ -27,7 +27,7 @@ public class FieldOfView : MonoBehaviour
                 yield break;
             }
 
-            Debug.Log("Player not visible");
+            // Debug.Log("Player not visible");
             // else 
             // {
             //     Debug.Log("Player not visible");
