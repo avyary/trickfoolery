@@ -44,7 +44,6 @@ public class PlayerMovement : MonoBehaviour
     private HypeManager hypeManager;
     public GameManager gameManager;
     private UIManager uiManager;
-    private Material damageMat;
     private Material tauntMat;
     private Material originalMat;
 
@@ -74,6 +73,16 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private float damageFlashTime;
+    [SerializeField]
+    private float hitInvincibility;
+
+    [SerializeField]
+    private GameObject tomRenderObj;
+    private SkinnedMeshRenderer tomRender;
+    [SerializeField]
+    private Material damageMat;
+    [SerializeField]
+    private Material invincibilityMat;
 
     public AbilityState state;
     public FieldOfView fov;
@@ -96,9 +105,9 @@ public class PlayerMovement : MonoBehaviour
         uiManager = GameObject.Find("Game Manager").GetComponent<UIManager>();
         fov = gameObject.GetComponent<FieldOfView>();
         health = MAX_HEALTH;
-        damageMat = Resources.Load("DamageColor", typeof(Material)) as Material;
         tauntMat = Resources.Load("TauntColor", typeof(Material)) as Material;
-        originalMat = GetComponent<MeshRenderer>().material;
+        tomRender = tomRenderObj.GetComponent<SkinnedMeshRenderer>();
+        originalMat = tomRender.material;
 
         camera = GameObject.FindWithTag("MainCamera");
         camForward = camera.transform.forward;
@@ -193,7 +202,6 @@ public class PlayerMovement : MonoBehaviour
     
     IEnumerator Taunt()
     {
-        StartCoroutine(ChangeMaterial(tauntMat, TAUNTTIME));
         state = AbilityState.taunting;
         
         float startTime = Time.time;
@@ -247,8 +255,18 @@ public class PlayerMovement : MonoBehaviour
             uiManager.UpdateHealth((float) health / MAX_HEALTH);
             playerHurtSFX.Post(gameObject);
             StartCoroutine(GetStunned());
-            StartCoroutine(InvincibilityFrames(1f));
+            StartCoroutine(InvincibilityFrames(hitInvincibility));
+            StartCoroutine(FlashOnHit());
         }
+    }
+
+    // placeholder
+    IEnumerator FlashOnHit() {
+        tomRender.material = damageMat;
+        yield return new WaitForSeconds(damageFlashTime);
+        tomRender.material = invincibilityMat;
+        yield return new WaitForSeconds(hitInvincibility - damageFlashTime);
+        tomRender.material = originalMat;
     }
 
     IEnumerator GetStunned() {
@@ -268,21 +286,24 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator InvincibilityFrames(float time)
     {
         isInvincible = true;
-        GetComponent<MeshRenderer>().material.color = Color.green;
+        tomRender.material = invincibilityMat;
         yield return new WaitForSeconds(time);
+        tomRender.material = originalMat;
         isInvincible = false;
     }
 
     IEnumerator ChangeMaterial(Material newMat, float time = 0)
     {
         if (time == 0) {
-            GetComponent<MeshRenderer>().material = newMat;
+            tomRender.material = newMat;
+            // GetComponent<MeshRenderer>().material = newMat;
             yield return new WaitForSeconds(0);
         }
         else {
-            GetComponent<MeshRenderer>().material = newMat;
+            tomRender.material = newMat;
+            // GetComponent<MeshRenderer>().material = newMat;
             yield return new WaitForSeconds(time);
-            GetComponent<MeshRenderer>().material = originalMat;
+            tomRender.material = originalMat;
         }
     }private IEnumerator WaitForSecondsAndStopParticles(float seconds, ParticleSystem particles) {
         yield return new WaitForSeconds(seconds);

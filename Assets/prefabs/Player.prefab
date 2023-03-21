@@ -6343,7 +6343,11 @@ MonoBehaviour:
   GRAVITY_MULTIPLIER: 1
   POSTDASH: 0
   MAX_HEALTH: 100
-  damageFlashTime: 0
+  damageFlashTime: 0.3
+  hitInvincibility: 0.7
+  tomRenderObj: {fileID: 3283951948275670673}
+  damageMat: {fileID: 2100000, guid: 277f8f7ce72100142a526d3af34be1d0, type: 2}
+  invincibilityMat: {fileID: 2100000, guid: ffd190e93d0aa8d49b4f3ec8ef658f6d, type: 2}
   state: 0
   fov: {fileID: 0}
 --- !u!143 &812461445361068324
