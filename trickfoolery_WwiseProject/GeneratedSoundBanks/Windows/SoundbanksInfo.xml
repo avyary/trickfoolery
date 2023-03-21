@@ -22,17 +22,17 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{DD84B397-4479-8512-BE6B-DD9AC95E5264}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{4C2F7789-D180-106F-B497-EEA7091AB671}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="224255706" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_Pause_loop_75bpm.wav</ShortName>
+					<CachePath>SFX/mus_Pause_loop_75bpm_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="275378158" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_charger_death_1.wav</ShortName>
 					<CachePath>SFX/sfx_charger_death_1_10C4C929.wem</CachePath>
-				</File>
-				<File Id="375178555" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_groovy_2_larose.wav</ShortName>
-					<CachePath>SFX/sfx_groovy_2_larose_10C4C929.wem</CachePath>
 				</File>
 				<File Id="395767410" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_unpause_larose (1).wav</ShortName>
@@ -62,17 +62,9 @@
 					<ShortName>sfx_confirming_option_larose.wav</ShortName>
 					<CachePath>SFX/sfx_confirming_option_larose_10C4C929.wem</CachePath>
 				</File>
-				<File Id="648094548" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_radical_larose.wav</ShortName>
-					<CachePath>SFX/sfx_radical_larose_10C4C929.wem</CachePath>
-				</File>
 				<File Id="673051370" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_mouse_select_larose.wav</ShortName>
 					<CachePath>SFX/sfx_mouse_select_larose_10C4C929.wem</CachePath>
-				</File>
-				<File Id="990288280" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_bodacious_larose.wav</ShortName>
-					<CachePath>SFX/sfx_bodacious_larose_10C4C929.wem</CachePath>
 				</File>
 				<File Id="1007579897" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_death.wav</ShortName>
@@ -80,7 +72,7 @@
 				</File>
 				<File Id="1033023117" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_trickfoolery_fullloop_222bpm.wav</ShortName>
-					<CachePath>SFX/mus_trickfoolery_fullloop_222bpm_1E4B5F4E.wem</CachePath>
+					<CachePath>SFX/mus_trickfoolery_fullloop_222bpm_21C37800.wem</CachePath>
 				</File>
 				<File Id="1066273250" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_pause_larose.wav</ShortName>
@@ -92,48 +84,45 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3263497147" Name="Play_mus_Trickfoolery_222bpm" DurationType="Infinite">
+				<Event Id="308973664" Name="First_Time_Mute_mus_pause_75bpm"/>
+				<Event Id="3756680375" Name="Mute_mus_pause_75bpm"/>
+				<Event Id="2758388342" Name="Play_mus_Pause_75bpm">
+					<MediaRefs>
+						<MediaRef Id="224255706"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3263497147" Name="Play_mus_Trickfoolery_222bpm">
 					<MediaRefs>
 						<MediaRef Id="1033023117"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1635721613" Name="Play_sfx_bodacious" DurationType="OneShot" DurationMin="2.2005215" DurationMax="2.2005215">
-					<MediaRefs>
-						<MediaRef Id="990288280"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="843029991" Name="Play_sfx_charger_death" DurationType="OneShot" DurationMin="1.5" DurationMax="2">
+				<Event Id="843029991" Name="Play_sfx_charger_death">
 					<MediaRefs>
 						<MediaRef Id="275378158"/>
 						<MediaRef Id="507762272"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2343006462" Name="Play_sfx_confirm" DurationType="OneShot" DurationMin="4.5" DurationMax="4.5">
+				<Event Id="2343006462" Name="Play_sfx_confirm">
 					<MediaRefs>
 						<MediaRef Id="621091837"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="526466336" Name="Play_sfx_groovy" DurationType="OneShot" DurationMin="2" DurationMax="2">
-					<MediaRefs>
-						<MediaRef Id="375178555"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="3683043420" Name="Play_sfx_pause" DurationType="OneShot" DurationMin="2" DurationMax="2">
+				<Event Id="3683043420" Name="Play_sfx_pause">
 					<MediaRefs>
 						<MediaRef Id="1066273250"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4077681152" Name="Play_sfx_player_dash" DurationType="OneShot" DurationMin="0.37457678" DurationMax="0.6674199">
+				<Event Id="4077681152" Name="Play_sfx_player_dash">
 					<MediaRefs>
 						<MediaRef Id="429033431"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1591758634" Name="Play_sfx_player_death" DurationType="OneShot" DurationMin="1.5" DurationMax="1.5">
+				<Event Id="1591758634" Name="Play_sfx_player_death">
 					<MediaRefs>
 						<MediaRef Id="1007579897"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1067524079" Name="Play_sfx_player_hurt" DurationType="OneShot" DurationMin="1" DurationMax="1">
+				<Event Id="1067524079" Name="Play_sfx_player_hurt">
 					<MediaRefs>
 						<MediaRef Id="403074574"/>
 						<MediaRef Id="405788637"/>
@@ -141,23 +130,20 @@
 						<MediaRef Id="1070951602"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="598351696" Name="Play_sfx_radical" DurationType="OneShot" DurationMin="2.5" DurationMax="2.5">
-					<MediaRefs>
-						<MediaRef Id="648094548"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="325086926" Name="Play_sfx_select" DurationType="OneShot" DurationMin="1.8866584" DurationMax="2.1497467">
+				<Event Id="325086926" Name="Play_sfx_select">
 					<MediaRefs>
 						<MediaRef Id="673051370"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3476672187" Name="Play_sfx_unpause" DurationType="OneShot" DurationMin="2" DurationMax="2">
+				<Event Id="3476672187" Name="Play_sfx_unpause">
 					<MediaRefs>
 						<MediaRef Id="395767410"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2601853237" Name="Stop_mus_Trickfoolery_222bpm"/>
+				<Event Id="4152903754" Name="Unmute_mus_pause_75bpm"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{10046671-67FD-3D9A-78CF-DAF9AC81A14A}</FileHash>
+	<FileHash>{1D78CF75-0D2B-8AE5-4492-BE8DF9244B0C}</FileHash>
 </SoundBanksInfo>

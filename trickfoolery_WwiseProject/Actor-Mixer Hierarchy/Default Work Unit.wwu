@@ -452,9 +452,16 @@
 				<Sound Name="mus_trickfoolery_222bpm" ID="{B37367AF-76B6-4A5F-9DCF-A99818A4C5D4}" ShortID="1072921685">
 					<PropertyList>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{2A4107CD-BD74-4A53-99E4-BB983C03C5F7}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-8</Value>
+								<Value>-15</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -481,6 +488,62 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="mus_trickfoolery_fullloop_222bpm" ID="{027F936B-1C58-459A-BF01-9B5A615BB534}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="mus_Pause_loop_75bpm" ID="{1C1A214D-2858-44C0-BF6D-6E4B9D257D7E}" ShortID="640267214">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>42</Value>
+							</ValueList>
+						</Property>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>34</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>30</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{7FF4DE33-14DE-471F-813D-8CA3DE0C9C5D}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="30"/>
+											<Property Name="Min" Type="Real64" Value="-30"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="mus_Pause_loop_75bpm" ID="{60C523BD-8185-493D-B8D6-FBF338A9768B}">
+							<Language>SFX</Language>
+							<AudioFile>mus_Pause_loop_75bpm.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="224255706"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="mus_Pause_loop_75bpm" ID="{60C523BD-8185-493D-B8D6-FBF338A9768B}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

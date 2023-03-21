@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuButtons : MonoBehaviour
 {
     public AK.Wwise.Event confirmSFX;
+    public AK.Wwise.Event stopMUS;
     [SerializeField]
     private string sceneName;
     [SerializeField]
@@ -21,6 +22,7 @@ public class MainMenuButtons : MonoBehaviour
     public void LoadLevel() {
         menuManager.buttonSelected = true;
         confirmSFX.Post(gameObject);
+
         StartCoroutine(DelayLoad());
     }
 
@@ -29,7 +31,7 @@ public class MainMenuButtons : MonoBehaviour
         yield return new WaitForSeconds(Mathf.Max(0, loadDelay - 1.5f));
         GameObject.Find("FadeInOut").GetComponent<Animator>().SetTrigger("FadeOut");
         yield return new WaitForSeconds(1.5f);
-        //AkSoundEngine.StopAll();
+        stopMUS.Post(gameObject);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 

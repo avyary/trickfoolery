@@ -13,6 +13,11 @@ public class GameManager : MonoBehaviour
     public AK.Wwise.Event pauseSFX;
     public AK.Wwise.Event unpSFX;
 
+    public AK.Wwise.Event playpauseMUS; //plays the music constantly
+    public AK.Wwise.Event mutepauseMUS; //mutes the pause music
+    public AK.Wwise.Event unmpauseMUS; //when the pause menu is brought up it unmutes the pause music
+    public AK.Wwise.Event FirstTimeMutepauseMUS; //when the game starts it is muted with no fade
+
     public GameObject _gameOverObj;
     public TMP_Text _gameOverText;
     public GameObject _gameOverPrompt;
@@ -47,6 +52,8 @@ public class GameManager : MonoBehaviour
         _gameOverPromptText = _gameOverPrompt.GetComponent<TMP_Text>();
         _gameOverPanel.SetActive(false);
         _pauseMenu.SetActive(false);
+        playpauseMUS.Post(gameObject);
+        FirstTimeMutepauseMUS.Post(gameObject);
         StartCoroutine(StartCombat());
     }
 
@@ -91,6 +98,7 @@ public class GameManager : MonoBehaviour
         if (!showPauseMenu)
         {
             pauseSFX.Post(gameObject);
+            unmpauseMUS.Post(gameObject);
             ShowPauseMenu();
         }
         else
@@ -109,6 +117,7 @@ public class GameManager : MonoBehaviour
         else
         {
             UnpauseGame();
+            mutepauseMUS.Post(gameObject);
         }
         return isPaused;
     }
@@ -124,6 +133,7 @@ public class GameManager : MonoBehaviour
         unpSFX.Post(gameObject);
         if (!isGameOver) {
             UnpauseGame();
+            mutepauseMUS.Post(gameObject);
         }
         _pauseMenu.SetActive(false);
     }
@@ -137,6 +147,7 @@ public class GameManager : MonoBehaviour
     void UnpauseGame()
     {
         isPaused = false;
+        mutepauseMUS.Post(gameObject);
         Time.timeScale = 1;
     }
 

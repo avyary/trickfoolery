@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour
 {
     public AK.Wwise.Event selectSFX;
     public AK.Wwise.Event pauseMUS;
+    public AK.Wwise.Event stopMUS;
     private int currentIdx;
     private int numButtons;
     private bool isChanging;

@@ -6210,7 +6210,7 @@ GameObject:
   - component: {fileID: 812461445361068324}
   - component: {fileID: 3915730205257403483}
   - component: {fileID: 3642241825702175845}
-  - component: {fileID: 5943973647914740701}
+  - component: {fileID: 7504944793810622245}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6408,7 +6408,7 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &5943973647914740701
+--- !u!114 &7504944793810622245
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6420,12 +6420,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a024f4daab4fd48b9aec34fb7e7acfaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
+  triggerList: f7e1664c
   useOtherObject: 0
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 07fd65fa8e7b4074bb5d32c4ec66923d, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: fc1f9883c2b632549b9f8bf6b3781cb7, type: 2}
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
