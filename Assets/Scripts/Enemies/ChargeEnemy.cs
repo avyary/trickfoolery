@@ -19,9 +19,6 @@ public class ChargeEnemy : Enemy
 
         animator.SetBool("isWalking", true); 
         isWalking = true;
-
-        // basicAttack.startupTime = basicAttack.startupTime * 2;
-        // angyAttack.startupTime = angyAttack.startupTime * 2;
     }
 
     private void OnDrawGizmos() 
@@ -35,19 +32,9 @@ public class ChargeEnemy : Enemy
         switch(state)
         {
             case EnemyState.Passive:
-                // if (agent.isStopped) 
-                // {
-                //     //if stopped disable isWalking to switch to idle
-                //     animator.SetBool("isWalking", false); 
-                //     isWalking = false;
-                //     agent.isStopped = false;
-                // }
-
 
                 if (!fow.active)
-                { //if moving enable  isWalking to switch to idle
-                 
-                    
+                { 
                     fow.active = true;
                     StartCoroutine(fow.FindPlayer(moveSpeed, PlayerFound));
                 }
@@ -63,48 +50,34 @@ public class ChargeEnemy : Enemy
                     agent.ResetPath();
 
                     particleSystem.Play();
+                    animator.SetBool("isWalking", false);
+                    isWalking = false;
+                    animator.SetBool("isCharging", true);
+                    isCharging = true;
                     StartCoroutine(Attack(currentAttack));
+
+                    StartCoroutine(WaitForSecondsAndPlayParticles(0.5f, BackParticleSystem));
 
                     // Stop the particle system
                     particleSystem.Stop();
+                    StartCoroutine(WaitForSecondsAndStopParticles(1.0f, BackParticleSystem));
+                    StartCoroutine(WaitForSecondsAndStopRunningAnim(1.0f));
                 }
-
-                // if (dist <= currentAttack.range) 
-                // {   
-                //     // Play the particle system
-                //     particleSystem.Play();
-
-                //     // StopEnemy();
-                //     animator.SetBool("isWalking", false); 
-                //     isWalking = false;
-                //     animator.SetBool("isCharging", true);
-                //     isCharging = true;
-                //     // StartCoroutine(Attack(currentAttack));
-                     
-                    
-                //     isCharging = true;
-                //     StartCoroutine(WaitForSecondsAndPlayParticles(0.5f, BackParticleSystem));
-                    
-                //     // Stop the particle system
-                //     particleSystem.Stop();
-                //     StartCoroutine(WaitForSecondsAndStopParticles(1.0f, BackParticleSystem));
-                //     StartCoroutine(WaitForSecondsAndStopRunningAnim(1.0f));
-                // }
     
                 break;
             case EnemyState.Active:
 
-                // //play charging anim
-                // if (isCharging) 
-                // { 
-                //     animator.SetBool("isWalking", false);
-                //     animator.SetBool("isCharging", true);
-                // }
-                // else
-                // {
-                //     animator.SetBool("isWalking", true);
-                //     animator.SetBool("isCharging", false);
-                // }
+                //play charging anim
+                if (isCharging) 
+                { 
+                    animator.SetBool("isWalking", false);
+                    isCharging = true;
+                }
+                else
+                {
+                    animator.SetBool("isWalking", true);
+                    animator.SetBool("isCharging", false);
+                }
 
                 TestBehaviors.MoveForward(gameObject, chargeSpeed);
 
