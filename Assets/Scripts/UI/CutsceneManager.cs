@@ -20,7 +20,7 @@ public class CutsceneManager : MonoBehaviour
     [SerializeField]
     private string nextSceneName;
 
-    private RawImage image;
+    private Image image;
     private TextMeshProUGUI caption;
     private TextMeshProUGUI sizeCalc;
 
@@ -31,12 +31,15 @@ public class CutsceneManager : MonoBehaviour
     private bool pageComplete;
     private Coroutine typingText;
 
+    private GameObject fadeInOut;
+
     // Start is called before the first frame update
     void Start()
     {
-        image = _imageObj.GetComponent<RawImage>();
+        image = _imageObj.GetComponent<Image>();
         caption = _captionObj.GetComponent<TextMeshProUGUI>();
         sizeCalc = _sizeCalcObj.GetComponent<TextMeshProUGUI>();
+        fadeInOut = GameObject.Find("FadeInOut");
         continueArrow.SetActive(false);
 
         TextAsset jsonObj = Resources.Load<TextAsset>(System.String.Format("Cutscenes/{0}", jsonName));
@@ -46,22 +49,39 @@ public class CutsceneManager : MonoBehaviour
         else {
             cutscene = JsonUtility.FromJson<Cutscene>(jsonObj.text);
         }
+        StartCoroutine(StartCutscene());
+    }
+
+    IEnumerator StartCutscene() {
+        currentPage = cutscene.pages[0];
+
+        image.sprite = Resources.Load<Sprite>("Cutscenes/Images/" + currentPage.image); 
+        yield return new WaitForSeconds(1.5f);
         pageIdx = 0;
         UpdatePage();
     }
 
     void UpdatePage() {
         if (pageIdx == cutscene.pages.Length) {
-            SceneManager.LoadScene(nextSceneName, LoadSceneMode.Single);
-            return;
+            StartCoroutine(DelayLoad());
         }
-        currentPage = cutscene.pages[pageIdx];
+        else {
+            currentPage = cutscene.pages[pageIdx];
 
-        image.texture = Resources.Load<Texture2D>("Cutscenes/Images/" + currentPage.image); 
-        sizeCalc.text = currentPage.caption;
-        Canvas.ForceUpdateCanvases();
-        _captionObj.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, sizeCalc.textBounds.size.x);
-        typingText = StartCoroutine(PlayText());
+            image.sprite = Resources.Load<Sprite>("Cutscenes/Images/" + currentPage.image); 
+            print(currentPage.image);
+            print(image.sprite);
+            sizeCalc.text = currentPage.caption;
+            Canvas.ForceUpdateCanvases();
+            _captionObj.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, sizeCalc.textBounds.size.x);
+            typingText = StartCoroutine(PlayText());
+        }
+    }
+
+    IEnumerator DelayLoad() {
+        fadeInOut.GetComponent<Animator>().SetTrigger("FadeOut");
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(nextSceneName, LoadSceneMode.Single);
     }
     
 	IEnumerator PlayText()
