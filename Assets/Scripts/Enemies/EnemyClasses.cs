@@ -15,7 +15,7 @@ public enum EnemyState
 
 public abstract class Enemy: MonoBehaviour
 {
-     [SerializeField] GameObject _AngyInd;
+    [SerializeField] GameObject _AngyInd;
     [SerializeField]
     int _maxHealth;
     [SerializeField]
