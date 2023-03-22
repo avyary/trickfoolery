@@ -241,12 +241,13 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeHit(Enemy attacker, int damage)
     {
-        if (state == AbilityState.dead || isInvincible)
+        if (state == AbilityState.dead || isInvincible || gameManager.state == GameState.Tutorial)
         {
             return;
         }
         
         health -= damage; //TODO: change once attack damages have been tweaked
+        print(health);
         if (health <= 0)
         {
             uiManager.UpdateHealth(0f);

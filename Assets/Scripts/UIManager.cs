@@ -54,17 +54,10 @@ public class UIManager : MonoBehaviour
 
     public void UpdateHealth(float healthPercent) {
         int newHearts = (int) Mathf.Floor(healthPercent * health.transform.childCount);
-        print("here: " + newHearts + "/" + heartsActive + "/" + health.transform.childCount);
         if (newHearts < heartsActive) {
-            for (int heartIdx = newHearts; heartIdx < health.transform.childCount; heartIdx++) {
-                health.transform.GetChild(heartIdx).gameObject.GetComponent<Image>().color = Color.clear;
-                heartsActive--;
-            }
-        }
-        if (newHearts > heartsActive) {
-            for (int heartIdx = heartsActive; heartIdx < health.transform.childCount; heartIdx++) {
-                health.transform.GetChild(heartIdx).gameObject.GetComponent<Image>().color = Color.white;
-                heartsActive++;
+            for (int heartIdx = newHearts; heartIdx < heartsActive; heartIdx++) {
+                //health.transform.GetChild(heartIdx).gameObject.GetComponent<Image>().color = Color.clear;
+                health.transform.GetChild(heartIdx).gameObject.SetActive(false);
             }
         }
     }
