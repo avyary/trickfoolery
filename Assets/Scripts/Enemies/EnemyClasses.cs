@@ -15,7 +15,10 @@ public enum EnemyState
 
 public abstract class Enemy: MonoBehaviour
 {
-    [SerializeField] GameObject _AngyInd;
+    [SerializeField] 
+    GameObject _AngyInd;
+    [SerializeField]
+    GameObject _AlertInd;
     [SerializeField]
     int _maxHealth;
     [SerializeField]
@@ -192,13 +195,19 @@ public abstract class Enemy: MonoBehaviour
         state = EnemyState.Tracking;
         Debug.Log("Player found!");
         gameObject.GetComponent<Patrol>().enabled = false;
+        PlayerDetected();
     }
 
-    protected virtual void DrawSphere()
+    protected virtual void PlayerDetected() 
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, fow.viewRadius);
+        _AlertInd.SetActive(true);
     }
+
+    // protected virtual void DrawSphere()
+    // {
+    //     Gizmos.color = Color.red;
+    //     Gizmos.DrawWireSphere(transform.position, fow.viewRadius);
+    // }
 
     // protected virtual void StopEnemy() 
     // {
