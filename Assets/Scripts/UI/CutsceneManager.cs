@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class CutsceneManager : MonoBehaviour
@@ -24,7 +25,7 @@ public class CutsceneManager : MonoBehaviour
     private TextMeshProUGUI caption;
     private TextMeshProUGUI sizeCalc;
 
-    private int pageIdx;
+    public int pageIdx;
     private Cutscene cutscene;
     private Page currentPage;
 
@@ -32,6 +33,11 @@ public class CutsceneManager : MonoBehaviour
     private Coroutine typingText;
 
     private GameObject fadeInOut;
+
+    [SerializeField]
+    private float timeBetweenLetters;
+    [SerializeField]
+    private UnityEvent CheckForTrigger;
 
     // Start is called before the first frame update
     void Start()
@@ -54,23 +60,30 @@ public class CutsceneManager : MonoBehaviour
 
     IEnumerator StartCutscene() {
         currentPage = cutscene.pages[0];
-
-        image.sprite = Resources.Load<Sprite>("Cutscenes/Images/" + currentPage.image); 
-        yield return new WaitForSeconds(1.5f);
+        if (currentPage.image is null) {
+            image.sprite = Resources.Load<Sprite>("Cutscenes/Images/black"); 
+        }
+        else {
+            image.sprite = Resources.Load<Sprite>("Cutscenes/Images/" + currentPage.image); 
+        }
+        yield return new WaitForSeconds(1f);
         pageIdx = 0;
         UpdatePage();
     }
 
-    void UpdatePage() {
+    public void UpdatePage() {
         if (pageIdx == cutscene.pages.Length) {
             StartCoroutine(DelayLoad());
         }
         else {
             currentPage = cutscene.pages[pageIdx];
-
-            image.sprite = Resources.Load<Sprite>("Cutscenes/Images/" + currentPage.image); 
-            print(currentPage.image);
-            print(image.sprite);
+            CheckForTrigger.Invoke();
+            if (currentPage.image is null) {
+                image.sprite = Resources.Load<Sprite>("Cutscenes/Images/black"); 
+            }
+            else {
+                image.sprite = Resources.Load<Sprite>("Cutscenes/Images/" + currentPage.image); 
+            }
             sizeCalc.text = currentPage.caption;
             Canvas.ForceUpdateCanvases();
             _captionObj.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, sizeCalc.textBounds.size.x);
@@ -92,7 +105,7 @@ public class CutsceneManager : MonoBehaviour
 		foreach (char c in currentPage.caption)
 		{
 			caption.text += c;
-			yield return new WaitForSeconds(0.1f);
+			yield return new WaitForSeconds(timeBetweenLetters);
 		}
         pageComplete = true;
         yield return new WaitForSeconds(1);
