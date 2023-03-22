@@ -519,10 +519,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 63b0671cae665ec47a6635c9652805a4, type: 2}
-    - target: {fileID: 9002951673298862270, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8530116321950674701, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
     - {fileID: 8530116322961737117, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
@@ -578,7 +574,6 @@ MonoBehaviour:
   _maxAnger: 0
   _basicAttack: {fileID: 7965258084496849679}
   _angyAttack: {fileID: 7965258084496849679}
-  _deathBubble: {fileID: 6701087185803249322}
   isAngy: 0
   state: 0
   tracking_distance: 6
@@ -628,6 +623,11 @@ MonoBehaviour:
   _damage: 25
   _stunTime: 0
   _range: 0
+--- !u!1 &4308359253193916746 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6467501688769242309, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+  m_PrefabInstance: {fileID: 7064867361109599631}
+  m_PrefabAsset: {fileID: 0}
 --- !u!198 &6653319639385915944 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 4494070817600710567, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
