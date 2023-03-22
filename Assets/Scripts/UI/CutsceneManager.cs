@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class CutsceneManager : MonoBehaviour
@@ -20,23 +21,31 @@ public class CutsceneManager : MonoBehaviour
     [SerializeField]
     private string nextSceneName;
 
-    private RawImage image;
+    private Image image;
     private TextMeshProUGUI caption;
     private TextMeshProUGUI sizeCalc;
 
-    private int pageIdx;
+    public int pageIdx;
     private Cutscene cutscene;
     private Page currentPage;
 
     private bool pageComplete;
     private Coroutine typingText;
 
+    private GameObject fadeInOut;
+
+    [SerializeField]
+    private float timeBetweenLetters;
+    [SerializeField]
+    private UnityEvent CheckForTrigger;
+
     // Start is called before the first frame update
     void Start()
     {
-        image = _imageObj.GetComponent<RawImage>();
+        image = _imageObj.GetComponent<Image>();
         caption = _captionObj.GetComponent<TextMeshProUGUI>();
         sizeCalc = _sizeCalcObj.GetComponent<TextMeshProUGUI>();
+        fadeInOut = GameObject.Find("FadeInOut");
         continueArrow.SetActive(false);
 
         TextAsset jsonObj = Resources.Load<TextAsset>(System.String.Format("Cutscenes/{0}", jsonName));
@@ -46,22 +55,46 @@ public class CutsceneManager : MonoBehaviour
         else {
             cutscene = JsonUtility.FromJson<Cutscene>(jsonObj.text);
         }
+        StartCoroutine(StartCutscene());
+    }
+
+    IEnumerator StartCutscene() {
+        currentPage = cutscene.pages[0];
+        if (currentPage.image is null) {
+            image.sprite = Resources.Load<Sprite>("Cutscenes/Images/black"); 
+        }
+        else {
+            image.sprite = Resources.Load<Sprite>("Cutscenes/Images/" + currentPage.image); 
+        }
+        yield return new WaitForSeconds(1f);
         pageIdx = 0;
         UpdatePage();
     }
 
-    void UpdatePage() {
+    public void UpdatePage() {
         if (pageIdx == cutscene.pages.Length) {
-            SceneManager.LoadScene(nextSceneName, LoadSceneMode.Single);
-            return;
+            StartCoroutine(DelayLoad());
         }
-        currentPage = cutscene.pages[pageIdx];
+        else {
+            currentPage = cutscene.pages[pageIdx];
+            CheckForTrigger.Invoke();
+            if (currentPage.image is null) {
+                image.sprite = Resources.Load<Sprite>("Cutscenes/Images/black"); 
+            }
+            else {
+                image.sprite = Resources.Load<Sprite>("Cutscenes/Images/" + currentPage.image); 
+            }
+            sizeCalc.text = currentPage.caption;
+            Canvas.ForceUpdateCanvases();
+            _captionObj.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, sizeCalc.textBounds.size.x);
+            typingText = StartCoroutine(PlayText());
+        }
+    }
 
-        image.texture = Resources.Load<Texture2D>("Cutscenes/Images/" + currentPage.image); 
-        sizeCalc.text = currentPage.caption;
-        Canvas.ForceUpdateCanvases();
-        _captionObj.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, sizeCalc.textBounds.size.x);
-        typingText = StartCoroutine(PlayText());
+    IEnumerator DelayLoad() {
+        fadeInOut.GetComponent<Animator>().SetTrigger("FadeOut");
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(nextSceneName, LoadSceneMode.Single);
     }
     
 	IEnumerator PlayText()
@@ -72,7 +105,7 @@ public class CutsceneManager : MonoBehaviour
 		foreach (char c in currentPage.caption)
 		{
 			caption.text += c;
-			yield return new WaitForSeconds(0.1f);
+			yield return new WaitForSeconds(timeBetweenLetters);
 		}
         pageComplete = true;
         yield return new WaitForSeconds(1);
