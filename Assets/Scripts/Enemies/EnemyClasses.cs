@@ -133,7 +133,7 @@ public abstract class Enemy: MonoBehaviour
     public virtual IEnumerator Die()
     {
         hypeManager.IncreaseHype(hypeManager.DEATH_HYPE);
-        deathBubble.SetActive(true);
+        //deathBubble.SetActive(true);
 
         fow.active = false;
         basicAttack.Deactivate();  // deactivate attack collider
@@ -237,8 +237,8 @@ public abstract class Enemy: MonoBehaviour
         basicAttack = _basicAttack;
         angyAttack = _angyAttack;
         currentAttack = _basicAttack;
-        deathBubble = _deathBubble;
-        deathBubble.SetActive(false);
+        // deathBubble = _deathBubble;
+        // deathBubble.SetActive(false);
         player = GameObject.FindWithTag("Player");
         hypeManager = GameObject.Find("Game Manager").GetComponent<HypeManager>();
         fow = gameObject.GetComponent<FieldOfView>();
