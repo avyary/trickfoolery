@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -20,18 +21,25 @@ public class DialogueManager : MonoBehaviour
     private LoadedDScenes loadedDScenes;
     private TextMeshProUGUI nameText;
     private TextMeshProUGUI speechText;
-    private RawImage portraitImg;
+    private Image portraitImg;
 
     private bool sceneIsActive = false;
     private int lineIdx = 0;
     private DScene targetScene;
+
+    private System.Action sceneCallback;
+    
+    private bool inDelay = false;
+
+    [SerializeField]
+    UnityEvent[] triggers;
 
     // Start is called before the first frame update
     void Start()
     {
         nameText = nameTextObj.GetComponent<TextMeshProUGUI>();
         speechText = speechTextObj.GetComponent<TextMeshProUGUI>();
-        portraitImg = portraitObj.GetComponent<RawImage>();
+        portraitImg = portraitObj.GetComponent<Image>();
 
         TextAsset jsonObj = Resources.Load<TextAsset>(System.String.Format("Dialogue/{0}", jsonName));
         if (jsonObj is null) {
@@ -51,13 +59,14 @@ public class DialogueManager : MonoBehaviour
             StartDialogueScene("testScene");
         }
 
-        if (sceneIsActive && Input.GetKeyDown(KeyCode.Space)) {
-            ProgressScene();
+        if (sceneIsActive && !inDelay && Input.GetButtonDown("Confirm")) {
+            StartCoroutine(ProgressScene());
         }
     }
 
-    void StartDialogueScene(string sceneName)
+    public void StartDialogueScene(string sceneName, System.Action callback = null)
     {
+        sceneCallback = callback;
         if (sceneIsActive) {
             return;
         }
@@ -70,30 +79,44 @@ public class DialogueManager : MonoBehaviour
         sceneIsActive = true;
         
         lineIdx = 0;
-        ProgressScene(0);
+        StartCoroutine(ProgressScene(0));
     }
 
-    void ProgressScene(int jump = 1) {
+    IEnumerator ProgressScene(int jump = 1) {
         if (!sceneIsActive) {
-            return;
+            yield return null;
         }
         lineIdx += jump;
         if (lineIdx >= targetScene.lines.Length) {
             EndScene();
-            return;
+            yield return null;
         }
-
-        DLine newLine = targetScene.lines[lineIdx];
-        nameText.text = newLine.name;
-        speechText.text = newLine.text;
-        portraitImg.texture = Resources.Load<Texture2D>("Dialogue/Portraits/" + newLine.portrait);
+        else {
+            DLine newLine = targetScene.lines[lineIdx];
+            if (newLine.trigger) {
+                triggers[newLine.triggerIdx].Invoke();
+                if (newLine.delay > 0f) {
+                    inDelay = true;
+                    yield return new WaitForSecondsRealtime(newLine.delay);
+                    inDelay = false;
+                }
+            }
+            else {
+                nameText.text = newLine.name;
+                speechText.text = newLine.text;
+                portraitImg.sprite = Resources.Load<Sprite>("Dialogue/Portraits/" + newLine.portrait);
+                yield return null;
+            }
+        }
     }
 
     void EndScene() {
         dialogueUI.SetActive(false);
         sceneIsActive = false;
+        if (sceneCallback != null) {
+            sceneCallback();
+        }
     }
-
 }
 
 [System.Serializable]
@@ -115,4 +138,7 @@ public class DLine
     public string name;
     public string text;
     public string portrait;
+    public bool trigger;
+    public int triggerIdx;
+    public float delay;
 }

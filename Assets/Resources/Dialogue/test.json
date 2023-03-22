@@ -1,27 +1,97 @@
 {
   "scenes": [
     {
-      "sceneName": "testScene",
+      "sceneName": "dodgeFail",
       "lines": [
         {
-          "name": "snake",
-          "text": "WOAH!!!",
-          "portrait": "snake"
+          "name": "Commentator",
+          "text": "Hm, that's not the DODGE with [Space] or [Right Trigger] we know and love... let's try again."
         },
         {
-          "name": "snake",
-          "text": "A DIALOGUE SYSTEM!!!!!!!!",
-          "portrait": "snake"
+          "name": "Commentator",
+          "text": "Hm, that's not the DODGE with [Space] or [Right Trigger] we know and love... let's try again.",
+          "trigger": true,
+          "triggerIdx": 2,
+          "delay": 1
+        }
+      ]
+    },
+    {
+      "sceneName": "dodgeSuccess",
+      "lines": [
+        {
+          "name": "Commentator",
+          "text": "Wowza, that was exhilarating! It's getting HOT in the stadium!"
         },
         {
-          "name": "snake",
-          "text": "thats so crazy lol",
-          "portrait": "snake"
+          "name": "Commentator",
+          "text": "Close dodges and collisions like that make the crowd go WILD!"
         },
         {
-          "name": "snake",
-          "text": "check out test.json to see how this works (or just ask me)",
-          "portrait": "snake"
+          "trigger": true,
+          "triggerIdx": 3,
+          "delay": 1
+        },
+        {
+          "name": "Commentator",
+          "text": "See? Fill up our newly patented HYPE METER and who knows what'll happen! Show us what you got, Nuck Chorris!"
+        },
+        {
+          "name": "Tom",
+          "text": "I said I'm not Nuck Chorris!"
+        }
+      ]
+    },
+    {
+      "sceneName": "tutorial0",
+      "lines": [
+        {
+          "name": "???",
+          "text": "Finally, our intrepid hero awakens!"
+        },
+        {
+          "name": "???",
+          "text": "Finally, our intrepid hero awakens!",
+          "trigger": true,
+          "triggerIdx": 0,
+          "delay": 1
+        },
+        {
+          "name": "Commentator",
+          "text": "Behold, the great NUCK CHORRIS! Legendary Earthling fighter extaordinare!"
+        },
+        {
+          "name": "Tom",
+          "text": "Huh… where am I?"
+        },
+        {
+          "name": "Commentator",
+          "text": "Mr. Chorris, I'm pleased to say that you're on the greatest stage this side of the Milky Way!"
+        },
+        {
+          "name": "Tom",
+          "text": "What!? I'm not Nuck Chorris! Who are you? Are you an alien?"
+        },
+        {
+          "name": "Commentator",
+          "text": "No need to be humble, Mr. Chorris - we're your biggest fans! YOU'RE the real star of this show!"
+        },
+        {
+          "trigger": true,
+          "triggerIdx": 1,
+          "delay": 2
+        },
+        {
+          "name": "Tom",
+          "text": "Who are these guys!?"
+        },
+        {
+          "name": "Commentator",
+          "text": "Ohoho, looks like two of our greatest fighters have arrived!"
+        },
+        {
+          "name": "Commentator",
+          "text": "Can our dear Nuck Chorris DODGE their attacks by pressing [Space] or [Right Trigger?]?"
         }
       ]
     }

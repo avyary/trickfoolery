@@ -6287,6 +6287,7 @@ GameObject:
   - component: {fileID: 7348285350714559333}
   - component: {fileID: 26768930793932778}
   - component: {fileID: 7888766320532235527}
+  - component: {fileID: 4808332108238643349}
   m_Layer: 7
   m_Name: ChargeEnemyFinal 2
   m_TagString: Enemy
@@ -6381,6 +6382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _AngyInd: {fileID: 2618155974825755155}
+  _AlertInd: {fileID: 0}
   _maxHealth: 1
   _moveSpeed: 0.01
   _maxAnger: 1
@@ -6486,6 +6488,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 15
+--- !u!95 &4808332108238643349
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8157556152595408473}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &8157556153120589609
 GameObject:
   m_ObjectHideFlags: 0

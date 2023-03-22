@@ -10,7 +10,8 @@ public enum EnemyState
     Active,      // 3 - attacking, hitbox active
     Recovery,    // 4 - finishing attack
     Stunned,     // 5 - hit by attack, trap, etc. and stunned - cannot move, attack
-    Dead         // 6 - rip
+    Dead,        // 6 - rip
+    Spawning
 }
 
 public abstract class Enemy: MonoBehaviour
@@ -33,7 +34,7 @@ public abstract class Enemy: MonoBehaviour
     GameObject _deathBubble;
 
     public bool isAngy;
-    protected Attack currentAttack;
+    public Attack currentAttack;
 
     protected int maxHealth { get; set; }
     protected Attack basicAttack { get; set; }
@@ -161,7 +162,7 @@ public abstract class Enemy: MonoBehaviour
        _AlertInd.SetActive(true);
     }
 
-    protected IEnumerator Attack(Attack attackObj) {
+    public IEnumerator Attack(Attack attackObj) {
         // trigger attack animation here
         state = EnemyState.Startup;
         // Debug.Log("Attacking Time");
@@ -231,8 +232,8 @@ public abstract class Enemy: MonoBehaviour
         maxHealth = _maxHealth;
         health = _maxHealth;
         maxAnger = _maxAnger;
+        StartCoroutine(DelayStart());
         anger = 0;
-        state = EnemyState.Passive;
         moveSpeed = _moveSpeed;
         basicAttack = _basicAttack;
         angyAttack = _angyAttack;
@@ -245,6 +246,12 @@ public abstract class Enemy: MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         centrePoint = agent.transform;
         audioSource = GetComponent<AudioSource>();
+    }
+
+    IEnumerator DelayStart() {
+        state = EnemyState.Spawning;
+        yield return new WaitForSecondsRealtime(0.5f);
+        state = EnemyState.Passive;
     }
 
 }

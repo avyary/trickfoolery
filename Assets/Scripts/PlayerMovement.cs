@@ -116,12 +116,14 @@ public class PlayerMovement : MonoBehaviour
         camRight = camera.transform.right;
         camRight.y = 0f;
         camRight.Normalize();
+
+        transform.rotation = Quaternion.LookRotation(camForward * -1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.state == GameState.Combat) {
+        if (gameManager.state == GameState.Combat || gameManager.state == GameState.Tutorial) {
             //Calculate Inputs for player movement
             _playerInputVertical = Input.GetAxisRaw("Vertical");
             _playerInputHorizontal = Input.GetAxisRaw("Horizontal");
@@ -157,7 +159,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (gameManager.state == GameState.Combat) {
+        if (gameManager.state == GameState.Combat || gameManager.state == GameState.Tutorial) {
             if (state == AbilityState.walking) 
                 _movementController.Move(_movementDirection * WALKSPEED * Time.deltaTime);
             if (state == AbilityState.dashing)
