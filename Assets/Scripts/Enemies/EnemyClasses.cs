@@ -18,6 +18,8 @@ public abstract class Enemy: MonoBehaviour
     [SerializeField]
     GameObject _AngyInd;
     [SerializeField]
+    GameObject _AlertInd;
+    [SerializeField]
     int _maxHealth;
     [SerializeField]
     float _moveSpeed;
@@ -153,6 +155,12 @@ public abstract class Enemy: MonoBehaviour
         }else{_AngyInd.SetActive(false);}
     }
 
+    // 
+    protected virtual void PlayerDetected()
+    {
+       _AlertInd.SetActive(true);
+    }
+
     protected IEnumerator Attack(Attack attackObj) {
         // trigger attack animation here
         state = EnemyState.Startup;
@@ -192,6 +200,7 @@ public abstract class Enemy: MonoBehaviour
         state = EnemyState.Tracking;
         // Debug.Log("Player found!");
         gameObject.GetComponent<Patrol>().enabled = false;
+        PlayerDetected();
     }
 
     protected virtual void DrawSphere()
