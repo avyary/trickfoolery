@@ -10,7 +10,8 @@ public enum EnemyState
     Active,      // 3 - attacking, hitbox active
     Recovery,    // 4 - finishing attack
     Stunned,     // 5 - hit by attack, trap, etc. and stunned - cannot move, attack
-    Dead         // 6 - rip
+    Dead,        // 6 - rip
+    Spawning
 }
 
 public abstract class Enemy: MonoBehaviour
@@ -30,9 +31,10 @@ public abstract class Enemy: MonoBehaviour
     [SerializeField]
     Attack _angyAttack;
     [SerializeField]
+    GameObject _deathBubble;
 
     public bool isAngy;
-    protected Attack currentAttack;
+    public Attack currentAttack;
 
     protected int maxHealth { get; set; }
     protected Attack basicAttack { get; set; }
@@ -54,6 +56,8 @@ public abstract class Enemy: MonoBehaviour
     protected NavMeshAgent agent;   // this is the enemy
     protected float range = 21.76f;  // radius of sphere for generating a random point
     protected Transform centrePoint;    // centre of the map (try setting it to the agent for fun?)
+
+    protected GameObject deathBubble;
 
 
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
@@ -129,17 +133,13 @@ public abstract class Enemy: MonoBehaviour
     public virtual IEnumerator Die()
     {
         hypeManager.IncreaseHype(hypeManager.DEATH_HYPE);
+        deathBubble.SetActive(true);
 
         fow.active = false;
         basicAttack.Deactivate();  // deactivate attack collider
 
-        // the following is just for fun
-        GetComponent<MeshRenderer>().material.color = Color.black;
-        Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>();
-        rigidBody.constraints = RigidbodyConstraints.None;
-
         state = EnemyState.Dead;
-        yield return new WaitForSeconds(0.5f);  // waits for 3 seconds before destroying object
+        yield return new WaitForSeconds(0.5f);  // waits before destroying object
 
         Destroy(gameObject);
     }
@@ -156,7 +156,7 @@ public abstract class Enemy: MonoBehaviour
         }else{_AngyInd.SetActive(false);}
     }
 
-    protected IEnumerator Attack(Attack attackObj) {
+    public IEnumerator Attack(Attack attackObj) {
         // trigger attack animation here
         state = EnemyState.Startup;
         // Debug.Log("Attacking Time");
@@ -193,7 +193,7 @@ public abstract class Enemy: MonoBehaviour
     {
         // animation for finding player?
         state = EnemyState.Tracking;
-        Debug.Log("Player found!");
+        // Debug.Log("Player found!");
         gameObject.GetComponent<Patrol>().enabled = false;
         PlayerDetected();
     }
@@ -231,18 +231,26 @@ public abstract class Enemy: MonoBehaviour
         maxHealth = _maxHealth;
         health = _maxHealth;
         maxAnger = _maxAnger;
+        StartCoroutine(DelayStart());
         anger = 0;
-        state = EnemyState.Passive;
         moveSpeed = _moveSpeed;
         basicAttack = _basicAttack;
         angyAttack = _angyAttack;
         currentAttack = _basicAttack;
+        deathBubble = _deathBubble;
+        deathBubble.SetActive(false);
         player = GameObject.FindWithTag("Player");
         hypeManager = GameObject.Find("Game Manager").GetComponent<HypeManager>();
         fow = gameObject.GetComponent<FieldOfView>();
         agent = GetComponent<NavMeshAgent>();
         centrePoint = agent.transform;
         audioSource = GetComponent<AudioSource>();
+    }
+
+    IEnumerator DelayStart() {
+        state = EnemyState.Spawning;
+        yield return new WaitForSecondsRealtime(0.5f);
+        state = EnemyState.Passive;
     }
 
 }

@@ -28,7 +28,7 @@ public class ChargeEnemy : Enemy
 
     void Update() 
     {   
-        Debug.Log(System.String.Format("State: {0}", state));
+        // Debug.Log(System.String.Format("State: {0}", state));
         switch(state)
         {
             case EnemyState.Passive:

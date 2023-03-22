@@ -9,7 +9,8 @@ using UnityEngine.Events;
 public enum GameState {
     PreCombat,
     Combat,
-    PostCombat
+    PostCombat,
+    Tutorial
 }
 
 public class GameManager : MonoBehaviour
@@ -61,7 +62,6 @@ public class GameManager : MonoBehaviour
         StartCoroutine(StartLevel());
     }
 
-
     IEnumerator StartLevel() {
         yield return new WaitForSecondsRealtime(1f); // wait for fade-in animation
         bool hasPersistentTarget = false;
@@ -92,17 +92,13 @@ public class GameManager : MonoBehaviour
         {
             TogglePauseMenu();
         }
-        if (GameObject.FindGameObjectsWithTag("Enemy").Length < minEnemyNumber)
+        if (state == GameState.Combat && GameObject.FindGameObjectsWithTag("Enemy").Length < minEnemyNumber)
         {
             SpawnRandomEnemy();
         }
         if (isGameOver && Input.GetButtonDown("Confirm"))
         {
             StartCoroutine(LoadNextScene());
-        }
-        if (showPauseMenu && Input.GetButtonDown("Confirm")) {
-            HidePauseMenu();
-            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
         }
     }
 
@@ -115,7 +111,6 @@ public class GameManager : MonoBehaviour
         else {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-
     }
 
     bool TogglePauseMenu()
@@ -151,7 +146,7 @@ public class GameManager : MonoBehaviour
         PauseGame();
     }
 
-    void HidePauseMenu() {
+    public void HidePauseMenu() {
         unpSFX.Post(gameObject);
         showPauseMenu = false;
         uiManager.HidePauseMenu();
