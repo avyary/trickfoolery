@@ -60,8 +60,13 @@ namespace Attacks
                 
                 timer += Time.deltaTime;
             }
-            Debug.Log("Shockwave basic attack update");
+
+            if (boxCollider.center != initialCenter && boxCollider.size != initialSize)
+            {
+                Debug.Log("Shockwave basic attack update");
+            }
             
+
             // Initialize the shockwave object. 
             // instantiateShockwave = true;
 
@@ -72,12 +77,29 @@ namespace Attacks
             
             // wait for ShockwaveLastTime = 3 seconds
             // System.Threading.Thread.Sleep(3000);
+            StartCoroutine(Freeze(activeTime));
             
             // reset the hit box to original states
             boxCollider.center = initialCenter;
             boxCollider.size = initialSize;
             
-            Debug.Log("Shockwave basic attack reset");
+            if (boxCollider.center == initialCenter && boxCollider.size == initialSize)
+            {
+                Debug.Log("Shockwave basic attack reset");
+            }
+        }
+        
+        
+        IEnumerator Freeze(float sec) {
+            // Save the object's current position
+            Vector3 originalPosition = transform.position;
+
+            // Set the object's position to its current position, effectively "freezing" it
+            transform.position = originalPosition;
+
+            // Wait for ___ seconds
+            yield return new WaitForSeconds(sec);
         }
     }
+    
 }

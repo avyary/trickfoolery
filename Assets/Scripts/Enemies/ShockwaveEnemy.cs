@@ -58,7 +58,7 @@ public class ShockwaveEnemy : Enemy
         {
             case EnemyState.Passive:
                 Debug.Log("Shockwave is Passive");
-                // state = EnemyState.Tracking;
+                state = EnemyState.Tracking;
                 if (agent.isStopped) 
                 {
                     agent.isStopped = false;
@@ -79,7 +79,7 @@ public class ShockwaveEnemy : Enemy
                 MoveTowardsPlayer(gameObject, player);
                 
                 float dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
-                Debug.Log("Shockwave distance to player: " + dist);
+                // Debug.Log("Shockwave distance to player: " + dist);
                 
                 if ( dist <= currentAttack.range)
                 {
@@ -196,7 +196,7 @@ public class ShockwaveEnemy : Enemy
         // Set the object's position to its current position, effectively "freezing" it
         transform.position = originalPosition;
 
-        // Wait for 3 seconds
+        // Wait for ___ seconds
         yield return new WaitForSeconds(sec);
     }
     
