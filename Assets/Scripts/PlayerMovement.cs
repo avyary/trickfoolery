@@ -127,6 +127,15 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
+            StartCoroutine(Die());
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2)) {
+            TakeHit(10);
+        }
+        if (state == AbilityState.dead) {
+            return;
+        }
         if (gameManager.state == GameState.Combat || gameManager.state == GameState.Tutorial) {
             //Calculate Inputs for player movement
             _playerInputVertical = Input.GetAxisRaw("Vertical");
@@ -134,14 +143,15 @@ public class PlayerMovement : MonoBehaviour
             _movementDirection = camForward * _playerInputVertical + camRight * _playerInputHorizontal;
             _movementDirection.Normalize();
 
-            if (_movementDirection != Vector3.zero && state == AbilityState.walking)
+            if (_movementDirection != Vector3.zero)
             {
                 tomAnimator.SetBool("isRunning", true);
-                transform.forward = _movementDirection;
+                if (state == AbilityState.walking) {
+                    transform.forward = _movementDirection;
+                }
             }
             else {
                 tomAnimator.SetBool("isRunning", false);
-
             }
 
             if (Input.GetButtonDown("Dash") && dashCdTimer <= 0)
@@ -249,7 +259,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    public void TakeHit(Enemy attacker, int damage)
+    public void TakeHit(int damage, Enemy attacker = null)
     {
         if (state == AbilityState.dead || isInvincible || gameManager.state == GameState.Tutorial)
         {
@@ -265,11 +275,11 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            tomAnimator.SetTrigger("GetHurt");
             uiManager.UpdateHealth((float) health / MAX_HEALTH);
             playerHurtSFX.Post(gameObject);
             StartCoroutine(GetStunned());
             StartCoroutine(InvincibilityFrames(hitInvincibility));
-            StartCoroutine(FlashOnHit());
         }
     }
 
@@ -284,14 +294,17 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator GetStunned() {
         state = AbilityState.damage;
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.75f);
         state = AbilityState.walking;
     }
 
     IEnumerator Die()
     {
+        state = AbilityState.dead;
         GetComponent<MeshRenderer>().material.color = Color.black;
+        tomAnimator.SetTrigger("Die");
         playerDeathSFX.Post(gameObject);
+        yield return new WaitForSeconds(3f);
         gameManager.GameOverLose();
         yield return null;
     }
