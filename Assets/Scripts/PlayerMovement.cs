@@ -87,6 +87,8 @@ public class PlayerMovement : MonoBehaviour
     public AbilityState state;
     public FieldOfView fov;
 
+    private Animator tomAnimator;
+
     public enum AbilityState
     {
         walking,
@@ -108,6 +110,8 @@ public class PlayerMovement : MonoBehaviour
         tauntMat = Resources.Load("TauntColor", typeof(Material)) as Material;
         tomRender = tomRenderObj.GetComponent<SkinnedMeshRenderer>();
         originalMat = tomRender.material;
+        
+        tomAnimator = GameObject.Find("Idle_TOM").GetComponent<Animator>();
 
         camera = GameObject.FindWithTag("MainCamera");
         camForward = camera.transform.forward;
@@ -132,8 +136,13 @@ public class PlayerMovement : MonoBehaviour
 
             if (_movementDirection != Vector3.zero && state == AbilityState.walking)
             {
+                tomAnimator.SetBool("isRunning", true);
                 transform.forward = _movementDirection;
-            } ;
+            }
+            else {
+                tomAnimator.SetBool("isRunning", false);
+
+            }
 
             if (Input.GetButtonDown("Dash") && dashCdTimer <= 0)
             {
@@ -173,6 +182,8 @@ public class PlayerMovement : MonoBehaviour
         StartCoroutine(InvincibilityFrames(DASHTIME));
         dashCdTimer = DASHCD;
         float startTime = Time.time;
+        tomAnimator.SetTrigger("StartDodge");
+        dashSFX.Post(gameObject);
 
         while (Time.time < startTime + DASHTIME)
         {
@@ -183,7 +194,6 @@ public class PlayerMovement : MonoBehaviour
 
         state = AbilityState.walking;
 
-        dashSFX.Post(gameObject);
     }
 
 
