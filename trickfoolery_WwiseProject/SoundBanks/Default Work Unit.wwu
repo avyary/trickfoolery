@@ -6,14 +6,11 @@
 				<SoundBank Name="Main" ID="{FCC95966-8BC9-428F-A86F-77BD80236DCE}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_sfx_player_death" ID="{CAC80460-81AC-420B-AD88-E8FA18AC9974}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Mute_mus_Pause_loop_75bpm" ID="{D52F7A26-9472-425B-91B3-2086AB7F1402}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Unmute_mus_pause_75bpm" ID="{C3E827C6-F5CC-4329-985D-E19D22E9E34A}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_select" ID="{D9480393-0FF0-4478-941E-C2F83A21C8BD}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_charger_death" ID="{63384843-A4A4-44C3-AED2-9CDA3A9431A5}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_mus_Trickfoolery_222bpm" ID="{103A468D-C1A5-4619-8F4C-E88DFD668A3C}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_confirm" ID="{69F3C602-D088-4702-A2C0-78D74E58ADF3}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Unmute_mus_Pause_loop_75bpm" ID="{FCF5C962-C6BA-47B1-9EB4-C09FE99446B3}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_mus_Pause_loop_75bpm" ID="{32A56C24-3597-4883-8385-B4ED38065071}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Mute_mus_pause_75bpm" ID="{0E96271C-B559-48D8-B09B-94D3489189FD}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_unpause" ID="{EF55EFFC-D9BF-4914-B45F-C34160708C30}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="First_Time_Mute_mus_pause_75bpm" ID="{7288EC1A-8592-4957-B27E-E911D3B56F4A}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>

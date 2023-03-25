@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1447,9 +1447,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035075208}
     m_Modifications:
+    - target: {fileID: 1189042751039192913, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192915, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1189042751039192917, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: sceneName
       value: LVL2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192917, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: stopMUS.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c924ceb03bbf74d4d93f66afb60d6c55, type: 2}
+    - target: {fileID: 1189042751039192917, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: playmenuMUS.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192917, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: stopmenuMUS.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c924ceb03bbf74d4d93f66afb60d6c55, type: 2}
+    - target: {fileID: 1189042751039192918, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192918, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: triggerList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192919, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1189042751039192921, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: m_Pivot.x
@@ -1543,7 +1575,9 @@ PrefabInstance:
       propertyPath: m_text
       value: Play Level 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1189042751039192918, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+    - {fileID: 1189042751039192912, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
 --- !u!224 &564059918 stripped
 RectTransform:
@@ -2159,10 +2193,6 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  pauseMUS:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
   buttonSelected: 0
   changeCooldown: 0
 --- !u!1 &735361540
@@ -2738,9 +2768,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035075208}
     m_Modifications:
+    - target: {fileID: 1189042751039192915, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1189042751039192917, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: sceneName
       value: LVL3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192917, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: stopMUS.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c924ceb03bbf74d4d93f66afb60d6c55, type: 2}
+    - target: {fileID: 1189042751039192917, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: playmenuMUS.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192917, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: stopmenuMUS.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c924ceb03bbf74d4d93f66afb60d6c55, type: 2}
+    - target: {fileID: 1189042751039192919, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1189042751039192921, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: m_Pivot.x
@@ -2834,7 +2884,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Play Level 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1189042751039192912, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+    - {fileID: 1189042751039192913, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+    - {fileID: 1189042751039192918, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
 --- !u!1 &921363305
 GameObject:
@@ -2978,7 +3031,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1035075208}
   - component: {fileID: 1035075210}
-  - component: {fileID: 1035075211}
   - component: {fileID: 1035075213}
   - component: {fileID: 1035075212}
   m_Layer: 5
@@ -3029,36 +3081,8 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 97dd7c7403420934cbb20b802724a9ad, type: 2}
-  pauseMUS:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: bae2a58fb2d3ce04b83af8520f2c3155, type: 2}
   buttonSelected: 0
   changeCooldown: 0.3
---- !u!114 &1035075211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1035075207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a024f4daab4fd48b9aec34fb7e7acfaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 07fd65fa8e7b4074bb5d32c4ec66923d, type: 2}
-  decodeBank: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  bankNameInternal: 
-  valueGuidInternal: 
 --- !u!114 &1035075212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3066,7 +3090,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035075207}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d35d17f1ea614202b165015a99ee324, type: 3}
   m_Name: 
@@ -3095,7 +3119,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035075207}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00dc207cd212c4aef86b969b3ed284f3, type: 3}
   m_Name: 
@@ -3341,6 +3365,7 @@ GameObject:
   - component: {fileID: 1575200072}
   - component: {fileID: 1575200075}
   - component: {fileID: 1575200074}
+  - component: {fileID: 1575200076}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3442,6 +3467,30 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &1575200076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575200070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a024f4daab4fd48b9aec34fb7e7acfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: fc1f9883c2b632549b9f8bf6b3781cb7, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &1676630254
 GameObject:
   m_ObjectHideFlags: 0
@@ -4025,9 +4074,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035075208}
     m_Modifications:
+    - target: {fileID: 1189042751039192912, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192915, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1189042751039192917, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: sceneName
       value: LVL4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192917, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: stopMUS.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c924ceb03bbf74d4d93f66afb60d6c55, type: 2}
+    - target: {fileID: 1189042751039192917, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: playmenuMUS.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192917, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: stopmenuMUS.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c924ceb03bbf74d4d93f66afb60d6c55, type: 2}
+    - target: {fileID: 1189042751039192919, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1189042751039192921, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: m_Pivot.x
@@ -4121,7 +4194,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Play Level 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1189042751039192918, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+    - {fileID: 1189042751039192913, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+    - {fileID: 1189042751039192912, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
 --- !u!1 &1984488157
 GameObject:
@@ -4448,6 +4524,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035075208}
     m_Modifications:
+    - target: {fileID: 1189042751039192915, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192917, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: stopMUS.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c924ceb03bbf74d4d93f66afb60d6c55, type: 2}
+    - target: {fileID: 1189042751039192917, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: playmenuMUS.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: bae2a58fb2d3ce04b83af8520f2c3155, type: 2}
+    - target: {fileID: 1189042751039192917, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: stopmenuMUS.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c924ceb03bbf74d4d93f66afb60d6c55, type: 2}
+    - target: {fileID: 1189042751039192919, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1189042751039192921, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4536,7 +4632,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenuButton
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1189042751039192913, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+    - {fileID: 1189042751039192912, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+    - {fileID: 1189042751039192918, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
 --- !u!1001 &5432811644919237997
 PrefabInstance:
