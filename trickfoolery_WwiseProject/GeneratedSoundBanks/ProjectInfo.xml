@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="trickfoolery_WwiseProject" GUID="{6E0F5870-B26B-4C8E-92D3-3B50FF7F625B}" Generator="2022.1.2.8150"/>
+	<CacheRoot>../.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Mac" GUID="{CFD2EBEE-AB4C-46EF-B506-757E42C53958}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="Mac"/>
+		<Platform Name="Windows" GUID="{5A871C5F-B39D-456A-BA16-CFE5A97AFBE5}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{4850CD0F-46BC-45FB-B2A4-5292B02545F9}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{23726873-7320-5F64-3FB2-884739E0685C}</FileHash>
+</ProjectInfo>
