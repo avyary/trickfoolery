@@ -25,6 +25,7 @@ namespace AK
         static const AkUniqueID PLAY_SFX_PLAYER_DEATH = 1591758634U;
         static const AkUniqueID PLAY_SFX_PLAYER_HURT = 1067524079U;
         static const AkUniqueID PLAY_SFX_SELECT = 325086926U;
+        static const AkUniqueID PLAY_SFX_TOMSTEP = 2661393732U;
         static const AkUniqueID PLAY_SFX_UNPAUSE = 3476672187U;
         static const AkUniqueID STOP_MUS_TRICKFOOLERY_222BPM = 2601853237U;
         static const AkUniqueID UNMUTE_MUS_PAUSE_75BPM = 4152903754U;

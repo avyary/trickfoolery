@@ -23,18 +23,30 @@
 				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" GUID="{FCC95966-8BC9-428F-A86F-77BD80236DCE}" Language="SFX" Hash="{E381F76B-832D-1EBE-A207-9CD399B943A9}">
+		<SoundBank Id="3161908922" Type="User" GUID="{FCC95966-8BC9-428F-A86F-77BD80236DCE}" Language="SFX" Hash="{E89C477D-7730-5CFA-0A2F-2E554679A669}">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="21309808" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_tom_step_6.wav</ShortName>
+					<CachePath>SFX/sfx_tom_step_6_CB3BAB12.wem</CachePath>
+				</File>
 				<File Id="63593165" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_charger_hurt_3.wav</ShortName>
 					<CachePath>SFX/sfx_charger_hurt_3_10C4C929.wem</CachePath>
 				</File>
+				<File Id="103508686" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_tom_step_4.wav</ShortName>
+					<CachePath>SFX/sfx_tom_step_4_671EB80C.wem</CachePath>
+				</File>
 				<File Id="119466304" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_charger_hurt_2.wav</ShortName>
 					<CachePath>SFX/sfx_charger_hurt_2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="223658227" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_tom_step_2.wav</ShortName>
+					<CachePath>SFX/sfx_tom_step_2_10C4C929.wem</CachePath>
 				</File>
 				<File Id="224255706" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_Pause_loop_75bpm.wav</ShortName>
@@ -43,6 +55,10 @@
 				<File Id="275378158" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_charger_death_1.wav</ShortName>
 					<CachePath>SFX/sfx_charger_death_1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="376943216" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_tom_step_8.wav</ShortName>
+					<CachePath>SFX/sfx_tom_step_8_1AAF95E2.wem</CachePath>
 				</File>
 				<File Id="395767410" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_unpause_larose (1).wav</ShortName>
@@ -56,9 +72,17 @@
 					<ShortName>sfx_player_hurt_4.wav</ShortName>
 					<CachePath>SFX/sfx_player_hurt_4_10C4C929.wem</CachePath>
 				</File>
+				<File Id="423795870" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_tom_step_5.wav</ShortName>
+					<CachePath>SFX/sfx_tom_step_5_0F9684AA.wem</CachePath>
+				</File>
 				<File Id="429033431" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_dash.wav</ShortName>
 					<CachePath>SFX/sfx_player_dash_10C4C929.wem</CachePath>
+				</File>
+				<File Id="441169925" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_tom_step_9.wav</ShortName>
+					<CachePath>SFX/sfx_tom_step_9_5E691915.wem</CachePath>
 				</File>
 				<File Id="507762272" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_charger_death_2.wav</ShortName>
@@ -72,9 +96,21 @@
 					<ShortName>sfx_confirming_option_larose.wav</ShortName>
 					<CachePath>SFX/sfx_confirming_option_larose_10C4C929.wem</CachePath>
 				</File>
+				<File Id="672575856" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_tom_step_7.wav</ShortName>
+					<CachePath>SFX/sfx_tom_step_7_77A41413.wem</CachePath>
+				</File>
 				<File Id="673051370" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_mouse_select_larose.wav</ShortName>
 					<CachePath>SFX/sfx_mouse_select_larose_10C4C929.wem</CachePath>
+				</File>
+				<File Id="780761335" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_tom_step_10.wav</ShortName>
+					<CachePath>SFX/sfx_tom_step_10_DBCC2E29.wem</CachePath>
+				</File>
+				<File Id="849010360" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_tom_step_3.wav</ShortName>
+					<CachePath>SFX/sfx_tom_step_3_40D5B52A.wem</CachePath>
 				</File>
 				<File Id="1007579897" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_death.wav</ShortName>
@@ -83,6 +119,10 @@
 				<File Id="1033023117" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_trickfoolery_fullloop_222bpm.wav</ShortName>
 					<CachePath>SFX/mus_trickfoolery_fullloop_222bpm_21C37800.wem</CachePath>
+				</File>
+				<File Id="1043628278" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_tom_step_1.wav</ShortName>
+					<CachePath>SFX/sfx_tom_step_1_CEF5C489.wem</CachePath>
 				</File>
 				<File Id="1066273250" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_pause_larose.wav</ShortName>
@@ -151,6 +191,20 @@
 						<MediaRef Id="673051370"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2661393732" Name="Play_sfx_tomstep" ObjectPath="\Events\Default Work Unit\Play_sfx_tomstep" GUID="{1BC515F3-568C-4A8D-995F-DBFA44FF9E2A}" DurationType="OneShot" DurationMin="0.3406576" DurationMax="0.35616517">
+					<MediaRefs>
+						<MediaRef Id="21309808"/>
+						<MediaRef Id="103508686"/>
+						<MediaRef Id="223658227"/>
+						<MediaRef Id="376943216"/>
+						<MediaRef Id="423795870"/>
+						<MediaRef Id="441169925"/>
+						<MediaRef Id="672575856"/>
+						<MediaRef Id="780761335"/>
+						<MediaRef Id="849010360"/>
+						<MediaRef Id="1043628278"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3476672187" Name="Play_sfx_unpause" ObjectPath="\Events\Default Work Unit\Play_sfx_unpause" GUID="{EF55EFFC-D9BF-4914-B45F-C34160708C30}" DurationType="OneShot" DurationMin="2" DurationMax="2">
 					<MediaRefs>
 						<MediaRef Id="395767410"/>
@@ -161,5 +215,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C2A9862C-CBF3-5CFF-CF91-7E8A837EEEFD}</FileHash>
+	<FileHash>{B2E86674-24C6-15DA-9226-86331A178E67}</FileHash>
 </SoundBanksInfo>

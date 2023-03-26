@@ -221,6 +221,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_sfx_tomstep" ID="{1BC515F3-568C-4A8D-995F-DBFA44FF9E2A}">
+					<ChildrenList>
+						<Action Name="" ID="{1236A7ED-86CA-4E04-8002-730D0DD4D5B5}" ShortID="1052015958">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_tom_footsteps" ID="{6BE7082B-60F3-49AA-BA17-A1E1CA8E76CE}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

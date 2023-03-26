@@ -1005,7 +1005,7 @@
 							</ValueList>
 						</Property>
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -1030,6 +1030,7 @@
 									<PropertyList>
 										<Property Name="LoopEnd" Type="Real64" Value="0.150566271105355"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.353575559422735"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>sfx_tom_step_1.wav</AudioFile>
@@ -1090,6 +1091,7 @@
 									<PropertyList>
 										<Property Name="LoopEnd" Type="Real64" Value="0.15008576329331"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.351113716295428"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>sfx_tom_step_3.wav</AudioFile>
@@ -1116,6 +1118,7 @@
 									<PropertyList>
 										<Property Name="LoopEnd" Type="Real64" Value="0.149316713535042"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.353313236197175"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>sfx_tom_step_4.wav</AudioFile>
@@ -1142,6 +1145,7 @@
 									<PropertyList>
 										<Property Name="LoopEnd" Type="Real64" Value="0.149984208663454"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.356165168685685"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>sfx_tom_step_5.wav</AudioFile>
@@ -1168,6 +1172,7 @@
 									<PropertyList>
 										<Property Name="LoopEnd" Type="Real64" Value="0.15210081173693"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.35174741408873"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>sfx_tom_step_6.wav</AudioFile>
@@ -1194,6 +1199,7 @@
 									<PropertyList>
 										<Property Name="LoopEnd" Type="Real64" Value="0.150146556049521"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.351440693510699"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>sfx_tom_step_7.wav</AudioFile>
@@ -1221,6 +1227,7 @@
 										<Property Name="LoopBegin" Type="Real64" Value="0.00650605010443285"/>
 										<Property Name="LoopEnd" Type="Real64" Value="0.150506625749213"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.350992123304969"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>sfx_tom_step_8.wav</AudioFile>
@@ -1248,6 +1255,7 @@
 										<Property Name="LoopBegin" Type="Real64" Value="0.00811865283563397"/>
 										<Property Name="LoopEnd" Type="Real64" Value="0.151354885007176"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.352748735289348"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>sfx_tom_step_9.wav</AudioFile>
@@ -1275,6 +1283,7 @@
 										<Property Name="LoopBegin" Type="Real64" Value="0.023403772029109"/>
 										<Property Name="LoopEnd" Type="Real64" Value="0.155725098501379"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.354983239094778"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>sfx_tom_step_10.wav</AudioFile>
