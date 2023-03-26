@@ -33,6 +33,10 @@ public abstract class Enemy: MonoBehaviour
     [SerializeField]
     GameObject _deathBubble;
 
+    //wwise
+    public AK.Wwise.Event attackSFX;
+    public AK.Wwise.Event chargerDeathSFX;
+
     public bool isAngy;
     public Attack currentAttack;
 
@@ -138,6 +142,8 @@ public abstract class Enemy: MonoBehaviour
         fow.active = false;
         basicAttack.Deactivate();  // deactivate attack collider
 
+        chargerDeathSFX.Post(gameObject);
+
         state = EnemyState.Dead;
         yield return new WaitForSeconds(0.5f);  // waits before destroying object
 
@@ -169,6 +175,7 @@ public abstract class Enemy: MonoBehaviour
 
         state = EnemyState.Active;
         // Debug.Log("Active Attack!");
+        attackSFX.Post(gameObject);
         attackObj.Activate();  // activate attack collider
         yield return new WaitForSeconds(attackObj.activeTime);
 

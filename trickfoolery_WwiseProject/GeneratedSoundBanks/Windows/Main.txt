@@ -9,12 +9,15 @@ Event	ID	Name			Wwise Object Path	Notes
 	2758388342	Play_mus_Pause_75bpm			\Default Work Unit\Play_mus_Pause_75bpm	
 	3263497147	Play_mus_Trickfoolery_222bpm			\Default Work Unit\Play_mus_Trickfoolery_222bpm	
 	3476672187	Play_sfx_unpause			\Default Work Unit\Play_sfx_unpause	
+	3579375072	Play_charger_lunge			\Default Work Unit\Play_charger_lunge	
 	3683043420	Play_sfx_pause			\Default Work Unit\Play_sfx_pause	
 	3756680375	Mute_mus_pause_75bpm			\Default Work Unit\Mute_mus_pause_75bpm	
 	4077681152	Play_sfx_player_dash			\Default Work Unit\Play_sfx_player_dash	
 	4152903754	Unmute_mus_pause_75bpm			\Default Work Unit\Unmute_mus_pause_75bpm	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	63593165	sfx_charger_hurt_3	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_charger_hurt_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_charger_lunge\sfx_charger_hurt_3		176496
+	119466304	sfx_charger_hurt_2	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_charger_hurt_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_charger_lunge\sfx_charger_hurt_2		264696
 	224255706	mus_Pause_loop_75bpm	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\mus_Pause_loop_75bpm_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\mus_Pause_loop_75bpm		15670408
 	275378158	sfx_charger_death_1	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_charger_death_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_charger_death\sfx_charger_death_1		352896
 	395767410	sfx_unpause	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_unpause_larose (1)_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_unpause		352896
