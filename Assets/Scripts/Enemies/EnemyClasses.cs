@@ -10,13 +10,16 @@ public enum EnemyState
     Active,      // 3 - attacking, hitbox active
     Recovery,    // 4 - finishing attack
     Stunned,     // 5 - hit by attack, trap, etc. and stunned - cannot move, attack
-    Dead         // 6 - rip
+    Dead,        // 6 - rip
+    Spawning
 }
 
 public abstract class Enemy: MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField] 
     GameObject _AngyInd;
+    [SerializeField]
+    GameObject _AlertInd;
     [SerializeField]
     int _maxHealth;
     [SerializeField]
@@ -31,7 +34,7 @@ public abstract class Enemy: MonoBehaviour
     GameObject _deathBubble;
 
     public bool isAngy;
-    protected Attack currentAttack;
+    public Attack currentAttack;
 
     protected int maxHealth { get; set; }
     protected Attack basicAttack { get; set; }
@@ -130,7 +133,7 @@ public abstract class Enemy: MonoBehaviour
     public virtual IEnumerator Die()
     {
         hypeManager.IncreaseHype(hypeManager.DEATH_HYPE);
-        deathBubble.SetActive(true);
+        //deathBubble.SetActive(true);
 
         fow.active = false;
         basicAttack.Deactivate();  // deactivate attack collider
@@ -153,7 +156,7 @@ public abstract class Enemy: MonoBehaviour
         }else{_AngyInd.SetActive(false);}
     }
 
-    protected IEnumerator Attack(Attack attackObj) {
+    public IEnumerator Attack(Attack attackObj) {
         // trigger attack animation here
         state = EnemyState.Startup;
         // Debug.Log("Attacking Time");
@@ -192,13 +195,19 @@ public abstract class Enemy: MonoBehaviour
         state = EnemyState.Tracking;
         // Debug.Log("Player found!");
         gameObject.GetComponent<Patrol>().enabled = false;
+        PlayerDetected();
     }
 
-    protected virtual void DrawSphere()
+    protected virtual void PlayerDetected() 
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, fow.viewRadius);
+        _AlertInd.SetActive(true);
     }
+
+    // protected virtual void DrawSphere()
+    // {
+    //     Gizmos.color = Color.red;
+    //     Gizmos.DrawWireSphere(transform.position, fow.viewRadius);
+    // }
 
     // protected virtual void StopEnemy() 
     // {
@@ -222,20 +231,26 @@ public abstract class Enemy: MonoBehaviour
         maxHealth = _maxHealth;
         health = _maxHealth;
         maxAnger = _maxAnger;
+        StartCoroutine(DelayStart());
         anger = 0;
-        state = EnemyState.Passive;
         moveSpeed = _moveSpeed;
         basicAttack = _basicAttack;
         angyAttack = _angyAttack;
         currentAttack = _basicAttack;
-        deathBubble = _deathBubble;
-        deathBubble.SetActive(false);
+        // deathBubble = _deathBubble;
+        // deathBubble.SetActive(false);
         player = GameObject.FindWithTag("Player");
         hypeManager = GameObject.Find("Game Manager").GetComponent<HypeManager>();
         fow = gameObject.GetComponent<FieldOfView>();
         agent = GetComponent<NavMeshAgent>();
         centrePoint = agent.transform;
         audioSource = GetComponent<AudioSource>();
+    }
+
+    IEnumerator DelayStart() {
+        state = EnemyState.Spawning;
+        yield return new WaitForSecondsRealtime(0.5f);
+        state = EnemyState.Passive;
     }
 
 }

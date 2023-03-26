@@ -9,7 +9,8 @@ using UnityEngine.Events;
 public enum GameState {
     PreCombat,
     Combat,
-    PostCombat
+    PostCombat,
+    Tutorial
 }
 
 public class GameManager : MonoBehaviour
@@ -61,7 +62,6 @@ public class GameManager : MonoBehaviour
         StartCoroutine(StartLevel());
     }
 
-
     IEnumerator StartLevel() {
         yield return new WaitForSecondsRealtime(1f); // wait for fade-in animation
         bool hasPersistentTarget = false;
@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
         {
             TogglePauseMenu();
         }
-        if (GameObject.FindGameObjectsWithTag("Enemy").Length < minEnemyNumber)
+        if (state == GameState.Combat && GameObject.FindGameObjectsWithTag("Enemy").Length < minEnemyNumber)
         {
             SpawnRandomEnemy();
         }

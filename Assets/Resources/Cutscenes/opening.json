@@ -2,16 +2,24 @@
   "name": "opening",
   "pages": [
     {
-      "image": "splat",
-      "caption": "splat"
+      "image": "opening_1",
+      "caption": "Here we see Tom in his natural state: slouched over a box of pizza, dimly illuminated by the soap opera on his TV."
     },
     {
-      "image": "low",
-      "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "image": "opening_1",
+      "caption": "This is an average Saturday night for Tom."
     },
     {
-      "image": "mollusk",
-      "caption": "we have a cutscene system now..... yes..............."
+      "image": "opening_2",
+      "caption": "Suddenly, circles of multicolored light begin to dance around the room as the pizza in his hand begins to float."
+    },
+    {
+      "image": "opening_2",
+      "caption": "Tom briefly catches a glimpse of a spaceship through the window before being engulfed by a bright blue light."
+    },
+    {
+      "image": "opening_4",
+      "caption": "Pulled through the night sky between swirling disco lights, Tom realizes that this is no average Saturday night..."
     }
   ]
 }

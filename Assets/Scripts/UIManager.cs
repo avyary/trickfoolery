@@ -29,9 +29,15 @@ public class UIManager : MonoBehaviour
     }
 
     public IEnumerator StartCombat() {
+        Time.timeScale = 1;
         battleStart.GetComponent<Animator>().SetTrigger("StartGame");
         yield return new WaitForSecondsRealtime(0.4f);
         jumbotron.GetComponent<Animator>().SetTrigger("StartCombat");
+    }
+
+    public void StartCombatJumbotronless() {
+        print("jumbotronlessing");
+        battleStart.GetComponent<Animator>().SetTrigger("StartGame");
     }
 
     public void ShowPauseMenu() {
@@ -49,7 +55,8 @@ public class UIManager : MonoBehaviour
     public void UpdateHealth(float healthPercent) {
         int newHearts = (int) Mathf.Floor(healthPercent * health.transform.childCount);
         if (newHearts < heartsActive) {
-            for (int heartIdx = newHearts; heartIdx < health.transform.childCount; heartIdx++) {
+            for (int heartIdx = newHearts; heartIdx < heartsActive; heartIdx++) {
+                //health.transform.GetChild(heartIdx).gameObject.GetComponent<Image>().color = Color.clear;
                 health.transform.GetChild(heartIdx).gameObject.SetActive(false);
             }
         }

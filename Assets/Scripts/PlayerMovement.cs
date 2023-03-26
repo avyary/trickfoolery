@@ -87,6 +87,8 @@ public class PlayerMovement : MonoBehaviour
     public AbilityState state;
     public FieldOfView fov;
 
+    private Animator tomAnimator;
+
     public enum AbilityState
     {
         walking,
@@ -108,6 +110,8 @@ public class PlayerMovement : MonoBehaviour
         tauntMat = Resources.Load("TauntColor", typeof(Material)) as Material;
         tomRender = tomRenderObj.GetComponent<SkinnedMeshRenderer>();
         originalMat = tomRender.material;
+        
+        tomAnimator = GameObject.Find("Idle_TOM").GetComponent<Animator>();
 
         camera = GameObject.FindWithTag("MainCamera");
         camForward = camera.transform.forward;
@@ -116,22 +120,39 @@ public class PlayerMovement : MonoBehaviour
         camRight = camera.transform.right;
         camRight.y = 0f;
         camRight.Normalize();
+
+        transform.rotation = Quaternion.LookRotation(camForward * -1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.state == GameState.Combat) {
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
+            StartCoroutine(Die());
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2)) {
+            TakeHit(10);
+        }
+        if (state == AbilityState.dead) {
+            return;
+        }
+        if (gameManager.state == GameState.Combat || gameManager.state == GameState.Tutorial) {
             //Calculate Inputs for player movement
             _playerInputVertical = Input.GetAxisRaw("Vertical");
             _playerInputHorizontal = Input.GetAxisRaw("Horizontal");
             _movementDirection = camForward * _playerInputVertical + camRight * _playerInputHorizontal;
             _movementDirection.Normalize();
 
-            if (_movementDirection != Vector3.zero && state == AbilityState.walking)
+            if (_movementDirection != Vector3.zero)
             {
-                transform.forward = _movementDirection;
-            } ;
+                tomAnimator.SetBool("isRunning", true);
+                if (state == AbilityState.walking) {
+                    transform.forward = _movementDirection;
+                }
+            }
+            else {
+                tomAnimator.SetBool("isRunning", false);
+            }
 
             if (Input.GetButtonDown("Dash") && dashCdTimer <= 0)
             {
@@ -157,7 +178,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (gameManager.state == GameState.Combat) {
+        if (gameManager.state == GameState.Combat || gameManager.state == GameState.Tutorial) {
             if (state == AbilityState.walking) 
                 _movementController.Move(_movementDirection * WALKSPEED * Time.deltaTime);
             if (state == AbilityState.dashing)
@@ -171,6 +192,8 @@ public class PlayerMovement : MonoBehaviour
         StartCoroutine(InvincibilityFrames(DASHTIME));
         dashCdTimer = DASHCD;
         float startTime = Time.time;
+        tomAnimator.SetTrigger("StartDodge");
+        dashSFX.Post(gameObject);
 
         while (Time.time < startTime + DASHTIME)
         {
@@ -181,7 +204,6 @@ public class PlayerMovement : MonoBehaviour
 
         state = AbilityState.walking;
 
-        dashSFX.Post(gameObject);
     }
 
 
@@ -237,14 +259,15 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    public void TakeHit(Enemy attacker, int damage)
+    public void TakeHit(int damage, Enemy attacker = null)
     {
-        if (state == AbilityState.dead || isInvincible)
+        if (state == AbilityState.dead || isInvincible || gameManager.state == GameState.Tutorial)
         {
             return;
         }
         
         health -= damage; //TODO: change once attack damages have been tweaked
+        print(health);
         if (health <= 0)
         {
             uiManager.UpdateHealth(0f);
@@ -252,11 +275,11 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            tomAnimator.SetTrigger("GetHurt");
             uiManager.UpdateHealth((float) health / MAX_HEALTH);
             playerHurtSFX.Post(gameObject);
             StartCoroutine(GetStunned());
             StartCoroutine(InvincibilityFrames(hitInvincibility));
-            StartCoroutine(FlashOnHit());
         }
     }
 
@@ -271,14 +294,17 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator GetStunned() {
         state = AbilityState.damage;
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.75f);
         state = AbilityState.walking;
     }
 
     IEnumerator Die()
     {
+        state = AbilityState.dead;
         GetComponent<MeshRenderer>().material.color = Color.black;
+        tomAnimator.SetTrigger("Die");
         playerDeathSFX.Post(gameObject);
+        yield return new WaitForSeconds(3f);
         gameManager.GameOverLose();
         yield return null;
     }

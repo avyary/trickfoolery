@@ -44,7 +44,15 @@ public class MenuManager : MonoBehaviour
                 StartCoroutine(HandleButtonChange());
             }
         }
-        else {
+        if (Input.GetKeyDown(KeyCode.P)) {
+            if (SceneManager.GetActiveScene().name == "MainMenu") {
+                AkSoundEngine.StopAll();
+                SceneManager.LoadScene("DebugMenu", LoadSceneMode.Single);
+            }
+            else {
+                AkSoundEngine.StopAll();
+                SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+            }
         }
     }
 

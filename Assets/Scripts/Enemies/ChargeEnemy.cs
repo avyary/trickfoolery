@@ -21,10 +21,10 @@ public class ChargeEnemy : Enemy
         isWalking = true;
     }
 
-    private void OnDrawGizmos() 
-    {
-       DrawSphere();
-    }
+    // private void OnDrawGizmos() 
+    // {
+    //    DrawSphere();
+    // }
 
     void Update() 
     {   

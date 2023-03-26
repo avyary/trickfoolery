@@ -64,7 +64,7 @@ public abstract class Attack : MonoBehaviour
         }
         else if (other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<PlayerMovement>().TakeHit(transform.parent.GetComponent<Enemy>(), damage);
+            other.gameObject.GetComponent<PlayerMovement>().TakeHit(damage, transform.parent.GetComponent<Enemy>());
         }
         // if (collisionTags.Any(other.gameObject.tag.Contains))
         // {
