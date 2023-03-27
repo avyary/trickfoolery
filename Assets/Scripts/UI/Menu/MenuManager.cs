@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-
 public class MenuManager : MonoBehaviour
 {
     public AK.Wwise.Event selectSFX;
@@ -47,7 +46,15 @@ public class MenuManager : MonoBehaviour
                 StartCoroutine(HandleButtonChange());
             }
         }
-        else {
+        if (Input.GetKeyDown(KeyCode.P)) {
+            if (SceneManager.GetActiveScene().name == "MainMenu") {
+                AkSoundEngine.StopAll();
+                SceneManager.LoadScene("DebugMenu", LoadSceneMode.Single);
+            }
+            else {
+                AkSoundEngine.StopAll();
+                SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+            }
         }
     }
 

@@ -10,12 +10,16 @@ public enum EnemyState
     Active,      // 3 - attacking, hitbox active
     Recovery,    // 4 - finishing attack
     Stunned,     // 5 - hit by attack, trap, etc. and stunned - cannot move, attack
-    Dead         // 6 - rip
+    Dead,        // 6 - rip
+    Spawning
 }
 
 public abstract class Enemy: MonoBehaviour
 {
-     [SerializeField] GameObject _AngyInd;
+    [SerializeField] 
+    GameObject _AngyInd;
+    [SerializeField]
+    GameObject _AlertInd;
     [SerializeField]
     int _maxHealth;
     [SerializeField]
@@ -27,9 +31,10 @@ public abstract class Enemy: MonoBehaviour
     [SerializeField]
     Attack _angyAttack;
     [SerializeField]
+    GameObject _deathBubble;
 
     public bool isAngy;
-    protected Attack currentAttack;
+    public Attack currentAttack;
 
     protected int maxHealth { get; set; }
     protected Attack basicAttack { get; set; }
@@ -52,6 +57,8 @@ public abstract class Enemy: MonoBehaviour
     protected float range = 21.76f;  // radius of sphere for generating a random point
     protected Transform centrePoint;    // centre of the map (try setting it to the agent for fun?)
 
+    protected GameObject deathBubble;
+
 
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
@@ -68,21 +75,6 @@ public abstract class Enemy: MonoBehaviour
 
         result = Vector3.zero;
         return false;
-    }
-
-    protected virtual void Patrol()
-    {   
-        // Debug.Log(System.String.Format("Remaining distance: {0}", agent.remainingDistance));
-        if(agent.remainingDistance <= agent.stoppingDistance) //done with path
-        {   
-            // randomly generate a new point to move to
-            Vector3 point;
-            if (RandomPoint(centrePoint.position, range, out point)) //pass in our centre point and radius of area
-            {
-                Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f); //so you can see with gizmos
-                agent.SetDestination(point);
-            }
-        }
     }
 
     // for debugging
@@ -141,17 +133,13 @@ public abstract class Enemy: MonoBehaviour
     public virtual IEnumerator Die()
     {
         hypeManager.IncreaseHype(hypeManager.DEATH_HYPE);
+        //deathBubble.SetActive(true);
 
         fow.active = false;
         basicAttack.Deactivate();  // deactivate attack collider
 
-        // the following is just for fun
-        GetComponent<MeshRenderer>().material.color = Color.black;
-        Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>();
-        rigidBody.constraints = RigidbodyConstraints.None;
-
         state = EnemyState.Dead;
-        yield return new WaitForSeconds(0.5f);  // waits for 3 seconds before destroying object
+        yield return new WaitForSeconds(0.5f);  // waits before destroying object
 
         Destroy(gameObject);
     }
@@ -168,7 +156,7 @@ public abstract class Enemy: MonoBehaviour
         }else{_AngyInd.SetActive(false);}
     }
 
-    protected IEnumerator Attack(Attack attackObj) {
+    public IEnumerator Attack(Attack attackObj) {
         // trigger attack animation here
         state = EnemyState.Startup;
         // Debug.Log("Attacking Time");
@@ -205,20 +193,33 @@ public abstract class Enemy: MonoBehaviour
     {
         // animation for finding player?
         state = EnemyState.Tracking;
+        // Debug.Log("Player found!");
         gameObject.GetComponent<Patrol>().enabled = false;
+        PlayerDetected();
     }
 
-    protected virtual void StopEnemy() 
+    protected virtual void PlayerDetected() 
     {
-        agent.isStopped = true;
-
+        _AlertInd.SetActive(true);
     }
 
-    protected virtual void GoToTarget()
-    {
-        agent.isStopped = false;
-        agent.SetDestination(player.transform.position);
-    }
+    // protected virtual void DrawSphere()
+    // {
+    //     Gizmos.color = Color.red;
+    //     Gizmos.DrawWireSphere(transform.position, fow.viewRadius);
+    // }
+
+    // protected virtual void StopEnemy() 
+    // {
+    //     agent.isStopped = true;
+
+    // }
+
+    // protected virtual void GoToTarget()
+    // {
+    //     agent.isStopped = false;
+    //     agent.SetDestination(player.transform.position);
+    // }
 
     protected virtual void Move()
     {
@@ -230,18 +231,26 @@ public abstract class Enemy: MonoBehaviour
         maxHealth = _maxHealth;
         health = _maxHealth;
         maxAnger = _maxAnger;
+        StartCoroutine(DelayStart());
         anger = 0;
-        state = EnemyState.Passive;
         moveSpeed = _moveSpeed;
         basicAttack = _basicAttack;
         angyAttack = _angyAttack;
         currentAttack = _basicAttack;
+        // deathBubble = _deathBubble;
+        // deathBubble.SetActive(false);
         player = GameObject.FindWithTag("Player");
         hypeManager = GameObject.Find("Game Manager").GetComponent<HypeManager>();
         fow = gameObject.GetComponent<FieldOfView>();
         agent = GetComponent<NavMeshAgent>();
         centrePoint = agent.transform;
         audioSource = GetComponent<AudioSource>();
+    }
+
+    IEnumerator DelayStart() {
+        state = EnemyState.Spawning;
+        yield return new WaitForSecondsRealtime(0.5f);
+        state = EnemyState.Passive;
     }
 
 }

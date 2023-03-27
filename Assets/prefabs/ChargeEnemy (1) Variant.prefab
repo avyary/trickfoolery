@@ -35,6 +35,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fe142cabe1d5ef6498c826523caa79a8, type: 2}
+    - target: {fileID: 2631855640430809154, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2631855640430809154, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.55
+      objectReference: {fileID: 0}
     - target: {fileID: 2634596609834794898, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -107,10 +115,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fe142cabe1d5ef6498c826523caa79a8, type: 2}
+    - target: {fileID: 7634863950826428644, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7906910021939235163, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a861b9256b7385445aa9439d48c6d8a5, type: 2}
+    - target: {fileID: 7996893911616321072, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8038347840415633065, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -119,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChargeEnemy (1) Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8530116321950674701, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: _deathBubble
+      value: 
+      objectReference: {fileID: 1673716551998795636}
     - target: {fileID: 8530116321950674701, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
       propertyPath: chargerDeathSFX.WwiseObjectReference
       value: 
@@ -183,23 +203,15 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 63b0671cae665ec47a6635c9652805a4, type: 2}
-    m_RemovedComponents: []
+    - target: {fileID: 9002951673298862270, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 264255432747370232, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
---- !u!1 &1471125627155368581 stripped
+--- !u!1 &1673716551998795636 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8530116321950674698, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8444617883008633595, guid: 5c0c4e01e1abd4260b34925ed8f77749, type: 3}
   m_PrefabInstance: {fileID: 7064867361109599631}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4099956788583798702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471125627155368581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9038282c6c4ca864b8af4df90c45a5db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 10
