@@ -6,12 +6,13 @@ public class ChargeEnemy : Enemy
 {
     [SerializeField]
     private float chargeSpeed;
-    public AK.Wwise.Event chargerDeathSFX;
     [SerializeField] private ParticleSystem particleSystem;
     [SerializeField] private ParticleSystem BackParticleSystem;
+    [SerializeField] AK.Wwise.Event chargerlungeSFX;
     public Animator animator;
     public bool isCharging;
     public bool isWalking;
+
 
     protected override void Start() {
         base.Start();
@@ -19,6 +20,7 @@ public class ChargeEnemy : Enemy
 
         animator.SetBool("isWalking", true); 
         isWalking = true;
+
     }
 
     // private void OnDrawGizmos() 

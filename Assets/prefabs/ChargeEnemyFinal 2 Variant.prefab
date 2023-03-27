@@ -117,6 +117,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 620df23201c2196458199ba83a96bb79, type: 2}
+    - target: {fileID: 5209116039823255567, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: m_positionOffsetData.KeepMe
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5209116039823255567, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: m_listeners.initialListenerList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7615258373281169251, guid: 365579391c2931940a7e83bdc319620a, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -201,6 +209,14 @@ PrefabInstance:
       propertyPath: _deathBubble
       value: 
       objectReference: {fileID: 7962956978066060797}
+    - target: {fileID: 8157556152595408478, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: attackSFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 54e671947e9ca3f4b99173a60d7ee811, type: 2}
+    - target: {fileID: 8157556152595408478, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: chargerlungeSFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 54e671947e9ca3f4b99173a60d7ee811, type: 2}
     - target: {fileID: 8343459955203448601, guid: 365579391c2931940a7e83bdc319620a, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -216,6 +232,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6974251132348624550, guid: 365579391c2931940a7e83bdc319620a, type: 3}
     - {fileID: 4808332108238643349, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+    - {fileID: -7593404860571480402, guid: 365579391c2931940a7e83bdc319620a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 365579391c2931940a7e83bdc319620a, type: 3}
 --- !u!1 &240504645225725995 stripped
 GameObject:

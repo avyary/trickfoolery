@@ -135,6 +135,103 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Stop_mus_Trickfoolery_222bpm" ID="{103A468D-C1A5-4619-8F4C-E88DFD668A3C}">
+					<ChildrenList>
+						<Action Name="" ID="{67A0AB53-63E5-44E1-98A0-F860554637DC}" ShortID="622987732">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="0"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mus_trickfoolery_222bpm" ID="{B37367AF-76B6-4A5F-9DCF-A99818A4C5D4}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_mus_Pause_75bpm" ID="{BCE1262A-3C14-4B31-B28C-4A64BEE31410}">
+					<ChildrenList>
+						<Action Name="" ID="{FC607F37-1DEC-408B-B743-CFEA6DFC4C65}" ShortID="854240317">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mus_Pause_loop_75bpm" ID="{1C1A214D-2858-44C0-BF6D-6E4B9D257D7E}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Mute_mus_pause_75bpm" ID="{0E96271C-B559-48D8-B09B-94D3489189FD}">
+					<ChildrenList>
+						<Action Name="" ID="{CAA872E2-3D55-4006-A6D6-BAB3A0279652}" ShortID="363332801">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mus_Pause_loop_75bpm" ID="{1C1A214D-2858-44C0-BF6D-6E4B9D257D7E}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Unmute_mus_pause_75bpm" ID="{C3E827C6-F5CC-4329-985D-E19D22E9E34A}">
+					<ChildrenList>
+						<Action Name="" ID="{9EB0AD47-A0B6-47DB-95A7-54137EAEC067}" ShortID="511545839">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mus_Pause_loop_75bpm" ID="{1C1A214D-2858-44C0-BF6D-6E4B9D257D7E}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="First_Time_Mute_mus_pause_75bpm" ID="{7288EC1A-8592-4957-B27E-E911D3B56F4A}">
+					<ChildrenList>
+						<Action Name="" ID="{0B847691-39EF-4FCE-9903-0647B7E8BB01}" ShortID="557679036">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mus_Pause_loop_75bpm" ID="{1C1A214D-2858-44C0-BF6D-6E4B9D257D7E}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_charger_lunge" ID="{34768769-7EB7-4C6B-A65A-4CB6AB2A5B55}">
+					<ChildrenList>
+						<Action Name="" ID="{9777DA81-4339-4E95-B14B-37AB802CF0CC}" ShortID="395577666">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_charger_lunge" ID="{360D8E44-B9C4-4B6B-93C0-4080FAA037A4}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_tomstep" ID="{1BC515F3-568C-4A8D-995F-DBFA44FF9E2A}">
+					<ChildrenList>
+						<Action Name="" ID="{1236A7ED-86CA-4E04-8002-730D0DD4D5B5}" ShortID="1052015958">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_tom_footsteps" ID="{6BE7082B-60F3-49AA-BA17-A1E1CA8E76CE}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

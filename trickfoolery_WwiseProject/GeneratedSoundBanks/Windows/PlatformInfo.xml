@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PlatformInfo>
-	<Platform Name="Windows" BasePlatform="Windows" Generator="2022.1.1.8100"/>
+	<Platform Name="Windows" BasePlatform="Windows" Generator="2022.1.2.8150"/>
 	<RootPaths>
 		<ProjectRoot>../..</ProjectRoot>
 		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
@@ -25,8 +25,8 @@
 		<AllowExceedingMaxSize>false</AllowExceedingMaxSize>
 		<MaxAttenuationInfo>true</MaxAttenuationInfo>
 		<EstimatedDurationInfo>true</EstimatedDurationInfo>
-		<PrintObjectGuid>false</PrintObjectGuid>
-		<PrintObjectPath>false</PrintObjectPath>
+		<PrintObjectGuid>true</PrintObjectGuid>
+		<PrintObjectPath>true</PrintObjectPath>
 	</Settings>
-	<FileHash>{F4D1707B-F10C-3DC0-B1A5-872566032501}</FileHash>
+	<FileHash>{25AB9203-6842-023F-7BE7-98955A87613D}</FileHash>
 </PlatformInfo>

@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public AK.Wwise.Event playerHurtSFX;
 
     [SerializeField] private ParticleSystem DashParticle;
+    [SerializeField] private PlayerSounds playerSounds;
     [SerializeField]
     public float dodgeRadius;
     [SerializeField]
@@ -258,6 +259,10 @@ public class PlayerMovement : MonoBehaviour
         _movementController.Move(gravityVelocity * Time.deltaTime);
     }
 
+    private void PlayFootstep()
+    {
+        playerSounds.PlayFootstepSound();
+    }
 
     public void TakeHit(int damage, Enemy attacker = null)
     {

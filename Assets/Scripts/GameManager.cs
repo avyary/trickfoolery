@@ -26,6 +26,10 @@ public class GameManager : MonoBehaviour
     // wwise
     public AK.Wwise.Event pauseSFX;
     public AK.Wwise.Event unpSFX;
+    public AK.Wwise.Event firstmutepauseMUS;
+    public AK.Wwise.Event mutepauseMUS;
+    public AK.Wwise.Event unmutepauseMUS;
+    public AK.Wwise.Event playpauseMUS;
 
     // object references
     public GameObject _gameOverObj;
@@ -64,6 +68,8 @@ public class GameManager : MonoBehaviour
 
     IEnumerator StartLevel() {
         yield return new WaitForSecondsRealtime(1f); // wait for fade-in animation
+        playpauseMUS.Post(gameObject);
+        firstmutepauseMUS.Post(gameObject);
         bool hasPersistentTarget = false;
         for (int i = 0; i < preCombat.GetPersistentEventCount(); i++) {
             if (preCombat.GetPersistentTarget(i) != null)
@@ -141,6 +147,7 @@ public class GameManager : MonoBehaviour
 
     void ShowPauseMenu() {
         pauseSFX.Post(gameObject);
+        unmutepauseMUS.Post(gameObject);
         showPauseMenu = true;
         uiManager.ShowPauseMenu();
         PauseGame();
@@ -148,9 +155,11 @@ public class GameManager : MonoBehaviour
 
     public void HidePauseMenu() {
         unpSFX.Post(gameObject);
+        mutepauseMUS.Post(gameObject);
         showPauseMenu = false;
         uiManager.HidePauseMenu();
         if (!isGameOver) {
+            mutepauseMUS.Post(gameObject);
             UnpauseGame();
         }
     }
