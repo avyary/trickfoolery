@@ -311,18 +311,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204469351715301410}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80734fe2c0b2545d7a6f604b85bf7518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _AngyInd: {fileID: 0}
+  _AlertInd: {fileID: 0}
   _maxHealth: 100
   _moveSpeed: 0.02
   _maxAnger: 1
   _basicAttack: {fileID: 204469350574051446}
   _angyAttack: {fileID: 204469350574051446}
+  _deathBubble: {fileID: 0}
   isAngy: 0
+  currentAttack: {fileID: 0}
   state: 0
 --- !u!136 &204469351715301413
 CapsuleCollider:
