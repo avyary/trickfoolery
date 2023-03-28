@@ -21,12 +21,19 @@ public class ShockwaveEnemy : Enemy
                     fow.active = true;
                     StartCoroutine(fow.FindPlayer(moveSpeed, PlayerFound));
                 }
-                
+
                 break;
             
             case EnemyState.Tracking:
 
                 agent.SetDestination(player.transform.position);
+                // should stop when it reaches its current attack distance from the player
+                float dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
+
+                if (dist <= currentAttack.range) 
+                {
+                    agent.isStopped = true;
+                }
 
                 break;
             

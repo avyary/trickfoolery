@@ -106,6 +106,22 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7184088683778149832, guid: 624a0e8a8f66ae04ba4fa8586c4b672f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 624a0e8a8f66ae04ba4fa8586c4b672f, type: 3}
+--- !u!1 &2283371717211411325 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5462861084422081789, guid: 624a0e8a8f66ae04ba4fa8586c4b672f, type: 3}
+  m_PrefabInstance: {fileID: 6088815349414223744}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2687144111299056462 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8157556153598119118, guid: 624a0e8a8f66ae04ba4fa8586c4b672f, type: 3}
+  m_PrefabInstance: {fileID: 6088815349414223744}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2211ac183a1924cdb965ba0e27f7b418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2687144112301783513 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8157556152595408473, guid: 624a0e8a8f66ae04ba4fa8586c4b672f, type: 3}
@@ -128,9 +144,9 @@ MonoBehaviour:
   _maxHealth: 0
   _moveSpeed: 0
   _maxAnger: 0
-  _basicAttack: {fileID: 0}
-  _angyAttack: {fileID: 0}
-  _deathBubble: {fileID: 0}
+  _basicAttack: {fileID: 2687144111299056462}
+  _angyAttack: {fileID: 5141323021660294611}
+  _deathBubble: {fileID: 2283371717211411325}
   isAngy: 0
   currentAttack: {fileID: 0}
   state: 0
@@ -139,3 +155,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7826358564522094100, guid: 624a0e8a8f66ae04ba4fa8586c4b672f, type: 3}
   m_PrefabInstance: {fileID: 6088815349414223744}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5141323021660294611 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1379921455707214419, guid: 624a0e8a8f66ae04ba4fa8586c4b672f, type: 3}
+  m_PrefabInstance: {fileID: 6088815349414223744}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2211ac183a1924cdb965ba0e27f7b418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
