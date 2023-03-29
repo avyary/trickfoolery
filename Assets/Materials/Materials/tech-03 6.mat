@@ -385,7 +385,7 @@ Material:
     - _Offset: 0
     - _Offset_X_Axis_BLD: -0.05
     - _Offset_Y_Axis_BLD: 0.09
-    - _Offset_Z: -2.85
+    - _Offset_Z: -1.05
     - _OtlWidth: 4.98
     - _OutlineOverridden: 0
     - _OutlineVisible: 1
