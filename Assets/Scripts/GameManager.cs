@@ -100,10 +100,6 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(LoadNextScene());
         }
-        if (showPauseMenu && Input.GetButtonDown("Confirm")) {
-            HidePauseMenu();
-            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
-        }
     }
 
     IEnumerator LoadNextScene() {
@@ -115,7 +111,6 @@ public class GameManager : MonoBehaviour
         else {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-
     }
 
     bool TogglePauseMenu()
@@ -151,7 +146,7 @@ public class GameManager : MonoBehaviour
         PauseGame();
     }
 
-    void HidePauseMenu() {
+    public void HidePauseMenu() {
         unpSFX.Post(gameObject);
         showPauseMenu = false;
         uiManager.HidePauseMenu();

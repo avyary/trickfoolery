@@ -70,21 +70,6 @@ public abstract class Enemy: MonoBehaviour
         return false;
     }
 
-    protected virtual void Patrol()
-    {   
-        // Debug.Log(System.String.Format("Remaining distance: {0}", agent.remainingDistance));
-        if(agent.remainingDistance <= agent.stoppingDistance) //done with path
-        {   
-            // randomly generate a new point to move to
-            Vector3 point;
-            if (RandomPoint(centrePoint.position, range, out point)) //pass in our centre point and radius of area
-            {
-                Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f); //so you can see with gizmos
-                agent.SetDestination(point);
-            }
-        }
-    }
-
     // for debugging
     public void GetEnemyStatus(string name = "Enemy")
     {
@@ -205,20 +190,27 @@ public abstract class Enemy: MonoBehaviour
     {
         // animation for finding player?
         state = EnemyState.Tracking;
+        Debug.Log("Player found!");
         gameObject.GetComponent<Patrol>().enabled = false;
     }
 
-    protected virtual void StopEnemy() 
+    protected virtual void DrawSphere()
     {
-        agent.isStopped = true;
-
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, fow.viewRadius);
     }
 
-    protected virtual void GoToTarget()
-    {
-        agent.isStopped = false;
-        agent.SetDestination(player.transform.position);
-    }
+    // protected virtual void StopEnemy() 
+    // {
+    //     agent.isStopped = true;
+
+    // }
+
+    // protected virtual void GoToTarget()
+    // {
+    //     agent.isStopped = false;
+    //     agent.SetDestination(player.transform.position);
+    // }
 
     protected virtual void Move()
     {

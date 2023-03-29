@@ -26,6 +26,12 @@ public class FieldOfView : MonoBehaviour
                 active = false;
                 yield break;
             }
+
+            Debug.Log("Player not visible");
+            // else 
+            // {
+            //     Debug.Log("Player not visible");
+            // }
         }
     }
 
