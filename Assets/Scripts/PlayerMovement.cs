@@ -44,7 +44,6 @@ public class PlayerMovement : MonoBehaviour
     private HypeManager hypeManager;
     public GameManager gameManager;
     private UIManager uiManager;
-    private Material damageMat;
     private Material tauntMat;
     private Material originalMat;
 
@@ -74,9 +73,21 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private float damageFlashTime;
+    [SerializeField]
+    private float hitInvincibility;
+
+    [SerializeField]
+    private GameObject tomRenderObj;
+    private SkinnedMeshRenderer tomRender;
+    [SerializeField]
+    private Material damageMat;
+    [SerializeField]
+    private Material invincibilityMat;
 
     public AbilityState state;
     public FieldOfView fov;
+
+    private Animator tomAnimator;
 
     public enum AbilityState
     {
@@ -96,9 +107,11 @@ public class PlayerMovement : MonoBehaviour
         uiManager = GameObject.Find("Game Manager").GetComponent<UIManager>();
         fov = gameObject.GetComponent<FieldOfView>();
         health = MAX_HEALTH;
-        damageMat = Resources.Load("DamageColor", typeof(Material)) as Material;
         tauntMat = Resources.Load("TauntColor", typeof(Material)) as Material;
-        originalMat = GetComponent<MeshRenderer>().material;
+        tomRender = tomRenderObj.GetComponent<SkinnedMeshRenderer>();
+        originalMat = tomRender.material;
+        
+        tomAnimator = GameObject.Find("Idle_TOM").GetComponent<Animator>();
 
         camera = GameObject.FindWithTag("MainCamera");
         camForward = camera.transform.forward;
@@ -107,22 +120,39 @@ public class PlayerMovement : MonoBehaviour
         camRight = camera.transform.right;
         camRight.y = 0f;
         camRight.Normalize();
+
+        transform.rotation = Quaternion.LookRotation(camForward * -1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.state == GameState.Combat) {
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
+            StartCoroutine(Die());
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2)) {
+            TakeHit(10);
+        }
+        if (state == AbilityState.dead) {
+            return;
+        }
+        if (gameManager.state == GameState.Combat || gameManager.state == GameState.Tutorial) {
             //Calculate Inputs for player movement
             _playerInputVertical = Input.GetAxisRaw("Vertical");
             _playerInputHorizontal = Input.GetAxisRaw("Horizontal");
             _movementDirection = camForward * _playerInputVertical + camRight * _playerInputHorizontal;
             _movementDirection.Normalize();
 
-            if (_movementDirection != Vector3.zero && state == AbilityState.walking)
+            if (_movementDirection != Vector3.zero)
             {
-                transform.forward = _movementDirection;
-            } ;
+                tomAnimator.SetBool("isRunning", true);
+                if (state == AbilityState.walking) {
+                    transform.forward = _movementDirection;
+                }
+            }
+            else {
+                tomAnimator.SetBool("isRunning", false);
+            }
 
             if (Input.GetButtonDown("Dash") && dashCdTimer <= 0)
             {
@@ -148,7 +178,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (gameManager.state == GameState.Combat) {
+        if (gameManager.state == GameState.Combat || gameManager.state == GameState.Tutorial) {
             if (state == AbilityState.walking) 
                 _movementController.Move(_movementDirection * WALKSPEED * Time.deltaTime);
             if (state == AbilityState.dashing)
@@ -162,6 +192,8 @@ public class PlayerMovement : MonoBehaviour
         StartCoroutine(InvincibilityFrames(DASHTIME));
         dashCdTimer = DASHCD;
         float startTime = Time.time;
+        tomAnimator.SetTrigger("StartDodge");
+        dashSFX.Post(gameObject);
 
         while (Time.time < startTime + DASHTIME)
         {
@@ -172,7 +204,6 @@ public class PlayerMovement : MonoBehaviour
 
         state = AbilityState.walking;
 
-        dashSFX.Post(gameObject);
     }
 
 
@@ -193,7 +224,6 @@ public class PlayerMovement : MonoBehaviour
     
     IEnumerator Taunt()
     {
-        StartCoroutine(ChangeMaterial(tauntMat, TAUNTTIME));
         state = AbilityState.taunting;
         
         float startTime = Time.time;
@@ -229,14 +259,15 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    public void TakeHit(Enemy attacker, int damage)
+    public void TakeHit(int damage, Enemy attacker = null)
     {
-        if (state == AbilityState.dead || isInvincible)
+        if (state == AbilityState.dead || isInvincible || gameManager.state == GameState.Tutorial)
         {
             return;
         }
         
         health -= damage; //TODO: change once attack damages have been tweaked
+        print(health);
         if (health <= 0)
         {
             uiManager.UpdateHealth(0f);
@@ -244,23 +275,36 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            tomAnimator.SetTrigger("GetHurt");
             uiManager.UpdateHealth((float) health / MAX_HEALTH);
             playerHurtSFX.Post(gameObject);
             StartCoroutine(GetStunned());
-            StartCoroutine(InvincibilityFrames(1f));
+            StartCoroutine(InvincibilityFrames(hitInvincibility));
         }
+    }
+
+    // placeholder
+    IEnumerator FlashOnHit() {
+        tomRender.material = damageMat;
+        yield return new WaitForSeconds(damageFlashTime);
+        tomRender.material = invincibilityMat;
+        yield return new WaitForSeconds(hitInvincibility - damageFlashTime);
+        tomRender.material = originalMat;
     }
 
     IEnumerator GetStunned() {
         state = AbilityState.damage;
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.75f);
         state = AbilityState.walking;
     }
 
     IEnumerator Die()
     {
+        state = AbilityState.dead;
         GetComponent<MeshRenderer>().material.color = Color.black;
+        tomAnimator.SetTrigger("Die");
         playerDeathSFX.Post(gameObject);
+        yield return new WaitForSeconds(3f);
         gameManager.GameOverLose();
         yield return null;
     }
@@ -268,21 +312,24 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator InvincibilityFrames(float time)
     {
         isInvincible = true;
-        GetComponent<MeshRenderer>().material.color = Color.green;
+        tomRender.material = invincibilityMat;
         yield return new WaitForSeconds(time);
+        tomRender.material = originalMat;
         isInvincible = false;
     }
 
     IEnumerator ChangeMaterial(Material newMat, float time = 0)
     {
         if (time == 0) {
-            GetComponent<MeshRenderer>().material = newMat;
+            tomRender.material = newMat;
+            // GetComponent<MeshRenderer>().material = newMat;
             yield return new WaitForSeconds(0);
         }
         else {
-            GetComponent<MeshRenderer>().material = newMat;
+            tomRender.material = newMat;
+            // GetComponent<MeshRenderer>().material = newMat;
             yield return new WaitForSeconds(time);
-            GetComponent<MeshRenderer>().material = originalMat;
+            tomRender.material = originalMat;
         }
     }private IEnumerator WaitForSecondsAndStopParticles(float seconds, ParticleSystem particles) {
         yield return new WaitForSeconds(seconds);

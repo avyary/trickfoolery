@@ -1,0 +1,25 @@
+{
+  "scenes": [
+    {
+      "sceneName": "intro",
+      "lines": [
+        {
+          "name": "Commentator",
+          "text": "Wowza, what a display of skill that only Nuck Chorris could possibly possess!"
+        },
+        {
+          "name": "Tom",
+          "text": "My name is TOM!"
+        },
+        {
+          "name": "Commentator",
+          "text": "Anyways, we've brought in some new friends to spice things up!"
+        },
+        {
+          "name": "Commentator",
+          "text": "Stay on your toes - they're careful, but come in QUICK!"
+        }
+      ]
+    },
+  ]
+}
