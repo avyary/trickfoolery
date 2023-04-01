@@ -9,6 +9,7 @@ TagManager:
   - GameManager
   - Center
   - PlayerManager
+  - enemySetOne
   layers:
   - Default
   - TransparentFX

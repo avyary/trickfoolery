@@ -9128,6 +9128,7 @@ GameObject:
   - component: {fileID: 3915730205257403483}
   - component: {fileID: 3642241825702175845}
   - component: {fileID: 5943973647914740701}
+  - component: {fileID: 3302106650857398068}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -9349,6 +9350,20 @@ MonoBehaviour:
   unloadTriggerList: 958ca0ea
   bankNameInternal: 
   valueGuidInternal: 
+--- !u!136 &3302106650857398068
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7796244350440389784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7879544122512460611
 GameObject:
   m_ObjectHideFlags: 0
