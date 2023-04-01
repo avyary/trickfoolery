@@ -21,6 +21,7 @@ public class PlayerAnimationController : MonoBehaviour
         playerSounds.PlayFootstepSound();
     }
 
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.W))

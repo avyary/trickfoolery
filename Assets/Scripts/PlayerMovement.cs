@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private ParticleSystem DashParticle;
     [SerializeField] private PlayerSounds playerSounds;
-    [SerializeField]
+    [SerializeField] private PlayerTauntSound playerTauntSound;
     public float dodgeRadius;
     [SerializeField]
     private LayerMask attackMask;
@@ -226,7 +226,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator Taunt()
     {
         state = AbilityState.taunting;
-        
+
         float startTime = Time.time;
 
         List<Collider> inRange = fov.FindVisibleTargets();
@@ -322,6 +322,7 @@ public class PlayerMovement : MonoBehaviour
         tomRender.material = originalMat;
         isInvincible = false;
     }
+
 
     IEnumerator ChangeMaterial(Material newMat, float time = 0)
     {

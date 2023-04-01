@@ -44,10 +44,17 @@
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{9424AA6C-E02B-4FBA-87B0-E50F414ABFCE}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-5</Value>
+								<Value>-2</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -61,7 +68,7 @@
 												<Value>True</Value>
 											</ValueList>
 										</Property>
-										<Property Name="RadiusMax" Type="Real64" Value="15"/>
+										<Property Name="RadiusMax" Type="Real64" Value="20"/>
 									</PropertyList>
 									<CurveUsageInfoList>
 										<VolumeDryUsage>
@@ -78,13 +85,13 @@
 															<SegmentShape>Log1</SegmentShape>
 														</Point>
 														<Point>
-															<XPos>14.9975</XPos>
+															<XPos>19.9966666666667</XPos>
 															<YPos>-200</YPos>
 															<Flags>0</Flags>
 															<SegmentShape>Log2</SegmentShape>
 														</Point>
 														<Point>
-															<XPos>15</XPos>
+															<XPos>20</XPos>
 															<YPos>-200</YPos>
 															<Flags>37</Flags>
 														</Point>
@@ -662,6 +669,13 @@
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
 						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{7648FEA6-2CB2-4F70-803D-0F2D133B163A}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 						<Property Name="SpeakerPanning" Type="int16" Value="1"/>
@@ -678,7 +692,7 @@
 												<Value>True</Value>
 											</ValueList>
 										</Property>
-										<Property Name="RadiusMax" Type="Real64" Value="15"/>
+										<Property Name="RadiusMax" Type="Real64" Value="20"/>
 									</PropertyList>
 									<CurveUsageInfoList>
 										<VolumeDryUsage>
@@ -695,13 +709,13 @@
 															<SegmentShape>Log1</SegmentShape>
 														</Point>
 														<Point>
-															<XPos>14.9975</XPos>
+															<XPos>19.9966666666667</XPos>
 															<YPos>-200</YPos>
 															<Flags>0</Flags>
 															<SegmentShape>Log2</SegmentShape>
 														</Point>
 														<Point>
-															<XPos>15</XPos>
+															<XPos>20</XPos>
 															<YPos>-200</YPos>
 															<Flags>37</Flags>
 														</Point>
@@ -826,6 +840,28 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="sfx_charger_anger" ID="{C31818E4-960D-4534-80EE-44A59276F6F4}" ShortID="671836119">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="InitialDelay" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{DF358149-226C-404B-80FB-34EE7B081DA3}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="2"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{7A64FB18-4FAC-401F-855B-487197A1F91A}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>1</Value>
@@ -836,6 +872,14 @@
 						<Reference Name="Attenuation">
 							<Custom>
 								<Attenuation Name="Attenuation (Custom)" ID="{6657CB02-1DDC-40E2-8A73-2CA046056192}" ShortID="985909494">
+									<PropertyList>
+										<Property Name="ConeUse" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="RadiusMax" Type="Real64" Value="20"/>
+									</PropertyList>
 									<CurveUsageInfoList>
 										<VolumeDryUsage>
 											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
@@ -848,9 +892,10 @@
 															<XPos>0</XPos>
 															<YPos>0</YPos>
 															<Flags>5</Flags>
+															<SegmentShape>Log1</SegmentShape>
 														</Point>
 														<Point>
-															<XPos>100</XPos>
+															<XPos>20</XPos>
 															<YPos>-200</YPos>
 															<Flags>37</Flags>
 														</Point>
@@ -947,6 +992,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="sfx_charger_aggro_increase_2" ID="{C431C99D-CDC7-45F8-A319-F3C454B98AB0}" ShortID="258958214">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
@@ -969,6 +1021,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="sfx_charger_aggro_increase_3" ID="{76B2D1B7-B15C-4915-BB8B-995B96D7F526}" ShortID="580114280">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
@@ -991,21 +1050,19 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<PositioningInfo>
+						<Panner Name="" ID="{005CE2A1-7D70-4C33-96E7-310098517846}"/>
+					</PositioningInfo>
 				</RandomSequenceContainer>
-				<RandomSequenceContainer Name="sfx_tom_footsteps" ID="{6BE7082B-60F3-49AA-BA17-A1E1CA8E76CE}" ShortID="129219100">
+				<RandomSequenceContainer Name="sfx_taunt" ID="{94CE555F-41CF-443E-A238-E2DE398A54A4}" ShortID="498072386">
 					<PropertyList>
-						<Property Name="Highpass" Type="int16">
-							<ValueList>
-								<Value>16</Value>
-							</ValueList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{2236AA97-C696-4D90-9FF6-9A1E0453D6C3}"/>
+								</ModifierInfo>
+							</ModifierList>
 						</Property>
-						<Property Name="Lowpass" Type="int16">
-							<ValueList>
-								<Value>19</Value>
-							</ValueList>
-						</Property>
-						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -1016,65 +1073,582 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="sfx_tom_step_1" ID="{388E15A5-4F4E-4CF8-8ADC-D6224F365793}" ShortID="293946968">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="sfx_tom_step_1" ID="{86984314-F3DF-47ED-B8E3-066A2AC3086C}">
-									<PropertyList>
-										<Property Name="LoopEnd" Type="Real64" Value="0.150566271105355"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.353575559422735"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>sfx_tom_step_1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="1043628278"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="sfx_tom_step_1" ID="{86984314-F3DF-47ED-B8E3-066A2AC3086C}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="sfx_tom_step_2" ID="{53BDF114-1505-4E3E-A9E2-0AC4944764D6}" ShortID="806994915">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="sfx_tom_step_2" ID="{38FB89D3-C6C6-4D1E-9199-F4327A3881C4}">
-									<PropertyList>
-										<Property Name="LoopBegin" Type="Real64" Value="0.00759613851258056"/>
-										<Property Name="LoopEnd" Type="Real64" Value="0.150169815210246"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>sfx_tom_step_2.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="223658227"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="sfx_tom_step_2" ID="{38FB89D3-C6C6-4D1E-9199-F4327A3881C4}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="sfx_tom_step_3" ID="{082DB156-26E0-4452-883B-84E12E7B1983}" ShortID="288147621">
+						<Sound Name="sfx_taunts_akanbe_1" ID="{2834ECA0-16F3-46C2-AF16-40FE2821C4B4}" ShortID="854687544">
 							<PropertyList>
-								<Property Name="Weight" Type="Real64">
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{A72D3E2D-7DBF-4731-AD3F-24E89888C941}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_taunts_akanbe_1" ID="{2097FEC6-48CD-4E54-8553-F2A33D07A24A}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_taunts_akanbe_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="322269443"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_taunts_akanbe_1" ID="{2097FEC6-48CD-4E54-8553-F2A33D07A24A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_taunts_akanbe_2" ID="{4621F9FE-F9C9-4105-B8F9-D2C967887F74}" ShortID="433018834">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{E17D0511-590F-4C8D-939D-2E02463C0B6E}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_taunts_akanbe_2" ID="{A9598B90-5D12-4327-AD43-4F14CEDE0624}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_taunts_akanbe_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="707296361"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_taunts_akanbe_2" ID="{A9598B90-5D12-4327-AD43-4F14CEDE0624}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_taunts_hey_crab_face_1" ID="{0C3CBABB-EC52-4083-891C-297779CE4F8F}" ShortID="225553682">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_taunts_hey_crab_face_1" ID="{E50D578D-E44D-4468-AE89-C1F302AAF033}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_taunts_hey_crab_face_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="219325184"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_taunts_hey_crab_face_1" ID="{E50D578D-E44D-4468-AE89-C1F302AAF033}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_taunts_hey_lobster_roll_1" ID="{26DBD691-F2DD-4008-AEC4-CB8BE75E99B1}" ShortID="709120475">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_taunts_hey_lobster_roll_1" ID="{DE074F15-A75A-4F27-901A-3428C0B0731A}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_taunts_hey_lobster_roll_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="483033253"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_taunts_hey_lobster_roll_1" ID="{DE074F15-A75A-4F27-901A-3428C0B0731A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_taunts_hey_stupid_1" ID="{789DCCB4-2863-4B12-A43A-9E11A78E7447}" ShortID="929439992">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_taunts_hey_stupid_1" ID="{206092B6-7EF2-4341-89EF-A312B93E248A}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_taunts_hey_stupid_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="122015646"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_taunts_hey_stupid_1" ID="{206092B6-7EF2-4341-89EF-A312B93E248A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_taunts_hey_stupid_2" ID="{B95FA5D6-0BB8-49DA-8ABC-FC917F302DF3}" ShortID="217045137">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_taunts_hey_stupid_2" ID="{1F67E3BF-9CA9-4CCF-9D95-030655D8FFEE}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_taunts_hey_stupid_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="395659740"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_taunts_hey_stupid_2" ID="{1F67E3BF-9CA9-4CCF-9D95-030655D8FFEE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_taunts_raspberry_1" ID="{AA795443-1D32-4326-8FFD-43230E71B9AF}" ShortID="988945178">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_taunts_raspberry_1" ID="{6B9B2C11-6632-4F0E-AAB5-B4DBE8204251}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_taunts_raspberry_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="245441252"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_taunts_raspberry_1" ID="{6B9B2C11-6632-4F0E-AAB5-B4DBE8204251}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_taunts_raspberry_2" ID="{EC0040B8-833A-4276-AB12-A050267C63D3}" ShortID="143529746">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_taunts_raspberry_2" ID="{064422F2-EE6C-476D-80E9-CE1AD1C03BA9}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_taunts_raspberry_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="637267295"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_taunts_raspberry_2" ID="{064422F2-EE6C-476D-80E9-CE1AD1C03BA9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_taunts_raspberry_3" ID="{55377031-304D-4864-A0A5-A4108FF30626}" ShortID="763672472">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_taunts_raspberry_3" ID="{40D500B8-CA8E-478B-BD28-5C491E476712}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_taunts_raspberry_3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1061351272"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_taunts_raspberry_3" ID="{40D500B8-CA8E-478B-BD28-5C491E476712}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_taunts_you_scared_1" ID="{790544C1-1560-43C6-A90F-753D4A6FDC1A}" ShortID="461963333">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{185263C8-B6C4-4C5B-8057-F49A71B7DD55}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_taunts_you_scared_1" ID="{5ECFBA84-E079-412A-A4DD-AE9984D68DCB}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_taunts_you_scared_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="629580135"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_taunts_you_scared_1" ID="{5ECFBA84-E079-412A-A4DD-AE9984D68DCB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<SwitchContainer Name="Footsteps" ID="{13072692-B1F0-415A-889C-E3EEFE33F278}" ShortID="435816680">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{1D55FE38-40A5-4D44-96EA-8432A178FD50}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="sfx_tom_footsteps" ID="{6BE7082B-60F3-49AA-BA17-A1E1CA8E76CE}" ShortID="129219100">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
 									<ValueList>
-										<Value>33</Value>
+										<Value>16</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>19</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{AEAFFFF6-B21E-4D02-B667-21ED81EC8DCE}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="sfx_tom_step_1" ID="{388E15A5-4F4E-4CF8-8ADC-D6224F365793}" ShortID="293946968">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{BC6BBB08-BF36-4BC2-8988-009CEC84C2CC}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_tom_step_1" ID="{86984314-F3DF-47ED-B8E3-066A2AC3086C}">
+											<PropertyList>
+												<Property Name="LoopEnd" Type="Real64" Value="0.150566271105355"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.353575559422735"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>sfx_tom_step_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1043628278"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_tom_step_1" ID="{86984314-F3DF-47ED-B8E3-066A2AC3086C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_tom_step_4" ID="{9C14B713-0FDA-4BAB-AACA-343901007BD3}" ShortID="477921954">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{7A26513F-D71C-49B7-B293-185B881D380C}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_tom_step_4" ID="{B1A9110D-D0E1-4E61-8D60-2BF5D91A0A1E}">
+											<PropertyList>
+												<Property Name="LoopEnd" Type="Real64" Value="0.149316713535042"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.353313236197175"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>sfx_tom_step_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="103508686"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_tom_step_4" ID="{B1A9110D-D0E1-4E61-8D60-2BF5D91A0A1E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_tom_step_5" ID="{BC38FF12-72E2-48E3-BCD2-9D27B69DD8CE}" ShortID="838760481">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{16BAC7A7-3B46-4CA2-A973-D4A1A2AC3C64}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_tom_step_5" ID="{40F9561C-BA82-4F62-9520-390518D92799}">
+											<PropertyList>
+												<Property Name="LoopEnd" Type="Real64" Value="0.149984208663454"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.356165168685685"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>sfx_tom_step_5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="423795870"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_tom_step_5" ID="{40F9561C-BA82-4F62-9520-390518D92799}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_tom_step_6" ID="{B83A4C0F-15AD-4D1D-940B-60ACE1DBE34F}" ShortID="708866877">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{8B7231F7-E6F9-4533-A204-7DE752932D05}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_tom_step_6" ID="{072E6C2A-386A-44C8-A0D1-5F4E63AD94BE}">
+											<PropertyList>
+												<Property Name="LoopEnd" Type="Real64" Value="0.15210081173693"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.35174741408873"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>sfx_tom_step_6.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="21309808"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_tom_step_6" ID="{072E6C2A-386A-44C8-A0D1-5F4E63AD94BE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_tom_step_7" ID="{93CEDC00-B04A-4E21-B213-FA8EAE17140A}" ShortID="1049552768">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{EDF641AD-2D38-4090-8C7E-F5B0F775280E}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_tom_step_7" ID="{CD5B948E-6DD7-4F94-9F14-2C731FF5890E}">
+											<PropertyList>
+												<Property Name="LoopEnd" Type="Real64" Value="0.150146556049521"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.351440693510699"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>sfx_tom_step_7.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="672575856"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_tom_step_7" ID="{CD5B948E-6DD7-4F94-9F14-2C731FF5890E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_tom_step_8" ID="{AB9EC6F3-A2E6-4748-8DD0-B76B46659B28}" ShortID="243175098">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{91028418-9049-4E96-ACA6-CB029FA4630A}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_tom_step_8" ID="{874CFBFC-4906-4CA1-B342-BEF9E1093B94}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.00650605010443285"/>
+												<Property Name="LoopEnd" Type="Real64" Value="0.150506625749213"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.350992123304969"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>sfx_tom_step_8.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="376943216"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_tom_step_8" ID="{874CFBFC-4906-4CA1-B342-BEF9E1093B94}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_tom_step_10" ID="{358F57FB-EBCC-4FF0-8461-B718BCCDE839}" ShortID="465981257">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{2779DE03-451F-4391-BE07-4BF3FECD004E}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_tom_step_10" ID="{4C181E88-0476-4BCA-8FBE-D5AD67A29C61}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.023403772029109"/>
+												<Property Name="LoopEnd" Type="Real64" Value="0.155725098501379"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.354983239094778"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>sfx_tom_step_10.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="780761335"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_tom_step_10" ID="{4C181E88-0476-4BCA-8FBE-D5AD67A29C61}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="sfx_tom_discofloor_footsteps" ID="{2777D684-9AFA-4A6F-9C9D-5A3558A160C0}" ShortID="612139472">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{2D6BEAE2-A7E8-40F5-9378-4D7C5E206EF4}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1087,217 +1661,144 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="sfx_tom_step_3" ID="{10E357A2-7B87-4B88-A4A0-2B27C2551D74}">
+								<Sound Name="tom_ALTdiscofloor_step_1" ID="{444F0C3D-0AC4-4B0B-A7F4-3C50627B2927}" ShortID="636201896">
 									<PropertyList>
-										<Property Name="LoopEnd" Type="Real64" Value="0.15008576329331"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.351113716295428"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{A3C93810-3674-461C-A7DF-BCCF397A1B5A}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>sfx_tom_step_3.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="849010360"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="sfx_tom_step_3" ID="{10E357A2-7B87-4B88-A4A0-2B27C2551D74}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="sfx_tom_step_4" ID="{9C14B713-0FDA-4BAB-AACA-343901007BD3}" ShortID="477921954">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="sfx_tom_step_4" ID="{B1A9110D-D0E1-4E61-8D60-2BF5D91A0A1E}">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tom_ALTdiscofloor_step_1" ID="{87EE10BD-5B44-47A9-AEFF-101E64558868}">
+											<Language>SFX</Language>
+											<AudioFile>tom_ALTdiscofloor_step_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="581706561"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="tom_ALTdiscofloor_step_1" ID="{87EE10BD-5B44-47A9-AEFF-101E64558868}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="tom_ALTdiscofloor_step_2" ID="{E17505AE-5301-4653-BD77-08534ACCF98E}" ShortID="554700465">
 									<PropertyList>
-										<Property Name="LoopEnd" Type="Real64" Value="0.149316713535042"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.353313236197175"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D4B48362-07EC-4750-80A2-093E14F292CC}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>sfx_tom_step_4.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="103508686"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="sfx_tom_step_4" ID="{B1A9110D-D0E1-4E61-8D60-2BF5D91A0A1E}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="sfx_tom_step_5" ID="{BC38FF12-72E2-48E3-BCD2-9D27B69DD8CE}" ShortID="838760481">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="sfx_tom_step_5" ID="{40F9561C-BA82-4F62-9520-390518D92799}">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tom_ALTdiscofloor_step_2" ID="{5920B92A-B265-41C9-B180-4E88B748191F}">
+											<Language>SFX</Language>
+											<AudioFile>tom_ALTdiscofloor_step_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="713018185"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="tom_ALTdiscofloor_step_2" ID="{5920B92A-B265-41C9-B180-4E88B748191F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="tom_ALTdiscofloor_step_3" ID="{21E19584-C70A-4451-9DF3-BF28ECF2C832}" ShortID="1036346750">
 									<PropertyList>
-										<Property Name="LoopEnd" Type="Real64" Value="0.149984208663454"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.356165168685685"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{B8CBCBF7-136B-49C7-A171-5F7C489FE4C4}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>sfx_tom_step_5.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="423795870"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="sfx_tom_step_5" ID="{40F9561C-BA82-4F62-9520-390518D92799}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="sfx_tom_step_6" ID="{B83A4C0F-15AD-4D1D-940B-60ACE1DBE34F}" ShortID="708866877">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="sfx_tom_step_6" ID="{072E6C2A-386A-44C8-A0D1-5F4E63AD94BE}">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tom_ALTdiscofloor_step_3" ID="{DE132D14-461A-4176-B362-B314EFDE490F}">
+											<Language>SFX</Language>
+											<AudioFile>tom_ALTdiscofloor_step_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="447354837"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="tom_ALTdiscofloor_step_3" ID="{DE132D14-461A-4176-B362-B314EFDE490F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="tom_ALTdiscofloor_step_4" ID="{9FD94322-0624-4D13-9FE7-9AE07D041432}" ShortID="894589968">
 									<PropertyList>
-										<Property Name="LoopEnd" Type="Real64" Value="0.15210081173693"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.35174741408873"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{B3EC29E2-DB49-4EC3-905E-06AC3A80F541}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>sfx_tom_step_6.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="21309808"/>
-									</MediaIDList>
-								</AudioFileSource>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tom_ALTdiscofloor_step_4" ID="{D36309FE-F62E-41BE-B5E9-32A97F533917}">
+											<Language>SFX</Language>
+											<AudioFile>tom_ALTdiscofloor_step_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="68264049"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="tom_ALTdiscofloor_step_4" ID="{D36309FE-F62E-41BE-B5E9-32A97F533917}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="sfx_tom_step_6" ID="{072E6C2A-386A-44C8-A0D1-5F4E63AD94BE}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="sfx_tom_step_7" ID="{93CEDC00-B04A-4E21-B213-FA8EAE17140A}" ShortID="1049552768">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="sfx_tom_step_7" ID="{CD5B948E-6DD7-4F94-9F14-2C731FF5890E}">
-									<PropertyList>
-										<Property Name="LoopEnd" Type="Real64" Value="0.150146556049521"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.351440693510699"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>sfx_tom_step_7.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="672575856"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="sfx_tom_step_7" ID="{CD5B948E-6DD7-4F94-9F14-2C731FF5890E}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="sfx_tom_step_8" ID="{AB9EC6F3-A2E6-4748-8DD0-B76B46659B28}" ShortID="243175098">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="sfx_tom_step_8" ID="{874CFBFC-4906-4CA1-B342-BEF9E1093B94}">
-									<PropertyList>
-										<Property Name="LoopBegin" Type="Real64" Value="0.00650605010443285"/>
-										<Property Name="LoopEnd" Type="Real64" Value="0.150506625749213"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.350992123304969"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>sfx_tom_step_8.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="376943216"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="sfx_tom_step_8" ID="{874CFBFC-4906-4CA1-B342-BEF9E1093B94}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="sfx_tom_step_9" ID="{847D6A8E-DF19-4D29-9101-14644A27848E}" ShortID="487766871">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="sfx_tom_step_9" ID="{0C949D93-6DB8-458D-8A62-67E8F315A977}">
-									<PropertyList>
-										<Property Name="LoopBegin" Type="Real64" Value="0.00811865283563397"/>
-										<Property Name="LoopEnd" Type="Real64" Value="0.151354885007176"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.352748735289348"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>sfx_tom_step_9.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="441169925"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="sfx_tom_step_9" ID="{0C949D93-6DB8-458D-8A62-67E8F315A977}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="sfx_tom_step_10" ID="{358F57FB-EBCC-4FF0-8461-B718BCCDE839}" ShortID="465981257">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="sfx_tom_step_10" ID="{4C181E88-0476-4BCA-8FBE-D5AD67A29C61}">
-									<PropertyList>
-										<Property Name="LoopBegin" Type="Real64" Value="0.023403772029109"/>
-										<Property Name="LoopEnd" Type="Real64" Value="0.155725098501379"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.354983239094778"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>sfx_tom_step_10.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="780761335"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="sfx_tom_step_10" ID="{4C181E88-0476-4BCA-8FBE-D5AD67A29C61}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+						</RandomSequenceContainer>
 					</ChildrenList>
-				</RandomSequenceContainer>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="sfx_tom_footsteps" ID="{6BE7082B-60F3-49AA-BA17-A1E1CA8E76CE}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="sfx_tom_discofloor_footsteps" ID="{2777D684-9AFA-4A6F-9C9D-5A3558A160C0}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+					</GroupingInfo>
+				</SwitchContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

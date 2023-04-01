@@ -36,6 +36,7 @@ public abstract class Enemy: MonoBehaviour
     //wwise
     public AK.Wwise.Event attackSFX;
     public AK.Wwise.Event chargerDeathSFX;
+    public AK.Wwise.Event angySFX;
 
     public bool isAngy;
     public Attack currentAttack;
@@ -156,11 +157,13 @@ public abstract class Enemy: MonoBehaviour
         anger = anger + tauntValue;
         if (anger >= maxAnger) {
             isAngy = true;
-           _AngyInd.SetActive(true); 
-           currentAttack = angyAttack;
+            //angySFX.Post(gameObject);
+            _AngyInd.SetActive(true); 
+            currentAttack = angyAttack;
             Debug.Log("Damage " + currentAttack.damage);
         }else{_AngyInd.SetActive(false);}
     }
+
 
     public IEnumerator Attack(Attack attackObj) {
         // trigger attack animation here

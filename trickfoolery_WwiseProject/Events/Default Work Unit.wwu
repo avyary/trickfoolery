@@ -232,6 +232,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_sfx_taunt" ID="{9D43E952-47F8-4E63-9CD7-BA481DF46578}">
+					<ChildrenList>
+						<Action Name="" ID="{4F39E42B-A67E-475E-A473-C46111274BB9}" ShortID="694595780">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_taunt" ID="{94CE555F-41CF-443E-A238-E2DE398A54A4}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_charger_anger" ID="{39575478-1BB5-4F6B-B117-0A3F67F8D64F}">
+					<ChildrenList>
+						<Action Name="" ID="{D11BA82D-54C7-4BA6-A336-D88137904D8D}" ShortID="1032327250">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_charger_anger" ID="{C31818E4-960D-4534-80EE-44A59276F6F4}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -1,9 +1,12 @@
 Event	ID	Name			Wwise Object Path	Notes
 	308973664	First_Time_Mute_mus_pause_75bpm			\Default Work Unit\First_Time_Mute_mus_pause_75bpm	
 	325086926	Play_sfx_select			\Default Work Unit\Play_sfx_select	
+	526466336	Play_sfx_groovy			\Default Work Unit\Play_sfx_groovy	
 	843029991	Play_sfx_charger_death			\Default Work Unit\Play_sfx_charger_death	
+	923862104	Play_sfx_charger_anger			\Default Work Unit\Play_sfx_charger_anger	
 	1067524079	Play_sfx_player_hurt			\Default Work Unit\Play_sfx_player_hurt	
 	1591758634	Play_sfx_player_death			\Default Work Unit\Play_sfx_player_death	
+	1800631706	Play_sfx_taunt			\Default Work Unit\Play_sfx_taunt	
 	2343006462	Play_sfx_confirm			\Default Work Unit\Play_sfx_confirm	
 	2601853237	Stop_mus_Trickfoolery_222bpm			\Default Work Unit\Stop_mus_Trickfoolery_222bpm	
 	2661393732	Play_sfx_tomstep			\Default Work Unit\Play_sfx_tomstep	
@@ -17,30 +20,41 @@ Event	ID	Name			Wwise Object Path	Notes
 	4152903754	Unmute_mus_pause_75bpm			\Default Work Unit\Unmute_mus_pause_75bpm	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	21309808	sfx_tom_step_6	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_tom_step_6_CB3BAB12.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_tom_footsteps\sfx_tom_step_6		62144
+	21309808	sfx_tom_step_6	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_tom_step_6_CB3BAB12.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\sfx_tom_footsteps\sfx_tom_step_6		62144
 	63593165	sfx_charger_hurt_3	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_charger_hurt_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_charger_lunge\sfx_charger_hurt_3		176496
-	103508686	sfx_tom_step_4	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_tom_step_4_671EB80C.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_tom_footsteps\sfx_tom_step_4		62420
+	103508686	sfx_tom_step_4	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_tom_step_4_671EB80C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\sfx_tom_footsteps\sfx_tom_step_4		62420
 	119466304	sfx_charger_hurt_2	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_charger_hurt_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_charger_lunge\sfx_charger_hurt_2		264696
-	223658227	sfx_tom_step_2	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_tom_step_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_tom_footsteps\sfx_tom_step_2		60188
+	122015646	sfx_taunts_hey_stupid_1	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_taunts_hey_stupid_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_taunt\sfx_taunts_hey_stupid_1		352896
+	219325184	sfx_taunts_hey_crab_face_1	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_taunts_hey_crab_face_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_taunt\sfx_taunts_hey_crab_face_1		264696
 	224255706	mus_Pause_loop_75bpm	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\mus_Pause_loop_75bpm_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\mus_Pause_loop_75bpm		15670408
+	245441252	sfx_taunts_raspberry_1	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_taunts_raspberry_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_taunt\sfx_taunts_raspberry_1		529296
 	275378158	sfx_charger_death_1	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_charger_death_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_charger_death\sfx_charger_death_1		352896
-	376943216	sfx_tom_step_8	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_tom_step_8_1AAF95E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_tom_footsteps\sfx_tom_step_8		62012
+	292366327	sfx_charger_aggro_increase_3	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_charger_aggro_increase_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_charger_anger\sfx_charger_aggro_increase_3		264696
+	322269443	sfx_taunts_akanbe_1	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_taunts_akanbe_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_taunt\sfx_taunts_akanbe_1		352896
+	375178555	sfx_groovy	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_groovy_2_larose_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_groovy		352896
+	376943216	sfx_tom_step_8	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_tom_step_8_1AAF95E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\sfx_tom_footsteps\sfx_tom_step_8		62012
+	395659740	sfx_taunts_hey_stupid_2	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_taunts_hey_stupid_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_taunt\sfx_taunts_hey_stupid_2		264696
 	395767410	sfx_unpause	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_unpause_larose (1)_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_unpause		352896
 	403074574	sfx_player_hurt_3	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_player_hurt_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_hurt\sfx_player_hurt_3		176496
 	405788637	sfx_player_hurt_4	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_player_hurt_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_hurt\sfx_player_hurt_4		176496
-	423795870	sfx_tom_step_5	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_tom_step_5_0F9684AA.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_tom_footsteps\sfx_tom_step_5		62924
+	423795870	sfx_tom_step_5	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_tom_step_5_0F9684AA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\sfx_tom_footsteps\sfx_tom_step_5		62924
 	429033431	sfx_player_dash	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_player_dash_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_dash		88296
-	441169925	sfx_tom_step_9	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_tom_step_9_5E691915.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_tom_footsteps\sfx_tom_step_9		62320
+	483033253	sfx_taunts_hey_lobster_roll_1	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_taunts_hey_lobster_roll_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_taunt\sfx_taunts_hey_lobster_roll_1		264696
 	507762272	sfx_charger_death_2	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_charger_death_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_charger_death\sfx_charger_death_2		264696
 	611627305	sfx_player_hurt_6	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_player_hurt_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_hurt\sfx_player_hurt_6		176496
+	618887788	sfx_charger_aggro_increase_2	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_charger_aggro_increase_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_charger_anger\sfx_charger_aggro_increase_2		352896
 	621091837	sfx_confirm	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_confirming_option_larose_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_confirm		793896
-	672575856	sfx_tom_step_7	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_tom_step_7_77A41413.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_tom_footsteps\sfx_tom_step_7		62092
+	629580135	sfx_taunts_you_scared_1	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_taunts_you_scared_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_taunt\sfx_taunts_you_scared_1		352896
+	637267295	sfx_taunts_raspberry_2	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_taunts_raspberry_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_taunt\sfx_taunts_raspberry_2		529296
+	672575856	sfx_tom_step_7	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_tom_step_7_77A41413.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\sfx_tom_footsteps\sfx_tom_step_7		62092
 	673051370	sfx_select	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_mouse_select_larose_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_select		352896
-	780761335	sfx_tom_step_10	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_tom_step_10_DBCC2E29.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_tom_footsteps\sfx_tom_step_10		62716
-	849010360	sfx_tom_step_3	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_tom_step_3_40D5B52A.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_tom_footsteps\sfx_tom_step_3		62032
+	707296361	sfx_taunts_akanbe_2	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_taunts_akanbe_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_taunt\sfx_taunts_akanbe_2		264696
+	780761335	sfx_tom_step_10	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_tom_step_10_DBCC2E29.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\sfx_tom_footsteps\sfx_tom_step_10		62716
+	825759985	sfx_charger_aggro_increase_1	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_charger_aggro_increase_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_charger_anger\sfx_charger_aggro_increase_1		264696
 	1007579897	sfx_player_death	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_player_death_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_death		264696
 	1033023117	mus_trickfoolery_222bpm	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\mus_trickfoolery_fullloop_222bpm_21C37800.wem		\Actor-Mixer Hierarchy\Default Work Unit\mus_trickfoolery_222bpm		37380492
-	1043628278	sfx_tom_step_1	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_tom_step_1_CEF5C489.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_tom_footsteps\sfx_tom_step_1		62468
+	1043628278	sfx_tom_step_1	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_tom_step_1_CEF5C489.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\sfx_tom_footsteps\sfx_tom_step_1		62468
+	1061351272	sfx_taunts_raspberry_3	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_taunts_raspberry_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_taunt\sfx_taunts_raspberry_3		264696
 	1066273250	sfx_pause	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_pause_larose_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_pause		352896
 	1070951602	sfx_player_hurt_1	C:\Users\Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_player_hurt_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_hurt\sfx_player_hurt_1		176496
 

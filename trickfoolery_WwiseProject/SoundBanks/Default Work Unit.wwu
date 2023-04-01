@@ -20,6 +20,9 @@
 						<ObjectRef Name="Play_mus_Pause_75bpm" ID="{BCE1262A-3C14-4B31-B28C-4A64BEE31410}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_charger_lunge" ID="{34768769-7EB7-4C6B-A65A-4CB6AB2A5B55}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_player_hurt" ID="{F2D8E87D-016C-4DA6-8E62-4CD589790A37}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_sfx_taunt" ID="{9D43E952-47F8-4E63-9CD7-BA481DF46578}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_sfx_charger_anger" ID="{39575478-1BB5-4F6B-B117-0A3F67F8D64F}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_sfx_groovy" ID="{7FB8863C-987C-4F96-A523-14BA0486137B}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_player_dash" ID="{D6F8BF24-B6D5-4FEA-AC6B-3CEC97B0DDC4}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
