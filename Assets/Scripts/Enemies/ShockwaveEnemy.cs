@@ -12,7 +12,9 @@ public class ShockwaveEnemy : Enemy
     }
 
     void Update() 
-    {
+    {   
+        Debug.Log(System.String.Format("Range: {0}", currentAttack.range));
+        
         switch(state) 
         {
             case EnemyState.Passive:
@@ -29,6 +31,7 @@ public class ShockwaveEnemy : Enemy
                 agent.SetDestination(player.transform.position);
                 // should stop when it reaches its current attack distance from the player
                 float dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
+
 
                 if (dist <= currentAttack.range) 
                 {
