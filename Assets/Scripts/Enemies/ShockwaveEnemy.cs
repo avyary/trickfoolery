@@ -14,7 +14,7 @@ public class ShockwaveEnemy : Enemy
     void Update() 
     {   
         Debug.Log(System.String.Format("Range: {0}", currentAttack.range));
-        
+        ;
         switch(state) 
         {
             case EnemyState.Passive:
