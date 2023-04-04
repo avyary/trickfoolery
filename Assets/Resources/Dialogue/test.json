@@ -17,6 +17,15 @@
       ]
     },
     {
+      "sceneName": "onLoss",
+      "lines": [
+        {
+          "name": "Commentator",
+          "text": "Oh, what a shame!!!"
+        }
+      ]
+    },
+    {
       "sceneName": "dodgeSuccess",
       "lines": [
         {

@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
+
+
 public enum EnemyState
 {
-    Passive,     // 0 - patrolling, "looking" for player
-    Tracking,    // 1 - "aggro", trying to get into attack range of player
-    Startup,     // 2 - in startup of attack
-    Active,      // 3 - attacking, hitbox active
-    Recovery,    // 4 - finishing attack
-    Stunned,     // 5 - hit by attack, trap, etc. and stunned - cannot move, attack
-    Dead,        // 6 - rip
-    Spawning
+    Passive,     // 0 - out of combat;
+    Patrolling,  // 1 - "looking" for player
+    Tracking,    // 2 - "aggro", trying to get into attack range of player
+    Startup,     // 3 - in startup of attack
+    Active,      // 4 - attacking, hitbox active
+    Recovery,    // 5 - finishing attack
+    Stunned,     // 6 - hit by attack, trap, etc. and stunned - cannot move, attack
+    Dead,        // 7 - rip
+    Spawning     // 8
 }
 
 public abstract class Enemy: MonoBehaviour
@@ -32,6 +36,10 @@ public abstract class Enemy: MonoBehaviour
     Attack _angyAttack;
     [SerializeField]
     GameObject _deathBubble;
+    [SerializeField]
+    UnityEvent startCombatEvent;
+
+    private GameManager gameManager;
 
     public bool isAngy;
     public Attack currentAttack;
@@ -44,7 +52,7 @@ public abstract class Enemy: MonoBehaviour
 
     protected int health { get; set; }
     protected int anger { get; set; }
-    [SerializeField] protected EnemyState state;
+    [SerializeField] public EnemyState state;
 
     protected GameObject player;
     protected HypeManager hypeManager;
@@ -58,7 +66,6 @@ public abstract class Enemy: MonoBehaviour
     protected Transform centrePoint;    // centre of the map (try setting it to the agent for fun?)
 
     protected GameObject deathBubble;
-
 
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
@@ -126,7 +133,7 @@ public abstract class Enemy: MonoBehaviour
         // add animation change for entering patrol/passive state here - returns to original color for now
         GetComponent<MeshRenderer>().material.color = originalColor;
 
-        state = EnemyState.Passive;
+        state = EnemyState.Patrolling;
     }
 
     // invoked when health falls to/below 0
@@ -185,7 +192,7 @@ public abstract class Enemy: MonoBehaviour
             yield break;
         }
 
-        state = EnemyState.Passive;
+        state = EnemyState.Patrolling;
         gameObject.GetComponent<Patrol>().enabled = true;
     }
 
@@ -193,7 +200,6 @@ public abstract class Enemy: MonoBehaviour
     {
         // animation for finding player?
         state = EnemyState.Tracking;
-        // Debug.Log("Player found!");
         gameObject.GetComponent<Patrol>().enabled = false;
         PlayerDetected();
     }
@@ -226,6 +232,16 @@ public abstract class Enemy: MonoBehaviour
         return;
     }
 
+    protected void OnStartCombat() {
+        print("bonk");
+        state = EnemyState.Patrolling;
+    }
+
+    protected void OnBecomePassive() {
+        state = EnemyState.Passive;
+        print("state is now passive");
+    }
+
     protected virtual void Start()
     {
         maxHealth = _maxHealth;
@@ -237,6 +253,7 @@ public abstract class Enemy: MonoBehaviour
         basicAttack = _basicAttack;
         angyAttack = _angyAttack;
         currentAttack = _basicAttack;
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         // deathBubble = _deathBubble;
         // deathBubble.SetActive(false);
         player = GameObject.FindWithTag("Player");
@@ -250,7 +267,14 @@ public abstract class Enemy: MonoBehaviour
     IEnumerator DelayStart() {
         state = EnemyState.Spawning;
         yield return new WaitForSecondsRealtime(0.5f);
-        state = EnemyState.Passive;
+        if (gameManager.state == GameState.Combat) {
+            state = EnemyState.Patrolling;
+        }
+        else {
+            gameManager.startCombatEvent.AddListener(OnStartCombat);
+            gameManager.startTutorialEvent.AddListener(OnStartCombat);
+            gameManager.stopTutorialEvent.AddListener(OnBecomePassive);
+            state = EnemyState.Passive;
+        }
     }
-
 }

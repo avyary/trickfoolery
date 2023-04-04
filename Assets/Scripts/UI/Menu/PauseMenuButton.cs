@@ -22,6 +22,6 @@ public class PauseMenuButton : MonoBehaviour
     }
 
     public void ClosePauseMenu() {
-        gameManager.HidePauseMenu();
+        gameManager.TogglePause();
     }
 }

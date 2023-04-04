@@ -9,23 +9,27 @@ public class UIManager : MonoBehaviour
 {
     public GameObject[] hearts;
 
-    public GameObject jumbotron;
+    public GameObject jumbotronObj;
+    private JumbotronController jumbotron;
+
     public GameObject jumbotronImg;
     public GameObject battleStart;
     public GameObject health;
     private GameObject pauseMenu;
+    private GameObject lossSlideIn;
 
     private int heartsActive;
-
     
     void Start()
     {
-        jumbotron = GameObject.Find("Jumbotron");
+        jumbotronObj = GameObject.Find("Jumbotron");
+        jumbotron = jumbotronObj.GetComponent<JumbotronController>();
         jumbotronImg = GameObject.Find("Image");
         battleStart = GameObject.Find("BattleStart");
         health = GameObject.Find("Health");
         heartsActive = health.transform.childCount;
         pauseMenu = GameObject.Find("PauseMenu");
+        lossSlideIn = GameObject.Find("WinLossSlideIn");
     }
 
     public IEnumerator StartCombat() {
@@ -36,20 +40,34 @@ public class UIManager : MonoBehaviour
     }
 
     public void StartCombatJumbotronless() {
-        print("jumbotronlessing");
         battleStart.GetComponent<Animator>().SetTrigger("StartGame");
     }
 
     public void ShowPauseMenu() {
-        jumbotron.GetComponent<Animator>().SetTrigger("OpenPause");
+        if (jumbotron.state == JumbotronState.Hidden) {
+            jumbotronObj.GetComponent<Animator>().SetTrigger("OpenFromHidden");
+        }
+        else {
+            jumbotronObj.GetComponent<Animator>().SetTrigger("OpenPause");
+        }
         jumbotronImg.GetComponent<Animator>().SetTrigger("ToCenter");
         pauseMenu.GetComponent<PauseMenuManager>().InitMenu();
     }
 
     public void HidePauseMenu() {
+        if (jumbotron.state == JumbotronState.PauseFromHidden) {
+            jumbotronObj.GetComponent<Animator>().SetTrigger("CloseToHidden");
+        }
+        else {
+            jumbotronObj.GetComponent<Animator>().SetTrigger("ClosePause");
+        }
         pauseMenu.GetComponent<PauseMenuManager>().CloseMenu();
-        jumbotron.GetComponent<Animator>().SetTrigger("ClosePause");
+        jumbotronObj.GetComponent<Animator>().SetTrigger("ClosePause");
         jumbotronImg.GetComponent<Animator>().SetTrigger("ToBottom");
+    }
+
+    public void ShowLoss() {
+        lossSlideIn.GetComponent<Animator>().SetTrigger("showLoss");
     }
 
     public void UpdateHealth(float healthPercent) {

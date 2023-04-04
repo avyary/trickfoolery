@@ -105,6 +105,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 26768930793932778, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 26768930793932778, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: m_AutoBraking
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 360203701960774342, guid: 365579391c2931940a7e83bdc319620a, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -201,6 +209,18 @@ PrefabInstance:
       propertyPath: _deathBubble
       value: 
       objectReference: {fileID: 7962956978066060797}
+    - target: {fileID: 8157556152595408478, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: startCombatEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157556152595408478, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: startCombatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157556152595408478, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: startCombatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8343459955203448601, guid: 365579391c2931940a7e83bdc319620a, type: 3}
       propertyPath: m_RootOrder
       value: 9
