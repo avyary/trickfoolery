@@ -25,8 +25,11 @@ public class ActivateObjectOnTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        float local_hype;
+        
         // Check if the other object is the player
         if (other.CompareTag("Player"))
+
         {
             // Activate the two objects
             activateObject1.SetActive(true);
@@ -48,3 +51,4 @@ public class ActivateObjectOnTrigger : MonoBehaviour
         
     }
 }
+
