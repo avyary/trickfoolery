@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class ActivateObjectOnTrigger : MonoBehaviour
 {
-    public GameObject activateObject1;
-    public GameObject activateObject2;
+    public GameObject activateWall1;
+    public GameObject activateWall2;
+    
+     public GameObject activateIndicator;
     private HypeManager hypeManager;
     private float currHype;
     
@@ -32,8 +34,8 @@ public class ActivateObjectOnTrigger : MonoBehaviour
 
         {
             // Activate the two objects
-            activateObject1.SetActive(true);
-            activateObject2.SetActive(true);
+            activateWall1.SetActive(true);
+            activateWall2.SetActive(true);
 
             currHype = hypeManager.GetHype();
             hypeCheck = currHype + hype_needed;
@@ -45,8 +47,11 @@ public class ActivateObjectOnTrigger : MonoBehaviour
         if (hypeManager.GetHype() >= hypeCheck)
         {
             Debug.Log("Bridge destroyed");
-            activateObject1.SetActive(false);
-            activateObject2.SetActive(false);
+        
+            activateWall1.SetActive(false);
+            activateWall2.SetActive(false);
+            activateIndicator.SetActive(true);
+
         }
         
     }
