@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{71902489-F80C-4DEF-B7AC-12C89F1CDD54}" SchemaVersion="110">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{71902489-F80C-4DEF-B7AC-12C89F1CDD54}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{71902489-F80C-4DEF-B7AC-12C89F1CDD54}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="On_Disco_Floor" ID="{1353123B-8719-435F-969E-773D804B92E8}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="25"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="25"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Hype" ID="{F10FAC34-8EF9-452B-9153-83ADE95B5819}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>
