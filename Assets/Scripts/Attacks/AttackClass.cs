@@ -45,6 +45,8 @@ public abstract class Attack : MonoBehaviour
         range = _range;
     }
 
+    public virtual void StartAttack() {}
+
     public void Activate()
     {
         _renderer.enabled = true;

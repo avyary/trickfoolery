@@ -35,12 +35,17 @@ public class ShockwaveEnemy : Enemy
 
                 if (dist <= currentAttack.range) 
                 {
-                    agent.isStopped = true;
+                    agent.ResetPath();
+                    StartCoroutine(Attack(currentAttack));
                 }
 
                 break;
             
             case EnemyState.Active:
+                if (!isAngy) 
+                {
+                    currentAttack.StartAttack();
+                }
                 break;
         }
     }
