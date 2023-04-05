@@ -63,6 +63,7 @@ public class MenuManager : MonoBehaviour
     IEnumerator HandleButtonChange(bool silent = false){
         Transform newSelect = transform.GetChild(currentIdx);
         if (!silent) {
+            newSelect.gameObject.GetComponent<Animator>().SetTrigger("SelectButton");
             selectSFX.Post(gameObject); 
         }
         newSelect.gameObject.GetComponent<Button>().Select();

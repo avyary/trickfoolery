@@ -9,11 +9,12 @@ public class ProgressTracker : MonoBehaviour
     void Awake()
     {
         GameObject[] objs = GameObject.FindGameObjectsWithTag("ProgressTracker");
+        print(objs.Length);
 
-        if (objs.Length > 1)
-        {
-            Destroy(this.gameObject);
-        }
+        // if (objs.Length > 1)
+        // {
+        //     Destroy(this.gameObject);
+        // }
 
         DontDestroyOnLoad(this.gameObject);
     }
