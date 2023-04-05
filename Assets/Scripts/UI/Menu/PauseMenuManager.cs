@@ -64,6 +64,7 @@ public class PauseMenuManager : MonoBehaviour
     IEnumerator MenuAfterDelay() {
         print("menuafterdelay");
         GameObject.Find("FadeInOut").GetComponent<Animator>().SetTrigger("FadeOut");
+        GameObject.Find("ProgressTracker").GetComponent<ProgressTracker>().isRestart = false;
         yield return new WaitForSecondsRealtime(1.5f);
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }

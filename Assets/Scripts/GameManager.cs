@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour
     private string nextScene;
     [SerializeField]
     UnityEvent preCombat;
+    [SerializeField]
+    public GameObject trackerPrefab;
 
     // events for listeners
     [SerializeField]
@@ -51,11 +53,23 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public UnityEvent stopCombatEvent;
 
+    private bool isRestart;
+
     void Start()
     {
         uiManager = gameObject.GetComponent<UIManager>();
         dialogueManager = gameObject.GetComponent<DialogueManager>();
         jumbotron = GameObject.Find("Jumbotron").GetComponent<JumbotronController>();
+
+        GameObject progressTracker = GameObject.Find("ProgressTracker");
+        if (progressTracker) {
+            isRestart = progressTracker.GetComponent<ProgressTracker>().isRestart;
+        }
+        else {
+            GameObject tracker = GameObject.Instantiate(trackerPrefab);
+            tracker.name = "ProgressTracker";
+            isRestart = false;
+        }
 
         StartCoroutine(StartLevel());
     }
@@ -69,10 +83,15 @@ public class GameManager : MonoBehaviour
                 break;
         }
 
-        if (hasPersistentTarget) {
+        if (hasPersistentTarget && !isRestart) {
             preCombat.Invoke(); // execute pre-combat code
         }
         else {
+            // TODO: make this.. better
+            GameObject dialogueFade = GameObject.Find("DialogueFadeIn");
+            if (dialogueFade) {
+                dialogueFade.SetActive(false);
+            }
             StartCoroutine(uiManager.StartCombat()); // starts combat
         }
     }
@@ -113,9 +132,11 @@ public class GameManager : MonoBehaviour
         GameObject.Find("FadeInOut").GetComponent<Animator>().SetTrigger("FadeOut");
         yield return new WaitForSecondsRealtime(1.5f);
         if (isGameWon) {
+            GameObject.Find("ProgressTracker").GetComponent<ProgressTracker>().isRestart = false;
             SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
         }
         else {
+            GameObject.Find("ProgressTracker").GetComponent<ProgressTracker>().isRestart = true;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
