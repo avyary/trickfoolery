@@ -13,6 +13,7 @@ public class HypeManager : MonoBehaviour
     private Slider hypeBar;
 
     private float currentHype = 0;
+    public int hypePercent = 0;
 
     // how much hype is added for each event
     [SerializeField]
@@ -56,6 +57,7 @@ public class HypeManager : MonoBehaviour
     public void UpdateHype(float newHypeVal)
     {
         currentHype = Mathf.Min(newHypeVal, hypeGoal);
+        hypePercent = (int) Mathf.Floor(100 * (newHypeVal / hypeGoal));
         hypeBar.value = currentHype;
 
         if (currentHype >= hypeGoal)
