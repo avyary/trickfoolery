@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -435,8 +435,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: TRICKFOOLERY!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 60ec869afe5584602bd34d2159002693, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 60ec869afe5584602bd34d2159002693, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 17b283596d01845cd89bc8e0db0a8743, type: 2}
+  m_sharedMaterial: {fileID: 7334182787156671709, guid: 17b283596d01845cd89bc8e0db0a8743, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -470,7 +470,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: -3
+  m_characterSpacing: 6
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -895,6 +895,18 @@ PrefabInstance:
       propertyPath: sceneName
       value: OpeningCutscene
       objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192920, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192920, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192920, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1189042751039192921, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -926,6 +938,10 @@ PrefabInstance:
     - target: {fileID: 1189042751039192921, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: m_SizeDelta.y
       value: 54.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192921, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1189042751039192921, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -961,7 +977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1189042751039192921, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 127.014984
+      value: 153
       objectReference: {fileID: 0}
     - target: {fileID: 1189042751039192921, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -975,18 +991,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192923, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8d048deea56be41788cf3c311e1b1d02, type: 3}
     - target: {fileID: 1189042751039192926, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: m_Name
-      value: MainMenuButton (5)
+      value: PlayButton
       objectReference: {fileID: 0}
     - target: {fileID: 1189042751475156620, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: m_text
       value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 1189042751475156620, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 17b283596d01845cd89bc8e0db0a8743, type: 2}
+    - target: {fileID: 1189042751475156620, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: m_fontSizeBase
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 1189042751475156620, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7334182787156671709, guid: 17b283596d01845cd89bc8e0db0a8743, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
 --- !u!224 &1318087954 stripped
@@ -1333,6 +1361,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1189042751039192920, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192920, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192920, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192920, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
       objectReference: {fileID: 0}
@@ -1402,7 +1442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1189042751039192921, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 27.014984
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 1189042751039192921, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1416,14 +1456,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192923, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8d048deea56be41788cf3c311e1b1d02, type: 3}
     - target: {fileID: 1189042751039192926, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: m_Name
-      value: MainMenuButton (4)
+      value: QuitButton
       objectReference: {fileID: 0}
     - target: {fileID: 1189042751475156620, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: m_text
       value: Quit
       objectReference: {fileID: 0}
+    - target: {fileID: 1189042751475156620, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 17b283596d01845cd89bc8e0db0a8743, type: 2}
+    - target: {fileID: 1189042751475156620, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7334182787156671709, guid: 17b283596d01845cd89bc8e0db0a8743, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
 --- !u!1001 &5432811644919237997
