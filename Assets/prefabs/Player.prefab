@@ -6683,6 +6683,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1443720020226654601, guid: 38efc1a6d41901641aeed1632e74660e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c9575ed8ef4d3824aa06a70349b8a4cd, type: 2}
     - target: {fileID: 919132149155446097, guid: 38efc1a6d41901641aeed1632e74660e, type: 3}
       propertyPath: m_Name
       value: Idle_TOM
@@ -6699,6 +6703,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.018793251
       objectReference: {fileID: 0}
+    - target: {fileID: 6859337717375967133, guid: 38efc1a6d41901641aeed1632e74660e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 277f8f7ce72100142a526d3af34be1d0, type: 2}
     - target: {fileID: 7078722787440015773, guid: 38efc1a6d41901641aeed1632e74660e, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.65539396
