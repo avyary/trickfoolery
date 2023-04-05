@@ -170,7 +170,7 @@ public abstract class Enemy: MonoBehaviour
         yield return new WaitForSeconds(attackObj.startupTime);
         
         // there's probably a better way to handle the below (& its repetitions)
-        if (state == EnemyState.Dead || state == EnemyState.Stunned) {
+        if (state != EnemyState.Startup) {
             yield break;
         }
 
@@ -179,7 +179,7 @@ public abstract class Enemy: MonoBehaviour
         attackObj.Activate();  // activate attack collider
         yield return new WaitForSeconds(attackObj.activeTime);
 
-        if (state == EnemyState.Dead || state == EnemyState.Stunned) {
+        if (state != EnemyState.Active) {
             yield break;
         }
 
@@ -188,7 +188,7 @@ public abstract class Enemy: MonoBehaviour
         attackObj.Deactivate();  // deactivate attack collider
         yield return new WaitForSeconds(attackObj.recoveryTime);
 
-        if (state == EnemyState.Dead || state == EnemyState.Stunned) {
+        if (state != EnemyState.Recovery) {
             yield break;
         }
 
@@ -247,7 +247,6 @@ public abstract class Enemy: MonoBehaviour
         maxHealth = _maxHealth;
         health = _maxHealth;
         maxAnger = _maxAnger;
-        StartCoroutine(DelayStart());
         anger = 0;
         moveSpeed = _moveSpeed;
         basicAttack = _basicAttack;
@@ -262,6 +261,10 @@ public abstract class Enemy: MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         centrePoint = agent.transform;
         audioSource = GetComponent<AudioSource>();
+        StartCoroutine(DelayStart());
+        gameManager.startCombatEvent.AddListener(OnStartCombat);
+        gameManager.startTutorialEvent.AddListener(OnStartCombat);
+        gameManager.stopCombatEvent.AddListener(OnBecomePassive);
     }
 
     IEnumerator DelayStart() {
@@ -271,9 +274,6 @@ public abstract class Enemy: MonoBehaviour
             state = EnemyState.Patrolling;
         }
         else {
-            gameManager.startCombatEvent.AddListener(OnStartCombat);
-            gameManager.startTutorialEvent.AddListener(OnStartCombat);
-            gameManager.stopTutorialEvent.AddListener(OnBecomePassive);
             state = EnemyState.Passive;
         }
     }

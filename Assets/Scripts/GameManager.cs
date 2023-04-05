@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public UnityEvent startTutorialEvent;
     [SerializeField]
-    public UnityEvent stopTutorialEvent;
+    public UnityEvent stopCombatEvent;
 
     void Start()
     {
@@ -81,7 +81,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         state = GameState.Combat;
         playerInput = true;
-        player.tomAnimator.SetBool("isRunning", false);
     }
 
     public void StartTutorial() {
@@ -89,7 +88,7 @@ public class GameManager : MonoBehaviour
         playerInput = true;
     }
 
-    public void StopTutorial() {
+    public void StopCombat() {
         state = GameState.OutOfCombat;
         playerInput = false;
     }
@@ -121,6 +120,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void TriggerLoadNextScene() {
+        StartCoroutine(LoadNextScene());
+    }
+
     public void TogglePause() {
         if (jumbotron.state == JumbotronState.Hidden || jumbotron.state == JumbotronState.HypeBar) {
             pauseSFX.Post(gameObject);
@@ -140,10 +143,14 @@ public class GameManager : MonoBehaviour
         jumbotron.state = JumbotronState.Disabled;  // for animation duration
     }
 
-    public void GameOverWin()
+    public IEnumerator GameOverWin()
     {
-        state = GameState.OutOfCombat;
         isGameWon = true;
+        yield return new WaitForSeconds(0.5f);
+        stopCombatEvent.Invoke();
+        uiManager.GameOverWin();
+        yield return new WaitForSeconds(1f);
+        dialogueManager.StartDialogueScene("onWin", TriggerLoadNextScene);
     }
 
     public IEnumerator GameOverLose()

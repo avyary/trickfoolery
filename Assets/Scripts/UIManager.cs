@@ -17,6 +17,12 @@ public class UIManager : MonoBehaviour
     public GameObject health;
     private GameObject pauseMenu;
     private GameObject lossSlideIn;
+    private GameObject endPopup;
+
+    [SerializeField]
+    private Sprite winPopupImg;
+    [SerializeField]
+    private Sprite losePopupImg;
 
     private int heartsActive;
     
@@ -30,6 +36,7 @@ public class UIManager : MonoBehaviour
         heartsActive = health.transform.childCount;
         pauseMenu = GameObject.Find("PauseMenu");
         lossSlideIn = GameObject.Find("WinLossSlideIn");
+        endPopup = GameObject.Find("EndPopup");
     }
 
     public IEnumerator StartCombat() {
@@ -52,6 +59,16 @@ public class UIManager : MonoBehaviour
         }
         jumbotronImg.GetComponent<Animator>().SetTrigger("ToCenter");
         pauseMenu.GetComponent<PauseMenuManager>().InitMenu();
+    }
+
+    public void GameOverWin() {
+        endPopup.GetComponent<Image>().sprite = winPopupImg;
+        endPopup.GetComponent<Animator>().SetTrigger("GameEnd");
+    }
+
+    public void GameOverLose() {
+        endPopup.GetComponent<Image>().sprite = losePopupImg;
+        endPopup.GetComponent<Animator>().SetTrigger("GameEnd");
     }
 
     public void HidePauseMenu() {

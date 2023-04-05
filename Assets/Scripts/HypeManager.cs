@@ -60,7 +60,7 @@ public class HypeManager : MonoBehaviour
 
         if (currentHype >= hypeGoal)
         {
-            gameManager.GameOverWin(); // replace with end of level
+            StartCoroutine(gameManager.GameOverWin()); // replace with end of level
         }
     }
 

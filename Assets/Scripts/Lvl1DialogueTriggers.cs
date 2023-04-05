@@ -70,7 +70,7 @@ public class Lvl1DialogueTriggers: MonoBehaviour
         enemy2.GetComponent<Enemy>().Attack(enemy2.GetComponent<Enemy>().currentAttack);
         gameManager.startTutorialEvent.Invoke();
         yield return new WaitForSeconds(2f);
-        gameManager.stopTutorialEvent.Invoke();
+        gameManager.stopCombatEvent.Invoke();
         if (player.GetComponent<PlayerMovement>().health < player.GetComponent<PlayerMovement>().MAX_HEALTH) {
             GameObject.Find("Game Manager").GetComponent<DialogueManager>().StartDialogueScene("dodgeFail", DodgeTutorial);
         }
