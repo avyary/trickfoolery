@@ -6,15 +6,18 @@ public class BasicShockwaveAttack : Attack
 {
     private bool shouldLerp = false;
 
-    [SerializeField]
-    Vector3 startPosition;
+    // [SerializeField]
+    
+    // Vector3 startPosition;
     // [SerializeField]
     // Vector3 endPosition;
 
+    private Vector3 startPosition;
     private Vector3 endPosition;
 
     private float timeStartedLerping;
     private float lerpTime;
+
 
 
     private void StartLerping() 
@@ -36,6 +39,7 @@ public class BasicShockwaveAttack : Attack
     protected override void Start() 
     {
         base.Start();
+        startPosition = _collider.transform.position;
         endPosition = new Vector3(startPosition.x + range, startPosition.y, startPosition.z);
         lerpTime = activeTime;
 
@@ -45,7 +49,8 @@ public class BasicShockwaveAttack : Attack
     {   
         if (shouldLerp) 
         {
-            transform.position = Lerp(startPosition, endPosition, timeStartedLerping, lerpTime);
+            _collider.transform.position = Lerp(startPosition, endPosition, timeStartedLerping, lerpTime);
+            _renderer.transform.position = _collider.transform.position;
         }
         
     }

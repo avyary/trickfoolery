@@ -42,10 +42,10 @@ public class ShockwaveEnemy : Enemy
                 break;
             
             case EnemyState.Active:
-                if (!isAngy) 
-                {
-                    currentAttack.StartAttack();
-                }
+                // if (!isAngy) 
+                // {
+                //     currentAttack.GetComponent<BasicShockwaveAttack>().StartAttack();
+                // }
                 break;
         }
     }

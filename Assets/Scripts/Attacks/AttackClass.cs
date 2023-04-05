@@ -25,8 +25,8 @@ public abstract class Attack : MonoBehaviour
     public float stunTime { get; set; }
     public float range { get; set; }
 
-    private Collider _collider;
-    private MeshRenderer _renderer;
+    protected Collider _collider;
+    protected MeshRenderer _renderer;
 
     private string[] collisionTags = {"Player", "Enemy"};
 
