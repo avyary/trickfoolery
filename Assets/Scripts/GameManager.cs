@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void TriggerLoadNextScene() {
+    public void TriggerLoadNextScene() {
         StartCoroutine(LoadNextScene());
     }
 
@@ -155,11 +155,19 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator GameOverLose()
     {
+        stopCombatEvent.Invoke();
         yield return new WaitForSeconds(3f);
-        dialogueManager.StartDialogueScene("onLoss");
+        uiManager.GameOverLose();
         yield return new WaitForSeconds(1f);
+        dialogueManager.StartDialogueScene("onLoss", ShowLoseMenu);
+    }
+
+    void ShowLoseMenu() {
+        print("show lose menu");
+        jumbotron.state = JumbotronState.Disabled;
+        uiManager.ShowLoseMenu();
+        isPaused = true;
         Time.timeScale = 0;
-        uiManager.ShowLoss();
     }
 
     void SpawnRandomEnemy()

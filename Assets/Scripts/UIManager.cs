@@ -20,10 +20,13 @@ public class UIManager : MonoBehaviour
     private GameObject endPopup;
 
     [SerializeField]
+    private GameObject loseMenuObj;
+    [SerializeField]
     private Sprite winPopupImg;
     [SerializeField]
     private Sprite losePopupImg;
 
+    private PauseMenuManager loseMenu;
     private int heartsActive;
     
     void Start()
@@ -69,6 +72,11 @@ public class UIManager : MonoBehaviour
     public void GameOverLose() {
         endPopup.GetComponent<Image>().sprite = losePopupImg;
         endPopup.GetComponent<Animator>().SetTrigger("GameEnd");
+    }
+
+    public void ShowLoseMenu() {
+        loseMenuObj.SetActive(true);
+        loseMenuObj.transform.GetChild(2).GetComponent<PauseMenuManager>().InitMenu();
     }
 
     public void HidePauseMenu() {

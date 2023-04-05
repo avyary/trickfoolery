@@ -12,10 +12,12 @@ public class PauseMenuButton : MonoBehaviour
     }
 
     public void ReturnToMenu() {
+        print("blaehh");
         StartCoroutine(MenuAfterDelay());
     }
 
     IEnumerator MenuAfterDelay() {
+        print("menuafterdelay");
         GameObject.Find("FadeInOut").GetComponent<Animator>().SetTrigger("FadeOut");
         yield return new WaitForSecondsRealtime(1.5f);
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
