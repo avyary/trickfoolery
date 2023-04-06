@@ -330,6 +330,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _model: {fileID: 0}
+  attackSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  chargerDeathSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  angySFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   isAngy: 0
   currentAttack: {fileID: 0}
   state: 0
@@ -5118,7 +5130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7492421289379589816
 Transform:
   m_ObjectHideFlags: 0
@@ -6489,6 +6501,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6803169544883306252, guid: 242352eb2263df24baa204ec72f6ff5f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.3529119
+      objectReference: {fileID: 0}
+    - target: {fileID: -6803169544883306252, guid: 242352eb2263df24baa204ec72f6ff5f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.61379373
+      objectReference: {fileID: 0}
+    - target: {fileID: -6803169544883306252, guid: 242352eb2263df24baa204ec72f6ff5f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.33792752
+      objectReference: {fileID: 0}
+    - target: {fileID: -6803169544883306252, guid: 242352eb2263df24baa204ec72f6ff5f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6200932
+      objectReference: {fileID: 0}
     - target: {fileID: -6001316947154441478, guid: 242352eb2263df24baa204ec72f6ff5f, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
@@ -6517,6 +6545,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: idle_SHOCKWAVE (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 242352eb2263df24baa204ec72f6ff5f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1981691042302800691, guid: 242352eb2263df24baa204ec72f6ff5f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6541,6 +6573,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2ce14b0eb9a0a804da50438e732bc9b3, type: 2}
+    - target: {fileID: 6515712193588681746, guid: 242352eb2263df24baa204ec72f6ff5f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.044713676
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515712193588681746, guid: 242352eb2263df24baa204ec72f6ff5f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.061618518
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 242352eb2263df24baa204ec72f6ff5f, type: 3}
 --- !u!1 &184701797858571687 stripped
