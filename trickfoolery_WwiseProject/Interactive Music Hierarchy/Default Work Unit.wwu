@@ -235,6 +235,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<MusicTrack Name="mus_Alien_Arena_Kill!_disco_170bpm_loop_hype_brass" ID="{D9987AB9-CB4F-42BF-8CC0-2B566B2D3D0E}" ShortID="1046606943">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
@@ -334,6 +341,13 @@
 											</ObjectLists>
 										</MusicTrack>
 										<MusicTrack Name="mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_percussion" ID="{70C6EBDA-0260-4899-A7A4-3E8BEC28796B}" ShortID="625399014">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
@@ -422,6 +436,13 @@
 											</ObjectLists>
 										</MusicTrack>
 										<MusicTrack Name="mus_Alien_Arena_Kill!_disco_170bpm_disco_floor" ID="{9548E0C1-8ED4-4172-B674-1B01F62358F9}" ShortID="599793176">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
@@ -510,6 +531,13 @@
 											</ObjectLists>
 										</MusicTrack>
 										<MusicTrack Name="mus_Alien_Arena_Kill!_disco_170bpm_loop_standard" ID="{663CC76E-6B9B-42E0-8B08-02B69920A098}" ShortID="106135603">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
@@ -561,6 +589,13 @@
 											</ObjectLists>
 										</MusicTrack>
 										<MusicTrack Name="mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_future_synth" ID="{2C13BAF9-4BFB-4F2F-B7F0-57ABF9D47529}" ShortID="269679531">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
@@ -651,6 +686,7 @@
 										<MusicTrack Name="Solos" ID="{EFC4370A-7482-4669-8F5D-66B32DCDF903}" ShortID="942518394">
 											<PropertyList>
 												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+												<Property Name="OverrideConversion" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -715,6 +751,27 @@
 													<AudioFile>AAA_sax_7.wav</AudioFile>
 													<MediaIDList>
 														<MediaID ID="481270644"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="AAA_sax_8" ID="{20E205C4-672B-42C8-B0FD-05E97117BC8A}">
+													<Language>SFX</Language>
+													<AudioFile>AAA_sax_8.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="394800615"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="AAA_sax_9" ID="{C8F4E5AE-467B-4EE1-BE4E-4C2C0760EE41}">
+													<Language>SFX</Language>
+													<AudioFile>AAA_sax_9.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="356099246"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="AAA_sax_10" ID="{85130403-70A9-44F6-A19A-10464F599329}">
+													<Language>SFX</Language>
+													<AudioFile>AAA_sax_10.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="217413579"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
@@ -918,7 +975,7 @@
 																								</PropertyList>
 																								<PointList>
 																									<Point>
-																										<XPos>-0</XPos>
+																										<XPos>0</XPos>
 																										<YPos>0</YPos>
 																										<Flags>5</Flags>
 																									</Point>
@@ -937,7 +994,7 @@
 																								</PropertyList>
 																								<PointList>
 																									<Point>
-																										<XPos>-0</XPos>
+																										<XPos>0</XPos>
 																										<YPos>0</YPos>
 																										<Flags>5</Flags>
 																									</Point>
@@ -956,7 +1013,7 @@
 																								</PropertyList>
 																								<PointList>
 																									<Point>
-																										<XPos>-0</XPos>
+																										<XPos>0</XPos>
 																										<YPos>0</YPos>
 																										<Flags>5</Flags>
 																									</Point>
@@ -1212,10 +1269,86 @@
 															</MusicTrackSequence>
 														</Local>
 													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{9F0E48CB-10CB-4AF0-98C7-ADD1768DC090}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="AAA_sax_8" ID="{D3ABEC0C-9258-493C-9890-3F3A61493668}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="52235.283446712"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="55058.8235294117"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="AAA_sax_8" ID="{20E205C4-672B-42C8-B0FD-05E97117BC8A}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{DC8CBAE1-9EA3-4022-84A3-47FBFFC84A88}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="AAA_sax_9" ID="{DEC42F4F-22BC-4073-92CC-D445DCD24D81}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="52941.179138322"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="55058.8235294117"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="AAA_sax_9" ID="{C8F4E5AE-467B-4EE1-BE4E-4C2C0760EE41}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{A827536C-DB37-46F1-A093-E0AB788BF0F2}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="AAA_sax_10" ID="{AA366E9D-2364-46BF-98A9-DD7D959F3454}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="52941.179138322"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="55058.8235294117"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="AAA_sax_10" ID="{85130403-70A9-44F6-A19A-10464F599329}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
 												</ObjectList>
 											</ObjectLists>
 										</MusicTrack>
 										<MusicTrack Name="mus_Alien_Arena_Kill!_trumpets" ID="{135C5CA1-6AAB-4210-8A95-798A5F7E1EE9}" ShortID="819943313">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
