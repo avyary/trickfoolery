@@ -149,11 +149,11 @@ public class PlayerMovement : MonoBehaviour
                 tomAnimator.SetBool("isRunning", true);
                 if (state == AbilityState.walking) {
                     transform.forward = _movementDirection;
-                }
-            }
-            else {
+                }    else {
                 tomAnimator.SetBool("isRunning", false);
             }
+            }
+        
 
             if (Input.GetButtonDown("Dash") && dashCdTimer <= 0)
             {

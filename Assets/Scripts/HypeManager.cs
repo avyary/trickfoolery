@@ -49,6 +49,11 @@ public class HypeManager : MonoBehaviour
         UpdateHype(0f);
     }
 
+    public float GetHype()
+    {
+        return currentHype;
+    }
+
     public void IncreaseHype(float hypeDiff)
     {
         // if has higher popup level, show higher popup
