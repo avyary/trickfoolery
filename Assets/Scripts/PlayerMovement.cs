@@ -152,9 +152,10 @@ public class PlayerMovement : MonoBehaviour
                 tomAnimator.SetBool("isRunning", true);
                 if (state == AbilityState.walking) {
                     transform.forward = _movementDirection;
-                }    else {
-                tomAnimator.SetBool("isRunning", false);
+                }
             }
+            else {
+                tomAnimator.SetBool("isRunning", false);
             }
         
 

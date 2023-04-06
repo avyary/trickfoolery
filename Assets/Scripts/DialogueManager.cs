@@ -72,6 +72,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogueScene(string sceneName, System.Action callback = null)
     {
+        print("starting dialogue scene");
         sceneCallback = callback;
         if (sceneIsActive) {
             return;

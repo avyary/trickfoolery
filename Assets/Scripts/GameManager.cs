@@ -101,6 +101,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void StartCombat() {
+        print("starting combat");
         Time.timeScale = 1;
         state = GameState.Combat;
         playerInput = true;

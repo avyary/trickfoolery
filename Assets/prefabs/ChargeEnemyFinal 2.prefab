@@ -6518,7 +6518,7 @@ MonoBehaviour:
   BackParticleSystem: {fileID: 4110198872891715316}
   isCharging: 0
   isWalking: 0
-  rotateSpeed: 180
+  rotateSpeed: 300
 --- !u!114 &8157556152595408448
 MonoBehaviour:
   m_ObjectHideFlags: 0

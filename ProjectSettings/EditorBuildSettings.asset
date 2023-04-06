@@ -14,12 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lvl1Lukey.unity
     guid: b8966420303712845bfb2b8184b8c21a
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/LVL2.unity
-    guid: abdd5f21aafc2bc45949f74bc1f8c0c4
+    path: Assets/Scenes/LVL2 Lukey.unity
+    guid: f0cc7f2070df5b4488a5f09ee9b12c9d
   - enabled: 1
     path: Assets/Scenes/LVL3.unity
     guid: 91a249f3add881541bb70ad3d5829581
