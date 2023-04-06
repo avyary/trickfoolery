@@ -286,6 +286,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="sfx_player_hurt_6" ID="{140CA5B2-CB4B-415B-988A-43C2ADB409E2}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>sfx_player_hurt_6.wav</AudioFile>
 									<MediaIDList>
@@ -1223,7 +1226,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>4</Value>
+								<Value>-5</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>

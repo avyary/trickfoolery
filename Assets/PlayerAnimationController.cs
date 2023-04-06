@@ -9,6 +9,7 @@ public class PlayerAnimationController : MonoBehaviour
     [SerializeField] private AnimationClip tomIdle;
     [SerializeField] private PlayerSounds playerSounds;
 
+
     private void Start()
     {
         animator = GetComponent<Animator>();

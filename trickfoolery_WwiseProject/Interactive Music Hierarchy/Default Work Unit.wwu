@@ -45,6 +45,11 @@
 					<PropertyList>
 						<Property Name="GridFrequencyPreset" Type="int16" Value="52"/>
 						<Property Name="Tempo" Type="Real64" Value="170"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -670,13 +675,6 @@
 														<MediaID ID="664728998"/>
 													</MediaIDList>
 												</AudioFileSource>
-												<AudioFileSource Name="AAA_synth_1" ID="{03E49242-5DDB-42D6-8183-5C7085FDC768}">
-													<Language>SFX</Language>
-													<AudioFile>AAA_synth_1.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="617132552"/>
-													</MediaIDList>
-												</AudioFileSource>
 												<AudioFileSource Name="AAA_synth_2" ID="{56AC6AAA-97A7-489D-B82C-60F96BC5AFF2}">
 													<Language>SFX</Language>
 													<AudioFile>AAA_synth_2.wav</AudioFile>
@@ -691,11 +689,32 @@
 														<MediaID ID="19996191"/>
 													</MediaIDList>
 												</AudioFileSource>
-												<AudioFileSource Name="AAA_synth_4" ID="{E70D9C0E-6527-4D9B-98EB-DF610C590B5C}">
+												<AudioFileSource Name="AAA_sax_3" ID="{CF5B3A37-ABB3-42C5-948F-C70DAFC29F58}">
 													<Language>SFX</Language>
-													<AudioFile>AAA_synth_4.wav</AudioFile>
+													<AudioFile>AAA_sax_3.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="850633668"/>
+														<MediaID ID="145105292"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="AAA_sax_5" ID="{2CC92D89-B42B-48F5-9455-9A309A604776}">
+													<Language>SFX</Language>
+													<AudioFile>AAA_sax_5.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="536532914"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="AAA_sax_6" ID="{6D0F57A2-FCE2-44B7-BD7F-4078A79715B3}">
+													<Language>SFX</Language>
+													<AudioFile>AAA_sax_6.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="832071081"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="AAA_sax_7" ID="{B3D741E7-BFD0-4DF0-96A2-ABB998773B3E}">
+													<Language>SFX</Language>
+													<AudioFile>AAA_sax_7.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="481270644"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
@@ -882,29 +901,29 @@
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="AAA_synth_1" ID="{109E4313-9ECE-43FE-9FD0-EBC7C2942E6B}">
+																				<MusicClip Name="AAA_sax_3" ID="{462F6BB3-620D-44CD-9939-D3724DDB9C77}">
 																					<PropertyList>
-																						<Property Name="BeginTrimOffset" Type="Real64" Value="4.57828219779799E-12"/>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="52169.374467415"/>
+																						<Property Name="BeginTrimOffset" Type="Real64" Value="-1.48196732663308E-11"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="52235.283446712"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																						<Property Name="PlayAt" Type="Real64" Value="55058.8235294118"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="AAA_synth_1" ID="{03E49242-5DDB-42D6-8183-5C7085FDC768}"/>
+																					<AudioSourceRef Name="AAA_sax_3" ID="{CF5B3A37-ABB3-42C5-948F-C70DAFC29F58}"/>
 																					<PropertyCurveList>
 																						<PropertyCurve PropertyName="Highpass">
-																							<Curve Name="" ID="{610A0D75-8CB0-4052-8963-7CC366C9D38D}">
+																							<Curve Name="" ID="{3DBF96B6-843F-4D52-87C1-5CCA3858D4CF}">
 																								<PropertyList>
 																									<Property Name="Flags" Type="int32" Value="1"/>
 																								</PropertyList>
 																								<PointList>
 																									<Point>
-																										<XPos>0</XPos>
+																										<XPos>-0</XPos>
 																										<YPos>0</YPos>
 																										<Flags>5</Flags>
 																									</Point>
 																									<Point>
-																										<XPos>52.16937</XPos>
+																										<XPos>52.235283446712</XPos>
 																										<YPos>0</YPos>
 																										<Flags>37</Flags>
 																									</Point>
@@ -912,18 +931,18 @@
 																							</Curve>
 																						</PropertyCurve>
 																						<PropertyCurve PropertyName="Lowpass">
-																							<Curve Name="" ID="{200875CF-D64D-4D70-B382-8A10FE506B86}">
+																							<Curve Name="" ID="{416A63AC-1963-4EEC-BFAD-AFDC4D677B13}">
 																								<PropertyList>
 																									<Property Name="Flags" Type="int32" Value="1"/>
 																								</PropertyList>
 																								<PointList>
 																									<Point>
-																										<XPos>0</XPos>
+																										<XPos>-0</XPos>
 																										<YPos>0</YPos>
 																										<Flags>5</Flags>
 																									</Point>
 																									<Point>
-																										<XPos>52.16937</XPos>
+																										<XPos>52.235283446712</XPos>
 																										<YPos>0</YPos>
 																										<Flags>37</Flags>
 																									</Point>
@@ -931,18 +950,18 @@
 																							</Curve>
 																						</PropertyCurve>
 																						<PropertyCurve PropertyName="Volume">
-																							<Curve Name="" ID="{5AD866CA-09B5-461E-B61A-701FF31C8669}">
+																							<Curve Name="" ID="{753C46BB-5008-4F6E-8E60-161C2FC419C3}">
 																								<PropertyList>
 																									<Property Name="Flags" Type="int32" Value="3"/>
 																								</PropertyList>
 																								<PointList>
 																									<Point>
-																										<XPos>0</XPos>
+																										<XPos>-0</XPos>
 																										<YPos>0</YPos>
 																										<Flags>5</Flags>
 																									</Point>
 																									<Point>
-																										<XPos>52.16937</XPos>
+																										<XPos>52.235283446712</XPos>
 																										<YPos>0</YPos>
 																										<Flags>37</Flags>
 																									</Point>
@@ -1131,74 +1150,60 @@
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="AAA_synth_4" ID="{5E12D803-CB99-4006-B17E-42FE63560078}">
+																				<MusicClip Name="AAA_sax_5" ID="{C6BC59E7-135E-406C-9236-E31983B3FA66}">
 																					<PropertyList>
-																						<Property Name="BeginTrimOffset" Type="Real64" Value="-1.45128353779E-12"/>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="49411.7647058824"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="52235.283446712"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																						<Property Name="PlayAt" Type="Real64" Value="55058.8235294118"/>
+																						<Property Name="PlayAt" Type="Real64" Value="55058.8235294117"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="AAA_synth_4" ID="{E70D9C0E-6527-4D9B-98EB-DF610C590B5C}"/>
-																					<PropertyCurveList>
-																						<PropertyCurve PropertyName="Highpass">
-																							<Curve Name="" ID="{DB6D684A-7EA4-4F3C-93EC-14E2CA740D92}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="1"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>0</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>49.41176</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																						<PropertyCurve PropertyName="Lowpass">
-																							<Curve Name="" ID="{DE99365A-71A2-4D59-8B25-4EB6F7CBE814}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="1"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>0</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>49.41176</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																						<PropertyCurve PropertyName="Volume">
-																							<Curve Name="" ID="{229DFCA8-93F5-4D0D-9069-AA449F390687}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="3"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>0</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>49.41176</XPos>
-																										<YPos>0</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</PropertyCurve>
-																					</PropertyCurveList>
+																					<AudioSourceRef Name="AAA_sax_5" ID="{2CC92D89-B42B-48F5-9455-9A309A604776}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{C0EC2CFF-894A-46AA-A694-51770B4BC81F}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="AAA_sax_6" ID="{69D48016-A8A8-446C-80C3-E5E9F796B36F}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="52235.283446712"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="55058.8235294117"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="AAA_sax_6" ID="{6D0F57A2-FCE2-44B7-BD7F-4078A79715B3}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{C74A9C79-2A68-44CC-B650-A5BEEC261A01}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="AAA_sax_7" ID="{FBA2EDD4-0160-4793-8FAC-106F19E12C7F}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="52235.283446712"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="55058.8235294117"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="AAA_sax_7" ID="{B3D741E7-BFD0-4DF0-96A2-ABB998773B3E}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>

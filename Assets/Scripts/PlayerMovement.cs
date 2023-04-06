@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public AK.Wwise.Event dashSFX;
     public AK.Wwise.Event playerDeathSFX;
     public AK.Wwise.Event playerHurtSFX;
+    public AkEvent tauntsound;
 
     [SerializeField] private ParticleSystem DashParticle;
     [SerializeField]
@@ -187,6 +188,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void PlayTaunt()
+    {
+        if (tauntsound != null)
+    {
+            tauntsound.HandleEvent(gameObject);
+    }
+    }
     IEnumerator Dash()
     {
         StartCoroutine(CheckHypeDash());

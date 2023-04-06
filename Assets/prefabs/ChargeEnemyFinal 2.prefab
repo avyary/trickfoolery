@@ -6288,6 +6288,7 @@ GameObject:
   - component: {fileID: 26768930793932778}
   - component: {fileID: 7888766320532235527}
   - component: {fileID: 4808332108238643349}
+  - component: {fileID: -834725538279534378}
   m_Layer: 7
   m_Name: ChargeEnemyFinal 2
   m_TagString: Enemy
@@ -6389,10 +6390,13 @@ MonoBehaviour:
   _basicAttack: {fileID: 8157556153598119118}
   _angyAttack: {fileID: 1379921455707214419}
   _deathBubble: {fileID: 2485592701089711520}
+  startCombatEvent:
+    m_PersistentCalls:
+      m_Calls: []
   attackSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 54e671947e9ca3f4b99173a60d7ee811, type: 2}
   chargerDeathSFX:
     idInternal: 0
     valueGuidInternal: 
@@ -6400,7 +6404,7 @@ MonoBehaviour:
   angySFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 6f774cdae6a53a94ba1d941d54b25918, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 5586c68a897195d468a1e2dbc3bb0aff, type: 2}
   isAngy: 0
   currentAttack: {fileID: 0}
   state: 0
@@ -6521,6 +6525,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &-834725538279534378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8157556152595408473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a024f4daab4fd48b9aec34fb7e7acfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: fc1f9883c2b632549b9f8bf6b3781cb7, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &8157556153120589609
 GameObject:
   m_ObjectHideFlags: 0
