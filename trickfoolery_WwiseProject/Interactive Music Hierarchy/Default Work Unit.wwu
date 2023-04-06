@@ -1,6 +1,1522 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{5CD6933B-0773-453D-BFFC-5483B47741B7}" SchemaVersion="110">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{5CD6933B-0773-453D-BFFC-5483B47741B7}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{5CD6933B-0773-453D-BFFC-5483B47741B7}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSegment Name="New Music Segment" ID="{FD70A8BA-1DFB-47BC-B298-F450DBCA39DF}" ShortID="179389326">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="57705.7287283648"/>
+						<Property Name="GridFrequencyPreset" Type="int16" Value="52"/>
+						<Property Name="Tempo" Type="Real64" Value="170"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+						</Reference>
+					</ReferenceList>
+					<ObjectLists>
+						<ObjectList Name="Cues">
+							<Reference>
+								<Local>
+									<MusicCue Name="Entry Cue" ID="{9B68A50C-F9CC-4A00-BB75-ABF887478D76}">
+										<PropertyList>
+											<Property Name="TimeMs" Type="Real64" Value="1688.57715554352"/>
+										</PropertyList>
+									</MusicCue>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MusicCue Name="Exit Cue" ID="{6E1605AA-830E-4FC5-9D8A-3AECC3361090}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="53890.5941300891"/>
+										</PropertyList>
+									</MusicCue>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</MusicSegment>
+				<MusicSwitchContainer Name="Alien Arena Normal and Victory" ID="{95152A6C-A2BF-456C-B5B2-179C0E2FC335}" ShortID="262696572">
+					<PropertyList>
+						<Property Name="GridFrequencyPreset" Type="int16" Value="52"/>
+						<Property Name="Tempo" Type="Real64" Value="170"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicPlaylistContainer Name="Alien Arena Assault" ID="{93F1F6D2-12D1-4F7C-882D-FF18428AD4A4}" ShortID="808719327">
+							<PropertyList>
+								<Property Name="GridFrequencyPreset" Type="int16" Value="52"/>
+								<Property Name="Tempo" Type="Real64" Value="170"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Alien Arena Assault intro" ID="{0F43D294-4CEA-4C00-A638-72C13593A307}" ShortID="321081525">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="12559.840636589"/>
+										<Property Name="GridFrequencyPreset" Type="int16" Value="52"/>
+										<Property Name="Tempo" Type="Real64" Value="170"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_Alien_Arena_Kill!_disco_170bpm_intro" ID="{39EBA2FD-6F0B-488C-BA13-484ACBBADC8C}" ShortID="575691953">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_Alien_Arena_Kill!_disco_170bpm_intro" ID="{924DB7A9-350A-466C-A368-4FE21E2A632F}">
+													<Language>SFX</Language>
+													<AudioFile>mus_Alien_Arena_Kill!_disco_170bpm_intro.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="792050017"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{1251231D-FDEF-4860-BE70-5A8DC2E211D6}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{01B65B0B-162C-4290-A24C-B69149BE2D05}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_Alien_Arena_Kill!_disco_170bpm_intro" ID="{A620B4F2-7738-44DA-86C2-CFA2C003F9CC}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="11294.1176470588"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_Alien_Arena_Kill!_disco_170bpm_intro" ID="{924DB7A9-350A-466C-A368-4FE21E2A632F}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{E2A824BA-043F-4CF0-8DCB-AB310BE73CD5}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>11.29412</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{0AA4325A-0B5E-4A0B-B504-60EAD2750110}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>11.29412</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{6DFE4270-FE2B-47BB-80A8-6F4DDC867310}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>11.29412</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{070F6F72-7189-4380-97D5-4669C0D3CDA2}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{D7DA0337-FCC2-4F5C-B472-7DD310A06911}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="11294.1176470588"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="Alien Arena" ID="{81BB7E3A-35A6-4184-B18B-5AC4BB018A1B}" ShortID="459550931">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="113597.798537906"/>
+										<Property Name="GridFrequencyPreset" Type="int16" Value="52"/>
+										<Property Name="Tempo" Type="Real64" Value="170"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="mus_Alien_Arena_Kill!_disco_170bpm_loop_hype_brass" ID="{D9987AB9-CB4F-42BF-8CC0-2B566B2D3D0E}" ShortID="1046606943">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_Alien_Arena_Kill!_disco_170bpm_loop_hype_brass" ID="{7B8E30D6-DF24-4A66-B2C7-215391EAC584}">
+													<Language>SFX</Language>
+													<AudioFile>mus_Alien_Arena_Kill!_disco_170bpm_loop_hype_brass.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="882571690"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{F8B69CFE-3018-4411-B862-75C6E21B2A06}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{9BF9D6F0-499B-482D-9ABE-26283EE46390}" ShortID="380802501">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="Hype" ID="{F10FAC34-8EF9-452B-9153-83ADE95B5819}" WorkUnitID="{71902489-F80C-4DEF-B7AC-12C89F1CDD54}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{FB316351-1978-453B-8D91-8F1C722D11C0}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>37.21719</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>0</Flags>
+																						<SegmentShape>Exp3</SegmentShape>
+																					</Point>
+																					<Point>
+																						<XPos>59.61539</XPos>
+																						<YPos>-0.01706</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100</XPos>
+																						<YPos>0</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{A9164A4F-BB59-4F7E-8F73-EB514B17A5A3}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_Alien_Arena_Kill!_disco_170bpm_loop_hype_brass" ID="{F88581A8-C6C8-4BBE-8CEB-FC77159B6038}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="101647.052154195"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="11294.1176470588"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_Alien_Arena_Kill!_disco_170bpm_loop_hype_brass" ID="{7B8E30D6-DF24-4A66-B2C7-215391EAC584}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_percussion" ID="{70C6EBDA-0260-4899-A7A4-3E8BEC28796B}" ShortID="625399014">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_percussion" ID="{D2202B33-2BBE-42FD-A881-E131563A3E9D}">
+													<Language>SFX</Language>
+													<AudioFile>mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_percussion.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="886513295"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{32719777-443D-46A6-9AFF-5F71EAB187F4}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{7B5288DF-715A-43DE-A255-FF0F0A08C034}" ShortID="869256961">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="On_Disco_Floor" ID="{1353123B-8719-435F-969E-773D804B92E8}" WorkUnitID="{71902489-F80C-4DEF-B7AC-12C89F1CDD54}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{3301C60B-8CEB-4D62-A5BC-D1CFD04EE17C}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{26EBAE4F-EF21-4A95-877D-3706054484CE}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_percussion" ID="{64A44870-B6F3-41FE-875D-477248A40EE7}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="101647.052154195"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="11294.1176470588"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_percussion" ID="{D2202B33-2BBE-42FD-A881-E131563A3E9D}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="mus_Alien_Arena_Kill!_disco_170bpm_disco_floor" ID="{9548E0C1-8ED4-4172-B674-1B01F62358F9}" ShortID="599793176">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_Alien_Arena_Kill!_disco_170bpm_disco_floor" ID="{A3B8DF4E-F592-43DA-99EC-A2AD64E7E874}">
+													<Language>SFX</Language>
+													<AudioFile>mus_Alien_Arena_Kill!_disco_170bpm_disco_floor.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="331701484"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{6E2B8CFB-889C-4868-A87D-0808040062F5}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{49CAB185-D5E9-4E43-8A7F-E26FFF00009E}" ShortID="675963982">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="On_Disco_Floor" ID="{1353123B-8719-435F-969E-773D804B92E8}" WorkUnitID="{71902489-F80C-4DEF-B7AC-12C89F1CDD54}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{73D1ACBA-C399-4D43-B57B-0754E3A8CA56}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>0</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{6CE8640E-E778-4F88-B556-405668E3E895}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_Alien_Arena_Kill!_disco_170bpm_disco_floor" ID="{277C3864-56CA-46A2-A0C0-6A5246B4405D}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="101647.052154195"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="11294.1176470588"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_Alien_Arena_Kill!_disco_170bpm_disco_floor" ID="{A3B8DF4E-F592-43DA-99EC-A2AD64E7E874}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="mus_Alien_Arena_Kill!_disco_170bpm_loop_standard" ID="{663CC76E-6B9B-42E0-8B08-02B69920A098}" ShortID="106135603">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_Alien_Arena_Kill!_disco_170bpm_loop_standard" ID="{A1371332-3463-4AEE-9682-FA093E19B19C}">
+													<Language>SFX</Language>
+													<AudioFile>mus_Alien_Arena_Kill!_disco_170bpm_loop_standard.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="380291550"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{B8E84019-26B7-45B6-8A43-364BBCA2632A}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{CEDD08EC-EC45-4965-A739-826E331676C4}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_Alien_Arena_Kill!_disco_170bpm_loop_standard" ID="{56F86433-96CF-44C1-A682-E86332DFF081}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="101647.052154195"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="11294.1176470588"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_Alien_Arena_Kill!_disco_170bpm_loop_standard" ID="{A1371332-3463-4AEE-9682-FA093E19B19C}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_future_synth" ID="{2C13BAF9-4BFB-4F2F-B7F0-57ABF9D47529}" ShortID="269679531">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_future_synth" ID="{2180B099-14FE-4457-B507-7B1E785B3AE2}">
+													<Language>SFX</Language>
+													<AudioFile>mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_future_synth.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="72287347"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{A040724B-34A1-4E6F-A3EA-87FDDA83F2B0}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{51F7CC72-1AD2-4712-99A0-FAA81789CA8C}" ShortID="347462109">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="On_Disco_Floor" ID="{1353123B-8719-435F-969E-773D804B92E8}" WorkUnitID="{71902489-F80C-4DEF-B7AC-12C89F1CDD54}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{C84A28AB-6DDE-42D1-B60D-EAE55776C621}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{E5C157DB-6F7D-4E71-B5BC-E88C4EBB09CB}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_future_synth" ID="{7356D41C-EE0F-4E46-922F-E9BAE2B96021}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="101647.052154195"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="11294.1176470588"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_future_synth" ID="{2180B099-14FE-4457-B507-7B1E785B3AE2}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="Solos" ID="{EFC4370A-7482-4669-8F5D-66B32DCDF903}" ShortID="942518394">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AAA_sax_1" ID="{487369A6-A5BF-4786-A7D2-76C0E7510892}">
+													<Language>SFX</Language>
+													<AudioFile>AAA_sax_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="657227351"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="AAA_sax_2" ID="{BA53F562-18FC-450B-AAC5-423B52A2B473}">
+													<Language>SFX</Language>
+													<AudioFile>AAA_sax_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="664728998"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="AAA_synth_2" ID="{56AC6AAA-97A7-489D-B82C-60F96BC5AFF2}">
+													<Language>SFX</Language>
+													<AudioFile>AAA_synth_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="980003540"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="AAA_synth_3" ID="{6C6EA387-DF3A-4E17-8DFC-4612F0F11827}">
+													<Language>SFX</Language>
+													<AudioFile>AAA_synth_3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="19996191"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="AAA_sax_3" ID="{CF5B3A37-ABB3-42C5-948F-C70DAFC29F58}">
+													<Language>SFX</Language>
+													<AudioFile>AAA_sax_3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="145105292"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="AAA_sax_5" ID="{2CC92D89-B42B-48F5-9455-9A309A604776}">
+													<Language>SFX</Language>
+													<AudioFile>AAA_sax_5.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="536532914"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="AAA_sax_6" ID="{6D0F57A2-FCE2-44B7-BD7F-4078A79715B3}">
+													<Language>SFX</Language>
+													<AudioFile>AAA_sax_6.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="832071081"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="AAA_sax_7" ID="{B3D741E7-BFD0-4DF0-96A2-ABB998773B3E}">
+													<Language>SFX</Language>
+													<AudioFile>AAA_sax_7.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="481270644"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{F7B4C140-C11A-4EDC-AD00-6E58E6030D89}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{163DFC72-5AEB-4A27-8F0F-2A60EFA55823}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="AAA_sax_1" ID="{387188E3-8D74-42BD-9162-4A98EB485046}">
+																					<PropertyList>
+																						<Property Name="BeginTrimOffset" Type="Real64" Value="14.707877428132"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="52235.283446712"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="55044.1156519836"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="AAA_sax_1" ID="{487369A6-A5BF-4786-A7D2-76C0E7510892}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{8A4C4256-EE43-494D-B5C8-E796F07E9556}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0.01471</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>52.235283446712</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{09E706CA-2160-493D-A5B9-746238FA3226}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0.01471</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>52.235283446712</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{34D51D11-6D71-41A6-A720-05AB5A977D03}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0.01471</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>52.235283446712</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{1B6E77B6-B4D3-4B90-9BB7-9E91096BE194}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="AAA_sax_2" ID="{6106DF30-7D70-4D2D-A434-13EC79032496}">
+																					<PropertyList>
+																						<Property Name="BeginTrimOffset" Type="Real64" Value="3.39645533919963E-11"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="52235.283446712"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="55058.8235294118"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="AAA_sax_2" ID="{BA53F562-18FC-450B-AAC5-423B52A2B473}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{76DD8220-C294-406E-9CEC-96D7AE360E87}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>52.235283446712</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{C871068B-6DFC-49C1-8B8A-219F93C26AA4}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>52.235283446712</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{E2974287-C654-4776-BC01-A95EF18DC591}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>52.235283446712</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{55780117-0F37-42F4-94F9-5E436D98DC51}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="AAA_sax_3" ID="{462F6BB3-620D-44CD-9939-D3724DDB9C77}">
+																					<PropertyList>
+																						<Property Name="BeginTrimOffset" Type="Real64" Value="-1.48196732663308E-11"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="52235.283446712"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="55058.8235294118"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="AAA_sax_3" ID="{CF5B3A37-ABB3-42C5-948F-C70DAFC29F58}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{3DBF96B6-843F-4D52-87C1-5CCA3858D4CF}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>-0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>52.235283446712</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{416A63AC-1963-4EEC-BFAD-AFDC4D677B13}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>-0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>52.235283446712</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{753C46BB-5008-4F6E-8E60-161C2FC419C3}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>-0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>52.235283446712</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{A8E486A0-FC04-400E-B8CA-6A784B27CC43}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="AAA_synth_2" ID="{A7D1E2BE-CC56-4C42-85E3-CA3D3D3DB016}">
+																					<PropertyList>
+																						<Property Name="BeginTrimOffset" Type="Real64" Value="3.52717854923412E-12"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="52235.283446712"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="55058.8235294118"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="AAA_synth_2" ID="{56AC6AAA-97A7-489D-B82C-60F96BC5AFF2}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{A7E0B4C4-3D6A-44D6-9680-100A3157F4DA}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>52.235283446712</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{286E5C21-3C4A-4134-9A09-70EB1B08057D}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>52.235283446712</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{E5C69EB4-CCE5-40A8-8556-652C1A8322A9}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>52.235283446712</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{2DDC19FB-77A4-42AB-A8B9-217A9B6812AA}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="AAA_synth_3" ID="{A06FDA05-346F-4BE1-82DA-9A4B168873F2}">
+																					<PropertyList>
+																						<Property Name="BeginTrimOffset" Type="Real64" Value="6.2700400427218E-12"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="49411.768707483"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="55058.8235294118"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="AAA_synth_3" ID="{6C6EA387-DF3A-4E17-8DFC-4612F0F11827}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{EB8DF09B-62B9-4B01-B5B0-8F32382FC1D9}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>49.411768707483</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{A8B324F5-F724-472D-91E9-93CAFCFC5CD8}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>49.411768707483</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{787DB6D3-8375-4B4D-94F2-90CAC12B14B1}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>49.411768707483</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{4F1840AD-B44C-4882-8A57-C7E4B5DA3B90}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="AAA_sax_5" ID="{C6BC59E7-135E-406C-9236-E31983B3FA66}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="52235.283446712"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="55058.8235294117"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="AAA_sax_5" ID="{2CC92D89-B42B-48F5-9455-9A309A604776}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{C0EC2CFF-894A-46AA-A694-51770B4BC81F}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="AAA_sax_6" ID="{69D48016-A8A8-446C-80C3-E5E9F796B36F}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="52235.283446712"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="55058.8235294117"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="AAA_sax_6" ID="{6D0F57A2-FCE2-44B7-BD7F-4078A79715B3}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{C74A9C79-2A68-44CC-B650-A5BEEC261A01}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="AAA_sax_7" ID="{FBA2EDD4-0160-4793-8FAC-106F19E12C7F}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="52235.283446712"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="55058.8235294117"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="AAA_sax_7" ID="{B3D741E7-BFD0-4DF0-96A2-ABB998773B3E}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="mus_Alien_Arena_Kill!_trumpets" ID="{135C5CA1-6AAB-4210-8A95-798A5F7E1EE9}" ShortID="819943313">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="mus_Alien_Arena_Kill!_trumpets" ID="{FA71D259-F65B-4D44-B635-D02949F27D5F}">
+													<Language>SFX</Language>
+													<AudioFile>mus_Alien_Arena_Kill!_trumpets.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="753217888"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{B3212D16-8885-43B9-BB8B-158AEEA8DE40}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{C3BF152E-DC92-454E-90B1-179927DD8F12}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="mus_Alien_Arena_Kill!_trumpets" ID="{4E706953-7628-4ECD-91FB-33BB7077CD9D}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="3882.35827664399"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																						<Property Name="PlayAt" Type="Real64" Value="11294.1176470588"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="mus_Alien_Arena_Kill!_trumpets" ID="{FA71D259-F65B-4D44-B635-D02949F27D5F}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{8044893F-A6CC-48B3-9190-C64DD83F4428}">
+														<PropertyList>
+															<Property Name="TimeMs" Type="Real64" Value="11294.1176470588"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{B4AB3138-6698-4ABE-8ED6-218EB9CC57EC}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="112941.176470588"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{050305B7-3A14-459E-9988-DCC3873B65C9}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{EA0F57A6-1E88-439E-B449-1597CAB3D13D}">
+											<TransitionInfo/>
+										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{0DEAB835-FCF6-4862-BB54-B64E74ADB8C4}">
+											<PropertyList>
+												<Property Name="DestinationContextType" Type="int16" Value="2"/>
+												<Property Name="EnableTransitionFadeIn" Type="bool" Value="True"/>
+												<Property Name="SourceContextType" Type="int16" Value="2"/>
+												<Property Name="UseTransitionObject" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="DestinationContextObject">
+													<ObjectRef Name="Alien Arena" ID="{81BB7E3A-35A6-4184-B18B-5AC4BB018A1B}" WorkUnitID="{5CD6933B-0773-453D-BFFC-5483B47741B7}"/>
+												</Reference>
+												<Reference Name="SourceContextObject">
+													<ObjectRef Name="Alien Arena Assault intro" ID="{0F43D294-4CEA-4C00-A638-72C13593A307}" WorkUnitID="{5CD6933B-0773-453D-BFFC-5483B47741B7}"/>
+												</Reference>
+											</ReferenceList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{AF54B61F-1558-4BF4-B78B-5E5C6FB50238}" ShortID="892610059">
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{4CDC726A-6B12-4EB6-BC0C-7092CAEE2825}" ShortID="507496669">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Alien Arena Assault intro" ID="{0F43D294-4CEA-4C00-A638-72C13593A307}"/>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{7CDE89DF-A3C1-4CAF-9A3D-68D090FF6FA9}" ShortID="920439617">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Alien Arena" ID="{81BB7E3A-35A6-4184-B18B-5AC4BB018A1B}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+						<MusicSegment Name="Alien Arena Assault Victory" ID="{763B154C-A762-44D9-A15D-35BAD123CEE2}" ShortID="961625204">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="8470.589569161"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="mus_Alien_Arena_Kill!_victory_cue_bpm170" ID="{4E7DA96E-A599-4A17-B93F-FD61881A49FE}" ShortID="770612958">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="mus_Alien_Arena_Kill!_victory_cue_bpm170" ID="{754A5D26-42E9-4BB6-A568-D0F2F7B90C73}">
+											<Language>SFX</Language>
+											<AudioFile>mus_Alien_Arena_Kill!_victory_cue_bpm170.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1069608001"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{05E20F77-69A7-4552-8067-54480BC1C303}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{F10E0847-4A1B-4617-A9C4-7C0D75D60509}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="mus_Alien_Arena_Kill!_victory_cue_bpm170" ID="{40F9AD39-87F9-4E11-B1BA-1047B1B783C9}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="8470.589569161"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="mus_Alien_Arena_Kill!_victory_cue_bpm170" ID="{754A5D26-42E9-4BB6-A568-D0F2F7B90C73}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{486396E0-403B-4A99-92CC-06EC126B65FC}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{A166849C-9D14-49F9-AED6-F3B3117D77F3}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="1000"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Gameplay_State" ID="{B587995D-62E9-431F-94B4-73168DC556F9}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Combat" ID="{D23C63AE-8C84-4140-9A0C-994815485352}"/>
+								<CustomState Name="" ID="{7A14ECB0-6CBE-4604-B0C0-DDAF4975E304}" ShortID="1021721838"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Victory" ID="{9108A2BF-1C91-4F03-BBCD-47F60251D933}"/>
+								<CustomState Name="" ID="{EAF5142C-4204-45DB-9EE6-EE1ACAF79F09}" ShortID="919476287"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{F898EAEE-132E-48CB-93A6-910731309372}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{674607F3-2C48-40C0-A5E0-3318218EF882}">
+									<TransitionInfo/>
+								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{162E767D-F810-4C72-890E-4DD37ECE512E}">
+									<PropertyList>
+										<Property Name="DestinationContextType" Type="int16" Value="2"/>
+										<Property Name="DestinationJumpPositionPreset" Type="int16" Value="4"/>
+										<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+										<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+										<Property Name="SourceContextType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="DestinationContextObject">
+											<ObjectRef Name="Alien Arena Assault Victory" ID="{763B154C-A762-44D9-A15D-35BAD123CEE2}" WorkUnitID="{5CD6933B-0773-453D-BFFC-5483B47741B7}"/>
+										</Reference>
+										<Reference Name="SourceContextObject">
+											<ObjectRef Name="Alien Arena" ID="{81BB7E3A-35A6-4184-B18B-5AC4BB018A1B}" WorkUnitID="{5CD6933B-0773-453D-BFFC-5483B47741B7}"/>
+										</Reference>
+									</ReferenceList>
+									<TransitionInfo>
+										<SourceFadeOut>
+											<MusicFade Name="Source Fade-out" ID="{E0D3CDEA-62ED-43B6-ACCB-382BAC91D1B7}">
+												<PropertyList>
+													<Property Name="FadeCurve" Type="int16" Value="7"/>
+													<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+													<Property Name="FadeType" Type="int16" Value="1"/>
+												</PropertyList>
+											</MusicFade>
+										</SourceFadeOut>
+										<DestinationFadeIn>
+											<MusicFade Name="Destination Fade-in" ID="{F76C6123-0563-429A-B74C-CA8865DF76B8}">
+												<PropertyList>
+													<Property Name="FadeCurve" Type="int16" Value="6"/>
+													<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												</PropertyList>
+											</MusicFade>
+										</DestinationFadeIn>
+									</TransitionInfo>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<ArgumentList>
+						<ArgumentRef Name="Gameplay_State" ID="{B587995D-62E9-431F-94B4-73168DC556F9}"/>
+					</ArgumentList>
+					<EntryList>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Victory" ID="{9108A2BF-1C91-4F03-BBCD-47F60251D933}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Alien Arena Assault Victory" ID="{763B154C-A762-44D9-A15D-35BAD123CEE2}" WorkUnitID="{5CD6933B-0773-453D-BFFC-5483B47741B7}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Combat" ID="{D23C63AE-8C84-4140-9A0C-994815485352}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Alien Arena Assault" ID="{93F1F6D2-12D1-4F7C-882D-FF18428AD4A4}" WorkUnitID="{5CD6933B-0773-453D-BFFC-5483B47741B7}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+					</EntryList>
+				</MusicSwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>

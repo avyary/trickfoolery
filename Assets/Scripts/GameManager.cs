@@ -25,6 +25,11 @@ public class GameManager : MonoBehaviour
     // wwise
     public AK.Wwise.Event pauseSFX;
     public AK.Wwise.Event unpSFX;
+    public AK.Wwise.Event playpauseMUS;
+    public AK.Wwise.Event mutepauseMUS;
+    public AK.Wwise.Event firstmutepauseMUS;
+    public AK.Wwise.Event unmpauseMUS;
+
 
     // object references
     public UIManager uiManager;
@@ -70,6 +75,8 @@ public class GameManager : MonoBehaviour
             isRestart = false;
         }
 
+        playpauseMUS.Post(gameObject);
+        firstmutepauseMUS.Post(gameObject);
         StartCoroutine(StartLevel());
     }
 
@@ -147,12 +154,15 @@ public class GameManager : MonoBehaviour
     public void TogglePause() {
         if (jumbotron.state == JumbotronState.Hidden || jumbotron.state == JumbotronState.HypeBar) {
             pauseSFX.Post(gameObject);
+            unmpauseMUS.Post(gameObject);
+
             uiManager.ShowPauseMenu();
             isPaused = true;
             Time.timeScale = 0;
         }
         else if (jumbotron.state == JumbotronState.Pause || jumbotron.state == JumbotronState.PauseFromHidden) {
             unpSFX.Post(gameObject);
+            mutepauseMUS.Post(gameObject);
             uiManager.HidePauseMenu();
             Time.timeScale = 1;
         }
