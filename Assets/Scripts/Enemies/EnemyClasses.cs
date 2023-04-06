@@ -219,7 +219,6 @@ public abstract class Enemy: MonoBehaviour
 
     protected virtual void PlayerFound()
     {
-        print("player found");
         state = EnemyState.Tracking;
         gameObject.GetComponent<Patrol>().enabled = false;
         _AlertInd.SetActive(true);
@@ -262,7 +261,6 @@ public abstract class Enemy: MonoBehaviour
         animator.SetTrigger("becomeIdle");
         currentAttack.Deactivate();
         state = EnemyState.Passive;
-        print("state is now passive");
     }
 
     protected virtual void Start()

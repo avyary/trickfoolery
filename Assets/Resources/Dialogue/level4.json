@@ -1,0 +1,46 @@
+{
+  "scenes": [
+    {
+      "sceneName": "onWin",
+      "lines": [
+        {
+          "name": "Commentator",
+          "text": "OHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!"
+        },
+        {
+          "name": "Commentator",
+          "text": "He's done it! Nuck Chorris has done it!"
+        },
+        {
+          "name": "Commentator",
+          "text": "What a show, what a spectacle! I've never heard this place so lively!"
+        },
+        {
+          "name": "Tom",
+          "text": "Thank you, thank you!"
+        },
+        {
+          "name": "Commentator",
+          "text": "Well, now that you've exhausted all our stages and all our warriors..."
+        },
+        {
+          "name": "Commentator",
+          "text": "I suppose we should get you home so you can keep making those movies we love to watch."
+        },
+        {
+          "name": "Commentator",
+          "text": "But do visit us sometime, will ya?"
+        }
+      ]
+    },
+    {
+      "sceneName": "onLoss",
+      "lines": [
+        {
+          "name": "Commentator",
+          "text": "Come on, get up!"
+        }
+      ]
+    }
+  ]
+}

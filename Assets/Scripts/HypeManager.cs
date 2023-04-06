@@ -59,7 +59,9 @@ public class HypeManager : MonoBehaviour
     }
     
     void Update() {
-        UpdateHype((-1 * Time.deltaTime * decaySpeed) + currentHype);
+        if (!gameManager.isGameOver) {
+            UpdateHype((-1 * Time.deltaTime * decaySpeed) + currentHype);
+        }
         if (Input.GetKeyDown(KeyCode.H)) {
             UpdateHype(500f);
         }

@@ -56,7 +56,7 @@
         },
         {
           "name": "Commentator",
-          "text": "See? Fill up our newly patented HYPE METER and who knows what'll happen! Show us what you got, Nuck Chorris!"
+          "text": "See? Fill up our newly patented HYPE METER and who knows what'll happen! Show us what you got, Nuck!"
         },
         {
           "name": "Tom",
@@ -92,7 +92,7 @@
         },
         {
           "name": "Tom",
-          "text": "What!? I'm not Nuck Chorris! Who are you? Are you an alien?"
+          "text": "What!? I'm not Nuck Chorris! I don't know how to fight!"
         },
         {
           "name": "Commentator",
@@ -112,8 +112,16 @@
           "text": "Ohoho, looks like two of our greatest fighters have arrived!"
         },
         {
+          "name": "Tom",
+          "text": "I said, I've never fought before!"
+        },
+        {
           "name": "Commentator",
-          "text": "Can our dear Nuck Chorris DODGE their attacks by pressing [Space] or [Right Trigger?]?"
+          "text": "Well, if you're so insistent that you can't fight..."
+        },
+        {
+          "name": "Commentator",
+          "text": "...can you DODGE their attacks by pressing [Space]?"
         }
       ]
     }

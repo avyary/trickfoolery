@@ -13,11 +13,15 @@
         },
         {
           "name": "Commentator",
-          "text": "Anyways, we've brought in some new friends to spice things up!"
+          "text": "Anyways, you got any more special tricks up your sleeve?"
         },
         {
           "name": "Commentator",
-          "text": "Stay on your toes - they're careful, but come in QUICK!"
+          "text": "I've heard humans can \"bust a move\" by pressing [F]!"
+        },
+        {
+          "name": "Commentator",
+          "text": "Careful though - it makes some of us prideful warriors get real mad!"
         }
       ]
     },
@@ -26,11 +30,15 @@
       "lines": [
         {
           "name": "Commentator",
-          "text": "Oh, the crowd is going absolutely WILD!"
+          "text": "What moves! What thrills!!!"
+        },
+        {
+          "name": "Tom",
+          "text": "Can I leave now?"
         },
         {
           "name": "Commentator",
-          "text": "Let's see if Nuck Chorris can bring the heat in our next arena!"
+          "text": "Leave? Surely not - onto the next arena! Your adoring fans await!"
         }
       ]
     },
@@ -39,7 +47,7 @@
       "lines": [
         {
           "name": "Commentator",
-          "text": "Oh, what a shame!!!"
+          "text": "You can do better than that! We believe in you!"
         }
       ]
     }

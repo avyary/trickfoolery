@@ -175,6 +175,7 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator GameOverWin()
     {
+        print("gameOverWin");
         isGameOver = true;
         isGameWon = true;
         yield return new WaitForSeconds(0.5f);

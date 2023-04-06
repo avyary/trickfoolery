@@ -6821,8 +6821,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2211ac183a1924cdb965ba0e27f7b418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startupTime: 1
-  _activeTime: 0.75
+  _startupTime: 0.75
+  _activeTime: 0.5
   _recoveryTime: 1.6
   _damage: 25
   _stunTime: 1

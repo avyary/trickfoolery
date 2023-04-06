@@ -65,6 +65,7 @@ public class UIManager : MonoBehaviour
     }
 
     public void GameOverWin() {
+        print("gameoverwin uima");
         endPopup.GetComponent<Image>().sprite = winPopupImg;
         endPopup.GetComponent<Animator>().SetTrigger("GameEnd");
     }
