@@ -215,6 +215,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8157556152595408478, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 4818480411224985555}
+    - target: {fileID: 8157556152595408478, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: angySFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 5586c68a897195d468a1e2dbc3bb0aff, type: 2}
+    - target: {fileID: 8157556152595408478, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: attackSFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 54e671947e9ca3f4b99173a60d7ee811, type: 2}
+    - target: {fileID: 8157556152595408478, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: chargerlungeSFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 54e671947e9ca3f4b99173a60d7ee811, type: 2}
     - target: {fileID: 8157556153598119114, guid: 365579391c2931940a7e83bdc319620a, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.54
@@ -283,6 +299,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 3, z: 1}
   m_Center: {x: 0, y: 0.33, z: 0}
+--- !u!114 &6838147400549990550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4452358345115407876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a024f4daab4fd48b9aec34fb7e7acfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: fc1f9883c2b632549b9f8bf6b3781cb7, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
+--- !u!95 &4818480411224985555 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1018425039531786126, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+  m_PrefabInstance: {fileID: 5547452099171315805}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7541573027597103694 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2618155974825755155, guid: 365579391c2931940a7e83bdc319620a, type: 3}

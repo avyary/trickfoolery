@@ -25,6 +25,14 @@ public class GameManager : MonoBehaviour
     // wwise
     public AK.Wwise.Event pauseSFX;
     public AK.Wwise.Event unpSFX;
+    public AK.Wwise.Event playpauseMUS;
+    public AK.Wwise.Event mutepauseMUS;
+    public AK.Wwise.Event firstmutepauseMUS;
+    public AK.Wwise.Event unmpauseMUS;
+    public AK.Wwise.Event playAaaMus;
+    public AK.Wwise.Event muteAaaMus;
+    public AK.Wwise.Event unmAaaMus;
+
 
     // object references
     public UIManager uiManager;
@@ -56,9 +64,6 @@ public class GameManager : MonoBehaviour
 
     private bool isRestart;
 
-    [SerializeField]
-    private GameObject progressTrackerObj;
-
     void Start()
     {
         uiManager = gameObject.GetComponent<UIManager>();
@@ -70,16 +75,14 @@ public class GameManager : MonoBehaviour
             isRestart = progressTracker.GetComponent<ProgressTracker>().isRestart;
         }
         else {
-            GameObject trackerObj = GameObject.Instantiate(progressTrackerObj);
-            trackerObj.name = "ProgressTracker";
             isRestart = false;
         }
 
+        playpauseMUS.Post(gameObject);
+        firstmutepauseMUS.Post(gameObject);
+        AkSoundEngine.SetState("Gameplay_State", "Combat");
+        playAaaMus.Post(gameObject);
         StartCoroutine(StartLevel());
-    }
-
-    void Awake() {
-        GameObject.Find("FadeInOut").GetComponent<Animator>().SetTrigger("FadeIn");
     }
 
     IEnumerator StartLevel() {
@@ -105,7 +108,6 @@ public class GameManager : MonoBehaviour
     }
 
     public void StartCombat() {
-        print("starting combat");
         Time.timeScale = 1;
         state = GameState.Combat;
         playerInput = true;
@@ -157,12 +159,17 @@ public class GameManager : MonoBehaviour
     public void TogglePause() {
         if (jumbotron.state == JumbotronState.Hidden || jumbotron.state == JumbotronState.HypeBar) {
             pauseSFX.Post(gameObject);
+            unmpauseMUS.Post(gameObject);
+            muteAaaMus.Post(gameObject);
+
             uiManager.ShowPauseMenu();
             isPaused = true;
             Time.timeScale = 0;
         }
         else if (jumbotron.state == JumbotronState.Pause || jumbotron.state == JumbotronState.PauseFromHidden) {
             unpSFX.Post(gameObject);
+            mutepauseMUS.Post(gameObject);
+            unmAaaMus.Post(gameObject);
             uiManager.HidePauseMenu();
             Time.timeScale = 1;
         }
@@ -175,9 +182,9 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator GameOverWin()
     {
-        print("gameOverWin");
         isGameOver = true;
         isGameWon = true;
+        AkSoundEngine.SetState("Gameplay_State", "Victory");
         yield return new WaitForSeconds(0.5f);
         stopCombatEvent.Invoke();
         uiManager.GameOverWin();
