@@ -9,44 +9,42 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{0BCF49F1-6902-D40C-E344-36408C8CE2F9}">
-			<ObjectPath>Init</ObjectPath>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{0BCF49F1-6902-D40C-E344-36408C8CE2F9}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<AudioDevices>
-					<Plugin Id="2317455096" Name="No_Output" ObjectPath="\Audio Devices\Default Work Unit\No_Output" GUID="{09BDC886-7852-4C05-BE15-D92485314CAD}" LibName="No Output" LibId="11862023"/>
-					<Plugin Id="3859886410" Name="System" ObjectPath="\Audio Devices\Default Work Unit\System" GUID="{EB9C85E5-E8A3-40AB-B615-B2D2E462F3DE}" LibName="System" LibId="11403271"/>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 			<GameParameters>
-				<GameParameter Id="3296584377" Name="Hype" ObjectPath="\Game Parameters\Default Work Unit\Hype" GUID="{F10FAC34-8EF9-452B-9153-83ADE95B5819}"/>
-				<GameParameter Id="4082227278" Name="On_Disco_Floor" ObjectPath="\Game Parameters\Default Work Unit\On_Disco_Floor" GUID="{1353123B-8719-435F-969E-773D804B92E8}"/>
+				<GameParameter Id="3296584377" Name="Hype"/>
+				<GameParameter Id="4082227278" Name="On_Disco_Floor"/>
 			</GameParameters>
 			<StateGroups>
-				<StateGroup Id="762757699" Name="Gameplay_State" ObjectPath="\States\Default Work Unit\Gameplay_State" GUID="{B587995D-62E9-431F-94B4-73168DC556F9}">
+				<StateGroup Id="762757699" Name="Gameplay_State">
 					<States>
-						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Gameplay_State\None" GUID="{17C6B36D-3016-40C9-99B0-1BAE6CBE943F}"/>
-						<State Id="2716678721" Name="Victory" ObjectPath="\States\Default Work Unit\Gameplay_State\Victory" GUID="{9108A2BF-1C91-4F03-BBCD-47F60251D933}"/>
-						<State Id="2764240573" Name="Combat" ObjectPath="\States\Default Work Unit\Gameplay_State\Combat" GUID="{D23C63AE-8C84-4140-9A0C-994815485352}"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2716678721" Name="Victory"/>
+						<State Id="2764240573" Name="Combat"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
-				<SwitchGroup Id="2385628198" Name="Footsteps" ObjectPath="\Switches\Default Work Unit\Footsteps" GUID="{D837BB52-31E7-49A5-A77F-069EF20CB60B}">
+				<SwitchGroup Id="2385628198" Name="Footsteps">
 					<Switches>
-						<Switch Id="1914034948" Name="New_Switch" ObjectPath="\Switches\Default Work Unit\Footsteps\New_Switch" GUID="{822F63B6-39A1-4147-9A51-E6A1CB9CBEC3}"/>
-						<Switch Id="3952450473" Name="New_Switch_02" ObjectPath="\Switches\Default Work Unit\Footsteps\New_Switch_02" GUID="{60F846F2-C835-4848-867F-1976750260AB}"/>
-						<Switch Id="3952450474" Name="New_Switch_01" ObjectPath="\Switches\Default Work Unit\Footsteps\New_Switch_01" GUID="{322203B8-97D4-4624-96CF-D453F12E8616}"/>
+						<Switch Id="1914034948" Name="New_Switch"/>
+						<Switch Id="3952450473" Name="New_Switch_02"/>
+						<Switch Id="3952450474" Name="New_Switch_01"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" GUID="{FCC95966-8BC9-428F-A86F-77BD80236DCE}" Language="SFX" Hash="{9A4D28E1-A782-0119-B8C8-2A559E78F104}">
-			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{AC285288-EF9D-4B75-C76C-EBE672CC8C12}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -276,19 +274,19 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="308973664" Name="First_Time_Mute_mus_pause_75bpm" ObjectPath="\Events\Default Work Unit\First_Time_Mute_mus_pause_75bpm" GUID="{7288EC1A-8592-4957-B27E-E911D3B56F4A}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1929765902" Name="Mute_Alien_Arena_Assault_170bpm" ObjectPath="\Events\Default Work Unit\Mute_Alien_Arena_Assault_170bpm" GUID="{D563AF20-5219-4CAB-9AEF-51C10825081B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3756680375" Name="Mute_mus_pause_75bpm" ObjectPath="\Events\Default Work Unit\Mute_mus_pause_75bpm" GUID="{0E96271C-B559-48D8-B09B-94D3489189FD}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="341582045" Name="Play_Alien_Arena_Assault_170bpm" ObjectPath="\Events\Default Work Unit\Play_Alien_Arena_Assault_170bpm" GUID="{8333E7FF-2074-4574-ADA6-3F3F7B5DA275}" DurationType="Infinite">
+				<Event Id="308973664" Name="First_Time_Mute_mus_pause_75bpm"/>
+				<Event Id="1929765902" Name="Mute_Alien_Arena_Assault_170bpm"/>
+				<Event Id="3756680375" Name="Mute_mus_pause_75bpm"/>
+				<Event Id="341582045" Name="Play_Alien_Arena_Assault_170bpm">
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="762757699" Id="2716678721" GUID="{9108A2BF-1C91-4F03-BBCD-47F60251D933}"/>
+							<SwitchValue GroupType="State" GroupId="762757699" Id="2716678721"/>
 							<MediaRefs>
 								<MediaRef Id="1069608001"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="762757699" Id="2764240573" GUID="{D23C63AE-8C84-4140-9A0C-994815485352}"/>
+							<SwitchValue GroupType="State" GroupId="762757699" Id="2764240573"/>
 							<MediaRefs>
 								<MediaRef Id="19996191"/>
 								<MediaRef Id="72287347"/>
@@ -312,61 +310,61 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="1926045526" Name="Play_charger_angy" ObjectPath="\Events\Default Work Unit\Play_charger_angy" GUID="{E480F771-7FFA-43EE-965C-E01524C26C0E}" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.5" DurationMax="2">
+				<Event Id="1926045526" Name="Play_charger_angy">
 					<MediaRefs>
 						<MediaRef Id="292366327"/>
 						<MediaRef Id="618887788"/>
 						<MediaRef Id="825759985"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3579375072" Name="Play_charger_lunge" ObjectPath="\Events\Default Work Unit\Play_charger_lunge" GUID="{34768769-7EB7-4C6B-A65A-4CB6AB2A5B55}" MaxAttenuation="15" DurationType="OneShot" DurationMin="1" DurationMax="1.5">
+				<Event Id="3579375072" Name="Play_charger_lunge">
 					<MediaRefs>
 						<MediaRef Id="63593165"/>
 						<MediaRef Id="119466304"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2758388342" Name="Play_mus_Pause_75bpm" ObjectPath="\Events\Default Work Unit\Play_mus_Pause_75bpm" GUID="{BCE1262A-3C14-4B31-B28C-4A64BEE31410}" DurationType="Infinite">
+				<Event Id="2758388342" Name="Play_mus_Pause_75bpm">
 					<MediaRefs>
 						<MediaRef Id="224255706"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3263497147" Name="Play_mus_Trickfoolery_222bpm" ObjectPath="\Events\Default Work Unit\Play_mus_Trickfoolery_222bpm" GUID="{957ED87C-54CD-4A6B-878A-25F81372D716}" DurationType="Infinite">
+				<Event Id="3263497147" Name="Play_mus_Trickfoolery_222bpm">
 					<MediaRefs>
 						<MediaRef Id="1033023117"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="843029991" Name="Play_sfx_charger_death" ObjectPath="\Events\Default Work Unit\Play_sfx_charger_death" GUID="{63384843-A4A4-44C3-AED2-9CDA3A9431A5}" MaxAttenuation="15" DurationType="OneShot" DurationMin="1.5" DurationMax="2">
+				<Event Id="843029991" Name="Play_sfx_charger_death">
 					<MediaRefs>
 						<MediaRef Id="275378158"/>
 						<MediaRef Id="507762272"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2343006462" Name="Play_sfx_confirm" ObjectPath="\Events\Default Work Unit\Play_sfx_confirm" GUID="{69F3C602-D088-4702-A2C0-78D74E58ADF3}" DurationType="OneShot" DurationMin="4.5" DurationMax="4.5">
+				<Event Id="2343006462" Name="Play_sfx_confirm">
 					<MediaRefs>
 						<MediaRef Id="621091837"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="526466336" Name="Play_sfx_groovy" ObjectPath="\Events\Default Work Unit\Play_sfx_groovy" GUID="{7FB8863C-987C-4F96-A523-14BA0486137B}" DurationType="OneShot" DurationMin="2" DurationMax="2">
+				<Event Id="526466336" Name="Play_sfx_groovy">
 					<MediaRefs>
 						<MediaRef Id="375178555"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3683043420" Name="Play_sfx_pause" ObjectPath="\Events\Default Work Unit\Play_sfx_pause" GUID="{1228DA1E-31A1-49A3-8418-61751A909CFE}" DurationType="OneShot" DurationMin="2" DurationMax="2">
+				<Event Id="3683043420" Name="Play_sfx_pause">
 					<MediaRefs>
 						<MediaRef Id="1066273250"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4077681152" Name="Play_sfx_player_dash" ObjectPath="\Events\Default Work Unit\Play_sfx_player_dash" GUID="{D6F8BF24-B6D5-4FEA-AC6B-3CEC97B0DDC4}" DurationType="OneShot" DurationMin="0.37457678" DurationMax="0.6674199">
+				<Event Id="4077681152" Name="Play_sfx_player_dash">
 					<MediaRefs>
 						<MediaRef Id="429033431"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1591758634" Name="Play_sfx_player_death" ObjectPath="\Events\Default Work Unit\Play_sfx_player_death" GUID="{CAC80460-81AC-420B-AD88-E8FA18AC9974}" DurationType="OneShot" DurationMin="1.5" DurationMax="1.5">
+				<Event Id="1591758634" Name="Play_sfx_player_death">
 					<MediaRefs>
 						<MediaRef Id="1007579897"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1067524079" Name="Play_sfx_player_hurt" ObjectPath="\Events\Default Work Unit\Play_sfx_player_hurt" GUID="{F2D8E87D-016C-4DA6-8E62-4CD589790A37}" DurationType="OneShot" DurationMin="1" DurationMax="1">
+				<Event Id="1067524079" Name="Play_sfx_player_hurt">
 					<MediaRefs>
 						<MediaRef Id="403074574"/>
 						<MediaRef Id="405788637"/>
@@ -374,12 +372,12 @@
 						<MediaRef Id="1070951602"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="325086926" Name="Play_sfx_select" ObjectPath="\Events\Default Work Unit\Play_sfx_select" GUID="{D9480393-0FF0-4478-941E-C2F83A21C8BD}" DurationType="OneShot" DurationMin="1.8866584" DurationMax="2.1497467">
+				<Event Id="325086926" Name="Play_sfx_select">
 					<MediaRefs>
 						<MediaRef Id="673051370"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1800631706" Name="Play_sfx_taunt" ObjectPath="\Events\Default Work Unit\Play_sfx_taunt" GUID="{CD05A98D-2AF9-47E8-A5D9-08F5EE359AC0}" DurationType="OneShot" DurationMin="1.5" DurationMax="3">
+				<Event Id="1800631706" Name="Play_sfx_taunt">
 					<MediaRefs>
 						<MediaRef Id="83193888"/>
 						<MediaRef Id="305122859"/>
@@ -393,7 +391,7 @@
 						<MediaRef Id="829787396"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2661393732" Name="Play_sfx_tomstep" ObjectPath="\Events\Default Work Unit\Play_sfx_tomstep" GUID="{1BC515F3-568C-4A8D-995F-DBFA44FF9E2A}" DurationType="OneShot" DurationMin="0.3509921" DurationMax="0.35616517">
+				<Event Id="2661393732" Name="Play_sfx_tomstep">
 					<MediaRefs>
 						<MediaRef Id="21309808"/>
 						<MediaRef Id="103508686"/>
@@ -404,29 +402,29 @@
 						<MediaRef Id="1043628278"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3476672187" Name="Play_sfx_unpause" ObjectPath="\Events\Default Work Unit\Play_sfx_unpause" GUID="{EF55EFFC-D9BF-4914-B45F-C34160708C30}" DurationType="OneShot" DurationMin="2" DurationMax="2">
+				<Event Id="3476672187" Name="Play_sfx_unpause">
 					<MediaRefs>
 						<MediaRef Id="395767410"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2601853237" Name="Stop_mus_Trickfoolery_222bpm" ObjectPath="\Events\Default Work Unit\Stop_mus_Trickfoolery_222bpm" GUID="{103A468D-C1A5-4619-8F4C-E88DFD668A3C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1990966217" Name="Unmute_Alien_Arena_Assault_170bpm" ObjectPath="\Events\Default Work Unit\Unmute_Alien_Arena_Assault_170bpm" GUID="{33C4D4F4-E3D0-44A5-8C66-252F4F122C70}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="4152903754" Name="Unmute_mus_pause_75bpm" ObjectPath="\Events\Default Work Unit\Unmute_mus_pause_75bpm" GUID="{C3E827C6-F5CC-4329-985D-E19D22E9E34A}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2601853237" Name="Stop_mus_Trickfoolery_222bpm"/>
+				<Event Id="1990966217" Name="Unmute_Alien_Arena_Assault_170bpm"/>
+				<Event Id="4152903754" Name="Unmute_mus_pause_75bpm"/>
 			</Events>
 			<GameParameters>
-				<GameParameter Id="3296584377" Name="Hype" ObjectPath="\Game Parameters\Default Work Unit\Hype" GUID="{F10FAC34-8EF9-452B-9153-83ADE95B5819}"/>
-				<GameParameter Id="4082227278" Name="On_Disco_Floor" ObjectPath="\Game Parameters\Default Work Unit\On_Disco_Floor" GUID="{1353123B-8719-435F-969E-773D804B92E8}"/>
+				<GameParameter Id="3296584377" Name="Hype"/>
+				<GameParameter Id="4082227278" Name="On_Disco_Floor"/>
 			</GameParameters>
 			<StateGroups>
-				<StateGroup Id="762757699" Name="Gameplay_State" ObjectPath="\States\Default Work Unit\Gameplay_State" GUID="{B587995D-62E9-431F-94B4-73168DC556F9}">
+				<StateGroup Id="762757699" Name="Gameplay_State">
 					<States>
-						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Gameplay_State\None" GUID="{17C6B36D-3016-40C9-99B0-1BAE6CBE943F}"/>
-						<State Id="2716678721" Name="Victory" ObjectPath="\States\Default Work Unit\Gameplay_State\Victory" GUID="{9108A2BF-1C91-4F03-BBCD-47F60251D933}"/>
-						<State Id="2764240573" Name="Combat" ObjectPath="\States\Default Work Unit\Gameplay_State\Combat" GUID="{D23C63AE-8C84-4140-9A0C-994815485352}"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2716678721" Name="Victory"/>
+						<State Id="2764240573" Name="Combat"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E4DBAA6D-BDF7-53CA-5956-475D74236037}</FileHash>
+	<FileHash>{AEC5C44E-56B0-B57F-25A3-DEF0559E2FC4}</FileHash>
 </SoundBanksInfo>

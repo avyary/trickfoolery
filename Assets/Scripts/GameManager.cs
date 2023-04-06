@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
     public AK.Wwise.Event mutepauseMUS;
     public AK.Wwise.Event firstmutepauseMUS;
     public AK.Wwise.Event unmpauseMUS;
+    public AK.Wwise.Event playAaaMus;
+    public AK.Wwise.Event muteAaaMus;
+    public AK.Wwise.Event unmAaaMus;
 
 
     // object references
@@ -77,6 +80,8 @@ public class GameManager : MonoBehaviour
 
         playpauseMUS.Post(gameObject);
         firstmutepauseMUS.Post(gameObject);
+        AkSoundEngine.SetState("Gameplay_State", "Combat");
+        playAaaMus.Post(gameObject);
         StartCoroutine(StartLevel());
     }
 
@@ -155,6 +160,7 @@ public class GameManager : MonoBehaviour
         if (jumbotron.state == JumbotronState.Hidden || jumbotron.state == JumbotronState.HypeBar) {
             pauseSFX.Post(gameObject);
             unmpauseMUS.Post(gameObject);
+            muteAaaMus.Post(gameObject);
 
             uiManager.ShowPauseMenu();
             isPaused = true;
@@ -163,6 +169,7 @@ public class GameManager : MonoBehaviour
         else if (jumbotron.state == JumbotronState.Pause || jumbotron.state == JumbotronState.PauseFromHidden) {
             unpSFX.Post(gameObject);
             mutepauseMUS.Post(gameObject);
+            unmAaaMus.Post(gameObject);
             uiManager.HidePauseMenu();
             Time.timeScale = 1;
         }
@@ -177,6 +184,7 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = true;
         isGameWon = true;
+        AkSoundEngine.SetState("Gameplay_State", "Victory");
         yield return new WaitForSeconds(0.5f);
         stopCombatEvent.Invoke();
         uiManager.GameOverWin();
