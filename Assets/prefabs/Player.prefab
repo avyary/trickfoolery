@@ -6339,8 +6339,8 @@ MonoBehaviour:
   isInvincible: 0
   gameManager: {fileID: 0}
   WALKSPEED: 5
-  DASHSPEED: 30
-  DASHTIME: 0.15
+  DASHSPEED: 10
+  DASHTIME: 0.2
   DASHCD: 1
   TAUNTTIME: 1
   TAUNTCD: 1
@@ -6354,6 +6354,7 @@ MonoBehaviour:
   invincibilityMat: {fileID: 2100000, guid: ffd190e93d0aa8d49b4f3ec8ef658f6d, type: 2}
   state: 0
   fov: {fileID: 0}
+  tomAnimator: {fileID: 0}
 --- !u!143 &812461445361068324
 CharacterController:
   m_ObjectHideFlags: 0
