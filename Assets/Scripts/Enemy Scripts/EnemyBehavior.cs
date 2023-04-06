@@ -15,7 +15,7 @@ public class EnemyBehavior : MonoBehaviour
     public GameObject player;
     Vector3 direction;
     public float attackSpeed = 2f;
-public GameObject obj1;
+    public GameObject obj1;
 public GameObject obj2;
 public GameObject obj3;
 public GameObject obj4;
@@ -27,7 +27,7 @@ private GameObject[] objs;
     obj1.SetActive(false);
     obj2.SetActive(false);
     obj3.SetActive(false);
-    obj4.SetActive(false);
+    obj4.SetActive(false); 
         originalColor = GetComponent<MeshRenderer>().material.color;
         flashInterval = chargeTime / 6f;
         lineRend.positionCount = 2;
@@ -97,7 +97,6 @@ private GameObject[] objs;
         if (!isAggro )
         {
             StartCoroutine(aggro());
-            
         }
     }
 

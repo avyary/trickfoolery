@@ -7,12 +7,22 @@ public class PlayerAnimationController : MonoBehaviour
     [SerializeField] private AnimationClip tomRolling;
     [SerializeField] private AnimationClip tomTaunt;
     [SerializeField] private AnimationClip tomIdle;
+    [SerializeField] private PlayerSounds playerSounds;
+
+
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         animator.Play(tomIdle.name);
     }
+
+
+    public void PlayFootstep()
+    {
+        playerSounds.PlayFootstepSound();
+    }
+
 
     private void Update()
     {
