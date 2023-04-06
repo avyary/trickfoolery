@@ -200,6 +200,7 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = true;
         stopCombatEvent.Invoke();
+        muteAaaMus.Post(gameObject);
         yield return new WaitForSeconds(3f);
         uiManager.GameOverLose();
         yield return new WaitForSeconds(1f);
