@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     private bool isGameWon = false;
     private bool inCombat = false;
     public bool playerInput = false;
+    public bool isGameOver = false;
     
     // wwise
     public AK.Wwise.Event pauseSFX;
@@ -60,6 +61,9 @@ public class GameManager : MonoBehaviour
 
     private bool isRestart;
 
+    [SerializeField]
+    private GameObject progressTrackerObj;
+
     void Start()
     {
         uiManager = gameObject.GetComponent<UIManager>();
@@ -71,8 +75,8 @@ public class GameManager : MonoBehaviour
             isRestart = progressTracker.GetComponent<ProgressTracker>().isRestart;
         }
         else {
-            GameObject tracker = GameObject.Instantiate(trackerPrefab);
-            tracker.name = "ProgressTracker";
+            GameObject trackerObj = GameObject.Instantiate(progressTrackerObj);
+            trackerObj.name = "ProgressTracker";
             isRestart = false;
         }
 
@@ -176,6 +180,7 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator GameOverWin()
     {
+        isGameOver = true;
         isGameWon = true;
         yield return new WaitForSeconds(0.5f);
         stopCombatEvent.Invoke();
@@ -186,6 +191,7 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator GameOverLose()
     {
+        isGameOver = true;
         stopCombatEvent.Invoke();
         yield return new WaitForSeconds(3f);
         uiManager.GameOverLose();
