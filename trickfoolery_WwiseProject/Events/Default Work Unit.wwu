@@ -266,6 +266,39 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Mute_Alien_Arena_Assault_170bpm" ID="{D563AF20-5219-4CAB-9AEF-51C10825081B}">
+					<ChildrenList>
+						<Action Name="" ID="{9A203AF0-34EC-40C8-82F4-0C384A1D4D6C}" ShortID="239177169">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Alien Arena Normal and Victory" ID="{95152A6C-A2BF-456C-B5B2-179C0E2FC335}" WorkUnitID="{5CD6933B-0773-453D-BFFC-5483B47741B7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Unmute_Alien_Arena_Assault_170bpm" ID="{33C4D4F4-E3D0-44A5-8C66-252F4F122C70}">
+					<ChildrenList>
+						<Action Name="" ID="{2FC50D3D-DC3D-490D-BE11-C8B18B4CA6F0}" ShortID="97522542">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Alien Arena Normal and Victory" ID="{95152A6C-A2BF-456C-B5B2-179C0E2FC335}" WorkUnitID="{5CD6933B-0773-453D-BFFC-5483B47741B7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

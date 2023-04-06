@@ -14,7 +14,9 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID FIRST_TIME_MUTE_MUS_PAUSE_75BPM = 308973664U;
+        static const AkUniqueID MUTE_ALIEN_ARENA_ASSAULT_170BPM = 1929765902U;
         static const AkUniqueID MUTE_MUS_PAUSE_75BPM = 3756680375U;
+        static const AkUniqueID PLAY_ALIEN_ARENA_ASSAULT_170BPM = 341582045U;
         static const AkUniqueID PLAY_CHARGER_ANGY = 1926045526U;
         static const AkUniqueID PLAY_CHARGER_LUNGE = 3579375072U;
         static const AkUniqueID PLAY_MUS_PAUSE_75BPM = 2758388342U;
@@ -31,6 +33,7 @@ namespace AK
         static const AkUniqueID PLAY_SFX_TOMSTEP = 2661393732U;
         static const AkUniqueID PLAY_SFX_UNPAUSE = 3476672187U;
         static const AkUniqueID STOP_MUS_TRICKFOOLERY_222BPM = 2601853237U;
+        static const AkUniqueID UNMUTE_ALIEN_ARENA_ASSAULT_170BPM = 1990966217U;
         static const AkUniqueID UNMUTE_MUS_PAUSE_75BPM = 4152903754U;
     } // namespace EVENTS
 
