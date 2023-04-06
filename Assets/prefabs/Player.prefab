@@ -6339,8 +6339,8 @@ MonoBehaviour:
   isInvincible: 0
   gameManager: {fileID: 0}
   WALKSPEED: 5
-  DASHSPEED: 30
-  DASHTIME: 0.15
+  DASHSPEED: 10
+  DASHTIME: 0.2
   DASHCD: 1
   TAUNTTIME: 1
   TAUNTCD: 1
