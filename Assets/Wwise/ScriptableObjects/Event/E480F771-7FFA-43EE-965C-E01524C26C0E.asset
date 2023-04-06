@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1aca1ce9cd2e14e4ba30c695d3905b5b, type: 3}
-  m_Name: 9D43E952-47F8-4E63-9CD7-BA481DF46578
+  m_Name: E480F771-7FFA-43EE-965C-E01524C26C0E
   m_EditorClassIdentifier: 
-  objectName: Play_sfx_taunt
-  id: 1800631706
-  guid: 9D43E952-47F8-4E63-9CD7-BA481DF46578
+  objectName: Play_charger_angy
+  id: 1926045526
+  guid: E480F771-7FFA-43EE-965C-E01524C26C0E

@@ -162,7 +162,7 @@ public class PlayerMovement : MonoBehaviour
                 StartCoroutine(WaitForSecondsAndStopParticles(0.1f, DashParticle));
             }
 
-            if (Input.GetButton("Taunt") && tauntCdTimer <= 0)
+            if (Input.GetButtonDown("Taunt") && tauntCdTimer <= 0)
             {
                 StartCoroutine(Taunt());
             }

@@ -210,6 +210,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7962956978066060797}
     - target: {fileID: 8157556152595408478, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: angySFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 5586c68a897195d468a1e2dbc3bb0aff, type: 2}
+    - target: {fileID: 8157556152595408478, guid: 365579391c2931940a7e83bdc319620a, type: 3}
       propertyPath: attackSFX.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 54e671947e9ca3f4b99173a60d7ee811, type: 2}

@@ -244,6 +244,28 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="Trigger_GamePlay_State" ID="{0361A67B-0F8F-409B-8F7F-6091D370A099}"/>
+				<Event Name="Play_charger_angy" ID="{E480F771-7FFA-43EE-965C-E01524C26C0E}">
+					<ChildrenList>
+						<Action Name="" ID="{6C940BB2-3944-4943-9CAD-23A033B657F8}" ShortID="193149517">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_charger_anger" ID="{C31818E4-960D-4534-80EE-44A59276F6F4}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_taunt" ID="{CD05A98D-2AF9-47E8-A5D9-08F5EE359AC0}">
+					<ChildrenList>
+						<Action Name="" ID="{CCE80E06-A9E7-42E2-AE42-D19464FA2F83}" ShortID="265030697">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_player_taunt" ID="{C808B20A-B7D8-428A-B5C3-8163B6968DE9}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

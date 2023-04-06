@@ -15,10 +15,10 @@ namespace AK
     {
         static const AkUniqueID FIRST_TIME_MUTE_MUS_PAUSE_75BPM = 308973664U;
         static const AkUniqueID MUTE_MUS_PAUSE_75BPM = 3756680375U;
+        static const AkUniqueID PLAY_CHARGER_ANGY = 1926045526U;
         static const AkUniqueID PLAY_CHARGER_LUNGE = 3579375072U;
         static const AkUniqueID PLAY_MUS_PAUSE_75BPM = 2758388342U;
         static const AkUniqueID PLAY_MUS_TRICKFOOLERY_222BPM = 3263497147U;
-        static const AkUniqueID PLAY_SFX_CHARGER_ANGER = 923862104U;
         static const AkUniqueID PLAY_SFX_CHARGER_DEATH = 843029991U;
         static const AkUniqueID PLAY_SFX_CONFIRM = 2343006462U;
         static const AkUniqueID PLAY_SFX_GROOVY = 526466336U;
@@ -33,6 +33,22 @@ namespace AK
         static const AkUniqueID STOP_MUS_TRICKFOOLERY_222BPM = 2601853237U;
         static const AkUniqueID UNMUTE_MUS_PAUSE_75BPM = 4152903754U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace GAMEPLAY_STATE
+        {
+            static const AkUniqueID GROUP = 762757699U;
+
+            namespace STATE
+            {
+                static const AkUniqueID COMBAT = 2764240573U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID VICTORY = 2716678721U;
+            } // namespace STATE
+        } // namespace GAMEPLAY_STATE
+
+    } // namespace STATES
 
     namespace SWITCHES
     {
@@ -49,6 +65,12 @@ namespace AK
         } // namespace FOOTSTEPS
 
     } // namespace SWITCHES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID HYPE = 3296584377U;
+        static const AkUniqueID ON_DISCO_FLOOR = 4082227278U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

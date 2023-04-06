@@ -157,7 +157,7 @@ public abstract class Enemy: MonoBehaviour
         anger = anger + tauntValue;
         if (anger >= maxAnger) {
             isAngy = true;
-            //angySFX.Post(gameObject);
+            angySFX.Post(gameObject);
             _AngyInd.SetActive(true); 
             currentAttack = angyAttack;
             Debug.Log("Damage " + currentAttack.damage);

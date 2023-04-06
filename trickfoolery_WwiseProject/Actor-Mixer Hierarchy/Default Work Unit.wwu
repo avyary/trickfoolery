@@ -1219,6 +1219,280 @@
 						</Reference>
 					</ReferenceList>
 				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="sfx_player_taunt" ID="{C808B20A-B7D8-428A-B5C3-8163B6968DE9}" ShortID="553989581">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="sfx_taunts_akanbe_1" ID="{5A59A39C-02C7-4A5C-914B-4D19C082806A}" ShortID="895652724">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_taunts_akanbe_1" ID="{142BACC2-0093-4D55-9976-1AEC789D7240}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_taunts_akanbe_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="780987649"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_taunts_akanbe_1" ID="{142BACC2-0093-4D55-9976-1AEC789D7240}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_taunts_akanbe_2" ID="{4BED164F-149A-4B65-839B-6CD0D53EDF50}" ShortID="549909034">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_taunts_akanbe_2" ID="{C2A3042B-D6F2-4A09-B350-1279E6738011}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_taunts_akanbe_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="603062409"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_taunts_akanbe_2" ID="{C2A3042B-D6F2-4A09-B350-1279E6738011}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_taunts_hey_crab_face_1" ID="{E4BD52A9-B912-407F-B5E1-F892D0EC6727}" ShortID="262893635">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_taunts_hey_crab_face_1" ID="{DBD2E503-F16A-4C29-ACE4-0DB47C9BE67E}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_taunts_hey_crab_face_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="420247977"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_taunts_hey_crab_face_1" ID="{DBD2E503-F16A-4C29-ACE4-0DB47C9BE67E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_taunts_hey_lobster_roll_1" ID="{DB86D09A-53A9-4C89-8401-0B4256E64F55}" ShortID="1032467141">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_taunts_hey_lobster_roll_1" ID="{619E5937-25C9-4AB8-9658-8836EAEDADE3}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_taunts_hey_lobster_roll_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="305122859"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_taunts_hey_lobster_roll_1" ID="{619E5937-25C9-4AB8-9658-8836EAEDADE3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_taunts_hey_stupid_1" ID="{583C3057-76C2-4D3A-A2E6-894BFECFB204}" ShortID="828213928">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_taunts_hey_stupid_1" ID="{5663132E-2BE3-4A2A-9893-28217E4FDE89}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_taunts_hey_stupid_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="582855424"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_taunts_hey_stupid_1" ID="{5663132E-2BE3-4A2A-9893-28217E4FDE89}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_taunts_hey_stupid_2" ID="{6A032AEA-750D-4E2A-86C4-BDA8F5F88E79}" ShortID="1041561405">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_taunts_hey_stupid_2" ID="{63FB5397-28C0-4373-9BC1-326F802A38C8}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_taunts_hey_stupid_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="691049765"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_taunts_hey_stupid_2" ID="{63FB5397-28C0-4373-9BC1-326F802A38C8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_taunts_raspberry_1" ID="{F3FD40DC-2BA7-4355-B8D4-02BEBE76A0D0}" ShortID="38677376">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_taunts_raspberry_1" ID="{9007C42E-FFEC-4169-9FF4-96F26D40E588}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_taunts_raspberry_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="829787396"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_taunts_raspberry_1" ID="{9007C42E-FFEC-4169-9FF4-96F26D40E588}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_taunts_raspberry_2" ID="{D750BCBF-FB95-43FF-9243-E956A449FFA5}" ShortID="514757732">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_taunts_raspberry_2" ID="{336E5169-D9F0-46E8-9484-1042FCA91B7A}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_taunts_raspberry_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="83193888"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_taunts_raspberry_2" ID="{336E5169-D9F0-46E8-9484-1042FCA91B7A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_taunts_raspberry_3" ID="{4154E2A7-C70C-49A4-BDE1-B7BD91EC78A1}" ShortID="492232418">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_taunts_raspberry_3" ID="{6FB1C1FD-4160-410F-BF36-0DA2720FAA86}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_taunts_raspberry_3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="484621152"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_taunts_raspberry_3" ID="{6FB1C1FD-4160-410F-BF36-0DA2720FAA86}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_taunts_you_scared_1" ID="{6E0B1873-F171-4F89-8006-FA04B0ACF862}" ShortID="613940172">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_taunts_you_scared_1" ID="{AC0E56F6-0A8A-4A7E-B335-DCABED68FED8}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_taunts_you_scared_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="788983524"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_taunts_you_scared_1" ID="{AC0E56F6-0A8A-4A7E-B335-DCABED68FED8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
