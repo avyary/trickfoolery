@@ -18,8 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public AK.Wwise.Event playerHurtSFX;
 
     [SerializeField] private ParticleSystem DashParticle;
-    [SerializeField] private PlayerSounds playerSounds;
-    [SerializeField] private PlayerTauntSound playerTauntSound;
+    [SerializeField]
     public float dodgeRadius;
     [SerializeField]
     private LayerMask attackMask;
@@ -88,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
     public AbilityState state;
     public FieldOfView fov;
 
-    private Animator tomAnimator;
+    public Animator tomAnimator;
 
     public enum AbilityState
     {
@@ -137,7 +136,8 @@ public class PlayerMovement : MonoBehaviour
         if (state == AbilityState.dead) {
             return;
         }
-        if (gameManager.state == GameState.Combat || gameManager.state == GameState.Tutorial) {
+        // if (gameManager.state == GameState.Combat) {
+        if (gameManager.playerInput) {
             //Calculate Inputs for player movement
             _playerInputVertical = Input.GetAxisRaw("Vertical");
             _playerInputHorizontal = Input.GetAxisRaw("Horizontal");
@@ -179,7 +179,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (gameManager.state == GameState.Combat || gameManager.state == GameState.Tutorial) {
+        if (gameManager.playerInput) {
             if (state == AbilityState.walking) 
                 _movementController.Move(_movementDirection * WALKSPEED * Time.deltaTime);
             if (state == AbilityState.dashing)
@@ -204,7 +204,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         state = AbilityState.walking;
-
     }
 
 
@@ -226,7 +225,8 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator Taunt()
     {
         state = AbilityState.taunting;
-
+        tomAnimator.SetTrigger("StartTaunt");
+        
         float startTime = Time.time;
 
         List<Collider> inRange = fov.FindVisibleTargets();
@@ -259,14 +259,10 @@ public class PlayerMovement : MonoBehaviour
         _movementController.Move(gravityVelocity * Time.deltaTime);
     }
 
-    private void PlayFootstep()
-    {
-        playerSounds.PlayFootstepSound();
-    }
 
     public void TakeHit(int damage, Enemy attacker = null)
     {
-        if (state == AbilityState.dead || isInvincible || gameManager.state == GameState.Tutorial)
+        if (state == AbilityState.dead || isInvincible)
         {
             return;
         }
@@ -305,12 +301,12 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator Die()
     {
+        uiManager.UpdateHealth(0f);
         state = AbilityState.dead;
-        GetComponent<MeshRenderer>().material.color = Color.black;
         tomAnimator.SetTrigger("Die");
         playerDeathSFX.Post(gameObject);
-        yield return new WaitForSeconds(3f);
-        gameManager.GameOverLose();
+        StartCoroutine(gameManager.GameOverLose());
+        
         yield return null;
     }
 
@@ -322,7 +318,6 @@ public class PlayerMovement : MonoBehaviour
         tomRender.material = originalMat;
         isInvincible = false;
     }
-
 
     IEnumerator ChangeMaterial(Material newMat, float time = 0)
     {

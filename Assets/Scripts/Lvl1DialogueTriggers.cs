@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Lvl1DialogueTriggers: MonoBehaviour
 {
@@ -23,10 +24,11 @@ public class Lvl1DialogueTriggers: MonoBehaviour
     void Start() {
         player = GameObject.Find("Player (1)");
         uiManager = GameObject.Find("Game Manager").GetComponent<UIManager>();
+        GameObject.Find("FadeInOut").GetComponent<Animator>().SetTrigger("FadeIn");
     }
 
     public void FadeIn() {
-        GameObject.Find("FadeInOut").GetComponent<Animator>().SetTrigger("FadeIn");
+        GameObject.Find("DialogueFadeIn").GetComponent<Animator>().SetTrigger("FadeIn");
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
@@ -63,14 +65,12 @@ public class Lvl1DialogueTriggers: MonoBehaviour
     }
 
     IEnumerator DelayStart() {
-        yield return new WaitForSecondsRealtime(1.5f);
-        Time.timeScale = 1;
+        yield return new WaitForSeconds(1.5f);
         enemy1.GetComponent<Enemy>().Attack(enemy1.GetComponent<Enemy>().currentAttack);
         enemy2.GetComponent<Enemy>().Attack(enemy2.GetComponent<Enemy>().currentAttack);
-        gameManager.state = GameState.Tutorial;
-        yield return new WaitForSecondsRealtime(2f);
-        Time.timeScale = 0;
-        gameManager.state = GameState.PreCombat;
+        gameManager.startTutorialEvent.Invoke();
+        yield return new WaitForSeconds(2f);
+        gameManager.stopCombatEvent.Invoke();
         if (player.GetComponent<PlayerMovement>().health < player.GetComponent<PlayerMovement>().MAX_HEALTH) {
             GameObject.Find("Game Manager").GetComponent<DialogueManager>().StartDialogueScene("dodgeFail", DodgeTutorial);
         }

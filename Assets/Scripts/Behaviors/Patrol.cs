@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class Patrol : MonoBehaviour {
 
     protected NavMeshAgent agent;
+    private Enemy enemy;
 
     [SerializeField]
     protected float range; //radius of sphere
@@ -15,13 +16,21 @@ public class Patrol : MonoBehaviour {
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        enemy = GetComponent<Enemy>();
         centrePoint = agent.transform;
     }
 
     
     void Update()
     {
-        if(agent.remainingDistance <= agent.stoppingDistance) //done with path
+        // stinky. will refactor on enemy behavior revisit
+        if (enemy.state == EnemyState.Passive) {
+            agent.isStopped = true;
+        }
+        else {
+            agent.isStopped = false;
+        }
+        if (enemy.state == EnemyState.Patrolling && agent.remainingDistance <= agent.stoppingDistance) //done with path
         {   
             // randomly generate a new point to move to
             Vector3 point;
@@ -30,7 +39,6 @@ public class Patrol : MonoBehaviour {
                 agent.SetDestination(point);
             }
         }
-
     }
     
     bool RandomPoint(Vector3 center, float range, out Vector3 result)

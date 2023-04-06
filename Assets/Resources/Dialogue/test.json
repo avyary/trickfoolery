@@ -17,6 +17,28 @@
       ]
     },
     {
+      "sceneName": "onLoss",
+      "lines": [
+        {
+          "name": "Commentator",
+          "text": "Oh, what a shame!!!"
+        }
+      ]
+    },
+    {
+      "sceneName": "onWin",
+      "lines": [
+        {
+          "name": "Commentator",
+          "text": "Oh, the crowd is going absolutely WILD!"
+        },
+        {
+          "name": "Commentator",
+          "text": "Let's see if Nuck Chorris can bring the heat in our next arena!"
+        }
+      ]
+    },
+    {
       "sceneName": "dodgeSuccess",
       "lines": [
         {

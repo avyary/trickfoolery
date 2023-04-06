@@ -52,7 +52,7 @@ public class ShockwaveEnemy : Enemy
     {
         switch (state)
         {
-            case EnemyState.Passive:
+            case EnemyState.Patrolling:
                 // if (agent.isStopped) 
                 // {
                 //     agent.isStopped = false;
@@ -77,7 +77,7 @@ public class ShockwaveEnemy : Enemy
                 // {
                 //     GoToTarget();
                 // }
-                state = EnemyState.Passive;
+                state = EnemyState.Patrolling;
                 break;
             
             case EnemyState.Active:
@@ -135,7 +135,7 @@ public class ShockwaveEnemy : Enemy
             yield break;
         }
         
-        state = EnemyState.Passive;
+        state = EnemyState.Patrolling;
         Debug.Log("I am friendly!");
     }
     

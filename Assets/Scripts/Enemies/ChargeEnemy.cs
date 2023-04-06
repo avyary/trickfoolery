@@ -23,24 +23,19 @@ public class ChargeEnemy : Enemy
 
     }
 
-    // private void OnDrawGizmos() 
-    // {
-    //    DrawSphere();
-    // }
-
     void Update() 
     {   
-        // Debug.Log(System.String.Format("State: {0}", state));
         switch(state)
         {
             case EnemyState.Passive:
+                break;
 
+            case EnemyState.Patrolling:
                 if (!fow.active)
                 { 
                     fow.active = true;
                     StartCoroutine(fow.FindPlayer(moveSpeed, PlayerFound));
                 }
-
                 break;
             case EnemyState.Tracking:
 
@@ -68,7 +63,6 @@ public class ChargeEnemy : Enemy
     
                 break;
             case EnemyState.Active:
-
                 //play charging anim
                 if (isCharging) 
                 { 
@@ -82,7 +76,6 @@ public class ChargeEnemy : Enemy
                 }
 
                 TestBehaviors.MoveForward(gameObject, chargeSpeed);
-
                 
                 break;
         }
@@ -108,6 +101,5 @@ public class ChargeEnemy : Enemy
         isWalking = true;
         isCharging = false;
     }   
-      
 }
 
