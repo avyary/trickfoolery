@@ -6393,6 +6393,7 @@ MonoBehaviour:
   startCombatEvent:
     m_PersistentCalls:
       m_Calls: []
+  _model: {fileID: 0}
   isAngy: 0
   currentAttack: {fileID: 0}
   state: 0
@@ -6403,9 +6404,9 @@ MonoBehaviour:
     WwiseObjectReference: {fileID: 11400000, guid: a8174d00cad6dbc489a8cb6884fd5b85, type: 2}
   particleSystem: {fileID: 4301925536202523335}
   BackParticleSystem: {fileID: 4110198872891715316}
-  animator: {fileID: 1018425039531786126}
   isCharging: 0
   isWalking: 0
+  rotateSpeed: 0
 --- !u!114 &8157556152595408448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6418,6 +6419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2bb73e9f3e64cca84c97ae658ed220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detectRadius: 0
   viewRadius: 7
   viewAngle: 190
   player: {fileID: 0}
@@ -6621,8 +6623,8 @@ GameObject:
   - component: {fileID: 8157556153598119114}
   - component: {fileID: 8157556153598119117}
   - component: {fileID: 8157556153598119116}
-  - component: {fileID: 8157556153598119115}
   - component: {fileID: 8157556153598119118}
+  - component: {fileID: 7685804372710285095}
   m_Layer: 6
   m_Name: ChargeHitbox
   m_TagString: Untagged
@@ -6695,20 +6697,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &8157556153598119115
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8157556153598119113}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8157556153598119118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6721,12 +6709,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2211ac183a1924cdb965ba0e27f7b418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startupTime: 0.5
-  _activeTime: 0.5
-  _recoveryTime: 0.5
+  _startupTime: 1
+  _activeTime: 0.75
+  _recoveryTime: 1.6
   _damage: 25
   _stunTime: 1
   _range: 3
+--- !u!65 &7685804372710285095
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8157556153598119113}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6, y: 2.5, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8213271750901839179
 GameObject:
   m_ObjectHideFlags: 0

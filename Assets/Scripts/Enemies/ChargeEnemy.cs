@@ -41,7 +41,7 @@ public class ChargeEnemy : Enemy
                 float dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
                 if (dist <= currentAttack.range) 
                 {   
-                    StartCoroutine(Attack(currentAttack));
+                    attackCoroutine = StartCoroutine(Attack(currentAttack));
                     agent.ResetPath();
 
                     particleSystem.Play();

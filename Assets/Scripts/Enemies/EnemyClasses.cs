@@ -68,6 +68,7 @@ public abstract class Enemy: MonoBehaviour
     protected Transform centrePoint;    // centre of the map (try setting it to the agent for fun?)
 
     protected GameObject deathBubble;
+    protected Coroutine attackCoroutine;
 
     protected Animator animator;
 
@@ -100,6 +101,9 @@ public abstract class Enemy: MonoBehaviour
         if (state == EnemyState.Dead)
         {
             return;
+        }
+        if (attackCoroutine != null) {
+            StopCoroutine(attackCoroutine);
         }
 
         health -= damage;
@@ -138,6 +142,9 @@ public abstract class Enemy: MonoBehaviour
     // invoked when health falls to/below 0
     public virtual IEnumerator Die()
     {
+        if (attackCoroutine != null) {
+            StopCoroutine(attackCoroutine);
+        }
         animator.SetTrigger("die");
         animator.SetBool("dead", true);
         _AngyInd.SetActive(false);
@@ -173,7 +180,6 @@ public abstract class Enemy: MonoBehaviour
 
     public IEnumerator Attack(Attack attackObj) {
         // trigger attack animation here
-        print("starting startup");
         animator.SetTrigger("startStartup");
         state = EnemyState.Startup;
         // Debug.Log("Attacking Time");
@@ -248,6 +254,9 @@ public abstract class Enemy: MonoBehaviour
     }
 
     protected void OnBecomePassive() {
+        if (attackCoroutine != null) {
+            StopCoroutine(attackCoroutine);
+        }
         _AngyInd.SetActive(false);
         _AlertInd.SetActive(false);
         animator.SetTrigger("becomeIdle");

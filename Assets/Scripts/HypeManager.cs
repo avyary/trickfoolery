@@ -35,6 +35,10 @@ public class HypeManager : MonoBehaviour
     [SerializeField]
     private float hypeStackTime;
 
+
+    [SerializeField]
+    private float decaySpeed;
+
     private List<GameObject> availablePopups;
 
 
@@ -47,6 +51,10 @@ public class HypeManager : MonoBehaviour
         hypeBar.maxValue = hypeGoal;
         hypeBar.value = 0;
         UpdateHype(0f);
+    }
+
+    void Update() {
+        UpdateHype((-1 * Time.deltaTime * decaySpeed) + currentHype);
     }
 
     public void IncreaseHype(float hypeDiff)
@@ -68,6 +76,7 @@ public class HypeManager : MonoBehaviour
     public void UpdateHype(float newHypeVal)
     {
         currentHype = Mathf.Min(newHypeVal, hypeGoal);
+        currentHype = Mathf.Max(0, newHypeVal);
         hypePercent = (int) Mathf.Floor(100 * (newHypeVal / hypeGoal));
         hypeBar.value = currentHype;
 

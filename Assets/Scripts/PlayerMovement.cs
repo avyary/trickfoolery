@@ -220,10 +220,11 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator CheckHypeDash() {
         float startTime = Time.time;
+        Vector3 origin = transform.position;
         bool gotHype = false;
         while (Time.time < startTime + (DASHTIME + POSTDASH))
         {
-            if (!gotHype && IsCloseDash())
+            if (!gotHype && IsCloseDash(origin))
             {
                 gotHype = true;
                 hypeManager.IncreaseHype(hypeManager.DODGE_HYPE);
@@ -252,10 +253,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
-    bool IsCloseDash()
+    bool IsCloseDash(Vector3 origin)
     {
         Collider[] attacksInRange = Physics.OverlapSphere(transform.position, dodgeRadius, attackMask);
-        return (attacksInRange.Length > 0);
+        Collider[] attacksAtOrigin = Physics.OverlapSphere(origin, dodgeRadius, attackMask);
+        return (attacksInRange.Length + attacksAtOrigin.Length > 0);
     }
     
     private void ApplyGravity()

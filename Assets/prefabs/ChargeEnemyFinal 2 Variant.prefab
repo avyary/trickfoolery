@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 640991409749634802, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 917748268295161867, guid: 365579391c2931940a7e83bdc319620a, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9958612
@@ -202,6 +206,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3778678887481965938, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.41
+      objectReference: {fileID: 0}
     - target: {fileID: 4582748252730891981, guid: 365579391c2931940a7e83bdc319620a, type: 3}
       propertyPath: m_Materials.Array.size
       value: 2
@@ -254,9 +262,33 @@ PrefabInstance:
       propertyPath: targetMask.m_Bits
       value: 256
       objectReference: {fileID: 0}
+    - target: {fileID: 8157556152595408449, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: m_Height
+      value: 3.0059416
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157556152595408449, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: m_Radius
+      value: 0.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157556152595408449, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157556152595408449, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: m_Center.y
+      value: 0.5029709
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157556152595408449, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: m_Center.z
+      value: 0.27
+      objectReference: {fileID: 0}
     - target: {fileID: 8157556152595408473, guid: 365579391c2931940a7e83bdc319620a, type: 3}
       propertyPath: m_Name
       value: ChargeEnemyFinal 2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157556152595408475, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8157556152595408477, guid: 365579391c2931940a7e83bdc319620a, type: 3}
       propertyPath: m_RootOrder
@@ -342,17 +374,17 @@ PrefabInstance:
       propertyPath: startCombatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8157556153598119118, guid: 365579391c2931940a7e83bdc319620a, type: 3}
-      propertyPath: _activeTime
-      value: 0.75
+    - target: {fileID: 8157556153598119114, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.54
       objectReference: {fileID: 0}
-    - target: {fileID: 8157556153598119118, guid: 365579391c2931940a7e83bdc319620a, type: 3}
-      propertyPath: _startupTime
-      value: 1
+    - target: {fileID: 8157556153598119114, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.18
       objectReference: {fileID: 0}
-    - target: {fileID: 8157556153598119118, guid: 365579391c2931940a7e83bdc319620a, type: 3}
-      propertyPath: _recoveryTime
-      value: 1.6
+    - target: {fileID: 8157556153598119116, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8343459955203448601, guid: 365579391c2931940a7e83bdc319620a, type: 3}
       propertyPath: m_RootOrder
@@ -371,7 +403,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 6974251132348624550, guid: 365579391c2931940a7e83bdc319620a, type: 3}
     - {fileID: 4808332108238643349, guid: 365579391c2931940a7e83bdc319620a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 365579391c2931940a7e83bdc319620a, type: 3}
 --- !u!1 &240504645225725995 stripped
