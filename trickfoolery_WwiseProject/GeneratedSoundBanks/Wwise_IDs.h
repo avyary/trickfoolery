@@ -13,15 +13,67 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID FIRST_TIME_MUTE_MUS_PAUSE_75BPM = 308973664U;
+        static const AkUniqueID MUTE_ALIEN_ARENA_ASSAULT_170BPM = 1929765902U;
+        static const AkUniqueID MUTE_MUS_PAUSE_75BPM = 3756680375U;
+        static const AkUniqueID PLAY_ALIEN_ARENA_ASSAULT_170BPM = 341582045U;
+        static const AkUniqueID PLAY_CHARGER_ANGY = 1926045526U;
+        static const AkUniqueID PLAY_CHARGER_LUNGE = 3579375072U;
+        static const AkUniqueID PLAY_MUS_PAUSE_75BPM = 2758388342U;
+        static const AkUniqueID PLAY_MUS_TRICKFOOLERY_222BPM = 3263497147U;
         static const AkUniqueID PLAY_SFX_CHARGER_DEATH = 843029991U;
         static const AkUniqueID PLAY_SFX_CONFIRM = 2343006462U;
+        static const AkUniqueID PLAY_SFX_GROOVY = 526466336U;
         static const AkUniqueID PLAY_SFX_PAUSE = 3683043420U;
         static const AkUniqueID PLAY_SFX_PLAYER_DASH = 4077681152U;
         static const AkUniqueID PLAY_SFX_PLAYER_DEATH = 1591758634U;
         static const AkUniqueID PLAY_SFX_PLAYER_HURT = 1067524079U;
         static const AkUniqueID PLAY_SFX_SELECT = 325086926U;
+        static const AkUniqueID PLAY_SFX_TAUNT = 1800631706U;
+        static const AkUniqueID PLAY_SFX_TOMSTEP = 2661393732U;
         static const AkUniqueID PLAY_SFX_UNPAUSE = 3476672187U;
+        static const AkUniqueID STOP_MUS_TRICKFOOLERY_222BPM = 2601853237U;
+        static const AkUniqueID UNMUTE_ALIEN_ARENA_ASSAULT_170BPM = 1990966217U;
+        static const AkUniqueID UNMUTE_MUS_PAUSE_75BPM = 4152903754U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace GAMEPLAY_STATE
+        {
+            static const AkUniqueID GROUP = 762757699U;
+
+            namespace STATE
+            {
+                static const AkUniqueID COMBAT = 2764240573U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID VICTORY = 2716678721U;
+            } // namespace STATE
+        } // namespace GAMEPLAY_STATE
+
+    } // namespace STATES
+
+    namespace SWITCHES
+    {
+        namespace FOOTSTEPS
+        {
+            static const AkUniqueID GROUP = 2385628198U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID NEW_SWITCH = 1914034948U;
+                static const AkUniqueID NEW_SWITCH_01 = 3952450474U;
+                static const AkUniqueID NEW_SWITCH_02 = 3952450473U;
+            } // namespace SWITCH
+        } // namespace FOOTSTEPS
+
+    } // namespace SWITCHES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID HYPE = 3296584377U;
+        static const AkUniqueID ON_DISCO_FLOOR = 4082227278U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

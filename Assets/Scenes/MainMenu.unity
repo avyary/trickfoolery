@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -761,7 +761,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 07fd65fa8e7b4074bb5d32c4ec66923d, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: fc1f9883c2b632549b9f8bf6b3781cb7, type: 2}
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
@@ -842,6 +842,10 @@ PrefabInstance:
       propertyPath: sceneName
       value: OpeningCutscene
       objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192918, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: fc1f9883c2b632549b9f8bf6b3781cb7, type: 2}
     - target: {fileID: 1189042751039192921, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1376,6 +1380,10 @@ PrefabInstance:
       propertyPath: sceneName
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192918, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: fc1f9883c2b632549b9f8bf6b3781cb7, type: 2}
     - target: {fileID: 1189042751039192920, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
       value: 1
