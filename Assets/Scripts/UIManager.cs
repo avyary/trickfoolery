@@ -75,6 +75,7 @@ public class UIManager : MonoBehaviour
     }
 
     public void ShowLoseMenu() {
+        loseMenuObj.GetComponent<Animator>().SetTrigger("SlideIn");
         loseMenuObj.SetActive(true);
         loseMenuObj.transform.GetChild(2).GetComponent<PauseMenuManager>().InitMenu();
     }

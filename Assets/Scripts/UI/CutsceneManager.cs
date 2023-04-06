@@ -94,7 +94,6 @@ public class CutsceneManager : MonoBehaviour
     IEnumerator DelayLoad() {
         fadeInOut.GetComponent<Animator>().SetTrigger("FadeOut");
         yield return new WaitForSeconds(2f);
-        GameObject.Find("ProgressTracker").GetComponent<ProgressTracker>().isRestart = false;
         SceneManager.LoadScene(nextSceneName, LoadSceneMode.Single);
     }
     
@@ -109,7 +108,7 @@ public class CutsceneManager : MonoBehaviour
 			yield return new WaitForSeconds(timeBetweenLetters);
 		}
         pageComplete = true;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         continueArrow.SetActive(true);
 	}
 
