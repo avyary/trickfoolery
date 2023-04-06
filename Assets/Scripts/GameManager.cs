@@ -56,9 +56,6 @@ public class GameManager : MonoBehaviour
 
     private bool isRestart;
 
-    [SerializeField]
-    private GameObject progressTrackerObj;
-
     void Start()
     {
         uiManager = gameObject.GetComponent<UIManager>();
@@ -70,8 +67,6 @@ public class GameManager : MonoBehaviour
             isRestart = progressTracker.GetComponent<ProgressTracker>().isRestart;
         }
         else {
-            GameObject trackerObj = GameObject.Instantiate(progressTrackerObj);
-            trackerObj.name = "ProgressTracker";
             isRestart = false;
         }
 
@@ -101,7 +96,6 @@ public class GameManager : MonoBehaviour
     }
 
     public void StartCombat() {
-        print("starting combat");
         Time.timeScale = 1;
         state = GameState.Combat;
         playerInput = true;
