@@ -232,6 +232,18 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Alien_Arena_Assault_170bpm" ID="{8333E7FF-2074-4574-ADA6-3F3F7B5DA275}">
+					<ChildrenList>
+						<Action Name="" ID="{59F57B19-A68A-45FE-8FD9-E550283706A6}" ShortID="178524663">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Alien Arena Normal and Victory" ID="{95152A6C-A2BF-456C-B5B2-179C0E2FC335}" WorkUnitID="{5CD6933B-0773-453D-BFFC-5483B47741B7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Trigger_GamePlay_State" ID="{0361A67B-0F8F-409B-8F7F-6091D370A099}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
