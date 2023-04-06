@@ -24,7 +24,7 @@ public class Patrol : MonoBehaviour {
     void Update()
     {
         // stinky. will refactor on enemy behavior revisit
-        if (enemy.state == EnemyState.Passive) {
+        if (enemy.state == EnemyState.Passive || enemy.state == EnemyState.Dead) {
             agent.isStopped = true;
         }
         else {

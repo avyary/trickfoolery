@@ -47,13 +47,13 @@ public abstract class Attack : MonoBehaviour
 
     public void Activate()
     {
-        _renderer.enabled = true;
+        //_renderer.enabled = true;
         _collider.enabled = true;
     }
 
     public void Deactivate()
     {
-        _renderer.enabled = false;
+        //_renderer.enabled = false;
         _collider.enabled = false;
     }
 

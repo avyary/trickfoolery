@@ -39,11 +39,11 @@ public class PauseMenuManager : MonoBehaviour
 
     void Update() {
         if (isActive) {
-            if (Input.GetAxisRaw("Horizontal") > 0)  // right
+            if (Input.GetAxisRaw("Vertical") < 0)  // right
             {
                 HandleButtonChange(1);
             }
-            else if (Input.GetAxisRaw("Horizontal") < 0)  // left
+            else if (Input.GetAxisRaw("Vertical") > 0)  // left
             {
                 HandleButtonChange(0);
             }
