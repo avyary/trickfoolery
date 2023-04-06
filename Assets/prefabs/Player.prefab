@@ -6332,6 +6332,7 @@ MonoBehaviour:
     WwiseObjectReference: {fileID: 11400000, guid: 08c43f316ee698b4187ec32ac0bf9138, type: 2}
   DashParticle: {fileID: 5340692112965935907}
   playerSounds: {fileID: 0}
+  playerTauntSound: {fileID: 0}
   dodgeRadius: 1.18
   attackMask:
     serializedVersion: 2
@@ -6412,10 +6413,10 @@ MonoBehaviour:
   m_listeners:
     initialListenerList: []
     useDefaultListeners: 1
-  isEnvironmentAware: 1
+  isEnvironmentAware: 0
   isStaticObject: 0
   m_positionOffsetData:
-    KeepMe: 1
+    KeepMe: 0
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
