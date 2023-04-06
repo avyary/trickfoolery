@@ -53,6 +53,11 @@ public class HypeManager : MonoBehaviour
         UpdateHype(0f);
     }
 
+    public float GetHype()
+    {
+        return currentHype;
+    }
+    
     void Update() {
         UpdateHype((-1 * Time.deltaTime * decaySpeed) + currentHype);
     }
