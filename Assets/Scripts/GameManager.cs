@@ -78,6 +78,10 @@ public class GameManager : MonoBehaviour
         StartCoroutine(StartLevel());
     }
 
+    void Awake() {
+        GameObject.Find("FadeInOut").GetComponent<Animator>().SetTrigger("FadeIn");
+    }
+
     IEnumerator StartLevel() {
         yield return new WaitForSecondsRealtime(1f); // wait for fade-in animation
         bool hasPersistentTarget = false;
