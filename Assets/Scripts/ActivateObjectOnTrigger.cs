@@ -7,10 +7,14 @@ public class ActivateObjectOnTrigger : MonoBehaviour
 {
     public GameObject activateWall1;
     public GameObject activateWall2;
+
+    private BoxCollider box1;
+    private BoxCollider box2;
     
-     public GameObject activateIndicator;
+    public GameObject activateIndicator;
     private HypeManager hypeManager;
     private float currHype;
+    private bool walls_up = false;
     
     [SerializeField]
     private float hypeCheck;
@@ -23,6 +27,11 @@ public class ActivateObjectOnTrigger : MonoBehaviour
     private void Start()
     {
         hypeManager = GameObject.Find("Game Manager").GetComponent<HypeManager>();
+        walls_up = false;
+        box1 = activateWall1.GetComponent<BoxCollider>();
+        box2 = activateWall2.GetComponent<BoxCollider>();
+        box1.enabled = false;
+        box2.enabled = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -34,24 +43,23 @@ public class ActivateObjectOnTrigger : MonoBehaviour
 
         {
             // Activate the two objects
-            activateWall1.SetActive(true);
-            activateWall2.SetActive(true);
+            box1.enabled = true;
+            box2.enabled = true;
 
             currHype = hypeManager.GetHype();
             hypeCheck = currHype + hype_needed;
+            walls_up = true;
         }
     }
 
     private void Update()
     {
-        if (hypeManager.GetHype() >= hypeCheck)
+        if (hypeManager.GetHype() >= hypeCheck && walls_up)
         {
             Debug.Log("Bridge destroyed");
-        
-            activateWall1.SetActive(false);
-            activateWall2.SetActive(false);
+            box1.enabled = false;
+            box2.enabled = false;
             activateIndicator.SetActive(true);
-
         }
         
     }
