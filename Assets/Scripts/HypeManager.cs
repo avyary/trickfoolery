@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class HypeManager : MonoBehaviour
 {
@@ -34,11 +35,15 @@ public class HypeManager : MonoBehaviour
     [SerializeField]
     private float hypeStackTime;
 
+    private List<GameObject> availablePopups;
+
+
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         hypeBar = GameObject.Find("HypeMeter").GetComponent<Slider>();
+        availablePopups = new List<GameObject>(hypePopups);
         hypeBar.maxValue = hypeGoal;
         hypeBar.value = 0;
         UpdateHype(0f);
@@ -48,8 +53,11 @@ public class HypeManager : MonoBehaviour
     {
         // if has higher popup level, show higher popup
         if (hypePopupLevel < hypePopups.Length) {
-            hypePopups[hypePopupLevel++].GetComponent<Animator>().SetTrigger("ShowPopup");
-            StartCoroutine(StackHype());
+            hypePopupLevel++;
+            GameObject chosenPopup = availablePopups[Random.Range(0, availablePopups.Count - 1)];
+            availablePopups.Remove(chosenPopup);
+            chosenPopup.GetComponent<Animator>().SetTrigger("ShowPopup");
+            StartCoroutine(StackHype(chosenPopup));
         }
         UpdateHype(currentHype + hypeDiff);
     }
@@ -66,9 +74,10 @@ public class HypeManager : MonoBehaviour
         }
     }
 
-    IEnumerator StackHype() {
+    IEnumerator StackHype(GameObject chosenPopup) {
         yield return new WaitForSeconds(hypeStackTime);
         hypePopupLevel--;
+        availablePopups.Add(chosenPopup);
     }
     
     public void testttt() {
