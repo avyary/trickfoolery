@@ -119,6 +119,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     void EndScene() {
+        print("ending scene");
         dialogueUI.SetActive(false);
         sceneIsActive = false;
         if (sceneCallback != null) {

@@ -1407,7 +1407,7 @@ MonoBehaviour:
   _captionObj: {fileID: 998737894}
   _sizeCalcObj: {fileID: 352241521}
   continueArrow: {fileID: 751416741}
-  nextSceneName: LVL1
+  nextSceneName: Lvl1Lukey
   pageIdx: 0
   timeBetweenLetters: 0.05
   CheckForTrigger:
