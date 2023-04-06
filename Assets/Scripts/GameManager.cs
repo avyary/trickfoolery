@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     private bool isGameWon = false;
     private bool inCombat = false;
     public bool playerInput = false;
+    public bool isGameOver = false;
     
     // wwise
     public AK.Wwise.Event pauseSFX;
@@ -166,6 +167,7 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator GameOverWin()
     {
+        isGameOver = true;
         isGameWon = true;
         yield return new WaitForSeconds(0.5f);
         stopCombatEvent.Invoke();
@@ -176,6 +178,7 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator GameOverLose()
     {
+        isGameOver = true;
         stopCombatEvent.Invoke();
         yield return new WaitForSeconds(3f);
         uiManager.GameOverLose();

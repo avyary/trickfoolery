@@ -51,6 +51,9 @@ public class HypeManager : MonoBehaviour
 
     public void IncreaseHype(float hypeDiff)
     {
+        if (gameManager.isGameOver) {
+            return;
+        }
         // if has higher popup level, show higher popup
         if (hypePopupLevel < hypePopups.Length) {
             hypePopupLevel++;

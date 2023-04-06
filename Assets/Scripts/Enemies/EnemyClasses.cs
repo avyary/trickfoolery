@@ -38,6 +38,8 @@ public abstract class Enemy: MonoBehaviour
     GameObject _deathBubble;
     [SerializeField]
     UnityEvent startCombatEvent;
+    [SerializeField]
+    GameObject _model;
 
     private GameManager gameManager;
 
@@ -66,6 +68,8 @@ public abstract class Enemy: MonoBehaviour
     protected Transform centrePoint;    // centre of the map (try setting it to the agent for fun?)
 
     protected GameObject deathBubble;
+
+    protected Animator animator;
 
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
@@ -123,15 +127,10 @@ public abstract class Enemy: MonoBehaviour
     // puts enemy in Stunned state for stunTime seconds
     public virtual IEnumerator GetStunned(float stunTime)
     {
-        // replace with animation change for entering hitstun here - turns red for now
-        Color originalColor = GetComponent<MeshRenderer>().material.color;
-        GetComponent<MeshRenderer>().material.color = Color.red;
+        animator.SetTrigger("takeDamage");
 
         state = EnemyState.Stunned;
         yield return new WaitForSeconds(stunTime);  // waits for stunTime seconds before continuing
-
-        // add animation change for entering patrol/passive state here - returns to original color for now
-        GetComponent<MeshRenderer>().material.color = originalColor;
 
         state = EnemyState.Patrolling;
     }
@@ -139,6 +138,11 @@ public abstract class Enemy: MonoBehaviour
     // invoked when health falls to/below 0
     public virtual IEnumerator Die()
     {
+        animator.SetTrigger("die");
+        animator.SetBool("dead", true);
+        _AngyInd.SetActive(false);
+        _AlertInd.SetActive(false);
+
         hypeManager.IncreaseHype(hypeManager.DEATH_HYPE);
         //deathBubble.SetActive(true);
 
@@ -146,7 +150,7 @@ public abstract class Enemy: MonoBehaviour
         basicAttack.Deactivate();  // deactivate attack collider
 
         state = EnemyState.Dead;
-        yield return new WaitForSeconds(0.5f);  // waits before destroying object
+        yield return new WaitForSeconds(2.5f);  // waits before destroying object
 
         Destroy(gameObject);
     }
@@ -155,16 +159,22 @@ public abstract class Enemy: MonoBehaviour
     public virtual void GetTaunted(int tauntValue = 1)
     {
         anger = anger + tauntValue;
+        state = EnemyState.Tracking;
         if (anger >= maxAnger) {
             isAngy = true;
            _AngyInd.SetActive(true); 
            currentAttack = angyAttack;
             Debug.Log("Damage " + currentAttack.damage);
-        }else{_AngyInd.SetActive(false);}
+        }
+        else {
+            _AngyInd.SetActive(false);
+        }
     }
 
     public IEnumerator Attack(Attack attackObj) {
         // trigger attack animation here
+        print("starting startup");
+        animator.SetTrigger("startStartup");
         state = EnemyState.Startup;
         // Debug.Log("Attacking Time");
         yield return new WaitForSeconds(attackObj.startupTime);
@@ -174,6 +184,7 @@ public abstract class Enemy: MonoBehaviour
             yield break;
         }
 
+        animator.SetTrigger("startAttack");
         state = EnemyState.Active;
         // Debug.Log("Active Attack!");
         attackObj.Activate();  // activate attack collider
@@ -183,6 +194,7 @@ public abstract class Enemy: MonoBehaviour
             yield break;
         }
 
+        animator.SetTrigger("startRecovery");
         state = EnemyState.Recovery;
         // Debug.Log("Attack All done");
         attackObj.Deactivate();  // deactivate attack collider
@@ -192,20 +204,18 @@ public abstract class Enemy: MonoBehaviour
             yield break;
         }
 
+        animator.SetTrigger("startWalk");
+        animator.ResetTrigger("startStartup");
+        _AlertInd.SetActive(false);
         state = EnemyState.Patrolling;
         gameObject.GetComponent<Patrol>().enabled = true;
     }
 
     protected virtual void PlayerFound()
     {
-        // animation for finding player?
+        print("player found");
         state = EnemyState.Tracking;
         gameObject.GetComponent<Patrol>().enabled = false;
-        PlayerDetected();
-    }
-
-    protected virtual void PlayerDetected() 
-    {
         _AlertInd.SetActive(true);
     }
 
@@ -233,11 +243,15 @@ public abstract class Enemy: MonoBehaviour
     }
 
     protected void OnStartCombat() {
-        print("bonk");
+        animator.SetTrigger("startWalk");
         state = EnemyState.Patrolling;
     }
 
     protected void OnBecomePassive() {
+        _AngyInd.SetActive(false);
+        _AlertInd.SetActive(false);
+        animator.SetTrigger("becomeIdle");
+        currentAttack.Deactivate();
         state = EnemyState.Passive;
         print("state is now passive");
     }
@@ -253,6 +267,7 @@ public abstract class Enemy: MonoBehaviour
         angyAttack = _angyAttack;
         currentAttack = _basicAttack;
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        animator = _model.GetComponent<Animator>();
         // deathBubble = _deathBubble;
         // deathBubble.SetActive(false);
         player = GameObject.FindWithTag("Player");
@@ -271,6 +286,7 @@ public abstract class Enemy: MonoBehaviour
         state = EnemyState.Spawning;
         yield return new WaitForSecondsRealtime(0.5f);
         if (gameManager.state == GameState.Combat) {
+            animator.SetTrigger("startWalk");
             state = EnemyState.Patrolling;
         }
         else {
