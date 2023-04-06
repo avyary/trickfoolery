@@ -14,7 +14,7 @@ public class PunchEnemy : Enemy
     {
         switch(state)
         {
-            case EnemyState.Passive:
+            case EnemyState.Patrolling:
                 // TestBehaviors.Rotate(gameObject, moveSpeed);  // replace with better movement
                 // Patrol();
                 if (!fow.active)

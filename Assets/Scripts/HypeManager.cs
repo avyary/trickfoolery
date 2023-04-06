@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class HypeManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class HypeManager : MonoBehaviour
     private Slider hypeBar;
 
     private float currentHype = 0;
+    public int hypePercent = 0;
 
     // how much hype is added for each event
     [SerializeField]
@@ -33,11 +35,15 @@ public class HypeManager : MonoBehaviour
     [SerializeField]
     private float hypeStackTime;
 
+    private List<GameObject> availablePopups;
+
+
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         hypeBar = GameObject.Find("HypeMeter").GetComponent<Slider>();
+        availablePopups = new List<GameObject>(hypePopups);
         hypeBar.maxValue = hypeGoal;
         hypeBar.value = 0;
         UpdateHype(0f);
@@ -47,8 +53,11 @@ public class HypeManager : MonoBehaviour
     {
         // if has higher popup level, show higher popup
         if (hypePopupLevel < hypePopups.Length) {
-            hypePopups[hypePopupLevel++].GetComponent<Animator>().SetTrigger("ShowPopup");
-            StartCoroutine(StackHype());
+            hypePopupLevel++;
+            GameObject chosenPopup = availablePopups[Random.Range(0, availablePopups.Count - 1)];
+            availablePopups.Remove(chosenPopup);
+            chosenPopup.GetComponent<Animator>().SetTrigger("ShowPopup");
+            StartCoroutine(StackHype(chosenPopup));
         }
         UpdateHype(currentHype + hypeDiff);
     }
@@ -56,17 +65,19 @@ public class HypeManager : MonoBehaviour
     public void UpdateHype(float newHypeVal)
     {
         currentHype = Mathf.Min(newHypeVal, hypeGoal);
+        hypePercent = (int) Mathf.Floor(100 * (newHypeVal / hypeGoal));
         hypeBar.value = currentHype;
 
         if (currentHype >= hypeGoal)
         {
-            gameManager.GameOverWin(); // replace with end of level
+            StartCoroutine(gameManager.GameOverWin()); // replace with end of level
         }
     }
 
-    IEnumerator StackHype() {
+    IEnumerator StackHype(GameObject chosenPopup) {
         yield return new WaitForSeconds(hypeStackTime);
         hypePopupLevel--;
+        availablePopups.Add(chosenPopup);
     }
     
     public void testttt() {

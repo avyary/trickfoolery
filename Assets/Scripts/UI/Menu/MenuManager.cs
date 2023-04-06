@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MenuManager : MonoBehaviour
 {
     public AK.Wwise.Event selectSFX;
+    public AK.Wwise.Event pauseMUS;
     private int currentIdx;
     private int numButtons;
     private bool isChanging;
@@ -20,6 +21,7 @@ public class MenuManager : MonoBehaviour
         currentIdx = 0;
         isChanging = false;
         numButtons = transform.childCount;
+        pauseMUS.Post(gameObject);
         Time.timeScale = 1;
         StartCoroutine(HandleButtonChange(true));
     }
@@ -47,10 +49,12 @@ public class MenuManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P)) {
             if (SceneManager.GetActiveScene().name == "MainMenu") {
                 AkSoundEngine.StopAll();
+                GameObject.Find("ProgressTracker").GetComponent<ProgressTracker>().isRestart = false;
                 SceneManager.LoadScene("DebugMenu", LoadSceneMode.Single);
             }
             else {
                 AkSoundEngine.StopAll();
+                GameObject.Find("ProgressTracker").GetComponent<ProgressTracker>().isRestart = false;
                 SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
             }
         }
@@ -59,7 +63,8 @@ public class MenuManager : MonoBehaviour
     IEnumerator HandleButtonChange(bool silent = false){
         Transform newSelect = transform.GetChild(currentIdx);
         if (!silent) {
-            selectSFX.Post(gameObject);
+            newSelect.gameObject.GetComponent<Animator>().SetTrigger("SelectButton");
+            selectSFX.Post(gameObject); 
         }
         newSelect.gameObject.GetComponent<Button>().Select();
         isChanging = true;
