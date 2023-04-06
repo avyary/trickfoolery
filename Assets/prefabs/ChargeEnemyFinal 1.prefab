@@ -778,7 +778,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8350021779756462042
 Transform:
   m_ObjectHideFlags: 0
@@ -7462,6 +7462,10 @@ MonoBehaviour:
   _basicAttack: {fileID: 8157556153598119118}
   _angyAttack: {fileID: 1379921455707214419}
   _deathBubble: {fileID: 6482520516076015465}
+  startCombatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _model: {fileID: 8442711971114650510}
   isAngy: 0
   currentAttack: {fileID: 0}
   state: 0
@@ -7472,9 +7476,9 @@ MonoBehaviour:
     WwiseObjectReference: {fileID: 11400000, guid: a8174d00cad6dbc489a8cb6884fd5b85, type: 2}
   particleSystem: {fileID: 4301925536202523335}
   BackParticleSystem: {fileID: 4110198872891715316}
-  animator: {fileID: 7723126186187209391}
   isCharging: 0
   isWalking: 0
+  rotateSpeed: 0
 --- !u!114 &8157556152595408448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7487,6 +7491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2bb73e9f3e64cca84c97ae658ed220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detectRadius: 0
   viewRadius: 10
   viewAngle: 190
   player: {fileID: 0}
@@ -7495,7 +7500,7 @@ MonoBehaviour:
     m_Bits: 72
   targetMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   active: 0
 --- !u!136 &8157556152595408449
 CapsuleCollider:

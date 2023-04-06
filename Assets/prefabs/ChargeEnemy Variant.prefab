@@ -9,11 +9,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 595038013235140048, guid: e42c05fa4e7df9a439b7f733858f90b3, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 595038013235140048, guid: e42c05fa4e7df9a439b7f733858f90b3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 2.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 947350172680635275, guid: e42c05fa4e7df9a439b7f733858f90b3, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6418282648940933654, guid: e42c05fa4e7df9a439b7f733858f90b3, type: 3}
       propertyPath: m_RootOrder
@@ -30,6 +34,10 @@ PrefabInstance:
     - target: {fileID: 8157556152595408448, guid: e42c05fa4e7df9a439b7f733858f90b3, type: 3}
       propertyPath: viewRadius
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157556152595408448, guid: e42c05fa4e7df9a439b7f733858f90b3, type: 3}
+      propertyPath: targetMask.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 8157556152595408473, guid: e42c05fa4e7df9a439b7f733858f90b3, type: 3}
       propertyPath: m_Name
