@@ -3,29 +3,19 @@
 	<SoundBanks>
 		<WorkUnit Name="Default Work Unit" ID="{323C7EEF-A09D-453F-BC42-F96CF0BE92C3}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundBank Name="Main" ID="{FCC95966-8BC9-428F-A86F-77BD80236DCE}">
+				<SoundBank Name="Main" ID="{72F8FC9C-C162-4569-9BDA-11AB8821D171}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_sfx_player_death" ID="{CAC80460-81AC-420B-AD88-E8FA18AC9974}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Unmute_mus_pause_75bpm" ID="{C3E827C6-F5CC-4329-985D-E19D22E9E34A}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_charger_angy" ID="{E480F771-7FFA-43EE-965C-E01524C26C0E}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_select" ID="{D9480393-0FF0-4478-941E-C2F83A21C8BD}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Unmute_Alien_Arena_Assault_170bpm" ID="{33C4D4F4-E3D0-44A5-8C66-252F4F122C70}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_charger_death" ID="{63384843-A4A4-44C3-AED2-9CDA3A9431A5}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Alien_Arena_Assault_170bpm" ID="{8333E7FF-2074-4574-ADA6-3F3F7B5DA275}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Stop_mus_Trickfoolery_222bpm" ID="{103A468D-C1A5-4619-8F4C-E88DFD668A3C}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_confirm" ID="{69F3C602-D088-4702-A2C0-78D74E58ADF3}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_sfx_taunt" ID="{CD05A98D-2AF9-47E8-A5D9-08F5EE359AC0}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Mute_mus_pause_75bpm" ID="{0E96271C-B559-48D8-B09B-94D3489189FD}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_unpause" ID="{EF55EFFC-D9BF-4914-B45F-C34160708C30}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="First_Time_Mute_mus_pause_75bpm" ID="{7288EC1A-8592-4957-B27E-E911D3B56F4A}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_pause" ID="{1228DA1E-31A1-49A3-8418-61751A909CFE}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_mus_Trickfoolery_222bpm" ID="{957ED87C-54CD-4A6B-878A-25F81372D716}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_sfx_tomstep" ID="{1BC515F3-568C-4A8D-995F-DBFA44FF9E2A}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_mus_Pause_75bpm" ID="{BCE1262A-3C14-4B31-B28C-4A64BEE31410}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_charger_lunge" ID="{34768769-7EB7-4C6B-A65A-4CB6AB2A5B55}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Mute_Alien_Arena_Assault_170bpm" ID="{D563AF20-5219-4CAB-9AEF-51C10825081B}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_sfx_radical" ID="{1919A5EA-83D5-4AF2-985F-A98AA5CEA51D}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_player_hurt" ID="{F2D8E87D-016C-4DA6-8E62-4CD589790A37}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_groovy" ID="{7FB8863C-987C-4F96-A523-14BA0486137B}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_sfx_bodacious" ID="{E0219A8E-A45F-4FCC-A81E-C861E1FF431B}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_player_dash" ID="{D6F8BF24-B6D5-4FEA-AC6B-3CEC97B0DDC4}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

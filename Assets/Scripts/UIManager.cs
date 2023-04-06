@@ -28,7 +28,7 @@ public class UIManager : MonoBehaviour
 
     private PauseMenuManager loseMenu;
     private int heartsActive;
-
+    
     void Start()
     {
         jumbotronObj = GameObject.Find("Jumbotron");
@@ -56,7 +56,6 @@ public class UIManager : MonoBehaviour
     public void ShowPauseMenu() {
         if (jumbotron.state == JumbotronState.Hidden) {
             jumbotronObj.GetComponent<Animator>().SetTrigger("OpenFromHidden");
-
         }
         else {
             jumbotronObj.GetComponent<Animator>().SetTrigger("OpenPause");
@@ -66,6 +65,7 @@ public class UIManager : MonoBehaviour
     }
 
     public void GameOverWin() {
+        print("gameoverwin uima");
         endPopup.GetComponent<Image>().sprite = winPopupImg;
         endPopup.GetComponent<Animator>().SetTrigger("GameEnd");
     }

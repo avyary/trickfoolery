@@ -5,11 +5,15 @@
       "lines": [
         {
           "name": "Commentator",
-          "text": "Oh, the crowd is going absolutely WILD!"
+          "text": "Yes! Yes! The energy is INCREDIBLE!!!"
+        },
+        {
+          "name": "Tom",
+          "text": "This is getting pretty fun..."
         },
         {
           "name": "Commentator",
-          "text": "Let's see if Nuck Chorris can bring the heat in our next arena!"
+          "text": "That's what I like to hear! Time for your victory lap, Nuck!"
         }
       ]
     },
@@ -18,7 +22,7 @@
       "lines": [
         {
           "name": "Commentator",
-          "text": "Oh, what a shame!!!"
+          "text": "Ouch!"
         }
       ]
     }
