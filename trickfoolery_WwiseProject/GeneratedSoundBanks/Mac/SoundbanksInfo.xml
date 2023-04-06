@@ -45,273 +45,163 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" GUID="{FCC95966-8BC9-428F-A86F-77BD80236DCE}" Language="SFX" Hash="{9A4D28E1-A782-0119-B8C8-2A559E78F104}">
+		<SoundBank Id="3161908922" Type="User" GUID="{FCC95966-8BC9-428F-A86F-77BD80236DCE}" Language="SFX" Hash="{E3602467-A278-FA48-73BF-2721820EE839}">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
-				<File Id="19996191" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>AAA_synth_3.wav</ShortName>
-					<CachePath>SFX/AAA_synth_3_9EDFC787.wem</CachePath>
-				</File>
 				<File Id="21309808" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_tom_step_6.wav</ShortName>
-					<CachePath>SFX/sfx_tom_step_6_DEACC6A2.wem</CachePath>
+					<CachePath>SFX/sfx_tom_step_6_CB3BAB12.wem</CachePath>
 				</File>
 				<File Id="63593165" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_charger_hurt_3.wav</ShortName>
-					<CachePath>SFX/sfx_charger_hurt_3_3F75BDB9.wem</CachePath>
-				</File>
-				<File Id="72287347" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_future_synth.wav</ShortName>
-					<CachePath>SFX/mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_future_synth_9EDFC787.wem</CachePath>
+					<CachePath>SFX/sfx_charger_hurt_3_10C4C929.wem</CachePath>
 				</File>
 				<File Id="83193888" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_taunts_raspberry_2.wav</ShortName>
-					<CachePath>SFX/sfx_taunts_raspberry_2_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/sfx_taunts_raspberry_2_10C4C929.wem</CachePath>
 				</File>
 				<File Id="103508686" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_tom_step_4.wav</ShortName>
-					<CachePath>SFX/sfx_tom_step_4_AEC65BBC.wem</CachePath>
+					<CachePath>SFX/sfx_tom_step_4_671EB80C.wem</CachePath>
 				</File>
 				<File Id="119466304" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_charger_hurt_2.wav</ShortName>
-					<CachePath>SFX/sfx_charger_hurt_2_3F75BDB9.wem</CachePath>
-				</File>
-				<File Id="145105292" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>AAA_sax_3.wav</ShortName>
-					<CachePath>SFX/AAA_sax_3_9EDFC787.wem</CachePath>
-				</File>
-				<File Id="217413579" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>AAA_sax_10.wav</ShortName>
-					<CachePath>SFX/AAA_sax_10_9EDFC787.wem</CachePath>
+					<CachePath>SFX/sfx_charger_hurt_2_10C4C929.wem</CachePath>
 				</File>
 				<File Id="224255706" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_Pause_loop_75bpm.wav</ShortName>
-					<CachePath>SFX/mus_Pause_loop_75bpm_9EDFC787.wem</CachePath>
+					<CachePath>SFX/mus_Pause_loop_75bpm_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="275378158" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_charger_death_1.wav</ShortName>
-					<CachePath>SFX/sfx_charger_death_1_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/sfx_charger_death_1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="292366327" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_charger_aggro_increase_3.wav</ShortName>
-					<CachePath>SFX/sfx_charger_aggro_increase_3_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/sfx_charger_aggro_increase_3_10C4C929.wem</CachePath>
 				</File>
 				<File Id="305122859" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_taunts_hey_lobster_roll_1.wav</ShortName>
-					<CachePath>SFX/sfx_taunts_hey_lobster_roll_1_3F75BDB9.wem</CachePath>
-				</File>
-				<File Id="331701484" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>mus_Alien_Arena_Kill!_disco_170bpm_disco_floor.wav</ShortName>
-					<CachePath>SFX/mus_Alien_Arena_Kill!_disco_170bpm_disco_floor_9EDFC787.wem</CachePath>
-				</File>
-				<File Id="356099246" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>AAA_sax_9.wav</ShortName>
-					<CachePath>SFX/AAA_sax_9_9EDFC787.wem</CachePath>
+					<CachePath>SFX/sfx_taunts_hey_lobster_roll_1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="375178555" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_groovy_2_larose.wav</ShortName>
-					<CachePath>SFX/sfx_groovy_2_larose_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/sfx_groovy_2_larose_10C4C929.wem</CachePath>
 				</File>
 				<File Id="376943216" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_tom_step_8.wav</ShortName>
-					<CachePath>SFX/sfx_tom_step_8_061BB2D2.wem</CachePath>
-				</File>
-				<File Id="380291550" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>mus_Alien_Arena_Kill!_disco_170bpm_loop_standard.wav</ShortName>
-					<CachePath>SFX/mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_9EDFC787.wem</CachePath>
-				</File>
-				<File Id="394800615" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>AAA_sax_8.wav</ShortName>
-					<CachePath>SFX/AAA_sax_8_9EDFC787.wem</CachePath>
+					<CachePath>SFX/sfx_tom_step_8_1AAF95E2.wem</CachePath>
 				</File>
 				<File Id="395767410" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_unpause_larose (1).wav</ShortName>
-					<CachePath>SFX/sfx_unpause_larose (1)_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/sfx_unpause_larose (1)_10C4C929.wem</CachePath>
 				</File>
 				<File Id="403074574" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_hurt_3.wav</ShortName>
-					<CachePath>SFX/sfx_player_hurt_3_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/sfx_player_hurt_3_10C4C929.wem</CachePath>
 				</File>
 				<File Id="405788637" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_hurt_4.wav</ShortName>
-					<CachePath>SFX/sfx_player_hurt_4_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/sfx_player_hurt_4_10C4C929.wem</CachePath>
 				</File>
 				<File Id="420247977" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_taunts_hey_crab_face_1.wav</ShortName>
-					<CachePath>SFX/sfx_taunts_hey_crab_face_1_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/sfx_taunts_hey_crab_face_1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="423795870" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_tom_step_5.wav</ShortName>
-					<CachePath>SFX/sfx_tom_step_5_18E911DA.wem</CachePath>
+					<CachePath>SFX/sfx_tom_step_5_0F9684AA.wem</CachePath>
 				</File>
 				<File Id="429033431" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_dash.wav</ShortName>
-					<CachePath>SFX/sfx_player_dash_3F75BDB9.wem</CachePath>
-				</File>
-				<File Id="481270644" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>AAA_sax_7.wav</ShortName>
-					<CachePath>SFX/AAA_sax_7_9EDFC787.wem</CachePath>
+					<CachePath>SFX/sfx_player_dash_10C4C929.wem</CachePath>
 				</File>
 				<File Id="484621152" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_taunts_raspberry_3.wav</ShortName>
-					<CachePath>SFX/sfx_taunts_raspberry_3_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/sfx_taunts_raspberry_3_10C4C929.wem</CachePath>
 				</File>
 				<File Id="507762272" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_charger_death_2.wav</ShortName>
-					<CachePath>SFX/sfx_charger_death_2_3F75BDB9.wem</CachePath>
-				</File>
-				<File Id="536532914" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>AAA_sax_5.wav</ShortName>
-					<CachePath>SFX/AAA_sax_5_9EDFC787.wem</CachePath>
+					<CachePath>SFX/sfx_charger_death_2_10C4C929.wem</CachePath>
 				</File>
 				<File Id="582855424" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_taunts_hey_stupid_1.wav</ShortName>
-					<CachePath>SFX/sfx_taunts_hey_stupid_1_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/sfx_taunts_hey_stupid_1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="603062409" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_taunts_akanbe_2.wav</ShortName>
-					<CachePath>SFX/sfx_taunts_akanbe_2_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/sfx_taunts_akanbe_2_10C4C929.wem</CachePath>
 				</File>
 				<File Id="611627305" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_hurt_6.wav</ShortName>
-					<CachePath>SFX/sfx_player_hurt_6_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/sfx_player_hurt_6_10C4C929.wem</CachePath>
 				</File>
 				<File Id="618887788" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_charger_aggro_increase_2.wav</ShortName>
-					<CachePath>SFX/sfx_charger_aggro_increase_2_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/sfx_charger_aggro_increase_2_10C4C929.wem</CachePath>
 				</File>
 				<File Id="621091837" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_confirming_option_larose.wav</ShortName>
-					<CachePath>SFX/sfx_confirming_option_larose_3F75BDB9.wem</CachePath>
-				</File>
-				<File Id="657227351" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>AAA_sax_1.wav</ShortName>
-					<CachePath>SFX/AAA_sax_1_9EDFC787.wem</CachePath>
-				</File>
-				<File Id="664728998" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>AAA_sax_2.wav</ShortName>
-					<CachePath>SFX/AAA_sax_2_9EDFC787.wem</CachePath>
+					<CachePath>SFX/sfx_confirming_option_larose_10C4C929.wem</CachePath>
 				</File>
 				<File Id="672575856" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_tom_step_7.wav</ShortName>
-					<CachePath>SFX/sfx_tom_step_7_A884DB23.wem</CachePath>
+					<CachePath>SFX/sfx_tom_step_7_77A41413.wem</CachePath>
 				</File>
 				<File Id="673051370" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_mouse_select_larose.wav</ShortName>
-					<CachePath>SFX/sfx_mouse_select_larose_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/sfx_mouse_select_larose_10C4C929.wem</CachePath>
 				</File>
 				<File Id="691049765" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_taunts_hey_stupid_2.wav</ShortName>
-					<CachePath>SFX/sfx_taunts_hey_stupid_2_3F75BDB9.wem</CachePath>
-				</File>
-				<File Id="753217888" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>mus_Alien_Arena_Kill!_trumpets.wav</ShortName>
-					<CachePath>SFX/mus_Alien_Arena_Kill!_trumpets_9EDFC787.wem</CachePath>
+					<CachePath>SFX/sfx_taunts_hey_stupid_2_10C4C929.wem</CachePath>
 				</File>
 				<File Id="780761335" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_tom_step_10.wav</ShortName>
-					<CachePath>SFX/sfx_tom_step_10_D131EA99.wem</CachePath>
+					<CachePath>SFX/sfx_tom_step_10_DBCC2E29.wem</CachePath>
 				</File>
 				<File Id="780987649" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_taunts_akanbe_1.wav</ShortName>
-					<CachePath>SFX/sfx_taunts_akanbe_1_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/sfx_taunts_akanbe_1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="788983524" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_taunts_you_scared_1.wav</ShortName>
-					<CachePath>SFX/sfx_taunts_you_scared_1_3F75BDB9.wem</CachePath>
-				</File>
-				<File Id="792050017" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>mus_Alien_Arena_Kill!_disco_170bpm_intro.wav</ShortName>
-					<CachePath>SFX/mus_Alien_Arena_Kill!_disco_170bpm_intro_9EDFC787.wem</CachePath>
+					<CachePath>SFX/sfx_taunts_you_scared_1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="825759985" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_charger_aggro_increase_1.wav</ShortName>
-					<CachePath>SFX/sfx_charger_aggro_increase_1_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/sfx_charger_aggro_increase_1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="829787396" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_taunts_raspberry_1.wav</ShortName>
-					<CachePath>SFX/sfx_taunts_raspberry_1_3F75BDB9.wem</CachePath>
-				</File>
-				<File Id="832071081" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>AAA_sax_6.wav</ShortName>
-					<CachePath>SFX/AAA_sax_6_9EDFC787.wem</CachePath>
-				</File>
-				<File Id="882571690" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>mus_Alien_Arena_Kill!_disco_170bpm_loop_hype_brass.wav</ShortName>
-					<CachePath>SFX/mus_Alien_Arena_Kill!_disco_170bpm_loop_hype_brass_9EDFC787.wem</CachePath>
-				</File>
-				<File Id="886513295" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_percussion.wav</ShortName>
-					<CachePath>SFX/mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_percussion_9EDFC787.wem</CachePath>
-				</File>
-				<File Id="980003540" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>AAA_synth_2.wav</ShortName>
-					<CachePath>SFX/AAA_synth_2_9EDFC787.wem</CachePath>
+					<CachePath>SFX/sfx_taunts_raspberry_1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="1007579897" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_death.wav</ShortName>
-					<CachePath>SFX/sfx_player_death_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/sfx_player_death_10C4C929.wem</CachePath>
 				</File>
 				<File Id="1033023117" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_trickfoolery_fullloop_222bpm.wav</ShortName>
-					<CachePath>SFX/mus_trickfoolery_fullloop_222bpm_BE9CAA30.wem</CachePath>
+					<CachePath>SFX/mus_trickfoolery_fullloop_222bpm_21C37800.wem</CachePath>
 				</File>
 				<File Id="1043628278" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_tom_step_1.wav</ShortName>
-					<CachePath>SFX/sfx_tom_step_1_E5E99A79.wem</CachePath>
+					<CachePath>SFX/sfx_tom_step_1_CEF5C489.wem</CachePath>
 				</File>
 				<File Id="1066273250" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_pause_larose.wav</ShortName>
-					<CachePath>SFX/sfx_pause_larose_3F75BDB9.wem</CachePath>
-				</File>
-				<File Id="1069608001" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>mus_Alien_Arena_Kill!_victory_cue_bpm170.wav</ShortName>
-					<CachePath>SFX/mus_Alien_Arena_Kill!_victory_cue_bpm170_9EDFC787.wem</CachePath>
+					<CachePath>SFX/sfx_pause_larose_10C4C929.wem</CachePath>
 				</File>
 				<File Id="1070951602" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_player_hurt_1.wav</ShortName>
-					<CachePath>SFX/sfx_player_hurt_1_3F75BDB9.wem</CachePath>
+					<CachePath>SFX/sfx_player_hurt_1_10C4C929.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
 				<Event Id="308973664" Name="First_Time_Mute_mus_pause_75bpm" ObjectPath="\Events\Default Work Unit\First_Time_Mute_mus_pause_75bpm" GUID="{7288EC1A-8592-4957-B27E-E911D3B56F4A}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1929765902" Name="Mute_Alien_Arena_Assault_170bpm" ObjectPath="\Events\Default Work Unit\Mute_Alien_Arena_Assault_170bpm" GUID="{D563AF20-5219-4CAB-9AEF-51C10825081B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3756680375" Name="Mute_mus_pause_75bpm" ObjectPath="\Events\Default Work Unit\Mute_mus_pause_75bpm" GUID="{0E96271C-B559-48D8-B09B-94D3489189FD}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="341582045" Name="Play_Alien_Arena_Assault_170bpm" ObjectPath="\Events\Default Work Unit\Play_Alien_Arena_Assault_170bpm" GUID="{8333E7FF-2074-4574-ADA6-3F3F7B5DA275}" DurationType="Infinite">
-					<SwitchContainers>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="762757699" Id="2716678721" GUID="{9108A2BF-1C91-4F03-BBCD-47F60251D933}"/>
-							<MediaRefs>
-								<MediaRef Id="1069608001"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="762757699" Id="2764240573" GUID="{D23C63AE-8C84-4140-9A0C-994815485352}"/>
-							<MediaRefs>
-								<MediaRef Id="19996191"/>
-								<MediaRef Id="72287347"/>
-								<MediaRef Id="145105292"/>
-								<MediaRef Id="217413579"/>
-								<MediaRef Id="331701484"/>
-								<MediaRef Id="356099246"/>
-								<MediaRef Id="380291550"/>
-								<MediaRef Id="394800615"/>
-								<MediaRef Id="481270644"/>
-								<MediaRef Id="536532914"/>
-								<MediaRef Id="657227351"/>
-								<MediaRef Id="664728998"/>
-								<MediaRef Id="753217888"/>
-								<MediaRef Id="792050017"/>
-								<MediaRef Id="832071081"/>
-								<MediaRef Id="882571690"/>
-								<MediaRef Id="886513295"/>
-								<MediaRef Id="980003540"/>
-							</MediaRefs>
-						</SwitchContainer>
-					</SwitchContainers>
-				</Event>
 				<Event Id="1926045526" Name="Play_charger_angy" ObjectPath="\Events\Default Work Unit\Play_charger_angy" GUID="{E480F771-7FFA-43EE-965C-E01524C26C0E}" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.5" DurationMax="2">
 					<MediaRefs>
 						<MediaRef Id="292366327"/>
@@ -410,23 +300,9 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="2601853237" Name="Stop_mus_Trickfoolery_222bpm" ObjectPath="\Events\Default Work Unit\Stop_mus_Trickfoolery_222bpm" GUID="{103A468D-C1A5-4619-8F4C-E88DFD668A3C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1990966217" Name="Unmute_Alien_Arena_Assault_170bpm" ObjectPath="\Events\Default Work Unit\Unmute_Alien_Arena_Assault_170bpm" GUID="{33C4D4F4-E3D0-44A5-8C66-252F4F122C70}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="4152903754" Name="Unmute_mus_pause_75bpm" ObjectPath="\Events\Default Work Unit\Unmute_mus_pause_75bpm" GUID="{C3E827C6-F5CC-4329-985D-E19D22E9E34A}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
-			<GameParameters>
-				<GameParameter Id="3296584377" Name="Hype" ObjectPath="\Game Parameters\Default Work Unit\Hype" GUID="{F10FAC34-8EF9-452B-9153-83ADE95B5819}"/>
-				<GameParameter Id="4082227278" Name="On_Disco_Floor" ObjectPath="\Game Parameters\Default Work Unit\On_Disco_Floor" GUID="{1353123B-8719-435F-969E-773D804B92E8}"/>
-			</GameParameters>
-			<StateGroups>
-				<StateGroup Id="762757699" Name="Gameplay_State" ObjectPath="\States\Default Work Unit\Gameplay_State" GUID="{B587995D-62E9-431F-94B4-73168DC556F9}">
-					<States>
-						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Gameplay_State\None" GUID="{17C6B36D-3016-40C9-99B0-1BAE6CBE943F}"/>
-						<State Id="2716678721" Name="Victory" ObjectPath="\States\Default Work Unit\Gameplay_State\Victory" GUID="{9108A2BF-1C91-4F03-BBCD-47F60251D933}"/>
-						<State Id="2764240573" Name="Combat" ObjectPath="\States\Default Work Unit\Gameplay_State\Combat" GUID="{D23C63AE-8C84-4140-9A0C-994815485352}"/>
-					</States>
-				</StateGroup>
-			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{96EDCD2E-BB53-FC02-3264-8FB455128CBE}</FileHash>
+	<FileHash>{F56C3244-7BCF-5D9D-071A-67BE24DF640C}</FileHash>
 </SoundBanksInfo>
