@@ -67,8 +67,6 @@ public class GameManager : MonoBehaviour
             isRestart = progressTracker.GetComponent<ProgressTracker>().isRestart;
         }
         else {
-            GameObject tracker = GameObject.Instantiate(trackerPrefab);
-            tracker.name = "ProgressTracker";
             isRestart = false;
         }
 
