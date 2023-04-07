@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BAA8F988-3689-46B2-9AFF-B6B387EE26C7}" SchemaVersion="110">
+	<States>
+		<WorkUnit Name="avy music states" ID="{BAA8F988-3689-46B2-9AFF-B6B387EE26C7}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="hype" ID="{B61FCDC7-EC1B-4FFE-A4FE-776204B2FA7C}">
+					<ChildrenList>
+						<State Name="None" ID="{72F93EBB-2A74-4340-AAD0-972E0AEC4E9B}"/>
+						<State Name="hype_0" ID="{A0130F3D-8D24-4A2C-92F2-E4E8A8763FB1}"/>
+						<State Name="hype_25" ID="{E50F9DAF-F288-46C1-BFE9-77C625F285B8}"/>
+						<State Name="hype_50" ID="{362E1B0B-E6BF-469B-889B-3E53AC1E622B}"/>
+						<State Name="hype_75" ID="{B19DB1AA-994F-4FFD-A803-CA30BF6FA290}"/>
+						<State Name="hype_100" ID="{EF267F18-BB7D-4539-9A79-C5E96ECCABF1}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

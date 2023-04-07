@@ -1,0 +1,1600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A08D4457-7BA1-4095-B157-374E936304F0}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="avy sfx" ID="{A08D4457-7BA1-4095-B157-374E936304F0}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="sfx_enemyBeefy" ID="{ECE54A28-682F-42E6-87C6-32102A284EB6}" ShortID="471846609">
+					<ChildrenList>
+						<RandomSequenceContainer Name="sfx_enemyBeefy_aggro" ID="{18076495-12F0-41C8-A118-79D4EC0818F6}" ShortID="81639286">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{97965C37-0A83-4EAC-B4DD-B64113304205}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1000"/>
+													<Property Name="Min" Type="Real64" Value="-500"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="SFX" ID="{89076090-68F9-48E3-8BDD-D46626A6EE56}" WorkUnitID="{68642DC0-40AE-4545-8EAC-6407BA350260}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="sfx_enemyBeefy_aggro_1" ID="{39988A0F-AB47-48AC-94DF-9380FAD06F06}" ShortID="932497224">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyBeefy_aggro_1" ID="{B79D5B55-060E-4188-B8FA-68A8B2437BBA}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyBeefy_aggro_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="166319512"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyBeefy_aggro_1" ID="{B79D5B55-060E-4188-B8FA-68A8B2437BBA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyBeefy_aggro_2" ID="{82493C26-ED66-462A-9790-8A5E4D2D3BD8}" ShortID="858800421">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyBeefy_aggro_2" ID="{7AB4D5E8-15F8-4DC1-BBA8-3660C7311EC9}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyBeefy_aggro_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="991567815"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyBeefy_aggro_2" ID="{7AB4D5E8-15F8-4DC1-BBA8-3660C7311EC9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyBeefy_aggro_3" ID="{F0B1A039-FEAA-4C8A-B681-96D6B7C1EA26}" ShortID="284672211">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyBeefy_aggro_3" ID="{88DC21A1-40B1-4437-B75E-DBC30A8457F3}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyBeefy_aggro_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="348335200"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyBeefy_aggro_3" ID="{88DC21A1-40B1-4437-B75E-DBC30A8457F3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyBeefy_aggro_4" ID="{1353C707-DDE7-4B4B-B23D-46A2DFBFABEA}" ShortID="858407514">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyBeefy_aggro_4" ID="{24F2424D-43D6-472F-8E67-ED9BD317B813}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyBeefy_aggro_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="991664786"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyBeefy_aggro_4" ID="{24F2424D-43D6-472F-8E67-ED9BD317B813}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="sfx_enemyBeefy_alert" ID="{DC072BE3-2924-4D85-95AD-64A0A82BB04D}" ShortID="289998097">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{992C79E9-8322-46E2-97B0-13061DE2BD4E}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1000"/>
+													<Property Name="Min" Type="Real64" Value="-500"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="SFX" ID="{89076090-68F9-48E3-8BDD-D46626A6EE56}" WorkUnitID="{68642DC0-40AE-4545-8EAC-6407BA350260}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="sfx_enemyBeefy_alert_1" ID="{EDEA0FE8-9E1B-40F2-8A43-1968EB6B4B31}" ShortID="758017359">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyBeefy_alert_1" ID="{2CB7D10D-491F-4095-92E8-CACC26FE35DD}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyBeefy_alert_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="656489993"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyBeefy_alert_1" ID="{2CB7D10D-491F-4095-92E8-CACC26FE35DD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyBeefy_alert_2" ID="{0AE84B5B-3442-418E-BBF9-3B9A1701979E}" ShortID="960729059">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyBeefy_alert_2" ID="{3EE74657-8619-4985-B5CD-109A76335D2B}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyBeefy_alert_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="34219380"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyBeefy_alert_2" ID="{3EE74657-8619-4985-B5CD-109A76335D2B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyBeefy_alert_3" ID="{78107680-5B67-4370-97A8-CF4547A29636}" ShortID="56053296">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyBeefy_alert_3" ID="{774F61C2-2CB7-424C-8A24-4BC2D8D09067}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyBeefy_alert_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="960175453"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyBeefy_alert_3" ID="{774F61C2-2CB7-424C-8A24-4BC2D8D09067}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="sfx_enemyBeefy_death" ID="{446D9475-4382-4389-AC9F-1D71262E1729}" ShortID="657192471">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{440F2D11-B68F-4341-8E21-EC8C4EA796C4}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1000"/>
+													<Property Name="Min" Type="Real64" Value="-500"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="SFX" ID="{89076090-68F9-48E3-8BDD-D46626A6EE56}" WorkUnitID="{68642DC0-40AE-4545-8EAC-6407BA350260}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="sfx_enemyBeefy_death_2" ID="{926AAF9B-E51F-4434-8056-EB37EBBCE2F0}" ShortID="414227946">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyBeefy_death_2" ID="{55652BFD-2770-4B09-9D70-449D46ED74C8}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyBeefy_death_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="298112850"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyBeefy_death_2" ID="{55652BFD-2770-4B09-9D70-449D46ED74C8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyBeefy_death_3" ID="{EB9ABD4E-31B5-4582-BA74-98A40ADA2DF3}" ShortID="567570525">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyBeefy_death_3" ID="{D97F73E0-FD0B-4A55-98B6-358215893C2A}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyBeefy_death_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="634211499"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyBeefy_death_3" ID="{D97F73E0-FD0B-4A55-98B6-358215893C2A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyBeefy_death_1" ID="{31D5BF9E-48FA-4C5D-A0FE-ADAA657EA160}" ShortID="884657463">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyBeefy_death_1" ID="{D9DFA128-72EC-4860-BB04-EFD0D0E80CEF}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyBeefy_death_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="885530422"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyBeefy_death_1" ID="{D9DFA128-72EC-4860-BB04-EFD0D0E80CEF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="sfx_enemyBeefy_startAttack" ID="{DEB84FB6-582A-4441-91D1-F467AC5206F6}" ShortID="103198819">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{B31F15EC-B170-43AF-AD3A-F2FD5FD5BAAE}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1000"/>
+													<Property Name="Min" Type="Real64" Value="-500"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="SFX" ID="{89076090-68F9-48E3-8BDD-D46626A6EE56}" WorkUnitID="{68642DC0-40AE-4545-8EAC-6407BA350260}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="sfx_enemyBeefy_startAttack_1" ID="{B97403F3-C603-47B3-8573-777225F5E725}" ShortID="688996439">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyBeefy_startAttack_1" ID="{874695A3-6A5A-4659-9D1E-8856E1C1DC6C}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyBeefy_startAttack_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="448787943"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyBeefy_startAttack_1" ID="{874695A3-6A5A-4659-9D1E-8856E1C1DC6C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyBeefy_startAttack_2" ID="{66E5807C-57C0-47C2-8A61-C69886DCE809}" ShortID="74692524">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyBeefy_startAttack_2" ID="{7CC23E39-17AB-4B44-A5AC-5A176192AC72}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyBeefy_startAttack_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1068285633"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyBeefy_startAttack_2" ID="{7CC23E39-17AB-4B44-A5AC-5A176192AC72}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyBeefy_startAttack_3" ID="{94AAC5F6-F4DB-4EB6-8030-E21B8CA1A019}" ShortID="799965399">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyBeefy_startAttack_3" ID="{C6358F1D-6CF0-4F9C-AF19-7D41A8DE2B65}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyBeefy_startAttack_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="389860146"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyBeefy_startAttack_3" ID="{C6358F1D-6CF0-4F9C-AF19-7D41A8DE2B65}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyBeefy_startAttack_4" ID="{44F058A3-E0B8-447A-99C6-13B81924667C}" ShortID="496359525">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyBeefy_startAttack_4" ID="{77007072-4AEA-44E2-88E2-8116B4C1067F}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyBeefy_startAttack_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1069837018"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyBeefy_startAttack_4" ID="{77007072-4AEA-44E2-88E2-8116B4C1067F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyBeefy_startAttack_5" ID="{F2AFA394-E91D-49E7-895E-A267545E15C8}" ShortID="482868766">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyBeefy_startAttack_5" ID="{BEB4835E-4547-49D6-BA00-F274CF37E379}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyBeefy_startAttack_5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="865498349"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyBeefy_startAttack_5" ID="{BEB4835E-4547-49D6-BA00-F274CF37E379}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="sfx_enemyBeefy_endAttack" ID="{3921035A-A3FD-44BC-9663-D1D7D93C437C}" ShortID="16388984">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C330B3E8-53E2-4307-9381-391555922366}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1000"/>
+													<Property Name="Min" Type="Real64" Value="-500"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="SFX" ID="{89076090-68F9-48E3-8BDD-D46626A6EE56}" WorkUnitID="{68642DC0-40AE-4545-8EAC-6407BA350260}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="sfx_enemyBeefy_endAttack_3" ID="{33B74327-D710-41C9-BA59-8BDAE9068F0F}" ShortID="844590190">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyBeefy_endAttack_3" ID="{D86226E2-90CD-45D6-B43A-24BD343E3D2A}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyBeefy_endAttack_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="974045788"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyBeefy_endAttack_3" ID="{D86226E2-90CD-45D6-B43A-24BD343E3D2A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyBeefy_endAttack_4" ID="{5D4F7D70-C5D3-4FA7-977C-45B4990DA83E}" ShortID="859880945">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyBeefy_endAttack_4" ID="{E912A5A9-913D-4ECD-AC52-31661CAC7F99}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyBeefy_endAttack_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="689131638"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyBeefy_endAttack_4" ID="{E912A5A9-913D-4ECD-AC52-31661CAC7F99}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyBeefy_endAttack_5" ID="{204E9A0D-86AC-4D64-AFB1-4464D33816C0}" ShortID="418944090">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyBeefy_endAttack_5" ID="{235BB7B4-A815-47CE-98CB-4CA2140C241E}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyBeefy_endAttack_5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="53863138"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyBeefy_endAttack_5" ID="{235BB7B4-A815-47CE-98CB-4CA2140C241E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyBeefy_endAttack_1" ID="{ECD98C41-4D38-4EB5-8E2E-BA098D79FF15}" ShortID="79588568">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyBeefy_endAttack_1" ID="{1400B51E-9599-407F-ACD0-8BC1EB4A6797}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyBeefy_endAttack_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="872400996"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyBeefy_endAttack_1" ID="{1400B51E-9599-407F-ACD0-8BC1EB4A6797}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyBeefy_endAttack_2" ID="{C119E6F9-A452-45CC-A17F-7BCBA4484424}" ShortID="677602080">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyBeefy_endAttack_2" ID="{E9265620-29EF-4910-8173-FACB28A19C51}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyBeefy_endAttack_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="175233521"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyBeefy_endAttack_2" ID="{E9265620-29EF-4910-8173-FACB28A19C51}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<SwitchContainer Name="sfx_enemyBeefy_footsteps" ID="{7ABB203A-2E00-40C4-B013-7DF0FCF45E3E}" ShortID="589624951">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="SFX" ID="{89076090-68F9-48E3-8BDD-D46626A6EE56}" WorkUnitID="{68642DC0-40AE-4545-8EAC-6407BA350260}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="grassy" ID="{FF495F4D-F946-4951-81AB-9F5ED572ED40}" WorkUnitID="{0B4D2748-00EB-48FF-B221-AC723344092F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="footsteps" ID="{2D745F57-2B08-43B8-98B8-6A72CAABF670}" WorkUnitID="{0B4D2748-00EB-48FF-B221-AC723344092F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="sfx_enemyBeefy_footstepsGrassy" ID="{68C6FE0B-10FA-4104-BA37-7D477015AF45}" ShortID="723811017">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{DBE885CB-04A4-4B8D-B926-4DE3F2DBBAD5}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="300"/>
+															<Property Name="Min" Type="Real64" Value="-300"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{9552C54A-275C-4C1B-901C-60B18FB10A67}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-10"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="sfx_enemyBeefy_footstepsGrassy_1" ID="{E062FFED-C7E4-4354-B58C-B6A028520022}" ShortID="727997599">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_enemyBeefy_footstepsGrassy_1" ID="{D507F219-D51E-46B1-808E-B494F3F0A4CB}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_enemyBeefy_footstepsGrassy_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="936270129"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_enemyBeefy_footstepsGrassy_1" ID="{D507F219-D51E-46B1-808E-B494F3F0A4CB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_enemyBeefy_footstepsGrassy_2" ID="{90425FB2-2C14-4AE7-9E0D-F27D654310DF}" ShortID="663653753">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_enemyBeefy_footstepsGrassy_2" ID="{C100E9FE-A486-4BED-90CD-D044D8ED00E3}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_enemyBeefy_footstepsGrassy_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="843431021"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_enemyBeefy_footstepsGrassy_2" ID="{C100E9FE-A486-4BED-90CD-D044D8ED00E3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_enemyBeefy_footstepsGrassy_3" ID="{09EC9718-2026-4D63-A934-1BA01D5E1EEF}" ShortID="604120876">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_enemyBeefy_footstepsGrassy_3" ID="{6C04E8E7-22A9-48F9-906A-F048E3BEA60D}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_enemyBeefy_footstepsGrassy_3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="560392968"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_enemyBeefy_footstepsGrassy_3" ID="{6C04E8E7-22A9-48F9-906A-F048E3BEA60D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_enemyBeefy_footstepsGrassy_4" ID="{DBCCC0B7-A3D6-4B55-BC2A-8067DA4207A1}" ShortID="167500776">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_enemyBeefy_footstepsGrassy_4" ID="{17DBDD97-2873-412C-A709-F532E1A2C789}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_enemyBeefy_footstepsGrassy_4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="348441608"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_enemyBeefy_footstepsGrassy_4" ID="{17DBDD97-2873-412C-A709-F532E1A2C789}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_enemyBeefy_footstepsGrassy_5" ID="{B62CF979-119B-4199-B843-05BFB7B3FD70}" ShortID="898695091">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_enemyBeefy_footstepsGrassy_5" ID="{F55EECB8-342B-4CBD-86F5-6E5F25C94286}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_enemyBeefy_footstepsGrassy_5.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="531369014"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_enemyBeefy_footstepsGrassy_5" ID="{F55EECB8-342B-4CBD-86F5-6E5F25C94286}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="sfx_enemyBeefy_footstepsPavement" ID="{F50E8D1E-3D43-456D-AF97-F7DFE9578A49}" ShortID="873209427">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{20D96AD0-75DB-43EB-AD86-CA61662E6898}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="300"/>
+															<Property Name="Min" Type="Real64" Value="-300"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{90356AE5-AB71-4938-A68E-68C2906BA13D}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-10"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="sfx_enemyBeefy_footstepsConcrete_1" ID="{09B0BF61-FEB9-415A-84BB-D3DCFA1EB0E4}" ShortID="9526447">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_enemyBeefy_footstepsConcrete_1" ID="{227BBD39-6074-435A-929D-7D1461058BE6}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_enemyBeefy_footstepsConcrete_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="133250952"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_enemyBeefy_footstepsConcrete_1" ID="{227BBD39-6074-435A-929D-7D1461058BE6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_enemyBeefy_footstepsConcrete_2" ID="{4F827E98-CB5B-4820-98A1-132C31437399}" ShortID="749216092">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_enemyBeefy_footstepsConcrete_2" ID="{B841EB44-4E09-4343-8589-1D198C43165B}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_enemyBeefy_footstepsConcrete_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="486685274"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_enemyBeefy_footstepsConcrete_2" ID="{B841EB44-4E09-4343-8589-1D198C43165B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_enemyBeefy_footstepsConcrete_3" ID="{DEC83C81-5B9D-41BC-A21B-1BA1E826EC1D}" ShortID="326214734">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_enemyBeefy_footstepsConcrete_3" ID="{D20F6FF5-18AC-4B4E-A479-CF98EE9C3DEE}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_enemyBeefy_footstepsConcrete_3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="220787170"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_enemyBeefy_footstepsConcrete_3" ID="{D20F6FF5-18AC-4B4E-A479-CF98EE9C3DEE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_enemyBeefy_footstepsConcrete_4" ID="{8F709134-5A6A-4163-AB9C-581C10187657}" ShortID="36848736">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_enemyBeefy_footstepsConcrete_4" ID="{7CBDEF89-AE90-440D-BDF3-F7BEA68F192C}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_enemyBeefy_footstepsConcrete_4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="616656288"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_enemyBeefy_footstepsConcrete_4" ID="{7CBDEF89-AE90-440D-BDF3-F7BEA68F192C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_enemyBeefy_footstepsConcrete_5" ID="{2AE80055-3D25-4420-99F0-996F0FED0602}" ShortID="814271289">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_enemyBeefy_footstepsConcrete_5" ID="{26A78D8D-A622-469A-A434-C6FADB95CF67}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_enemyBeefy_footstepsConcrete_5.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="86676616"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_enemyBeefy_footstepsConcrete_5" ID="{26A78D8D-A622-469A-A434-C6FADB95CF67}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_enemyBeefy_footstepsConcrete_6" ID="{C7EAAC8C-A209-4768-8B0F-23BCB27D0994}" ShortID="377232573">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_enemyBeefy_footstepsConcrete_6" ID="{DA0E7BA0-F729-4C22-A7C0-3566451CF6BA}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_enemyBeefy_footstepsConcrete_6.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="258285539"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_enemyBeefy_footstepsConcrete_6" ID="{DA0E7BA0-F729-4C22-A7C0-3566451CF6BA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="sfx_enemyBeefy_footstepsDisco" ID="{5717627A-45AB-4F28-BAEA-827429413F61}" ShortID="711632100">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D9F6DA5E-1953-44B5-BAF7-69774AE06823}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="300"/>
+															<Property Name="Min" Type="Real64" Value="-300"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{EAB4E7C1-712C-4D2F-B4B5-4DD249B2815C}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-10"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="sfx_enemyBeefy_footstepsDisco_1" ID="{D2F35C0A-A312-465D-9430-C8775580589B}" ShortID="459901370">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_enemyBeefy_footstepsDisco_1" ID="{FE98101F-A9CC-4EFF-9443-66CB759B9784}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_enemyBeefy_footstepsDisco_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="294943875"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_enemyBeefy_footstepsDisco_1" ID="{FE98101F-A9CC-4EFF-9443-66CB759B9784}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_enemyBeefy_footstepsDisco_2" ID="{52B7C27A-A872-48ED-931B-A742BCA2ABC4}" ShortID="90252090">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_enemyBeefy_footstepsDisco_2" ID="{22D5D0E5-0D6F-4362-BFF8-40F6735FD54B}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_enemyBeefy_footstepsDisco_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="226718950"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_enemyBeefy_footstepsDisco_2" ID="{22D5D0E5-0D6F-4362-BFF8-40F6735FD54B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_enemyBeefy_footstepsDisco_3" ID="{895CA334-CE1B-4A68-8CB6-59BE3970B6FD}" ShortID="705238657">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_enemyBeefy_footstepsDisco_3" ID="{CAA469E1-C0D3-4836-8540-E5142153998E}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_enemyBeefy_footstepsDisco_3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="199178399"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_enemyBeefy_footstepsDisco_3" ID="{CAA469E1-C0D3-4836-8540-E5142153998E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_enemyBeefy_footstepsDisco_4" ID="{D56AA943-61EB-43D7-8E14-CAF032FE19D5}" ShortID="226242336">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_enemyBeefy_footstepsDisco_4" ID="{4F7A6F01-9F7A-4010-84F1-F6DF75B614EB}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_enemyBeefy_footstepsDisco_4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="737643451"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_enemyBeefy_footstepsDisco_4" ID="{4F7A6F01-9F7A-4010-84F1-F6DF75B614EB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_enemyBeefy_footstepsDisco_5" ID="{D9098EEF-5183-4F41-827E-D2BD92ACB992}" ShortID="869250757">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_enemyBeefy_footstepsDisco_5" ID="{1344A7EE-F55B-4A0D-A252-C00AA2F363D8}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_enemyBeefy_footstepsDisco_5.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="231296671"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_enemyBeefy_footstepsDisco_5" ID="{1344A7EE-F55B-4A0D-A252-C00AA2F363D8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_enemyBeefy_footstepsDisco_6" ID="{DF0A0D58-567C-4F67-A251-0F3A5C297FB0}" ShortID="415325942">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_enemyBeefy_footstepsDisco_6" ID="{13CB61B6-6D56-4831-B415-F9F2BB6D9660}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_enemyBeefy_footstepsDisco_6.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="963527218"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_enemyBeefy_footstepsDisco_6" ID="{13CB61B6-6D56-4831-B415-F9F2BB6D9660}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="sfx_enemyBeefy_footstepsGrassy" ID="{68C6FE0B-10FA-4104-BA37-7D477015AF45}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="sfx_enemyBeefy_footstepsPavement" ID="{F50E8D1E-3D43-456D-AF97-F7DFE9578A49}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="sfx_enemyBeefy_footstepsDisco" ID="{5717627A-45AB-4F28-BAEA-827429413F61}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="grassy" ID="{FF495F4D-F946-4951-81AB-9F5ED572ED40}"/>
+										<ItemList>
+											<ItemRef Name="sfx_enemyBeefy_footstepsGrassy" ID="{68C6FE0B-10FA-4104-BA37-7D477015AF45}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="disco" ID="{2DFFD969-3BA2-4BBF-984E-0952DC3C7FC0}"/>
+										<ItemList>
+											<ItemRef Name="sfx_enemyBeefy_footstepsDisco" ID="{5717627A-45AB-4F28-BAEA-827429413F61}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="concrete" ID="{316713C8-3BA6-432B-B523-97058CCE560E}"/>
+										<ItemList>
+											<ItemRef Name="sfx_enemyBeefy_footstepsPavement" ID="{F50E8D1E-3D43-456D-AF97-F7DFE9578A49}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="sfx_player" ID="{2847B478-4EBB-4225-A706-AA198ABB0253}" ShortID="989002812">
+					<ChildrenList>
+						<SwitchContainer Name="sfx_player_footsteps" ID="{CB865DB1-42D5-4C0E-9803-4B0CF58BA3DE}" ShortID="872130668">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="SFX" ID="{89076090-68F9-48E3-8BDD-D46626A6EE56}" WorkUnitID="{68642DC0-40AE-4545-8EAC-6407BA350260}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="grassy" ID="{FF495F4D-F946-4951-81AB-9F5ED572ED40}" WorkUnitID="{0B4D2748-00EB-48FF-B221-AC723344092F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="footsteps" ID="{2D745F57-2B08-43B8-98B8-6A72CAABF670}" WorkUnitID="{0B4D2748-00EB-48FF-B221-AC723344092F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="sfx_player_footstepsGrassy" ID="{5570F2F2-F83E-4828-9EF1-246F54E1F3B6}" ShortID="839999884">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D6BC21F7-4DCF-4EB8-BE84-DAD3548C7E91}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="300"/>
+															<Property Name="Min" Type="Real64" Value="-300"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{CF119300-AF04-4E16-9896-64135EF171BF}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-10"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="sfx_player_footstepsGrassy_1" ID="{F8584C0B-C618-4D5D-BF2B-E4D6B32137F6}" ShortID="330717606">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_footstepsGrassy_1" ID="{39FAD28D-D1C7-4A9C-B242-F0F87685BA78}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_footstepsGrassy_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="891803528"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_footstepsGrassy_1" ID="{39FAD28D-D1C7-4A9C-B242-F0F87685BA78}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_footstepsGrassy_2" ID="{58FBA2B5-33FA-4FFE-8E0B-7536CECFED90}" ShortID="381875595">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_footstepsGrassy_2" ID="{E63174CE-F02B-4963-AE2C-2C7910967A88}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_footstepsGrassy_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="394076071"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_footstepsGrassy_2" ID="{E63174CE-F02B-4963-AE2C-2C7910967A88}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_footstepsGrassy_3" ID="{DF76B109-3F83-4D35-885E-2562FF8719AD}" ShortID="729675942">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_footstepsGrassy_3" ID="{7D02975A-5289-49BE-939C-2C0604C73228}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_footstepsGrassy_3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="889298502"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_footstepsGrassy_3" ID="{7D02975A-5289-49BE-939C-2C0604C73228}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_footstepsGrassy_4" ID="{78EEE1EE-37F7-4A96-9E6F-1EE25705C4CC}" ShortID="191128941">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_footstepsGrassy_4" ID="{EE66DE2D-AFCA-48A7-BF3C-3A5DEA1EF833}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_footstepsGrassy_4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="669034116"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_footstepsGrassy_4" ID="{EE66DE2D-AFCA-48A7-BF3C-3A5DEA1EF833}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_footstepsGrassy_5" ID="{426B7F6F-F764-4982-98FB-9CF302EB13EF}" ShortID="444162004">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_footstepsGrassy_5" ID="{82F6F8A7-566B-402D-BFB1-09DB35E5709C}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_footstepsGrassy_5.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="357716752"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_footstepsGrassy_5" ID="{82F6F8A7-566B-402D-BFB1-09DB35E5709C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="sfx_player_footstepsDisco" ID="{79096AB7-2E0F-489D-A6A4-633A38726196}" ShortID="522117428">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3C12F739-3AA4-44CB-9E18-EC2DD08BA8CD}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="300"/>
+															<Property Name="Min" Type="Real64" Value="-300"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{A6163D76-EDA8-4C34-B632-52CC89C2BC0E}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-10"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="tom_discofloor_step_1" ID="{AC422CC9-6734-4F37-A509-46B93527DD37}" ShortID="662441173">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="tom_discofloor_step_1" ID="{0160A246-6DDE-4CA0-82E6-43817F0CA9FE}">
+													<Language>SFX</Language>
+													<AudioFile>tom_discofloor_step_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="484840807"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="tom_discofloor_step_1" ID="{0160A246-6DDE-4CA0-82E6-43817F0CA9FE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="tom_discofloor_step_2" ID="{C724DECC-8673-4573-BBF0-2BFBBC9868BC}" ShortID="873534377">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="tom_discofloor_step_2" ID="{3EB6662F-F9C8-43B6-933F-E3C1AD3ED39A}">
+													<Language>SFX</Language>
+													<AudioFile>tom_discofloor_step_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="210863455"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="tom_discofloor_step_2" ID="{3EB6662F-F9C8-43B6-933F-E3C1AD3ED39A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="tom_discofloor_step_3" ID="{D1454FA2-3E3C-438F-AC7D-648029943D67}" ShortID="45804234">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="tom_discofloor_step_3" ID="{1DF47FE7-6ED0-4A32-85E9-BB7CE7345FDC}">
+													<Language>SFX</Language>
+													<AudioFile>tom_discofloor_step_3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="283688369"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="tom_discofloor_step_3" ID="{1DF47FE7-6ED0-4A32-85E9-BB7CE7345FDC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="tom_discofloor_step_4" ID="{A798B98C-3816-4458-B9E4-CEF224BFEDC4}" ShortID="837454816">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="tom_discofloor_step_4" ID="{2A8D4064-8F65-4548-B342-D18CFDDF5C97}">
+													<Language>SFX</Language>
+													<AudioFile>tom_discofloor_step_4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="58618328"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="tom_discofloor_step_4" ID="{2A8D4064-8F65-4548-B342-D18CFDDF5C97}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="sfx_player_footstepsPavement" ID="{BEF7F98C-CD67-435B-B331-F078C9525398}" ShortID="719906700">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{31533354-3F3D-4D90-AD6B-EB09AB738E55}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="300"/>
+															<Property Name="Min" Type="Real64" Value="-300"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{FA2F5CD6-EB38-498C-8FC8-08C74FA453AF}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-10"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="tom_pavement_step_1" ID="{109F2181-5466-46E6-A7C3-4A19424D1005}" ShortID="697123241">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="tom_pavement_step_1" ID="{392B05A1-F95C-412F-A5B6-67F0A619A75C}">
+													<Language>SFX</Language>
+													<AudioFile>tom_pavement_step_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="180330411"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="tom_pavement_step_1" ID="{392B05A1-F95C-412F-A5B6-67F0A619A75C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="tom_pavement_step_2" ID="{2B3DF395-BB75-4B1B-8319-00FBDB0AA795}" ShortID="423884895">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="tom_pavement_step_2" ID="{96177DF4-F9F5-409A-9941-E3E63895EEBC}">
+													<Language>SFX</Language>
+													<AudioFile>tom_pavement_step_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1037206968"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="tom_pavement_step_2" ID="{96177DF4-F9F5-409A-9941-E3E63895EEBC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="tom_pavement_step_3" ID="{01034530-5879-43D6-9E1E-0ADBECDF6D3F}" ShortID="962178805">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="tom_pavement_step_3" ID="{F5E2E4A2-F54B-4EC8-A1E2-53C3EE9A255E}">
+													<Language>SFX</Language>
+													<AudioFile>tom_pavement_step_3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="892296084"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="tom_pavement_step_3" ID="{F5E2E4A2-F54B-4EC8-A1E2-53C3EE9A255E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="tom_pavement_step_4" ID="{9F95CD43-617E-4A5A-BF90-E35C334A23BE}" ShortID="958905334">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="tom_pavement_step_4" ID="{3FEEFB29-CCEA-459F-B43A-23389388FF1F}">
+													<Language>SFX</Language>
+													<AudioFile>tom_pavement_step_4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="992221352"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="tom_pavement_step_4" ID="{3FEEFB29-CCEA-459F-B43A-23389388FF1F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="sfx_player_footstepsPavement" ID="{BEF7F98C-CD67-435B-B331-F078C9525398}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="sfx_player_footstepsDisco" ID="{79096AB7-2E0F-489D-A6A4-633A38726196}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="sfx_player_footstepsGrassy" ID="{5570F2F2-F83E-4828-9EF1-246F54E1F3B6}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="grassy" ID="{FF495F4D-F946-4951-81AB-9F5ED572ED40}"/>
+										<ItemList>
+											<ItemRef Name="sfx_player_footstepsGrassy" ID="{5570F2F2-F83E-4828-9EF1-246F54E1F3B6}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="disco" ID="{2DFFD969-3BA2-4BBF-984E-0952DC3C7FC0}"/>
+										<ItemList>
+											<ItemRef Name="sfx_player_footstepsDisco" ID="{79096AB7-2E0F-489D-A6A4-633A38726196}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="concrete" ID="{316713C8-3BA6-432B-B523-97058CCE560E}"/>
+										<ItemList>
+											<ItemRef Name="sfx_player_footstepsPavement" ID="{BEF7F98C-CD67-435B-B331-F078C9525398}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
