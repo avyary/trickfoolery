@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="712897226" Type="User" GUID="{128716AC-7198-43B7-AF87-1A5C74D5106B}" Language="SFX" Hash="{260BC7A2-0743-32C5-485A-F68336FF86E0}">
+		<SoundBank Id="712897226" Type="User" GUID="{128716AC-7198-43B7-AF87-1A5C74D5106B}" Language="SFX" Hash="{581C39E5-BE5E-2D01-4FBF-7776477B7ED5}">
 			<ObjectPath>\SoundBanks\avy soundbanks\mus</ObjectPath>
 			<ShortName>mus</ShortName>
 			<Path>mus.bnk</Path>
@@ -896,5 +896,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A3E713A0-0229-1065-5149-E7DC02E67588}</FileHash>
+	<FileHash>{DF55C9C5-B32A-EDC4-26C3-FFB262C08F0D}</FileHash>
 </SoundBanksInfo>
