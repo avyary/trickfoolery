@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="712897226" Type="User" GUID="{128716AC-7198-43B7-AF87-1A5C74D5106B}" Language="SFX" Hash="{581C39E5-BE5E-2D01-4FBF-7776477B7ED5}">
+		<SoundBank Id="712897226" Type="User" GUID="{128716AC-7198-43B7-AF87-1A5C74D5106B}" Language="SFX" Hash="{E9078525-7FA0-C2A9-AAAF-E3FDE3006C5F}">
 			<ObjectPath>\SoundBanks\avy soundbanks\mus</ObjectPath>
 			<ShortName>mus</ShortName>
 			<Path>mus.bnk</Path>
@@ -66,14 +66,12 @@
 							<SwitchValue GroupType="State" GroupId="3296584377" Id="4196427868" GUID="{A0130F3D-8D24-4A2C-92F2-E4E8A8763FB1}"/>
 							<MediaRefs>
 								<MediaRef Id="657037866"/>
-								<MediaRef Id="852624060"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="3296584377" Id="520375247" GUID="{E50F9DAF-F288-46C1-BFE9-77C625F285B8}"/>
 							<MediaRefs>
 								<MediaRef Id="708240575"/>
-								<MediaRef Id="852624060"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -82,7 +80,6 @@
 								<MediaRef Id="362719838"/>
 								<MediaRef Id="536069338"/>
 								<MediaRef Id="776736352"/>
-								<MediaRef Id="852624060"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -91,7 +88,6 @@
 								<MediaRef Id="291589524"/>
 								<MediaRef Id="340873418"/>
 								<MediaRef Id="536069338"/>
-								<MediaRef Id="852624060"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -896,5 +892,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6B9114C9-08E3-1F4E-5F78-9BA62ABA6D2F}</FileHash>
+	<FileHash>{0EA15BD9-33DC-8C1B-1BB7-F0656F6DF5DD}</FileHash>
 </SoundBanksInfo>

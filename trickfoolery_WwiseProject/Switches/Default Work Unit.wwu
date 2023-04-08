@@ -3,7 +3,7 @@
 	<Switches>
 		<WorkUnit Name="Default Work Unit" ID="{439A3B70-111F-44B5-92EB-565CD920D6E2}" PersistMode="Standalone">
 			<ChildrenList>
-				<SwitchGroup Name="Footsteps" ID="{D837BB52-31E7-49A5-A77F-069EF20CB60B}">
+				<SwitchGroup Name="Footsteps_01" ID="{D837BB52-31E7-49A5-A77F-069EF20CB60B}">
 					<ChildrenList>
 						<Switch Name="New_Switch" ID="{822F63B6-39A1-4147-9A51-E6A1CB9CBEC3}"/>
 						<Switch Name="New_Switch_01" ID="{322203B8-97D4-4624-96CF-D453F12E8616}"/>
