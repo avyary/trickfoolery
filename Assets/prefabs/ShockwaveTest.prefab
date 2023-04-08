@@ -68,7 +68,6 @@ GameObject:
   - component: {fileID: 1883043294559268820}
   - component: {fileID: 1162995071481464100}
   - component: {fileID: 7911117791645754916}
-  - component: {fileID: 2467074841093823805}
   - component: {fileID: 5929393600938749880}
   - component: {fileID: 7198930727940773330}
   - component: {fileID: 5189235479045704931}
@@ -145,24 +144,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2467074841093823805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 401518565979132307}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b42979c11cc3b6641bce8c3baaeb471c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _startupTime: 0.5
-  _activeTime: 2
-  _recoveryTime: 0.5
-  _damage: 25
-  _stunTime: 1
-  _range: 7
 --- !u!136 &5929393600938749880
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -202,11 +183,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa06fc9caf508408d970293486f2e861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startupTime: 0
-  _activeTime: 0
-  _recoveryTime: 0
-  _damage: 0
-  _stunTime: 0
+  _startupTime: 0.5
+  _activeTime: 0.5
+  _recoveryTime: 0.5
+  _damage: 25
+  _stunTime: 1
   _range: 15
 --- !u!54 &3668462775767548700
 Rigidbody:
@@ -6534,8 +6515,8 @@ MonoBehaviour:
   _maxHealth: 1
   _moveSpeed: 0.01
   _maxAnger: 1
-  _basicAttack: {fileID: 2467074841093823805}
-  _angyAttack: {fileID: 2467074841093823805}
+  _basicAttack: {fileID: 0}
+  _angyAttack: {fileID: 0}
   _deathBubble: {fileID: 2485592701089711520}
   isAngy: 0
   currentAttack: {fileID: 0}
