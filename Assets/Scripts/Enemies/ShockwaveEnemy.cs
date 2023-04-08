@@ -35,6 +35,7 @@ public class ShockwaveEnemy : Enemy
 
                 if (dist <= currentAttack.range) 
                 {
+                    Debug.Log("Shockwave detected the player"); 
                     agent.ResetPath();
                     StartCoroutine(Attack(currentAttack));
                 }
