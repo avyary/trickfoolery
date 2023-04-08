@@ -22,9 +22,20 @@ public class GameManager : MonoBehaviour
     public bool playerInput = false;
     public bool isGameOver = false;
     
+    // // wwise
+    // public AK.Wwise.Event pauseSFX;
+    // public AK.Wwise.Event unpauseSFX;
+
     // wwise
     public AK.Wwise.Event pauseSFX;
     public AK.Wwise.Event unpSFX;
+    public AK.Wwise.Event playpauseMUS;
+    public AK.Wwise.Event mutepauseMUS;
+    public AK.Wwise.Event firstmutepauseMUS;
+    public AK.Wwise.Event unmpauseMUS;
+    public AK.Wwise.Event playAaaMus;
+    public AK.Wwise.Event muteAaaMus;
+    public AK.Wwise.Event unmAaaMus;
 
     // object references
     public UIManager uiManager;
@@ -75,6 +86,10 @@ public class GameManager : MonoBehaviour
             isRestart = false;
         }
 
+        playpauseMUS.Post(gameObject);
+        firstmutepauseMUS.Post(gameObject);
+        AkSoundEngine.SetState("Gameplay_State", "Combat");
+        playAaaMus.Post(gameObject);
         StartCoroutine(StartLevel());
     }
 
@@ -134,7 +149,9 @@ public class GameManager : MonoBehaviour
         if (state == GameState.Combat && GameObject.FindGameObjectsWithTag("Enemy").Length < minEnemyNumber)
         {
             SpawnRandomEnemy();
-        }
+        }     
+
+        
     }
 
     IEnumerator LoadNextScene() {
@@ -157,12 +174,16 @@ public class GameManager : MonoBehaviour
     public void TogglePause() {
         if (jumbotron.state == JumbotronState.Hidden || jumbotron.state == JumbotronState.HypeBar) {
             pauseSFX.Post(gameObject);
+            unmpauseMUS.Post(gameObject);
+            muteAaaMus.Post(gameObject);
             uiManager.ShowPauseMenu();
             isPaused = true;
             Time.timeScale = 0;
         }
         else if (jumbotron.state == JumbotronState.Pause || jumbotron.state == JumbotronState.PauseFromHidden) {
             unpSFX.Post(gameObject);
+            mutepauseMUS.Post(gameObject);
+            unmAaaMus.Post(gameObject);
             uiManager.HidePauseMenu();
             Time.timeScale = 1;
         }
@@ -178,6 +199,7 @@ public class GameManager : MonoBehaviour
         print("gameOverWin");
         isGameOver = true;
         isGameWon = true;
+        AkSoundEngine.SetState("Gameplay_State", "Victory");
         yield return new WaitForSeconds(0.5f);
         stopCombatEvent.Invoke();
         uiManager.GameOverWin();

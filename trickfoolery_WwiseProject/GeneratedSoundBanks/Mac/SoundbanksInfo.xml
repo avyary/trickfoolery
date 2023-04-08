@@ -1,139 +1,734 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="145">
 	<RootPaths>
-		<ProjectRoot>../..</ProjectRoot>
-		<SourceFilesRoot>../../.cache/Mac</SourceFilesRoot>
+		<ProjectRoot>../../</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Mac/</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
 		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F56A610C-C7C4-F874-B68B-7ADDF94EBB7A}">
+		<SoundBank Id="712897226" Type="User" GUID="{128716AC-7198-43B7-AF87-1A5C74D5106B}" Language="SFX" Hash="{E9078525-7FA0-C2A9-AAAF-E3FDE3006C5F}">
+			<ObjectPath>\SoundBanks\avy soundbanks\mus</ObjectPath>
+			<ShortName>mus</ShortName>
+			<Path>mus.bnk</Path>
+			<Media>
+				<File Id="291589524" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_level_one_130bpm_hype_75_soloPiano.wav</ShortName>
+					<CachePath>SFX/mus_level_one_130bpm_hype_75_soloPiano_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="340873418" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_level_one_130bpm_hype_75_soloSynthLong.wav</ShortName>
+					<CachePath>SFX/mus_level_one_130bpm_hype_75_soloSynthLong_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="362719838" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_level_one_130bpm_hype_50_soloSynth.wav</ShortName>
+					<CachePath>SFX/mus_level_one_130bpm_hype_50_soloSynth_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="536069338" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_level_one_130bpm_hype_50_loop.wav</ShortName>
+					<CachePath>SFX/mus_level_one_130bpm_hype_50_loop_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="657037866" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_level_one_130bpm_hype_0_loop.wav</ShortName>
+					<CachePath>SFX/mus_level_one_130bpm_hype_0_loop_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="708240575" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_level_one_130bpm_hype_25_loop.wav</ShortName>
+					<CachePath>SFX/mus_level_one_130bpm_hype_25_loop_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="776736352" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_level_one_130bpm_hype_50_soloBass.wav</ShortName>
+					<CachePath>SFX/mus_level_one_130bpm_hype_50_soloBass_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="794838114" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_level_one_130bpm_introTransition.wav</ShortName>
+					<CachePath>SFX/mus_level_one_130bpm_introTransition_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="852624060" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_level_one_130bpm_pianoGliss.wav</ShortName>
+					<CachePath>SFX/mus_level_one_130bpm_pianoGliss_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="1026474284" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_level_one_130bpm_outro.wav</ShortName>
+					<CachePath>SFX/mus_level_one_130bpm_outro_9EDFC787.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3532690205" Name="Play_level_one_music" ObjectPath="\Events\avy music events\Play_level_one_music" GUID="{48C4AABD-1063-4975-B341-E33A36C8D11E}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="794838114"/>
+						<MediaRef Id="852624060"/>
+					</MediaRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3296584377" Id="4196427868" GUID="{A0130F3D-8D24-4A2C-92F2-E4E8A8763FB1}"/>
+							<MediaRefs>
+								<MediaRef Id="657037866"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3296584377" Id="520375247" GUID="{E50F9DAF-F288-46C1-BFE9-77C625F285B8}"/>
+							<MediaRefs>
+								<MediaRef Id="708240575"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3296584377" Id="436487211" GUID="{362E1B0B-E6BF-469B-889B-3E53AC1E622B}"/>
+							<MediaRefs>
+								<MediaRef Id="362719838"/>
+								<MediaRef Id="536069338"/>
+								<MediaRef Id="776736352"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3296584377" Id="470042484" GUID="{B19DB1AA-994F-4FFD-A803-CA30BF6FA290}"/>
+							<MediaRefs>
+								<MediaRef Id="291589524"/>
+								<MediaRef Id="340873418"/>
+								<MediaRef Id="536069338"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3296584377" Id="2546009797" GUID="{EF267F18-BB7D-4539-9A79-C5E96ECCABF1}"/>
+							<MediaRefs>
+								<MediaRef Id="1026474284"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</Events>
+			<StateGroups>
+				<StateGroup Id="3296584377" Name="hype" ObjectPath="\States\avy music states\hype" GUID="{B61FCDC7-EC1B-4FFE-A4FE-776204B2FA7C}">
+					<States>
+						<State Id="436487211" Name="hype_50" ObjectPath="\States\avy music states\hype\hype_50" GUID="{362E1B0B-E6BF-469B-889B-3E53AC1E622B}"/>
+						<State Id="470042484" Name="hype_75" ObjectPath="\States\avy music states\hype\hype_75" GUID="{B19DB1AA-994F-4FFD-A803-CA30BF6FA290}"/>
+						<State Id="520375247" Name="hype_25" ObjectPath="\States\avy music states\hype\hype_25" GUID="{E50F9DAF-F288-46C1-BFE9-77C625F285B8}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\avy music states\hype\None" GUID="{72F93EBB-2A74-4340-AAD0-972E0AEC4E9B}"/>
+						<State Id="2546009797" Name="hype_100" ObjectPath="\States\avy music states\hype\hype_100" GUID="{EF267F18-BB7D-4539-9A79-C5E96ECCABF1}"/>
+						<State Id="4196427868" Name="hype_0" ObjectPath="\States\avy music states\hype\hype_0" GUID="{A0130F3D-8D24-4A2C-92F2-E4E8A8763FB1}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{A076F830-7BB9-3E35-E119-0E45643B854C}">
+			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<AudioDevices>
-					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
-					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+					<Plugin Id="2317455096" Name="No_Output" ObjectPath="\Audio Devices\Default Work Unit\No_Output" GUID="{09BDC886-7852-4C05-BE15-D92485314CAD}" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" ObjectPath="\Audio Devices\Default Work Unit\System" GUID="{EB9C85E5-E8A3-40AB-B615-B2D2E462F3DE}" LibName="System" LibId="11403271"/>
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 			</Busses>
+			<GameParameters>
+				<GameParameter Id="3296584377" Name="Hype" ObjectPath="\Game Parameters\Default Work Unit\Hype" GUID="{F10FAC34-8EF9-452B-9153-83ADE95B5819}"/>
+				<GameParameter Id="4082227278" Name="On_Disco_Floor" ObjectPath="\Game Parameters\Default Work Unit\On_Disco_Floor" GUID="{1353123B-8719-435F-969E-773D804B92E8}"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="762757699" Name="Gameplay_State" ObjectPath="\States\Default Work Unit\Gameplay_State" GUID="{B587995D-62E9-431F-94B4-73168DC556F9}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Gameplay_State\None" GUID="{17C6B36D-3016-40C9-99B0-1BAE6CBE943F}"/>
+						<State Id="2716678721" Name="Victory" ObjectPath="\States\Default Work Unit\Gameplay_State\Victory" GUID="{9108A2BF-1C91-4F03-BBCD-47F60251D933}"/>
+						<State Id="2764240573" Name="Combat" ObjectPath="\States\Default Work Unit\Gameplay_State\Combat" GUID="{D23C63AE-8C84-4140-9A0C-994815485352}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3296584377" Name="hype" ObjectPath="\States\avy music states\hype" GUID="{B61FCDC7-EC1B-4FFE-A4FE-776204B2FA7C}">
+					<States>
+						<State Id="436487211" Name="hype_50" ObjectPath="\States\avy music states\hype\hype_50" GUID="{362E1B0B-E6BF-469B-889B-3E53AC1E622B}"/>
+						<State Id="470042484" Name="hype_75" ObjectPath="\States\avy music states\hype\hype_75" GUID="{B19DB1AA-994F-4FFD-A803-CA30BF6FA290}"/>
+						<State Id="520375247" Name="hype_25" ObjectPath="\States\avy music states\hype\hype_25" GUID="{E50F9DAF-F288-46C1-BFE9-77C625F285B8}"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\avy music states\hype\None" GUID="{72F93EBB-2A74-4340-AAD0-972E0AEC4E9B}"/>
+						<State Id="2546009797" Name="hype_100" ObjectPath="\States\avy music states\hype\hype_100" GUID="{EF267F18-BB7D-4539-9A79-C5E96ECCABF1}"/>
+						<State Id="4196427868" Name="hype_0" ObjectPath="\States\avy music states\hype\hype_0" GUID="{A0130F3D-8D24-4A2C-92F2-E4E8A8763FB1}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="2385628198" Name="footsteps" ObjectPath="\Switches\avy switches\footsteps" GUID="{2D745F57-2B08-43B8-98B8-6A72CAABF670}">
+					<Switches>
+						<Switch Id="841620460" Name="concrete" ObjectPath="\Switches\avy switches\footsteps\concrete" GUID="{316713C8-3BA6-432B-B523-97058CCE560E}"/>
+						<Switch Id="2152775650" Name="grassy" ObjectPath="\Switches\avy switches\footsteps\grassy" GUID="{FF495F4D-F946-4951-81AB-9F5ED572ED40}"/>
+						<Switch Id="3920460409" Name="disco" ObjectPath="\Switches\avy switches\footsteps\disco" GUID="{2DFFD969-3BA2-4BBF-984E-0952DC3C7FC0}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="2848855924" Name="Footsteps_01" ObjectPath="\Switches\Default Work Unit\Footsteps_01" GUID="{D837BB52-31E7-49A5-A77F-069EF20CB60B}">
+					<Switches>
+						<Switch Id="1914034948" Name="New_Switch" ObjectPath="\Switches\Default Work Unit\Footsteps_01\New_Switch" GUID="{822F63B6-39A1-4147-9A51-E6A1CB9CBEC3}"/>
+						<Switch Id="3952450473" Name="New_Switch_02" ObjectPath="\Switches\Default Work Unit\Footsteps_01\New_Switch_02" GUID="{60F846F2-C835-4848-867F-1976750260AB}"/>
+						<Switch Id="3952450474" Name="New_Switch_01" ObjectPath="\Switches\Default Work Unit\Footsteps_01\New_Switch_01" GUID="{322203B8-97D4-4624-96CF-D453F12E8616}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{DD84B397-4479-8512-BE6B-DD9AC95E5264}">
-			<ShortName>Main</ShortName>
-			<Path>Main.bnk</Path>
+		<SoundBank Id="2297208207" Type="User" GUID="{D7757AB9-AAC7-41E1-BCF6-CB59A2C0BE4F}" Language="SFX" Hash="{4395548A-F01D-8C8F-478D-4104BF920B75}">
+			<ObjectPath>\SoundBanks\avy soundbanks\sfx_enemy</ObjectPath>
+			<ShortName>sfx_enemy</ShortName>
+			<Path>sfx_enemy.bnk</Path>
 			<Media>
-				<File Id="275378158" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_charger_death_1.wav</ShortName>
-					<CachePath>SFX/sfx_charger_death_1_10C4C929.wem</CachePath>
+				<File Id="34219380" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_alert_2.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_alert_2_3F75BDB9.wem</CachePath>
 				</File>
-				<File Id="375178555" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_groovy_2_larose.wav</ShortName>
-					<CachePath>SFX/sfx_groovy_2_larose_10C4C929.wem</CachePath>
+				<File Id="53863138" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_endAttack_5.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_endAttack_5_3F75BDB9.wem</CachePath>
 				</File>
-				<File Id="395767410" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_unpause_larose (1).wav</ShortName>
-					<CachePath>SFX/sfx_unpause_larose (1)_10C4C929.wem</CachePath>
+				<File Id="86676616" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_footstepsConcrete_5.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_footstepsConcrete_5_3F75BDB9.wem</CachePath>
 				</File>
-				<File Id="403074574" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_player_hurt_3.wav</ShortName>
-					<CachePath>SFX/sfx_player_hurt_3_10C4C929.wem</CachePath>
+				<File Id="133250952" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_footstepsConcrete_1.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_footstepsConcrete_1_3F75BDB9.wem</CachePath>
 				</File>
-				<File Id="405788637" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_player_hurt_4.wav</ShortName>
-					<CachePath>SFX/sfx_player_hurt_4_10C4C929.wem</CachePath>
+				<File Id="166319512" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_aggro_1.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_aggro_1_3F75BDB9.wem</CachePath>
 				</File>
-				<File Id="429033431" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_player_dash.wav</ShortName>
-					<CachePath>SFX/sfx_player_dash_10C4C929.wem</CachePath>
+				<File Id="175233521" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_endAttack_2.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_endAttack_2_3F75BDB9.wem</CachePath>
 				</File>
-				<File Id="507762272" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_charger_death_2.wav</ShortName>
-					<CachePath>SFX/sfx_charger_death_2_10C4C929.wem</CachePath>
+				<File Id="199178399" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_footstepsDisco_3.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_footstepsDisco_3_3F75BDB9.wem</CachePath>
 				</File>
-				<File Id="611627305" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_player_hurt_6.wav</ShortName>
-					<CachePath>SFX/sfx_player_hurt_6_10C4C929.wem</CachePath>
+				<File Id="220787170" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_footstepsConcrete_3.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_footstepsConcrete_3_3F75BDB9.wem</CachePath>
 				</File>
-				<File Id="621091837" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_confirming_option_larose.wav</ShortName>
-					<CachePath>SFX/sfx_confirming_option_larose_10C4C929.wem</CachePath>
+				<File Id="226718950" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_footstepsDisco_2.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_footstepsDisco_2_3F75BDB9.wem</CachePath>
 				</File>
-				<File Id="648094548" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_radical_larose.wav</ShortName>
-					<CachePath>SFX/sfx_radical_larose_10C4C929.wem</CachePath>
+				<File Id="231296671" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_footstepsDisco_5.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_footstepsDisco_5_3F75BDB9.wem</CachePath>
 				</File>
-				<File Id="673051370" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_mouse_select_larose.wav</ShortName>
-					<CachePath>SFX/sfx_mouse_select_larose_10C4C929.wem</CachePath>
+				<File Id="258285539" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_footstepsConcrete_6.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_footstepsConcrete_6_3F75BDB9.wem</CachePath>
 				</File>
-				<File Id="990288280" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_bodacious_larose.wav</ShortName>
-					<CachePath>SFX/sfx_bodacious_larose_10C4C929.wem</CachePath>
+				<File Id="294943875" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_footstepsDisco_1.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_footstepsDisco_1_3F75BDB9.wem</CachePath>
 				</File>
-				<File Id="1007579897" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_player_death.wav</ShortName>
-					<CachePath>SFX/sfx_player_death_10C4C929.wem</CachePath>
+				<File Id="298112850" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_death_2.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_death_2_3F75BDB9.wem</CachePath>
 				</File>
-				<File Id="1033023117" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>mus_trickfoolery_fullloop_222bpm.wav</ShortName>
-					<CachePath>SFX/mus_trickfoolery_fullloop_222bpm_1E4B5F4E.wem</CachePath>
+				<File Id="348335200" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_aggro_3.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_aggro_3_3F75BDB9.wem</CachePath>
 				</File>
-				<File Id="1066273250" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_pause_larose.wav</ShortName>
-					<CachePath>SFX/sfx_pause_larose_10C4C929.wem</CachePath>
+				<File Id="348441608" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_footstepsGrassy_4.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_footstepsGrassy_4_3F75BDB9.wem</CachePath>
 				</File>
-				<File Id="1070951602" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_player_hurt_1.wav</ShortName>
-					<CachePath>SFX/sfx_player_hurt_1_10C4C929.wem</CachePath>
+				<File Id="389860146" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_startAttack_3.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_startAttack_3_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="448787943" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_startAttack_1.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_startAttack_1_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="486685274" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_footstepsConcrete_2.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_footstepsConcrete_2_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="531369014" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_footstepsGrassy_5.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_footstepsGrassy_5_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="560392968" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_footstepsGrassy_3.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_footstepsGrassy_3_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="616656288" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_footstepsConcrete_4.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_footstepsConcrete_4_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="634211499" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_death_3.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_death_3_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="656489993" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_alert_1.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_alert_1_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="689131638" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_endAttack_4.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_endAttack_4_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="737643451" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_footstepsDisco_4.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_footstepsDisco_4_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="843431021" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_footstepsGrassy_2.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_footstepsGrassy_2_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="865498349" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_startAttack_5.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_startAttack_5_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="872400996" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_endAttack_1.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_endAttack_1_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="885530422" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_death_1.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_death_1_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="936270129" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_footstepsGrassy_1.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_footstepsGrassy_1_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="960175453" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_alert_3.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_alert_3_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="963527218" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_footstepsDisco_6.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_footstepsDisco_6_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="974045788" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_endAttack_3.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_endAttack_3_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="991567815" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_aggro_2.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_aggro_2_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="991664786" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_aggro_4.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_aggro_4_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="1068285633" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_startAttack_2.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_startAttack_2_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="1069837018" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyBeefy_startAttack_4.wav</ShortName>
+					<CachePath>SFX/sfx_enemyBeefy_startAttack_4_3F75BDB9.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3263497147" Name="Play_mus_Trickfoolery_222bpm" DurationType="Infinite">
+				<Event Id="504043942" Name="Play_sfx_enemyBeefy_aggro" ObjectPath="\Events\avy sfx events\Play_sfx_enemyBeefy\Play_sfx_enemyBeefy_aggro" GUID="{1B8EA9AF-9A1C-4F95-A67F-8DD7FC4E54B5}" DurationType="OneShot" DurationMin="0.77709496" DurationMax="2.4643383">
+					<MediaRefs>
+						<MediaRef Id="166319512"/>
+						<MediaRef Id="348335200"/>
+						<MediaRef Id="991567815"/>
+						<MediaRef Id="991664786"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3666456714" Name="Play_sfx_enemyBeefy_alert" ObjectPath="\Events\avy sfx events\Play_sfx_enemyBeefy\Play_sfx_enemyBeefy_alert" GUID="{F855C311-EB1A-45A3-8504-4460F2E4E8B4}" DurationType="OneShot" DurationMin="0.8256586" DurationMax="2.6087189">
+					<MediaRefs>
+						<MediaRef Id="34219380"/>
+						<MediaRef Id="656489993"/>
+						<MediaRef Id="960175453"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="966443990" Name="Play_sfx_enemyBeefy_death" ObjectPath="\Events\avy sfx events\Play_sfx_enemyBeefy\Play_sfx_enemyBeefy_death" GUID="{E0809B1C-449E-4D04-9CFB-CD4142BF2F04}" DurationType="OneShot" DurationMin="0.26440218" DurationMax="2.4643383">
+					<MediaRefs>
+						<MediaRef Id="298112850"/>
+						<MediaRef Id="634211499"/>
+						<MediaRef Id="885530422"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2827312655" Name="Play_sfx_enemyBeefy_endAttack" ObjectPath="\Events\avy sfx events\Play_sfx_enemyBeefy\Play_sfx_enemyBeefy_endAttack" GUID="{31F4F8EC-A510-4938-995A-0E3C2BC472C7}" DurationType="OneShot" DurationMin="0.8418465" DurationMax="3.1574256">
+					<MediaRefs>
+						<MediaRef Id="53863138"/>
+						<MediaRef Id="175233521"/>
+						<MediaRef Id="689131638"/>
+						<MediaRef Id="872400996"/>
+						<MediaRef Id="974045788"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3576742661" Name="Play_sfx_enemyBeefy_footsteps" ObjectPath="\Events\avy sfx events\Play_sfx_enemyBeefy\Play_sfx_enemyBeefy_footsteps" GUID="{AA0145F3-BAE7-4E23-A7D3-021531365BCE}" DurationType="OneShot" DurationMin="0.26380503" DurationMax="1.6466068">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="2152775650" GUID="{FF495F4D-F946-4951-81AB-9F5ED572ED40}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="348441608"/>
+								<MediaRef Id="531369014"/>
+								<MediaRef Id="560392968"/>
+								<MediaRef Id="843431021"/>
+								<MediaRef Id="936270129"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="3920460409" GUID="{2DFFD969-3BA2-4BBF-984E-0952DC3C7FC0}"/>
+							<MediaRefs>
+								<MediaRef Id="199178399"/>
+								<MediaRef Id="226718950"/>
+								<MediaRef Id="231296671"/>
+								<MediaRef Id="294943875"/>
+								<MediaRef Id="737643451"/>
+								<MediaRef Id="963527218"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="841620460" GUID="{316713C8-3BA6-432B-B523-97058CCE560E}"/>
+							<MediaRefs>
+								<MediaRef Id="86676616"/>
+								<MediaRef Id="133250952"/>
+								<MediaRef Id="220787170"/>
+								<MediaRef Id="258285539"/>
+								<MediaRef Id="486685274"/>
+								<MediaRef Id="616656288"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1327506600" Name="Play_sfx_enemyBeefy_startAttack" ObjectPath="\Events\avy sfx events\Play_sfx_enemyBeefy\Play_sfx_enemyBeefy_startAttack" GUID="{0AAA5295-E626-4ABA-BE63-E7E6C53C1EE5}" DurationType="OneShot" DurationMin="0.45331177" DurationMax="1.7134986">
+					<MediaRefs>
+						<MediaRef Id="389860146"/>
+						<MediaRef Id="448787943"/>
+						<MediaRef Id="865498349"/>
+						<MediaRef Id="1068285633"/>
+						<MediaRef Id="1069837018"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<SwitchGroups>
+				<SwitchGroup Id="2385628198" Name="footsteps" ObjectPath="\Switches\avy switches\footsteps" GUID="{2D745F57-2B08-43B8-98B8-6A72CAABF670}">
+					<Switches>
+						<Switch Id="841620460" Name="concrete" ObjectPath="\Switches\avy switches\footsteps\concrete" GUID="{316713C8-3BA6-432B-B523-97058CCE560E}"/>
+						<Switch Id="2152775650" Name="grassy" ObjectPath="\Switches\avy switches\footsteps\grassy" GUID="{FF495F4D-F946-4951-81AB-9F5ED572ED40}"/>
+						<Switch Id="3920460409" Name="disco" ObjectPath="\Switches\avy switches\footsteps\disco" GUID="{2DFFD969-3BA2-4BBF-984E-0952DC3C7FC0}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" GUID="{FCC95966-8BC9-428F-A86F-77BD80236DCE}" Language="SFX" Hash="{AC285288-EF9D-4B75-C76C-EBE672CC8C12}">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="19996191" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AAA_synth_3.wav</ShortName>
+					<CachePath>SFX/AAA_synth_3_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="21309808" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_tom_step_6.wav</ShortName>
+					<CachePath>SFX/sfx_tom_step_6_DEACC6A2.wem</CachePath>
+				</File>
+				<File Id="63593165" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_charger_hurt_3.wav</ShortName>
+					<CachePath>SFX/sfx_charger_hurt_3_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="72287347" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_future_synth.wav</ShortName>
+					<CachePath>SFX/mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_future_synth_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="83193888" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_taunts_raspberry_2.wav</ShortName>
+					<CachePath>SFX/sfx_taunts_raspberry_2_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="103508686" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_tom_step_4.wav</ShortName>
+					<CachePath>SFX/sfx_tom_step_4_AEC65BBC.wem</CachePath>
+				</File>
+				<File Id="119466304" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_charger_hurt_2.wav</ShortName>
+					<CachePath>SFX/sfx_charger_hurt_2_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="145105292" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AAA_sax_3.wav</ShortName>
+					<CachePath>SFX/AAA_sax_3_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="217413579" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AAA_sax_10.wav</ShortName>
+					<CachePath>SFX/AAA_sax_10_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="224255706" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_Pause_loop_75bpm.wav</ShortName>
+					<CachePath>SFX/mus_Pause_loop_75bpm_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="275378158" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_charger_death_1.wav</ShortName>
+					<CachePath>SFX/sfx_charger_death_1_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="292366327" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_charger_aggro_increase_3.wav</ShortName>
+					<CachePath>SFX/sfx_charger_aggro_increase_3_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="305122859" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_taunts_hey_lobster_roll_1.wav</ShortName>
+					<CachePath>SFX/sfx_taunts_hey_lobster_roll_1_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="331701484" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_Alien_Arena_Kill!_disco_170bpm_disco_floor.wav</ShortName>
+					<CachePath>SFX/mus_Alien_Arena_Kill!_disco_170bpm_disco_floor_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="356099246" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AAA_sax_9.wav</ShortName>
+					<CachePath>SFX/AAA_sax_9_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="375178555" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_groovy_2_larose.wav</ShortName>
+					<CachePath>SFX/sfx_groovy_2_larose_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="376943216" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_tom_step_8.wav</ShortName>
+					<CachePath>SFX/sfx_tom_step_8_061BB2D2.wem</CachePath>
+				</File>
+				<File Id="380291550" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_Alien_Arena_Kill!_disco_170bpm_loop_standard.wav</ShortName>
+					<CachePath>SFX/mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="394800615" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AAA_sax_8.wav</ShortName>
+					<CachePath>SFX/AAA_sax_8_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="395767410" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_unpause_larose (1).wav</ShortName>
+					<CachePath>SFX/sfx_unpause_larose (1)_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="403074574" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_hurt_3.wav</ShortName>
+					<CachePath>SFX/sfx_player_hurt_3_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="405788637" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_hurt_4.wav</ShortName>
+					<CachePath>SFX/sfx_player_hurt_4_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="420247977" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_taunts_hey_crab_face_1.wav</ShortName>
+					<CachePath>SFX/sfx_taunts_hey_crab_face_1_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="423795870" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_tom_step_5.wav</ShortName>
+					<CachePath>SFX/sfx_tom_step_5_18E911DA.wem</CachePath>
+				</File>
+				<File Id="429033431" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_dash.wav</ShortName>
+					<CachePath>SFX/sfx_player_dash_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="481270644" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AAA_sax_7.wav</ShortName>
+					<CachePath>SFX/AAA_sax_7_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="484621152" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_taunts_raspberry_3.wav</ShortName>
+					<CachePath>SFX/sfx_taunts_raspberry_3_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="507762272" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_charger_death_2.wav</ShortName>
+					<CachePath>SFX/sfx_charger_death_2_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="536532914" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AAA_sax_5.wav</ShortName>
+					<CachePath>SFX/AAA_sax_5_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="582855424" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_taunts_hey_stupid_1.wav</ShortName>
+					<CachePath>SFX/sfx_taunts_hey_stupid_1_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="603062409" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_taunts_akanbe_2.wav</ShortName>
+					<CachePath>SFX/sfx_taunts_akanbe_2_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="611627305" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_hurt_6.wav</ShortName>
+					<CachePath>SFX/sfx_player_hurt_6_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="618887788" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_charger_aggro_increase_2.wav</ShortName>
+					<CachePath>SFX/sfx_charger_aggro_increase_2_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="621091837" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_confirming_option_larose.wav</ShortName>
+					<CachePath>SFX/sfx_confirming_option_larose_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="657227351" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AAA_sax_1.wav</ShortName>
+					<CachePath>SFX/AAA_sax_1_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="664728998" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AAA_sax_2.wav</ShortName>
+					<CachePath>SFX/AAA_sax_2_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="672575856" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_tom_step_7.wav</ShortName>
+					<CachePath>SFX/sfx_tom_step_7_A884DB23.wem</CachePath>
+				</File>
+				<File Id="673051370" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_mouse_select_larose.wav</ShortName>
+					<CachePath>SFX/sfx_mouse_select_larose_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="691049765" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_taunts_hey_stupid_2.wav</ShortName>
+					<CachePath>SFX/sfx_taunts_hey_stupid_2_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="753217888" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_Alien_Arena_Kill!_trumpets.wav</ShortName>
+					<CachePath>SFX/mus_Alien_Arena_Kill!_trumpets_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="780761335" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_tom_step_10.wav</ShortName>
+					<CachePath>SFX/sfx_tom_step_10_D131EA99.wem</CachePath>
+				</File>
+				<File Id="780987649" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_taunts_akanbe_1.wav</ShortName>
+					<CachePath>SFX/sfx_taunts_akanbe_1_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="788983524" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_taunts_you_scared_1.wav</ShortName>
+					<CachePath>SFX/sfx_taunts_you_scared_1_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="792050017" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_Alien_Arena_Kill!_disco_170bpm_intro.wav</ShortName>
+					<CachePath>SFX/mus_Alien_Arena_Kill!_disco_170bpm_intro_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="825759985" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_charger_aggro_increase_1.wav</ShortName>
+					<CachePath>SFX/sfx_charger_aggro_increase_1_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="829787396" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_taunts_raspberry_1.wav</ShortName>
+					<CachePath>SFX/sfx_taunts_raspberry_1_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="832071081" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AAA_sax_6.wav</ShortName>
+					<CachePath>SFX/AAA_sax_6_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="882571690" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_Alien_Arena_Kill!_disco_170bpm_loop_hype_brass.wav</ShortName>
+					<CachePath>SFX/mus_Alien_Arena_Kill!_disco_170bpm_loop_hype_brass_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="886513295" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_percussion.wav</ShortName>
+					<CachePath>SFX/mus_Alien_Arena_Kill!_disco_170bpm_loop_standard_percussion_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="980003540" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AAA_synth_2.wav</ShortName>
+					<CachePath>SFX/AAA_synth_2_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="1007579897" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_death.wav</ShortName>
+					<CachePath>SFX/sfx_player_death_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="1033023117" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_trickfoolery_fullloop_222bpm.wav</ShortName>
+					<CachePath>SFX/mus_trickfoolery_fullloop_222bpm_BE9CAA30.wem</CachePath>
+				</File>
+				<File Id="1043628278" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_tom_step_1.wav</ShortName>
+					<CachePath>SFX/sfx_tom_step_1_E5E99A79.wem</CachePath>
+				</File>
+				<File Id="1066273250" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_pause_larose.wav</ShortName>
+					<CachePath>SFX/sfx_pause_larose_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="1069608001" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mus_Alien_Arena_Kill!_victory_cue_bpm170.wav</ShortName>
+					<CachePath>SFX/mus_Alien_Arena_Kill!_victory_cue_bpm170_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="1070951602" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_hurt_1.wav</ShortName>
+					<CachePath>SFX/sfx_player_hurt_1_3F75BDB9.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="308973664" Name="First_Time_Mute_mus_pause_75bpm" ObjectPath="\Events\Default Work Unit\First_Time_Mute_mus_pause_75bpm" GUID="{7288EC1A-8592-4957-B27E-E911D3B56F4A}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1929765902" Name="Mute_Alien_Arena_Assault_170bpm" ObjectPath="\Events\Default Work Unit\Mute_Alien_Arena_Assault_170bpm" GUID="{D563AF20-5219-4CAB-9AEF-51C10825081B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3756680375" Name="Mute_mus_pause_75bpm" ObjectPath="\Events\Default Work Unit\Mute_mus_pause_75bpm" GUID="{0E96271C-B559-48D8-B09B-94D3489189FD}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="341582045" Name="Play_Alien_Arena_Assault_170bpm" ObjectPath="\Events\Default Work Unit\Play_Alien_Arena_Assault_170bpm" GUID="{8333E7FF-2074-4574-ADA6-3F3F7B5DA275}" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="762757699" Id="2716678721" GUID="{9108A2BF-1C91-4F03-BBCD-47F60251D933}"/>
+							<MediaRefs>
+								<MediaRef Id="1069608001"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="762757699" Id="2764240573" GUID="{D23C63AE-8C84-4140-9A0C-994815485352}"/>
+							<MediaRefs>
+								<MediaRef Id="19996191"/>
+								<MediaRef Id="72287347"/>
+								<MediaRef Id="145105292"/>
+								<MediaRef Id="217413579"/>
+								<MediaRef Id="331701484"/>
+								<MediaRef Id="356099246"/>
+								<MediaRef Id="380291550"/>
+								<MediaRef Id="394800615"/>
+								<MediaRef Id="481270644"/>
+								<MediaRef Id="536532914"/>
+								<MediaRef Id="657227351"/>
+								<MediaRef Id="664728998"/>
+								<MediaRef Id="753217888"/>
+								<MediaRef Id="792050017"/>
+								<MediaRef Id="832071081"/>
+								<MediaRef Id="882571690"/>
+								<MediaRef Id="886513295"/>
+								<MediaRef Id="980003540"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1926045526" Name="Play_charger_angy" ObjectPath="\Events\Default Work Unit\Play_charger_angy" GUID="{E480F771-7FFA-43EE-965C-E01524C26C0E}" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.5" DurationMax="2">
+					<MediaRefs>
+						<MediaRef Id="292366327"/>
+						<MediaRef Id="618887788"/>
+						<MediaRef Id="825759985"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3579375072" Name="Play_charger_lunge" ObjectPath="\Events\Default Work Unit\Play_charger_lunge" GUID="{34768769-7EB7-4C6B-A65A-4CB6AB2A5B55}" MaxAttenuation="15" DurationType="OneShot" DurationMin="1" DurationMax="1.5">
+					<MediaRefs>
+						<MediaRef Id="63593165"/>
+						<MediaRef Id="119466304"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2758388342" Name="Play_mus_Pause_75bpm" ObjectPath="\Events\Default Work Unit\Play_mus_Pause_75bpm" GUID="{BCE1262A-3C14-4B31-B28C-4A64BEE31410}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="224255706"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3263497147" Name="Play_mus_Trickfoolery_222bpm" ObjectPath="\Events\Default Work Unit\Play_mus_Trickfoolery_222bpm" GUID="{957ED87C-54CD-4A6B-878A-25F81372D716}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="1033023117"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1635721613" Name="Play_sfx_bodacious" DurationType="OneShot" DurationMin="2.2005215" DurationMax="2.2005215">
-					<MediaRefs>
-						<MediaRef Id="990288280"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="843029991" Name="Play_sfx_charger_death" DurationType="OneShot" DurationMin="1.5" DurationMax="2">
+				<Event Id="843029991" Name="Play_sfx_charger_death" ObjectPath="\Events\Default Work Unit\Play_sfx_charger_death" GUID="{63384843-A4A4-44C3-AED2-9CDA3A9431A5}" MaxAttenuation="15" DurationType="OneShot" DurationMin="1.5" DurationMax="2">
 					<MediaRefs>
 						<MediaRef Id="275378158"/>
 						<MediaRef Id="507762272"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2343006462" Name="Play_sfx_confirm" DurationType="OneShot" DurationMin="4.5" DurationMax="4.5">
+				<Event Id="2343006462" Name="Play_sfx_confirm" ObjectPath="\Events\Default Work Unit\Play_sfx_confirm" GUID="{69F3C602-D088-4702-A2C0-78D74E58ADF3}" DurationType="OneShot" DurationMin="4.5" DurationMax="4.5">
 					<MediaRefs>
 						<MediaRef Id="621091837"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="526466336" Name="Play_sfx_groovy" DurationType="OneShot" DurationMin="2" DurationMax="2">
+				<Event Id="526466336" Name="Play_sfx_groovy" ObjectPath="\Events\Default Work Unit\Play_sfx_groovy" GUID="{7FB8863C-987C-4F96-A523-14BA0486137B}" DurationType="OneShot" DurationMin="2" DurationMax="2">
 					<MediaRefs>
 						<MediaRef Id="375178555"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3683043420" Name="Play_sfx_pause" DurationType="OneShot" DurationMin="2" DurationMax="2">
+				<Event Id="3683043420" Name="Play_sfx_pause" ObjectPath="\Events\Default Work Unit\Play_sfx_pause" GUID="{1228DA1E-31A1-49A3-8418-61751A909CFE}" DurationType="OneShot" DurationMin="2" DurationMax="2">
 					<MediaRefs>
 						<MediaRef Id="1066273250"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4077681152" Name="Play_sfx_player_dash" DurationType="OneShot" DurationMin="0.37457678" DurationMax="0.6674199">
+				<Event Id="4077681152" Name="Play_sfx_player_dash" ObjectPath="\Events\Default Work Unit\Play_sfx_player_dash" GUID="{D6F8BF24-B6D5-4FEA-AC6B-3CEC97B0DDC4}" DurationType="OneShot" DurationMin="0.37457678" DurationMax="0.6674199">
 					<MediaRefs>
 						<MediaRef Id="429033431"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1591758634" Name="Play_sfx_player_death" DurationType="OneShot" DurationMin="1.5" DurationMax="1.5">
+				<Event Id="1591758634" Name="Play_sfx_player_death" ObjectPath="\Events\Default Work Unit\Play_sfx_player_death" GUID="{CAC80460-81AC-420B-AD88-E8FA18AC9974}" DurationType="OneShot" DurationMin="1.5" DurationMax="1.5">
 					<MediaRefs>
 						<MediaRef Id="1007579897"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1067524079" Name="Play_sfx_player_hurt" DurationType="OneShot" DurationMin="1" DurationMax="1">
+				<Event Id="1067524079" Name="Play_sfx_player_hurt" ObjectPath="\Events\Default Work Unit\Play_sfx_player_hurt" GUID="{F2D8E87D-016C-4DA6-8E62-4CD589790A37}" DurationType="OneShot" DurationMin="1" DurationMax="1">
 					<MediaRefs>
 						<MediaRef Id="403074574"/>
 						<MediaRef Id="405788637"/>
@@ -141,23 +736,161 @@
 						<MediaRef Id="1070951602"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="598351696" Name="Play_sfx_radical" DurationType="OneShot" DurationMin="2.5" DurationMax="2.5">
-					<MediaRefs>
-						<MediaRef Id="648094548"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="325086926" Name="Play_sfx_select" DurationType="OneShot" DurationMin="1.8866584" DurationMax="2.1497467">
+				<Event Id="325086926" Name="Play_sfx_select" ObjectPath="\Events\Default Work Unit\Play_sfx_select" GUID="{D9480393-0FF0-4478-941E-C2F83A21C8BD}" DurationType="OneShot" DurationMin="1.8866584" DurationMax="2.1497467">
 					<MediaRefs>
 						<MediaRef Id="673051370"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3476672187" Name="Play_sfx_unpause" DurationType="OneShot" DurationMin="2" DurationMax="2">
+				<Event Id="1800631706" Name="Play_sfx_taunt" ObjectPath="\Events\Default Work Unit\Play_sfx_taunt" GUID="{CD05A98D-2AF9-47E8-A5D9-08F5EE359AC0}" DurationType="OneShot" DurationMin="1.5" DurationMax="3">
+					<MediaRefs>
+						<MediaRef Id="83193888"/>
+						<MediaRef Id="305122859"/>
+						<MediaRef Id="420247977"/>
+						<MediaRef Id="484621152"/>
+						<MediaRef Id="582855424"/>
+						<MediaRef Id="603062409"/>
+						<MediaRef Id="691049765"/>
+						<MediaRef Id="780987649"/>
+						<MediaRef Id="788983524"/>
+						<MediaRef Id="829787396"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2661393732" Name="Play_sfx_tomstep" ObjectPath="\Events\Default Work Unit\Play_sfx_tomstep" GUID="{1BC515F3-568C-4A8D-995F-DBFA44FF9E2A}" DurationType="OneShot" DurationMin="0.3509921" DurationMax="0.35616517">
+					<MediaRefs>
+						<MediaRef Id="21309808"/>
+						<MediaRef Id="103508686"/>
+						<MediaRef Id="376943216"/>
+						<MediaRef Id="423795870"/>
+						<MediaRef Id="672575856"/>
+						<MediaRef Id="780761335"/>
+						<MediaRef Id="1043628278"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3476672187" Name="Play_sfx_unpause" ObjectPath="\Events\Default Work Unit\Play_sfx_unpause" GUID="{EF55EFFC-D9BF-4914-B45F-C34160708C30}" DurationType="OneShot" DurationMin="2" DurationMax="2">
 					<MediaRefs>
 						<MediaRef Id="395767410"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2601853237" Name="Stop_mus_Trickfoolery_222bpm" ObjectPath="\Events\Default Work Unit\Stop_mus_Trickfoolery_222bpm" GUID="{103A468D-C1A5-4619-8F4C-E88DFD668A3C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1990966217" Name="Unmute_Alien_Arena_Assault_170bpm" ObjectPath="\Events\Default Work Unit\Unmute_Alien_Arena_Assault_170bpm" GUID="{33C4D4F4-E3D0-44A5-8C66-252F4F122C70}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4152903754" Name="Unmute_mus_pause_75bpm" ObjectPath="\Events\Default Work Unit\Unmute_mus_pause_75bpm" GUID="{C3E827C6-F5CC-4329-985D-E19D22E9E34A}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="3296584377" Name="Hype" ObjectPath="\Game Parameters\Default Work Unit\Hype" GUID="{F10FAC34-8EF9-452B-9153-83ADE95B5819}"/>
+				<GameParameter Id="4082227278" Name="On_Disco_Floor" ObjectPath="\Game Parameters\Default Work Unit\On_Disco_Floor" GUID="{1353123B-8719-435F-969E-773D804B92E8}"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="762757699" Name="Gameplay_State" ObjectPath="\States\Default Work Unit\Gameplay_State" GUID="{B587995D-62E9-431F-94B4-73168DC556F9}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Gameplay_State\None" GUID="{17C6B36D-3016-40C9-99B0-1BAE6CBE943F}"/>
+						<State Id="2716678721" Name="Victory" ObjectPath="\States\Default Work Unit\Gameplay_State\Victory" GUID="{9108A2BF-1C91-4F03-BBCD-47F60251D933}"/>
+						<State Id="2764240573" Name="Combat" ObjectPath="\States\Default Work Unit\Gameplay_State\Combat" GUID="{D23C63AE-8C84-4140-9A0C-994815485352}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="4271082421" Type="User" GUID="{95E7E615-6C37-4B87-9F14-C1E820F537B1}" Language="SFX" Hash="{20B4325C-C756-2457-AAC9-94E276A30E6E}">
+			<ObjectPath>\SoundBanks\avy soundbanks\sfx_player_and_UI</ObjectPath>
+			<ShortName>sfx_player_and_UI</ShortName>
+			<Path>sfx_player_and_UI.bnk</Path>
+			<Media>
+				<File Id="58618328" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>tom_discofloor_step_4.wav</ShortName>
+					<CachePath>SFX/tom_discofloor_step_4_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="180330411" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>tom_pavement_step_1.wav</ShortName>
+					<CachePath>SFX/tom_pavement_step_1_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="210863455" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>tom_discofloor_step_2.wav</ShortName>
+					<CachePath>SFX/tom_discofloor_step_2_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="283688369" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>tom_discofloor_step_3.wav</ShortName>
+					<CachePath>SFX/tom_discofloor_step_3_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="357716752" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_footstepsGrassy_5.wav</ShortName>
+					<CachePath>SFX/sfx_player_footstepsGrassy_5_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="394076071" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_footstepsGrassy_2.wav</ShortName>
+					<CachePath>SFX/sfx_player_footstepsGrassy_2_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="484840807" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>tom_discofloor_step_1.wav</ShortName>
+					<CachePath>SFX/tom_discofloor_step_1_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="669034116" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_footstepsGrassy_4.wav</ShortName>
+					<CachePath>SFX/sfx_player_footstepsGrassy_4_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="889298502" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_footstepsGrassy_3.wav</ShortName>
+					<CachePath>SFX/sfx_player_footstepsGrassy_3_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="891803528" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_player_footstepsGrassy_1.wav</ShortName>
+					<CachePath>SFX/sfx_player_footstepsGrassy_1_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="892296084" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>tom_pavement_step_3.wav</ShortName>
+					<CachePath>SFX/tom_pavement_step_3_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="992221352" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>tom_pavement_step_4.wav</ShortName>
+					<CachePath>SFX/tom_pavement_step_4_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="1037206968" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>tom_pavement_step_2.wav</ShortName>
+					<CachePath>SFX/tom_pavement_step_2_3F75BDB9.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2002635633" Name="Play_sfx_player_footsteps" ObjectPath="\Events\avy sfx events\Play_sfx_player\Play_sfx_player_footsteps" GUID="{437E4677-E6C1-4769-9E2E-A70E591B3A34}" DurationType="OneShot" DurationMin="0.3345471" DurationMax="0.99267775">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="2152775650" GUID="{FF495F4D-F946-4951-81AB-9F5ED572ED40}" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="357716752"/>
+								<MediaRef Id="394076071"/>
+								<MediaRef Id="669034116"/>
+								<MediaRef Id="889298502"/>
+								<MediaRef Id="891803528"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="3920460409" GUID="{2DFFD969-3BA2-4BBF-984E-0952DC3C7FC0}"/>
+							<MediaRefs>
+								<MediaRef Id="58618328"/>
+								<MediaRef Id="210863455"/>
+								<MediaRef Id="283688369"/>
+								<MediaRef Id="484840807"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="841620460" GUID="{316713C8-3BA6-432B-B523-97058CCE560E}"/>
+							<MediaRefs>
+								<MediaRef Id="180330411"/>
+								<MediaRef Id="892296084"/>
+								<MediaRef Id="992221352"/>
+								<MediaRef Id="1037206968"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</Events>
+			<SwitchGroups>
+				<SwitchGroup Id="2385628198" Name="footsteps" ObjectPath="\Switches\avy switches\footsteps" GUID="{2D745F57-2B08-43B8-98B8-6A72CAABF670}">
+					<Switches>
+						<Switch Id="841620460" Name="concrete" ObjectPath="\Switches\avy switches\footsteps\concrete" GUID="{316713C8-3BA6-432B-B523-97058CCE560E}"/>
+						<Switch Id="2152775650" Name="grassy" ObjectPath="\Switches\avy switches\footsteps\grassy" GUID="{FF495F4D-F946-4951-81AB-9F5ED572ED40}"/>
+						<Switch Id="3920460409" Name="disco" ObjectPath="\Switches\avy switches\footsteps\disco" GUID="{2DFFD969-3BA2-4BBF-984E-0952DC3C7FC0}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E6D5D418-D0B6-5E89-5F55-ABE6D7DCD72E}</FileHash>
+	<FileHash>{0EA15BD9-33DC-8C1B-1BB7-F0656F6DF5DD}</FileHash>
 </SoundBanksInfo>
