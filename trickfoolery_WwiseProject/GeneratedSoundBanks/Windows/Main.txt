@@ -5,6 +5,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	526466336	Play_sfx_groovy			\Default Work Unit\Play_sfx_groovy	
 	843029991	Play_sfx_charger_death			\Default Work Unit\Play_sfx_charger_death	
 	1067524079	Play_sfx_player_hurt			\Default Work Unit\Play_sfx_player_hurt	
+	1234905987	Stop_Alien_Arena_Assault_170bpm			\Default Work Unit\Stop_Alien_Arena_Assault_170bpm	
 	1591758634	Play_sfx_player_death			\Default Work Unit\Play_sfx_player_death	
 	1800631706	Play_sfx_taunt			\Default Work Unit\Play_sfx_taunt	
 	1926045526	Play_charger_angy			\Default Work Unit\Play_charger_angy	

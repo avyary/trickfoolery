@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public AK.Wwise.Event dashSFX;
     public AK.Wwise.Event playerDeathSFX;
     public AK.Wwise.Event playerHurtSFX;
+    public AkEvent TauntSound;
 
     [SerializeField] private ParticleSystem DashParticle;
     [SerializeField]
@@ -130,6 +131,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        void Anim_SpecialAttack()
+        {
+            if (TauntSound != null)
+            {
+                TauntSound.HandleEvent(gameObject);
+            }
+        }
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
             StartCoroutine(Die());
         }
@@ -139,6 +147,8 @@ public class PlayerMovement : MonoBehaviour
         if (state == AbilityState.dead) {
             return;
         }
+
+
         // if (gameManager.state == GameState.Combat) {
         if (gameManager.playerInput) {
             //Calculate Inputs for player movement
@@ -166,13 +176,13 @@ public class PlayerMovement : MonoBehaviour
                 StartCoroutine(WaitForSecondsAndStopParticles(0.1f, DashParticle));
             }
 
-            if (Input.GetButton("Taunt") && tauntCdTimer <= 0)
+            if (Input.GetButtonDown("Taunt") && tauntCdTimer <= 0)
             {
                 tauntCoroutine = StartCoroutine(InitiateTaunt());
             }
 
-            //Process the cooldown timer for dashing
-            if (dashCdTimer > 0)
+                //Process the cooldown timer for dashing
+                if (dashCdTimer > 0)
                 dashCdTimer -= Time.deltaTime;
             if (tauntCdTimer > 0)
                 tauntCdTimer -= Time.deltaTime;
@@ -180,6 +190,8 @@ public class PlayerMovement : MonoBehaviour
 
         ApplyGravity();
     }
+
+ 
 
     private void FixedUpdate()
     {
@@ -237,7 +249,6 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator InitiateTaunt() {
         state = AbilityState.taunting;
         tomAnimator.SetTrigger("StartTaunt");
-
         yield return new WaitForSeconds(1f);
         Taunt();
         yield return new WaitForSeconds(0.56f);

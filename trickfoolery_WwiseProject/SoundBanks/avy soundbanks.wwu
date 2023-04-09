@@ -13,6 +13,9 @@
 					</PropertyList>
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_level_one_music" ID="{48C4AABD-1063-4975-B341-E33A36C8D11E}" WorkUnitID="{F9ADAA8B-EDC8-4534-A187-A91190A7F211}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_level_one_music" ID="{06A5EF20-2029-49A4-A054-D2D28F4F9124}" WorkUnitID="{F9ADAA8B-EDC8-4534-A187-A91190A7F211}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Unmute_level_one_music" ID="{7925FB30-A253-49C3-B6A7-086FC10B259E}" WorkUnitID="{F9ADAA8B-EDC8-4534-A187-A91190A7F211}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Mute_level_one_music" ID="{823A7C47-E873-4E6A-8369-CD967AE34C0D}" WorkUnitID="{F9ADAA8B-EDC8-4534-A187-A91190A7F211}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

@@ -2,8 +2,8 @@
 <PlatformInfo>
 	<Platform Name="Mac" BasePlatform="Mac" Generator="2022.1.1.8100"/>
 	<RootPaths>
-		<ProjectRoot>../../</ProjectRoot>
-		<SourceFilesRoot>../../.cache/Mac/</SourceFilesRoot>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Mac</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
 		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
@@ -22,11 +22,11 @@
 		<GenerateAllBanksMetadata>true</GenerateAllBanksMetadata>
 		<GeneratePerBankMetadata>false</GeneratePerBankMetadata>
 		<UseSoundBankNames>true</UseSoundBankNames>
-		<AllowExceedingMaxSize>false</AllowExceedingMaxSize>
-		<MaxAttenuationInfo>true</MaxAttenuationInfo>
-		<EstimatedDurationInfo>true</EstimatedDurationInfo>
-		<PrintObjectGuid>true</PrintObjectGuid>
-		<PrintObjectPath>true</PrintObjectPath>
+		<AllowExceedingMaxSize>true</AllowExceedingMaxSize>
+		<MaxAttenuationInfo>false</MaxAttenuationInfo>
+		<EstimatedDurationInfo>false</EstimatedDurationInfo>
+		<PrintObjectGuid>false</PrintObjectGuid>
+		<PrintObjectPath>false</PrintObjectPath>
 	</Settings>
-	<FileHash>{2DA26531-47A0-4FE5-913E-32F23692AEB1}</FileHash>
+	<FileHash>{403F95FD-8543-A7C9-7730-F6066956630E}</FileHash>
 </PlatformInfo>

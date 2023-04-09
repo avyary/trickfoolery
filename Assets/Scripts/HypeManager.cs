@@ -65,6 +65,9 @@ public class HypeManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.H)) {
             UpdateHype(500f);
         }
+
+        AkSoundEngine.SetRTPCValue("Hype", hypePercent);
+
         if (hypePercent < 25)
 {
    AkSoundEngine.SetState("hype", "hype_0");
