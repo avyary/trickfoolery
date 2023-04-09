@@ -5,28 +5,30 @@ using UnityEngine;
 public class BasicShockwaveAttackNew : Attack
 {
     protected const float ShockwaveLength = 5f;
+    protected const float ShockwaveSize = 10f;
     private const float ActiveTime = 3f;
     
     private bool shouldLerp = false;
     private float timeStartedLerping;
+    
     private BoxCollider _boxCollider;
 
     // Start with initialCenter.z = 5
     // initialSize.z = 15
     Vector3 initialCenter;
     Vector3 initialSize;
-    
+
     protected override void Start()
     {
         base.Start();
         startupTime = 0.25f;
         activeTime = ActiveTime;
         recoveryTime = 0.5f;
-        damage = 25;
+        damage = 10;
         stunTime = 1;
-        range = 20f;
+        range = 4f;
         
-            
+
         Debug.Log("Shockwave basic attack set up: \n" +
                   "activeTime: " + activeTime + "\n" +
                   "range: " + range);
@@ -35,96 +37,61 @@ public class BasicShockwaveAttackNew : Attack
     void Update()
     {   
         _boxCollider = GetComponent<BoxCollider>();
-        
-        
+        Debug.Log("box center: " + _boxCollider.center + "\n" +
+                  "box size: " + _boxCollider.size + "\n");
+
         if (shouldLerp)
         {
-            Vector3 startCenter = _boxCollider.center;
-            Vector3 startSize = _boxCollider.size;
-            Vector3 targetCenter = new Vector3(initialCenter.x + ShockwaveLength, initialCenter.y, initialCenter.z);
-            Vector3 targetSize = new Vector3(initialSize.x + 4 * ShockwaveLength, initialSize.y, initialSize.z);
-            _boxCollider.center = ShockwaveLerp(startCenter, targetCenter, timeStartedLerping);
-            _boxCollider.size = ShockwaveLerp(startSize, targetSize, timeStartedLerping);
+            Vector3 targetCenter = new Vector3(initialCenter.x, initialCenter.y, initialCenter.z + ShockwaveLength);
+            Vector3 targetSize = new Vector3(initialSize.x, initialSize.y, initialSize.z + ShockwaveSize);
+            _boxCollider.center = ShockwaveLerp(initialCenter, targetCenter, timeStartedLerping);
+            _boxCollider.size = ShockwaveLerp(initialSize, targetSize, timeStartedLerping);
             
-            Debug.Log("box center: " + targetCenter + "\n" +
-                      "activeTime: " + targetSize + "\n");
+            Debug.Log("box center: " + _boxCollider.center + "\n" +
+                      "box size: " + _boxCollider.size + "\n");
             
             _collider = _boxCollider;
+
+            //
+            StartCoroutine(Reset(activeTime));
+            
         }
+
     }
     
-    public override void StartAttack()
+    public void StartAttack()
     {
+        initialCenter = _boxCollider.center;
+        initialSize = _boxCollider.size;
         timeStartedLerping = Time.time;
         shouldLerp = true;
+    }
+    
+    public void EndAttack()
+    {
+        shouldLerp = false;
     }
 
     public Vector3 ShockwaveLerp(Vector3 start, Vector3 end, float timeStartedLerping)
     {
         float timeSinceStarted = Time.time - timeStartedLerping;
-        float percentageComplete = timeSinceStarted / ActiveTime;
+        float percentageComplete = timeSinceStarted / (ActiveTime - 1);
 
         var result = Vector3.Lerp(start, end, percentageComplete);
         
-
         return result;
     }
     
-    public void ShockwaveLerp1()
-        {
-            // // Progressive attack range
-            BoxCollider boxCollider = GetComponent<BoxCollider>();
-            initialCenter = boxCollider.center;
-            initialSize = boxCollider.size;
-            
-            float timer = 0f;
-            
-            while (timer <= activeTime)
-            {
-                float t = timer / activeTime;
-                float targetXCenter = Mathf.Lerp(initialCenter.x, ShockwaveLength, t);
-                float targetXValue = Mathf.Lerp(initialSize.x, 2*ShockwaveLength, t);
-
-                Vector3 targetCenter = new Vector3(targetXCenter, initialCenter.y, initialCenter.z);
-                Vector3 targetSize = new Vector3(targetXValue, initialSize.y, initialSize.z);
-                
-                boxCollider.center = targetCenter;
-                boxCollider.size = targetSize;
-                
-                timer += Time.deltaTime;
-            }
-
-            if (boxCollider.center != initialCenter && boxCollider.size != initialSize)
-            {
-                Debug.Log("Shockwave basic attack update");
-            }
-            
-            // wait for ShockwaveLastTime = 3 seconds
-            StartCoroutine(Freeze(activeTime));
-            
-            // reset the hit box to original states
-            boxCollider.center = initialCenter;
-            boxCollider.size = initialSize;
-            
-            if (boxCollider.center == initialCenter && boxCollider.size == initialSize)
-            {
-                Debug.Log("Shockwave basic attack reset");
-            }
-        }
         
-        
-        IEnumerator Freeze(float sec) {
-            // Save the object's current position
-            Vector3 originalPosition = transform.position;
+    IEnumerator Reset(float sec) {
+        Debug.Log("Reset");
 
-            // Set the object's position to its current position, effectively "freezing" it
-            transform.position = originalPosition;
-
-            // Wait for ___ seconds
-            yield return new WaitForSeconds(sec);
-        }
-    
-    
+        // Wait for ___ seconds
+        yield return new WaitForSeconds(sec);
+        shouldLerp = false;
+        _boxCollider.center = initialCenter;
+        _boxCollider.size = initialSize;;
+    }
     
     
 }

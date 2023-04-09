@@ -45,7 +45,7 @@ public abstract class Attack : MonoBehaviour
         range = _range;
     }
 
-    public virtual void StartAttack() {}
+    // public virtual void StartAttack() {}
 
     public void Activate()
     {
@@ -62,6 +62,7 @@ public abstract class Attack : MonoBehaviour
     public void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "Enemy")
         {
+            Debug.Log("Collider: " + other.bounds);
             other.gameObject.GetComponent<Enemy>().TakeHit(transform.parent.GetComponent<Enemy>(), damage, stunTime);
         }
         else if (other.gameObject.tag == "Player")

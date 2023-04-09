@@ -13,8 +13,7 @@ public class ShockwaveEnemy : Enemy
 
     void Update() 
     {   
-        Debug.Log(System.String.Format("Range: {0}", currentAttack.range));
-        ;
+            
         switch(state) 
         {
             case EnemyState.Passive:
@@ -37,7 +36,7 @@ public class ShockwaveEnemy : Enemy
                 {
                     Debug.Log("Shockwave detected the player"); 
                     agent.ResetPath();
-                    StartCoroutine(Attack(currentAttack));
+                    StartCoroutine(ShockwaveAttack((BasicShockwaveAttackNew)currentAttack));
                 }
 
                 break;
@@ -49,5 +48,43 @@ public class ShockwaveEnemy : Enemy
                 // }
                 break;
         }
+    }
+
+
+    protected IEnumerator ShockwaveAttack(BasicShockwaveAttackNew attackObj)
+    {
+        // trigger attack animation here
+        state = EnemyState.Startup;
+        // Debug.Log("Attacking Time");
+        yield return new WaitForSeconds(attackObj.startupTime);
+        
+        // there's probably a better way to handle the below (& its repetitions)
+        if (state == EnemyState.Dead || state == EnemyState.Stunned) {
+            yield break;
+        }
+
+        state = EnemyState.Active;
+        // Debug.Log("Active Attack!");
+        attackObj.Activate();  // activate attack collider
+        attackObj.StartAttack();
+        yield return new WaitForSeconds(attackObj.activeTime);
+
+        if (state == EnemyState.Dead || state == EnemyState.Stunned) {
+            yield break;
+        }
+
+        state = EnemyState.Recovery;
+        // Debug.Log("Attack All done");
+        attackObj.Deactivate();  // deactivate attack collider
+        attackObj.EndAttack();
+        yield return new WaitForSeconds(attackObj.recoveryTime);
+
+        if (state == EnemyState.Dead || state == EnemyState.Stunned) {
+            yield break;
+        }
+
+        state = EnemyState.Passive;
+        gameObject.GetComponent<Patrol>().enabled = true;
+
     }
 }

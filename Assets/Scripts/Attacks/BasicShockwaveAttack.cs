@@ -55,13 +55,5 @@ public class BasicShockwaveAttack : Attack
         
     }
 
-    public override void StartAttack()
-    {
-        StartLerping();
-    }
-
-
-        
-
 
 }

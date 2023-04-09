@@ -86,6 +86,7 @@ public abstract class Enemy: MonoBehaviour
     // invoked when colliding with attack hitbox
     public virtual void TakeHit(Enemy attacker, int damage, float stunTime)
     {
+        Debug.Log("HIT");
         if (state == EnemyState.Dead)
         {
             return;
