@@ -121,13 +121,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672385666650983282}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0118392585, z: -0.0017774345}
-  m_LocalScale: {x: 0.015455951, y: 0.015455951, z: 0.015455951}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2463467958009454793}
-  m_Father: {fileID: 3249093301703893981}
-  m_RootOrder: 0
+  m_Father: {fileID: 3566962212508063682}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &818390977599352819
 GameObject:
@@ -5244,7 +5244,7 @@ GameObject:
   - component: {fileID: 6435225725634533990}
   - component: {fileID: 8238086170442383597}
   m_Layer: 8
-  m_Name: Taunt
+  m_Name: TauntSFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5463,7 +5463,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3249093301703893981}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &4623148170042628182
 SkinnedMeshRenderer:
@@ -5585,7 +5585,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3249093301703893981}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &6823147434383963617
 SkinnedMeshRenderer:
@@ -5919,7 +5919,6 @@ Transform:
   m_LocalScale: {x: 64.7, y: 64.7, z: 64.7}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 5874468033527136561}
   - {fileID: 6264567899584035182}
   - {fileID: 8005112176733148775}
   - {fileID: 3740154879969886454}
@@ -5964,6 +5963,7 @@ MonoBehaviour:
   tomRolling: {fileID: 7400000, guid: f812afb52fc90224dad2c4b2ede598ea, type: 2}
   tomTaunt: {fileID: 7400000, guid: 9ec426cadff27af42972b220f9db3863, type: 2}
   tomIdle: {fileID: 7400000, guid: e27b81bde5a159f41a36b6f0e4a7ba1c, type: 2}
+  playerSounds: {fileID: 0}
 --- !u!1 &6404197257975361587
 GameObject:
   m_ObjectHideFlags: 0
@@ -5995,7 +5995,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3249093301703893981}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2054808392068622739
 MeshFilter:
@@ -6355,6 +6355,7 @@ GameObject:
   - component: {fileID: 3248259484298412722}
   - component: {fileID: 2210145749772937266}
   - component: {fileID: 2702067757059315698}
+  - component: {fileID: 8482860425733441765}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -6379,6 +6380,7 @@ Transform:
   - {fileID: 3249093301703893981}
   - {fileID: 6934045308192819771}
   - {fileID: 4004400642625481698}
+  - {fileID: 5874468033527136561}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6470,7 +6472,6 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 08c43f316ee698b4187ec32ac0bf9138, type: 2}
-  TauntSound: {fileID: 6435225725634533990}
   DashParticle: {fileID: 5340692112965935907}
   dodgeRadius: 1.18
   attackMask:
@@ -6612,6 +6613,7 @@ MonoBehaviour:
   tomRolling: {fileID: -203655887218126122, guid: ce3da710398828c49ac3199e15b093f4, type: 3}
   tomTaunt: {fileID: -203655887218126122, guid: 51f0a08d1201cb540ab81e3e9cadeac7, type: 3}
   tomIdle: {fileID: -203655887218126122, guid: 38efc1a6d41901641aeed1632e74660e, type: 3}
+  playerSounds: {fileID: 0}
 --- !u!54 &3248259484298412722
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6675,6 +6677,20 @@ MonoBehaviour:
   unloadTriggerList: 958ca0ea
   bankNameInternal: 
   valueGuidInternal: 
+--- !u!114 &8482860425733441765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7796244350440389784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4649440e13bc49ae8c2a0f5df98fd3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 0
+  listenerId: 0
 --- !u!1 &8128285181426198141
 GameObject:
   m_ObjectHideFlags: 0
@@ -6771,7 +6787,7 @@ Transform:
   - {fileID: 5949506729917469992}
   - {fileID: 3881319157646945149}
   m_Father: {fileID: 3249093301703893981}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -4.451155, y: 43.13297, z: -0.2457951}
 --- !u!1 &9032735324442357268
 GameObject:
@@ -6949,6 +6965,7 @@ MonoBehaviour:
   tomRolling: {fileID: -203655887218126122, guid: ce3da710398828c49ac3199e15b093f4, type: 3}
   tomTaunt: {fileID: -203655887218126122, guid: 51f0a08d1201cb540ab81e3e9cadeac7, type: 3}
   tomIdle: {fileID: -203655887218126122, guid: 38efc1a6d41901641aeed1632e74660e, type: 3}
+  playerSounds: {fileID: 0}
 --- !u!1001 &7471493794688495056
 PrefabInstance:
   m_ObjectHideFlags: 0

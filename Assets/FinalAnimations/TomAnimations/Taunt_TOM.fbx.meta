@@ -58,7 +58,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.10383675
-        functionName: Anim_TauntSFX
+        functionName: PlayTauntSFX
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

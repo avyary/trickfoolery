@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
     public AK.Wwise.Event dashSFX;
     public AK.Wwise.Event playerDeathSFX;
     public AK.Wwise.Event playerHurtSFX;
-    public AkEvent TauntSound;
 
     [SerializeField] private ParticleSystem DashParticle;
     [SerializeField]
@@ -131,13 +130,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        void Anim_SpecialAttack()
-        {
-            if (TauntSound != null)
-            {
-                TauntSound.HandleEvent(gameObject);
-            }
-        }
+
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
             StartCoroutine(Die());
         }

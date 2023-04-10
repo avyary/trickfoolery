@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PlayerAnimationController : MonoBehaviour
@@ -7,11 +8,18 @@ public class PlayerAnimationController : MonoBehaviour
     [SerializeField] private AnimationClip tomRolling;
     [SerializeField] private AnimationClip tomTaunt;
     [SerializeField] private AnimationClip tomIdle;
+    [SerializeField]
+    private PlayerSounds playerSounds;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         animator.Play(tomIdle.name);
+    }
+
+    private void PlayTauntSFX()
+    {
+        Debug.Log("Tauntsfx");
     }
 
     private void Update()
@@ -32,7 +40,7 @@ public class PlayerAnimationController : MonoBehaviour
         {
             animator.Play(tomRunning.name);
         }
-     
+
         else if (Input.GetKeyDown(KeyCode.F))
         {
             animator.Play(tomTaunt.name);
@@ -40,14 +48,13 @@ public class PlayerAnimationController : MonoBehaviour
         else if (!Input.anyKey)
         {
             animator.Play(tomIdle.name);
-        }   else if (Input.GetKeyDown(KeyCode.Space))
+        } else if (Input.GetKeyDown(KeyCode.Space))
         {
             animator.Play(tomRolling.name);
         }
-        
-       
-        
-        
-     
+         
+
+
+
     }
 }
