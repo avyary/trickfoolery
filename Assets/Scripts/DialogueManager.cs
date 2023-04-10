@@ -16,12 +16,16 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private GameObject portraitObj;
     [SerializeField]
+    private GameObject arrowObj;
+    [SerializeField]
     private string jsonName;
 
     private LoadedDScenes loadedDScenes;
     private TextMeshProUGUI nameText;
     private TextMeshProUGUI speechText;
     private Image portraitImg;
+    private GameManager gameManager;
+    private Image arrowImg;
 
     private bool sceneIsActive = false;
     private int lineIdx = 0;
@@ -40,6 +44,8 @@ public class DialogueManager : MonoBehaviour
         nameText = nameTextObj.GetComponent<TextMeshProUGUI>();
         speechText = speechTextObj.GetComponent<TextMeshProUGUI>();
         portraitImg = portraitObj.GetComponent<Image>();
+        arrowImg = arrowObj.GetComponent<Image>();
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
 
         TextAsset jsonObj = Resources.Load<TextAsset>(System.String.Format("Dialogue/{0}", jsonName));
         if (jsonObj is null) {
@@ -59,13 +65,14 @@ public class DialogueManager : MonoBehaviour
             StartDialogueScene("testScene");
         }
 
-        if (sceneIsActive && !inDelay && Input.GetButtonDown("Confirm")) {
+        if (sceneIsActive && !gameManager.isPaused && !inDelay && Input.GetButtonDown("Confirm")) {
             StartCoroutine(ProgressScene());
         }
     }
 
     public void StartDialogueScene(string sceneName, System.Action callback = null)
     {
+        print("starting dialogue scene");
         sceneCallback = callback;
         if (sceneIsActive) {
             return;
@@ -97,7 +104,9 @@ public class DialogueManager : MonoBehaviour
                 triggers[newLine.triggerIdx].Invoke();
                 if (newLine.delay > 0f) {
                     inDelay = true;
-                    yield return new WaitForSecondsRealtime(newLine.delay);
+                    arrowImg.color = Color.clear;
+                    yield return new WaitForSeconds(newLine.delay);
+                    arrowImg.color = Color.black;
                     inDelay = false;
                 }
             }
@@ -111,6 +120,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     void EndScene() {
+        print("ending scene");
         dialogueUI.SetActive(false);
         sceneIsActive = false;
         if (sceneCallback != null) {

@@ -30,6 +30,7 @@ public class MainMenuButtons : MonoBehaviour
         GameObject.Find("FadeInOut").GetComponent<Animator>().SetTrigger("FadeOut");
         yield return new WaitForSeconds(1.5f);
         //AkSoundEngine.StopAll();
+        GameObject.Find("ProgressTracker").GetComponent<ProgressTracker>().isRestart = false;
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 

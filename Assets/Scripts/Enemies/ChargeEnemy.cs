@@ -9,52 +9,42 @@ public class ChargeEnemy : Enemy
     public AK.Wwise.Event chargerDeathSFX;
     [SerializeField] private ParticleSystem particleSystem;
     [SerializeField] private ParticleSystem BackParticleSystem;
-    public Animator animator;
     public bool isCharging;
     public bool isWalking;
+
+    [SerializeField]
+    private float rotateSpeed;
 
     protected override void Start() {
         base.Start();
         GetEnemyStatus("ChargeEnemy");
 
-        animator.SetBool("isWalking", true); 
         isWalking = true;
     }
 
-    // private void OnDrawGizmos() 
-    // {
-    //    DrawSphere();
-    // }
-
     void Update() 
     {   
-        // Debug.Log(System.String.Format("State: {0}", state));
         switch(state)
         {
             case EnemyState.Passive:
+                break;
 
+            case EnemyState.Patrolling:
                 if (!fow.active)
-                { 
+                {
                     fow.active = true;
-                    StartCoroutine(fow.FindPlayer(moveSpeed, PlayerFound));
                 }
-
+                StartCoroutine(fow.FindPlayer(moveSpeed, PlayerFound));
                 break;
             case EnemyState.Tracking:
-
                 agent.SetDestination(player.transform.position);
                 float dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
-
                 if (dist <= currentAttack.range) 
                 {   
+                    attackCoroutine = StartCoroutine(Attack(currentAttack));
                     agent.ResetPath();
 
                     particleSystem.Play();
-                    animator.SetBool("isWalking", false);
-                    isWalking = false;
-                    animator.SetBool("isCharging", true);
-                    isCharging = true;
-                    StartCoroutine(Attack(currentAttack));
 
                     StartCoroutine(WaitForSecondsAndPlayParticles(0.5f, BackParticleSystem));
 
@@ -65,22 +55,13 @@ public class ChargeEnemy : Enemy
                 }
     
                 break;
+            case EnemyState.Startup:
+                Vector3 toPlayer = player.transform.position - transform.position;
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(toPlayer), rotateSpeed * Time.deltaTime);
+                // transform.LookAt(player.transform.position);
+                break;
             case EnemyState.Active:
-
-                //play charging anim
-                if (isCharging) 
-                { 
-                    animator.SetBool("isWalking", false);
-                    isCharging = true;
-                }
-                else
-                {
-                    animator.SetBool("isWalking", true);
-                    animator.SetBool("isCharging", false);
-                }
-
                 TestBehaviors.MoveForward(gameObject, chargeSpeed);
-
                 
                 break;
         }
@@ -101,11 +82,8 @@ public class ChargeEnemy : Enemy
     private IEnumerator WaitForSecondsAndStopRunningAnim(float seconds) 
     {
         yield return new WaitForSeconds(seconds);
-        animator.SetBool("isWalking", true);
-        animator.SetBool("isCharging", false);
         isWalking = true;
         isCharging = false;
     }   
-      
 }
 

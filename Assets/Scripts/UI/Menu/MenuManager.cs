@@ -49,10 +49,12 @@ public class MenuManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P)) {
             if (SceneManager.GetActiveScene().name == "MainMenu") {
                 AkSoundEngine.StopAll();
+                GameObject.Find("ProgressTracker").GetComponent<ProgressTracker>().isRestart = false;
                 SceneManager.LoadScene("DebugMenu", LoadSceneMode.Single);
             }
             else {
                 AkSoundEngine.StopAll();
+                GameObject.Find("ProgressTracker").GetComponent<ProgressTracker>().isRestart = false;
                 SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
             }
         }
@@ -61,6 +63,7 @@ public class MenuManager : MonoBehaviour
     IEnumerator HandleButtonChange(bool silent = false){
         Transform newSelect = transform.GetChild(currentIdx);
         if (!silent) {
+            newSelect.gameObject.GetComponent<Animator>().SetTrigger("SelectButton");
             selectSFX.Post(gameObject); 
         }
         newSelect.gameObject.GetComponent<Button>().Select();

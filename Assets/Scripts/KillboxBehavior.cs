@@ -29,6 +29,7 @@ public class KillboxBehavior : MonoBehaviour
 
         if (GameObject.FindGameObjectsWithTag("Player").Length < 1)
         {
+            GameObject.Find("ProgressTracker").GetComponent<ProgressTracker>().isRestart = true;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
@@ -43,6 +44,7 @@ public class KillboxBehavior : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
+            GameObject.Find("ProgressTracker").GetComponent<ProgressTracker>().isRestart = true;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }

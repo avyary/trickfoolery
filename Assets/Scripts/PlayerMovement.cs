@@ -82,7 +82,9 @@ public class PlayerMovement : MonoBehaviour
     public AbilityState state;
     public FieldOfView fov;
 
-    private Animator tomAnimator;
+    public Animator tomAnimator;
+
+    private Coroutine tauntCoroutine;
 
     public enum AbilityState
     {
@@ -117,6 +119,7 @@ public class PlayerMovement : MonoBehaviour
         camRight.Normalize();
 
         transform.rotation = Quaternion.LookRotation(camForward * -1);
+        gameManager.stopCombatEvent.AddListener(OnBecomePassive);
     }
 
     // Update is called once per frame
@@ -136,9 +139,8 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-
-        if (gameManager.state == GameState.Combat || gameManager.state == GameState.Tutorial) 
-        {
+        // if (gameManager.state == GameState.Combat) {
+        if (gameManager.playerInput) {
             //Calculate Inputs for player movement
             _playerInputVertical = Input.GetAxisRaw("Vertical");
             _playerInputHorizontal = Input.GetAxisRaw("Horizontal");
@@ -157,6 +159,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 tomAnimator.SetBool("isRunning", false);
             }
+        
 
             if (Input.GetButtonDown("Dash") && dashCdTimer <= 0)
             {
@@ -167,7 +170,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetButton("Taunt") && tauntCdTimer <= 0)
             {
-                StartCoroutine(Taunt());
+                tauntCoroutine = StartCoroutine(InitiateTaunt());
             }
 
             //Process the cooldown timer for dashing
@@ -185,8 +188,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (gameManager.state == GameState.Combat || gameManager.state == GameState.Tutorial) 
-        {
+        if (gameManager.playerInput) {
             if (state == AbilityState.walking) 
                 _movementController.Move(_movementDirection * WALKSPEED * Time.deltaTime);
             if (state == AbilityState.dashing)
@@ -194,8 +196,16 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void OnBecomePassive() {
+        tomAnimator.SetBool("isRunning", false);
+    }
+
     IEnumerator Dash()
     {
+        if (tauntCoroutine != null) {
+            print("cancelled taunt");
+            StopCoroutine(tauntCoroutine);
+        }
         StartCoroutine(CheckHypeDash());
         StartCoroutine(InvincibilityFrames(DASHTIME));
         dashCdTimer = DASHCD;
@@ -211,17 +221,17 @@ public class PlayerMovement : MonoBehaviour
         }
 
         state = AbilityState.walking;
-
     }
 
 
     IEnumerator CheckHypeDash() 
     {
         float startTime = Time.time;
+        Vector3 origin = transform.position;
         bool gotHype = false;
         while (Time.time < startTime + (DASHTIME + POSTDASH))
         {
-            if (!gotHype && IsCloseDash())
+            if (!gotHype && IsCloseDash(origin))
             {
                 gotHype = true;
                 hypeManager.IncreaseHype(hypeManager.DODGE_HYPE);
@@ -229,35 +239,32 @@ public class PlayerMovement : MonoBehaviour
             yield return null;
         }
     }
-    
-    
-    IEnumerator Taunt()
-    {
-        state = AbilityState.taunting;
-        
-        float startTime = Time.time;
 
+    IEnumerator InitiateTaunt() {
+        state = AbilityState.taunting;
+        tomAnimator.SetTrigger("StartTaunt");
+
+        yield return new WaitForSeconds(1f);
+        Taunt();
+        yield return new WaitForSeconds(0.56f);
+        state = AbilityState.walking;
+        tauntCdTimer = TAUNTCD;
+    }
+    
+    public void Taunt()
+    {
         List<Collider> inRange = fov.FindVisibleTargets();
         foreach (var enemy in inRange)
         {
             enemy.gameObject.GetComponent<Enemy>().GetTaunted();
         }
-        
-        while (Time.time < startTime + TAUNTTIME)
-        {
-            state = AbilityState.taunting;
-            yield return null;
-        }
-        
-        state = AbilityState.walking;
-        tauntCdTimer = TAUNTCD;
     }
     
-    
-    bool IsCloseDash()
+    bool IsCloseDash(Vector3 origin)
     {
         Collider[] attacksInRange = Physics.OverlapSphere(transform.position, dodgeRadius, attackMask);
-        return (attacksInRange.Length > 0);
+        Collider[] attacksAtOrigin = Physics.OverlapSphere(origin, dodgeRadius, attackMask);
+        return (attacksInRange.Length + attacksAtOrigin.Length > 0);
     }
     
     private void ApplyGravity()
@@ -270,7 +277,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeHit(int damage, Enemy attacker = null)
     {
-        if (state == AbilityState.dead || isInvincible || gameManager.state == GameState.Tutorial)
+        if (gameManager.isGameOver || isInvincible)
         {
             return;
         }
@@ -311,12 +318,12 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator Die()
     {
+        uiManager.UpdateHealth(0f);
         state = AbilityState.dead;
-        GetComponent<MeshRenderer>().material.color = Color.black;
         tomAnimator.SetTrigger("Die");
         playerDeathSFX.Post(gameObject);
-        yield return new WaitForSeconds(3f);
-        gameManager.GameOverLose();
+        StartCoroutine(gameManager.GameOverLose());
+        
         yield return null;
     }
 

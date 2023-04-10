@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0B4D2748-00EB-48FF-B221-AC723344092F}" SchemaVersion="110">
+	<Switches>
+		<WorkUnit Name="avy switches" ID="{0B4D2748-00EB-48FF-B221-AC723344092F}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="footsteps" ID="{2D745F57-2B08-43B8-98B8-6A72CAABF670}">
+					<ChildrenList>
+						<Switch Name="concrete" ID="{316713C8-3BA6-432B-B523-97058CCE560E}"/>
+						<Switch Name="grassy" ID="{FF495F4D-F946-4951-81AB-9F5ED572ED40}"/>
+						<Switch Name="disco" ID="{2DFFD969-3BA2-4BBF-984E-0952DC3C7FC0}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

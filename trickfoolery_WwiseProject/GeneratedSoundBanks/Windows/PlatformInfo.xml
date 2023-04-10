@@ -25,8 +25,8 @@
 		<AllowExceedingMaxSize>false</AllowExceedingMaxSize>
 		<MaxAttenuationInfo>true</MaxAttenuationInfo>
 		<EstimatedDurationInfo>true</EstimatedDurationInfo>
-		<PrintObjectGuid>false</PrintObjectGuid>
-		<PrintObjectPath>false</PrintObjectPath>
+		<PrintObjectGuid>true</PrintObjectGuid>
+		<PrintObjectPath>true</PrintObjectPath>
 	</Settings>
-	<FileHash>{F4D1707B-F10C-3DC0-B1A5-872566032501}</FileHash>
+	<FileHash>{7A567D35-80F6-BE57-D9F9-5B114382546C}</FileHash>
 </PlatformInfo>

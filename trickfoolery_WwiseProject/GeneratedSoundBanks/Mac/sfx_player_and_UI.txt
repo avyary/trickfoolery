@@ -1,0 +1,26 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2002635633	Play_sfx_player_footsteps			\avy sfx events\Play_sfx_player\Play_sfx_player_footsteps	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2385628198	footsteps			\avy switches\footsteps	
+
+Switch	ID	Name	Switch Group			Notes
+	841620460	concrete	footsteps			
+	2152775650	grassy	footsteps			
+	3920460409	disco	footsteps			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	58618328	tom_discofloor_step_4	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\tom_discofloor_step_4_3F75BDB9.wem		\Actor-Mixer Hierarchy\avy sfx\sfx_player\sfx_player_footsteps\sfx_player_footstepsDisco\tom_discofloor_step_4		5258
+	180330411	tom_pavement_step_1	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\tom_pavement_step_1_3F75BDB9.wem		\Actor-Mixer Hierarchy\avy sfx\sfx_player\sfx_player_footsteps\sfx_player_footstepsPavement\tom_pavement_step_1		7009
+	210863455	tom_discofloor_step_2	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\tom_discofloor_step_2_3F75BDB9.wem		\Actor-Mixer Hierarchy\avy sfx\sfx_player\sfx_player_footsteps\sfx_player_footstepsDisco\tom_discofloor_step_2		5517
+	283688369	tom_discofloor_step_3	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\tom_discofloor_step_3_3F75BDB9.wem		\Actor-Mixer Hierarchy\avy sfx\sfx_player\sfx_player_footsteps\sfx_player_footstepsDisco\tom_discofloor_step_3		4849
+	357716752	sfx_player_footstepsGrassy_5	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_player_footstepsGrassy_5_3F75BDB9.wem		\Actor-Mixer Hierarchy\avy sfx\sfx_player\sfx_player_footsteps\sfx_player_footstepsGrassy\sfx_player_footstepsGrassy_5		10345
+	394076071	sfx_player_footstepsGrassy_2	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_player_footstepsGrassy_2_3F75BDB9.wem		\Actor-Mixer Hierarchy\avy sfx\sfx_player\sfx_player_footsteps\sfx_player_footstepsGrassy\sfx_player_footstepsGrassy_2		6615
+	484840807	tom_discofloor_step_1	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\tom_discofloor_step_1_3F75BDB9.wem		\Actor-Mixer Hierarchy\avy sfx\sfx_player\sfx_player_footsteps\sfx_player_footstepsDisco\tom_discofloor_step_1		5190
+	669034116	sfx_player_footstepsGrassy_4	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_player_footstepsGrassy_4_3F75BDB9.wem		\Actor-Mixer Hierarchy\avy sfx\sfx_player\sfx_player_footsteps\sfx_player_footstepsGrassy\sfx_player_footstepsGrassy_4		11623
+	889298502	sfx_player_footstepsGrassy_3	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_player_footstepsGrassy_3_3F75BDB9.wem		\Actor-Mixer Hierarchy\avy sfx\sfx_player\sfx_player_footsteps\sfx_player_footstepsGrassy\sfx_player_footstepsGrassy_3		6622
+	891803528	sfx_player_footstepsGrassy_1	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\sfx_player_footstepsGrassy_1_3F75BDB9.wem		\Actor-Mixer Hierarchy\avy sfx\sfx_player\sfx_player_footsteps\sfx_player_footstepsGrassy\sfx_player_footstepsGrassy_1		5856
+	892296084	tom_pavement_step_3	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\tom_pavement_step_3_3F75BDB9.wem		\Actor-Mixer Hierarchy\avy sfx\sfx_player\sfx_player_footsteps\sfx_player_footstepsPavement\tom_pavement_step_3		6242
+	992221352	tom_pavement_step_4	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\tom_pavement_step_4_3F75BDB9.wem		\Actor-Mixer Hierarchy\avy sfx\sfx_player\sfx_player_footsteps\sfx_player_footstepsPavement\tom_pavement_step_4		7748
+	1037206968	tom_pavement_step_2	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\tom_pavement_step_2_3F75BDB9.wem		\Actor-Mixer Hierarchy\avy sfx\sfx_player\sfx_player_footsteps\sfx_player_footstepsPavement\tom_pavement_step_2		5825
+

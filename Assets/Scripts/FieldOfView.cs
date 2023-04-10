@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FieldOfView : MonoBehaviour
 {
+    public float detectRadius;
     public float viewRadius;
     [Range(0, 360)]
     public float viewAngle;
@@ -13,7 +14,7 @@ public class FieldOfView : MonoBehaviour
     public LayerMask obstacleMask;
     public LayerMask targetMask;
 
-    public bool active = false;
+    public bool active = true;
 
     public IEnumerator FindPlayer(float delay, System.Action callback)
     {
@@ -59,6 +60,9 @@ public class FieldOfView : MonoBehaviour
 
     bool PlayerIsVisible() {
         float dstToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        if (dstToPlayer < detectRadius) {
+            return true;
+        }
         if (dstToPlayer > viewRadius)
         {
             return false;

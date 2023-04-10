@@ -1,0 +1,30 @@
+{
+  "scenes": [
+    {
+      "sceneName": "onWin",
+      "lines": [
+        {
+          "name": "Commentator",
+          "text": "Yes! Yes! The energy is INCREDIBLE!!!"
+        },
+        {
+          "name": "Tom",
+          "text": "This is getting pretty fun..."
+        },
+        {
+          "name": "Commentator",
+          "text": "That's what I like to hear! Time for your victory lap, Nuck!"
+        }
+      ]
+    },
+    {
+      "sceneName": "onLoss",
+      "lines": [
+        {
+          "name": "Commentator",
+          "text": "Ouch!"
+        }
+      ]
+    }
+  ]
+}

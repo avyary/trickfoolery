@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,33 +6,42 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 
 public enum GameState {
-    PreCombat,
-    Combat,
-    PostCombat,
-    Tutorial
+    Tutorial,
+    OutOfCombat,
+    Combat
 }
 
 public class GameManager : MonoBehaviour
 {
     // state variables
-    public GameState state = GameState.PreCombat;
+    public GameState state = GameState.OutOfCombat;
     public bool isPaused = true;
     public bool showPauseMenu = false;
     private bool isGameWon = false;
-    private bool isGameOver = false;
-    private bool isTogglingPause = false;
+    private bool inCombat = false;
+    public bool playerInput = false;
+    public bool isGameOver = false;
     
+    // // wwise
+    // public AK.Wwise.Event pauseSFX;
+    // public AK.Wwise.Event unpauseSFX;
+
     // wwise
     public AK.Wwise.Event pauseSFX;
     public AK.Wwise.Event unpSFX;
+    public AK.Wwise.Event playpauseMUS;
+    public AK.Wwise.Event mutepauseMUS;
+    public AK.Wwise.Event firstmutepauseMUS;
+    public AK.Wwise.Event unmpauseMUS;
+    public AK.Wwise.Event playAaaMus;
+    public AK.Wwise.Event muteAaaMus;
+    public AK.Wwise.Event unmAaaMus;
 
     // object references
-    public GameObject _gameOverObj;
-    public TMP_Text _gameOverText;
-    public GameObject _gameOverPrompt;
-    public TMP_Text _gameOverPromptText;
-    public GameObject _gameOverPanel;
     public UIManager uiManager;
+    private DialogueManager dialogueManager;
+    private JumbotronController jumbotron;
+    private PlayerMovement player;
 
     // for respawn
     public GameObject[] enemies;
@@ -46,20 +54,47 @@ public class GameManager : MonoBehaviour
     private string nextScene;
     [SerializeField]
     UnityEvent preCombat;
+    [SerializeField]
+    public GameObject trackerPrefab;
+
+    // events for listeners
+    [SerializeField]
+    public UnityEvent startCombatEvent;
+    [SerializeField]
+    public UnityEvent startTutorialEvent;
+    [SerializeField]
+    public UnityEvent stopCombatEvent;
+
+    private bool isRestart;
+
+    [SerializeField]
+    private GameObject progressTrackerObj;
 
     void Start()
     {
-        Time.timeScale = 0;
-
         uiManager = gameObject.GetComponent<UIManager>();
-        _gameOverObj = GameObject.Find("GameOverText");
-        _gameOverPrompt = GameObject.Find("GameOverPrompt");
-        _gameOverPanel = GameObject.Find("GameOverPanel");
-        _gameOverText = _gameOverObj.GetComponent<TMP_Text>();
-        _gameOverPromptText = _gameOverPrompt.GetComponent<TMP_Text>();
-        _gameOverPanel.SetActive(false);
+        dialogueManager = gameObject.GetComponent<DialogueManager>();
+        jumbotron = GameObject.Find("Jumbotron").GetComponent<JumbotronController>();
 
+        GameObject progressTracker = GameObject.Find("ProgressTracker");
+        if (progressTracker) {
+            isRestart = progressTracker.GetComponent<ProgressTracker>().isRestart;
+        }
+        else {
+            GameObject trackerObj = GameObject.Instantiate(progressTrackerObj);
+            trackerObj.name = "ProgressTracker";
+            isRestart = false;
+        }
+
+        playpauseMUS.Post(gameObject);
+        firstmutepauseMUS.Post(gameObject);
+        AkSoundEngine.SetState("Gameplay_State", "Combat");
+        playAaaMus.Post(gameObject);
         StartCoroutine(StartLevel());
+    }
+
+    void Awake() {
+        GameObject.Find("FadeInOut").GetComponent<Animator>().SetTrigger("FadeIn");
     }
 
     IEnumerator StartLevel() {
@@ -71,119 +106,123 @@ public class GameManager : MonoBehaviour
                 break;
         }
 
-        if (hasPersistentTarget) {
+        if (hasPersistentTarget && !isRestart) {
             preCombat.Invoke(); // execute pre-combat code
         }
         else {
+            // TODO: make this.. better
+            GameObject dialogueFade = GameObject.Find("DialogueFadeIn");
+            if (dialogueFade) {
+                dialogueFade.SetActive(false);
+            }
             StartCoroutine(uiManager.StartCombat()); // starts combat
         }
     }
 
-    // invoked as an animation event after the BattleStart popup
     public void StartCombat() {
         print("starting combat");
         Time.timeScale = 1;
         state = GameState.Combat;
+        playerInput = true;
+    }
+
+    public void StartTutorial() {
+        state = GameState.Tutorial;
+        playerInput = true;
+    }
+
+    public void StopCombat() {
+        state = GameState.OutOfCombat;
+        playerInput = false;
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Escape"))
+        if (Input.GetKeyDown(KeyCode.Y)) {
+            print("GAME STATE: " + state + "\nisPaused: " + isPaused + " | jumbotron state: " + jumbotron.state + " | timeScale: " + Time.timeScale);
+        }
+        // if jumbotron is disabled, cannot pause
+        if (Input.GetButtonDown("Escape") && jumbotron.state != JumbotronState.Disabled)
         {
-            TogglePauseMenu();
+            TogglePause();
         }
         if (state == GameState.Combat && GameObject.FindGameObjectsWithTag("Enemy").Length < minEnemyNumber)
         {
             SpawnRandomEnemy();
-        }
-        if (isGameOver && Input.GetButtonDown("Confirm"))
-        {
-            StartCoroutine(LoadNextScene());
-        }
+        }     
+
+        
     }
 
     IEnumerator LoadNextScene() {
         GameObject.Find("FadeInOut").GetComponent<Animator>().SetTrigger("FadeOut");
         yield return new WaitForSecondsRealtime(1.5f);
         if (isGameWon) {
+            GameObject.Find("ProgressTracker").GetComponent<ProgressTracker>().isRestart = false;
             SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
         }
         else {
+            GameObject.Find("ProgressTracker").GetComponent<ProgressTracker>().isRestart = true;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
-    bool TogglePauseMenu()
+    public void TriggerLoadNextScene() {
+        StartCoroutine(LoadNextScene());
+    }
+
+    public void TogglePause() {
+        if (jumbotron.state == JumbotronState.Hidden || jumbotron.state == JumbotronState.HypeBar) {
+            pauseSFX.Post(gameObject);
+            unmpauseMUS.Post(gameObject);
+            muteAaaMus.Post(gameObject);
+            uiManager.ShowPauseMenu();
+            isPaused = true;
+            Time.timeScale = 0;
+        }
+        else if (jumbotron.state == JumbotronState.Pause || jumbotron.state == JumbotronState.PauseFromHidden) {
+            unpSFX.Post(gameObject);
+            mutepauseMUS.Post(gameObject);
+            unmAaaMus.Post(gameObject);
+            uiManager.HidePauseMenu();
+            Time.timeScale = 1;
+        }
+        else {
+            return;
+        }
+
+        jumbotron.state = JumbotronState.Disabled;  // for animation duration
+    }
+
+    public IEnumerator GameOverWin()
     {
-        if (!showPauseMenu)
-        {
-            ShowPauseMenu();
-        }
-        else
-        {
-            HidePauseMenu();
-        }
-        return showPauseMenu;
+        print("gameOverWin");
+        isGameOver = true;
+        isGameWon = true;
+        AkSoundEngine.SetState("Gameplay_State", "Victory");
+        yield return new WaitForSeconds(0.5f);
+        stopCombatEvent.Invoke();
+        uiManager.GameOverWin();
+        yield return new WaitForSeconds(1f);
+        dialogueManager.StartDialogueScene("onWin", TriggerLoadNextScene);
     }
 
-    bool TogglePause()
+    public IEnumerator GameOverLose()
     {
-        if (!isPaused)
-        {
-            PauseGame();
-        }
-        else
-        {
-            UnpauseGame();
-        }
-        return isPaused;
+        isGameOver = true;
+        stopCombatEvent.Invoke();
+        yield return new WaitForSeconds(3f);
+        uiManager.GameOverLose();
+        yield return new WaitForSeconds(1f);
+        dialogueManager.StartDialogueScene("onLoss", ShowLoseMenu);
     }
 
-    void ShowPauseMenu() {
-        pauseSFX.Post(gameObject);
-        showPauseMenu = true;
-        uiManager.ShowPauseMenu();
-        PauseGame();
-    }
-
-    public void HidePauseMenu() {
-        unpSFX.Post(gameObject);
-        showPauseMenu = false;
-        uiManager.HidePauseMenu();
-        if (!isGameOver) {
-            UnpauseGame();
-        }
-    }
-
-    void PauseGame()
-    {
+    void ShowLoseMenu() {
+        print("show lose menu");
+        jumbotron.state = JumbotronState.Disabled;
+        uiManager.ShowLoseMenu();
         isPaused = true;
         Time.timeScale = 0;
-    }
-
-    void UnpauseGame()
-    {
-        isPaused = false;
-        Time.timeScale = 1;
-    }
-
-    public void GameOverWin()
-    {
-        isGameOver = true;
-        PauseGame();
-        _gameOverText.text = "Hype Meter Filled!";
-        _gameOverPromptText.text = "Press [Return] to continue";
-        _gameOverPanel.SetActive(true);
-        isGameWon = true;
-    }
-
-    public void GameOverLose()
-    {
-        isGameOver = true;
-        PauseGame();
-        _gameOverText.text = "You Died!";
-        _gameOverPromptText.text = "Press [Return] to try again";
-        _gameOverPanel.SetActive(true);
     }
 
     void SpawnRandomEnemy()
