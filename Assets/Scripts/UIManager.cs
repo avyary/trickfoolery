@@ -25,6 +25,8 @@ public class UIManager : MonoBehaviour
     private Sprite winPopupImg;
     [SerializeField]
     private Sprite losePopupImg;
+    // [SerializeField]
+    // private GameObject gameOverMenuObj;
 
     private PauseMenuManager loseMenu;
     private int heartsActive;

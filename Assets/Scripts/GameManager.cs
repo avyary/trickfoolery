@@ -149,7 +149,9 @@ public class GameManager : MonoBehaviour
         if (state == GameState.Combat && GameObject.FindGameObjectsWithTag("Enemy").Length < minEnemyNumber)
         {
             SpawnRandomEnemy();
-        }
+        }     
+
+        
     }
 
     IEnumerator LoadNextScene() {
