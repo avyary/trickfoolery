@@ -9,7 +9,7 @@ public class PlayerAnimationController : MonoBehaviour
     [SerializeField] private AnimationClip tomTaunt;
     [SerializeField] private AnimationClip tomIdle;
     [SerializeField]
-    private PlayerSounds playerSounds;
+    public AkEvent tauntSound;
 
     private void Start()
     {
@@ -24,6 +24,11 @@ public class PlayerAnimationController : MonoBehaviour
 
     private void Update()
     {
+        if (tauntSound != null)
+        {
+            tauntSound.HandleEvent(gameObject);
+        }
+
         if (Input.GetKeyDown(KeyCode.W))
         {
             animator.Play(tomRunning.name);
