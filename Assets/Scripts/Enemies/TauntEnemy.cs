@@ -39,7 +39,6 @@ public class TauntEnemy : Enemy
         GetEnemyStatus("TauntEnemy");
         teleporting = false;
         attackcd = attack_cooldown;
-
         gameObject.GetComponent<Patrol>().enabled = false;
     }
 
@@ -101,7 +100,7 @@ public class TauntEnemy : Enemy
     // Update is called once per frame
     void Update()
     {   
-        gameObject.GetComponent<Patrol>().enabled = false; // ensure this is always false
+        gameObject.GetComponent<Patrol>().enabled = false;// ensure this is always false
         switch(state)
         {
             case EnemyState.Passive:
@@ -111,10 +110,10 @@ public class TauntEnemy : Enemy
                 //}
                 //Patrol();
 
-                if (!fow.active)
+                if (!gameObject.GetComponent<FieldOfView>().active)
                 {
-                    fow.active = true;
-                    StartCoroutine(fow.FindPlayer(moveSpeed, PlayerFound));
+                    gameObject.GetComponent<FieldOfView>().active = true;
+                    StartCoroutine(gameObject.GetComponent<FieldOfView>().FindPlayer(moveSpeed, PlayerFound));
                 }
                 break;
             case EnemyState.Tracking:
