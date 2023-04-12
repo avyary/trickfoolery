@@ -21,10 +21,6 @@ public class GameManager : MonoBehaviour
     private bool inCombat = false;
     public bool playerInput = false;
     public bool isGameOver = false;
-    
-    // // wwise
-    // public AK.Wwise.Event pauseSFX;
-    // public AK.Wwise.Event unpauseSFX;
 
     // wwise
     public AK.Wwise.Event pauseSFX;
@@ -36,6 +32,7 @@ public class GameManager : MonoBehaviour
     public AK.Wwise.Event playAaaMus;
     public AK.Wwise.Event muteAaaMus;
     public AK.Wwise.Event unmAaaMus;
+    public AK.Wwise.Event stopAaaMus;
 
     // object references
     public UIManager uiManager;
@@ -157,6 +154,7 @@ public class GameManager : MonoBehaviour
     IEnumerator LoadNextScene() {
         GameObject.Find("FadeInOut").GetComponent<Animator>().SetTrigger("FadeOut");
         yield return new WaitForSecondsRealtime(1.5f);
+        stopAaaMus.Post(gameObject);
         if (isGameWon) {
             GameObject.Find("ProgressTracker").GetComponent<ProgressTracker>().isRestart = false;
             SceneManager.LoadScene(nextScene, LoadSceneMode.Single);

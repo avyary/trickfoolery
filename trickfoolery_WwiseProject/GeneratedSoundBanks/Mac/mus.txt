@@ -1,4 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
+	954606969	Unmute_level_one_music			\avy music events\Unmute_level_one_music	
+	1812361235	Stop_level_one_music			\avy music events\Stop_level_one_music	
+	2731617764	Mute_level_one_music			\avy music events\Mute_level_one_music	
 	3532690205	Play_level_one_music			\avy music events\Play_level_one_music	
 
 State Group	ID	Name			Wwise Object Path	Notes

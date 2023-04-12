@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="712897226" Type="User" GUID="{128716AC-7198-43B7-AF87-1A5C74D5106B}" Language="SFX" Hash="{75C2AE0E-D496-53A6-9C96-3D701A056956}">
+		<SoundBank Id="712897226" Type="User" GUID="{128716AC-7198-43B7-AF87-1A5C74D5106B}" Language="SFX" Hash="{2734D3E6-0D62-18FC-9215-CE8E8E8FAB23}">
 			<ObjectPath>\SoundBanks\avy soundbanks\mus</ObjectPath>
 			<ShortName>mus</ShortName>
 			<Path>mus.bnk</Path>
@@ -56,6 +56,7 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="2731617764" Name="Mute_level_one_music" ObjectPath="\Events\avy music events\Mute_level_one_music" GUID="{823A7C47-E873-4E6A-8369-CD967AE34C0D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3532690205" Name="Play_level_one_music" ObjectPath="\Events\avy music events\Play_level_one_music" GUID="{48C4AABD-1063-4975-B341-E33A36C8D11E}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="794838114"/>
@@ -87,7 +88,6 @@
 							<MediaRefs>
 								<MediaRef Id="291589524"/>
 								<MediaRef Id="340873418"/>
-								<MediaRef Id="536069338"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -98,6 +98,8 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="1812361235" Name="Stop_level_one_music" ObjectPath="\Events\avy music events\Stop_level_one_music" GUID="{06A5EF20-2029-49A4-A054-D2D28F4F9124}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="954606969" Name="Unmute_level_one_music" ObjectPath="\Events\avy music events\Unmute_level_one_music" GUID="{7925FB30-A253-49C3-B6A7-086FC10B259E}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<StateGroups>
 				<StateGroup Id="3296584377" Name="hype" ObjectPath="\States\avy music states\hype" GUID="{B61FCDC7-EC1B-4FFE-A4FE-776204B2FA7C}">
@@ -892,5 +894,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4B599618-D73C-1EA0-2F28-8AEA43B4B4F5}</FileHash>
+	<FileHash>{8D82A9DC-32CF-051B-B78E-07E019079BA1}</FileHash>
 </SoundBanksInfo>
