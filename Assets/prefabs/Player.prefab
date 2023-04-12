@@ -5319,7 +5319,9 @@ MonoBehaviour:
   MultiPositionType: 1
   multiPositionTypeLabel: 0
   attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
-  LargeModePositions: []
+  LargeModePositions:
+  - {fileID: 0}
+  - {fileID: 0}
   multiPositionArray: []
 --- !u!54 &8238086170442383597
 Rigidbody:
@@ -5964,6 +5966,7 @@ MonoBehaviour:
   tomTaunt: {fileID: 7400000, guid: 9ec426cadff27af42972b220f9db3863, type: 2}
   tomIdle: {fileID: 7400000, guid: e27b81bde5a159f41a36b6f0e4a7ba1c, type: 2}
   playerSounds: {fileID: 0}
+  tauntSFX: {fileID: 0}
 --- !u!1 &6404197257975361587
 GameObject:
   m_ObjectHideFlags: 0
@@ -6354,8 +6357,6 @@ GameObject:
   - component: {fileID: 3667562845936049208}
   - component: {fileID: 3248259484298412722}
   - component: {fileID: 2210145749772937266}
-  - component: {fileID: 2702067757059315698}
-  - component: {fileID: 8482860425733441765}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -6611,9 +6612,10 @@ MonoBehaviour:
   animator: {fileID: 8668667094062275913}
   tomRunning: {fileID: -203655887218126122, guid: b58a14cce84c7264f8468640a39b388f, type: 3}
   tomRolling: {fileID: -203655887218126122, guid: ce3da710398828c49ac3199e15b093f4, type: 3}
-  tomTaunt: {fileID: -203655887218126122, guid: 51f0a08d1201cb540ab81e3e9cadeac7, type: 3}
+  tomTaunt: {fileID: -203655887218126122, guid: 2713b2eddd97146ff8a86608ce692937, type: 3}
   tomIdle: {fileID: -203655887218126122, guid: 38efc1a6d41901641aeed1632e74660e, type: 3}
   playerSounds: {fileID: 0}
+  tauntSFX: {fileID: 6435225725634533990}
 --- !u!54 &3248259484298412722
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6653,44 +6655,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   active: 1
---- !u!114 &2702067757059315698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7796244350440389784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a024f4daab4fd48b9aec34fb7e7acfaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 04cdc92011dfa0848a35e344c4167749, type: 2}
-  decodeBank: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  bankNameInternal: 
-  valueGuidInternal: 
---- !u!114 &8482860425733441765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7796244350440389784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4649440e13bc49ae8c2a0f5df98fd3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDefaultListener: 0
-  listenerId: 0
 --- !u!1 &8128285181426198141
 GameObject:
   m_ObjectHideFlags: 0
@@ -6966,6 +6930,7 @@ MonoBehaviour:
   tomTaunt: {fileID: -203655887218126122, guid: 51f0a08d1201cb540ab81e3e9cadeac7, type: 3}
   tomIdle: {fileID: -203655887218126122, guid: 38efc1a6d41901641aeed1632e74660e, type: 3}
   playerSounds: {fileID: 0}
+  tauntSFX: {fileID: 0}
 --- !u!1001 &7471493794688495056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7161,3 +7126,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &977887736377740982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7742107586630799489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85fdee3d3de4fd74f9a1b3fde934b0e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2270272877912004550}
+  tomRunning: {fileID: 7400000, guid: 13e7a7fc5b2dc714b95de37b7074b895, type: 2}
+  tomRolling: {fileID: 7400000, guid: 779efefd22b548c4bb87ee4801ca1b40, type: 2}
+  tomTaunt: {fileID: 7400000, guid: 4c64d4a6d3b21564a846a43bae413bb0, type: 2}
+  tomIdle: {fileID: 7400000, guid: a6ef9bc5b8c5a144f9a4a33cea7de667, type: 2}
+  playerSounds: {fileID: 6435225725634533990}
+  tauntSFX: {fileID: 6435225725634533990}

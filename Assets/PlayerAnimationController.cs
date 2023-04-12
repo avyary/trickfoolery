@@ -8,8 +8,9 @@ public class PlayerAnimationController : MonoBehaviour
     [SerializeField] private AnimationClip tomRolling;
     [SerializeField] private AnimationClip tomTaunt;
     [SerializeField] private AnimationClip tomIdle;
-    [SerializeField]
-    private PlayerSounds playerSounds;
+    public AkEvent playerSounds;
+
+    public AkEvent tauntSFX;
 
     private void Start()
     {
@@ -17,9 +18,18 @@ public class PlayerAnimationController : MonoBehaviour
         animator.Play(tomIdle.name);
     }
 
-    private void PlayTauntSFX()
-    {
+    // void PlayTauntSound()
+    // {
+    //     Debug.Log("Tauntsfx");
+    // }
+
+    void PlayTauntSound() 
+    {   
         Debug.Log("Tauntsfx");
+        if (tauntSFX != null) 
+        {
+            tauntSFX.HandleEvent(gameObject);
+        }
     }
 
     private void Update()

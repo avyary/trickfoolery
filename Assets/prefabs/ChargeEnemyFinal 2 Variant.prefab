@@ -287,7 +287,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 3, z: 1}
   m_Center: {x: 0, y: 0.33, z: 0}
---- !u!114 &1511722236637375256
+--- !u!114 &-9126367068284845412
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -300,9 +300,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_listeners:
-    initialListenerList:
-    - {fileID: 0}
-    useDefaultListeners: 0
+    initialListenerList: []
+    useDefaultListeners: 1
   isEnvironmentAware: 1
   isStaticObject: 0
   m_positionOffsetData:
