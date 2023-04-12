@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="625e54dd-d997-43d2-a428-3cc53cec4e4b" name="Changes" comment="" />
+    <list default="true" id="625e54dd-d997-43d2-a428-3cc53cec4e4b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/ChargeEnemyFinal 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/ChargeEnemyFinal 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,9 +29,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\Isaac\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Isaac\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Isaac\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\isaac\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\isaac\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\isaac\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
