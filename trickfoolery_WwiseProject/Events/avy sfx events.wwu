@@ -88,6 +88,54 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Play_sfx_enemyGuitar" ID="{0BBC2582-7E12-4F81-AB17-1D48C6BF5224}" ShortID="359654096">
+					<ChildrenList>
+						<Event Name="Play_sfx_enemyGuitar_aggro" ID="{F3809DC0-5347-4772-BCBC-7B6815E11624}">
+							<ChildrenList>
+								<Action Name="" ID="{D9BA77E7-D430-45E3-8FF5-BCA6CD1A0208}" ShortID="1022222901">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_enemyGuitar_aggro" ID="{4CA690AD-1709-4C5B-9FCB-A020353414AB}" WorkUnitID="{A08D4457-7BA1-4095-B157-374E936304F0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_sfx_enemyGuitar_attack" ID="{4E01B30A-3754-47BA-AE8D-68850C14796E}">
+							<ChildrenList>
+								<Action Name="" ID="{CDD70207-3E3E-4CC7-87CF-6B7B64BC4DD3}" ShortID="147604493">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_enemyGuitar_attack" ID="{0721780B-1FFC-4D5B-9727-E07A523E4C9E}" WorkUnitID="{A08D4457-7BA1-4095-B157-374E936304F0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_sfx_enemyGuitar_alert" ID="{86EF2D82-50DE-40ED-A8C4-0503C910FFDC}">
+							<ChildrenList>
+								<Action Name="" ID="{B23AA8B3-C438-43A0-AD7F-E71896851C06}" ShortID="1063515736">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_enemyGuitar_alert" ID="{E76CBEE7-23E2-416D-85E4-205203CD7281}" WorkUnitID="{A08D4457-7BA1-4095-B157-374E936304F0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_sfx_enemyGuitar_death" ID="{6E654EAB-B8D8-4024-AD77-A9F5AEF87A65}">
+							<ChildrenList>
+								<Action Name="" ID="{D5BBA6C8-0DF0-4851-92C2-535CC7505A51}" ShortID="362034946">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_enemyGuitar_death" ID="{3DFEFE69-7924-4E56-9ABE-E981DFF666AF}" WorkUnitID="{A08D4457-7BA1-4095-B157-374E936304F0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

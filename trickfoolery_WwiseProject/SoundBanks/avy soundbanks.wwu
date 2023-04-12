@@ -29,7 +29,7 @@
 						</Property>
 					</PropertyList>
 					<ObjectInclusionList>
-						<ObjectRef Name="sfx_player" ID="{2847B478-4EBB-4225-A706-AA198ABB0253}" WorkUnitID="{A08D4457-7BA1-4095-B157-374E936304F0}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_sfx_player" ID="{2D01A28C-DC18-4225-9636-E63795E3B196}" WorkUnitID="{DEF5BEE4-603A-4331-AC95-68C3F0C086AA}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
@@ -43,7 +43,8 @@
 						</Property>
 					</PropertyList>
 					<ObjectInclusionList>
-						<ObjectRef Name="sfx_enemyBeefy" ID="{ECE54A28-682F-42E6-87C6-32102A284EB6}" WorkUnitID="{A08D4457-7BA1-4095-B157-374E936304F0}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_sfx_enemyBeefy" ID="{4F835BE5-F150-4C2C-92FD-53370B2A60C1}" WorkUnitID="{DEF5BEE4-603A-4331-AC95-68C3F0C086AA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_sfx_enemyGuitar" ID="{0BBC2582-7E12-4F81-AB17-1D48C6BF5224}" WorkUnitID="{DEF5BEE4-603A-4331-AC95-68C3F0C086AA}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

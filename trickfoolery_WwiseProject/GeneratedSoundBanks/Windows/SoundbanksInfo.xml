@@ -167,7 +167,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2297208207" Type="User" GUID="{D7757AB9-AAC7-41E1-BCF6-CB59A2C0BE4F}" Language="SFX" Hash="{4395548A-F01D-8C8F-478D-4104BF920B75}">
+		<SoundBank Id="2297208207" Type="User" GUID="{D7757AB9-AAC7-41E1-BCF6-CB59A2C0BE4F}" Language="SFX" Hash="{E528AE0E-570F-97F6-5571-B054C71EDD9B}">
 			<ObjectPath>\SoundBanks\avy soundbanks\sfx_enemy</ObjectPath>
 			<ShortName>sfx_enemy</ShortName>
 			<Path>sfx_enemy.bnk</Path>
@@ -180,9 +180,17 @@
 					<ShortName>sfx_enemyBeefy_endAttack_5.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_endAttack_5_3F75BDB9.wem</CachePath>
 				</File>
+				<File Id="66328359" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyGuitar_aggro_2.wav</ShortName>
+					<CachePath>SFX/sfx_enemyGuitar_aggro_2_3F75BDB9.wem</CachePath>
+				</File>
 				<File Id="86676616" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_enemyBeefy_footstepsConcrete_5.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_footstepsConcrete_5_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="118736863" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyGuitar_alert_3.wav</ShortName>
+					<CachePath>SFX/sfx_enemyGuitar_alert_3_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="133250952" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_enemyBeefy_footstepsConcrete_1.wav</ShortName>
@@ -192,6 +200,10 @@
 					<ShortName>sfx_enemyBeefy_aggro_1.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_aggro_1_3F75BDB9.wem</CachePath>
 				</File>
+				<File Id="174897676" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyGuitar_death_notCoolDude.wav</ShortName>
+					<CachePath>SFX/sfx_enemyGuitar_death_notCoolDude_3F75BDB9.wem</CachePath>
+				</File>
 				<File Id="175233521" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_enemyBeefy_endAttack_2.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_endAttack_2_3F75BDB9.wem</CachePath>
@@ -200,6 +212,10 @@
 					<ShortName>sfx_enemyBeefy_footstepsDisco_3.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_footstepsDisco_3_3F75BDB9.wem</CachePath>
 				</File>
+				<File Id="199313268" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyGuitar_attack_1.wav</ShortName>
+					<CachePath>SFX/sfx_enemyGuitar_attack_1_3F75BDB9.wem</CachePath>
+				</File>
 				<File Id="220787170" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_enemyBeefy_footstepsConcrete_3.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_footstepsConcrete_3_3F75BDB9.wem</CachePath>
@@ -207,6 +223,10 @@
 				<File Id="226718950" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_enemyBeefy_footstepsDisco_2.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_footstepsDisco_2_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="227180075" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyGuitar_aggro_3.wav</ShortName>
+					<CachePath>SFX/sfx_enemyGuitar_aggro_3_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="231296671" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_enemyBeefy_footstepsDisco_5.wav</ShortName>
@@ -224,6 +244,10 @@
 					<ShortName>sfx_enemyBeefy_death_2.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_death_2_3F75BDB9.wem</CachePath>
 				</File>
+				<File Id="315718201" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyGuitar_aggro_1.wav</ShortName>
+					<CachePath>SFX/sfx_enemyGuitar_aggro_1_3F75BDB9.wem</CachePath>
+				</File>
 				<File Id="348335200" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_enemyBeefy_aggro_3.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_aggro_3_3F75BDB9.wem</CachePath>
@@ -232,9 +256,25 @@
 					<ShortName>sfx_enemyBeefy_footstepsGrassy_4.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_footstepsGrassy_4_3F75BDB9.wem</CachePath>
 				</File>
+				<File Id="357382036" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyGuitar_attack_7.wav</ShortName>
+					<CachePath>SFX/sfx_enemyGuitar_attack_7_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="366435762" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyGuitar_alert_1.wav</ShortName>
+					<CachePath>SFX/sfx_enemyGuitar_alert_1_3F75BDB9.wem</CachePath>
+				</File>
 				<File Id="389860146" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_enemyBeefy_startAttack_3.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_startAttack_3_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="409162538" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyGuitar_death_notGroovyDude.wav</ShortName>
+					<CachePath>SFX/sfx_enemyGuitar_death_notGroovyDude_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="443341184" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyGuitar_attack_5.wav</ShortName>
+					<CachePath>SFX/sfx_enemyGuitar_attack_5_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="448787943" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_enemyBeefy_startAttack_1.wav</ShortName>
@@ -268,9 +308,25 @@
 					<ShortName>sfx_enemyBeefy_endAttack_4.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_endAttack_4_3F75BDB9.wem</CachePath>
 				</File>
+				<File Id="724446481" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyGuitar_alert_2.wav</ShortName>
+					<CachePath>SFX/sfx_enemyGuitar_alert_2_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="731690010" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyGuitar_attack_4.wav</ShortName>
+					<CachePath>SFX/sfx_enemyGuitar_attack_4_3F75BDB9.wem</CachePath>
+				</File>
 				<File Id="737643451" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_enemyBeefy_footstepsDisco_4.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_footstepsDisco_4_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="776970318" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyGuitar_death_totallyNotRadical.wav</ShortName>
+					<CachePath>SFX/sfx_enemyGuitar_death_totallyNotRadical_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="785822034" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyGuitar_attack_9.wav</ShortName>
+					<CachePath>SFX/sfx_enemyGuitar_attack_9_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="843431021" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_enemyBeefy_footstepsGrassy_2.wav</ShortName>
@@ -300,6 +356,10 @@
 					<ShortName>sfx_enemyBeefy_footstepsDisco_6.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_footstepsDisco_6_3F75BDB9.wem</CachePath>
 				</File>
+				<File Id="965574348" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyGuitar_attack_2.wav</ShortName>
+					<CachePath>SFX/sfx_enemyGuitar_attack_2_3F75BDB9.wem</CachePath>
+				</File>
 				<File Id="974045788" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_enemyBeefy_endAttack_3.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_endAttack_3_3F75BDB9.wem</CachePath>
@@ -311,6 +371,18 @@
 				<File Id="991664786" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_enemyBeefy_aggro_4.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_aggro_4_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="1048258940" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyGuitar_attack_6.wav</ShortName>
+					<CachePath>SFX/sfx_enemyGuitar_attack_6_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="1054308750" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyGuitar_attack_3.wav</ShortName>
+					<CachePath>SFX/sfx_enemyGuitar_attack_3_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="1064787542" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_enemyGuitar_attack_8.wav</ShortName>
+					<CachePath>SFX/sfx_enemyGuitar_attack_8_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="1068285633" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_enemyBeefy_startAttack_2.wav</ShortName>
@@ -396,6 +468,40 @@
 						<MediaRef Id="865498349"/>
 						<MediaRef Id="1068285633"/>
 						<MediaRef Id="1069837018"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1841520935" Name="Play_sfx_enemyGuitar_aggro" ObjectPath="\Events\avy sfx events\Play_sfx_enemyGuitar\Play_sfx_enemyGuitar_aggro" GUID="{F3809DC0-5347-4772-BCBC-7B6815E11624}" DurationType="OneShot" DurationMin="1.7127438" DurationMax="3.1666296">
+					<MediaRefs>
+						<MediaRef Id="66328359"/>
+						<MediaRef Id="227180075"/>
+						<MediaRef Id="315718201"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2296648555" Name="Play_sfx_enemyGuitar_alert" ObjectPath="\Events\avy sfx events\Play_sfx_enemyGuitar\Play_sfx_enemyGuitar_alert" GUID="{86EF2D82-50DE-40ED-A8C4-0503C910FFDC}" DurationType="OneShot" DurationMin="0.5396907" DurationMax="1.9252567">
+					<MediaRefs>
+						<MediaRef Id="118736863"/>
+						<MediaRef Id="366435762"/>
+						<MediaRef Id="724446481"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1140923239" Name="Play_sfx_enemyGuitar_attack" ObjectPath="\Events\avy sfx events\Play_sfx_enemyGuitar\Play_sfx_enemyGuitar_attack" GUID="{4E01B30A-3754-47BA-AE8D-68850C14796E}" DurationType="OneShot" DurationMin="3.692313" DurationMax="3.692313">
+					<MediaRefs>
+						<MediaRef Id="199313268"/>
+						<MediaRef Id="357382036"/>
+						<MediaRef Id="443341184"/>
+						<MediaRef Id="731690010"/>
+						<MediaRef Id="785822034"/>
+						<MediaRef Id="965574348"/>
+						<MediaRef Id="1048258940"/>
+						<MediaRef Id="1054308750"/>
+						<MediaRef Id="1064787542"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1512650471" Name="Play_sfx_enemyGuitar_death" ObjectPath="\Events\avy sfx events\Play_sfx_enemyGuitar\Play_sfx_enemyGuitar_death" GUID="{6E654EAB-B8D8-4024-AD77-A9F5AEF87A65}" DurationType="OneShot" DurationMin="3.7600226" DurationMax="5.5950675">
+					<MediaRefs>
+						<MediaRef Id="174897676"/>
+						<MediaRef Id="409162538"/>
+						<MediaRef Id="776970318"/>
 					</MediaRefs>
 				</Event>
 			</Events>
@@ -791,7 +897,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="4271082421" Type="User" GUID="{95E7E615-6C37-4B87-9F14-C1E820F537B1}" Language="SFX" Hash="{20B4325C-C756-2457-AAC9-94E276A30E6E}">
+		<SoundBank Id="4271082421" Type="User" GUID="{95E7E615-6C37-4B87-9F14-C1E820F537B1}" Language="SFX" Hash="{FA37E98C-C44C-DAD9-CCEE-229EF7F8936F}">
 			<ObjectPath>\SoundBanks\avy soundbanks\sfx_player_and_UI</ObjectPath>
 			<ShortName>sfx_player_and_UI</ShortName>
 			<Path>sfx_player_and_UI.bnk</Path>
@@ -894,5 +1000,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F417FF7B-867F-9033-BA9D-64B009299733}</FileHash>
+	<FileHash>{56202FB5-A2EC-33C6-8482-CFDEAB106519}</FileHash>
 </SoundBanksInfo>

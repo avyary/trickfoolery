@@ -31,6 +31,10 @@ namespace AK
         static const AkUniqueID PLAY_SFX_ENEMYBEEFY_ENDATTACK = 2827312655U;
         static const AkUniqueID PLAY_SFX_ENEMYBEEFY_FOOTSTEPS = 3576742661U;
         static const AkUniqueID PLAY_SFX_ENEMYBEEFY_STARTATTACK = 1327506600U;
+        static const AkUniqueID PLAY_SFX_ENEMYGUITAR_AGGRO = 1841520935U;
+        static const AkUniqueID PLAY_SFX_ENEMYGUITAR_ALERT = 2296648555U;
+        static const AkUniqueID PLAY_SFX_ENEMYGUITAR_ATTACK = 1140923239U;
+        static const AkUniqueID PLAY_SFX_ENEMYGUITAR_DEATH = 1512650471U;
         static const AkUniqueID PLAY_SFX_GROOVY = 526466336U;
         static const AkUniqueID PLAY_SFX_PAUSE = 3683043420U;
         static const AkUniqueID PLAY_SFX_PLAYER_DASH = 4077681152U;
