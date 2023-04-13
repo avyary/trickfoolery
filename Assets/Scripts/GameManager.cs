@@ -155,9 +155,10 @@ public class GameManager : MonoBehaviour
     IEnumerator LoadNextScene() {
         GameObject.Find("FadeInOut").GetComponent<Animator>().SetTrigger("FadeOut");
         yield return new WaitForSecondsRealtime(1.5f);
-        stopAaaMus.Post(gameObject);
         if (isGameWon) {
             GameObject.Find("ProgressTracker").GetComponent<ProgressTracker>().isRestart = false;
+            stopAaaMus.Post(gameObject);
+            stoppauseMUS.Post(gameObject);
             SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
         }
         else {
