@@ -110,8 +110,8 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID DISCO = 3920460409U;
         static const AkUniqueID HYPE = 3296584377U;
-        static const AkUniqueID ON_DISCO_FLOOR = 4082227278U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

@@ -380,7 +380,7 @@
 																</PropertyList>
 																<ReferenceList>
 																	<Reference Name="ControlInput">
-																		<ObjectRef Name="On_Disco_Floor" ID="{1353123B-8719-435F-969E-773D804B92E8}" WorkUnitID="{71902489-F80C-4DEF-B7AC-12C89F1CDD54}"/>
+																		<ObjectRef Name="Disco" ID="{1353123B-8719-435F-969E-773D804B92E8}" WorkUnitID="{71902489-F80C-4DEF-B7AC-12C89F1CDD54}"/>
 																	</Reference>
 																	<Reference Name="Curve">
 																		<Custom>
@@ -475,7 +475,7 @@
 																</PropertyList>
 																<ReferenceList>
 																	<Reference Name="ControlInput">
-																		<ObjectRef Name="On_Disco_Floor" ID="{1353123B-8719-435F-969E-773D804B92E8}" WorkUnitID="{71902489-F80C-4DEF-B7AC-12C89F1CDD54}"/>
+																		<ObjectRef Name="Disco" ID="{1353123B-8719-435F-969E-773D804B92E8}" WorkUnitID="{71902489-F80C-4DEF-B7AC-12C89F1CDD54}"/>
 																	</Reference>
 																	<Reference Name="Curve">
 																		<Custom>
@@ -628,7 +628,7 @@
 																</PropertyList>
 																<ReferenceList>
 																	<Reference Name="ControlInput">
-																		<ObjectRef Name="On_Disco_Floor" ID="{1353123B-8719-435F-969E-773D804B92E8}" WorkUnitID="{71902489-F80C-4DEF-B7AC-12C89F1CDD54}"/>
+																		<ObjectRef Name="Disco" ID="{1353123B-8719-435F-969E-773D804B92E8}" WorkUnitID="{71902489-F80C-4DEF-B7AC-12C89F1CDD54}"/>
 																	</Reference>
 																	<Reference Name="Curve">
 																		<Custom>

@@ -87,6 +87,7 @@ public class GameManager : MonoBehaviour
             isRestart = false;
         }
 
+
         playpauseMUS.Post(gameObject);
         firstmutepauseMUS.Post(gameObject);
         AkSoundEngine.SetState("Gameplay_State", "Combat");

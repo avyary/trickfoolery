@@ -829,7 +829,7 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="sfx_charger_anger" ID="{C31818E4-960D-4534-80EE-44A59276F6F4}" ShortID="671836119">
 					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>3</Value>
@@ -841,6 +841,11 @@
 							<Custom>
 								<Attenuation Name="Attenuation (Custom)" ID="{6657CB02-1DDC-40E2-8A73-2CA046056192}" ShortID="985909494">
 									<PropertyList>
+										<Property Name="ConeUse" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
 										<Property Name="RadiusMax" Type="Real64" Value="25"/>
 									</PropertyList>
 									<CurveUsageInfoList>

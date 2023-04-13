@@ -33,7 +33,7 @@ State	ID	Name	State Group			Notes
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	3296584377	Hype			\Default Work Unit\Hype	
-	4082227278	On_Disco_Floor			\Default Work Unit\On_Disco_Floor	
+	3920460409	Disco			\Default Work Unit\Disco	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	19996191	Solos	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\AAA_synth_3_9EDFC787.wem		\Interactive Music Hierarchy\Default Work Unit\Alien Arena Normal and Victory\Alien Arena Assault\Alien Arena\Solos		776184

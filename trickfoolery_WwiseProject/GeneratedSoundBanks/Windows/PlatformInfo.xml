@@ -22,11 +22,11 @@
 		<GenerateAllBanksMetadata>true</GenerateAllBanksMetadata>
 		<GeneratePerBankMetadata>false</GeneratePerBankMetadata>
 		<UseSoundBankNames>true</UseSoundBankNames>
-		<AllowExceedingMaxSize>false</AllowExceedingMaxSize>
-		<MaxAttenuationInfo>true</MaxAttenuationInfo>
-		<EstimatedDurationInfo>true</EstimatedDurationInfo>
-		<PrintObjectGuid>true</PrintObjectGuid>
-		<PrintObjectPath>true</PrintObjectPath>
+		<AllowExceedingMaxSize>true</AllowExceedingMaxSize>
+		<MaxAttenuationInfo>false</MaxAttenuationInfo>
+		<EstimatedDurationInfo>false</EstimatedDurationInfo>
+		<PrintObjectGuid>false</PrintObjectGuid>
+		<PrintObjectPath>false</PrintObjectPath>
 	</Settings>
-	<FileHash>{7A567D35-80F6-BE57-D9F9-5B114382546C}</FileHash>
+	<FileHash>{890113FF-56AD-8E5F-F5EF-9F9709E4F548}</FileHash>
 </PlatformInfo>
