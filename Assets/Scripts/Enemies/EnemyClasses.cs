@@ -43,6 +43,10 @@ public abstract class Enemy: MonoBehaviour
 
     private GameManager gameManager;
 
+    //wwise
+    public AK.Wwise.Event angerSFX;
+
+
     public bool isAngy;
     public Attack currentAttack;
 
@@ -169,6 +173,7 @@ public abstract class Enemy: MonoBehaviour
         state = EnemyState.Tracking;
         if (anger >= maxAnger) {
             isAngy = true;
+            angerSFX.Post(gameObject);
            _AngyInd.SetActive(true); 
            currentAttack = angyAttack;
             Debug.Log("Damage " + currentAttack.damage);

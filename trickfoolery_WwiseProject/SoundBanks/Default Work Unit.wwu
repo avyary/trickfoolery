@@ -7,6 +7,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_sfx_player_death" ID="{CAC80460-81AC-420B-AD88-E8FA18AC9974}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Unmute_mus_pause_75bpm" ID="{C3E827C6-F5CC-4329-985D-E19D22E9E34A}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Alien_Arena_Assault_170bpm" ID="{9B4690B1-682D-4359-808E-AF7E56A972C3}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_charger_angy" ID="{E480F771-7FFA-43EE-965C-E01524C26C0E}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_select" ID="{D9480393-0FF0-4478-941E-C2F83A21C8BD}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Unmute_Alien_Arena_Assault_170bpm" ID="{33C4D4F4-E3D0-44A5-8C66-252F4F122C70}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>

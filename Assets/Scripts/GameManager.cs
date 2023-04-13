@@ -208,6 +208,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator GameOverLose()
     {
         isGameOver = true;
+        stopAaaMus.Post(gameObject);
         stopCombatEvent.Invoke();
         yield return new WaitForSeconds(3f);
         uiManager.GameOverLose();
@@ -218,6 +219,7 @@ public class GameManager : MonoBehaviour
     void ShowLoseMenu() {
         print("show lose menu");
         jumbotron.state = JumbotronState.Disabled;
+        stopAaaMus.Post(gameObject);
         uiManager.ShowLoseMenu();
         isPaused = true;
         Time.timeScale = 0;

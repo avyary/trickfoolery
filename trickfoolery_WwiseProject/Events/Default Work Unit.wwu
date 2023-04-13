@@ -299,6 +299,22 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Stop_Alien_Arena_Assault_170bpm" ID="{9B4690B1-682D-4359-808E-AF7E56A972C3}">
+					<ChildrenList>
+						<Action Name="" ID="{83866EA6-9C91-4512-8018-34AD66D7BE90}" ShortID="41300731">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Alien Arena Normal and Victory" ID="{95152A6C-A2BF-456C-B5B2-179C0E2FC335}" WorkUnitID="{5CD6933B-0773-453D-BFFC-5483B47741B7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
