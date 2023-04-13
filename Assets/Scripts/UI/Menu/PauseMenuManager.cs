@@ -12,6 +12,10 @@ public class PauseMenuManager : MonoBehaviour
 
     [SerializeField]
     public float changeCooldown;
+    
+    /// wwise event declaration for stopping pause and level music when exiting to main menu
+    public AK.Wwise.Event stopAaaMus;
+    public AK.Wwise.Event stoppauseMUS;
 
     void Start()
     {
@@ -59,6 +63,9 @@ public class PauseMenuManager : MonoBehaviour
     public void ReturnToMenu() {
         print("blaehh");
         StartCoroutine(MenuAfterDelay());
+        /// posting the wwise events to stop the pause and level music before it goes over to the main menu
+        stopAaaMus.Post(gameObject);
+        stoppauseMUS.Post(gameObject);
     }
 
     IEnumerator MenuAfterDelay() {

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="145">
 	<RootPaths>
-		<ProjectRoot>../..</ProjectRoot>
-		<SourceFilesRoot>../../.cache/Mac</SourceFilesRoot>
+		<ProjectRoot>../../</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Mac/</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
 		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="712897226" Type="User" GUID="{128716AC-7198-43B7-AF87-1A5C74D5106B}" Language="SFX" Hash="{8F7A87E3-AC2F-72EE-48A5-F3CCF5A818BA}">
+		<SoundBank Id="712897226" Type="User" GUID="{128716AC-7198-43B7-AF87-1A5C74D5106B}" Language="SFX" Hash="{F693C9BD-8D17-A7B9-BA45-A8AB47DDF65F}">
 			<ObjectPath>\SoundBanks\avy soundbanks\mus</ObjectPath>
 			<ShortName>mus</ShortName>
 			<Path>mus.bnk</Path>
@@ -515,7 +515,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" GUID="{FCC95966-8BC9-428F-A86F-77BD80236DCE}" Language="SFX" Hash="{437ADB38-9A3C-F008-0C74-35B918127AC4}">
+		<SoundBank Id="3161908922" Type="User" GUID="{FCC95966-8BC9-428F-A86F-77BD80236DCE}" Language="SFX" Hash="{A4EB4034-C907-31BB-C4B6-4F2A4537B198}">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -880,6 +880,7 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="1234905987" Name="Stop_Alien_Arena_Assault_170bpm" ObjectPath="\Events\Default Work Unit\Stop_Alien_Arena_Assault_170bpm" GUID="{9B4690B1-682D-4359-808E-AF7E56A972C3}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3352794624" Name="Stop_mus_pause_75bpm" ObjectPath="\Events\Default Work Unit\Stop_mus_pause_75bpm" GUID="{B0A1E8C4-CBD5-4D2D-B416-98B9395C2181}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2601853237" Name="Stop_mus_Trickfoolery_222bpm" ObjectPath="\Events\Default Work Unit\Stop_mus_Trickfoolery_222bpm" GUID="{103A468D-C1A5-4619-8F4C-E88DFD668A3C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1990966217" Name="Unmute_Alien_Arena_Assault_170bpm" ObjectPath="\Events\Default Work Unit\Unmute_Alien_Arena_Assault_170bpm" GUID="{33C4D4F4-E3D0-44A5-8C66-252F4F122C70}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="4152903754" Name="Unmute_mus_pause_75bpm" ObjectPath="\Events\Default Work Unit\Unmute_mus_pause_75bpm" GUID="{C3E827C6-F5CC-4329-985D-E19D22E9E34A}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -1001,5 +1002,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3F0B47B3-A544-6624-B040-FB4241D70146}</FileHash>
+	<FileHash>{1E8AD1B3-4F2F-A2B7-5D43-8480ECC77E44}</FileHash>
 </SoundBanksInfo>

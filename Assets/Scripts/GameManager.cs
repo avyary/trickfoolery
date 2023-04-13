@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     public bool playerInput = false;
     public bool isGameOver = false;
 
-    // wwise
+    // wwise event variable declaration
     public AK.Wwise.Event pauseSFX;
     public AK.Wwise.Event unpSFX;
     public AK.Wwise.Event playpauseMUS;
@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public AK.Wwise.Event muteAaaMus;
     public AK.Wwise.Event unmAaaMus;
     public AK.Wwise.Event stopAaaMus;
+    public AK.Wwise.Event stoppauseMUS;
 
     // object references
     public UIManager uiManager;

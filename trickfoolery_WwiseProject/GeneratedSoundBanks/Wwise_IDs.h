@@ -47,6 +47,7 @@ namespace AK
         static const AkUniqueID PLAY_SFX_UNPAUSE = 3476672187U;
         static const AkUniqueID STOP_ALIEN_ARENA_ASSAULT_170BPM = 1234905987U;
         static const AkUniqueID STOP_LEVEL_ONE_MUSIC = 1812361235U;
+        static const AkUniqueID STOP_MUS_PAUSE_75BPM = 3352794624U;
         static const AkUniqueID STOP_MUS_TRICKFOOLERY_222BPM = 2601853237U;
         static const AkUniqueID UNMUTE_ALIEN_ARENA_ASSAULT_170BPM = 1990966217U;
         static const AkUniqueID UNMUTE_LEVEL_ONE_MUSIC = 954606969U;
