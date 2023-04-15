@@ -42,12 +42,12 @@
 				</Sound>
 				<RandomSequenceContainer Name="sfx_charger_death" ID="{F6E8B5E4-2060-478F-A9DC-6D9EC9ABE079}" ShortID="153668012">
 					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
 						<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-5</Value>
+								<Value>-3</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -61,7 +61,7 @@
 												<Value>True</Value>
 											</ValueList>
 										</Property>
-										<Property Name="RadiusMax" Type="Real64" Value="15"/>
+										<Property Name="RadiusMax" Type="Real64" Value="25"/>
 									</PropertyList>
 									<CurveUsageInfoList>
 										<VolumeDryUsage>
@@ -78,13 +78,13 @@
 															<SegmentShape>Log1</SegmentShape>
 														</Point>
 														<Point>
-															<XPos>14.9975</XPos>
+															<XPos>24.9958333333333</XPos>
 															<YPos>-200</YPos>
 															<Flags>0</Flags>
 															<SegmentShape>Log2</SegmentShape>
 														</Point>
 														<Point>
-															<XPos>15</XPos>
+															<XPos>25</XPos>
 															<YPos>-200</YPos>
 															<Flags>37</Flags>
 														</Point>
@@ -325,13 +325,6 @@
 					</ChildrenList>
 				</RandomSequenceContainer>
 				<Sound Name="sfx_player_death" ID="{D3BAA8FC-AF2B-477C-979E-65BAB2F7658C}" ShortID="719188996">
-					<PropertyList>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-10</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
@@ -662,12 +655,17 @@
 				</Sound>
 				<RandomSequenceContainer Name="sfx_charger_lunge" ID="{360D8E44-B9C4-4B6B-93C0-4080FAA037A4}" ShortID="497565078">
 					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
 						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 						<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -681,7 +679,7 @@
 												<Value>True</Value>
 											</ValueList>
 										</Property>
-										<Property Name="RadiusMax" Type="Real64" Value="15"/>
+										<Property Name="RadiusMax" Type="Real64" Value="25"/>
 									</PropertyList>
 									<CurveUsageInfoList>
 										<VolumeDryUsage>
@@ -698,13 +696,13 @@
 															<SegmentShape>Log1</SegmentShape>
 														</Point>
 														<Point>
-															<XPos>14.9975</XPos>
+															<XPos>24.9958333333333</XPos>
 															<YPos>-200</YPos>
 															<Flags>0</Flags>
 															<SegmentShape>Log2</SegmentShape>
 														</Point>
 														<Point>
-															<XPos>15</XPos>
+															<XPos>25</XPos>
 															<YPos>-200</YPos>
 															<Flags>37</Flags>
 														</Point>

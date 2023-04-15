@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<RootPaths>
-		<ProjectRoot>../../</ProjectRoot>
-		<SourceFilesRoot>../../.cache/Windows/</SourceFilesRoot>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
 		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="712897226" Type="User" GUID="{128716AC-7198-43B7-AF87-1A5C74D5106B}" Language="SFX" Hash="{F693C9BD-8D17-A7B9-BA45-A8AB47DDF65F}">
-			<ObjectPath>\SoundBanks\avy soundbanks\mus</ObjectPath>
+		<SoundBank Id="712897226" Type="User" Language="SFX" Hash="{F693C9BD-8D17-A7B9-BA45-A8AB47DDF65F}">
 			<ShortName>mus</ShortName>
 			<Path>mus.bnk</Path>
 			<Media>
@@ -56,27 +55,27 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="2731617764" Name="Mute_level_one_music" ObjectPath="\Events\avy music events\Mute_level_one_music" GUID="{823A7C47-E873-4E6A-8369-CD967AE34C0D}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3532690205" Name="Play_level_one_music" ObjectPath="\Events\avy music events\Play_level_one_music" GUID="{48C4AABD-1063-4975-B341-E33A36C8D11E}" DurationType="Infinite">
+				<Event Id="2731617764" Name="Mute_level_one_music"/>
+				<Event Id="3532690205" Name="Play_level_one_music">
 					<MediaRefs>
 						<MediaRef Id="794838114"/>
 						<MediaRef Id="852624060"/>
 					</MediaRefs>
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="3296584377" Id="4196427868" GUID="{A0130F3D-8D24-4A2C-92F2-E4E8A8763FB1}"/>
+							<SwitchValue GroupType="State" GroupId="3296584377" Id="4196427868"/>
 							<MediaRefs>
 								<MediaRef Id="657037866"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="3296584377" Id="520375247" GUID="{E50F9DAF-F288-46C1-BFE9-77C625F285B8}"/>
+							<SwitchValue GroupType="State" GroupId="3296584377" Id="520375247"/>
 							<MediaRefs>
 								<MediaRef Id="708240575"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="3296584377" Id="436487211" GUID="{362E1B0B-E6BF-469B-889B-3E53AC1E622B}"/>
+							<SwitchValue GroupType="State" GroupId="3296584377" Id="436487211"/>
 							<MediaRefs>
 								<MediaRef Id="362719838"/>
 								<MediaRef Id="536069338"/>
@@ -84,91 +83,89 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="3296584377" Id="470042484" GUID="{B19DB1AA-994F-4FFD-A803-CA30BF6FA290}"/>
+							<SwitchValue GroupType="State" GroupId="3296584377" Id="470042484"/>
 							<MediaRefs>
 								<MediaRef Id="291589524"/>
 								<MediaRef Id="340873418"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="3296584377" Id="2546009797" GUID="{EF267F18-BB7D-4539-9A79-C5E96ECCABF1}"/>
+							<SwitchValue GroupType="State" GroupId="3296584377" Id="2546009797"/>
 							<MediaRefs>
 								<MediaRef Id="1026474284"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="1812361235" Name="Stop_level_one_music" ObjectPath="\Events\avy music events\Stop_level_one_music" GUID="{06A5EF20-2029-49A4-A054-D2D28F4F9124}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="954606969" Name="Unmute_level_one_music" ObjectPath="\Events\avy music events\Unmute_level_one_music" GUID="{7925FB30-A253-49C3-B6A7-086FC10B259E}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1812361235" Name="Stop_level_one_music"/>
+				<Event Id="954606969" Name="Unmute_level_one_music"/>
 			</Events>
 			<StateGroups>
-				<StateGroup Id="3296584377" Name="hype" ObjectPath="\States\avy music states\hype" GUID="{B61FCDC7-EC1B-4FFE-A4FE-776204B2FA7C}">
+				<StateGroup Id="3296584377" Name="hype">
 					<States>
-						<State Id="436487211" Name="hype_50" ObjectPath="\States\avy music states\hype\hype_50" GUID="{362E1B0B-E6BF-469B-889B-3E53AC1E622B}"/>
-						<State Id="470042484" Name="hype_75" ObjectPath="\States\avy music states\hype\hype_75" GUID="{B19DB1AA-994F-4FFD-A803-CA30BF6FA290}"/>
-						<State Id="520375247" Name="hype_25" ObjectPath="\States\avy music states\hype\hype_25" GUID="{E50F9DAF-F288-46C1-BFE9-77C625F285B8}"/>
-						<State Id="748895195" Name="None" ObjectPath="\States\avy music states\hype\None" GUID="{72F93EBB-2A74-4340-AAD0-972E0AEC4E9B}"/>
-						<State Id="2546009797" Name="hype_100" ObjectPath="\States\avy music states\hype\hype_100" GUID="{EF267F18-BB7D-4539-9A79-C5E96ECCABF1}"/>
-						<State Id="4196427868" Name="hype_0" ObjectPath="\States\avy music states\hype\hype_0" GUID="{A0130F3D-8D24-4A2C-92F2-E4E8A8763FB1}"/>
+						<State Id="436487211" Name="hype_50"/>
+						<State Id="470042484" Name="hype_75"/>
+						<State Id="520375247" Name="hype_25"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2546009797" Name="hype_100"/>
+						<State Id="4196427868" Name="hype_0"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{DCF2E82C-F352-99C9-C34D-62844E6B3298}">
-			<ObjectPath>Init</ObjectPath>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{0A2796FB-BE0A-7DA2-E811-08B8E2EBD606}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<AudioDevices>
-					<Plugin Id="2317455096" Name="No_Output" ObjectPath="\Audio Devices\Default Work Unit\No_Output" GUID="{09BDC886-7852-4C05-BE15-D92485314CAD}" LibName="No Output" LibId="11862023"/>
-					<Plugin Id="3859886410" Name="System" ObjectPath="\Audio Devices\Default Work Unit\System" GUID="{EB9C85E5-E8A3-40AB-B615-B2D2E462F3DE}" LibName="System" LibId="11403271"/>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 			<GameParameters>
-				<GameParameter Id="3296584377" Name="Hype" ObjectPath="\Game Parameters\Default Work Unit\Hype" GUID="{F10FAC34-8EF9-452B-9153-83ADE95B5819}"/>
-				<GameParameter Id="4082227278" Name="On_Disco_Floor" ObjectPath="\Game Parameters\Default Work Unit\On_Disco_Floor" GUID="{1353123B-8719-435F-969E-773D804B92E8}"/>
+				<GameParameter Id="3296584377" Name="Hype"/>
+				<GameParameter Id="4082227278" Name="On_Disco_Floor"/>
 			</GameParameters>
 			<StateGroups>
-				<StateGroup Id="762757699" Name="Gameplay_State" ObjectPath="\States\Default Work Unit\Gameplay_State" GUID="{B587995D-62E9-431F-94B4-73168DC556F9}">
+				<StateGroup Id="762757699" Name="Gameplay_State">
 					<States>
-						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Gameplay_State\None" GUID="{17C6B36D-3016-40C9-99B0-1BAE6CBE943F}"/>
-						<State Id="2716678721" Name="Victory" ObjectPath="\States\Default Work Unit\Gameplay_State\Victory" GUID="{9108A2BF-1C91-4F03-BBCD-47F60251D933}"/>
-						<State Id="2764240573" Name="Combat" ObjectPath="\States\Default Work Unit\Gameplay_State\Combat" GUID="{D23C63AE-8C84-4140-9A0C-994815485352}"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2716678721" Name="Victory"/>
+						<State Id="2764240573" Name="Combat"/>
 					</States>
 				</StateGroup>
-				<StateGroup Id="3296584377" Name="hype" ObjectPath="\States\avy music states\hype" GUID="{B61FCDC7-EC1B-4FFE-A4FE-776204B2FA7C}">
+				<StateGroup Id="3296584377" Name="hype">
 					<States>
-						<State Id="436487211" Name="hype_50" ObjectPath="\States\avy music states\hype\hype_50" GUID="{362E1B0B-E6BF-469B-889B-3E53AC1E622B}"/>
-						<State Id="470042484" Name="hype_75" ObjectPath="\States\avy music states\hype\hype_75" GUID="{B19DB1AA-994F-4FFD-A803-CA30BF6FA290}"/>
-						<State Id="520375247" Name="hype_25" ObjectPath="\States\avy music states\hype\hype_25" GUID="{E50F9DAF-F288-46C1-BFE9-77C625F285B8}"/>
-						<State Id="748895195" Name="None" ObjectPath="\States\avy music states\hype\None" GUID="{72F93EBB-2A74-4340-AAD0-972E0AEC4E9B}"/>
-						<State Id="2546009797" Name="hype_100" ObjectPath="\States\avy music states\hype\hype_100" GUID="{EF267F18-BB7D-4539-9A79-C5E96ECCABF1}"/>
-						<State Id="4196427868" Name="hype_0" ObjectPath="\States\avy music states\hype\hype_0" GUID="{A0130F3D-8D24-4A2C-92F2-E4E8A8763FB1}"/>
+						<State Id="436487211" Name="hype_50"/>
+						<State Id="470042484" Name="hype_75"/>
+						<State Id="520375247" Name="hype_25"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2546009797" Name="hype_100"/>
+						<State Id="4196427868" Name="hype_0"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
-				<SwitchGroup Id="2385628198" Name="footsteps" ObjectPath="\Switches\avy switches\footsteps" GUID="{2D745F57-2B08-43B8-98B8-6A72CAABF670}">
+				<SwitchGroup Id="2385628198" Name="footsteps">
 					<Switches>
-						<Switch Id="841620460" Name="concrete" ObjectPath="\Switches\avy switches\footsteps\concrete" GUID="{316713C8-3BA6-432B-B523-97058CCE560E}"/>
-						<Switch Id="2152775650" Name="grassy" ObjectPath="\Switches\avy switches\footsteps\grassy" GUID="{FF495F4D-F946-4951-81AB-9F5ED572ED40}"/>
-						<Switch Id="3920460409" Name="disco" ObjectPath="\Switches\avy switches\footsteps\disco" GUID="{2DFFD969-3BA2-4BBF-984E-0952DC3C7FC0}"/>
+						<Switch Id="841620460" Name="concrete"/>
+						<Switch Id="2152775650" Name="grassy"/>
+						<Switch Id="3920460409" Name="disco"/>
 					</Switches>
 				</SwitchGroup>
-				<SwitchGroup Id="2848855924" Name="Footsteps_01" ObjectPath="\Switches\Default Work Unit\Footsteps_01" GUID="{D837BB52-31E7-49A5-A77F-069EF20CB60B}">
+				<SwitchGroup Id="2848855924" Name="Footsteps_01">
 					<Switches>
-						<Switch Id="1914034948" Name="New_Switch" ObjectPath="\Switches\Default Work Unit\Footsteps_01\New_Switch" GUID="{822F63B6-39A1-4147-9A51-E6A1CB9CBEC3}"/>
-						<Switch Id="3952450473" Name="New_Switch_02" ObjectPath="\Switches\Default Work Unit\Footsteps_01\New_Switch_02" GUID="{60F846F2-C835-4848-867F-1976750260AB}"/>
-						<Switch Id="3952450474" Name="New_Switch_01" ObjectPath="\Switches\Default Work Unit\Footsteps_01\New_Switch_01" GUID="{322203B8-97D4-4624-96CF-D453F12E8616}"/>
+						<Switch Id="1914034948" Name="New_Switch"/>
+						<Switch Id="3952450473" Name="New_Switch_02"/>
+						<Switch Id="3952450474" Name="New_Switch_01"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2297208207" Type="User" GUID="{D7757AB9-AAC7-41E1-BCF6-CB59A2C0BE4F}" Language="SFX" Hash="{E528AE0E-570F-97F6-5571-B054C71EDD9B}">
-			<ObjectPath>\SoundBanks\avy soundbanks\sfx_enemy</ObjectPath>
+		<SoundBank Id="2297208207" Type="User" Language="SFX" Hash="{E528AE0E-570F-97F6-5571-B054C71EDD9B}">
 			<ShortName>sfx_enemy</ShortName>
 			<Path>sfx_enemy.bnk</Path>
 			<Media>
@@ -394,7 +391,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="504043942" Name="Play_sfx_enemyBeefy_aggro" ObjectPath="\Events\avy sfx events\Play_sfx_enemyBeefy\Play_sfx_enemyBeefy_aggro" GUID="{1B8EA9AF-9A1C-4F95-A67F-8DD7FC4E54B5}" DurationType="OneShot" DurationMin="0.77709496" DurationMax="2.4643383">
+				<Event Id="504043942" Name="Play_sfx_enemyBeefy_aggro">
 					<MediaRefs>
 						<MediaRef Id="166319512"/>
 						<MediaRef Id="348335200"/>
@@ -402,21 +399,21 @@
 						<MediaRef Id="991664786"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3666456714" Name="Play_sfx_enemyBeefy_alert" ObjectPath="\Events\avy sfx events\Play_sfx_enemyBeefy\Play_sfx_enemyBeefy_alert" GUID="{F855C311-EB1A-45A3-8504-4460F2E4E8B4}" DurationType="OneShot" DurationMin="0.8256586" DurationMax="2.6087189">
+				<Event Id="3666456714" Name="Play_sfx_enemyBeefy_alert">
 					<MediaRefs>
 						<MediaRef Id="34219380"/>
 						<MediaRef Id="656489993"/>
 						<MediaRef Id="960175453"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="966443990" Name="Play_sfx_enemyBeefy_death" ObjectPath="\Events\avy sfx events\Play_sfx_enemyBeefy\Play_sfx_enemyBeefy_death" GUID="{E0809B1C-449E-4D04-9CFB-CD4142BF2F04}" DurationType="OneShot" DurationMin="0.26440218" DurationMax="2.4643383">
+				<Event Id="966443990" Name="Play_sfx_enemyBeefy_death">
 					<MediaRefs>
 						<MediaRef Id="298112850"/>
 						<MediaRef Id="634211499"/>
 						<MediaRef Id="885530422"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2827312655" Name="Play_sfx_enemyBeefy_endAttack" ObjectPath="\Events\avy sfx events\Play_sfx_enemyBeefy\Play_sfx_enemyBeefy_endAttack" GUID="{31F4F8EC-A510-4938-995A-0E3C2BC472C7}" DurationType="OneShot" DurationMin="0.8418465" DurationMax="3.1574256">
+				<Event Id="2827312655" Name="Play_sfx_enemyBeefy_endAttack">
 					<MediaRefs>
 						<MediaRef Id="53863138"/>
 						<MediaRef Id="175233521"/>
@@ -425,10 +422,10 @@
 						<MediaRef Id="974045788"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3576742661" Name="Play_sfx_enemyBeefy_footsteps" ObjectPath="\Events\avy sfx events\Play_sfx_enemyBeefy\Play_sfx_enemyBeefy_footsteps" GUID="{AA0145F3-BAE7-4E23-A7D3-021531365BCE}" DurationType="OneShot" DurationMin="0.26380503" DurationMax="1.6466068">
+				<Event Id="3576742661" Name="Play_sfx_enemyBeefy_footsteps">
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="2152775650" GUID="{FF495F4D-F946-4951-81AB-9F5ED572ED40}" Default="true"/>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="2152775650" Default="true"/>
 							<MediaRefs>
 								<MediaRef Id="348441608"/>
 								<MediaRef Id="531369014"/>
@@ -438,7 +435,7 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="3920460409" GUID="{2DFFD969-3BA2-4BBF-984E-0952DC3C7FC0}"/>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="3920460409"/>
 							<MediaRefs>
 								<MediaRef Id="199178399"/>
 								<MediaRef Id="226718950"/>
@@ -449,7 +446,7 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="841620460" GUID="{316713C8-3BA6-432B-B523-97058CCE560E}"/>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="841620460"/>
 							<MediaRefs>
 								<MediaRef Id="86676616"/>
 								<MediaRef Id="133250952"/>
@@ -461,7 +458,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="1327506600" Name="Play_sfx_enemyBeefy_startAttack" ObjectPath="\Events\avy sfx events\Play_sfx_enemyBeefy\Play_sfx_enemyBeefy_startAttack" GUID="{0AAA5295-E626-4ABA-BE63-E7E6C53C1EE5}" DurationType="OneShot" DurationMin="0.45331177" DurationMax="1.7134986">
+				<Event Id="1327506600" Name="Play_sfx_enemyBeefy_startAttack">
 					<MediaRefs>
 						<MediaRef Id="389860146"/>
 						<MediaRef Id="448787943"/>
@@ -470,21 +467,21 @@
 						<MediaRef Id="1069837018"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1841520935" Name="Play_sfx_enemyGuitar_aggro" ObjectPath="\Events\avy sfx events\Play_sfx_enemyGuitar\Play_sfx_enemyGuitar_aggro" GUID="{F3809DC0-5347-4772-BCBC-7B6815E11624}" DurationType="OneShot" DurationMin="1.7127438" DurationMax="3.1666296">
+				<Event Id="1841520935" Name="Play_sfx_enemyGuitar_aggro">
 					<MediaRefs>
 						<MediaRef Id="66328359"/>
 						<MediaRef Id="227180075"/>
 						<MediaRef Id="315718201"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2296648555" Name="Play_sfx_enemyGuitar_alert" ObjectPath="\Events\avy sfx events\Play_sfx_enemyGuitar\Play_sfx_enemyGuitar_alert" GUID="{86EF2D82-50DE-40ED-A8C4-0503C910FFDC}" DurationType="OneShot" DurationMin="0.5396907" DurationMax="1.9252567">
+				<Event Id="2296648555" Name="Play_sfx_enemyGuitar_alert">
 					<MediaRefs>
 						<MediaRef Id="118736863"/>
 						<MediaRef Id="366435762"/>
 						<MediaRef Id="724446481"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1140923239" Name="Play_sfx_enemyGuitar_attack" ObjectPath="\Events\avy sfx events\Play_sfx_enemyGuitar\Play_sfx_enemyGuitar_attack" GUID="{4E01B30A-3754-47BA-AE8D-68850C14796E}" DurationType="OneShot" DurationMin="3.692313" DurationMax="3.692313">
+				<Event Id="1140923239" Name="Play_sfx_enemyGuitar_attack">
 					<MediaRefs>
 						<MediaRef Id="199313268"/>
 						<MediaRef Id="357382036"/>
@@ -497,7 +494,7 @@
 						<MediaRef Id="1064787542"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1512650471" Name="Play_sfx_enemyGuitar_death" ObjectPath="\Events\avy sfx events\Play_sfx_enemyGuitar\Play_sfx_enemyGuitar_death" GUID="{6E654EAB-B8D8-4024-AD77-A9F5AEF87A65}" DurationType="OneShot" DurationMin="3.7600226" DurationMax="5.5950675">
+				<Event Id="1512650471" Name="Play_sfx_enemyGuitar_death">
 					<MediaRefs>
 						<MediaRef Id="174897676"/>
 						<MediaRef Id="409162538"/>
@@ -506,17 +503,16 @@
 				</Event>
 			</Events>
 			<SwitchGroups>
-				<SwitchGroup Id="2385628198" Name="footsteps" ObjectPath="\Switches\avy switches\footsteps" GUID="{2D745F57-2B08-43B8-98B8-6A72CAABF670}">
+				<SwitchGroup Id="2385628198" Name="footsteps">
 					<Switches>
-						<Switch Id="841620460" Name="concrete" ObjectPath="\Switches\avy switches\footsteps\concrete" GUID="{316713C8-3BA6-432B-B523-97058CCE560E}"/>
-						<Switch Id="2152775650" Name="grassy" ObjectPath="\Switches\avy switches\footsteps\grassy" GUID="{FF495F4D-F946-4951-81AB-9F5ED572ED40}"/>
-						<Switch Id="3920460409" Name="disco" ObjectPath="\Switches\avy switches\footsteps\disco" GUID="{2DFFD969-3BA2-4BBF-984E-0952DC3C7FC0}"/>
+						<Switch Id="841620460" Name="concrete"/>
+						<Switch Id="2152775650" Name="grassy"/>
+						<Switch Id="3920460409" Name="disco"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" GUID="{FCC95966-8BC9-428F-A86F-77BD80236DCE}" Language="SFX" Hash="{A4EB4034-C907-31BB-C4B6-4F2A4537B198}">
-			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8B561D17-CB24-D145-9BFC-3AFB8BFBB73F}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -746,19 +742,19 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="308973664" Name="First_Time_Mute_mus_pause_75bpm" ObjectPath="\Events\Default Work Unit\First_Time_Mute_mus_pause_75bpm" GUID="{7288EC1A-8592-4957-B27E-E911D3B56F4A}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1929765902" Name="Mute_Alien_Arena_Assault_170bpm" ObjectPath="\Events\Default Work Unit\Mute_Alien_Arena_Assault_170bpm" GUID="{D563AF20-5219-4CAB-9AEF-51C10825081B}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3756680375" Name="Mute_mus_pause_75bpm" ObjectPath="\Events\Default Work Unit\Mute_mus_pause_75bpm" GUID="{0E96271C-B559-48D8-B09B-94D3489189FD}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="341582045" Name="Play_Alien_Arena_Assault_170bpm" ObjectPath="\Events\Default Work Unit\Play_Alien_Arena_Assault_170bpm" GUID="{8333E7FF-2074-4574-ADA6-3F3F7B5DA275}" DurationType="Infinite">
+				<Event Id="308973664" Name="First_Time_Mute_mus_pause_75bpm"/>
+				<Event Id="1929765902" Name="Mute_Alien_Arena_Assault_170bpm"/>
+				<Event Id="3756680375" Name="Mute_mus_pause_75bpm"/>
+				<Event Id="341582045" Name="Play_Alien_Arena_Assault_170bpm">
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="762757699" Id="2716678721" GUID="{9108A2BF-1C91-4F03-BBCD-47F60251D933}"/>
+							<SwitchValue GroupType="State" GroupId="762757699" Id="2716678721"/>
 							<MediaRefs>
 								<MediaRef Id="1069608001"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="762757699" Id="2764240573" GUID="{D23C63AE-8C84-4140-9A0C-994815485352}"/>
+							<SwitchValue GroupType="State" GroupId="762757699" Id="2764240573"/>
 							<MediaRefs>
 								<MediaRef Id="19996191"/>
 								<MediaRef Id="72287347"/>
@@ -782,61 +778,61 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="1926045526" Name="Play_charger_angy" ObjectPath="\Events\Default Work Unit\Play_charger_angy" GUID="{E480F771-7FFA-43EE-965C-E01524C26C0E}" MaxAttenuation="25" DurationType="OneShot" DurationMin="1.5" DurationMax="2">
+				<Event Id="1926045526" Name="Play_charger_angy">
 					<MediaRefs>
 						<MediaRef Id="292366327"/>
 						<MediaRef Id="618887788"/>
 						<MediaRef Id="825759985"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3579375072" Name="Play_charger_lunge" ObjectPath="\Events\Default Work Unit\Play_charger_lunge" GUID="{34768769-7EB7-4C6B-A65A-4CB6AB2A5B55}" MaxAttenuation="15" DurationType="OneShot" DurationMin="1" DurationMax="1.5">
+				<Event Id="3579375072" Name="Play_charger_lunge">
 					<MediaRefs>
 						<MediaRef Id="63593165"/>
 						<MediaRef Id="119466304"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2758388342" Name="Play_mus_Pause_75bpm" ObjectPath="\Events\Default Work Unit\Play_mus_Pause_75bpm" GUID="{BCE1262A-3C14-4B31-B28C-4A64BEE31410}" DurationType="Infinite">
+				<Event Id="2758388342" Name="Play_mus_Pause_75bpm">
 					<MediaRefs>
 						<MediaRef Id="224255706"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3263497147" Name="Play_mus_Trickfoolery_222bpm" ObjectPath="\Events\Default Work Unit\Play_mus_Trickfoolery_222bpm" GUID="{957ED87C-54CD-4A6B-878A-25F81372D716}" DurationType="Infinite">
+				<Event Id="3263497147" Name="Play_mus_Trickfoolery_222bpm">
 					<MediaRefs>
 						<MediaRef Id="1033023117"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="843029991" Name="Play_sfx_charger_death" ObjectPath="\Events\Default Work Unit\Play_sfx_charger_death" GUID="{63384843-A4A4-44C3-AED2-9CDA3A9431A5}" MaxAttenuation="15" DurationType="OneShot" DurationMin="1.5" DurationMax="2">
+				<Event Id="843029991" Name="Play_sfx_charger_death">
 					<MediaRefs>
 						<MediaRef Id="275378158"/>
 						<MediaRef Id="507762272"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2343006462" Name="Play_sfx_confirm" ObjectPath="\Events\Default Work Unit\Play_sfx_confirm" GUID="{69F3C602-D088-4702-A2C0-78D74E58ADF3}" DurationType="OneShot" DurationMin="4.5" DurationMax="4.5">
+				<Event Id="2343006462" Name="Play_sfx_confirm">
 					<MediaRefs>
 						<MediaRef Id="621091837"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="526466336" Name="Play_sfx_groovy" ObjectPath="\Events\Default Work Unit\Play_sfx_groovy" GUID="{7FB8863C-987C-4F96-A523-14BA0486137B}" DurationType="OneShot" DurationMin="2" DurationMax="2">
+				<Event Id="526466336" Name="Play_sfx_groovy">
 					<MediaRefs>
 						<MediaRef Id="375178555"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3683043420" Name="Play_sfx_pause" ObjectPath="\Events\Default Work Unit\Play_sfx_pause" GUID="{1228DA1E-31A1-49A3-8418-61751A909CFE}" DurationType="OneShot" DurationMin="2" DurationMax="2">
+				<Event Id="3683043420" Name="Play_sfx_pause">
 					<MediaRefs>
 						<MediaRef Id="1066273250"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4077681152" Name="Play_sfx_player_dash" ObjectPath="\Events\Default Work Unit\Play_sfx_player_dash" GUID="{D6F8BF24-B6D5-4FEA-AC6B-3CEC97B0DDC4}" DurationType="OneShot" DurationMin="0.37457678" DurationMax="0.6674199">
+				<Event Id="4077681152" Name="Play_sfx_player_dash">
 					<MediaRefs>
 						<MediaRef Id="429033431"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1591758634" Name="Play_sfx_player_death" ObjectPath="\Events\Default Work Unit\Play_sfx_player_death" GUID="{CAC80460-81AC-420B-AD88-E8FA18AC9974}" DurationType="OneShot" DurationMin="1.5" DurationMax="1.5">
+				<Event Id="1591758634" Name="Play_sfx_player_death">
 					<MediaRefs>
 						<MediaRef Id="1007579897"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1067524079" Name="Play_sfx_player_hurt" ObjectPath="\Events\Default Work Unit\Play_sfx_player_hurt" GUID="{F2D8E87D-016C-4DA6-8E62-4CD589790A37}" DurationType="OneShot" DurationMin="1" DurationMax="1">
+				<Event Id="1067524079" Name="Play_sfx_player_hurt">
 					<MediaRefs>
 						<MediaRef Id="403074574"/>
 						<MediaRef Id="405788637"/>
@@ -844,12 +840,12 @@
 						<MediaRef Id="1070951602"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="325086926" Name="Play_sfx_select" ObjectPath="\Events\Default Work Unit\Play_sfx_select" GUID="{D9480393-0FF0-4478-941E-C2F83A21C8BD}" DurationType="OneShot" DurationMin="1.8866584" DurationMax="2.1497467">
+				<Event Id="325086926" Name="Play_sfx_select">
 					<MediaRefs>
 						<MediaRef Id="673051370"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1800631706" Name="Play_sfx_taunt" ObjectPath="\Events\Default Work Unit\Play_sfx_taunt" GUID="{CD05A98D-2AF9-47E8-A5D9-08F5EE359AC0}" DurationType="OneShot" DurationMin="1.5" DurationMax="3">
+				<Event Id="1800631706" Name="Play_sfx_taunt">
 					<MediaRefs>
 						<MediaRef Id="83193888"/>
 						<MediaRef Id="305122859"/>
@@ -863,7 +859,7 @@
 						<MediaRef Id="829787396"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2661393732" Name="Play_sfx_tomstep" ObjectPath="\Events\Default Work Unit\Play_sfx_tomstep" GUID="{1BC515F3-568C-4A8D-995F-DBFA44FF9E2A}" DurationType="OneShot" DurationMin="0.3509921" DurationMax="0.35616517">
+				<Event Id="2661393732" Name="Play_sfx_tomstep">
 					<MediaRefs>
 						<MediaRef Id="21309808"/>
 						<MediaRef Id="103508686"/>
@@ -874,33 +870,32 @@
 						<MediaRef Id="1043628278"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3476672187" Name="Play_sfx_unpause" ObjectPath="\Events\Default Work Unit\Play_sfx_unpause" GUID="{EF55EFFC-D9BF-4914-B45F-C34160708C30}" DurationType="OneShot" DurationMin="2" DurationMax="2">
+				<Event Id="3476672187" Name="Play_sfx_unpause">
 					<MediaRefs>
 						<MediaRef Id="395767410"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1234905987" Name="Stop_Alien_Arena_Assault_170bpm" ObjectPath="\Events\Default Work Unit\Stop_Alien_Arena_Assault_170bpm" GUID="{9B4690B1-682D-4359-808E-AF7E56A972C3}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3352794624" Name="Stop_mus_pause_75bpm" ObjectPath="\Events\Default Work Unit\Stop_mus_pause_75bpm" GUID="{B0A1E8C4-CBD5-4D2D-B416-98B9395C2181}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2601853237" Name="Stop_mus_Trickfoolery_222bpm" ObjectPath="\Events\Default Work Unit\Stop_mus_Trickfoolery_222bpm" GUID="{103A468D-C1A5-4619-8F4C-E88DFD668A3C}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1990966217" Name="Unmute_Alien_Arena_Assault_170bpm" ObjectPath="\Events\Default Work Unit\Unmute_Alien_Arena_Assault_170bpm" GUID="{33C4D4F4-E3D0-44A5-8C66-252F4F122C70}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="4152903754" Name="Unmute_mus_pause_75bpm" ObjectPath="\Events\Default Work Unit\Unmute_mus_pause_75bpm" GUID="{C3E827C6-F5CC-4329-985D-E19D22E9E34A}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1234905987" Name="Stop_Alien_Arena_Assault_170bpm"/>
+				<Event Id="3352794624" Name="Stop_mus_pause_75bpm"/>
+				<Event Id="2601853237" Name="Stop_mus_Trickfoolery_222bpm"/>
+				<Event Id="1990966217" Name="Unmute_Alien_Arena_Assault_170bpm"/>
+				<Event Id="4152903754" Name="Unmute_mus_pause_75bpm"/>
 			</Events>
 			<GameParameters>
-				<GameParameter Id="3296584377" Name="Hype" ObjectPath="\Game Parameters\Default Work Unit\Hype" GUID="{F10FAC34-8EF9-452B-9153-83ADE95B5819}"/>
-				<GameParameter Id="4082227278" Name="On_Disco_Floor" ObjectPath="\Game Parameters\Default Work Unit\On_Disco_Floor" GUID="{1353123B-8719-435F-969E-773D804B92E8}"/>
+				<GameParameter Id="3296584377" Name="Hype"/>
+				<GameParameter Id="4082227278" Name="On_Disco_Floor"/>
 			</GameParameters>
 			<StateGroups>
-				<StateGroup Id="762757699" Name="Gameplay_State" ObjectPath="\States\Default Work Unit\Gameplay_State" GUID="{B587995D-62E9-431F-94B4-73168DC556F9}">
+				<StateGroup Id="762757699" Name="Gameplay_State">
 					<States>
-						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Gameplay_State\None" GUID="{17C6B36D-3016-40C9-99B0-1BAE6CBE943F}"/>
-						<State Id="2716678721" Name="Victory" ObjectPath="\States\Default Work Unit\Gameplay_State\Victory" GUID="{9108A2BF-1C91-4F03-BBCD-47F60251D933}"/>
-						<State Id="2764240573" Name="Combat" ObjectPath="\States\Default Work Unit\Gameplay_State\Combat" GUID="{D23C63AE-8C84-4140-9A0C-994815485352}"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2716678721" Name="Victory"/>
+						<State Id="2764240573" Name="Combat"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="4271082421" Type="User" GUID="{95E7E615-6C37-4B87-9F14-C1E820F537B1}" Language="SFX" Hash="{FA37E98C-C44C-DAD9-CCEE-229EF7F8936F}">
-			<ObjectPath>\SoundBanks\avy soundbanks\sfx_player_and_UI</ObjectPath>
+		<SoundBank Id="4271082421" Type="User" Language="SFX" Hash="{FA37E98C-C44C-DAD9-CCEE-229EF7F8936F}">
 			<ShortName>sfx_player_and_UI</ShortName>
 			<Path>sfx_player_and_UI.bnk</Path>
 			<Media>
@@ -958,10 +953,10 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="2002635633" Name="Play_sfx_player_footsteps" ObjectPath="\Events\avy sfx events\Play_sfx_player\Play_sfx_player_footsteps" GUID="{437E4677-E6C1-4769-9E2E-A70E591B3A34}" DurationType="OneShot" DurationMin="0.3345471" DurationMax="0.99267775">
+				<Event Id="2002635633" Name="Play_sfx_player_footsteps">
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="2152775650" GUID="{FF495F4D-F946-4951-81AB-9F5ED572ED40}" Default="true"/>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="2152775650" Default="true"/>
 							<MediaRefs>
 								<MediaRef Id="357716752"/>
 								<MediaRef Id="394076071"/>
@@ -971,7 +966,7 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="3920460409" GUID="{2DFFD969-3BA2-4BBF-984E-0952DC3C7FC0}"/>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="3920460409"/>
 							<MediaRefs>
 								<MediaRef Id="58618328"/>
 								<MediaRef Id="210863455"/>
@@ -980,7 +975,7 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="841620460" GUID="{316713C8-3BA6-432B-B523-97058CCE560E}"/>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="841620460"/>
 							<MediaRefs>
 								<MediaRef Id="180330411"/>
 								<MediaRef Id="892296084"/>
@@ -992,15 +987,15 @@
 				</Event>
 			</Events>
 			<SwitchGroups>
-				<SwitchGroup Id="2385628198" Name="footsteps" ObjectPath="\Switches\avy switches\footsteps" GUID="{2D745F57-2B08-43B8-98B8-6A72CAABF670}">
+				<SwitchGroup Id="2385628198" Name="footsteps">
 					<Switches>
-						<Switch Id="841620460" Name="concrete" ObjectPath="\Switches\avy switches\footsteps\concrete" GUID="{316713C8-3BA6-432B-B523-97058CCE560E}"/>
-						<Switch Id="2152775650" Name="grassy" ObjectPath="\Switches\avy switches\footsteps\grassy" GUID="{FF495F4D-F946-4951-81AB-9F5ED572ED40}"/>
-						<Switch Id="3920460409" Name="disco" ObjectPath="\Switches\avy switches\footsteps\disco" GUID="{2DFFD969-3BA2-4BBF-984E-0952DC3C7FC0}"/>
+						<Switch Id="841620460" Name="concrete"/>
+						<Switch Id="2152775650" Name="grassy"/>
+						<Switch Id="3920460409" Name="disco"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3315A0F1-7DB3-8E7A-62F5-913B452D48F3}</FileHash>
+	<FileHash>{909FCDCE-F645-59A3-1496-B63CD5BAD1CE}</FileHash>
 </SoundBanksInfo>

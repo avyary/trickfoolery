@@ -219,6 +219,14 @@ PrefabInstance:
       propertyPath: angerSFX.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 2a8ae6f21faf3094fb8fb0c1453d8737, type: 2}
+    - target: {fileID: 8157556152595408478, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: deathSFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: a8174d00cad6dbc489a8cb6884fd5b85, type: 2}
+    - target: {fileID: 8157556152595408478, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: attackSFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: a106fa7e94e802c48b06df9e372c3e29, type: 2}
     - target: {fileID: 8157556153598119114, guid: 365579391c2931940a7e83bdc319620a, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.54
@@ -309,6 +317,20 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &878608362823494617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4452358345115407876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4649440e13bc49ae8c2a0f5df98fd3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 0
+  listenerId: 0
 --- !u!1 &7541573027597103694 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2618155974825755155, guid: 365579391c2931940a7e83bdc319620a, type: 3}

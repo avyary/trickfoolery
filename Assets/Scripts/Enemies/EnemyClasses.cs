@@ -45,7 +45,8 @@ public abstract class Enemy: MonoBehaviour
 
     //wwise
     public AK.Wwise.Event angerSFX;
-
+    public AK.Wwise.Event attackSFX;
+    public AK.Wwise.Event deathSFX;
 
     public bool isAngy;
     public Attack currentAttack;
@@ -147,10 +148,12 @@ public abstract class Enemy: MonoBehaviour
     public virtual IEnumerator Die()
     {
         if (attackCoroutine != null) {
+            deathSFX.Post(gameObject);
             StopCoroutine(attackCoroutine);
         }
         animator.SetTrigger("die");
         animator.SetBool("dead", true);
+        deathSFX.Post(gameObject);
         _AngyInd.SetActive(false);
         _AlertInd.SetActive(false);
 
@@ -161,6 +164,7 @@ public abstract class Enemy: MonoBehaviour
         basicAttack.Deactivate();  // deactivate attack collider
 
         state = EnemyState.Dead;
+        deathSFX.Post(gameObject);
         yield return new WaitForSeconds(2.5f);  // waits before destroying object
 
         Destroy(gameObject);
@@ -197,6 +201,7 @@ public abstract class Enemy: MonoBehaviour
 
         animator.SetTrigger("startAttack");
         state = EnemyState.Active;
+        attackSFX.Post(gameObject);
         // Debug.Log("Active Attack!");
         attackObj.Activate();  // activate attack collider
         yield return new WaitForSeconds(attackObj.activeTime);
