@@ -34,6 +34,11 @@ public class TauntEnemy : Enemy
     private int timesTeleportAttackCalled = 0;
     private bool attacking = false;
 
+
+    private bool isRunning;
+    private bool isAttacking;
+    private bool isWalking;
+
     protected override void Start() {
         base.Start();
         GetEnemyStatus("TauntEnemy");
@@ -168,4 +173,12 @@ public class TauntEnemy : Enemy
             transform.Translate(teleport_direction.normalized * current_teleport_strength, Space.World);
         } 
     }
+    
+    
+    private IEnumerator WaitForSecondsAndStopRunningAnim(float seconds) 
+    {
+        yield return new WaitForSeconds(seconds);
+        isWalking = true;
+        isAttacking = false;
+    }   
 }
