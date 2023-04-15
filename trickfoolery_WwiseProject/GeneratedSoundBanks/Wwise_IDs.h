@@ -99,18 +99,6 @@ namespace AK
             } // namespace SWITCH
         } // namespace FOOTSTEPS
 
-        namespace FOOTSTEPS_01
-        {
-            static const AkUniqueID GROUP = 2848855924U;
-
-            namespace SWITCH
-            {
-                static const AkUniqueID NEW_SWITCH = 1914034948U;
-                static const AkUniqueID NEW_SWITCH_01 = 3952450474U;
-                static const AkUniqueID NEW_SWITCH_02 = 3952450473U;
-            } // namespace SWITCH
-        } // namespace FOOTSTEPS_01
-
     } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
@@ -124,8 +112,7 @@ namespace AK
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID MAIN = 3161908922U;
         static const AkUniqueID MUS = 712897226U;
-        static const AkUniqueID SFX_ENEMY = 2297208207U;
-        static const AkUniqueID SFX_PLAYER_AND_UI = 4271082421U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BANKS
 
     namespace BUSSES

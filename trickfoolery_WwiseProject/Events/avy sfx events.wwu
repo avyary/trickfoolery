@@ -47,6 +47,13 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{BB5AE125-F4AB-42AF-881A-2DF17C2973C6}" ShortID="16597020">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_enemyBeefy_endAttackImpact" ID="{86EE2A02-3D2B-4203-9EA6-7B2E3513DFD0}" WorkUnitID="{A08D4457-7BA1-4095-B157-374E936304F0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_sfx_enemyBeefy_death" ID="{E0809B1C-449E-4D04-9CFB-CD4142BF2F04}">

@@ -8,9 +8,12 @@ public class PlayerAnimationController : MonoBehaviour
     [SerializeField] private AnimationClip tomRolling;
     [SerializeField] private AnimationClip tomTaunt;
     [SerializeField] private AnimationClip tomIdle;
-    public AkEvent playerSounds;
 
     public AkEvent tauntSFX;
+
+    /// footsteps
+    [SerializeField]
+    private PlayerSounds playerSounds;
 
     private void Start()
     {
@@ -67,4 +70,11 @@ public class PlayerAnimationController : MonoBehaviour
 
 
     }
+    
+    private void PlayFootstep()
+    {
+        Debug.Log("Footsteps");
+        playerSounds.PlayFootstepSound();
+    }
+
 }

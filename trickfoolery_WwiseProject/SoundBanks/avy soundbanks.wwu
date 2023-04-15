@@ -20,7 +20,7 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
-				<SoundBank Name="sfx_player_and_UI" ID="{95E7E615-6C37-4B87-9F14-C1E820F537B1}">
+				<SoundBank Name="sfx" ID="{D7757AB9-AAC7-41E1-BCF6-CB59A2C0BE4F}">
 					<PropertyList>
 						<Property Name="Maximum" Type="int32">
 							<ValueList>
@@ -30,19 +30,6 @@
 					</PropertyList>
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_sfx_player" ID="{2D01A28C-DC18-4225-9636-E63795E3B196}" WorkUnitID="{DEF5BEE4-603A-4331-AC95-68C3F0C086AA}" Origin="Manual" Filter="7"/>
-					</ObjectInclusionList>
-					<ObjectExclusionList/>
-					<GameSyncExclusionList/>
-				</SoundBank>
-				<SoundBank Name="sfx_enemy" ID="{D7757AB9-AAC7-41E1-BCF6-CB59A2C0BE4F}">
-					<PropertyList>
-						<Property Name="Maximum" Type="int32">
-							<ValueList>
-								<Value>10000000</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ObjectInclusionList>
 						<ObjectRef Name="Play_sfx_enemyBeefy" ID="{4F835BE5-F150-4C2C-92FD-53370B2A60C1}" WorkUnitID="{DEF5BEE4-603A-4331-AC95-68C3F0C086AA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_enemyGuitar" ID="{0BBC2582-7E12-4F81-AB17-1D48C6BF5224}" WorkUnitID="{DEF5BEE4-603A-4331-AC95-68C3F0C086AA}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
