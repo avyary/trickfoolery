@@ -66,9 +66,6 @@ public class PlayerAnimationController : MonoBehaviour
             animator.Play(tomRolling.name);
         }
          
-
-
-
     }
     
     private void PlayFootstep()

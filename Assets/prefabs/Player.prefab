@@ -193,6 +193,79 @@ Transform:
   m_Father: {fileID: 2184427640935077533}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 31.835558, y: -21.933315, z: 1.514146}
+--- !u!1 &1059827457990196806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8336659031415048057}
+  - component: {fileID: 1225406009986326510}
+  - component: {fileID: 8577305112292328473}
+  m_Layer: 8
+  m_Name: FootstepsSounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8336659031415048057
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059827457990196806}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3566962212508063682}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1225406009986326510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059827457990196806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0bf41359129d7042972be7d3e5f1060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepsEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0dee90b56d135414dabb0972abfdada5, type: 2}
+--- !u!114 &8577305112292328473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059827457990196806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a024f4daab4fd48b9aec34fb7e7acfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d2d9f5ce5d7d944f3b8d171f7b1d5d6e, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &1113939837023338845
 GameObject:
   m_ObjectHideFlags: 0
@@ -5965,8 +6038,8 @@ MonoBehaviour:
   tomRolling: {fileID: 7400000, guid: f812afb52fc90224dad2c4b2ede598ea, type: 2}
   tomTaunt: {fileID: 7400000, guid: 9ec426cadff27af42972b220f9db3863, type: 2}
   tomIdle: {fileID: 7400000, guid: e27b81bde5a159f41a36b6f0e4a7ba1c, type: 2}
-  playerSounds: {fileID: 0}
   tauntSFX: {fileID: 0}
+  playerSounds: {fileID: 0}
 --- !u!1 &6404197257975361587
 GameObject:
   m_ObjectHideFlags: 0
@@ -6382,6 +6455,7 @@ Transform:
   - {fileID: 6934045308192819771}
   - {fileID: 4004400642625481698}
   - {fileID: 5874468033527136561}
+  - {fileID: 8336659031415048057}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6614,8 +6688,8 @@ MonoBehaviour:
   tomRolling: {fileID: -203655887218126122, guid: ce3da710398828c49ac3199e15b093f4, type: 3}
   tomTaunt: {fileID: -203655887218126122, guid: 2713b2eddd97146ff8a86608ce692937, type: 3}
   tomIdle: {fileID: -203655887218126122, guid: 38efc1a6d41901641aeed1632e74660e, type: 3}
-  playerSounds: {fileID: 0}
   tauntSFX: {fileID: 6435225725634533990}
+  playerSounds: {fileID: 0}
 --- !u!54 &3248259484298412722
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6929,8 +7003,8 @@ MonoBehaviour:
   tomRolling: {fileID: -203655887218126122, guid: ce3da710398828c49ac3199e15b093f4, type: 3}
   tomTaunt: {fileID: -203655887218126122, guid: 51f0a08d1201cb540ab81e3e9cadeac7, type: 3}
   tomIdle: {fileID: -203655887218126122, guid: 38efc1a6d41901641aeed1632e74660e, type: 3}
-  playerSounds: {fileID: 0}
   tauntSFX: {fileID: 0}
+  playerSounds: {fileID: 0}
 --- !u!1001 &7471493794688495056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7143,5 +7217,5 @@ MonoBehaviour:
   tomRolling: {fileID: 7400000, guid: 779efefd22b548c4bb87ee4801ca1b40, type: 2}
   tomTaunt: {fileID: 7400000, guid: 4c64d4a6d3b21564a846a43bae413bb0, type: 2}
   tomIdle: {fileID: 7400000, guid: a6ef9bc5b8c5a144f9a4a33cea7de667, type: 2}
-  playerSounds: {fileID: 6435225725634533990}
   tauntSFX: {fileID: 6435225725634533990}
+  playerSounds: {fileID: 1225406009986326510}
