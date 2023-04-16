@@ -122,6 +122,26 @@
 													</MusicCue>
 												</Local>
 											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="" ID="{51A5859C-D4BB-4482-BB3E-15232830EEE1}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="2"/>
+															<Property Name="TimeMs" Type="Real64" Value="7384.61538461538"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="" ID="{F9D4BD75-24CD-4FE0-8064-F70A3C12A4F4}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="2"/>
+															<Property Name="TimeMs" Type="Real64" Value="22153.8461538462"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
 										</ObjectList>
 									</ObjectLists>
 								</MusicSegment>
@@ -303,6 +323,26 @@
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="2"/>
 															<Property Name="TimeMs" Type="Real64" Value="18461.5384615385"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="" ID="{D77C5BFE-7C90-4E9D-8578-9997709FFFCD}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="2"/>
+															<Property Name="TimeMs" Type="Real64" Value="11076.9230769231"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="" ID="{E3ADD131-A099-4A68-9404-0B3222D08D1E}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="2"/>
+															<Property Name="TimeMs" Type="Real64" Value="25846.1538461538"/>
 														</PropertyList>
 													</MusicCue>
 												</Local>
@@ -599,6 +639,26 @@
 													</MusicCue>
 												</Local>
 											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="" ID="{1510BBAA-80D8-4D2C-A23E-887015FFD62F}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="2"/>
+															<Property Name="TimeMs" Type="Real64" Value="7384.61538461538"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="" ID="{12D224F7-10ED-4D3B-A785-4EF84A9BAF4F}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="2"/>
+															<Property Name="TimeMs" Type="Real64" Value="22153.8461538462"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
 										</ObjectList>
 									</ObjectLists>
 								</MusicSegment>
@@ -883,101 +943,6 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicSegment Name="mus_level_one_130bpm_hype_50_loop" ID="{D25C6455-599F-4407-B734-48D031831EFF}" ShortID="533721444">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="46153.8548752834"/>
-										<Property Name="Tempo" Type="Real64" Value="130"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<MusicTrack Name="mus_level_one_130bpm_hype_50_loop" ID="{D7701C93-AE38-421F-BD48-50F0CD32FD92}" ShortID="164659691">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="mus_level_one_130bpm_hype_50_loop" ID="{536036FA-703B-42AE-8AA5-85145E2C640F}">
-													<Language>SFX</Language>
-													<AudioFile>mus_level_one_130bpm_hype_50_loop.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="536069338"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<TransitionList>
-												<MusicTransition Name="Root" ID="{291AA380-F89E-4651-AEE7-D54A64085E5C}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</TransitionList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<Reference>
-														<Local>
-															<MusicTrackSequence Name="" ID="{D98F9C21-72DA-4A98-A0DE-65F2C62CC460}">
-																<ObjectLists>
-																	<ObjectList Name="Clips">
-																		<Reference>
-																			<Local>
-																				<MusicClip Name="mus_level_one_130bpm_hype_50_loop" ID="{E7002FE3-7E5D-4CE1-87BE-6B0DFF36A786}">
-																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="46153.8548752834"/>
-																						<Property Name="FadeInMode" Type="int16" Value="0"/>
-																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																					</PropertyList>
-																					<AudioSourceRef Name="mus_level_one_130bpm_hype_50_loop" ID="{536036FA-703B-42AE-8AA5-85145E2C640F}"/>
-																				</MusicClip>
-																			</Local>
-																		</Reference>
-																	</ObjectList>
-																</ObjectLists>
-															</MusicTrackSequence>
-														</Local>
-													</Reference>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<Reference>
-												<Local>
-													<MusicCue Name="Entry Cue" ID="{08E6E5AA-72C0-44BD-A6E5-EB0707B206E2}"/>
-												</Local>
-											</Reference>
-											<Reference>
-												<Local>
-													<MusicCue Name="Exit Cue" ID="{780C5A86-FAC4-4B9E-AC02-CEE179F35020}">
-														<PropertyList>
-															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="29538.4615384615"/>
-														</PropertyList>
-													</MusicCue>
-												</Local>
-											</Reference>
-											<Reference>
-												<Local>
-													<MusicCue Name="" ID="{4AF3F5DC-F157-4798-91A0-C4C2A73DE33B}">
-														<PropertyList>
-															<Property Name="CueType" Type="int16" Value="2"/>
-															<Property Name="TimeMs" Type="Real64" Value="14769.2307692308"/>
-														</PropertyList>
-													</MusicCue>
-												</Local>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
 								<MusicSegment Name="mus_level_one_130bpm_hype_75_soloSynthLong" ID="{ABC149B9-E9F0-41AF-B1B8-B1F134E33CE5}" ShortID="856621462">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="105230.770975057"/>
@@ -1223,14 +1188,9 @@
 										</MusicTransition>
 										<MusicTransition Name="Transition" ID="{2BB46AEC-3D68-4302-86FE-ED100A43E6CA}">
 											<PropertyList>
-												<Property Name="DestinationContextType" Type="int16" Value="2"/>
 												<Property Name="UseTransitionObject" Type="bool" Value="True"/>
 											</PropertyList>
-											<ReferenceList>
-												<Reference Name="DestinationContextObject">
-													<ObjectRef Name="mus_level_one_130bpm_hype_50_loop" ID="{D25C6455-599F-4407-B734-48D031831EFF}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
-												</Reference>
-											</ReferenceList>
+											<ReferenceList/>
 											<TransitionInfo/>
 										</MusicTransition>
 										<MusicTransition Name="Transition" ID="{69047729-E6B9-493C-AD16-14BEBC8D940F}">
@@ -1247,15 +1207,11 @@
 										<MusicTransition Name="Transition" ID="{B008C54E-DBAB-4411-9AE7-6450D3DE22F7}">
 											<PropertyList>
 												<Property Name="DestinationContextType" Type="int16" Value="2"/>
-												<Property Name="SourceContextType" Type="int16" Value="2"/>
 												<Property Name="UseTransitionObject" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="DestinationContextObject">
 													<ObjectRef Name="mus_level_one_130bpm_hype_75_soloSynthLong" ID="{ABC149B9-E9F0-41AF-B1B8-B1F134E33CE5}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
-												</Reference>
-												<Reference Name="SourceContextObject">
-													<ObjectRef Name="mus_level_one_130bpm_hype_50_loop" ID="{D25C6455-599F-4407-B734-48D031831EFF}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
 												</Reference>
 											</ReferenceList>
 											<TransitionInfo/>
@@ -1282,12 +1238,6 @@
 										<Property Name="PlayMode" Type="int16" Value="3"/>
 									</PropertyList>
 									<ChildrenList>
-										<MusicPlaylistItem Name="" ID="{A7250925-FD4F-4EE3-887A-5858EB92D6B6}" ShortID="306815102">
-											<PropertyList>
-												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-											</PropertyList>
-											<SegmentRef Name="mus_level_one_130bpm_hype_50_loop" ID="{D25C6455-599F-4407-B734-48D031831EFF}"/>
-										</MusicPlaylistItem>
 										<MusicPlaylistItem Name="" ID="{50D4A11F-2D52-48B7-B8B1-B7C5893D124E}" ShortID="1034005661">
 											<PropertyList>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
@@ -1533,7 +1483,6 @@
 									<PropertyList>
 										<Property Name="SourceContextType" Type="int16" Value="1"/>
 									</PropertyList>
-									<ReferenceList/>
 									<TransitionInfo/>
 								</MusicTransition>
 								<MusicTransition Name="Transition" ID="{7485EE46-DF43-4854-AF0F-5436BD3C84F4}">
@@ -1609,25 +1558,6 @@
 										<TransitionObjectRef Name="pianoGliss" ID="{42E2E01A-9E7E-4DF3-9CF3-1E1613485AC4}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
 									</TransitionInfo>
 								</MusicTransition>
-								<MusicTransition Name="Transition" ID="{4FA9D6A8-2A99-422D-ADA3-6B1BCE885747}">
-									<PropertyList>
-										<Property Name="DestinationContextType" Type="int16" Value="2"/>
-										<Property Name="ExitSourceAt" Type="int16" Value="5"/>
-										<Property Name="SourceContextType" Type="int16" Value="2"/>
-										<Property Name="UseTransitionObject" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="DestinationContextObject">
-											<ObjectRef Name="outro" ID="{54EF3798-4838-4C37-AF99-1D9EA57962FC}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
-										</Reference>
-										<Reference Name="SourceContextObject">
-											<ObjectRef Name="hype_0" ID="{45186E1E-C1C9-46E8-9FEC-EDD87E0BF95E}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
-										</Reference>
-									</ReferenceList>
-									<TransitionInfo>
-										<TransitionObjectRef Name="pianoGliss" ID="{42E2E01A-9E7E-4DF3-9CF3-1E1613485AC4}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
-									</TransitionInfo>
-								</MusicTransition>
 								<MusicTransition Name="Transition" ID="{73A14C0C-3B2F-4EE9-9F93-C1B68B5B9B8E}">
 									<PropertyList>
 										<Property Name="DestinationContextType" Type="int16" Value="2"/>
@@ -1666,25 +1596,6 @@
 										<TransitionObjectRef Name="pianoGliss" ID="{42E2E01A-9E7E-4DF3-9CF3-1E1613485AC4}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
 									</TransitionInfo>
 								</MusicTransition>
-								<MusicTransition Name="Transition" ID="{743D8289-67EF-4EEA-BA18-CBAE7839C31B}">
-									<PropertyList>
-										<Property Name="DestinationContextType" Type="int16" Value="2"/>
-										<Property Name="ExitSourceAt" Type="int16" Value="5"/>
-										<Property Name="SourceContextType" Type="int16" Value="2"/>
-										<Property Name="UseTransitionObject" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="DestinationContextObject">
-											<ObjectRef Name="outro" ID="{54EF3798-4838-4C37-AF99-1D9EA57962FC}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
-										</Reference>
-										<Reference Name="SourceContextObject">
-											<ObjectRef Name="hype_25" ID="{84C979E3-682F-480B-B7A5-1FB88B5A9F0F}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
-										</Reference>
-									</ReferenceList>
-									<TransitionInfo>
-										<TransitionObjectRef Name="pianoGliss" ID="{42E2E01A-9E7E-4DF3-9CF3-1E1613485AC4}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
-									</TransitionInfo>
-								</MusicTransition>
 								<MusicTransition Name="Transition" ID="{C81C37E3-A08E-49A7-BE57-E15B28B274D0}">
 									<PropertyList>
 										<Property Name="DestinationContextType" Type="int16" Value="2"/>
@@ -1695,25 +1606,6 @@
 									<ReferenceList>
 										<Reference Name="DestinationContextObject">
 											<ObjectRef Name="hype_75" ID="{99106B29-E420-4BA2-864C-446E8DAD22BC}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
-										</Reference>
-										<Reference Name="SourceContextObject">
-											<ObjectRef Name="hype_50" ID="{E2CFADB0-63FA-4A98-BC6C-145FDF898035}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
-										</Reference>
-									</ReferenceList>
-									<TransitionInfo>
-										<TransitionObjectRef Name="pianoGliss" ID="{42E2E01A-9E7E-4DF3-9CF3-1E1613485AC4}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
-									</TransitionInfo>
-								</MusicTransition>
-								<MusicTransition Name="Transition" ID="{CDB1720B-E556-4255-A18D-5072FB3D3C01}">
-									<PropertyList>
-										<Property Name="DestinationContextType" Type="int16" Value="2"/>
-										<Property Name="ExitSourceAt" Type="int16" Value="5"/>
-										<Property Name="SourceContextType" Type="int16" Value="2"/>
-										<Property Name="UseTransitionObject" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="DestinationContextObject">
-											<ObjectRef Name="outro" ID="{54EF3798-4838-4C37-AF99-1D9EA57962FC}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
 										</Reference>
 										<Reference Name="SourceContextObject">
 											<ObjectRef Name="hype_50" ID="{E2CFADB0-63FA-4A98-BC6C-145FDF898035}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
@@ -1818,6 +1710,78 @@
 										</Reference>
 									</ReferenceList>
 									<TransitionInfo/>
+								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{4FA9D6A8-2A99-422D-ADA3-6B1BCE885747}">
+									<PropertyList>
+										<Property Name="DestinationContextType" Type="int16" Value="2"/>
+										<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+										<Property Name="SourceContextType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="DestinationContextObject">
+											<ObjectRef Name="outro" ID="{54EF3798-4838-4C37-AF99-1D9EA57962FC}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
+										</Reference>
+										<Reference Name="SourceContextObject">
+											<ObjectRef Name="hype_0" ID="{45186E1E-C1C9-46E8-9FEC-EDD87E0BF95E}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
+										</Reference>
+									</ReferenceList>
+									<TransitionInfo>
+										<TransitionObjectRef Name="pianoGliss" ID="{42E2E01A-9E7E-4DF3-9CF3-1E1613485AC4}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
+									</TransitionInfo>
+								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{743D8289-67EF-4EEA-BA18-CBAE7839C31B}">
+									<PropertyList>
+										<Property Name="DestinationContextType" Type="int16" Value="2"/>
+										<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+										<Property Name="SourceContextType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="DestinationContextObject">
+											<ObjectRef Name="outro" ID="{54EF3798-4838-4C37-AF99-1D9EA57962FC}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
+										</Reference>
+										<Reference Name="SourceContextObject">
+											<ObjectRef Name="hype_25" ID="{84C979E3-682F-480B-B7A5-1FB88B5A9F0F}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
+										</Reference>
+									</ReferenceList>
+									<TransitionInfo>
+										<TransitionObjectRef Name="pianoGliss" ID="{42E2E01A-9E7E-4DF3-9CF3-1E1613485AC4}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
+									</TransitionInfo>
+								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{CDB1720B-E556-4255-A18D-5072FB3D3C01}">
+									<PropertyList>
+										<Property Name="DestinationContextType" Type="int16" Value="2"/>
+										<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+										<Property Name="SourceContextType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="DestinationContextObject">
+											<ObjectRef Name="outro" ID="{54EF3798-4838-4C37-AF99-1D9EA57962FC}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
+										</Reference>
+										<Reference Name="SourceContextObject">
+											<ObjectRef Name="hype_50" ID="{E2CFADB0-63FA-4A98-BC6C-145FDF898035}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
+										</Reference>
+									</ReferenceList>
+									<TransitionInfo>
+										<TransitionObjectRef Name="pianoGliss" ID="{42E2E01A-9E7E-4DF3-9CF3-1E1613485AC4}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
+									</TransitionInfo>
+								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{75E93A4D-294B-49B1-9062-BC443BAC8C53}">
+									<PropertyList>
+										<Property Name="DestinationContextType" Type="int16" Value="2"/>
+										<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+										<Property Name="SourceContextType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="DestinationContextObject">
+											<ObjectRef Name="outro" ID="{54EF3798-4838-4C37-AF99-1D9EA57962FC}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
+										</Reference>
+										<Reference Name="SourceContextObject">
+											<ObjectRef Name="hype_75" ID="{99106B29-E420-4BA2-864C-446E8DAD22BC}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
+										</Reference>
+									</ReferenceList>
+									<TransitionInfo>
+										<TransitionObjectRef Name="pianoGliss" ID="{42E2E01A-9E7E-4DF3-9CF3-1E1613485AC4}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
+									</TransitionInfo>
 								</MusicTransition>
 							</ChildrenList>
 							<TransitionInfo/>

@@ -21,12 +21,8 @@ public class GameManager : MonoBehaviour
     private bool inCombat = false;
     public bool playerInput = false;
     public bool isGameOver = false;
-    
-    // // wwise
-    // public AK.Wwise.Event pauseSFX;
-    // public AK.Wwise.Event unpauseSFX;
 
-    // wwise
+    // wwise event variable declaration
     public AK.Wwise.Event pauseSFX;
     public AK.Wwise.Event unpSFX;
     public AK.Wwise.Event playpauseMUS;
@@ -36,6 +32,8 @@ public class GameManager : MonoBehaviour
     public AK.Wwise.Event playAaaMus;
     public AK.Wwise.Event muteAaaMus;
     public AK.Wwise.Event unmAaaMus;
+    public AK.Wwise.Event stopAaaMus;
+    public AK.Wwise.Event stoppauseMUS;
 
     // object references
     public UIManager uiManager;
@@ -159,6 +157,8 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(1.5f);
         if (isGameWon) {
             GameObject.Find("ProgressTracker").GetComponent<ProgressTracker>().isRestart = false;
+            stopAaaMus.Post(gameObject);
+            stoppauseMUS.Post(gameObject);
             SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
         }
         else {
@@ -210,6 +210,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator GameOverLose()
     {
         isGameOver = true;
+        stopAaaMus.Post(gameObject);
         stopCombatEvent.Invoke();
         yield return new WaitForSeconds(3f);
         uiManager.GameOverLose();
@@ -220,6 +221,7 @@ public class GameManager : MonoBehaviour
     void ShowLoseMenu() {
         print("show lose menu");
         jumbotron.state = JumbotronState.Disabled;
+        stopAaaMus.Post(gameObject);
         uiManager.ShowLoseMenu();
         isPaused = true;
         Time.timeScale = 0;
