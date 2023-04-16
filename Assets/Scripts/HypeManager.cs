@@ -65,22 +65,18 @@ public class HypeManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.H)) {
             UpdateHype(500f);
         }
-        if (hypePercent < 25)
-{
-   AkSoundEngine.SetState("hype", "hype_0");
-} else if (hypePercent >= 25)
-{
-   AkSoundEngine.SetState("hype", "hype_25");
-} else if (hypePercent >= 50)
-{
-   AkSoundEngine.SetState("hype", "hype_50");
-} else if (hypePercent >= 75)
-{
-   AkSoundEngine.SetState("hype", "hype_75");
-} else if (hypePercent == 100)
-{
-   AkSoundEngine.SetState("hype", "hype_100");
-}
+        AkSoundEngine.SetRTPCValue("Hype", hypePercent);
+        if (hypePercent < 25) {
+           AkSoundEngine.SetState("hype", "hype_0");
+        } else if (hypePercent >= 25 && hypePercent < 50) {
+           AkSoundEngine.SetState("hype", "hype_25");
+        } else if (hypePercent >= 50 && hypePercent < 75) {
+           AkSoundEngine.SetState("hype", "hype_50");
+        } else if (hypePercent >= 75 && hypePercent < 100) {
+           AkSoundEngine.SetState("hype", "hype_75");
+        } else if (hypePercent >= 100) {
+           AkSoundEngine.SetState("hype", "hype_100");
+        }
     }
 
     public void IncreaseHype(float hypeDiff)

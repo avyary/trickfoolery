@@ -299,6 +299,38 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Stop_Alien_Arena_Assault_170bpm" ID="{9B4690B1-682D-4359-808E-AF7E56A972C3}">
+					<ChildrenList>
+						<Action Name="" ID="{83866EA6-9C91-4512-8018-34AD66D7BE90}" ShortID="41300731">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Alien Arena Normal and Victory" ID="{95152A6C-A2BF-456C-B5B2-179C0E2FC335}" WorkUnitID="{5CD6933B-0773-453D-BFFC-5483B47741B7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_mus_pause_75bpm" ID="{B0A1E8C4-CBD5-4D2D-B416-98B9395C2181}">
+					<ChildrenList>
+						<Action Name="" ID="{65C70539-A20E-4C69-8D3D-D99914A50053}" ShortID="345742471">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mus_Pause_loop_75bpm" ID="{1C1A214D-2858-44C0-BF6D-6E4B9D257D7E}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

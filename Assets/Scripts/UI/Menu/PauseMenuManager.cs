@@ -12,6 +12,9 @@ public class PauseMenuManager : MonoBehaviour
 
     [SerializeField]
     public float changeCooldown;
+    
+    /// wwise event declaration for stopping pause and level music when exiting to main menu
+
 
     void Start()
     {

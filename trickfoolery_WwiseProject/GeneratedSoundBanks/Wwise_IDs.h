@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID FIRST_TIME_MUTE_MUS_PAUSE_75BPM = 308973664U;
         static const AkUniqueID MUTE_ALIEN_ARENA_ASSAULT_170BPM = 1929765902U;
+        static const AkUniqueID MUTE_LEVEL_ONE_MUSIC = 2731617764U;
         static const AkUniqueID MUTE_MUS_PAUSE_75BPM = 3756680375U;
         static const AkUniqueID PLAY_ALIEN_ARENA_ASSAULT_170BPM = 341582045U;
         static const AkUniqueID PLAY_CHARGER_ANGY = 1926045526U;
@@ -30,6 +31,10 @@ namespace AK
         static const AkUniqueID PLAY_SFX_ENEMYBEEFY_ENDATTACK = 2827312655U;
         static const AkUniqueID PLAY_SFX_ENEMYBEEFY_FOOTSTEPS = 3576742661U;
         static const AkUniqueID PLAY_SFX_ENEMYBEEFY_STARTATTACK = 1327506600U;
+        static const AkUniqueID PLAY_SFX_ENEMYGUITAR_AGGRO = 1841520935U;
+        static const AkUniqueID PLAY_SFX_ENEMYGUITAR_ALERT = 2296648555U;
+        static const AkUniqueID PLAY_SFX_ENEMYGUITAR_ATTACK = 1140923239U;
+        static const AkUniqueID PLAY_SFX_ENEMYGUITAR_DEATH = 1512650471U;
         static const AkUniqueID PLAY_SFX_GROOVY = 526466336U;
         static const AkUniqueID PLAY_SFX_PAUSE = 3683043420U;
         static const AkUniqueID PLAY_SFX_PLAYER_DASH = 4077681152U;
@@ -40,8 +45,12 @@ namespace AK
         static const AkUniqueID PLAY_SFX_TAUNT = 1800631706U;
         static const AkUniqueID PLAY_SFX_TOMSTEP = 2661393732U;
         static const AkUniqueID PLAY_SFX_UNPAUSE = 3476672187U;
+        static const AkUniqueID STOP_ALIEN_ARENA_ASSAULT_170BPM = 1234905987U;
+        static const AkUniqueID STOP_LEVEL_ONE_MUSIC = 1812361235U;
+        static const AkUniqueID STOP_MUS_PAUSE_75BPM = 3352794624U;
         static const AkUniqueID STOP_MUS_TRICKFOOLERY_222BPM = 2601853237U;
         static const AkUniqueID UNMUTE_ALIEN_ARENA_ASSAULT_170BPM = 1990966217U;
+        static const AkUniqueID UNMUTE_LEVEL_ONE_MUSIC = 954606969U;
         static const AkUniqueID UNMUTE_MUS_PAUSE_75BPM = 4152903754U;
     } // namespace EVENTS
 
@@ -90,18 +99,6 @@ namespace AK
             } // namespace SWITCH
         } // namespace FOOTSTEPS
 
-        namespace FOOTSTEPS_01
-        {
-            static const AkUniqueID GROUP = 2848855924U;
-
-            namespace SWITCH
-            {
-                static const AkUniqueID NEW_SWITCH = 1914034948U;
-                static const AkUniqueID NEW_SWITCH_01 = 3952450474U;
-                static const AkUniqueID NEW_SWITCH_02 = 3952450473U;
-            } // namespace SWITCH
-        } // namespace FOOTSTEPS_01
-
     } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
@@ -115,8 +112,7 @@ namespace AK
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID MAIN = 3161908922U;
         static const AkUniqueID MUS = 712897226U;
-        static const AkUniqueID SFX_ENEMY = 2297208207U;
-        static const AkUniqueID SFX_PLAYER_AND_UI = 4271082421U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BANKS
 
     namespace BUSSES
