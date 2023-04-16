@@ -1128,6 +1128,52 @@
 								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
+						<Sound Name="sfx_enemyBeefy_endAttackImpact" ID="{86EE2A02-3D2B-4203-9EA6-7B2E3513DFD0}" ShortID="835471464">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{D713D0A7-F49B-4291-B7DD-653E3E1FAA3F}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="500"/>
+													<Property Name="Min" Type="Real64" Value="-500"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_enemyBeefy_endAttackImpact" ID="{66A27E65-5F80-4B6C-9978-009F21095FA8}">
+									<PropertyList>
+										<Property Name="LoopEnd" Type="Real64" Value="2.3212915851272"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>sfx_enemyBeefy_endAttackImpact.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="924938269"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_enemyBeefy_endAttackImpact" ID="{66A27E65-5F80-4B6C-9978-009F21095FA8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="sfx_player" ID="{2847B478-4EBB-4225-A706-AA198ABB0253}" ShortID="989002812">
@@ -1592,6 +1638,526 @@
 								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="sfx_enemyGuitar" ID="{462F4BC1-12E9-49CB-B868-8AE08BF1060D}" ShortID="437145810">
+					<ChildrenList>
+						<RandomSequenceContainer Name="sfx_enemyGuitar_aggro" ID="{4CA690AD-1709-4C5B-9FCB-A020353414AB}" ShortID="121651328">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{01BBF09D-085A-4DF8-8652-4B19D62E8475}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="15"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{9E5EFF9F-1DE0-4887-B5B3-96687DFC0078}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-1000"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="sfx_enemyGuitar_aggro_1" ID="{61698DB0-62AE-43CE-8100-C5880F6089BC}" ShortID="483111846">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyGuitar_aggro_1" ID="{0F992AAB-8FC0-4D4C-8E3D-A5740F9A8BBC}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyGuitar_aggro_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="315718201"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyGuitar_aggro_1" ID="{0F992AAB-8FC0-4D4C-8E3D-A5740F9A8BBC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyGuitar_aggro_2" ID="{14791396-791B-4ABF-88D1-A7061EB14A7C}" ShortID="217513671">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyGuitar_aggro_2" ID="{79ABE87F-DA93-424B-B63B-E93CB60AFEF8}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyGuitar_aggro_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="66328359"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyGuitar_aggro_2" ID="{79ABE87F-DA93-424B-B63B-E93CB60AFEF8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyGuitar_aggro_3" ID="{FEA4189A-5585-443F-96F6-310A9696B967}" ShortID="30796266">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyGuitar_aggro_3" ID="{6FC8CF9F-C0E2-4072-944B-342BE96F736C}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyGuitar_aggro_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="227180075"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyGuitar_aggro_3" ID="{6FC8CF9F-C0E2-4072-944B-342BE96F736C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="sfx_enemyGuitar_alert" ID="{E76CBEE7-23E2-416D-85E4-205203CD7281}" ShortID="1040080087">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{037021FE-6441-463B-BDCB-E960CCE4482F}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-500"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="sfx_enemyGuitar_alert_1" ID="{D0CBB890-E96F-431C-BA89-5B5E39A384CF}" ShortID="1065948649">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyGuitar_alert_1" ID="{2A162608-EC68-4775-91AD-4698AAE16CF7}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyGuitar_alert_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="366435762"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyGuitar_alert_1" ID="{2A162608-EC68-4775-91AD-4698AAE16CF7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyGuitar_alert_2" ID="{B41275E3-CFE5-4BFF-8FCE-903FE951D698}" ShortID="536876626">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyGuitar_alert_2" ID="{3D104CF6-25B1-4739-B82D-7C502DD67948}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyGuitar_alert_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="724446481"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyGuitar_alert_2" ID="{3D104CF6-25B1-4739-B82D-7C502DD67948}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyGuitar_alert_3" ID="{A769AC46-F2D0-4825-9C0F-80E0F824795A}" ShortID="291549584">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyGuitar_alert_3" ID="{C36A6859-D0C7-4C95-8C20-C9E4F704F8EC}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyGuitar_alert_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="118736863"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyGuitar_alert_3" ID="{C36A6859-D0C7-4C95-8C20-C9E4F704F8EC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="sfx_enemyGuitar_death" ID="{3DFEFE69-7924-4E56-9ABE-E981DFF666AF}" ShortID="495940069">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{7D665159-92E0-4A59-BDDB-8328EF7F3C3F}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-500"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="sfx_enemyGuitar_death_notCoolDude" ID="{172D766C-C8CE-4494-A229-8BF563F245E7}" ShortID="840750161">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyGuitar_death_notCoolDude" ID="{63DFF5B7-B88E-4B90-93F2-46E5AD63B4A1}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyGuitar_death_notCoolDude.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="174897676"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyGuitar_death_notCoolDude" ID="{63DFF5B7-B88E-4B90-93F2-46E5AD63B4A1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyGuitar_death_totallyNotRadical" ID="{4F93256F-A438-4524-B987-1BD47BBA7BB9}" ShortID="964540521">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyGuitar_death_totallyNotRadical" ID="{E80CB01C-5D95-4BC0-9718-F33F7871A6B5}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyGuitar_death_totallyNotRadical.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="776970318"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyGuitar_death_totallyNotRadical" ID="{E80CB01C-5D95-4BC0-9718-F33F7871A6B5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyGuitar_death_notGroovyDude" ID="{F3F49B87-4130-4556-887C-E64145718A6D}" ShortID="1042502060">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyGuitar_death_notGroovyDude" ID="{80BEB865-DCF7-4A97-88D4-D6299AD6101A}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyGuitar_death_notGroovyDude.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="409162538"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyGuitar_death_notGroovyDude" ID="{80BEB865-DCF7-4A97-88D4-D6299AD6101A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="sfx_enemyGuitar_attack" ID="{0721780B-1FFC-4D5B-9727-E07A523E4C9E}" ShortID="349163667">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="sfx_enemyGuitar_attack_1" ID="{74D74D63-B57B-4452-8613-8AE841D001C4}" ShortID="996395867">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyGuitar_attack_1" ID="{3FAFA97A-8CA6-4776-B12A-39BFDE874CBF}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyGuitar_attack_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="199313268"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyGuitar_attack_1" ID="{3FAFA97A-8CA6-4776-B12A-39BFDE874CBF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyGuitar_attack_2" ID="{02E35DDF-EB10-498E-9F6F-15D5218310BB}" ShortID="819931698">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyGuitar_attack_2" ID="{6096EFBD-91F2-46BD-B1F3-36BCB8299179}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyGuitar_attack_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="965574348"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyGuitar_attack_2" ID="{6096EFBD-91F2-46BD-B1F3-36BCB8299179}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyGuitar_attack_3" ID="{E61859F5-8A07-4226-B162-00E44B318524}" ShortID="64697328">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyGuitar_attack_3" ID="{053BA805-A6EA-459D-BCCC-35B90806C3EC}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyGuitar_attack_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1054308750"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyGuitar_attack_3" ID="{053BA805-A6EA-459D-BCCC-35B90806C3EC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyGuitar_attack_4" ID="{A3BFEDF8-7072-4717-ADED-861CC382F95C}" ShortID="707040238">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyGuitar_attack_4" ID="{56D28E6B-ED31-4471-A34F-C29040DDD3DE}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyGuitar_attack_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="731690010"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyGuitar_attack_4" ID="{56D28E6B-ED31-4471-A34F-C29040DDD3DE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyGuitar_attack_5" ID="{6C8C45A1-BA69-4EB8-A473-FA7EC4A1DD0F}" ShortID="748661051">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyGuitar_attack_5" ID="{E46CE405-600C-4F0F-AAC8-44FE4E6CCBB5}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyGuitar_attack_5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="443341184"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyGuitar_attack_5" ID="{E46CE405-600C-4F0F-AAC8-44FE4E6CCBB5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyGuitar_attack_6" ID="{15716B85-3285-40A3-943D-75165637031F}" ShortID="498714289">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyGuitar_attack_6" ID="{34B548A6-EAF0-446B-8697-EE7AC14DED82}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyGuitar_attack_6.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1048258940"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyGuitar_attack_6" ID="{34B548A6-EAF0-446B-8697-EE7AC14DED82}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyGuitar_attack_7" ID="{EFFAE0A6-1E85-4A8B-BFFD-CF48939F65A0}" ShortID="459053632">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyGuitar_attack_7" ID="{695A75E5-AC47-4AD6-8562-47B801E00FF3}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyGuitar_attack_7.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="357382036"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyGuitar_attack_7" ID="{695A75E5-AC47-4AD6-8562-47B801E00FF3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyGuitar_attack_8" ID="{3ED20228-CCA1-4BC9-AA5B-90D2874CECBB}" ShortID="1026549448">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyGuitar_attack_8" ID="{FD1FC89D-6DB5-4A32-8863-764CB1B7848B}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyGuitar_attack_8.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1064787542"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyGuitar_attack_8" ID="{FD1FC89D-6DB5-4A32-8863-764CB1B7848B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_enemyGuitar_attack_9" ID="{6977DDF4-F124-4B28-B493-E9E40C0F25B5}" ShortID="563261598">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_enemyGuitar_attack_9" ID="{7E499180-11E6-4B82-9628-9320E96F1189}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_enemyGuitar_attack_9.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="785822034"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_enemyGuitar_attack_9" ID="{7E499180-11E6-4B82-9628-9320E96F1189}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

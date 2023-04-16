@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PlayerAnimationController : MonoBehaviour
@@ -8,10 +9,30 @@ public class PlayerAnimationController : MonoBehaviour
     [SerializeField] private AnimationClip tomTaunt;
     [SerializeField] private AnimationClip tomIdle;
 
+    public AkEvent tauntSFX;
+
+    /// footsteps
+    [SerializeField]
+    private PlayerSounds playerSounds;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
         animator.Play(tomIdle.name);
+    }
+
+    // void PlayTauntSound()
+    // {
+    //     Debug.Log("Tauntsfx");
+    // }
+
+    void PlayTauntSound() 
+    {   
+        Debug.Log("Tauntsfx");
+        if (tauntSFX != null) 
+        {
+            tauntSFX.HandleEvent(gameObject);
+        }
     }
 
     private void Update()
@@ -32,7 +53,7 @@ public class PlayerAnimationController : MonoBehaviour
         {
             animator.Play(tomRunning.name);
         }
-     
+
         else if (Input.GetKeyDown(KeyCode.F))
         {
             animator.Play(tomTaunt.name);
@@ -40,14 +61,17 @@ public class PlayerAnimationController : MonoBehaviour
         else if (!Input.anyKey)
         {
             animator.Play(tomIdle.name);
-        }   else if (Input.GetKeyDown(KeyCode.Space))
+        } else if (Input.GetKeyDown(KeyCode.Space))
         {
             animator.Play(tomRolling.name);
         }
-        
-       
-        
-        
-     
+         
     }
+    
+    private void PlayFootstep()
+    {
+        Debug.Log("Footsteps");
+        playerSounds.PlayFootstepSound();
+    }
+
 }
