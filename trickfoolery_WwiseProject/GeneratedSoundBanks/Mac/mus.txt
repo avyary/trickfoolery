@@ -1,0 +1,29 @@
+Event	ID	Name			Wwise Object Path	Notes
+	954606969	Unmute_level_one_music			\avy music events\Unmute_level_one_music	
+	1812361235	Stop_level_one_music			\avy music events\Stop_level_one_music	
+	2731617764	Mute_level_one_music			\avy music events\Mute_level_one_music	
+	3532690205	Play_level_one_music			\avy music events\Play_level_one_music	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3296584377	hype			\avy music states\hype	
+
+State	ID	Name	State Group			Notes
+	436487211	hype_50	hype			
+	470042484	hype_75	hype			
+	520375247	hype_25	hype			
+	748895195	None	hype			
+	2546009797	hype_100	hype			
+	4196427868	hype_0	hype			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	291589524	mus_level_one_130bpm_hype_75_soloPiano	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\mus_level_one_130bpm_hype_75_soloPiano_9EDFC787.wem		\Interactive Music Hierarchy\avy music\level_one_130bpm\hype_75\mus_level_one_130bpm_hype_75_soloPiano\mus_level_one_130bpm_hype_75_soloPiano		690244
+	340873418	mus_level_one_130bpm_hype_75_soloSynthLong	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\mus_level_one_130bpm_hype_75_soloSynthLong_9EDFC787.wem		\Interactive Music Hierarchy\avy music\level_one_130bpm\hype_75\mus_level_one_130bpm_hype_75_soloSynthLong\mus_level_one_130bpm_hype_75_soloSynthLong		1696188
+	362719838	mus_level_one_130bpm_hype_50_soloSynth	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\mus_level_one_130bpm_hype_50_soloSynth_9EDFC787.wem		\Interactive Music Hierarchy\avy music\level_one_130bpm\hype_50\mus_level_one_130bpm_hype_50_soloSynth\mus_level_one_130bpm_hype_50_soloSynth		696474
+	536069338	mus_level_one_130bpm_hype_50_loop	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\mus_level_one_130bpm_hype_50_loop_9EDFC787.wem		\Interactive Music Hierarchy\avy music\level_one_130bpm\hype_50\mus_level_one_130bpm_hype_50_loop\mus_level_one_130bpm_hype_50_loop		677798
+	657037866	mus_level_one_130bpm_hype_0_loop	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\mus_level_one_130bpm_hype_0_loop_9EDFC787.wem		\Interactive Music Hierarchy\avy music\level_one_130bpm\hype_0\mus_level_one_130bpm_hype_0_loop\mus_level_one_130bpm_hype_0_loop		690247
+	708240575	mus_level_one_130bpm_hype_25_loop	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\mus_level_one_130bpm_hype_25_loop_9EDFC787.wem		\Interactive Music Hierarchy\avy music\level_one_130bpm\hype_25\mus_level_one_130bpm_hype_25_loop\mus_level_one_130bpm_hype_25_loop		686771
+	776736352	mus_level_one_130bpm_hype_50_soloBass	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\mus_level_one_130bpm_hype_50_soloBass_9EDFC787.wem		\Interactive Music Hierarchy\avy music\level_one_130bpm\hype_50\mus_level_one_130bpm_hype_50_soloBass\mus_level_one_130bpm_hype_50_soloBass		679352
+	794838114	mus_level_one_130bpm_introTransition	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\mus_level_one_130bpm_introTransition_9EDFC787.wem		\Interactive Music Hierarchy\avy music\level_one_130bpm\pianoGlissIntro\mus_level_one_130bpm_introTransition		202066
+	852624060	mus_level_one_130bpm_pianoGliss	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\mus_level_one_130bpm_pianoGliss_9EDFC787.wem		\Interactive Music Hierarchy\avy music\level_one_130bpm\pianoGliss\mus_level_one_130bpm_pianoGliss		124945
+	1026474284	mus_level_one_130bpm_outro	Y:\trickfoolery\trickfoolery_WwiseProject\.cache\Mac\SFX\mus_level_one_130bpm_outro_9EDFC787.wem		\Interactive Music Hierarchy\avy music\level_one_130bpm\outro\mus_level_one_130bpm_outro\mus_level_one_130bpm_outro		152436
+

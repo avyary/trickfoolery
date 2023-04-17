@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PunchEnemy : Enemy
 {
-      public Animator animator;
+    public Animator animater;
     public bool isAttacking;
     public bool isWalking;
 

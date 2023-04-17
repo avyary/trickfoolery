@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{EE68934F-0871-4B35-9D15-0DC7125847FD}" SchemaVersion="110">
+	<SoundBanks>
+		<WorkUnit Name="avy soundbanks" ID="{EE68934F-0871-4B35-9D15-0DC7125847FD}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="mus" ID="{128716AC-7198-43B7-AF87-1A5C74D5106B}">
+					<PropertyList>
+						<Property Name="Maximum" Type="int32">
+							<ValueList>
+								<Value>10000000</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_level_one_music" ID="{48C4AABD-1063-4975-B341-E33A36C8D11E}" WorkUnitID="{F9ADAA8B-EDC8-4534-A187-A91190A7F211}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_level_one_music" ID="{06A5EF20-2029-49A4-A054-D2D28F4F9124}" WorkUnitID="{F9ADAA8B-EDC8-4534-A187-A91190A7F211}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Unmute_level_one_music" ID="{7925FB30-A253-49C3-B6A7-086FC10B259E}" WorkUnitID="{F9ADAA8B-EDC8-4534-A187-A91190A7F211}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Mute_level_one_music" ID="{823A7C47-E873-4E6A-8369-CD967AE34C0D}" WorkUnitID="{F9ADAA8B-EDC8-4534-A187-A91190A7F211}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="sfx" ID="{D7757AB9-AAC7-41E1-BCF6-CB59A2C0BE4F}">
+					<PropertyList>
+						<Property Name="Maximum" Type="int32">
+							<ValueList>
+								<Value>10000000</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_sfx_player" ID="{2D01A28C-DC18-4225-9636-E63795E3B196}" WorkUnitID="{DEF5BEE4-603A-4331-AC95-68C3F0C086AA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_sfx_enemyBeefy" ID="{4F835BE5-F150-4C2C-92FD-53370B2A60C1}" WorkUnitID="{DEF5BEE4-603A-4331-AC95-68C3F0C086AA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_sfx_enemyGuitar" ID="{0BBC2582-7E12-4F81-AB17-1D48C6BF5224}" WorkUnitID="{DEF5BEE4-603A-4331-AC95-68C3F0C086AA}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
