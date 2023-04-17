@@ -5247,8 +5247,8 @@ MonoBehaviour:
   state: 0
   tracking_distance: 3
   tracking_range: 3
-  tracking_teleport_strength: 1
-  attacking_teleport_strength: 1
+  tracking_teleport_strength: 0.4
+  attacking_teleport_strength: 0.4
   dist: 0
   teleport_time: 0.7
   teleporting: 0
@@ -5256,6 +5256,7 @@ MonoBehaviour:
   DashParticle: {fileID: 4110198872891715316}
   teleport_direction: {x: 0, y: 0, z: 0}
   attackcd: 0
+  gotHere: 0
 --- !u!1 &8157556153120589609
 GameObject:
   m_ObjectHideFlags: 0
