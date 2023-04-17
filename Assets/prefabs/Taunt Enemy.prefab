@@ -10750,8 +10750,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1ec9595d38a7af41b514c020ae57183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doneRolling: 1
-  doneAttacking: 1
+  doneRolling: 0
+  doneAttacking: 0
   enemy: {fileID: 8157556152595408473}
 --- !u!4 &1784772940432920216 stripped
 Transform:
