@@ -41,6 +41,7 @@ public class TauntEnemy : Enemy
     private bool isAttacking;
     private bool isWalking;
     private TauntAnimationController amc;
+    public bool gotHere = false;
 
     protected override void Start() {
         base.Start();
@@ -126,7 +127,7 @@ public class TauntEnemy : Enemy
                     }
 
 
-                    if ((attackcd <= 0)) //For now, attacks are set. TODO: Chance this to random attacks.
+                    if ((attackcd <= 0) && amc.doneRolling) //For now, attacks are set. TODO: Chance this to random attacks.
                     {
                         state = EnemyState.Startup;
                         StartCoroutine(TeleportAttack());
@@ -141,10 +142,6 @@ public class TauntEnemy : Enemy
 
     IEnumerator TeleportAttack()
     {   //TODO: WWISE SOUNDS FOR ATTACK ANINMATION SHOULD GO HERE 
-        while (amc.doneRolling == false)
-        {
-            yield return null;
-        }
         amc.doneAttacking = false;
         teleport_direction = -1 * (transform.position - player.transform.position);
         yield return StartCoroutine(Teleport(attacking_teleport_strength));
@@ -160,7 +157,6 @@ public class TauntEnemy : Enemy
         yield return StartCoroutine(Attack(currentAttack));
         attackcd = attack_cooldown;
         animator.ResetTrigger("Attack");
-        yield return new WaitForSeconds(0.2f);
         state = EnemyState.Tracking;
         yield return null;
     }
