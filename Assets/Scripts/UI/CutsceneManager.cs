@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class CutsceneManager : MonoBehaviour
@@ -112,17 +113,13 @@ public class CutsceneManager : MonoBehaviour
         continueArrow.SetActive(true);
 	}
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetButtonDown("Confirm")) {
-            if (pageComplete) {
-                pageIdx++;
-                UpdatePage();
-            }
-            else {
-                StartCoroutine(RapidFillText());
-            }
+    public void OnConfirm() {
+        if (pageComplete) {
+            pageIdx++;
+            UpdatePage();
+        }
+        else {
+            StartCoroutine(RapidFillText());
         }
     }
 

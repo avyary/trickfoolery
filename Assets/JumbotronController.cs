@@ -22,12 +22,6 @@ public class JumbotronController : MonoBehaviour
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
-    void Update() {
-        if (Input.GetKeyDown(KeyCode.T)) {
-            print(state);
-        }
-    }
-
     void OnSlideIn() {
         state = JumbotronState.HypeBar;
     }

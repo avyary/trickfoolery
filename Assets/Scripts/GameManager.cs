@@ -136,9 +136,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Y)) {
-            print("GAME STATE: " + state + "\nisPaused: " + isPaused + " | jumbotron state: " + jumbotron.state + " | timeScale: " + Time.timeScale);
-        }
         // if jumbotron is disabled, cannot pause
         if (Input.GetButtonDown("Escape") && jumbotron.state != JumbotronState.Disabled)
         {

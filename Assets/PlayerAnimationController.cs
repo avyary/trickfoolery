@@ -21,57 +21,16 @@ public class PlayerAnimationController : MonoBehaviour
         animator.Play(tomIdle.name);
     }
 
-    // void PlayTauntSound()
-    // {
-    //     Debug.Log("Tauntsfx");
-    // }
-
     void PlayTauntSound() 
     {   
-        Debug.Log("Tauntsfx");
         if (tauntSFX != null) 
         {
             tauntSFX.HandleEvent(gameObject);
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            animator.Play(tomRunning.name);
-        }
-        else if (Input.GetKeyDown(KeyCode.A))
-        {
-            animator.Play(tomRunning.name);
-        }
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            animator.Play(tomRunning.name);
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            animator.Play(tomRunning.name);
-        }
-
-        else if (Input.GetKeyDown(KeyCode.F))
-        {
-            animator.Play(tomTaunt.name);
-        }
-        else if (!Input.anyKey)
-        {
-            animator.Play(tomIdle.name);
-        } else if (Input.GetKeyDown(KeyCode.Space))
-        {
-            animator.Play(tomRolling.name);
-        }
-         
-    }
-    
     private void PlayFootstep()
     {
-        Debug.Log("Footsteps");
         playerSounds.PlayFootstepSound();
     }
-
 }
