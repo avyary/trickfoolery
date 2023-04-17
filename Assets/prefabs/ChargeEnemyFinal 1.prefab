@@ -1445,7 +1445,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 51966254750d17a43b6e2e9e8971fe62, type: 2}
+  - {fileID: 2100000, guid: 09532830591a9f9419daa03b80b28ae7, type: 2}
   - {fileID: 2100000, guid: 277f8f7ce72100142a526d3af34be1d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -3800,8 +3800,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 0, b: 0.025235653, a: 1}
-        key1: {r: 0, g: 0.2694857, b: 1, a: 0}
+        key0: {r: 1, g: 0, b: 0.89104795, a: 1}
+        key1: {r: 1, g: 0, b: 0.89104795, a: 0}
         key2: {r: 1, g: 0, b: 0.77521896, a: 0}
         key3: {r: 1, g: 1, b: 1, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -6556,7 +6556,7 @@ ParticleSystem:
     widthOverTrail:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.27
+      scalar: 1.47
       minScalar: 1
       maxCurve:
         serializedVersion: 2

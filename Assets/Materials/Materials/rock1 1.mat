@@ -386,11 +386,11 @@ Material:
     - _Offset: -0.154
     - _Offset_X_Axis_BLD: -0.05
     - _Offset_Y_Axis_BLD: 0.09
-    - _Offset_Z: -3.5
+    - _Offset_Z: 0
     - _OtlWidth: 5
     - _OutlineOverridden: 0
     - _OutlineVisible: 1
-    - _Outline_Width: 20.7
+    - _Outline_Width: 63.4
     - _PPDLodThreshold: 5
     - _PPDMaxSamples: 15
     - _PPDMinSamples: 5

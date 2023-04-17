@@ -107,6 +107,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: 8c828d32cce0d49129f9fe3b749f2562, type: 2}
+    - target: {fileID: 6285402277926787077, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0008404597
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285402277926787077, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0003668181
+      objectReference: {fileID: 0}
     - target: {fileID: 7679695124436723427, guid: 365579391c2931940a7e83bdc319620a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -122,7 +130,7 @@ PrefabInstance:
     - target: {fileID: 8070712265981105534, guid: 365579391c2931940a7e83bdc319620a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 51966254750d17a43b6e2e9e8971fe62, type: 2}
+      objectReference: {fileID: 2100000, guid: 09532830591a9f9419daa03b80b28ae7, type: 2}
     - target: {fileID: 8070712265981105534, guid: 365579391c2931940a7e83bdc319620a, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
@@ -154,6 +162,10 @@ PrefabInstance:
     - target: {fileID: 8157556152595408473, guid: 365579391c2931940a7e83bdc319620a, type: 3}
       propertyPath: m_Name
       value: ChargeEnemyFinal 2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157556152595408473, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8157556152595408475, guid: 365579391c2931940a7e83bdc319620a, type: 3}
       propertyPath: m_Enabled
