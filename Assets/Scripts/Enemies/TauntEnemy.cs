@@ -40,6 +40,7 @@ public class TauntEnemy : Enemy
     private bool isRunning;
     private bool isAttacking;
     private bool isWalking;
+    private TauntAnimationController amc;
 
     protected override void Start() {
         base.Start();
@@ -48,11 +49,12 @@ public class TauntEnemy : Enemy
         attackcd = attack_cooldown;
         gameObject.GetComponent<Patrol>().enabled = false;
         state = EnemyState.Passive;
-        
+        amc = GameObject.Find("idle_TAUNT").GetComponent<TauntAnimationController>();
     }
 
     IEnumerator Teleport(float strength)
     {
+        amc.doneRolling = false;
         current_teleport_strength = strength;
         animator.SetTrigger("Roll");
         StartCoroutine(WaitForSecondsAndStopTeleportAnim(0.5f));
@@ -98,35 +100,39 @@ public class TauntEnemy : Enemy
                 }
                 break;
             case EnemyState.Tracking:
-                isTracking = true;
-                if (attackcd > 0)
-                    attackcd -= Time.deltaTime;
-                dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
+              
 
-                var lookPos = player.transform.position - transform.position;
-                lookPos.y = 0;
-                var rotation = Quaternion.LookRotation(lookPos);
-                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 10);
-                
-                if (dist > tracking_distance + tracking_range)
-                {
-                    teleport_direction = -1 * (transform.position - player.transform.position);
-                    StartCoroutine(Teleport(tracking_teleport_strength));
-                } else if (dist < tracking_distance)
-                {
-                    teleport_direction = (transform.position - player.transform.position);
-                    rotation = Quaternion.LookRotation(lookPos);
-                    transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 50);
-                    StartCoroutine(Teleport(tracking_teleport_strength));
-                }
-                
+                    isTracking = true;
+                    if (attackcd > 0)
+                        attackcd -= Time.deltaTime;
+                    dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
 
-                if ((attackcd <= 0)) //For now, attacks are set. TODO: Chance this to random attacks.
-                {
-                    state = EnemyState.Startup;
-                    StartCoroutine(TeleportAttack());
-                }
-                break;
+                    var lookPos = player.transform.position - transform.position;
+                    lookPos.y = 0;
+                    var rotation = Quaternion.LookRotation(lookPos);
+                    transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 10);
+
+                    if ((dist > tracking_distance + tracking_range) && amc.doneRolling)
+                    {
+                        teleport_direction = -1 * (transform.position - player.transform.position);
+                        StartCoroutine(Teleport(tracking_teleport_strength));
+                    }
+                    else if ((dist < tracking_distance)&& amc.doneRolling)
+                    {
+                        teleport_direction = (transform.position - player.transform.position);
+                        rotation = Quaternion.LookRotation(lookPos);
+                        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 50);
+                        StartCoroutine(Teleport(tracking_teleport_strength));
+                    }
+
+
+                    if ((attackcd <= 0)) //For now, attacks are set. TODO: Chance this to random attacks.
+                    {
+                        state = EnemyState.Startup;
+                        StartCoroutine(TeleportAttack());
+                    }
+
+                    break;
             
             case EnemyState.Active:
                 break;
@@ -135,10 +141,25 @@ public class TauntEnemy : Enemy
 
     IEnumerator TeleportAttack()
     {   //TODO: WWISE SOUNDS FOR ATTACK ANINMATION SHOULD GO HERE 
+        while (amc.doneRolling == false)
+        {
+            yield return null;
+        }
+        amc.doneAttacking = false;
         teleport_direction = -1 * (transform.position - player.transform.position);
         yield return StartCoroutine(Teleport(attacking_teleport_strength));
+        while (amc.doneRolling == false)
+        {
+            yield return null;
+        }
+        animator.SetTrigger("Attack");
+        while (amc.doneAttacking == false)
+        {
+            yield return null;
+        }
         yield return StartCoroutine(Attack(currentAttack));
         attackcd = attack_cooldown;
+        animator.ResetTrigger("Attack");
         yield return new WaitForSeconds(0.2f);
         state = EnemyState.Tracking;
         yield return null;
