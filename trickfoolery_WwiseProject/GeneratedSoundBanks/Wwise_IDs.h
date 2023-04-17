@@ -21,10 +21,12 @@ namespace AK
         static const AkUniqueID PLAY_CHARGER_ANGY = 1926045526U;
         static const AkUniqueID PLAY_CHARGER_LUNGE = 3579375072U;
         static const AkUniqueID PLAY_LEVEL_ONE_MUSIC = 3532690205U;
+        static const AkUniqueID PLAY_MUS_FOOL_TRICKERY_93BPM = 3892471342U;
         static const AkUniqueID PLAY_MUS_PAUSE_75BPM = 2758388342U;
         static const AkUniqueID PLAY_MUS_TRICKFOOLERY_222BPM = 3263497147U;
         static const AkUniqueID PLAY_SFX_CHARGER_DEATH = 843029991U;
         static const AkUniqueID PLAY_SFX_CONFIRM = 2343006462U;
+        static const AkUniqueID PLAY_SFX_CUTSCENE_DIALOGUE_SELECT = 3665640674U;
         static const AkUniqueID PLAY_SFX_ENEMYBEEFY_AGGRO = 504043942U;
         static const AkUniqueID PLAY_SFX_ENEMYBEEFY_ALERT = 3666456714U;
         static const AkUniqueID PLAY_SFX_ENEMYBEEFY_DEATH = 966443990U;
@@ -47,6 +49,7 @@ namespace AK
         static const AkUniqueID PLAY_SFX_UNPAUSE = 3476672187U;
         static const AkUniqueID STOP_ALIEN_ARENA_ASSAULT_170BPM = 1234905987U;
         static const AkUniqueID STOP_LEVEL_ONE_MUSIC = 1812361235U;
+        static const AkUniqueID STOP_MUS_FOOL_TRICKERY_93BPM = 2735462868U;
         static const AkUniqueID STOP_MUS_PAUSE_75BPM = 3352794624U;
         static const AkUniqueID STOP_MUS_TRICKFOOLERY_222BPM = 2601853237U;
         static const AkUniqueID UNMUTE_ALIEN_ARENA_ASSAULT_170BPM = 1990966217U;
@@ -56,6 +59,18 @@ namespace AK
 
     namespace STATES
     {
+        namespace CUTSCENES
+        {
+            static const AkUniqueID GROUP = 3765803840U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID OP = 1651971872U;
+                static const AkUniqueID OP_ENDING = 579136826U;
+            } // namespace STATE
+        } // namespace CUTSCENES
+
         namespace GAMEPLAY_STATE
         {
             static const AkUniqueID GROUP = 762757699U;

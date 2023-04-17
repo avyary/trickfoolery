@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{FCC95966-8BC9-428F-A86F-77BD80236DCE}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Play_sfx_cutscene_dialogue_select" ID="{13E8CD07-7E38-4033-B83A-879ADD782D17}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_player_death" ID="{CAC80460-81AC-420B-AD88-E8FA18AC9974}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Unmute_mus_pause_75bpm" ID="{C3E827C6-F5CC-4329-985D-E19D22E9E34A}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Alien_Arena_Assault_170bpm" ID="{9B4690B1-682D-4359-808E-AF7E56A972C3}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
@@ -16,10 +17,12 @@
 						<ObjectRef Name="Stop_mus_Trickfoolery_222bpm" ID="{103A468D-C1A5-4619-8F4C-E88DFD668A3C}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_confirm" ID="{69F3C602-D088-4702-A2C0-78D74E58ADF3}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_taunt" ID="{CD05A98D-2AF9-47E8-A5D9-08F5EE359AC0}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_mus_fool_trickery_93bpm" ID="{0B2B49ED-ECE5-4847-8F1D-421D18125EB9}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Mute_mus_pause_75bpm" ID="{0E96271C-B559-48D8-B09B-94D3489189FD}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_unpause" ID="{EF55EFFC-D9BF-4914-B45F-C34160708C30}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="First_Time_Mute_mus_pause_75bpm" ID="{7288EC1A-8592-4957-B27E-E911D3B56F4A}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_pause" ID="{1228DA1E-31A1-49A3-8418-61751A909CFE}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_mus_fool_trickery_93bpm" ID="{3AC1FDE6-8107-49E1-994D-5006507642AE}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_mus_Trickfoolery_222bpm" ID="{957ED87C-54CD-4A6B-878A-25F81372D716}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_tomstep" ID="{1BC515F3-568C-4A8D-995F-DBFA44FF9E2A}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_mus_Pause_75bpm" ID="{BCE1262A-3C14-4B31-B28C-4A64BEE31410}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>

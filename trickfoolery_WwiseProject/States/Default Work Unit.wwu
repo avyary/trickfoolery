@@ -10,6 +10,13 @@
 						<State Name="Victory" ID="{9108A2BF-1C91-4F03-BBCD-47F60251D933}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="Cutscenes" ID="{36E536A7-D1D4-4F71-9103-DAB8138E6E50}">
+					<ChildrenList>
+						<State Name="None" ID="{9DC98234-F614-42CD-B020-F90911B17DD4}"/>
+						<State Name="Op" ID="{CDE7059F-6C4F-45DC-9E79-660888BF1B34}"/>
+						<State Name="Op_Ending" ID="{F1117A5A-57BF-4B45-938A-4F58592A75F8}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

@@ -573,6 +573,7 @@ GameObject:
   - component: {fileID: 1039130052}
   - component: {fileID: 1039130055}
   - component: {fileID: 1039130054}
+  - component: {fileID: 1039130056}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -674,6 +675,30 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &1039130056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039130050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a024f4daab4fd48b9aec34fb7e7acfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 04cdc92011dfa0848a35e344c4167749, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &1256288792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,6 +1510,14 @@ MonoBehaviour:
   _sizeCalcObj: {fileID: 1256288792}
   continueArrow: {fileID: 751416741}
   nextSceneName: Lvl1Lukey
+  playCutsceneSelectSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bd60fb00501f47147ade6e98c8ab3b9b, type: 2}
+  playCutsceneMUS:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 417f9ecc7b36891479fcbd2dccf67940, type: 2}
   pageIdx: 0
   timeBetweenLetters: 0.05
   CheckForTrigger:

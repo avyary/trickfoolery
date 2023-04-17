@@ -331,6 +331,44 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_mus_fool_trickery_93bpm" ID="{3AC1FDE6-8107-49E1-994D-5006507642AE}">
+					<ChildrenList>
+						<Action Name="" ID="{0F54FE97-A850-43BD-B9F9-13E9AA486C36}" ShortID="1006499887">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Fool Trickery 93bpm" ID="{F3B16E81-D6C3-447A-9184-B007F68BC921}" WorkUnitID="{5CD6933B-0773-453D-BFFC-5483B47741B7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_mus_fool_trickery_93bpm" ID="{0B2B49ED-ECE5-4847-8F1D-421D18125EB9}">
+					<ChildrenList>
+						<Action Name="" ID="{D92C158E-372A-40CD-917A-A74E915AEBC2}" ShortID="526239404">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Fool Trickery 93bpm" ID="{F3B16E81-D6C3-447A-9184-B007F68BC921}" WorkUnitID="{5CD6933B-0773-453D-BFFC-5483B47741B7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_cutscene_dialogue_select" ID="{13E8CD07-7E38-4033-B83A-879ADD782D17}">
+					<ChildrenList>
+						<Action Name="" ID="{114EEF39-AA5C-4DFC-BB73-EEF4124E4312}" ShortID="990255681">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_cutscene_dialogue_select_tv" ID="{1B1A665F-F640-4296-8C7B-9C32E8C6FB82}" WorkUnitID="{5A323E93-18E1-483A-9D57-69701F8E5EEE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

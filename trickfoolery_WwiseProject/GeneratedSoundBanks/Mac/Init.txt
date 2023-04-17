@@ -1,6 +1,7 @@
 State Group	ID	Name			Wwise Object Path	Notes
 	762757699	Gameplay_State			\Default Work Unit\Gameplay_State	
 	3296584377	hype			\avy music states\hype	
+	3765803840	Cutscenes			\Default Work Unit\Cutscenes	
 
 State	ID	Name	State Group			Notes
 	748895195	None	Gameplay_State			
@@ -12,6 +13,9 @@ State	ID	Name	State Group			Notes
 	748895195	None	hype			
 	2546009797	hype_100	hype			
 	4196427868	hype_0	hype			
+	579136826	Op_Ending	Cutscenes			
+	748895195	None	Cutscenes			
+	1651971872	Op	Cutscenes			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	

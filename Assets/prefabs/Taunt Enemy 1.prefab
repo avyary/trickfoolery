@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7612741545778230657}
   - component: {fileID: 7172954319935886574}
   - component: {fileID: 7940064083244668306}
+  - component: {fileID: -8724532785823378094}
   m_Layer: 7
   m_Name: Taunt Enemy 1
   m_TagString: Enemy
@@ -186,6 +187,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _model: {fileID: 4740349630571611527}
+  angerSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4bbe9de5f3948bb4ab2a5495981941dd, type: 2}
+  attackSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ce29c899db8ba024b899656540e52071, type: 2}
+  deathSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 258b8c8609a05f643a0e9d5ac20a10ee, type: 2}
   isAngy: 0
   currentAttack: {fileID: 0}
   state: 0
@@ -236,6 +249,28 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   active: 1
+--- !u!114 &-8724532785823378094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204469351715301410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dc207cd212c4aef86b969b3ed284f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &2931213033935900601
 GameObject:
   m_ObjectHideFlags: 0

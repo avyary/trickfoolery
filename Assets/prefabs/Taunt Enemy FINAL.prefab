@@ -5232,6 +5232,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _model: {fileID: 1409372854650901538}
+  angerSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2a8ae6f21faf3094fb8fb0c1453d8737, type: 2}
+  attackSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ce29c899db8ba024b899656540e52071, type: 2}
+  deathSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 258b8c8609a05f643a0e9d5ac20a10ee, type: 2}
   isAngy: 0
   currentAttack: {fileID: 0}
   state: 0

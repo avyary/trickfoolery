@@ -1498,6 +1498,104 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="sfx_cutscene_dialogue_select_tv" ID="{1B1A665F-F640-4296-8C7B-9C32E8C6FB82}" ShortID="372712202">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{6CFB9654-0994-4141-B887-983ADF0BB558}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="606"/>
+											<Property Name="Min" Type="Real64" Value="-632"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-11</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="sfx_cutscene_dialogue_select_1" ID="{8B2C5A24-3B50-4CBB-8D63-2DB873A7D118}" ShortID="447615211">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_cutscene_dialogue_select_1" ID="{0C33EFB2-9650-4470-99A0-77EAC95B634F}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_cutscene_dialogue_select_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="431864938"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_cutscene_dialogue_select_1" ID="{0C33EFB2-9650-4470-99A0-77EAC95B634F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_cutscene_dialogue_select_2" ID="{C3B4A8FF-F1B5-4270-8C27-45A876422CEE}" ShortID="507559816">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_cutscene_dialogue_select_2" ID="{1DA645B2-C304-4577-8701-96FF7C51A8A4}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_cutscene_dialogue_select_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="139316545"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_cutscene_dialogue_select_2" ID="{1DA645B2-C304-4577-8701-96FF7C51A8A4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_cutscene_dialogue_select_3" ID="{8244CD54-F7E9-4D6B-A578-38276CB24788}" ShortID="457354116">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_cutscene_dialogue_select_3" ID="{AD8FB137-0B46-4D64-A04A-5586BAA3A7B2}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_cutscene_dialogue_select_3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="937805411"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_cutscene_dialogue_select_3" ID="{AD8FB137-0B46-4D64-A04A-5586BAA3A7B2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
