@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="625e54dd-d997-43d2-a428-3cc53cec4e4b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.trickfoolery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.trickfoolery/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/ChargeEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/ChargeEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/TauntEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/TauntEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/TauntAttack.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/TauntAttack.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/TauntDamage.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/TauntDamage.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/TauntDeath.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/TauntDeath.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/TauntEnemy.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/TauntEnemy.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/TauntIdle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/TauntIdle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/TauntWalk.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/TauntWalk.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/attack(mod)_TAUNT.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/attack(mod)_TAUNT.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/damaged_TAUNT.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/damaged_TAUNT.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/death_TAUNT.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/death_TAUNT.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/idle_TAUNT.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/idle_TAUNT.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/walk_TAUNT.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTAUNT_UPDATED/walk_TAUNT.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTOM_UPDATED/TomDodge.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/forReleaseAssets/finalTOM_UPDATED/TomDodge.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/ChargeEnemytestwhat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/ChargeEnemytestwhat.prefab" afterDir="false" />
-    </list>
+    <list default="true" id="625e54dd-d997-43d2-a428-3cc53cec4e4b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

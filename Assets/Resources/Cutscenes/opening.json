@@ -2,24 +2,20 @@
   "name": "opening",
   "pages": [
     {
-      "image": "opening_1",
-      "caption": "Here we see Tom in his natural state: slouched over a box of pizza, dimly illuminated by the soap opera on his TV."
+      "image": "Intro_1",
+      "caption": "Here we see Tom in his natural state: eating pizza on the couch and watching late-night soap operas."
     },
     {
-      "image": "opening_1",
+      "image": "Intro_1",
       "caption": "This is an average Saturday night for Tom."
     },
     {
-      "image": "opening_2",
-      "caption": "Suddenly, circles of multicolored light begin to dance around the room as the pizza in his hand begins to float."
+      "image": "Intro_2",
+      "caption": "Suddenly, the room flashes a brilliant blue as Tom feels himself and his pizza begin to float."
     },
     {
-      "image": "opening_2",
-      "caption": "Tom briefly catches a glimpse of a spaceship through the window before being engulfed by a bright blue light."
-    },
-    {
-      "image": "opening_4",
-      "caption": "Pulled through the night sky, Tom realizes that this is no average Saturday night..."
+      "image": "Intro_3",
+      "caption": "This may no longer be an average night for our hero..."
     }
   ]
 }
