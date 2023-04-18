@@ -241,6 +241,17 @@
                 },
                 {
                     "name": "",
+                    "id": "1b3b0f52-0be5-432e-8e1b-e36cc93af43a",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "3ee45a89-81eb-4b74-b9cf-8ce295bf329c",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
