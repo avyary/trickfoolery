@@ -51,7 +51,7 @@ public class TauntEnemy : Enemy
         teleporting = false;
         attackcd = attack_cooldown;
         gameObject.GetComponent<Patrol>().enabled = false;
-        state = EnemyState.Passive;
+        state = EnemyState.Patrolling;
         amc = GameObject.Find("idle_TAUNT").GetComponent<TauntAnimationController>();
     }
 
@@ -90,7 +90,7 @@ public class TauntEnemy : Enemy
         gameObject.GetComponent<Patrol>().enabled = false;// ensure this is always false
         switch(state)
         {
-            case EnemyState.Passive:
+            case EnemyState.Patrolling:
                 //if (agent.isStopped) 
                 //{
                     //agent.isStopped = false;
