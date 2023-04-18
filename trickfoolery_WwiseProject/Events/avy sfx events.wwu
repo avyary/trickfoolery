@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{DEF5BEE4-603A-4331-AC95-68C3F0C086AA}" SchemaVersion="110">
+	<Events>
+		<WorkUnit Name="avy sfx events" ID="{DEF5BEE4-603A-4331-AC95-68C3F0C086AA}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Play_sfx_enemyBeefy" ID="{4F835BE5-F150-4C2C-92FD-53370B2A60C1}" ShortID="255495360">
+					<ChildrenList>
+						<Event Name="Play_sfx_enemyBeefy_aggro" ID="{1B8EA9AF-9A1C-4F95-A67F-8DD7FC4E54B5}">
+							<ChildrenList>
+								<Action Name="" ID="{F2F51F31-5A32-4EC0-B52E-9E44893B37AD}" ShortID="729966765">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_enemyBeefy_aggro" ID="{18076495-12F0-41C8-A118-79D4EC0818F6}" WorkUnitID="{A08D4457-7BA1-4095-B157-374E936304F0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_sfx_enemyBeefy_alert" ID="{F855C311-EB1A-45A3-8504-4460F2E4E8B4}">
+							<ChildrenList>
+								<Action Name="" ID="{BB4E3C68-B99F-49F6-8412-CBEC3E75848E}" ShortID="692218317">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_enemyBeefy_alert" ID="{DC072BE3-2924-4D85-95AD-64A0A82BB04D}" WorkUnitID="{A08D4457-7BA1-4095-B157-374E936304F0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_sfx_enemyBeefy_startAttack" ID="{0AAA5295-E626-4ABA-BE63-E7E6C53C1EE5}">
+							<ChildrenList>
+								<Action Name="" ID="{788CC92F-2198-4524-A470-14B1145DEEC3}" ShortID="623904289">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_enemyBeefy_startAttack" ID="{DEB84FB6-582A-4441-91D1-F467AC5206F6}" WorkUnitID="{A08D4457-7BA1-4095-B157-374E936304F0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_sfx_enemyBeefy_endAttack" ID="{31F4F8EC-A510-4938-995A-0E3C2BC472C7}">
+							<ChildrenList>
+								<Action Name="" ID="{07AF2627-AE06-42B6-BB5B-D7F9F9E29303}" ShortID="408882621">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_enemyBeefy_endAttack" ID="{3921035A-A3FD-44BC-9663-D1D7D93C437C}" WorkUnitID="{A08D4457-7BA1-4095-B157-374E936304F0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BB5AE125-F4AB-42AF-881A-2DF17C2973C6}" ShortID="16597020">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_enemyBeefy_endAttackImpact" ID="{86EE2A02-3D2B-4203-9EA6-7B2E3513DFD0}" WorkUnitID="{A08D4457-7BA1-4095-B157-374E936304F0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_sfx_enemyBeefy_death" ID="{E0809B1C-449E-4D04-9CFB-CD4142BF2F04}">
+							<ChildrenList>
+								<Action Name="" ID="{8A3A12F8-3087-4FEC-B400-BA208A2237AE}" ShortID="976879301">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_enemyBeefy_death" ID="{446D9475-4382-4389-AC9F-1D71262E1729}" WorkUnitID="{A08D4457-7BA1-4095-B157-374E936304F0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_sfx_enemyBeefy_footsteps" ID="{AA0145F3-BAE7-4E23-A7D3-021531365BCE}">
+							<ChildrenList>
+								<Action Name="" ID="{4236D72E-B9DE-4803-B1C4-19E224907DF3}" ShortID="943728253">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_enemyBeefy_footsteps" ID="{7ABB203A-2E00-40C4-B013-7DF0FCF45E3E}" WorkUnitID="{A08D4457-7BA1-4095-B157-374E936304F0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Play_sfx_player" ID="{2D01A28C-DC18-4225-9636-E63795E3B196}" ShortID="23173771">
+					<ChildrenList>
+						<Event Name="Play_sfx_player_footsteps" ID="{437E4677-E6C1-4769-9E2E-A70E591B3A34}">
+							<ChildrenList>
+								<Action Name="" ID="{9639C318-CDEF-4CC1-A3A4-B92C2B9CDBAA}" ShortID="261347406">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_player_footsteps" ID="{CB865DB1-42D5-4C0E-9803-4B0CF58BA3DE}" WorkUnitID="{A08D4457-7BA1-4095-B157-374E936304F0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Play_sfx_enemyGuitar" ID="{0BBC2582-7E12-4F81-AB17-1D48C6BF5224}" ShortID="359654096">
+					<ChildrenList>
+						<Event Name="Play_sfx_enemyGuitar_aggro" ID="{F3809DC0-5347-4772-BCBC-7B6815E11624}">
+							<ChildrenList>
+								<Action Name="" ID="{D9BA77E7-D430-45E3-8FF5-BCA6CD1A0208}" ShortID="1022222901">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_enemyGuitar_aggro" ID="{4CA690AD-1709-4C5B-9FCB-A020353414AB}" WorkUnitID="{A08D4457-7BA1-4095-B157-374E936304F0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_sfx_enemyGuitar_attack" ID="{4E01B30A-3754-47BA-AE8D-68850C14796E}">
+							<ChildrenList>
+								<Action Name="" ID="{CDD70207-3E3E-4CC7-87CF-6B7B64BC4DD3}" ShortID="147604493">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_enemyGuitar_attack" ID="{0721780B-1FFC-4D5B-9727-E07A523E4C9E}" WorkUnitID="{A08D4457-7BA1-4095-B157-374E936304F0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_sfx_enemyGuitar_alert" ID="{86EF2D82-50DE-40ED-A8C4-0503C910FFDC}">
+							<ChildrenList>
+								<Action Name="" ID="{B23AA8B3-C438-43A0-AD7F-E71896851C06}" ShortID="1063515736">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_enemyGuitar_alert" ID="{E76CBEE7-23E2-416D-85E4-205203CD7281}" WorkUnitID="{A08D4457-7BA1-4095-B157-374E936304F0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_sfx_enemyGuitar_death" ID="{6E654EAB-B8D8-4024-AD77-A9F5AEF87A65}">
+							<ChildrenList>
+								<Action Name="" ID="{D5BBA6C8-0DF0-4851-92C2-535CC7505A51}" ShortID="362034946">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_enemyGuitar_death" ID="{3DFEFE69-7924-4E56-9ABE-E981DFF666AF}" WorkUnitID="{A08D4457-7BA1-4095-B157-374E936304F0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

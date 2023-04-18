@@ -21,8 +21,8 @@ public class GameManager : MonoBehaviour
     private bool inCombat = false;
     public bool playerInput = false;
     public bool isGameOver = false;
-    
-    // wwise
+
+    // wwise event variable declaration
     public AK.Wwise.Event pauseSFX;
     public AK.Wwise.Event unpSFX;
     public AK.Wwise.Event playpauseMUS;
@@ -32,7 +32,8 @@ public class GameManager : MonoBehaviour
     public AK.Wwise.Event playAaaMus;
     public AK.Wwise.Event muteAaaMus;
     public AK.Wwise.Event unmAaaMus;
-
+    public AK.Wwise.Event stopAaaMus;
+    public AK.Wwise.Event stoppauseMUS;
 
     // object references
     public UIManager uiManager;
@@ -64,6 +65,9 @@ public class GameManager : MonoBehaviour
 
     private bool isRestart;
 
+    [SerializeField]
+    private GameObject progressTrackerObj;
+
     void Start()
     {
         uiManager = gameObject.GetComponent<UIManager>();
@@ -75,6 +79,8 @@ public class GameManager : MonoBehaviour
             isRestart = progressTracker.GetComponent<ProgressTracker>().isRestart;
         }
         else {
+            GameObject trackerObj = GameObject.Instantiate(progressTrackerObj);
+            trackerObj.name = "ProgressTracker";
             isRestart = false;
         }
 
@@ -83,6 +89,10 @@ public class GameManager : MonoBehaviour
         AkSoundEngine.SetState("Gameplay_State", "Combat");
         playAaaMus.Post(gameObject);
         StartCoroutine(StartLevel());
+    }
+
+    void Awake() {
+        GameObject.Find("FadeInOut").GetComponent<Animator>().SetTrigger("FadeIn");
     }
 
     IEnumerator StartLevel() {
@@ -108,6 +118,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void StartCombat() {
+        print("starting combat");
         Time.timeScale = 1;
         state = GameState.Combat;
         playerInput = true;
@@ -136,7 +147,9 @@ public class GameManager : MonoBehaviour
         if (state == GameState.Combat && GameObject.FindGameObjectsWithTag("Enemy").Length < minEnemyNumber)
         {
             SpawnRandomEnemy();
-        }
+        }     
+
+        
     }
 
     IEnumerator LoadNextScene() {
@@ -144,6 +157,8 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(1.5f);
         if (isGameWon) {
             GameObject.Find("ProgressTracker").GetComponent<ProgressTracker>().isRestart = false;
+            stopAaaMus.Post(gameObject);
+            stoppauseMUS.Post(gameObject);
             SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
         }
         else {
@@ -161,7 +176,6 @@ public class GameManager : MonoBehaviour
             pauseSFX.Post(gameObject);
             unmpauseMUS.Post(gameObject);
             muteAaaMus.Post(gameObject);
-
             uiManager.ShowPauseMenu();
             isPaused = true;
             Time.timeScale = 0;
@@ -182,6 +196,7 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator GameOverWin()
     {
+        print("gameOverWin");
         isGameOver = true;
         isGameWon = true;
         AkSoundEngine.SetState("Gameplay_State", "Victory");
@@ -195,6 +210,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator GameOverLose()
     {
         isGameOver = true;
+        stopAaaMus.Post(gameObject);
         stopCombatEvent.Invoke();
         yield return new WaitForSeconds(3f);
         uiManager.GameOverLose();
@@ -205,6 +221,7 @@ public class GameManager : MonoBehaviour
     void ShowLoseMenu() {
         print("show lose menu");
         jumbotron.state = JumbotronState.Disabled;
+        stopAaaMus.Post(gameObject);
         uiManager.ShowLoseMenu();
         isPaused = true;
         Time.timeScale = 0;

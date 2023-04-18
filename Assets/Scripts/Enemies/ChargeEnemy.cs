@@ -43,7 +43,7 @@ public class ChargeEnemy : Enemy
                 {   
                     attackCoroutine = StartCoroutine(Attack(currentAttack));
                     agent.ResetPath();
-
+                
                     particleSystem.Play();
 
                     StartCoroutine(WaitForSecondsAndPlayParticles(0.5f, BackParticleSystem));
@@ -62,7 +62,6 @@ public class ChargeEnemy : Enemy
                 break;
             case EnemyState.Active:
                 TestBehaviors.MoveForward(gameObject, chargeSpeed);
-                
                 break;
         }
     }

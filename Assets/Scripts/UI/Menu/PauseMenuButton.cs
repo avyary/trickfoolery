@@ -22,6 +22,9 @@ public class PauseMenuButton : MonoBehaviour
         GameObject.Find("ProgressTracker").GetComponent<ProgressTracker>().isRestart = false;
         yield return new WaitForSecondsRealtime(1.5f);
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        /// posting the wwise events to stop the pause and level music before it goes over to the main menu
+        gameManager.stopAaaMus.Post(gameObject);
+        gameManager.stoppauseMUS.Post(gameObject);
     }
 
     public void ClosePauseMenu() {

@@ -24107,7 +24107,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5650856563678766989}
-  m_Layer: 0
+  - component: {fileID: 4114859296379414817}
+  m_Layer: 9
   m_Name: Single Disco FLoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24134,6 +24135,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4114859296379414817
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5650856563678766986}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 17.742512, y: 1, z: 16.180887}
+  m_Center: {x: -4.7964244, y: 0, z: 4.6794667}
 --- !u!1 &5762095361192144094
 GameObject:
   m_ObjectHideFlags: 0

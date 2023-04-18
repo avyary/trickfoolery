@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F9ADAA8B-EDC8-4534-A187-A91190A7F211}" SchemaVersion="110">
+	<Events>
+		<WorkUnit Name="avy music events" ID="{F9ADAA8B-EDC8-4534-A187-A91190A7F211}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_level_one_music" ID="{48C4AABD-1063-4975-B341-E33A36C8D11E}">
+					<ChildrenList>
+						<Action Name="" ID="{2BCB7FA8-5A89-42A6-BDC6-EEE28BFE5159}" ShortID="360767962">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="level_one_130bpm" ID="{597DDCB5-2349-48D9-844D-195057727C10}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Mute_level_one_music" ID="{823A7C47-E873-4E6A-8369-CD967AE34C0D}">
+					<ChildrenList>
+						<Action Name="" ID="{B876D09B-215F-4489-B67E-8432D54B593B}" ShortID="192362428">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="level_one_130bpm" ID="{597DDCB5-2349-48D9-844D-195057727C10}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Unmute_level_one_music" ID="{7925FB30-A253-49C3-B6A7-086FC10B259E}">
+					<ChildrenList>
+						<Action Name="" ID="{48664F47-2440-4EAD-BD03-EC6C1EA85039}" ShortID="698046799">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="level_one_130bpm" ID="{597DDCB5-2349-48D9-844D-195057727C10}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_level_one_music" ID="{06A5EF20-2029-49A4-A054-D2D28F4F9124}">
+					<ChildrenList>
+						<Action Name="" ID="{4FFF38F0-C85D-4E2D-A956-21484CBAD3F8}" ShortID="1014769708">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="level_one_130bpm" ID="{597DDCB5-2349-48D9-844D-195057727C10}" WorkUnitID="{212F0C7F-7BB0-4535-95D1-CE2A9FAEA204}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
