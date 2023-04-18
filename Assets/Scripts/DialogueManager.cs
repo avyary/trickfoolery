@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -57,15 +58,9 @@ public class DialogueManager : MonoBehaviour
         dialogueUI.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            StartDialogueScene("testScene");
-        }
-
-        if (sceneIsActive && !gameManager.isPaused && !inDelay && Input.GetButtonDown("Confirm")) {
+    public void OnConfirm() {
+        print("onconfirm");
+        if (sceneIsActive && !gameManager.isPaused && !inDelay) {
             StartCoroutine(ProgressScene());
         }
     }

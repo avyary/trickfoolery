@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// Logic for basic game movement and dash mechanic.
@@ -127,64 +128,39 @@ public class PlayerMovement : MonoBehaviour
         gameManager.stopCombatEvent.AddListener(OnBecomePassive);
     }
 
+    public void OnDodge(InputValue value) {
+        if (gameManager.playerInput) {
+            StartCoroutine(Dash());
+            DashParticle.Play();
+            StartCoroutine(WaitForSecondsAndStopParticles(0.1f, DashParticle));
+        }
+
+    }
+
+    public void OnTaunt(InputValue value) {
+        if (gameManager.playerInput && tauntCdTimer <= 0) {
+                tauntCoroutine = StartCoroutine(InitiateTaunt());
+        }
+
+    }
+
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {
-            StartCoroutine(Die());
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2)) {
-            TakeHit(10);
-        }
-        if (state == AbilityState.dead) {
-            return;
-        }
-
-
-        // if (gameManager.state == GameState.Combat) {
         if (gameManager.playerInput) {
-            //Calculate Inputs for player movement
-            _playerInputVertical = Input.GetAxisRaw("Vertical");
-            _playerInputHorizontal = Input.GetAxisRaw("Horizontal");
-            _movementDirection = camForward * _playerInputVertical + camRight * _playerInputHorizontal;
-            _movementDirection.Normalize();
-
-            if (_movementDirection != Vector3.zero)
-            {
-                tomAnimator.SetBool("isRunning", true);
-                if (state == AbilityState.walking) {
-                    transform.forward = _movementDirection;
-                }
-            }
-            else {
-                tomAnimator.SetBool("isRunning", false);
-            }
-        
-
-            if (Input.GetButtonDown("Dash") && dashCdTimer <= 0)
-            {
-                StartCoroutine(Dash());
-                DashParticle.Play();
-                StartCoroutine(WaitForSecondsAndStopParticles(0.1f, DashParticle));
-            }
-
-            if (Input.GetButtonDown("Taunt") && tauntCdTimer <= 0)
-            {
-                tauntCoroutine = StartCoroutine(InitiateTaunt());
-            }
-
-                //Process the cooldown timer for dashing
-                if (dashCdTimer > 0)
+            if (dashCdTimer > 0) {
                 dashCdTimer -= Time.deltaTime;
-            if (tauntCdTimer > 0)
+            }
+            if (tauntCdTimer > 0) {
                 tauntCdTimer -= Time.deltaTime;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.T)) {
+            TakeHit(100);
         }
 
         ApplyGravity();
     }
-
- 
 
     private void FixedUpdate()
     {
@@ -330,6 +306,22 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(time);
         tomRender.material = originalMat;
         isInvincible = false;
+    }
+
+    public void OnMove(InputValue value) {
+        if (gameManager.playerInput) {
+            Vector2 input = value.Get<Vector2>();
+            _movementDirection = camForward * input.y + camRight * input.x;
+            if (input == Vector2.zero) {
+                tomAnimator.SetBool("isRunning", false);
+                return;
+            }
+            if (state == AbilityState.walking) {
+                tomAnimator.SetBool("isRunning", true);
+                // camForward * _playerInputVertical + camRight * _playerInputHorizontal;
+                transform.forward = _movementDirection;
+            }
+        }
     }
 
     IEnumerator ChangeMaterial(Material newMat, float time = 0)

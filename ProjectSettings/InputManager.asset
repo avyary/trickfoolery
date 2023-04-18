@@ -83,7 +83,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 0
-    axis: 8
+    axis: 7
     joyNum: 0
   - serializedVersion: 3
     m_Name: Escape

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public enum GameState {
     Tutorial,
@@ -134,22 +135,19 @@ public class GameManager : MonoBehaviour
         playerInput = false;
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Y)) {
-            print("GAME STATE: " + state + "\nisPaused: " + isPaused + " | jumbotron state: " + jumbotron.state + " | timeScale: " + Time.timeScale);
-        }
-        // if jumbotron is disabled, cannot pause
-        if (Input.GetButtonDown("Escape") && jumbotron.state != JumbotronState.Disabled)
+    public void OnPause() {
+        if (jumbotron.state != JumbotronState.Disabled)
         {
             TogglePause();
         }
+    }
+
+    void Update()
+    {
         if (state == GameState.Combat && GameObject.FindGameObjectsWithTag("Enemy").Length < minEnemyNumber)
         {
             SpawnRandomEnemy();
         }     
-
-        
     }
 
     IEnumerator LoadNextScene() {

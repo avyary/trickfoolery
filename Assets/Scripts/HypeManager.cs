@@ -62,9 +62,6 @@ public class HypeManager : MonoBehaviour
         if (!gameManager.isGameOver) {
             UpdateHype((-1 * Time.deltaTime * decaySpeed) + currentHype);
         }
-        if (Input.GetKeyDown(KeyCode.H)) {
-            UpdateHype(500f);
-        }
         AkSoundEngine.SetRTPCValue("Hype", hypePercent);
         if (hypePercent < 25) {
            AkSoundEngine.SetState("hype", "hype_0");

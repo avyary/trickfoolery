@@ -20,6 +20,7 @@ public class PauseMenuManager : MonoBehaviour
     {
         isActive = false;
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        CloseMenu();
     }
 
     public void InitMenu() {

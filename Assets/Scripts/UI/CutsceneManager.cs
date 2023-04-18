@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
@@ -25,10 +26,6 @@ public class CutsceneManager : MonoBehaviour
     private TextMeshProUGUI caption;
     private TextMeshProUGUI sizeCalc;
 
-
-    public AK.Wwise.Event playCutsceneSelectSFX;
-    public AK.Wwise.Event playCutsceneMUS;
-
     public int pageIdx;
     private Cutscene cutscene;
     private Page currentPage;
@@ -43,11 +40,9 @@ public class CutsceneManager : MonoBehaviour
     [SerializeField]
     private UnityEvent CheckForTrigger;
 
-
     // Start is called before the first frame update
     void Start()
     {
-        AkSoundEngine.SetState("Cutscenes", "Op");
         image = _imageObj.GetComponent<Image>();
         caption = _captionObj.GetComponent<TextMeshProUGUI>();
         sizeCalc = _sizeCalcObj.GetComponent<TextMeshProUGUI>();
@@ -66,7 +61,6 @@ public class CutsceneManager : MonoBehaviour
 
     IEnumerator StartCutscene() {
         currentPage = cutscene.pages[0];
-        playCutsceneMUS.Post(gameObject);
         if (currentPage.image is null) {
             image.sprite = Resources.Load<Sprite>("Cutscenes/Images/black"); 
         }
@@ -79,6 +73,7 @@ public class CutsceneManager : MonoBehaviour
     }
 
     public void UpdatePage() {
+        print(pageIdx + "/" + cutscene.pages.Length);
         if (pageIdx == cutscene.pages.Length) {
             StartCoroutine(DelayLoad());
         }
@@ -119,23 +114,16 @@ public class CutsceneManager : MonoBehaviour
         continueArrow.SetActive(true);
 	}
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetButtonDown("Confirm")) {
-            if (pageComplete) {
-                pageIdx++;
-                playCutsceneSelectSFX.Post(gameObject);
-                UpdatePage();
-            }
-            else {
-                StartCoroutine(RapidFillText());
-            }
+    public void OnConfirm() {
+        print("onconfirm!");
+        if (pageComplete) {
+            pageIdx++;
+            UpdatePage();
+        }
+        else {
+            StartCoroutine(RapidFillText());
         }
 
-        if (pageIdx == 3) {
-            AkSoundEngine.SetState("Cutscenes", "Op_Ending");
-        }
     }
 
     IEnumerator RapidFillText() {
