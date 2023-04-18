@@ -36,6 +36,8 @@ public class TauntEnemy : Enemy
     private bool attacking = false;
     private bool isTracking = false;
 
+    //wwise
+    public AK.Wwise.Event beefyBoyDashSFX;
 
     private bool isRunning;
     private bool isAttacking;
@@ -58,6 +60,7 @@ public class TauntEnemy : Enemy
         amc.doneRolling = false;
         current_teleport_strength = strength;
         animator.SetTrigger("Roll");
+        beefyBoyDashSFX.Post(gameObject);
         StartCoroutine(WaitForSecondsAndStopTeleportAnim(0.5f));
         float startTime = Time.time;
 

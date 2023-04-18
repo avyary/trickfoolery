@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{1FF085F7-C962-5ACC-198E-5596AC1A7B8C}">
+		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{E24F4FE0-C551-AC8E-1EFA-02488E6F6638}">
 			<ShortName>sfx</ShortName>
 			<Path>sfx.bnk</Path>
 			<Media>
@@ -85,6 +85,10 @@
 					<ShortName>sfx_enemyBeefy_footstepsDisco_5.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_footstepsDisco_5_3F75BDB9.wem</CachePath>
 				</File>
+				<File Id="251763823" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_taunt_enemy_dash_1.wav</ShortName>
+					<CachePath>SFX/sfx_taunt_enemy_dash_1_3F75BDB9.wem</CachePath>
+				</File>
 				<File Id="258285539" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_enemyBeefy_footstepsConcrete_6.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_footstepsConcrete_6_3F75BDB9.wem</CachePath>
@@ -153,6 +157,10 @@
 					<ShortName>sfx_enemyBeefy_footstepsConcrete_2.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_footstepsConcrete_2_3F75BDB9.wem</CachePath>
 				</File>
+				<File Id="524094919" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_taunt_enemy_dash_3.wav</ShortName>
+					<CachePath>SFX/sfx_taunt_enemy_dash_3_3F75BDB9.wem</CachePath>
+				</File>
 				<File Id="531369014" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_enemyBeefy_footstepsGrassy_5.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_footstepsGrassy_5_3F75BDB9.wem</CachePath>
@@ -192,6 +200,10 @@
 				<File Id="737643451" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_enemyBeefy_footstepsDisco_4.wav</ShortName>
 					<CachePath>SFX/sfx_enemyBeefy_footstepsDisco_4_3F75BDB9.wem</CachePath>
+				</File>
+				<File Id="764608493" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_taunt_enemy_dash_2.wav</ShortName>
+					<CachePath>SFX/sfx_taunt_enemy_dash_2_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="776970318" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_enemyGuitar_death_totallyNotRadical.wav</ShortName>
@@ -291,6 +303,13 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="3983343057" Name="Play_sfx_beefy_boy_dash">
+					<MediaRefs>
+						<MediaRef Id="251763823"/>
+						<MediaRef Id="524094919"/>
+						<MediaRef Id="764608493"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="504043942" Name="Play_sfx_enemyBeefy_aggro">
 					<MediaRefs>
 						<MediaRef Id="166319512"/>
@@ -601,7 +620,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{88E50EA5-303B-B62E-9330-B02C476F96E5}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{F533D574-57C7-CF88-FDBC-AC87E406ED1E}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -648,6 +667,10 @@
 				<File Id="224255706" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_Pause_loop_75bpm.wav</ShortName>
 					<CachePath>SFX/mus_Pause_loop_75bpm_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="251763823" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_taunt_enemy_dash_1.wav</ShortName>
+					<CachePath>SFX/sfx_taunt_enemy_dash_1_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="275378158" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_charger_death_1.wav</ShortName>
@@ -729,6 +752,10 @@
 					<ShortName>sfx_charger_death_2.wav</ShortName>
 					<CachePath>SFX/sfx_charger_death_2_3F75BDB9.wem</CachePath>
 				</File>
+				<File Id="524094919" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_taunt_enemy_dash_3.wav</ShortName>
+					<CachePath>SFX/sfx_taunt_enemy_dash_3_3F75BDB9.wem</CachePath>
+				</File>
 				<File Id="536532914" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AAA_sax_5.wav</ShortName>
 					<CachePath>SFX/AAA_sax_5_9EDFC787.wem</CachePath>
@@ -780,6 +807,10 @@
 				<File Id="753217888" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mus_Alien_Arena_Kill!_trumpets.wav</ShortName>
 					<CachePath>SFX/mus_Alien_Arena_Kill!_trumpets_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="764608493" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_taunt_enemy_dash_2.wav</ShortName>
+					<CachePath>SFX/sfx_taunt_enemy_dash_2_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="780761335" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_tom_step_10.wav</ShortName>
@@ -936,6 +967,13 @@
 						<MediaRef Id="1033023117"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3983343057" Name="Play_sfx_beefy_boy_dash">
+					<MediaRefs>
+						<MediaRef Id="251763823"/>
+						<MediaRef Id="524094919"/>
+						<MediaRef Id="764608493"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="843029991" Name="Play_sfx_charger_death">
 					<MediaRefs>
 						<MediaRef Id="275378158"/>
@@ -1046,5 +1084,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F6971DC8-8D60-C979-4CC4-519C1B980CDD}</FileHash>
+	<FileHash>{12246064-97BA-9125-711B-72A320E0B965}</FileHash>
 </SoundBanksInfo>

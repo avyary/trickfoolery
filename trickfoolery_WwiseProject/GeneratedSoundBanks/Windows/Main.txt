@@ -24,6 +24,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3683043420	Play_sfx_pause			\Default Work Unit\Play_sfx_pause	
 	3756680375	Mute_mus_pause_75bpm			\Default Work Unit\Mute_mus_pause_75bpm	
 	3892471342	Play_mus_fool_trickery_93bpm			\Default Work Unit\Play_mus_fool_trickery_93bpm	
+	3983343057	Play_sfx_beefy_boy_dash			\Default Work Unit\Play_sfx_beefy_boy_dash	
 	4077681152	Play_sfx_player_dash			\Default Work Unit\Play_sfx_player_dash	
 	4152903754	Unmute_mus_pause_75bpm			\Default Work Unit\Unmute_mus_pause_75bpm	
 
@@ -55,6 +56,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	145105292	Solos	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\AAA_sax_3_9EDFC787.wem		\Interactive Music Hierarchy\Default Work Unit\Alien Arena Normal and Victory\Alien Arena Assault\Alien Arena\Solos		686403
 	217413579	Solos	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\AAA_sax_10_9EDFC787.wem		\Interactive Music Hierarchy\Default Work Unit\Alien Arena Normal and Victory\Alien Arena Assault\Alien Arena\Solos		652538
 	224255706	mus_Pause_loop_75bpm	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\mus_Pause_loop_75bpm_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\mus_Pause_loop_75bpm		1053077
+	251763823	sfx_taunt_enemy_dash_1	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_taunt_enemy_dash_1_3F75BDB9.wem		\Actor-Mixer Hierarchy\avy sfx\sfx_enemyBeefy\sfx_enemyBeefy_dash\sfx_taunt_enemy_dash_1		14041
 	275378158	sfx_charger_death_1	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_charger_death_1_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_charger_death\sfx_charger_death_1		29231
 	292366327	sfx_charger_aggro_increase_3	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_charger_aggro_increase_3_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_charger_anger\sfx_charger_aggro_increase_3		20530
 	305122859	sfx_taunts_hey_lobster_roll_1	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_taunts_hey_lobster_roll_1_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_taunt\sfx_taunts_hey_lobster_roll_1		20231
@@ -75,6 +77,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	481270644	Solos	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\AAA_sax_7_9EDFC787.wem		\Interactive Music Hierarchy\Default Work Unit\Alien Arena Normal and Victory\Alien Arena Assault\Alien Arena\Solos		679742
 	484621152	sfx_taunts_raspberry_3	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_taunts_raspberry_3_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_taunt\sfx_taunts_raspberry_3		20973
 	507762272	sfx_charger_death_2	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_charger_death_2_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_charger_death\sfx_charger_death_2		21897
+	524094919	sfx_taunt_enemy_dash_3	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_taunt_enemy_dash_3_3F75BDB9.wem		\Actor-Mixer Hierarchy\avy sfx\sfx_enemyBeefy\sfx_enemyBeefy_dash\sfx_taunt_enemy_dash_3		14054
 	536532914	Solos	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\AAA_sax_5_9EDFC787.wem		\Interactive Music Hierarchy\Default Work Unit\Alien Arena Normal and Victory\Alien Arena Assault\Alien Arena\Solos		704355
 	563811625	FoolTrickery_bpm93_loop	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\FoolTrickery_bpm93_loop_9EDFC787.wem		\Interactive Music Hierarchy\Default Work Unit\Fool Trickery 93bpm\FoolTrickery\FoolTrickery_bpm93_loop\FoolTrickery_bpm93_loop		617133
 	582855424	sfx_taunts_hey_stupid_1	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_taunts_hey_stupid_1_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_taunt\sfx_taunts_hey_stupid_1		26832
@@ -88,6 +91,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	673051370	sfx_select	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_mouse_select_larose_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_select		20205
 	691049765	sfx_taunts_hey_stupid_2	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_taunts_hey_stupid_2_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_taunt\sfx_taunts_hey_stupid_2		21384
 	753217888	mus_Alien_Arena_Kill!_trumpets	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\mus_Alien_Arena_Kill!_trumpets_9EDFC787.wem		\Interactive Music Hierarchy\Default Work Unit\Alien Arena Normal and Victory\Alien Arena Assault\Alien Arena\mus_Alien_Arena_Kill!_trumpets		32493
+	764608493	sfx_taunt_enemy_dash_2	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_taunt_enemy_dash_2_3F75BDB9.wem		\Actor-Mixer Hierarchy\avy sfx\sfx_enemyBeefy\sfx_enemyBeefy_dash\sfx_taunt_enemy_dash_2		14492
 	780761335	sfx_tom_step_10	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_tom_step_10_D131EA99.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_tom_footsteps\sfx_tom_step_10		5432
 	780987649	sfx_taunts_akanbe_1	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_taunts_akanbe_1_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_taunt\sfx_taunts_akanbe_1		26730
 	788983524	sfx_taunts_you_scared_1	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_taunts_you_scared_1_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx_player_taunt\sfx_taunts_you_scared_1		26402

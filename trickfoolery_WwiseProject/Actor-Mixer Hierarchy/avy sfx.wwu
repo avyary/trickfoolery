@@ -7,14 +7,15 @@
 					<ChildrenList>
 						<RandomSequenceContainer Name="sfx_enemyBeefy_aggro" ID="{18076495-12F0-41C8-A118-79D4EC0818F6}" ShortID="81639286">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{97965C37-0A83-4EAC-B4DD-B64113304205}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="1000"/>
-													<Property Name="Min" Type="Real64" Value="-500"/>
+													<Property Name="Max" Type="Real64" Value="293"/>
+													<Property Name="Min" Type="Real64" Value="-45"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
@@ -22,6 +23,9 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Enemy" ID="{FBED6322-1EB2-4638-83EA-98AEEA2FEDB4}" WorkUnitID="{B0B6041B-512A-4914-8402-7F92837AC4E5}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="SFX" ID="{89076090-68F9-48E3-8BDD-D46626A6EE56}" WorkUnitID="{68642DC0-40AE-4545-8EAC-6407BA350260}"/>
 								</Reference>
@@ -215,6 +219,7 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="sfx_enemyBeefy_death" ID="{446D9475-4382-4389-AC9F-1D71262E1729}" ShortID="657192471">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -228,8 +233,16 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Enemy" ID="{FBED6322-1EB2-4638-83EA-98AEEA2FEDB4}" WorkUnitID="{B0B6041B-512A-4914-8402-7F92837AC4E5}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="SFX" ID="{89076090-68F9-48E3-8BDD-D46626A6EE56}" WorkUnitID="{68642DC0-40AE-4545-8EAC-6407BA350260}"/>
 								</Reference>
@@ -308,6 +321,7 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="sfx_enemyBeefy_startAttack" ID="{DEB84FB6-582A-4441-91D1-F467AC5206F6}" ShortID="103198819">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -323,6 +337,9 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Enemy" ID="{FBED6322-1EB2-4638-83EA-98AEEA2FEDB4}" WorkUnitID="{B0B6041B-512A-4914-8402-7F92837AC4E5}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="SFX" ID="{89076090-68F9-48E3-8BDD-D46626A6EE56}" WorkUnitID="{68642DC0-40AE-4545-8EAC-6407BA350260}"/>
 								</Reference>
@@ -1174,6 +1191,142 @@
 								<ActiveSource Name="sfx_enemyBeefy_endAttackImpact" ID="{66A27E65-5F80-4B6C-9978-009F21095FA8}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="sfx_enemyBeefy_dash" ID="{92F6D997-C2BC-4E36-98F9-8804F6F05FCF}" ShortID="8114525">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{960F78C5-651F-4E28-8FBC-D11DC4A43EBB}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="429"/>
+													<Property Name="Min" Type="Real64" Value="-404"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Enemy" ID="{FBED6322-1EB2-4638-83EA-98AEEA2FEDB4}" WorkUnitID="{B0B6041B-512A-4914-8402-7F92837AC4E5}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="sfx_taunt_enemy_dash_1" ID="{4E1A4423-3D26-4992-8CB7-905AD40182A2}" ShortID="952051639">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>16</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_taunt_enemy_dash_1" ID="{DE676FA4-432F-453F-ADE1-92CE4133881B}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_taunt_enemy_dash_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="251763823"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_taunt_enemy_dash_1" ID="{DE676FA4-432F-453F-ADE1-92CE4133881B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_taunt_enemy_dash_2" ID="{61FC1B97-BCB7-4168-ADE1-37A02DE55272}" ShortID="260885129">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>31</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_taunt_enemy_dash_2" ID="{4A8D5116-E2CF-41D0-ABC4-F18BE1F7727A}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_taunt_enemy_dash_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="764608493"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_taunt_enemy_dash_2" ID="{4A8D5116-E2CF-41D0-ABC4-F18BE1F7727A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_taunt_enemy_dash_3" ID="{3CE83641-61D7-4E94-AB77-DBD4FBF1442D}" ShortID="862024896">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>17</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_taunt_enemy_dash_3" ID="{6A1B1641-944D-4D89-85AE-F8EA9FA85EB5}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_taunt_enemy_dash_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="524094919"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_taunt_enemy_dash_3" ID="{6A1B1641-944D-4D89-85AE-F8EA9FA85EB5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{EA3443B2-F162-4037-A645-63DC630517D2}"/>
+							</PositioningInfo>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="sfx_player" ID="{2847B478-4EBB-4225-A706-AA198ABB0253}" ShortID="989002812">

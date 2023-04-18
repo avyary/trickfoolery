@@ -7,6 +7,12 @@ public class TauntAnimationController : MonoBehaviour
     public bool doneRolling;
     public bool doneAttacking;
 
+    [SerializeField] private AnimationClip tauntAttack;
+    [SerializeField] private Animator animator;
+
+    [SerializeField]
+    private TauntEnemySounds tauntEnemySounds;
+
     public GameObject enemy;
     // Start is called before the first frame update
     void Start()
@@ -18,7 +24,19 @@ public class TauntAnimationController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    private void StartAttackANIM()
+    {
+        tauntEnemySounds.StartAttackSFX();
+        Debug.Log("startattack");
+    }
+
+    private void FinishAttackANIM()
+    {
+        tauntEnemySounds.FinishAttackSFX();
+        Debug.Log("finishattack");
     }
 
     public void FinishRolling()

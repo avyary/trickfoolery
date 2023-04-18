@@ -31,6 +31,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_sfx_player" ID="{2D01A28C-DC18-4225-9636-E63795E3B196}" WorkUnitID="{DEF5BEE4-603A-4331-AC95-68C3F0C086AA}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_enemyBeefy" ID="{4F835BE5-F150-4C2C-92FD-53370B2A60C1}" WorkUnitID="{DEF5BEE4-603A-4331-AC95-68C3F0C086AA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_sfx_beefy_boy_dash" ID="{E4311F88-1DB9-4DA2-87A9-03079F4AC4E5}" WorkUnitID="{295D20A7-69A3-4172-BF5E-BF00E33887A1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_sfx_enemyGuitar" ID="{0BBC2582-7E12-4F81-AB17-1D48C6BF5224}" WorkUnitID="{DEF5BEE4-603A-4331-AC95-68C3F0C086AA}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
