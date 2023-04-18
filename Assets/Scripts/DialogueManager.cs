@@ -58,7 +58,8 @@ public class DialogueManager : MonoBehaviour
         dialogueUI.SetActive(false);
     }
 
-    public void OnConfirm(InputValue value) {
+    public void OnConfirm() {
+        print("onconfirm");
         if (sceneIsActive && !gameManager.isPaused && !inDelay) {
             StartCoroutine(ProgressScene());
         }

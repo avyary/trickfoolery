@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class CutsceneManager : MonoBehaviour
@@ -73,6 +73,7 @@ public class CutsceneManager : MonoBehaviour
     }
 
     public void UpdatePage() {
+        print(pageIdx + "/" + cutscene.pages.Length);
         if (pageIdx == cutscene.pages.Length) {
             StartCoroutine(DelayLoad());
         }
@@ -114,6 +115,7 @@ public class CutsceneManager : MonoBehaviour
 	}
 
     public void OnConfirm() {
+        print("onconfirm!");
         if (pageComplete) {
             pageIdx++;
             UpdatePage();
@@ -121,6 +123,7 @@ public class CutsceneManager : MonoBehaviour
         else {
             StartCoroutine(RapidFillText());
         }
+
     }
 
     IEnumerator RapidFillText() {
