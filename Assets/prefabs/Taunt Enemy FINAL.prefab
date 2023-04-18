@@ -5221,7 +5221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _AngyInd: {fileID: 0}
   _AlertInd: {fileID: 3352619773958423671}
-  _maxHealth: 100
+  _maxHealth: 1
   _moveSpeed: 0.01
   _maxAnger: 1
   _basicAttack: {fileID: 3155584921168346151}
@@ -10738,7 +10738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2083083068221930849, guid: 6e722841c3bdede40b6898c4fe63041e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.64
+      value: 1.82
       objectReference: {fileID: 0}
     - target: {fileID: 2083083068221930849, guid: 6e722841c3bdede40b6898c4fe63041e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
