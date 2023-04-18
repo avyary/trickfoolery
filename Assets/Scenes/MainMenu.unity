@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.4964124, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -842,6 +842,10 @@ PrefabInstance:
       propertyPath: sceneName
       value: OpeningCutscene
       objectReference: {fileID: 0}
+    - target: {fileID: 1189042751039192917, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+      propertyPath: stopTrickfooleryMUS.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: f954035a18deeac459262e528d0e133e, type: 2}
     - target: {fileID: 1189042751039192918, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
       propertyPath: data.WwiseObjectReference
       value: 
@@ -938,7 +942,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayButton
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1189042751039192912, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
+    - {fileID: 1189042751039192918, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5f8af14d5034e664d99f4b4cc2f117fc, type: 3}
 --- !u!224 &1318087954 stripped
 RectTransform:

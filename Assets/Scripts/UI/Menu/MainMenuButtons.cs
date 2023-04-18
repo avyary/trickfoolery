@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuButtons : MonoBehaviour
 {
     public AK.Wwise.Event confirmSFX;
+    public AK.Wwise.Event stopTrickfooleryMUS;
     [SerializeField]
     private string sceneName;
     [SerializeField]
@@ -20,6 +21,7 @@ public class MainMenuButtons : MonoBehaviour
 
     public void LoadLevel() {
         menuManager.buttonSelected = true;
+        stopTrickfooleryMUS.Post(gameObject);
         confirmSFX.Post(gameObject);
         StartCoroutine(DelayLoad());
     }

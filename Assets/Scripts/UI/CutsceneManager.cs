@@ -133,7 +133,7 @@ public class CutsceneManager : MonoBehaviour
             }
         }
 
-        if (pageIdx == 4) {
+        if (pageIdx == 3) {
             AkSoundEngine.SetState("Cutscenes", "Op_Ending");
         }
     }
