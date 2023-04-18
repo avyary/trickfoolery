@@ -8,7 +8,7 @@ public class BasicShockwaveAttackNew : Attack
     private float ShockwaveLength = 5f;
     [SerializeField]
     private float ShockwaveSize = 10f;
-    
+
     private bool shouldLerp = false;
     private float timeStartedLerping;
     

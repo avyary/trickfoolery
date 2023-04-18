@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 7215729485939932458}
   - component: {fileID: 1405078167128637129}
   - component: {fileID: 8528140757641626265}
+  - component: {fileID: 2466623722058771755}
   m_Layer: 6
   m_Name: BasicShockwaveHitbox (1)
   m_TagString: Untagged
@@ -270,6 +271,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2466623722058771755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601655596926004150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dc207cd212c4aef86b969b3ed284f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &2618155974825755155
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,6 +507,7 @@ GameObject:
   - component: {fileID: 26768930793932778}
   - component: {fileID: 7888766320532235527}
   - component: {fileID: 4808332108238643349}
+  - component: {fileID: 7557028121389697474}
   m_Layer: 7
   m_Name: ShockwaveTest
   m_TagString: Enemy
@@ -590,15 +614,19 @@ MonoBehaviour:
   angerSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 1d2f992c06124a34aa27fab675543925, type: 2}
   attackSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 834f753b22f3cde468878f13c6c02eb4, type: 2}
   deathSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 3b39492bbbcc4b24b8f1fcbec2adc0b7, type: 2}
+  alertSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 62d578315a23d644f8064fa51d96f1e4, type: 2}
   isAngy: 0
   currentAttack: {fileID: 0}
   state: 0
@@ -712,6 +740,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &7557028121389697474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8157556152595408473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dc207cd212c4aef86b969b3ed284f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &8157556153120589609
 GameObject:
   m_ObjectHideFlags: 0

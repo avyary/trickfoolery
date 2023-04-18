@@ -1644,6 +1644,7 @@
 					<ChildrenList>
 						<RandomSequenceContainer Name="sfx_enemyGuitar_aggro" ID="{4CA690AD-1709-4C5B-9FCB-A020353414AB}" ShortID="121651328">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="Highpass" Type="int16">
 									<ModifierList>
 										<ModifierInfo>
@@ -1675,6 +1676,9 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Enemy_Sounds" ID="{E47F9F11-0CB5-4E3A-9E6F-F33B6F09E6E3}" WorkUnitID="{B0B6041B-512A-4914-8402-7F92837AC4E5}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
 								</Reference>
@@ -1753,14 +1757,16 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="sfx_enemyGuitar_alert" ID="{E76CBEE7-23E2-416D-85E4-205203CD7281}" ShortID="1040080087">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{037021FE-6441-463B-BDCB-E960CCE4482F}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="200"/>
-													<Property Name="Min" Type="Real64" Value="-500"/>
+													<Property Name="Max" Type="Real64" Value="2373"/>
+													<Property Name="Min" Type="Real64" Value="-1183"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
@@ -1768,6 +1774,9 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Enemy_Sounds" ID="{E47F9F11-0CB5-4E3A-9E6F-F33B6F09E6E3}" WorkUnitID="{B0B6041B-512A-4914-8402-7F92837AC4E5}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
 								</Reference>
@@ -1843,9 +1852,13 @@
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<PositioningInfo>
+								<Position Name="" ID="{C3927FA4-2E43-4DBD-8F3D-FA35D0E57429}"/>
+							</PositioningInfo>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="sfx_enemyGuitar_death" ID="{3DFEFE69-7924-4E56-9ABE-E981DFF666AF}" ShortID="495940069">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -1865,6 +1878,9 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Enemy_Sounds" ID="{E47F9F11-0CB5-4E3A-9E6F-F33B6F09E6E3}" WorkUnitID="{B0B6041B-512A-4914-8402-7F92837AC4E5}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
 								</Reference>
@@ -1943,15 +1959,17 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="sfx_enemyGuitar_attack" ID="{0721780B-1FFC-4D5B-9727-E07A523E4C9E}" ShortID="349163667">
 							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-3</Value>
-									</ValueList>
-								</Property>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Enemy_Sounds" ID="{E47F9F11-0CB5-4E3A-9E6F-F33B6F09E6E3}" WorkUnitID="{B0B6041B-512A-4914-8402-7F92837AC4E5}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{230845F0-6394-4D88-A844-4A4D0A47DDC4}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+									<ObjectRef Name="New_RoomVerb" ID="{945A3EF1-036F-40B1-9B71-F5EEB24000F3}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7599E2E6-9187-48D4-B473-552CD8168460}"/>
