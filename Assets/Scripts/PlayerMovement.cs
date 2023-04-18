@@ -155,6 +155,9 @@ public class PlayerMovement : MonoBehaviour
                 tauntCdTimer -= Time.deltaTime;
             }
         }
+        if (Input.GetKeyDown(KeyCode.T)) {
+            TakeHit(100);
+        }
 
         ApplyGravity();
     }
