@@ -230,6 +230,7 @@ public class PlayerMovement : MonoBehaviour
         List<Collider> inRange = fov.FindVisibleTargets();
         foreach (var enemy in inRange)
         {
+            hypeManager.IncreaseHype(5f);
             enemy.gameObject.GetComponent<Enemy>().GetTaunted();
         }
     }
