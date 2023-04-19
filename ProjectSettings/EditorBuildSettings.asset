@@ -18,8 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/LVL2-FinalLayout.unity
     guid: c01a4108f8e81f3468c97af147ced514
   - enabled: 1
-    path: Assets/Scenes/LVL3.unity
-    guid: 91a249f3add881541bb70ad3d5829581
+    path: Assets/Scenes/LVL3_2.unity
+    guid: 33f85f907bef6ce4eafc3b83d8d52716
   - enabled: 1
     path: Assets/Scenes/Lvl4Lukey.unity
     guid: 1ce96899ebd2adb4fafa2d467261d1c0
