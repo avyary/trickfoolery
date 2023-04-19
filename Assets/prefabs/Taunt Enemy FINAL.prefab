@@ -5405,10 +5405,10 @@ MonoBehaviour:
   state: 0
   tracking_distance: 4
   tracking_range: 4
-  tracking_teleport_strength: 0.4
-  attacking_teleport_strength: 0.5
+  tracking_teleport_strength: 0.3
+  attacking_teleport_strength: 0.6
   dist: 0
-  teleport_time: 0.5
+  teleport_time: 0.3
   teleporting: 0
   attack_cooldown: 5
   DashParticle: {fileID: 4110198872891715316}

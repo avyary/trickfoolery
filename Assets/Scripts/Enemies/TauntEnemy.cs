@@ -44,7 +44,7 @@ public class TauntEnemy : Enemy
     private bool isRunning;
     private bool isAttacking;
     private bool isWalking;
-    public bool gotHere = false;
+    public bool isIdle = false;
 
     protected override void Start() {
         base.Start();
@@ -53,6 +53,7 @@ public class TauntEnemy : Enemy
         attackcd = attack_cooldown;
         gameObject.GetComponent<Patrol>().enabled = false;
         state = EnemyState.Patrolling;
+        isIdle = true;
     }
 
     IEnumerator Teleport(float strength)

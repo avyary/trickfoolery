@@ -56,6 +56,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public GameObject trackerPrefab;
 
+    [SerializeField] private bool TauntEnemyInLevel;
+
     // events for listeners
     [SerializeField]
     public UnityEvent startCombatEvent;
