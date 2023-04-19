@@ -5403,9 +5403,9 @@ MonoBehaviour:
   isAngy: 0
   currentAttack: {fileID: 0}
   state: 0
-  tracking_distance: 4
-  tracking_range: 4
-  tracking_teleport_strength: 0.3
+  tracking_distance: 5
+  tracking_range: 5
+  tracking_teleport_strength: 0.5
   attacking_teleport_strength: 0.6
   dist: 0
   teleport_time: 0.3
@@ -5419,7 +5419,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 1c88b6a3a1458174f9094de438509eb9, type: 2}
-  gotHere: 0
+  dancetime: 0
 --- !u!136 &6876850470233110501
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10853,6 +10853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doneRolling: 0
   doneAttacking: 0
+  doneDancing: 0
   tauntAttack: {fileID: 7400000, guid: 35347bd565fa4c641bc131c0b5af4c22, type: 2}
   animator: {fileID: 7940297677634203348}
   tauntEnemySounds: {fileID: 145574044239573810}

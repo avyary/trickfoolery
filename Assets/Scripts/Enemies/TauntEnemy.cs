@@ -44,7 +44,7 @@ public class TauntEnemy : Enemy
     private bool isRunning;
     private bool isAttacking;
     private bool isWalking;
-    public bool isIdle = false;
+    public bool dancetime;
 
     protected override void Start() {
         base.Start();
@@ -52,12 +52,13 @@ public class TauntEnemy : Enemy
         teleporting = false;
         attackcd = attack_cooldown;
         gameObject.GetComponent<Patrol>().enabled = false;
+        dancetime = false;
         state = EnemyState.Patrolling;
-        isIdle = true;
     }
 
     IEnumerator Teleport(float strength)
     {
+        animator.ResetTrigger("Roll");
         animationController.doneRolling = false;
         current_teleport_strength = strength;
         animator.SetTrigger("Roll");
@@ -72,9 +73,8 @@ public class TauntEnemy : Enemy
         }
         teleporting = false;
         DashParticle.Play();
-        
+
         StartCoroutine(WaitForSecondsAndStopParticles(0.2f, DashParticle));
-        animator.ResetTrigger("Roll");
     }
     
     private IEnumerator WaitForSecondsAndStopParticles(float seconds, ParticleSystem particles) {
@@ -119,16 +119,20 @@ public class TauntEnemy : Enemy
 
                     if ((dist > tracking_distance + tracking_range) && animationController.doneRolling)
                     {
+                        animator.SetBool("dancetime", false);
                         teleport_direction = -1 * (transform.position - player.transform.position);
                         StartCoroutine(Teleport(tracking_teleport_strength));
                     }
                     else if ((dist < tracking_distance)&& animationController.doneRolling)
                     {
+                        animator.ResetTrigger("Dance");
+                        animator.SetBool("dancetime", false);
                         teleport_direction = (transform.position - player.transform.position);
                         rotation = Quaternion.LookRotation(lookPos);
                         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 50);
                         StartCoroutine(Teleport(tracking_teleport_strength));
                     }
+                    
 
 
                     if ((attackcd <= 0) && animationController.doneRolling) //For now, attacks are set. TODO: Chance this to random attacks.
@@ -136,6 +140,10 @@ public class TauntEnemy : Enemy
                         state = EnemyState.Startup;
                         StartCoroutine(TeleportAttack());
                     }
+                    
+                    
+                    animator.SetBool("dancetime", true);
+                    
 
                     break;
             
