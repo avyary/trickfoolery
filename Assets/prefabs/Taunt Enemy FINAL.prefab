@@ -5412,6 +5412,7 @@ MonoBehaviour:
   teleporting: 0
   attack_cooldown: 5
   DashParticle: {fileID: 4110198872891715316}
+  animationController: {fileID: 2996161716687616337}
   teleport_direction: {x: 0, y: 0, z: 0}
   attackcd: 0
   beefyBoyDashSFX:

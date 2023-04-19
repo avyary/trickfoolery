@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public enum TauntState
@@ -25,6 +26,7 @@ public class TauntEnemy : Enemy
     [SerializeField] private bool teleporting;
     [SerializeField] private float attack_cooldown;
     [SerializeField] private ParticleSystem DashParticle;
+    [SerializeField] private TauntAnimationController animationController;
 
 
     public Vector3 teleport_direction;
@@ -42,7 +44,6 @@ public class TauntEnemy : Enemy
     private bool isRunning;
     private bool isAttacking;
     private bool isWalking;
-    private TauntAnimationController amc;
     public bool gotHere = false;
 
     protected override void Start() {
@@ -52,12 +53,11 @@ public class TauntEnemy : Enemy
         attackcd = attack_cooldown;
         gameObject.GetComponent<Patrol>().enabled = false;
         state = EnemyState.Patrolling;
-        amc = GameObject.Find("idle_TAUNT").GetComponent<TauntAnimationController>();
     }
 
     IEnumerator Teleport(float strength)
     {
-        amc.doneRolling = false;
+        animationController.doneRolling = false;
         current_teleport_strength = strength;
         animator.SetTrigger("Roll");
         beefyBoyDashSFX.Post(gameObject);
@@ -116,12 +116,12 @@ public class TauntEnemy : Enemy
                     var rotation = Quaternion.LookRotation(lookPos);
                     transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 10);
 
-                    if ((dist > tracking_distance + tracking_range) && amc.doneRolling)
+                    if ((dist > tracking_distance + tracking_range) && animationController.doneRolling)
                     {
                         teleport_direction = -1 * (transform.position - player.transform.position);
                         StartCoroutine(Teleport(tracking_teleport_strength));
                     }
-                    else if ((dist < tracking_distance)&& amc.doneRolling)
+                    else if ((dist < tracking_distance)&& animationController.doneRolling)
                     {
                         teleport_direction = (transform.position - player.transform.position);
                         rotation = Quaternion.LookRotation(lookPos);
@@ -130,7 +130,7 @@ public class TauntEnemy : Enemy
                     }
 
 
-                    if ((attackcd <= 0) && amc.doneRolling) //For now, attacks are set. TODO: Chance this to random attacks.
+                    if ((attackcd <= 0) && animationController.doneRolling) //For now, attacks are set. TODO: Chance this to random attacks.
                     {
                         state = EnemyState.Startup;
                         StartCoroutine(TeleportAttack());
@@ -145,15 +145,15 @@ public class TauntEnemy : Enemy
 
     IEnumerator TeleportAttack()
     {   //TODO: WWISE SOUNDS FOR ATTACK ANINMATION SHOULD GO HERE 
-        amc.doneAttacking = false;
+        animationController.doneAttacking = false;
         teleport_direction = -1 * (transform.position - player.transform.position);
         yield return StartCoroutine(Teleport(attacking_teleport_strength));
-        while (amc.doneRolling == false)
+        while (animationController.doneRolling == false)
         {
             yield return null;
         }
         animator.SetTrigger("Attack");
-        while (amc.doneAttacking == false)
+        while (animationController.doneAttacking == false)
         {
             yield return null;
         }
