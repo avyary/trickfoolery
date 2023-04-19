@@ -405,9 +405,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startupTime: 0
-  _activeTime: 0.5
+  _activeTime: 0.4
   _recoveryTime: 2
-  _damage: 50
+  _damage: 25
   _stunTime: 0
   _range: 0
   _renderer: {fileID: 0}
@@ -5697,7 +5697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startupTime: 0
-  _activeTime: 0.5
+  _activeTime: 0.4
   _recoveryTime: 1
   _damage: 25
   _stunTime: 0

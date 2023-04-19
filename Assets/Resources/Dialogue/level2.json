@@ -5,7 +5,7 @@
       "lines": [
         {
           "name": "Commentator",
-          "text": "Wowza, what a display of skill that only Nuck Chorris could possibly possess!"
+          "text": "Time for another display of unmatched skill from Nuck Chorris!"
         },
         {
           "name": "Tom",
@@ -17,11 +17,15 @@
         },
         {
           "name": "Commentator",
-          "text": "I've heard humans can \"bust a move\" by pressing [F]!"
+          "text": "I've heard humans can \"bust a move\" by pressing [X]!"
         },
         {
           "name": "Commentator",
-          "text": "Careful though - it makes some of us prideful warriors get real mad!"
+          "text": "It'll sure catch our attention - and piss off some of our fighters..."
+        },
+        {
+          "name": "Commentator",
+          "text": "... but you can take the heat, right?"
         }
       ]
     },
@@ -34,7 +38,7 @@
         },
         {
           "name": "Tom",
-          "text": "Can I leave now?"
+          "text": "Can I please leave now?"
         },
         {
           "name": "Commentator",

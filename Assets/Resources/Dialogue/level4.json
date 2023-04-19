@@ -1,6 +1,23 @@
 {
   "scenes": [
     {
+      "sceneName": "intro",
+      "lines": [
+        {
+          "name": "Commentator",
+          "text": "Two's company, three's...."
+        },
+        {
+          "name": "Commentator",
+          "text": "A BOOGIE! That's right, we've got another pal joining us today!"
+        },
+        {
+          "name": "Commentator",
+          "text": "They love to jam out, but don't get caught in their far out waves, man!" 
+        }
+      ]
+    },
+    {
       "sceneName": "onWin",
       "lines": [
         {
@@ -21,7 +38,7 @@
         },
         {
           "name": "Commentator",
-          "text": "Well, now that you've exhausted all our stages and all our warriors..."
+          "text": "Well, now that you've exhausted all of our warriors..."
         },
         {
           "name": "Commentator",

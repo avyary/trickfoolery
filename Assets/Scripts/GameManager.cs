@@ -150,6 +150,9 @@ public class GameManager : MonoBehaviour
         {
             SpawnRandomEnemy();
         }     
+        if (Input.GetKeyDown(KeyCode.R)) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     IEnumerator LoadNextScene() {

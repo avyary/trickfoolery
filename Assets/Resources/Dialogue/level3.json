@@ -1,6 +1,23 @@
 {
   "scenes": [
     {
+      "sceneName": "intro",
+      "lines": [
+        {
+          "name": "Commentator",
+          "text": "I think it's about time to introduce a couple of good friends to the party!"
+        },
+        {
+          "name": "Commentator",
+          "text": "They love to dance, but you gotta stay on your toes too!"
+        },
+        {
+          "name": "Commentator",
+          "text": "Between their funky moves they might take a swipe at ya!"
+        }
+      ]
+    },
+    {
       "sceneName": "onWin",
       "lines": [
         {

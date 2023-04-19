@@ -88,8 +88,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 1bea6c6f843f1444daf1a9c07c8b4e1c, type: 2}
     - target: {fileID: 1379921455707214419, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: _range
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379921455707214419, guid: 365579391c2931940a7e83bdc319620a, type: 3}
+      propertyPath: _damage
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379921455707214419, guid: 365579391c2931940a7e83bdc319620a, type: 3}
       propertyPath: _activeTime
-      value: 0.25
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1379921455707214419, guid: 365579391c2931940a7e83bdc319620a, type: 3}
       propertyPath: _startupTime

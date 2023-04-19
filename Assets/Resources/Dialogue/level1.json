@@ -5,11 +5,15 @@
       "lines": [
         {
           "name": "Commentator",
-          "text": "Hm, that's not the DODGE with [Space] or [Right Trigger] we know and love... let's try again."
+          "text": "Hm, that's not the DODGE with [Right Trigger] we know and love... let's try again."
         },
         {
           "name": "Commentator",
-          "text": "Hm, that's not the DODGE with [Space] or [Right Trigger] we know and love... let's try again.",
+          "text": "Make sure to time your dodge right before they hit for peak excitement!"
+        },
+        {
+          "name": "Commentator",
+          "text": "Make sure to time your dodge right before they hit for peak excitement!",
           "trigger": true,
           "triggerIdx": 2,
           "delay": 1
@@ -43,7 +47,7 @@
       "lines": [
         {
           "name": "Commentator",
-          "text": "Wowza, that was exhilarating! It's getting HOT in the stadium!"
+          "text": "Wowza, that was exhilarating! Who knew dodging could be so thrilling!"
         },
         {
           "name": "Commentator",
@@ -56,11 +60,23 @@
         },
         {
           "name": "Commentator",
-          "text": "See? Fill up our newly patented HYPE METER and who knows what'll happen! Show us what you got, Nuck!"
+          "text": "See? Fill up our newly patented HYPE METER and who knows what'll happen!"
+        },
+        {
+          "name": "Commentator",
+          "text": "Don't be too safe out there though, or we might fall asleep!"
+        },
+        {
+          "name": "Commentator",
+          "text": "Dodge and weave between attacks to keep us on the edge of our seats, Nuck!"
         },
         {
           "name": "Tom",
           "text": "I said I'm not Nuck Chorris!"
+        },
+        {
+          "name": "Commentator",
+          "text": "Show us what you got!"
         }
       ]
     },
@@ -121,7 +137,7 @@
         },
         {
           "name": "Commentator",
-          "text": "...can you DODGE their attacks by pressing [Space]?"
+          "text": "...can you DODGE their attacks by pressing [Right Trigger]?"
         }
       ]
     }
