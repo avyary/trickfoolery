@@ -9,12 +9,11 @@ public class LookAt : MonoBehaviour
     void Start()
     {
         camera = GameObject.FindWithTag("MainCamera");
-        print(camera);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(camera.transform.position, Vector3.down);
+        transform.LookAt(camera.transform.position);
     }
 }
