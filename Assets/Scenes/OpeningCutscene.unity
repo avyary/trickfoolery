@@ -1514,11 +1514,11 @@ MonoBehaviour:
   playCutsceneSelectSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: bd60fb00501f47147ade6e98c8ab3b9b, type: 2}
   playCutsceneMUS:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 417f9ecc7b36891479fcbd2dccf67940, type: 2}
   pageIdx: 0
   timeBetweenLetters: 0.05
   CheckForTrigger:
