@@ -406,7 +406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startupTime: 0
   _activeTime: 0.4
-  _recoveryTime: 2
+  _recoveryTime: 1
   _damage: 25
   _stunTime: 0
   _range: 0
@@ -5349,7 +5349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectRadius: 2.68
-  viewRadius: 8.74
+  viewRadius: 11.33
   viewAngle: 86
   player: {fileID: 0}
   obstacleMask:

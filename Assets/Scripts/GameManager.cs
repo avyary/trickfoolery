@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void OnPause() {
-        if (jumbotron.state != JumbotronState.Disabled)
+        if (jumbotron.state != JumbotronState.Disabled && SceneManager.GetActiveScene().name != "Lvl1Lukey")
         {
             TogglePause();
         }
@@ -151,6 +151,8 @@ public class GameManager : MonoBehaviour
             SpawnRandomEnemy();
         }     
         if (Input.GetKeyDown(KeyCode.R)) {
+            stopAaaMus.Post(gameObject);
+            stoppauseMUS.Post(gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
