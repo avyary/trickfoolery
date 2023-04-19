@@ -55,13 +55,11 @@ public class PauseMenuManager : MonoBehaviour
     }
 
     void HandleButtonChange(int newIdx) {
-        print("handlebuttonchange");
         currentIdx = newIdx;
         transform.GetChild(newIdx).gameObject.GetComponent<Button>().Select();
     }
 
     public void ReturnToMenu() {
-        print("blaehh");
         StartCoroutine(MenuAfterDelay());
     }
 
