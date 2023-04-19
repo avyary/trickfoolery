@@ -1511,6 +1511,14 @@ MonoBehaviour:
   _sizeCalcObj: {fileID: 1256288792}
   continueArrow: {fileID: 751416741}
   nextSceneName: Lvl1Lukey
+  playCutsceneSelectSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  playCutsceneMUS:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   pageIdx: 0
   timeBetweenLetters: 0.05
   CheckForTrigger:
