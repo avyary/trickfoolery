@@ -6,6 +6,7 @@ public class TauntAnimationController : MonoBehaviour
 {
     public bool doneRolling;
     public bool doneAttacking;
+    public bool doneDancing;
 
     [SerializeField] private AnimationClip tauntAttack;
     [SerializeField] private Animator animator;
