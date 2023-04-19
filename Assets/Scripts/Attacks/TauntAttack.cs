@@ -4,4 +4,9 @@ using UnityEngine;
 
 public class TauntAttack : Attack
 {
+    public override void Deactivate()
+    {
+        base.Deactivate();
+        _renderer.enabled = false;
+    }
 }

@@ -25,8 +25,8 @@ public abstract class Attack : MonoBehaviour
     public float stunTime { get; set; }
     public float range { get; set; }
 
-    private Collider _collider;
-    private MeshRenderer _renderer;
+    protected Collider _collider;
+    public MeshRenderer _renderer;
 
     private string[] collisionTags = {"Player", "Enemy"};
 
@@ -45,13 +45,13 @@ public abstract class Attack : MonoBehaviour
         range = _range;
     }
 
-    public void Activate()
+    public virtual void Activate()
     {
         //_renderer.enabled = true;
         _collider.enabled = true;
     }
 
-    public void Deactivate()
+    public virtual void Deactivate()
     {
         //_renderer.enabled = false;
         _collider.enabled = false;

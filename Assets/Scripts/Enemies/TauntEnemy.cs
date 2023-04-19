@@ -155,17 +155,22 @@ public class TauntEnemy : Enemy
     IEnumerator TeleportAttack()
     {   //TODO: WWISE SOUNDS FOR ATTACK ANINMATION SHOULD GO HERE 
         animationController.doneAttacking = false;
+        Vector3 toPlayer = player.transform.position - transform.position;
         teleport_direction = -1 * (transform.position - player.transform.position);
-        yield return StartCoroutine(Teleport(attacking_teleport_strength));
+        //yield return StartCoroutine(Teleport(attacking_teleport_strength));
+        yield return StartCoroutine(Teleport(toPlayer.magnitude * 0.06f));
         while (animationController.doneRolling == false)
         {
             yield return null;
         }
         animator.SetTrigger("Attack");
+        currentAttack._renderer.material.color = new Color(255, 165, 0, 0.2f);
+        currentAttack._renderer.enabled = true;
         while (animationController.doneAttacking == false)
         {
             yield return null;
         }
+        currentAttack._renderer.material.color = new Color(255, 0, 0, 0.2f);
         yield return StartCoroutine(Attack(currentAttack));
         attackcd = attack_cooldown;
         animator.ResetTrigger("Attack");
