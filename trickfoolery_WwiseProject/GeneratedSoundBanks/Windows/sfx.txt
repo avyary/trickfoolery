@@ -20,6 +20,9 @@ Switch	ID	Name	Switch Group			Notes
 	2152775650	grassy	footsteps			
 	3920460409	disco	footsteps			
 
+Effect plug-ins	ID	Name	Type				Notes
+	1259256166	New_RoomVerb	Wwise RoomVerb			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	34219380	sfx_enemyBeefy_alert_2	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_enemyBeefy_alert_2_3F75BDB9.wem		\Actor-Mixer Hierarchy\avy sfx\sfx_enemyBeefy\sfx_enemyBeefy_alert\sfx_enemyBeefy_alert_2		26284
 	53863138	sfx_enemyBeefy_endAttack_5	C:\Users\Ethan Larose\Documents\GitHub\trickfoolery\trickfoolery_WwiseProject\.cache\Windows\SFX\sfx_enemyBeefy_endAttack_5_3F75BDB9.wem		\Actor-Mixer Hierarchy\avy sfx\sfx_enemyBeefy\sfx_enemyBeefy_endAttack\sfx_enemyBeefy_endAttack_5		33657

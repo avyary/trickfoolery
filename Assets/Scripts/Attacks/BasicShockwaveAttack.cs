@@ -22,12 +22,6 @@ namespace Attacks
         protected override void Start()
         {
             base.Start();
-            startupTime = 0.25f;
-            activeTime = 5f;
-            recoveryTime = 1f;
-            damage = 100;
-            stunTime = 2;
-            range = 20f;
             
             Debug.Log("Shockwave basic attack set up: \n" +
                       "range:" + range);

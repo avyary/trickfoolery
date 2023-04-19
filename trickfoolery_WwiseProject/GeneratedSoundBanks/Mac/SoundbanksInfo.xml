@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{E24F4FE0-C551-AC8E-1EFA-02488E6F6638}">
+		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{FD1BA021-3BB3-4DC8-8E8D-F060FBE498C3}">
 			<ShortName>sfx</ShortName>
 			<Path>sfx.bnk</Path>
 			<Media>
@@ -302,6 +302,11 @@
 					<CachePath>SFX/sfx_enemyBeefy_startAttack_4_3F75BDB9.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1259256166" Name="New_RoomVerb" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="3983343057" Name="Play_sfx_beefy_boy_dash">
 					<MediaRefs>
@@ -413,6 +418,11 @@
 						<MediaRef Id="1054308750"/>
 						<MediaRef Id="1064787542"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1259256166"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="1512650471" Name="Play_sfx_enemyGuitar_death">
 					<MediaRefs>
@@ -568,7 +578,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{1176602C-F3E8-4B56-CD9C-A6A041A5BAC1}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{408E17CC-FC63-30CA-CF64-67F44AA47B5D}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -620,7 +630,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{F533D574-57C7-CF88-FDBC-AC87E406ED1E}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8B561D17-CB24-D145-9BFC-3AFB8BFBB73F}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -1084,5 +1094,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{12246064-97BA-9125-711B-72A320E0B965}</FileHash>
+	<FileHash>{7141F6D3-CF2E-A274-0B0D-1156467D16FB}</FileHash>
 </SoundBanksInfo>

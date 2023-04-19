@@ -47,28 +47,26 @@ public abstract class Attack : MonoBehaviour
 
     public virtual void Activate()
     {
-        //_renderer.enabled = true;
         _collider.enabled = true;
     }
 
     public virtual void Deactivate()
     {
-        //_renderer.enabled = false;
         _collider.enabled = false;
     }
 
     public void OnTriggerEnter(Collider other) {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject == transform.parent.gameObject) {
+            return;
+        }
+        else if (other.gameObject.tag == "Enemy")
         {
+            print(other.gameObject.name);
             other.gameObject.GetComponent<Enemy>().TakeHit(transform.parent.GetComponent<Enemy>(), damage, stunTime);
         }
         else if (other.gameObject.tag == "Player")
         {
             other.gameObject.GetComponent<PlayerMovement>().TakeHit(damage, transform.parent.GetComponent<Enemy>());
         }
-        // if (collisionTags.Any(other.gameObject.tag.Contains))
-        // {
-        //     other.gameObject.TakeHit(damage);
-        // }
     }
 }

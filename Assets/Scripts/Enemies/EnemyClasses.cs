@@ -191,7 +191,7 @@ public abstract class Enemy: MonoBehaviour
         // trigger attack animation here
         animator.SetTrigger("startStartup");
         state = EnemyState.Startup;
-        // Debug.Log("Attacking Time");
+        Debug.Log("Attacking Time");
         yield return new WaitForSeconds(attackObj.startupTime);
         
         // there's probably a better way to handle the below (& its repetitions)
@@ -212,7 +212,7 @@ public abstract class Enemy: MonoBehaviour
 
         animator.SetTrigger("startRecovery");
         state = EnemyState.Recovery;
-        // Debug.Log("Attack All done");
+        Debug.Log("Attack All done");
         attackObj.Deactivate();  // deactivate attack collider
         yield return new WaitForSeconds(attackObj.recoveryTime);
 

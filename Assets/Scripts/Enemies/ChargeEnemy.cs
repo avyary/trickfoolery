@@ -26,9 +26,6 @@ public class ChargeEnemy : Enemy
     {   
         switch(state)
         {
-            case EnemyState.Passive:
-                break;
-
             case EnemyState.Patrolling:
                 if (!fow.active)
                 {

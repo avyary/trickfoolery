@@ -28,6 +28,8 @@ public class TauntEnemy : Enemy
     [SerializeField] private ParticleSystem DashParticle;
     [SerializeField] private TauntAnimationController animationController;
 
+    private Color originalColor;
+
 
     public Vector3 teleport_direction;
     private float current_teleport_strength;
@@ -54,6 +56,7 @@ public class TauntEnemy : Enemy
         gameObject.GetComponent<Patrol>().enabled = false;
         dancetime = false;
         state = EnemyState.Patrolling;
+        originalColor = currentAttack._renderer.material.color;
     }
 
     IEnumerator Teleport(float strength)
@@ -164,8 +167,9 @@ public class TauntEnemy : Enemy
             yield return null;
         }
         animator.SetTrigger("Attack");
-        currentAttack._renderer.material.color = new Color(255, 165, 0, 0.2f);
+        //currentAttack._renderer.material.color = new Color(255, 165, 0, 0.2f);
         currentAttack._renderer.enabled = true;
+        currentAttack._renderer.material.color = originalColor;
         while (animationController.doneAttacking == false)
         {
             yield return null;

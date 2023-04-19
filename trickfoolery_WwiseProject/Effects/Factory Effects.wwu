@@ -1326,6 +1326,19 @@
 										<Property Name="StereoWidth" Type="Real32" Value="115"/>
 									</PropertyList>
 								</Effect>
+								<Effect Name="New_RoomVerb" ID="{945A3EF1-036F-40B1-9B71-F5EEB24000F3}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+									<PropertyList>
+										<Property Name="CenterLevel" Type="Real32" Value="-17"/>
+										<Property Name="DecayTime" Type="Real32" Value="0.6"/>
+										<Property Name="Density" Type="Real32" Value="19"/>
+										<Property Name="DryLevel" Type="Real32" Value="-15.3"/>
+										<Property Name="ERPattern" Type="int32" Value="16"/>
+										<Property Name="FrontLevel" Type="Real32" Value="-8"/>
+										<Property Name="HFDamping" Type="Real32" Value="0.85"/>
+										<Property Name="PreDelay" Type="Real32" Value="21"/>
+										<Property Name="ReverbLevel" Type="Real32" Value="-33"/>
+									</PropertyList>
+								</Effect>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Cathedrals" ID="{DFEE1FB0-5C6E-4BF1-AB5E-3835E6DD0723}" ShortID="978789462">
