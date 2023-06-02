@@ -155,7 +155,7 @@ public class PlayerMovement : MonoBehaviour
                 tauntCdTimer -= Time.deltaTime;
             }
         }
-        if (Input.GetKeyDown(KeyCode.W)) {
+        if (Input.GetKeyDown(KeyCode.P)) {
             hypeManager.IncreaseHype(100);
         }
         if (Input.GetKeyDown(KeyCode.L)) {
