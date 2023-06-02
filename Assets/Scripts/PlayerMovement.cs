@@ -180,26 +180,31 @@ public class PlayerMovement : MonoBehaviour
     }
 
     IEnumerator Dash()
-    {
-        if (tauntCoroutine != null) {
-            print("cancelled taunt");
-            StopCoroutine(tauntCoroutine);
-        }
-        StartCoroutine(CheckHypeDash());
-        StartCoroutine(InvincibilityFrames(DASHTIME));
-        dashCdTimer = DASHCD;
-        float startTime = Time.time;
-        tomAnimator.SetTrigger("StartDodge");
-        dashSFX.Post(gameObject);
-
-        while (Time.time < startTime + DASHTIME)
+    {   
+        if (dashCdTimer <= 0f) 
         {
-            state = AbilityState.dashing;
-            //TODO: Add momentum to make dashing a little more fluid. 
-            yield return null;
-        }
+            if (tauntCoroutine != null) 
+            {
+                print("cancelled taunt");
+                StopCoroutine(tauntCoroutine);
+            }
+            StartCoroutine(CheckHypeDash());
+            StartCoroutine(InvincibilityFrames(DASHTIME));
+            dashCdTimer = DASHCD;
+            float startTime = Time.time;
+            tomAnimator.SetTrigger("StartDodge");
+            dashSFX.Post(gameObject);
 
-        state = AbilityState.walking;
+            while (Time.time < startTime + DASHTIME)
+            {
+                state = AbilityState.dashing;
+                //TODO: Add momentum to make dashing a little more fluid. 
+                yield return null;
+            }
+
+            state = AbilityState.walking;
+        }
+        
     }
 
 

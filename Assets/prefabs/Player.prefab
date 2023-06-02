@@ -6431,6 +6431,7 @@ GameObject:
   - component: {fileID: 2210145749772937266}
   - component: {fileID: 7080798461628873274}
   - component: {fileID: 1602335218691877379}
+  - component: {fileID: 5943973647914740701}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -6561,7 +6562,7 @@ MonoBehaviour:
   WALKSPEED: 5
   DASHSPEED: 10
   DASHTIME: 0.25
-  DASHCD: 0.5
+  DASHCD: 3
   TAUNTTIME: 1.56
   TAUNTCD: 1
   GRAVITY_MULTIPLIER: 1
@@ -6615,30 +6616,6 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &5943973647914740701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7796244350440389784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a024f4daab4fd48b9aec34fb7e7acfaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: d2d9f5ce5d7d944f3b8d171f7b1d5d6e, type: 2}
-  decodeBank: 0
-  loadAsynchronous: 0
-  saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
-  bankNameInternal: 
-  valueGuidInternal: 
 --- !u!114 &4900233659298321097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6772,6 +6749,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1de416867988b41a5c80131db42b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5943973647914740701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7796244350440389784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a024f4daab4fd48b9aec34fb7e7acfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d2d9f5ce5d7d944f3b8d171f7b1d5d6e, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &8128285181426198141
 GameObject:
   m_ObjectHideFlags: 0

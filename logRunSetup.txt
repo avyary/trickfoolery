@@ -1073,7 +1073,7 @@ Assets/Scripts/Enemy Scripts/BasicEnemy.cs(10,18): warning CS0108: 'BasicEnemy.r
 Assets/Scripts/Enemy Scripts/BasicEnemy.cs(13,22): warning CS0108: 'BasicEnemy.centrePoint' hides inherited member 'Enemy.centrePoint'. Use the new keyword if hiding was intended.
 Assets/Scripts/PlayerMovement.cs(23,19): warning CS0414: The field 'PlayerMovement.speedChangeFactor' is assigned but its value is never used
 Assets/Scripts/Enemy Scripts/EnemyBehavior.cs(7,10): warning CS0414: The field 'EnemyBehavior.isCharging' is assigned but its value is never used
-Assets/Scripts/Enemies/TauntEnemy.cs(7,19): warning CS0414: The field 'TauntEnemy._teleportCooldown' is assigned but its value is never used
+Assets/Scripts/Enemies/TauntEnemy.cs(7,19): warning CS0414: The field 'TauntEnemy._teleportigned but its value is never used
 [524/529    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
 [525/529    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
 [526/529    0s] Csc Library/Bee/artifacts/200b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
