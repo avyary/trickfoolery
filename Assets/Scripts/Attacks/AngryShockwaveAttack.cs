@@ -6,7 +6,13 @@ using UnityEngine;
 
 namespace Attacks
 {
-
+    //*******************************************************************************************
+    // AngryShockwaveAttack
+    //*******************************************************************************************
+    /// <summary>
+    /// Attack subclass that implements a shockwave projectile that grows in size as it
+    /// moves via a BoxCollider. Moves at a faster rate than a normal shockwave attack.
+    /// </summary>
     public class AngryShockwaveAttack : Attack
     {
         protected const float AngryZ = 70f;

@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+//*******************************************************************************************
+// Patrol
+//*******************************************************************************************
+/// <summary>
+/// Generates a new path for the NavMeshAgent of enemies once a path lifecycle is
+/// completed; utilized for the enemy types that roam around the level map.
+/// </summary>
 public class Patrol : MonoBehaviour {
 
     protected NavMeshAgent agent;

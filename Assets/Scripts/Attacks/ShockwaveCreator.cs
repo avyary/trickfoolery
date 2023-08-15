@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using Attacks;
 using UnityEngine;
 
+//*******************************************************************************************
+// ShockwaveCreator
+//*******************************************************************************************
+/// <summary>
+/// Instantiates a ShockwavePrefab according to the timer associated with the
+/// BasicShockwaveAttack class.
+/// </summary>
 public class ShockwaveCreator : MonoBehaviour
 {
     [SerializeField] public GameObject shockwavePrefab;

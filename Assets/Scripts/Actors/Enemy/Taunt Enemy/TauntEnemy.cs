@@ -14,6 +14,15 @@ public enum TauntState
     
 }
 
+//*******************************************************************************************
+// TauntEnemy
+//*******************************************************************************************
+/// <summary>
+/// Enemy subclass that further specifies TauntEnemy type behaviors such as taunting
+/// the player (rolling and dancing) and initiating teleport attacks when sighting
+/// the player. Also handles particle effect systems associated with the TauntEnemy
+/// and the AoE attack highlighter.
+/// </summary>
 public class TauntEnemy : Enemy
 {   
     private float _teleportCooldown;

@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//*******************************************************************************************
+// BasicShockwaveAttackNew
+//*******************************************************************************************
+/// <summary>
+/// Attack subclass that implements a shockwave projectile that grows in size as it
+/// moves via the object Transform.
+/// </summary>
 public class BasicShockwaveAttackNew : Attack
 {
     [SerializeField]
@@ -44,6 +51,14 @@ public class BasicShockwaveAttackNew : Attack
         StartAttack();
     }
     
+    public override void Deactivate() {
+        shouldLerp = false;
+        transform.localPosition = initialCenter;
+        transform.localScale = initialSize;;
+        _renderer.enabled = false;
+        base.Deactivate();
+    }
+    
     public void StartAttack()
     {
         timeStartedLerping = Time.time;
@@ -66,13 +81,5 @@ public class BasicShockwaveAttackNew : Attack
         var result = Vector3.Lerp(start, end, percentageComplete);
 
         return result;
-    }
-
-    public override void Deactivate() {
-        shouldLerp = false;
-        transform.localPosition = initialCenter;
-        transform.localScale = initialSize;;
-        _renderer.enabled = false;
-        base.Deactivate();
     }
 }

@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
+//*******************************************************************************************
+// Attack
+//*******************************************************************************************
+/// <summary>
+/// Abstract class that handles the hitbox logic of an attack to damage players and
+/// enemies alike. Contains methods Activate() and Deactivate() to enable and disable
+/// associated hitboxes.
+/// </summary>
 public abstract class Attack : MonoBehaviour
 {
     [SerializeField]

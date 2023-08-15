@@ -18,6 +18,14 @@ public enum EnemyState
     Spawning     // 8
 }
 
+//*******************************************************************************************
+// Enemy
+//*******************************************************************************************
+/// <summary>
+/// Abstract class that defines basic states for enemy classes, handling taking damage,
+/// getting stunned, death, getting taunted, and initiating an attack with associated
+/// Animator adjustments.
+/// </summary>
 public abstract class Enemy: MonoBehaviour
 {
     [SerializeField] 

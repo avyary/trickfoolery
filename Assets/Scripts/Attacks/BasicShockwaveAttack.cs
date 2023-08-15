@@ -5,7 +5,13 @@ using UnityEngine;
 
 namespace Attacks
 {
-
+    //*******************************************************************************************
+    // BasicShockwaveAttack
+    //*******************************************************************************************
+    /// <summary>
+    /// Attack subclass that implements a shockwave projectile that grows in size as it
+    /// moves via a BoxCollider.
+    /// </summary>
     public class BasicShockwaveAttack: Attack
     {
         protected const float NormalZ = 20f;

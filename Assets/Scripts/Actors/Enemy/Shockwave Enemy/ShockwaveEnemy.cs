@@ -4,6 +4,13 @@ using System.Threading;
 using Attacks;
 using UnityEngine;
 
+//*******************************************************************************************
+// ShockwaveEnemy
+//*******************************************************************************************
+/// <summary>
+/// Enemy subclass that further specifies ShockwaveEnemy type behaviors such as
+/// patrolling the map and initiating shockwave attacks when sighting the player.
+/// </summary>
 public class ShockwaveEnemy : Enemy
 {
     [SerializeField]

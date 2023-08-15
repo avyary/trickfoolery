@@ -4,6 +4,12 @@ using System.Collections.Generic;
 using Attacks;
 using UnityEngine;
 
+//*******************************************************************************************
+// Shockwave
+//*******************************************************************************************
+/// <summary>
+/// Implements a shockwave projectile that grows in length as it moves.
+/// </summary>
 public class Shockwave : MonoBehaviour
 {
     protected float growthRate = 8f; // rate of growth per second

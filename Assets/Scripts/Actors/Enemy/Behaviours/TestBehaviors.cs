@@ -2,6 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//*******************************************************************************************
+// TestBehaviors
+//*******************************************************************************************
+/// <summary>
+/// Contains various static methods to handle the movement of an object using the
+/// Transform component such as rotating, forward movement, and targeted movement
+/// (towards the player).
+/// </summary>
 public class TestBehaviors
 {
     public static void Rotate(GameObject target, float speed) {

@@ -10,6 +10,14 @@ namespace Attacks
     // Center: -0.001 0 0.03
     // Size: 0.083 0.07 0.05
     
+    //*******************************************************************************************
+    // BasicShockwaveAttackOld
+    //*******************************************************************************************
+    /// <summary>
+    /// Attack subclass that implements a shockwave projectile that grows in size as it
+    /// moves via a BoxCollider. Creates a single shockwave that permeates the area and
+    /// temporarily persists at max size until it ceases to exist.
+    /// </summary>
     public class BasicShockwaveAttackOld: Attack
     {
         protected const float NormalZ = 0.1f;

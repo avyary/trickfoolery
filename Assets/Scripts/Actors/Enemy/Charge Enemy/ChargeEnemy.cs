@@ -2,6 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//*******************************************************************************************
+// ChargeEnemy
+//*******************************************************************************************
+/// <summary>
+/// Enemy subclass that further specifies ChargeEnemy type behaviors such as patrolling
+/// the map and initiating charge attacks when sighting the player. Also handles particle
+/// effect systems associated with charge attacks.
+/// </summary>
 public class ChargeEnemy : Enemy
 {
     [SerializeField]
