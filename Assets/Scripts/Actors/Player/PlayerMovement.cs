@@ -1,11 +1,14 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// *******************************************************************************************
+// PlayerMovement
+//*******************************************************************************************
 /// <summary>
-/// Logic for basic game movement and dash mechanic.
+/// Handles player mechanics in response to player input and contains logic associated
+/// with the player states linked to the UI and Game state systems.
 /// </summary>
 public class PlayerMovement : MonoBehaviour
 
@@ -128,6 +131,11 @@ public class PlayerMovement : MonoBehaviour
         gameManager.stopCombatEvent.AddListener(OnBecomePassive);
     }
 
+    /// <summary>
+    /// Invokes the player dash mechanic and associated particle systems if the GameManager playerInput flag is
+    /// enabled.
+    /// </summary>
+    /// <param name="value"> The Action value received from player input. </param>
     public void OnDodge(InputValue value) {
         if (gameManager.playerInput) {
             StartCoroutine(Dash());
@@ -137,6 +145,11 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Invokes the player taunt mechanic if the GameManager playerInput flag is enabled and the taunt cooldown
+    /// has completed.
+    /// </summary>
+    /// <param name="value"> The Action value received from player input. </param>
     public void OnTaunt(InputValue value) {
         if (gameManager.playerInput && tauntCdTimer <= 0) {
                 tauntCoroutine = StartCoroutine(InitiateTaunt());
@@ -175,10 +188,19 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Sets the player animation to become idle.
+    /// </summary>
     private void OnBecomePassive() {
         tomAnimator.SetBool("isRunning", false);
     }
 
+    /// <summary>
+    /// If the dash cooldown has completed, cancels any taunts that may be currently processed, resets the dash
+    /// cooldown, and makes the player dash, triggering associated animations and SFX, potentially increasing
+    /// the HypeManager hype value, activating temporary invincibility, and setting the dashing player state.
+    /// Upon completion, resets the player state to walking.
+    /// </summary>
     IEnumerator Dash()
     {   
         if (dashCdTimer <= 0f) 
@@ -207,7 +229,10 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-
+    /// <summary>
+    /// Increases the HypeManager hype value once during the dash frames if the dash near misses the Enemy's
+    /// Attack.
+    /// </summary>
     IEnumerator CheckHypeDash() {
         float startTime = Time.time;
         Vector3 origin = transform.position;
@@ -223,6 +248,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Sets the taunting player state and associated animations and delays for some seconds. After the delay,
+    /// invokes the taunt to increase the HypeManager hype value and anger nearby Enemy types before delaying
+    /// once again. Upon completion, resets the taunt cooldown and sets the player state to walking.
+    /// </summary>
     IEnumerator InitiateTaunt() {
         state = AbilityState.taunting;
         tomAnimator.SetTrigger("StartTaunt");
@@ -233,6 +263,10 @@ public class PlayerMovement : MonoBehaviour
         tauntCdTimer = TAUNTCD;
     }
     
+    /// <summary>
+    /// Tracks all Enemy types in range of the player's FieldOfView. For each Enemy type in range, increases
+    /// the HypeManager hype value and taunts that Enemy.
+    /// </summary>
     public void Taunt()
     {
         List<Collider> inRange = fov.FindVisibleTargets();
@@ -243,6 +277,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
+    /// <summary>
+    /// Returns the status of if any Attacks fall within the ranges of spheres drawn from the player
+    /// position and a specified origin, both with extents defined by the <i> dodgeRadius </i>.
+    /// </summary>
+    /// <param name="origin"> The centre of a spherical volume to detect Attacks.</param>
     bool IsCloseDash(Vector3 origin)
     {
         Collider[] attacksInRange = Physics.OverlapSphere(transform.position, dodgeRadius, attackMask);
@@ -250,6 +289,10 @@ public class PlayerMovement : MonoBehaviour
         return (attacksInRange.Length + attacksAtOrigin.Length > 0);
     }
     
+    /// <summary>
+    /// Applies movement to the player GameObject along the y-axis defined by <i> _gravity </i> multiplied
+    /// by the <i> GRAVITY_MULTIPLIER </i>.
+    /// </summary>
     private void ApplyGravity()
     {
         gravityVelocity = Vector3.zero;
@@ -257,7 +300,13 @@ public class PlayerMovement : MonoBehaviour
         _movementController.Move(gravityVelocity * Time.deltaTime);
     }
 
-
+    /// <summary>
+    /// Takes damage if the player is not dead nor currently invincible. If the player's health depletes to zero
+    /// or below, updates the UIManager health UI and triggers the losing condition of the game. Otherwise,
+    /// triggers damaged animations and SFX, stuns the player, and activates temporary invincibility.
+    /// </summary>
+    /// <param name="damage"> The amount to deplete the player's health. </param>
+    /// <param name="attacker"> The Enemy that unleashed an attack on the player. </param>
     public void TakeHit(int damage, Enemy attacker = null)
     {
         if (gameManager.isGameOver || isInvincible)
@@ -283,6 +332,10 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // placeholder
+    /// <summary>
+    /// Flashes the player GameObject different colors by changing the model material between delays defined
+    /// by <i> damageFlashTime </i> and <i> hitInvincibility </i> before resetting the original material. 
+    /// </summary>
     IEnumerator FlashOnHit() {
         tomRender.material = damageMat;
         yield return new WaitForSeconds(damageFlashTime);
@@ -291,12 +344,20 @@ public class PlayerMovement : MonoBehaviour
         tomRender.material = originalMat;
     }
 
+    /// <summary>
+    /// Sets the player's state to damaged and freezes the player for a duration of time before resetting
+    /// the walking state.
+    /// </summary>
     IEnumerator GetStunned() {
         state = AbilityState.damage;
         yield return new WaitForSeconds(0.75f);
         state = AbilityState.walking;
     }
 
+    /// <summary>
+    /// Updates the UIManager health UI to be depleted and sets the player state to dead, triggering associated
+    /// animations and SFX before triggering the loss of the game.
+    /// </summary>
     IEnumerator Die()
     {
         uiManager.UpdateHealth(0f);
@@ -308,6 +369,11 @@ public class PlayerMovement : MonoBehaviour
         yield return null;
     }
 
+    /// <summary>
+    /// Adjusts the player GameObject visuals by changing the material throughout the invincibility
+    /// duration, resetting the material and invincible flag upon completion.
+    /// </summary>
+    /// <param name="time"> The duration of time to stay invincible in seconds. </param>
     IEnumerator InvincibilityFrames(float time)
     {
         isInvincible = true;
@@ -317,6 +383,12 @@ public class PlayerMovement : MonoBehaviour
         isInvincible = false;
     }
 
+    /// <summary>
+    /// Invokes the player movement mechanic if the GameManager playerInput flag is enabled, triggering
+    /// associated movement animations with input. If no movement is detected, adjust the animator to
+    /// become idle.
+    /// </summary>
+    /// <param name="value"> The Action value received from player input. </param>
     public void OnMove(InputValue value) {
         if (gameManager.playerInput) {
             Vector2 input = value.Get<Vector2>();
@@ -333,6 +405,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Sets the player GameObject material and delays for a duration of time. If the provided time is nonzero,
+    /// resets the material after the delay.
+    /// </summary>
+    /// <param name="newMat"> The new material to set on the player GameObject. </param>
+    /// <param name="time"> The duration of time to delay. </param>
     IEnumerator ChangeMaterial(Material newMat, float time = 0)
     {
         if (time == 0) {
@@ -346,7 +424,14 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForSeconds(time);
             tomRender.material = originalMat;
         }
-    }private IEnumerator WaitForSecondsAndStopParticles(float seconds, ParticleSystem particles) {
+    }
+    
+    /// <summary>
+    /// Delays for a duration of time before disabling the ParticleSystem.
+    /// </summary>
+    /// <param name="seconds"> The duration of time to wait before disabling the particle system in seconds. </param>
+    /// <param name="particles"> The ParticleSystem to be disabled. </param>
+    private IEnumerator WaitForSecondsAndStopParticles(float seconds, ParticleSystem particles) {
         yield return new WaitForSeconds(seconds);
         particles.Stop();
     } 

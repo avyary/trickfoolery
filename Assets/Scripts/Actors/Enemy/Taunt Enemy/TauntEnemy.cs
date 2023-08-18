@@ -1,11 +1,5 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
-using Random = UnityEngine.Random;
 
 public enum TauntState
 {
@@ -38,10 +32,10 @@ public class TauntEnemy : Enemy
     [SerializeField] private TauntAnimationController animationController;
 
     private Color originalColor;
-
-
+    
     public Vector3 teleport_direction;
     private float current_teleport_strength;
+    
     public float attackcd;
     private int timesTeleportCalled = 0;
     private int timesAttackCalled = 0;
@@ -57,6 +51,11 @@ public class TauntEnemy : Enemy
     private bool isWalking;
     public bool dancetime;
 
+    /// <summary>
+    /// Extends the parent class initialization of bookkeeping structures with further initialization of
+    /// attributes particular to the TauntEnemy subclass, debugging functionality to log this Enemy's
+    /// data, and the disabling of the patrolling ability.
+    /// </summary>
     protected override void Start() {
         base.Start();
         GetEnemyStatus("TauntEnemy");
@@ -68,6 +67,11 @@ public class TauntEnemy : Enemy
         originalColor = currentAttack._renderer.material.color;
     }
 
+    /// <summary>
+    /// Replays this Enemy's rolling state and animations before teleporting for <i> teleport_time </i>
+    /// duration of time, playing associated teleport SFX and particle effects.
+    /// </summary>
+    /// <param name="strength"> The intensity of the distance this Enemy will keep from or towards the player. </param>
     IEnumerator Teleport(float strength)
     {
         animator.ResetTrigger("Roll");
@@ -89,12 +93,15 @@ public class TauntEnemy : Enemy
         StartCoroutine(WaitForSecondsAndStopParticles(0.2f, DashParticle));
     }
     
+    /// <summary>
+    /// Delays for a duration of time before disabling the ParticleSystem.
+    /// </summary>
+    /// <param name="seconds"> The duration of time to wait before disabling the particle system in seconds. </param>
+    /// <param name="particles"> The ParticleSystem to be disabled. </param>
     private IEnumerator WaitForSecondsAndStopParticles(float seconds, ParticleSystem particles) {
         yield return new WaitForSeconds(seconds);
         particles.Stop();
-    } 
-    
-
+    }
 
     // Update is called once per frame
     void Update()
@@ -164,6 +171,13 @@ public class TauntEnemy : Enemy
         }
     }
 
+    /// <summary>
+    /// Readies the teleport attack state via the TauntAnimationController and strength based on the distance to
+    /// the player and progressively adjusts the Area-of-Effect (AoE) highlighter throughout the attack animation.
+    /// Upon the triggering of <i> doneAttacking </i> from the TauntAnimationController, paints the AoE red and
+    /// activates the respective Attack to damage other actors, then resets the attacking state and attack
+    /// cooldown timer.
+    /// </summary>
     IEnumerator TeleportAttack()
     {   //TODO: WWISE SOUNDS FOR ATTACK ANINMATION SHOULD GO HERE 
         animationController.doneAttacking = false;
@@ -190,6 +204,11 @@ public class TauntEnemy : Enemy
         state = EnemyState.Tracking;
         yield return null;
     }
+    
+    /// <summary>
+    /// Translates the associated GameObject in the teleport_direction with the distance determined by the
+    /// <i> current_teleport_strength </i>.
+    /// </summary>
     public void FixedUpdate()
     {
         if (teleporting)
@@ -198,7 +217,10 @@ public class TauntEnemy : Enemy
         } 
     }
     
-    
+    /// <summary>
+    /// Delays for a duration of time.
+    /// </summary>
+    /// <param name="seconds"> The duration of time to wait in seconds. </param>
     private IEnumerator WaitForSecondsAndStopTeleportAnim(float seconds) 
     {
         yield return new WaitForSeconds(seconds);

@@ -1,16 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
 using UnityEngine.AI;
 
+//*******************************************************************************************
+// RandMove
+//*******************************************************************************************
+/// <summary>
+/// Generates random paths for characters via the NavMeshAgent and contains logic to
+/// hone in on the player when they're sighted.
+/// </summary>
 public class RandMove : MonoBehaviour
 {
     private float speed = 1.75f;
     private int repeatSpeed = 0;
     private int direction = 3;
     private int rotateTime = 0;
+
     public bool detected;
+
     public float radius = 10.0f;
 
     public Transform player;
@@ -56,10 +62,15 @@ public class RandMove : MonoBehaviour
             {
                 move(direction);
             }
-        
         }
     }
 
+    /// <summary>
+    /// Moves or rotates this GameObject at random increments for the duration of <i> rotateTime </i> within
+    /// a targeted world-space area along the xz-plane. Moves and rotates this GameObject at specified
+    /// increments when outside of the targeted xz-plane area.
+    /// </summary>
+    /// <param name="direction"> The index to select various rotational increment modes along the y-axis. </param>
     public void move(int direction) {
         if (-6.5f <= transform.position.x 
         && transform.position.x <= 6.5f 
@@ -67,18 +78,18 @@ public class RandMove : MonoBehaviour
         && transform.position.z <= 6.5f)
         {
             if (rotateTime < 180){
-            if(direction == 1) {
-                transform.Rotate(new Vector3(0, .5f, 0), Space.Self);
-            }
-            if(direction == 2){
-                 transform.Rotate(new Vector3(0, -.5f, 0), Space.Self);
-            }
-            if(direction == 4){
-                 transform.Rotate(Vector3.up, 1, Space.Self);
-            }
-            rotateTime ++;
+                if(direction == 1) {
+                    transform.Rotate(new Vector3(0, .5f, 0), Space.Self);
+                }
+                if(direction == 2){
+                     transform.Rotate(new Vector3(0, -.5f, 0), Space.Self);
+                }
+                if(direction == 4){
+                     transform.Rotate(Vector3.up, 1, Space.Self);
+                }
+                rotateTime ++;
             } else {
-            transform.Translate(Vector3.forward * Time.deltaTime * speed);
+                transform.Translate(Vector3.forward * Time.deltaTime * speed);
             }
         } 
         else 
@@ -88,6 +99,10 @@ public class RandMove : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// When colliding with the player, toggles detection to cease random movement.
+    /// </summary>
+    /// <param name="collision"> The Collider of the other GameObject that collided with this Collider. </param>
     private void OnCollisionEnter(Collision collision) {
         if (collision.collider.tag == "Player")
         {

@@ -1,10 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
-using System.Collections.Generic;
 
+// *******************************************************************************************
+// HypeManager
+//*******************************************************************************************
+/// <summary>
+/// Class containing all logic and methods associated with hype (model) such as increasing
+/// and decreasing hype, triggering the win condition when maximizing hype, and spawning
+/// hype popups.
+///
+/// <para> Hype can change its value depending on certain events: </para>
+/// <p> Hype decreases by 1pt each frame </p>
+/// <p> Player dodges enemies: Increases hype (10pt) </p>
+/// <p> Player taunts enemies: Increases hype (5pt) </p>
+/// <p> Enemy takes damage: Increases hype (10pt) </p>
+/// <p> Enemy dies: Increases hype (10pt) </p>
+/// </summary>
 public class HypeManager : MonoBehaviour
 {
     [SerializeField]
@@ -53,6 +66,10 @@ public class HypeManager : MonoBehaviour
         UpdateHype(0f);
     }
 
+    /// <summary>
+    /// Retrieves the current hype.
+    /// </summary>
+    /// <returns> The current hype value. </returns>
     public float GetHype()
     {
         return currentHype;
@@ -76,6 +93,11 @@ public class HypeManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// If game state has not reached game over, spawns a random hype popup animation and removes it from
+    /// the list of available popups if any are available and increments the "currentHype".
+    /// </summary>
+    /// <param name="hypeDiff"> The amount to increment the current hype. </param>
     public void IncreaseHype(float hypeDiff)
     {
         if (gameManager.isGameOver) {
@@ -92,6 +114,12 @@ public class HypeManager : MonoBehaviour
         UpdateHype(currentHype + hypeDiff);
     }
 
+    /// <summary>
+    /// Clamps the current hype between zero and <i> hypeGoal </i>, adjusting the hype bar Slider value to
+    /// the new value. Triggers the winning condition through the GameManager if the <i> currentHype </i>
+    /// reaches the <i> hypeGoal </i>.
+    /// </summary>
+    /// <param name="newHypeVal"> The target hype value to set the current hype. </param>
     public void UpdateHype(float newHypeVal)
     {
         currentHype = Mathf.Min(newHypeVal, hypeGoal);
@@ -105,6 +133,11 @@ public class HypeManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Delays for <i> hypeStackTime </i> duration, then decrements the <i> hypePopupLevel </i> and
+    /// returns the provided popup GameObject to the available hype popups list.
+    /// </summary>
+    /// <param name="chosenPopup"> The hype popup to be reintroduced to the available hype popups list. </param>
     IEnumerator StackHype(GameObject chosenPopup) {
         yield return new WaitForSeconds(hypeStackTime);
         hypePopupLevel--;

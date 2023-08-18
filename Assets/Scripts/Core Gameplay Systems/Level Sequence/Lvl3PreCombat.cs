@@ -1,8 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
+// *******************************************************************************************
+// Lvl3PreCombat
+//*******************************************************************************************
+/// <summary>
+/// Specifies dialogue to play for Lvl3 and starts the battle in the UIManager upon
+/// dialogue completion.
+/// </summary>
 public class Lvl3PreCombat : MonoBehaviour
 {
     public UIManager uiManager;
@@ -13,10 +17,17 @@ public class Lvl3PreCombat : MonoBehaviour
         DialogueManager = GameObject.Find("Game Manager").GetComponent<DialogueManager>();
     }
 
+    /// <summary>
+    /// Triggers the dialogue <i> intro </i> event with a delegate to invoke to trigger UI animations associated
+    /// with the start of a battle.
+    /// </summary>
     public void Test() {
         DialogueManager.StartDialogueScene("intro", Sequence);
     }
 
+    /// <summary>
+    /// Triggers the UI animations associated with the beginning of combat through the UIManager.
+    /// </summary>
     private void Sequence() {
         StartCoroutine(uiManager.StartCombat()); // starts combat
     }

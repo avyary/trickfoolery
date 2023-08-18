@@ -1,38 +1,48 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+//*******************************************************************************************
+// EnemyBehavior
+//*******************************************************************************************
+/// <summary>
+/// Defines multiple enemy behaviors such as Attacking, Charging, and Aggro along
+/// with collision logic.
+/// </summary>
 public class EnemyBehavior : MonoBehaviour
 {
     bool isCharging = false;
     bool isAggro = false;
     bool isAttacking = false;
+    
     public float chargeTime = 3f;
+    
     public float attackTime = 1f;
     float flashInterval;
     Color originalColor;
+    
     public LineRenderer lineRend;
+    
     public GameObject player;
+    
     Vector3 direction;
+    
     public float attackSpeed = 2f;
-public GameObject obj1;
-public GameObject obj2;
-public GameObject obj3;
-public GameObject obj4;
-private GameObject[] objs;
+    
+    public GameObject obj1, obj2, obj3, obj4;
+    private GameObject[] objs;
 
     // Start is called before the first frame update
     void Start()
     {
-    obj1.SetActive(false);
-    obj2.SetActive(false);
-    obj3.SetActive(false);
-    obj4.SetActive(false);
+        obj1.SetActive(false);
+        obj2.SetActive(false);
+        obj3.SetActive(false);
+        obj4.SetActive(false);
         originalColor = GetComponent<MeshRenderer>().material.color;
         flashInterval = chargeTime / 6f;
         lineRend.positionCount = 2;
         player = GameObject.Find("Player");
-            objs = new GameObject[] { obj1, obj2, obj3, obj4 };
+        objs = new GameObject[] { obj1, obj2, obj3, obj4 };
     }
 
     // Update is called once per frame
@@ -44,6 +54,9 @@ private GameObject[] objs;
         }
     }
 
+    /// <summary>
+    /// Readies an attack with the delay specified by chargeTime between the charge and attack states.
+    /// </summary>
     IEnumerator aggro() {
         if (transform.position.y <= 2.5f)
         {
@@ -54,6 +67,10 @@ private GameObject[] objs;
         }
     }
 
+    /// <summary>
+    /// Logs attack debugging information and resets the visuals of this GameObject to before it entered the aggro
+    /// state.
+    /// </summary>
     IEnumerator attack()
     {
         print("starting attack");
@@ -65,6 +82,11 @@ private GameObject[] objs;
         isAggro = false;
     }
 
+    /// <summary>
+    /// Logs charge debugging information along with attack direction line rendering, rotates this GameObject to
+    /// face the player GameObject, and flashes this GameObject red and progressively to yellow once the charge
+    /// state has finished.
+    /// </summary>
     IEnumerator charge()
     {   
         lineRend.SetPosition(0, gameObject.transform.position);
@@ -92,6 +114,10 @@ private GameObject[] objs;
         print("finishing charge");
     }
 
+    /// <summary>
+    /// Enters the aggro state upon the collider trigger if this GameObject is not currently in the aggro state.
+    /// </summary>
+    /// <param name="collision"> The Collider of the other GameObject that fired this trigger collider. </param>
     void OnTriggerEnter(Collider collision)
     {
         if (!isAggro )
@@ -101,16 +127,21 @@ private GameObject[] objs;
         }
     }
 
+    /// <summary>
+    /// Destroys the other GameObject this GameObject collided with during the attack state and triggers the activity
+    /// of the objs at random.
+    /// </summary>
+    /// <param name="collision"> The Collider of the other GameObject that collided with this Collider. </param>
     void OnCollisionEnter(Collision collision) {
         if (isAttacking && collision.collider.GetType() == typeof(CapsuleCollider))
-        {   Vector3 position = collision.transform.position; 
+        {   
+            Vector3 position = collision.transform.position; 
         
             Destroy(collision.gameObject);
-              int randomIndex = Random.Range(0, objs.Length);
-        GameObject selectedObj = objs[randomIndex];
-        selectedObj.SetActive(true);
-        selectedObj.transform.position = position; 
-  
+            int randomIndex = Random.Range(0, objs.Length);
+            GameObject selectedObj = objs[randomIndex];
+            selectedObj.SetActive(true);
+            selectedObj.transform.position = position;
         }
     }
 }

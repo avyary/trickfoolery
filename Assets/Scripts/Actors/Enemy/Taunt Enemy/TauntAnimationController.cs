@@ -1,7 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+//*******************************************************************************************
+// TauntAnimationController
+//*******************************************************************************************
+/// <summary>
+/// Handles the animations and plays SFX for the taunt enemy. Contains various
+/// methods for the different states such as beginning and finishing the Attacking and
+/// Rolling actions.
+/// </summary>
 public class TauntAnimationController : MonoBehaviour
 {
     public bool doneRolling;
@@ -28,23 +34,37 @@ public class TauntAnimationController : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Plays the beginning attack SFX and logs the beginning of this Enemy's attack state. Invoked by the
+    /// TauntAttack animation event.
+    /// </summary>
     private void StartAttackANIM()
     {
         tauntEnemySounds.StartAttackSFX();
         Debug.Log("startattack");
     }
 
+    /// <summary>
+    /// Plays the end attack SFX and logs the end of this Enemy's attack state. Invoked by the TauntAttack
+    /// animation event.
+    /// </summary>
     private void FinishAttackANIM()
     {
         tauntEnemySounds.FinishAttackSFX();
         Debug.Log("finishattack");
     }
 
+    /// <summary>
+    /// Toggles the associated flag to mark the end of the rolling state. Invoked by the TauntRoll animation event.
+    /// </summary>
     public void FinishRolling()
     {
         doneRolling = true;
     }
 
+    /// <summary>
+    /// Toggles the associated flag to mark the end of the attacking state. Invoked by the TauntAttack animation event.
+    /// </summary>
     public void FinishAttacking()
     {
         doneAttacking = true;

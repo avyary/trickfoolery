@@ -1,7 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+//*******************************************************************************************
+// ProgressTracker
+//*******************************************************************************************
+/// <summary>
+/// A singleton GameObject that persists throughout the entire game session.
+/// </summary>
 public class ProgressTracker : MonoBehaviour
 {
     public bool isRestart = false;

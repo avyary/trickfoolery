@@ -1,7 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using Attacks;
 using UnityEngine;
 
 //*******************************************************************************************
@@ -19,6 +16,10 @@ public class ShockwaveEnemy : Enemy
     [SerializeField]
     private float rotateSpeed;
 
+    /// <summary>
+    /// Extends the parent class initialization of bookkeeping structures with debugging functionality to log
+    /// this Enemy's data.
+    /// </summary>
     protected override void Start()
     {
         base.Start();
@@ -56,6 +57,10 @@ public class ShockwaveEnemy : Enemy
         }
     }
     
+    /// <summary>
+    /// Sets this GameObject's position to its current position and waits for a duration of time.
+    /// </summary>
+    /// <param name="sec"> The duration of time to wait after resetting this GameObject's position in seconds. </param>
     IEnumerator Freeze(float sec) {
         // Save the object's current position
         Vector3 originalPosition = transform.position;
@@ -66,5 +71,4 @@ public class ShockwaveEnemy : Enemy
         // Wait for 3 seconds
         yield return new WaitForSeconds(sec);
     }
-    
 }

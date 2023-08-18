@@ -1,11 +1,17 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Events;
-using UnityEngine.InputSystem;
 
+// *******************************************************************************************
+// DialogueManager
+//*******************************************************************************************
+/// <summary>
+/// Handles the parsing and execution of TextAssets associated with the game dialogue
+/// system. Supports dialogue cutscene portraits, character dialogue portraits, named
+/// dialogue bubbles, etc.
+/// </summary>
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField]
@@ -58,6 +64,10 @@ public class DialogueManager : MonoBehaviour
         dialogueUI.SetActive(false);
     }
 
+    /// <summary>
+    /// Progresses the dialogue scene if the game is not currently paused, the <i> inDelay </i> flag is
+    /// cleared, or if the dialogue scene has been toggled as active and accepting input.
+    /// </summary>
     public void OnConfirm() {
         print("onconfirm");
         if (sceneIsActive && !gameManager.isPaused && !inDelay) {
@@ -65,6 +75,16 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Caches the callback to invoke when the dialogue scene ends and does nothing if the scene is already
+    /// active. Otherwise, finds the scene to play from all the loaded scenes by the provided scene name and
+    /// enables the dialogue UI, toggles the <i> sceneIsActive </i> flag and sets the beginning <i> lineIdx
+    /// </i>, and automatically progresses the scene to populate the dialogue with text. Logs error data
+    /// if the scene cannot be found. 
+    /// </summary>
+    /// <param name="sceneName"> The name of the dialogue scene to search for. </param>
+    /// <param name="callback"> The delegate that references a method to be invoked at the end of the
+    /// dialogue scene. </param>
     public void StartDialogueScene(string sceneName, System.Action callback = null)
     {
         print("starting dialogue scene");
@@ -84,6 +104,14 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(ProgressScene(0));
     }
 
+    /// <summary>
+    /// Increments the current dialogue line index and loads the next line of dialogue corresponding to
+    /// the line index. If event triggers are detected to occur instead of the next dialogue line, fires the
+    /// corresponding delegates and delays for the <i> delay </i> value stored in the dialogue line type
+    /// before enabling the progression of the dialogue. Otherwise, sets the dialogue text box UI with the
+    /// corresponding character name, dialogue text, and sprite.
+    /// </summary>
+    /// <param name="jump"> The amount to increment the current dialogue line index. </param>
     IEnumerator ProgressScene(int jump = 1) {
         if (!sceneIsActive) {
             yield return null;
@@ -114,6 +142,10 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Disables the dialogue UI and clears the "sceneIsActive" flag before invoking the
+    /// <i> sceneCallback </i> delegate.
+    /// </summary>
     void EndScene() {
         print("ending scene");
         dialogueUI.SetActive(false);
@@ -124,12 +156,27 @@ public class DialogueManager : MonoBehaviour
     }
 }
 
+// *******************************************************************************************
+// LoadedDScenes
+//*******************************************************************************************
+/// <summary>
+/// A class purely for storing multiple dialogue scenes, a sequential array of DScenes to
+/// compose a complete narrative story.
+/// </summary>
 [System.Serializable]
 public class LoadedDScenes
 {
     public DScene[] scenes;
 }
 
+// *******************************************************************************************
+// DScene
+//*******************************************************************************************
+/// <summary>
+/// A class purely for storing dialogue scene data, such as:
+/// <p> The <b> sceneName </b> to be queried to locate this scene for playback. </p>
+/// <p> A sequential array of DLine <b> lines </b> to read through to progress the scene. </p>
+/// </summary>
 [System.Serializable]
 public class DScene
 {
@@ -137,6 +184,20 @@ public class DScene
     public DLine[] lines;
 }
 
+// *******************************************************************************************
+// DLine
+//*******************************************************************************************
+/// <summary>
+/// A class purely for storing data associated with a single line of dialogue.
+/// <p> Contains information on: </p>
+/// <p> The <b> name </b> of the speaker. </p>
+/// <p> The dialogue <b> text </b> that is being spoken. </p>
+/// <p> The name to search for a <b> portrait </b> sprite asset. </p>
+/// <p> A <b> trigger </b> flag to denote if delegates should be invoked. </p>
+/// <p> The <b> triggerIdx </b> to find the delegate to invoke. </p>
+/// <p> The <b> delay </b> duration of time to wait while the delegate is invoked before
+/// accepting player input to progress the dialogue. </p>
+/// </summary>
 [System.Serializable]
 public class DLine
 {

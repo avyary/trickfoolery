@@ -1,8 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+//*******************************************************************************************
+// EnemyMovement
+//*******************************************************************************************
+/// <summary>
+/// Handles the generation of enemy movement paths through the NavMeshAgent.
+/// </summary>
 public class EnemyMovement : MonoBehaviour
 {   
     public Transform player;

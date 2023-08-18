@@ -1,7 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+// *******************************************************************************************
+// CameraFollowPlayer
+//*******************************************************************************************
+/// <summary>
+/// Adjusts the camera's position to follow the player with an offset.
+/// </summary>
 public class CameraFollowPlayer : MonoBehaviour
 {
     [SerializeField]

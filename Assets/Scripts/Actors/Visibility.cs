@@ -1,7 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+// *******************************************************************************************
+// Visibility
+//*******************************************************************************************
+/// <summary>
+/// Raycasts a line from the camera position to detect a collision on update.
+/// </summary>
 public class Visibility : MonoBehaviour
 {
     [SerializeField]

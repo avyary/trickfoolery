@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+//*******************************************************************************************
+// FieldOfViewEditor
+//*******************************************************************************************
+/// <summary> TODO:
+/// Not an editor guru, but I'm guessing it acts like OnDrawGizmos() to draw the 
+/// FieldOfView boundaries in the scene viewport...
+/// </summary>
 [CustomEditor (typeof (FieldOfView))]
 public class FieldOfViewEditor : Editor
 {

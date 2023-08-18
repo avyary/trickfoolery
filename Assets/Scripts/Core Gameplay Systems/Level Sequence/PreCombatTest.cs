@@ -1,8 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
+// *******************************************************************************************
+// PreCombatTest
+//*******************************************************************************************
+/// <summary>
+/// Specifies dialogue to play for Lvl1PreCombat and starts the battle in the UIManager
+/// upon dialogue completion.
+/// </summary>
 public class PreCombatTest : MonoBehaviour
 {
     public UIManager uiManager;
@@ -16,11 +20,18 @@ public class PreCombatTest : MonoBehaviour
         lvl1DialogueTriggers = gameObject.GetComponent<Lvl1DialogueTriggers>();
     }
 
+    /// <summary>
+    /// Triggers the dialogue <i> tutorial0 </i> event with a delegate to invoke to trigger UI animations
+    /// associated with the start of a battle.
+    /// </summary>
     public void Test() {
         DialogueManager.StartDialogueScene("tutorial0", Sequence);
         // StartCoroutine(Sequence());
     }
 
+    /// <summary>
+    /// Begins the dodge tutorial through the Lvl1DialogueTriggers.
+    /// </summary>
     private void Sequence() {
         lvl1DialogueTriggers.DodgeTutorial();
         // StartCoroutine(uiManager.StartCombat()); // starts combat

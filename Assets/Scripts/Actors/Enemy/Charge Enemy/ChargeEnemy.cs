@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 //*******************************************************************************************
@@ -23,6 +22,10 @@ public class ChargeEnemy : Enemy
     [SerializeField]
     private float rotateSpeed;
 
+    /// <summary>
+    /// Extends the parent class initialization of bookkeeping structures with debugging functionality to log
+    /// this Enemy's data and changing of states.
+    /// </summary>
     protected override void Start() {
         base.Start();
         GetEnemyStatus("ChargeEnemy");
@@ -62,7 +65,8 @@ public class ChargeEnemy : Enemy
                 break;
             case EnemyState.Startup:
                 Vector3 toPlayer = player.transform.position - transform.position;
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(toPlayer), rotateSpeed * Time.deltaTime);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, 
+                    Quaternion.LookRotation(toPlayer), rotateSpeed * Time.deltaTime);
                 // transform.LookAt(player.transform.position);
                 break;
             case EnemyState.Active:
@@ -71,18 +75,32 @@ public class ChargeEnemy : Enemy
         }
     }
 
+    /// <summary>
+    /// Delays for a duration of time before disabling the ParticleSystem.
+    /// </summary>
+    /// <param name="seconds"> The duration of time to wait before disabling the particle system in seconds. </param>
+    /// <param name="particles"> The ParticleSystem to be disabled. </param>
     private IEnumerator WaitForSecondsAndStopParticles(float seconds, ParticleSystem particles) 
     {
         yield return new WaitForSeconds(seconds);
         particles.Stop();
     }
 
+    /// <summary>
+    /// Delays for a duration of time before enabling the ParticleSystem.
+    /// </summary>
+    /// <param name="seconds"> The duration of time to wait before enabling the particle system in seconds. </param>
+    /// <param name="particles"> The ParticleSystem to be enabled. </param>
     private IEnumerator WaitForSecondsAndPlayParticles(float seconds, ParticleSystem particles) 
     {
         yield return new WaitForSeconds(seconds);
         particles.Play();
     } 
 
+    /// <summary>
+    /// Delays for the duration of "seconds" before setting the Enemy flags from charging to walking.
+    /// </summary>
+    /// <param name="seconds"> The duration of time to wait before setting flags in seconds. </param>
     private IEnumerator WaitForSecondsAndStopRunningAnim(float seconds) 
     {
         yield return new WaitForSeconds(seconds);

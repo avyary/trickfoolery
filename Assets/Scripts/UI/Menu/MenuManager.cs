@@ -1,9 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+//*******************************************************************************************
+// MenuManager
+//*******************************************************************************************
+/// <summary>
+/// Handles the selection of buttons associated with input as well as SFX.
+/// </summary>
 public class MenuManager : MonoBehaviour
 {
     public AK.Wwise.Event selectSFX;
@@ -48,6 +52,12 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Triggers associated button selection animations and SFX according to the provided flag and
+    /// sets the corresponding button as selectable before delaying by <i> changeCooldown </i> time to
+    /// switch buttons at a human-perceivable rate.
+    /// </summary>
+    /// <param name="silent"> Specifies that the button should not trigger animations and SFX. </param>
     IEnumerator HandleButtonChange(bool silent = false){
         Transform newSelect = transform.GetChild(currentIdx);
         if (!silent) {
@@ -60,10 +70,17 @@ public class MenuManager : MonoBehaviour
         isChanging = false;
     }
 
+    /// <summary>
+    /// Sets the corresponding button as selectable.
+    /// </summary>
+    /// <param name="button"> The button GameObject to be selected. </param>
     public void OnButtonHover(GameObject button){
         button.GetComponent<Button>().Select();
     }
 
+    /// <summary>
+    /// Selects a button according to input with associated animations and SFX.
+    /// </summary>
     public void OnButtonUnHover(){
         HandleButtonChange();
     }

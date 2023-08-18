@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
@@ -103,12 +102,25 @@ public abstract class Enemy: MonoBehaviour
     }
 
     // for debugging
+    /// <summary>
+    /// Logs this Enemy's information: name, current and max health, current and max anger, and the current
+    /// EnemyState enum value.
+    /// </summary>
+    /// <param name="name"> The name of the enemy type to be logged. </param>
     public void GetEnemyStatus(string name = "Enemy")
     {
         Debug.Log(System.String.Format("{0}(health: {1}/{2}, anger: {3}/{4}, state: {5})", name, health.ToString(), maxHealth.ToString(), anger.ToString(), maxAnger.ToString(), state));
     }
 
     // invoked when colliding with attack hitbox
+    /// <summary>
+    /// Takes damage if this Enemy is not already dead. If this Enemy's health depletes to zero or below, sets
+    /// the enemy's state to dead with associated animations and changes to the HypeManager hype value.
+    /// Otherwise, increases the hype value and stuns this Enemy for a duration of time.
+    /// </summary>
+    /// <param name="attacker"> The Enemy that unleashed an attack on this Enemy. </param>
+    /// <param name="damage"> The amount to deplete this Enemy's health. </param>
+    /// <param name="stunTime"> The duration of time to stun this Enemy in seconds. </param>
     public virtual void TakeHit(Enemy attacker, int damage, float stunTime)
     {
         if (state == EnemyState.Dead)
@@ -133,7 +145,10 @@ public abstract class Enemy: MonoBehaviour
         }
     }
 
-    // 
+    /// <summary>
+    /// Delays this Enemy's actions by a durations of time while tracking the paused state with a flag.
+    /// </summary>
+    /// <param name="pauseTime"> The duration of time to delay this Enemy in seconds. </param>
     public virtual IEnumerator GetHitPaused(float pauseTime)
     {
         inHitPause = true;
@@ -142,6 +157,11 @@ public abstract class Enemy: MonoBehaviour
     }
 
     // puts enemy in Stunned state for stunTime seconds
+    /// <summary>
+    /// Triggers the damaged animation associated with this Enemy and sets the state to be stunned for a duration
+    /// of time.
+    /// </summary>
+    /// <param name="stunTime"> The duration of time to stun this Enemy in seconds. </param>
     public virtual IEnumerator GetStunned(float stunTime)
     {
         animator.SetTrigger("takeDamage");
@@ -153,6 +173,11 @@ public abstract class Enemy: MonoBehaviour
     }
 
     // invoked when health falls to/below 0
+    /// <summary>
+    /// Triggers the death animation and respective SFX associated with this Enemy, disables bookkeeping data
+    /// for Enemy behaviours, and increases the HypeManager hype by a specified value before destroying
+    /// this GameObject.
+    /// </summary>
     public virtual IEnumerator Die()
     {
         if (attackCoroutine != null) {
@@ -179,6 +204,12 @@ public abstract class Enemy: MonoBehaviour
     }
 
     // invoked when player taunts and enemy is in taunt radius
+    /// <summary>
+    /// Increments this Enemy's anger, changing this Enemy's state to be angy, triggering associated SFX and
+    /// visuals, and swapping the Attack type once the <i> maxAnger </i> threshold is surpassed. Upon
+    /// changing the type of Attack, logs the new attack's damage value.
+    /// </summary>
+    /// <param name="tauntValue"> The value to increase this Enemy's anger. </param>
     public virtual void GetTaunted(int tauntValue = 1)
     {
         anger = anger + tauntValue;
@@ -195,6 +226,20 @@ public abstract class Enemy: MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Performs the following sequence of operations:
+    /// <p> 1. Triggers animations and sets states associated with the Attack's startup and delays by the Attack
+    /// <i> startupTime </i>. </p>
+    /// <p> 2. Triggers animations and SFX associated with the Attack activation and activates the Attack before
+    /// delaying by the Attack <i> activeTime </i>. </p>
+    /// <p> 3. Sets the animations and state to recover from the attack, logs the finished Attack status, and
+    /// deactivates the Attack before delaying for <i> recoveryTime </i> duration. </p>
+    /// <p> 4. Once the recovery time finishes, resets animation data and triggers the walking animation, resets
+    /// this Enemy's alert status, and restarts the patrolling state. </p>
+    /// <p> If this Enemy's state is changed throughout the sequence, immediately breaks from the attacking
+    /// sequence. </p>
+    /// </summary>
+    /// <param name="attackObj"> The Attack to be activated.</param>
     public IEnumerator Attack(Attack attackObj) {
         // trigger attack animation here
         animator.SetTrigger("startStartup");
@@ -235,6 +280,9 @@ public abstract class Enemy: MonoBehaviour
         gameObject.GetComponent<Patrol>().enabled = true;
     }
 
+    /// <summary>
+    /// Sets the tracking state and disables the Patrol patrolling logic associated with this Enemy.
+    /// </summary>
     protected virtual void PlayerFound()
     {
         state = EnemyState.Tracking;
@@ -265,11 +313,17 @@ public abstract class Enemy: MonoBehaviour
         return;
     }
 
+    /// <summary>
+    /// Triggers the walking animation and sets this Enemy's state to patrolling.
+    /// </summary>
     protected void OnStartCombat() {
         animator.SetTrigger("startWalk");
         state = EnemyState.Patrolling;
     }
 
+    /// <summary>
+    /// Disables Enemy state visuals and deactivates the Attack for this Enemy, setting the state to be passive.
+    /// </summary>
     protected void OnBecomePassive() {
         if (attackCoroutine != null) {
             StopCoroutine(attackCoroutine);
@@ -281,6 +335,16 @@ public abstract class Enemy: MonoBehaviour
         state = EnemyState.Passive;
     }
 
+    /// <summary>
+    /// Initializes all the class bookkeeping data associated with an Enemy such as:
+    /// <p> The current and max <b> health </b>. </p>
+    /// <p> The current and max <b> anger </b>. </p>
+    /// <p> The <b> movement speed </b>. </p>
+    /// <p> The basic, angy, and current <b> types of Attacks </b>. </p>
+    /// <p> The core game system managers. </p>
+    /// <p> The components attached to the associated GameObject. </p>
+    /// <p> The <b> player </b> GameObject. </p>
+    /// </summary>
     protected virtual void Start()
     {
         maxHealth = _maxHealth;
@@ -307,6 +371,10 @@ public abstract class Enemy: MonoBehaviour
         gameManager.stopCombatEvent.AddListener(OnBecomePassive);
     }
 
+    /// <summary>
+    /// Delays before checking that the GameManager level state is currently active to activate the core Enemy
+    /// activity. If the level state isn't ready for combat, sets this Enemy to be in the passive state.
+    /// </summary>
     IEnumerator DelayStart() {
         state = EnemyState.Spawning;
         yield return new WaitForSecondsRealtime(0.5f);

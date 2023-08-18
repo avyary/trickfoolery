@@ -1,8 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
+//*******************************************************************************************
+// InputController
+//*******************************************************************************************
+/// <summary>
+/// Handles player input associated with the game system, such as pausing and
+/// progressing through dialogue.
+/// </summary>
 public class InputController : MonoBehaviour
 {
     private GameManager gameManager;
@@ -15,10 +19,16 @@ public class InputController : MonoBehaviour
         dialogueManager = managers.GetComponent<DialogueManager>();
     }
 
+    /// <summary>
+    /// Triggers the progression of the dialogue system through the DialogueManager.
+    /// </summary>
     public void OnConfirm() {
         dialogueManager.OnConfirm();
     }
 
+    /// <summary>
+    /// Pauses or unpauses the game through the GameManager.
+    /// </summary>
     public void OnPause() {
         gameManager.OnPause();
     }

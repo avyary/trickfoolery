@@ -1,6 +1,12 @@
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
+//*******************************************************************************************
+// PlayerAnimationController
+//*******************************************************************************************
+/// <summary>
+/// Handles the animations and triggers SFX for the player. Contains various methods
+/// for the different states such as Walking (footsteps) and Taunting actions.
+/// </summary>
 public class PlayerAnimationController : MonoBehaviour
 {
     [SerializeField] private Animator animator;
@@ -21,6 +27,9 @@ public class PlayerAnimationController : MonoBehaviour
         animator.Play(tomIdle.name);
     }
 
+    /// <summary>
+    /// Triggers the tauntSFX if it is not null.
+    /// </summary>
     void PlayTauntSound() 
     {   
         if (tauntSFX != null) 
@@ -29,6 +38,9 @@ public class PlayerAnimationController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Triggers the footstep SFX through PlayerSounds.
+    /// </summary>
     private void PlayFootstep()
     {
         playerSounds.PlayFootstepSound();

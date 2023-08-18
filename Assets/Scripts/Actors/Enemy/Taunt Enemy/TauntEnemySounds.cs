@@ -1,7 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+//*******************************************************************************************
+// TauntEnemySounds
+//*******************************************************************************************
+/// <summary>
+/// Acts as a sound bank for all the SFX associated with a taunt enemy.
+/// </summary>
 public class TauntEnemySounds : MonoBehaviour
 {
 
@@ -16,16 +20,19 @@ public class TauntEnemySounds : MonoBehaviour
     //are the private serialize fields where I put events
     //you will be able to find them easily on the game object
 
- 
+    /// <summary>
+    /// Plays the StartAttackSFX.
+    /// </summary>
     public void StartAttackSFX()
     {
         attackStartSFX.Post(gameObject);
     }
     
+    /// <summary>
+    /// Plays the FinishStartSFX.
+    /// </summary>
     public void FinishAttackSFX()
     {
         attackEndSFX.Post(gameObject);
     }
-
-
 }

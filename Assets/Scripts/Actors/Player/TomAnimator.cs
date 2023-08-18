@@ -1,7 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+// *******************************************************************************************
+// TomAnimator
+//*******************************************************************************************
+/// <summary>
+/// Controls the Animator according to the PlayerMovement states.
+/// </summary>
 public class TomAnimator : MonoBehaviour
 {   
     // Animator anim;

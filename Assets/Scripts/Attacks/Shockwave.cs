@@ -1,7 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using Attacks;
 using UnityEngine;
 
 //*******************************************************************************************
@@ -38,6 +35,10 @@ public class Shockwave : MonoBehaviour
     //     }
     // }
 
+    /// <summary>
+    /// Increases the rate of movement and scale of this GameObject along the z-axis until the length reaches
+    /// the <i> finalSize </i>.
+    /// </summary>
     private IEnumerator CreateShockwave()
     {
         Debug.Log("Shockwave occurs");

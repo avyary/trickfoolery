@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 //*******************************************************************************************
 // TauntAttack
 //*******************************************************************************************
@@ -12,6 +8,9 @@ using UnityEngine;
 /// </summary>
 public class TauntAttack : Attack
 {
+    /// <summary>
+    /// Extends the parent class Attack deactivation with the disabling of the MeshRenderer.
+    /// </summary>
     public override void Deactivate()
     {
         base.Deactivate();

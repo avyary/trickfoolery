@@ -1,11 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+// *******************************************************************************************
+// PlayerSounds
+//*******************************************************************************************
+/// <summary>
+/// Acts as a sound bank for all the SFX associated with the player character.
+/// </summary>
 public class PlayerSounds : MonoBehaviour
 {
     [SerializeField]
     private AK.Wwise.Event footstepsEvent;
+    
+    /// <summary>
+    /// Switches the footstep SFX according to terrain types via the AkSoundEngine.
+    /// </summary>
     public void PlayFootstepSound()
     {   
         //GroundSwitch();
@@ -21,7 +29,7 @@ public class PlayerSounds : MonoBehaviour
     //     RaycastHit hit;
     //     Ray ray = new Ray(transform.position + Vector3.up * 0.5f, -Vector3.up);
     //     Material surfaceMaterial;
-// 
+    // 
     //     if (Physics.Raycast(ray, out hit, 1.0f, Physics.AllLayers, QueryTriggerInteraction.Ignore))
     //     {
     //         Renderer surfaceRenderer = hit.collider.GetComponentInChildren<Renderer>();

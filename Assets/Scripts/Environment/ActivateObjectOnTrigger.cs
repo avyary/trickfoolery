@@ -1,8 +1,12 @@
-
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
+//*******************************************************************************************
+// ActivateObjectOnTrigger
+//*******************************************************************************************
+/// <summary>
+/// Activates walls placed throughout the levels upon triggers with the player GameObject
+/// and destroys the barriers when the specified hype threshold is reached.
+/// </summary>
 public class ActivateObjectOnTrigger : MonoBehaviour
 {
     public GameObject activateWall1;
@@ -34,6 +38,11 @@ public class ActivateObjectOnTrigger : MonoBehaviour
         box2.enabled = false;
     }
 
+    /// <summary>
+    /// Enables associated wall BoxColliders, calculates a hype threshold, and toggles a flag to track
+    /// wall activation upon a triggered collision with the player GameObject.
+    /// </summary>
+    /// <param name="other"> The Collider of the other GameObject that fired this trigger collider. </param>
     private void OnTriggerEnter(Collider other)
     {
         float local_hype;

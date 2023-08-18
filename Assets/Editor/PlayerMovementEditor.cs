@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+//*******************************************************************************************
+// PlayerMovementEditor
+//*******************************************************************************************
+/// <summary> TODO:
+/// 
+/// </summary>
 [CustomEditor (typeof (PlayerMovement))]
 public class PlayerMovementEditor: Editor
 {
