@@ -1,8 +1,14 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//*******************************************************************************************
+// PauseMenuButton
+//*******************************************************************************************
+/// <summary>
+/// Handles the closing of the associated menu and exiting to the title screen with
+/// associated animations. 
+/// </summary>
 public class PauseMenuButton : MonoBehaviour
 {
     private GameManager gameManager;
@@ -11,11 +17,18 @@ public class PauseMenuButton : MonoBehaviour
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
+    /// <summary>
+    /// Loads the MainMenu scene with fade out animations.
+    /// </summary>
     public void ReturnToMenu() {
         print("blaehh");
         StartCoroutine(MenuAfterDelay());
     }
 
+    /// <summary>
+    /// Triggers a UI animation to fade out and delays for a duration of time before loading the MainMenu
+    /// scene and stopping the pause and level background music.
+    /// </summary>
     IEnumerator MenuAfterDelay() {
         print("menuafterdelay");
         GameObject.Find("FadeInOut").GetComponent<Animator>().SetTrigger("FadeOut");
@@ -27,6 +40,9 @@ public class PauseMenuButton : MonoBehaviour
         gameManager.stoppauseMUS.Post(gameObject);
     }
 
+    /// <summary>
+    /// Closes the pause menu through the GameManager.
+    /// </summary>
     public void ClosePauseMenu() {
         gameManager.TogglePause();
     }

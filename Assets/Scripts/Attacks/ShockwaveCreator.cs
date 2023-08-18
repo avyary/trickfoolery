@@ -1,8 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using Attacks;
 using UnityEngine;
 
+//*******************************************************************************************
+// ShockwaveCreator
+//*******************************************************************************************
+/// <summary>
+/// Instantiates a ShockwavePrefab according to the timer associated with the
+/// BasicShockwaveAttack class.
+/// </summary>
 public class ShockwaveCreator : MonoBehaviour
 {
     [SerializeField] public GameObject shockwavePrefab;
@@ -23,6 +28,9 @@ public class ShockwaveCreator : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Instantiates a shockwave GameObject and sets its position to this GameObject's position.
+    /// </summary>
     private void createShockwave()
     {
         GameObject node = Instantiate(shockwavePrefab, transform);

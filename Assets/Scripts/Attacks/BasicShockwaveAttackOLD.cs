@@ -1,7 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Threading;
 using UnityEngine;
 
 namespace Attacks
@@ -10,6 +7,14 @@ namespace Attacks
     // Center: -0.001 0 0.03
     // Size: 0.083 0.07 0.05
     
+    //*******************************************************************************************
+    // BasicShockwaveAttackOld
+    //*******************************************************************************************
+    /// <summary>
+    /// Attack subclass that implements a shockwave projectile that grows in size as it
+    /// moves via a BoxCollider. Creates a single shockwave that permeates the area and
+    /// temporarily persists at max size until it ceases to exist.
+    /// </summary>
     public class BasicShockwaveAttackOld: Attack
     {
         protected const float NormalZ = 0.1f;
@@ -23,6 +28,11 @@ namespace Attacks
         Vector3 initialCenter;
         Vector3 initialSize;
 
+        /// <summary>
+        /// Extends the parent class initialization of bookkeeping structures with adjustments to the
+        /// <b> startupTime </b>, <b> activeTime </b>, <b> recoveryTime </b>, <b> damage </b>,
+        /// <b> stunTime </b>, and <b> range </b> attributes associated with this specific Attack.
+        /// </summary>
         protected override void Start()
         {
             base.Start();
@@ -37,6 +47,11 @@ namespace Attacks
                       "range:" + range);
         }
         
+        /// <summary>
+        /// Interpolates the position and size of the BoxCollider associated with this GameObject
+        /// until the <i> activeTime </i> duration of time passes, then freezes this Attack for
+        /// <i> activeTime </i> duration while resetting the BoxCollider size and position.
+        /// </summary>
         public void SetBasicShockwaveAttack()
         {
             // // Progressive attack range
@@ -89,7 +104,11 @@ namespace Attacks
             }
         }
         
-        
+        /// <summary>
+        /// Sets this GameObject's position to its current position and waits for a duration of time.
+        /// </summary>
+        /// <param name="sec"> The duration of time to wait after resetting this GameObject's position in
+        /// seconds. </param>
         IEnumerator Freeze(float sec) {
             // Save the object's current position
             Vector3 originalPosition = transform.position;

@@ -1,12 +1,14 @@
-using Unity.VisualScripting;
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 
 namespace Attacks
 {
-
+    //*******************************************************************************************
+    // AngryShockwaveAttack
+    //*******************************************************************************************
+    /// <summary>
+    /// Attack subclass that implements a shockwave projectile that grows in size as it
+    /// moves via a BoxCollider. Moves at a faster rate than a normal shockwave attack.
+    /// </summary>
     public class AngryShockwaveAttack : Attack
     {
         protected const float AngryZ = 70f;
@@ -17,6 +19,11 @@ namespace Attacks
         Vector3 initialCenter;
         Vector3 initialSize;
         
+        /// <summary>
+        /// Extends the parent class initialization of bookkeeping structures with adjustments to the
+        /// <b> startupTime </b>, <b> activeTime </b>, <b> recoveryTime </b>, <b> damage </b>,
+        /// <b> stunTime </b>, and <b> range </b> attributes associated with this specific Attack.
+        /// </summary>
         protected override void Start()
         {
             base.Start();
@@ -30,6 +37,11 @@ namespace Attacks
             Debug.Log("Shockwave angry attack set up: \n" +
                       "range:" + range);
         }
+        
+        /// <summary>
+        /// Increases the size of the BoxCollider associated with this GameObject gradually until the
+        /// <i> activeTime </i> duration of time passes, resetting the BoxCollider size upon completion.
+        /// </summary>
         public void SetAngryShockwaveAttack()
         {
             // Progressive attack range

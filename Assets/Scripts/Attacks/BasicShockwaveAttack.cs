@@ -1,11 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 
 namespace Attacks
 {
-
+    //*******************************************************************************************
+    // BasicShockwaveAttack
+    //*******************************************************************************************
+    /// <summary>
+    /// Attack subclass that implements a shockwave projectile that grows in size as it
+    /// moves via a BoxCollider.
+    /// </summary>
     public class BasicShockwaveAttack: Attack
     {
         protected const float NormalZ = 20f;
@@ -19,6 +22,10 @@ namespace Attacks
         Vector3 initialCenter;
         Vector3 initialSize;
 
+        /// <summary>
+        /// Extends the parent class initialization of bookkeeping structures with debugging functionality to log
+        /// this Attack's range data.
+        /// </summary>
         protected override void Start()
         {
             base.Start();
@@ -27,6 +34,11 @@ namespace Attacks
                       "range:" + range);
         }
         
+        /// <summary>
+        /// Increases the size and position of the BoxCollider associated with this GameObject gradually
+        /// until the <i> activeTime </i> duration of time passes, resetting the BoxCollider size and
+        /// shockwave instantiation flags upon completion.
+        /// </summary>
         public void SetBasicShockwaveAttack()
         {
             // // Progressive attack range
